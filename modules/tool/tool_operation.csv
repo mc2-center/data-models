@@ -1,0 +1,117 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Aggregation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Allele Frequency Distribution Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Annotation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Box-Whisker Plot Plotting,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Calculation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Migration Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Modelling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Number Quantification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Type Enrichment Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Classification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Clustering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Clustering Profile Plotting,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Conversion,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Copy Number Variation Detection,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Correlation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA Barcoding,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Handling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Retrieval,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Database Search,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+De Novo Sequencing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 09/23/2022
+Demultiplexing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Differential Gene Expression Profiling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Differential Protein Expression Profiling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Dimensionality Reduction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Editing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Enrichment Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Correlation Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Data Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Profile Clustering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Profile Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Functional Clustering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Expression Profiling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Methylation Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Regulatory Network Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Regulatory Network Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene-Set Enrichment Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Generation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetic Mapping,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetic Variation Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genome Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genome Annotation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genome Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genotyping,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Heat Map Generation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Image Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Imputation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Incident Curve Plotting,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Information Retrieval,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Linkage Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mapping,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Metabolic Pathway Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Methylation Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Microscope Image Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Modelling and Simulation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecular Dynamics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Network Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Network Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acid Feature Detection,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acid Sequence Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleosome Position Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathway Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathway Modelling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Peak Calling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetic Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Prediction and Recognition,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Principal Component Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Function Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Function Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Identification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Interaction Network Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Quantification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein-Protein Interaction Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Quantification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Query and Retrieval,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA Secondary Structure Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA-Seq Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA-Seq Quantification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Regression Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+SNP Annotation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+SNP Detection,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Scatter Plot Plotting,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Alignment Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Alignment Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Annotation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Classification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Cluster Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Clustering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Comparison,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Composition Calculation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 11/11/2022
+Sequence Editing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence File Editing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Read Processing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequencing Quality Control,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Simulated Gene Expression Data Generation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sorting,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Spectral Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Standardisation and Normalisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Statistical Calculation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Statistical Inference,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Statistical Modelling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structural Variation Detection,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structure Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Text Mining,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Tissue Modelling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Validation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Variant Calling,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Variant Classification,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Variant Effect Prediction,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+scRNA-Seq Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
