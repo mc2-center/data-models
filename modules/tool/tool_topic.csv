@@ -1,116 +1,116 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Allergy Clinical Immunology and Immunotherapeutics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biochemistry,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioimaging,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioinformatics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Databases,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomedical Science,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomolecular Simulation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biophysics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotechnology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotherapeutics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Culture Collection,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chemistry,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chip-Seq,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chromosome Conformation Capture,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Comparative Genomics,,,,FALSE,,,,EDAM,,,,,,
-Compound Libraries and Screening,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computational Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computer Science,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytogenetics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytometry,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Mutation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Packaging,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Polymorphism,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Architecture Analysis and Design,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Identity and Mapping,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Mining,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Submission Annotation and Curation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Visualisation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Developmental Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Development,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Discovery,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Metabolism,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Electron Microscopy,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Epigenetics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Evolutionary Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Exome Sequencing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Experimental Design and Studies,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Function Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Genomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Regulatory and Non-Coding RNA,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-GWAS Study,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Regulation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Structure,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Transcripts,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene and Protein Families,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Engineering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Variation,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotype and Phenotype,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Imaging,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoinformatics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoprecipitation Experiment,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoproteins and Antigens,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Infectious Disease,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Informatics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Laboratory Techniques,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Light Microscopy,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Lipids,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Machine Learning,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mapping,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mathematics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Imaging,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Informatics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicine,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicines Research and Development,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Membrane and Lipoproteins,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Metagenomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 11/11/2022
-Molecular Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Genetics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Interactions Pathways and Networks,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Structure Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acids,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Omics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Oncology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology and Terminology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacogenomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacovigilance,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogeny,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Preclinical and Clinical Studies,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Probes and Primers,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Expression,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Modifications,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Properties,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteins,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics Experiment,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA-Seq,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Safety Sciences,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sample Collections,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequencing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Simulation Experiment,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Software Engineering,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistics and Probability,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Analysis,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Systems Biology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcription Factors and Regulatory Sites,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcriptomics,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Virology,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Whole Genome Sequencing,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-Workflows,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
-scRNA-Seq,,,,FALSE,,,,EDAM,,,,,,Added by Brynn 06/30/2022
+Allergy Clinical Immunology and Immunotherapeutics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biochemistry,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Bioimaging,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Bioinformatics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Databases,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biomedical Science,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biomolecular Simulation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biophysics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biotechnology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biotherapeutics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Culture Collection,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chemistry,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chip-Seq,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chromosome Conformation Capture,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Comparative Genomics,,,,FALSE,,topic,,EDAM,,,,,,
+Compound Libraries and Screening,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Computational Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Computer Science,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cytogenetics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cytometry,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA Mutation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA Packaging,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA Polymorphism,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Architecture Analysis and Design,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Identity and Mapping,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Mining,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Submission Annotation and Curation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Visualisation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Developmental Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Development,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Discovery,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Metabolism,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Electron Microscopy,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Epigenetics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Evolutionary Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Exome Sequencing,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Experimental Design and Studies,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Function Analysis,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Functional Genomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Functional Regulatory and Non-Coding RNA,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+GWAS Study,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Expression,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Regulation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Structure,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Transcripts,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene and Protein Families,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetic Engineering,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetic Variation,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genotype and Phenotype,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Imaging,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Immunoinformatics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Immunology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Immunomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Immunoprecipitation Experiment,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Immunoproteins and Antigens,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Infectious Disease,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Informatics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Laboratory Techniques,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Light Microscopy,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Lipids,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Machine Learning,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mapping,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mathematics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Medical Imaging,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Medical Informatics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Medicine,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Medicines Research and Development,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Membrane and Lipoproteins,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Metagenomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 11/11/2022
+Molecular Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecular Genetics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecular Interactions Pathways and Networks,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acid Structure Analysis,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acids,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Omics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Oncology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology and Terminology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pharmacogenomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pharmacology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pharmacovigilance,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogeny,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Preclinical and Clinical Studies,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Probes and Primers,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Expression,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Modifications,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Properties,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Proteins,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Proteomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Proteomics Experiment,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA-Seq,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Safety Sciences,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sample Collections,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Analysis,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequencing,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Simulation Experiment,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Software Engineering,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Statistics and Probability,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structural Analysis,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structural Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Systems Biology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Transcription Factors and Regulatory Sites,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Transcriptomics,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Virology,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Whole Genome Sequencing,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Workflows,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+scRNA-Seq,,,,FALSE,,topic,,EDAM,,,,,,Added by Brynn 06/30/2022
