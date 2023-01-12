@@ -1,0 +1,49 @@
+name: build-jsonld
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'modules/**'
+  workflow_dispatch:
+
+env:
+  schema_filename: mc2.model.csv
+  
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pip python3.8-venv libcurl4-openssl-dev
+      
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
+ 
+      - name: Install schematic and convert schema
+        shell: bash
+        run: |
+          python3 -m venv .venv
+          chmod 755 .venv/bin/activate
+          source .venv/bin/activate
+          pip3 install schematicpy
+          make CSV=$schema_filename
+    
+      - name: Commit files
+        run: |
+          git config --local user.email "mc2center@sagebase.org"
+          git config --local user.name "mc2center-bot[bot]"
+          git commit -m "Build jsonld" -a
+    
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         branch: ${{ github.event.pull_request.head.ref }}
+  
