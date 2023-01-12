@@ -1,0 +1,4 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Commercial,Software which you have to pay to access.,,,FALSE,,costType,,,,,,,,
+Free of Charge,,,,FALSE,,costType,,,,,,,,
+Free of Charge (With Restrictions),,,,FALSE,,costType,,,,,,,,

@@ -1,0 +1,118 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Alignment Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Alignment Format (Pair Only),,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Alignment Format (Text),,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Annotated Text Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Antimony,,,,FALSE,,fileFormat,,,,,,https://antimony.sourceforge.net/antimony-technical-spec.html,,Added by Brynn on 11/29/2022 for the tool: Tellurium
+BAM,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+BCF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+BED,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+BLAST Results,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+BNGL,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Binary Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Model Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Pathway Or Network Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+CSV,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chemical Data Format,,,,FALSE,,fileFormat,,EDAM,,,,,,
+Cytoband Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cytoscape Input File Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+DCD,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+DSV,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+"Database Hits (Sequence) Format ",,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Docker Image Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Document Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Dot-Bracket Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+FASTA,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+FASTQ,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+FASTQ-Illumina,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+FCS,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GCT/Res Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GFF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GFF3,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GIF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+GTF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Annotation Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Cluster Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Expression Report Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genotype And Phenotype Annotation Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Graph Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+H5AD,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+HDF,,,,FALSE,,fileFormat,,EDAM,,,,,,
+HDF5,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+HTML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Hidden Markov Model Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Image Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Individual Genetic Data Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+JPG,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+JSON,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+LSM,,,,FALSE,,fileFormat,,EDAM,,,,,,
+MAF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+MAGE-ML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+MAGE-TAB,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+MAT,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+MATLAB Script,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+MSF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Map Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mass Spectrometry Data Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Matrix Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+NIFTI Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nexus Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Not Applicable,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+NumPy Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+OME-TIFF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+PDF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+PNG,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+PS,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+PSF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylip Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylip Format Variant,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetic Tree Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetic Tree Format (Text),,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Interaction Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Python Script,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+R File Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+R Script,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+RDS,,,,FALSE,,fileFormat,,,,,,,,
+RNA Annotation Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA Secondary Structure Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+RPKM,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Raw Sequence Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+SAM,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+SBML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+SQLite Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+SVG,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Scores Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Annotation Track Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Cluster Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Cluster Format (Protein),,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Feature Annotation Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Feature Table Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Feature Table Format (Text),,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Profile Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Range Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Record Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Trace Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Variation Annotation Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+TIFF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+TSV,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+TXT,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Tertiary Structure Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Textual Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Topology Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Trajectory Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+VCF,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+Workflow Format,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+XML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+YAML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+bedgraph,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+bigWig,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+cel,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+imzML Metadata File,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+mzML,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+nii,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+pkl,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+sif,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+xls,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022
+xlsx,,,,FALSE,,fileFormat,,EDAM,,,,,,Added by Brynn 06/30/2022

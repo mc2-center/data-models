@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Theme,Themes associated with resources derived from consortia activities,,"Component, Theme Name, Theme Display Name, Theme Description",FALSE,,,,,
+Theme Name,"Machine readable name of the research theme. (e.g. compuational_resource, drug_resistance_sensitivity).",,,TRUE,,,,,
+Theme Display Name,"Human readable display name of the research theme. (e.g. Computational Resource, Drug Resistance/Sensitivity)",,,TRUE,,,,,
+Theme Description,Description of the research theme.,,,TRUE,,,,,
+Theme Grant,"Themes associated with Grants, joined by uuids from the theme and grant table.",,"Component, Theme, Grant",FALSE,,,"Theme, Grant",,

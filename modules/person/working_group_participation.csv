@@ -1,0 +1,10 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Cancer Metabolism,,,,FALSE,,memberOf,,,,,,,,
+Cell and Tissue Mechanics,,,,FALSE,,memberOf,,,,,,,,
+Education and Outreach,,,,FALSE,,memberOf,,,,,,,,
+Image Analysis,,,,FALSE,,memberOf,,,,,,,,
+Navigating Cancer with Science and Art,,,,FALSE,,memberOf,,,,,,,,
+None,,,,FALSE,,memberOf,,,,,,,,
+Patient Advocacy Working Group,,,,FALSE,,memberOf,,,,,,,,
+Protein-Protein Interactions,,,,FALSE,,memberOf,,,,,,,,
+Resource and Data Sharing,,,,FALSE,,memberOf,,,,,,,,

@@ -1,0 +1,12 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+CCBIR,,,,FALSE,,consortium,,Sage,,,,,,
+CSBC,,,,FALSE,,consortium,,Sage,,,,,,
+HTAN,,,,FALSE,,consortium,,Sage,,,,,,
+ICBP,,,,FALSE,,consortium,,Sage,,,,,,
+MetNet,,,,FALSE,,consortium,,Sage,,,,,,
+NCI,,,,FALSE,,consortium,,Sage,,,,,,
+NCI Clinical and Translational Exploratory/Developmental Studies,,,,FALSE,,consortium,,Sage,,,,,,
+PDMC,,,,FALSE,,consortium,,Sage,,,,,,
+PS-ON,,,,FALSE,,consortium,,Sage,,,,,,
+Sage Bionetworks,,,,FALSE,,consortium,,Sage,,,,,,
+TEC,,,,FALSE,,consortium,,Sage,,,,,,
