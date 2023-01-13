@@ -1,7 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-R01,,,,FALSE,grantType,,,,,,,,,
-R21,,,,FALSE,grantType,,,,,,,,,
-R37,,,,FALSE,grantType,,,,,,,,,
-U01,,,,FALSE,grantType,,,,,,,,,
-U24,,,,FALSE,grantType,,,,,,,,,
-U54,,,,FALSE,grantType,,,,,,,,,
+R01,,,,FALSE,Grant Type,,,,,,,,,
+R21,,,,FALSE,Grant Type,,,,,,,,,
+R37,,,,FALSE,Grant Type,,,,,,,,,
+U01,,,,FALSE,Grant Type,,,,,,,,,
+U24,,,,FALSE,Grant Type,,,,,,,,,
+U54,,,,FALSE,Grant Type,,,,,,,,,

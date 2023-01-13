@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Annual Meeting,,,,FALSE,,chairRole,,,,,,,,
-None,,,,FALSE,,chairRole,,,,,,,,
-Steering Committee,,,,FALSE,,chairRole,,,,,,,,
-Working Group,,,,FALSE,,chairRole,,,,,,,,
+Annual Meeting,,,,FALSE,,Chair Roles,,,,,,,,
+None,,,,FALSE,,Chair Roles,,,,,,,,
+Steering Committee,,,,FALSE,,Chair Roles,,,,,,,,
+Working Group,,,,FALSE,,Chair Roles,,,,,,,,
