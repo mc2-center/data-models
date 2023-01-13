@@ -1,3 +1,3 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Open Access,,,,FALSE,,accessType,,,,,,,,
-Restricted Access,,,,FALSE,,accessType,,,,,,,,
+Open Access,,,,FALSE,,Publication Accessibility,,,,,,,,
+Restricted Access,,,,FALSE,,Publication Accessibility,,,,,,,,

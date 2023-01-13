@@ -1,148 +1,148 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Accession,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Alignment,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Model ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Model Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Line Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Migration Track Image,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Type Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Type Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Type Ontology ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chromosome Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chromosome Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Clustered Expression Profiles,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Codon Number,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Comparison Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Compound Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Compound Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Concentration,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Count Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Sequence,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Index,,,,FALSE,,dataType,,EDAM,,,,,,
-Data Reference,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Database Search Results,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Electronic Health Record,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Enzyme Kinetics Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Experimental Measurement,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-GO-Term Enrichment Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression Profile,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene ID (NCBI),,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Symbol,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Tree,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Map,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotype/Phenotype Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Heat Map,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Hidden Markov Model,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Hierarchy,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Histogram,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Image,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Image Metadata,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Kinetic Model,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-MRI Image,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Map,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Map Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mass Spectrometry Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mass Spectrum,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mathematical Model,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Property,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Simulation Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecule Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecule Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Morphology Parameter,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mutation ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Not Applicable,,,,FALSE,,dataType,,,,,,,,
-Nucleic Acid Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Sequence,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Concept Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Mapping,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Term,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Organism Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Organism Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Over-Represesntation Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-P-Value,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pair Sequence Alignment,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathway Or Network,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathway Or Network Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathway Overrepresentation Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Peptide Identification,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Peptide Property,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phenotype Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetic Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetic Tree,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Plain Text,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Plot,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Position Weight Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Position-Specific Scoring Matrix,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Contact Map,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Interaction Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Property,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Sequence,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Structure Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Quality Control Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA Sequence,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Raw Image,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Reaction Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-RefSeq Accession,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Resource Metadata,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sample Annotation,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sample ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Score,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Alignment,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Attribute,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Cluster,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Composition Plot,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Composition Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Coordinates,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Features,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 11/11/2022
-Sequence Image,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 09/23/2022
-Sequence Motif,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Position,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Property,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Range,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Record,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Search Results,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Set,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Signature Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Similarity,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Similarity Score,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Variations,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Simulation,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Small Molecule Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Spectrum,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistical Estimate Score,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Strain Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Strain Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structure,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structure Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Taxonomy,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Text Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Text Mining Report,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Topology Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Training Material,,,,FALSE,,dataType,,EDAM,,,,,,
-Trajectory Data,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcription Factor Identifier,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcription Factor Name,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-Vmax,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
-dbSNP ID,,,,FALSE,,dataType,,EDAM,,,,,,Added by Brynn 06/30/2022
+Accession,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Alignment,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Model ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Model Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Line Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Migration Track Image,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Type Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Type Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Cell Type Ontology ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chromosome Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Chromosome Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Clustered Expression Profiles,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Codon Number,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Comparison Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Compound Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Compound Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Concentration,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Count Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+DNA Sequence,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Data Index,,,,FALSE,,Tool Data,,EDAM,,,,,,
+Data Reference,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Database Search Results,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Drug Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Electronic Health Record,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Enzyme Kinetics Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Experimental Measurement,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Expression Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+GO-Term Enrichment Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Expression Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Expression Profile,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene ID (NCBI),,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Symbol,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Gene Tree,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genetic Map,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Genotype/Phenotype Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Heat Map,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Hidden Markov Model,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Hierarchy,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Histogram,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Image,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Image Metadata,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Kinetic Model,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+MRI Image,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Map,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Map Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mass Spectrometry Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mass Spectrum,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mathematical Model,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecular Property,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecular Simulation Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecule Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Molecule Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Morphology Parameter,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mutation ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Not Applicable,,,,FALSE,,Tool Data,,,,,,,,
+Nucleic Acid Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acid Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Nucleic Acid Sequence,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Concept Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Mapping,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Ontology Term,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Organism Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Organism Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Over-Represesntation Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+P-Value,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pair Sequence Alignment,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathway Or Network,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathway Or Network Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Pathway Overrepresentation Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Peptide Identification,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Peptide Property,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phenotype Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetic Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Phylogenetic Tree,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Plain Text,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Plot,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Position Weight Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Position-Specific Scoring Matrix,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Contact Map,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Interaction Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Property,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Sequence,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Protein Structure Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Quality Control Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+RNA Sequence,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Raw Image,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Reaction Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+RefSeq Accession,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Resource Metadata,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sample Annotation,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sample ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Score,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Alignment,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Attribute,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Cluster,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Composition Plot,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Composition Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Coordinates,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Features,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 11/11/2022
+Sequence Image,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 09/23/2022
+Sequence Motif,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Position,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Property,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Range,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Record,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Search Results,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Set,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Signature Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Similarity,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Similarity Score,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Sequence Variations,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Simulation,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Small Molecule Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Spectrum,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Statistical Estimate Score,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Strain Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Strain Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structure,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Structure Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Taxonomy,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Text Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Text Mining Report,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Topology Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Training Material,,,,FALSE,,Tool Data,,EDAM,,,,,,
+Trajectory Data,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Transcription Factor Identifier,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Transcription Factor Name,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+Vmax,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022
+dbSNP ID,,,,FALSE,,Tool Data,,EDAM,,,,,,Added by Brynn 06/30/2022

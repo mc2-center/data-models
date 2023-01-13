@@ -1,4 +1,4 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Open Access,,,,FALSE,,accessType,,EDAM,,,,,,
-Open Access (With Restrictions),,,,FALSE,,accessType,,EDAM,,,,,,
-Restricted Access,,,,FALSE,,accessType,,EDAM,,,,,,
+Open Access,,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
+Open Access (With Restrictions),,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
+Restricted Access,,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
