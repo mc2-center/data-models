@@ -1,43 +1,43 @@
-attributeFile	attribute
-consortium_funding_agency.csv	Consortium Funding Agency
-consortium_name.csv	Person Consortium Name
-consortium_name.csv	Grant Consortium Name
-dataset_file_format.csv	Dataset File Formats
-dataset_species.csv	Dataset Species
-grant_number.csv	Tool Grant Number
-grant_number.csv	Publication Grant Number
-grant_number.csv	Dataset Grant Number
-grant_number.csv	Person Grant Number
-grant_number.csv	Project Grant Number
-grant_type.csv	Grant Type
-institution_alias.csv	Grant Institution Alias
-institution_location_state.csv	Institution Location State
-institution_name.csv	Grant Institution Name
-chair_roles.csv	Chair Roles
-consent_for_portal_display.csv	Consent For Portal Display
-portal_display.csv	Portal Display
-working_group_participation.csv	Working Group Participation
-project_type.csv	Project Type
-publication_accessibility .csv	Publication Accessibility
-assay.csv	Publication Assay
-assay.csv	Dataset Assay
-tissue.csv	Publication Tissue
-tissue.csv	Dataset Tissue
-tumorType.csv	Publication Tumor Type
-tumorType.csv	Dataset Tumor Type
-theme_name.csv	Grant Theme Name
-tool_accessibility.csv	Tool Accessibility
-tool_cost.csv	Tool Cost
-tool_data.csv	Tool Input Data
-tool_data.csv	Tool Output Data
-tool_documentation_type.csv	Tool Documentation Type
-tool_download_type.csv	Tool Download Type
-tool_format.csv	Tool Input Format
-tool_format.csv	Tool Output Format
-tool_language.csv	Tool Language
-tool_license.csv	Tool License
-tool_link_type.csv	Tool Link Type
-tool_operating_system.csv	Tool Operating System
-tool_operation.csv	Tool Operation
-tool_topic.csv	Tool Topic
-tool_type.csv	Tool Type
+﻿attributeFile,attribute
+consortium_funding_agency.csv,Consortium Funding Agency
+consortium_name.csv,Person Consortium Name
+consortium_name.csv,Grant Consortium Name
+dataset_file_format.csv,Dataset File Formats
+dataset_species.csv,Dataset Species
+grant_number.csv,Tool Grant Number
+grant_number.csv,Publication Grant Number
+grant_number.csv,Dataset Grant Number
+grant_number.csv,Person Grant Number
+grant_number.csv,Project Grant Number
+grant_type.csv,Grant Type
+institution_alias.csv,Grant Institution Alias
+institution_location_state.csv,Institution Location State
+institution_name.csv,Grant Institution Name
+chair_roles.csv,Chair Roles
+consent_for_portal_display.csv,Consent For Portal Display
+portal_display.csv,Portal Display
+working_group_participation.csv,Working Group Participation
+project_type.csv,Project Type
+publication_accessibility.csv,Publication Accessibility
+assay.csv,Publication Assay
+assay.csv,Dataset Assay
+tissue.csv,Publication Tissue
+tissue.csv,Dataset Tissue
+tumorType.csv,Publication Tumor Type
+tumorType.csv,Dataset Tumor Type
+theme_name.csv,Grant Theme Name
+tool_accessibility.csv,Tool Accessibility
+tool_cost.csv,Tool Cost
+tool_data.csv,Tool Input Data
+tool_data.csv,Tool Output Data
+tool_documentation_type.csv,Tool Documentation Type
+tool_download_type.csv,Tool Download Type
+tool_format.csv,Tool Input Format
+tool_format.csv,Tool Output Format
+tool_language.csv,Tool Language
+tool_license.csv,Tool License
+tool_link_type.csv,Tool Link Type
+tool_operating_system.csv,Tool Operating System
+tool_operation.csv,Tool Operation
+tool_topic.csv,Tool Topic
+tool_type.csv,Tool Type
