@@ -1,0 +1,4 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Linux,All flavours of Linux/UNIX operating systems.,,,FALSE,,operatingSystem,,EDAM,,,,,,
+Mac,All flavours of Apple Macintosh operating systems (primarily Mac OS X).,,,FALSE,,operatingSystem,,EDAM,,,,,,
+Windows,All flavours of Microsoft Windows operating system.,,,FALSE,,operatingSystem,,EDAM,,,,,,

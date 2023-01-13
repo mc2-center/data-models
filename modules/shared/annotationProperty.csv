@@ -1,0 +1,2 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Component,"Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",,,TRUE,,,,,

@@ -1,0 +1,13 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Discussion Forum,,,,FALSE,,linkType,,,,,,,,
+Galaxy Service,,,,FALSE,,linkType,,,,,,,,
+Helpdesk,"A phone line, web site or email-based system providing help to the end-user of the software.",,,FALSE,,linkType,,,,,,,,
+Issue Tracker,,,,FALSE,,linkType,,,,,,,,
+Mailing list,"Mailing list for the software announcements, discussions, support etc.",,,FALSE,,linkType,,,,,,,,
+Mirror,Mirror of an (identical) online service.,,,FALSE,,linkType,,,,,,,,
+Other,Other type of link for software - the default if a more specific type is not available.,,,FALSE,,linkType,,,,,,,,
+Repository,"A place where source code, data and other files can be retrieved from, typically via platforms like GitHub which provide version control and other features, or something simpler, e.g. an FTP site.",,,FALSE,,linkType,,,,,,,,
+Service,An online service (other than Galaxy) that provides access (an interface) to the software.,,,FALSE,,linkType,,,,,,,,
+Social Media,,,,FALSE,,linkType,,,,,,,,
+Software Catalogue,,,,FALSE,,linkType,,,,,,,,
+Technical Monitoring,,,,FALSE,,linkType,,,,,,,,
