@@ -26,6 +26,12 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
  
+      - name: Update valid values
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml pandas
+          python update_valid_values.py
+
       - name: Install schematic and convert schema
         shell: bash
         run: |
@@ -39,11 +45,11 @@ jobs:
         run: |
           git config --local user.email "mc2center@sagebase.org"
           git config --local user.name "mc2center-bot[bot]"
-          git commit -m "Build jsonld" -a
+          git commit -m "build jsonld" -a
     
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
+         github_token: ${{ secrets.GH_TOKEN }}
          branch: ${{ github.event.pull_request.head.ref }}
   
