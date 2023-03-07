@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --local user.email "mc2center@sagebase.org"
           git config --local user.name "mc2center-bot[bot]"
-          git commit -m "Build jsonld" -a
+          git commit -m "build jsonld" -a
     
       - name: Push changes
         uses: ad-m/github-push-action@master
