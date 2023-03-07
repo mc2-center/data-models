@@ -1,0 +1,99 @@
+﻿consortium:
+  - name: Consortium Funding Agency
+    src: consortium/consortium_funding_agency.csv
+
+dataset:
+  - name: Dataset File Formats
+    src: dataset/dataset_file_format.csv
+  - name: Dataset Species
+    src: dataset/dataset_species.csv
+  - name: Dataset Grant Number
+    src: grant/grant_number.csv
+  - name: Dataset Assay
+    src: shared/assay.csv
+  - name: Dataset Tissue
+    src: shared/tissue.csv
+  - name: Dataset Tumor Type
+    src: shared/tumorType.csv
+
+grant:
+  - name: Grant Consortium Name
+    src: consortium/consortium_name.csv
+  - name: Grant Type
+    src: grant/grant_type.csv
+  - name: Grant Institution Alias
+    src: institution/institution_alias.csv
+  - name: Grant Institution Name
+    src: institution/institution_name.csv
+  - name: Grant Theme Name
+    src: theme/theme_name.csv
+
+institution:
+  - name: Institution Location State
+    src: institution/institution_location_state.csv
+
+person:
+  - name: Person Consortium Name
+    src: consortium/consortium_name.csv
+  - name: Person Grant Number
+    src: grant/grant_number.csv
+  - name: Chair Roles
+    src: person/chair_roles.csv
+  - name: Consent For Portal Display
+    src: person/consent_for_portal_display.csv
+  - name: Portal Display
+    src: person/portal_display.csv
+  - name: Working Group Participation
+    src: person/working_group_participation.csv
+
+project:
+  - name: Project Grant Number
+    src: grant/grant_number.csv
+  - name: Project Type
+    src: project/project_type.csv
+
+publication:
+  - name: Publication Grant Number
+    src: grant/grant_number.csv
+  - name: Publication Accessibility
+    src: publication/publication_accessibility.csv
+  - name: Publication Assay
+    src: shared/assay.csv
+  - name: Publication Tissue
+    src: shared/tissue.csv
+  - name: Publication Tumor Type
+    src: shared/tumorType.csv
+
+tool:
+  - name: Tool Grant Number
+    src: grant/grant_number.csv
+  - name: Tool Accessibility
+    src: tool/tool_accessibility.csv
+  - name: Tool Cost
+    src: tool/tool_cost.csv
+  - name: Tool Input Data
+    src: tool/tool_data.csv
+  - name: Tool Output Data
+    src: tool/tool_data.csv
+  - name: Tool Documentation Type
+    src: tool/tool_documentation_type.csv
+  - name: Tool Download Type
+    src: tool/tool_download_type.csv
+  - name: Tool Input Format
+    src: tool/tool_format.csv
+  - name: Tool Output Format
+    src: tool/tool_format.csv
+  - name: Tool Language
+    src: tool/tool_language.csv
+  - name: Tool License
+    src: tool/tool_license.csv
+  - name: Tool Link Type
+    src: tool/tool_link_type.csv
+  - name: Tool Operating System
+    src: tool/tool_operating_system.csv
+  - name: Tool Operation
+    src: tool/tool_operation.csv
+  - name: Tool Topic
+    src: tool/tool_topic.csv
+  - name: Tool Type
+    src: tool/tool_type.csv
