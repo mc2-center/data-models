@@ -3356,6 +3356,15 @@
                 },
                 {
                     "@id": "bts:IsothermalTitrationCalorimetry"
+                },
+                {
+                    "@id": "bts:CellFractionation"
+                },
+                {
+                    "@id": "bts:SDS-PAGE"
+                },
+                {
+                    "@id": "bts:Tuba-Seq"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -3515,6 +3524,9 @@
                 },
                 {
                     "@id": "bts:Basal-LikeBreastCarcinoma"
+                },
+                {
+                    "@id": "bts:BiliaryTractCarcinoma"
                 },
                 {
                     "@id": "bts:BladderCarcinoma"
@@ -4235,6 +4247,9 @@
                 },
                 {
                     "@id": "bts:Mesenchyme"
+                },
+                {
+                    "@id": "bts:Mucosa"
                 },
                 {
                     "@id": "bts:Muscle"
@@ -9076,6 +9091,15 @@
                 },
                 {
                     "@id": "bts:IsothermalTitrationCalorimetry"
+                },
+                {
+                    "@id": "bts:CellFractionation"
+                },
+                {
+                    "@id": "bts:SDS-PAGE"
+                },
+                {
+                    "@id": "bts:Tuba-Seq"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -9142,6 +9166,9 @@
                 },
                 {
                     "@id": "bts:Basal-LikeBreastCarcinoma"
+                },
+                {
+                    "@id": "bts:BiliaryTractCarcinoma"
                 },
                 {
                     "@id": "bts:BladderCarcinoma"
@@ -9862,6 +9889,9 @@
                 },
                 {
                     "@id": "bts:Mesenchyme"
+                },
+                {
+                    "@id": "bts:Mucosa"
                 },
                 {
                     "@id": "bts:Muscle"
@@ -21265,6 +21295,57 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:CellFractionation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CellFractionation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cell Fractionation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SDS-PAGE",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SDS-PAGE",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SDS-PAGE",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tuba-Seq",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tuba-Seq",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tuba-Seq",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AfricanBushElephant",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -21907,6 +21988,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Basal-Like Breast Carcinoma",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BiliaryTractCarcinoma",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "BiliaryTractCarcinoma",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetTumorType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Biliary Tract Carcinoma",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -25834,6 +25932,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Mesenchyme",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mucosa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mucosa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetTissue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mucosa",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
