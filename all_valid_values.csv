@@ -552,6 +552,9 @@ assay,smFISH
 assay,smRNA-seq
 assay,snRNA-seq
 assay,Isothermal Titration Calorimetry
+assay,Cell Fractionation
+assay,SDS-PAGE
+assay,Tuba-Seq
 tissue,Gonad
 tissue,Abdominal Esophagus
 tissue,Adipose Tissue
@@ -617,6 +620,7 @@ tissue,Main Bronchus
 tissue,Mammary Gland
 tissue,Meninges
 tissue,Mesenchyme
+tissue,Mucosa
 tissue,Muscle
 tissue,Nasal Cavity
 tissue,Nervous System
@@ -678,6 +682,7 @@ tumorType,B-Cell Non-Hodgkin Lymphoma
 tumorType,Barrett Esophagus
 tumorType,Basal Cell Neoplasm
 tumorType,Basal-Like Breast Carcinoma
+tumorType,Biliary Tract Carcinoma
 tumorType,Bladder Carcinoma
 tumorType,Bladder Neoplasm
 tumorType,Bone Neoplasm
