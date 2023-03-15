@@ -3,6 +3,7 @@ name: build-jsonld
 on:
   pull_request:
     branches: [main]
+    types: [opened]
     paths:
       - 'modules/**'
   workflow_dispatch:
