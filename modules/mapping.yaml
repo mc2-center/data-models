@@ -51,6 +51,8 @@ project:
     src: grant/grant_number.csv
   - name: Project Type
     src: project/project_type.csv
+  - name: Project Consortium Name
+    src: consortium/consortium_name.csv
 
 publication:
   - name: Publication Grant Number
