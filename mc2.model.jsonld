@@ -3358,13 +3358,7 @@
                     "@id": "bts:IsothermalTitrationCalorimetry"
                 },
                 {
-                    "@id": "bts:CellFractionation"
-                },
-                {
-                    "@id": "bts:SDS-PAGE"
-                },
-                {
-                    "@id": "bts:Tuba-Seq"
+                    "@id": "bts:SuspendedMicrochannelResonator"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -7906,6 +7900,75 @@
             ]
         },
         {
+            "@id": "bts:ProjectConsoriumName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": " Consortium(s) associated with the project. 1...1",
+            "rdfs:label": "ProjectConsoriumName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Project Consorium Name",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProjectConsortiumName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ProjectConsortiumName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:CCBIR"
+                },
+                {
+                    "@id": "bts:CSBC"
+                },
+                {
+                    "@id": "bts:HTAN"
+                },
+                {
+                    "@id": "bts:ICBP"
+                },
+                {
+                    "@id": "bts:MetNet"
+                },
+                {
+                    "@id": "bts:NCI"
+                },
+                {
+                    "@id": "bts:NCIClinicalandTranslationalExploratory/DevelopmentalStudies"
+                },
+                {
+                    "@id": "bts:PDMC"
+                },
+                {
+                    "@id": "bts:PS-ON"
+                },
+                {
+                    "@id": "bts:SageBionetworks"
+                },
+                {
+                    "@id": "bts:TEC"
+                }
+            ],
+            "sms:displayName": "Project Consortium Name",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Publication",
             "@type": "rdfs:Class",
             "rdfs:comment": "Publication derived from consortia activity",
@@ -9093,13 +9156,7 @@
                     "@id": "bts:IsothermalTitrationCalorimetry"
                 },
                 {
-                    "@id": "bts:CellFractionation"
-                },
-                {
-                    "@id": "bts:SDS-PAGE"
-                },
-                {
-                    "@id": "bts:Tuba-Seq"
+                    "@id": "bts:SuspendedMicrochannelResonator"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -21295,10 +21352,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CellFractionation",
+            "@id": "bts:SuspendedMicrochannelResonator",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "CellFractionation",
+            "rdfs:label": "SuspendedMicrochannelResonator",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DatasetAssay"
@@ -21307,41 +21364,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Cell Fractionation",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SDS-PAGE",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SDS-PAGE",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetAssay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "SDS-PAGE",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Tuba-Seq",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Tuba-Seq",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetAssay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tuba-Seq",
+            "sms:displayName": "Suspended Microchannel Resonator",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -34500,23 +34523,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Core",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ProjectConsortiumName",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ProjectConsortiumName",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ProjectView"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Project Consortium Name",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
