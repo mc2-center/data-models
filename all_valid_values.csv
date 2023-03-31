@@ -552,9 +552,7 @@ assay,smFISH
 assay,smRNA-seq
 assay,snRNA-seq
 assay,Isothermal Titration Calorimetry
-assay,Cell Fractionation
-assay,SDS-PAGE
-assay,Tuba-Seq
+assay,Suspended Microchannel Resonator
 tissue,Gonad
 tissue,Abdominal Esophagus
 tissue,Adipose Tissue
