@@ -10671,6 +10671,109 @@
             ]
         },
         {
+            "@id": "bts:PublicationViewDCA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for publication submission with component_id field for DCA upsert function.",
+            "rdfs:label": "PublicationViewDCA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Publication View DCA",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Dataset"
+                },
+                {
+                    "@id": "bts:Tool"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:Publication"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:PublicationViewId"
+                },
+                {
+                    "@id": "bts:PublicationGrantNumber"
+                },
+                {
+                    "@id": "bts:PublicationDoi"
+                },
+                {
+                    "@id": "bts:PublicationJournal"
+                },
+                {
+                    "@id": "bts:PubmedId"
+                },
+                {
+                    "@id": "bts:PubmedUrl"
+                },
+                {
+                    "@id": "bts:PublicationTitle"
+                },
+                {
+                    "@id": "bts:PublicationYear"
+                },
+                {
+                    "@id": "bts:PublicationKeywords"
+                },
+                {
+                    "@id": "bts:PublicationAuthors"
+                },
+                {
+                    "@id": "bts:PublicationAbstract"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:PublicationTumorType"
+                },
+                {
+                    "@id": "bts:PublicationTissue"
+                },
+                {
+                    "@id": "bts:PublicationAccessibility"
+                },
+                {
+                    "@id": "bts:PublicationDatasetAlias"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PublicationViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique identifier that allows schematic to update and insert entries.",
+            "rdfs:label": "PublicationViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PublicationView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
             "@id": "bts:Component",
             "@type": "rdfs:Class",
             "rdfs:comment": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
