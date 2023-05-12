@@ -27,8 +27,7 @@ def main(mapping):
 
         for attribute in attributes:
             cv_file = os.path.join(PARENT_DIR, attribute['src'])
-            cv_terms = pd.read_csv(cv_file, dtype=str)['Attribute'].tolist()
-
+            cv_terms = pd.read_csv(cv_file, dtype=str, keep_default_na=False)['Attribute'].tolist()
             # Replace list of valid values with latest terms for the
             # given attribute.
             df.loc[attribute['name'], 'Valid Values'] = ", ".join(cv_terms)
