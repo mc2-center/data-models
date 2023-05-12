@@ -10704,7 +10704,7 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:PublicationViewId"
+                    "@id": "bts:PublicationViewDCAId"
                 },
                 {
                     "@id": "bts:PublicationGrantNumber"
@@ -10755,10 +10755,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:PublicationViewId",
+            "@id": "bts:PublicationViewDCAId",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique identifier that allows schematic to update and insert entries.",
-            "rdfs:label": "PublicationViewId",
+            "rdfs:label": "PublicationViewDCAId",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -10767,7 +10767,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "PublicationView_id",
+            "sms:displayName": "PublicationViewDCA_id",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
