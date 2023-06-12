@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Flashing,,,,FALSE,,Resource Access Hazard,,,,,,,,
+Motion,,,,FALSE,,Resource Access Hazard,,,,,,,,
+Simulation,,,,FALSE,,Resource Access Hazard,,,,,,,,
+Sound,,,,FALSE,,Resource Access Hazard,,,,,,,,
