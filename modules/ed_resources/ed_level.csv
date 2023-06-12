@@ -1,0 +1,11 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Preschool,,,,FALSE,,Resource Educational Level,,,,,,,,
+Lower Primary,,,,FALSE,,Resource Educational Level,,,,,,,,
+Upper Primary,,,,FALSE,,Resource Educational Level,,,,,,,,
+Middle School,,,,FALSE,,Resource Educational Level,,,,,,,,
+High School,,,,FALSE,,Resource Educational Level,,,,,,,,
+Community College / Lower Division,,,,FALSE,,Resource Educational Level,,,,,,,,
+College / Upper Division,,,,FALSE,,Resource Educational Level,,,,,,,,
+Graduate / Profession,,,,FALSE,,Resource Educational Level,,,,,,,,
+Career / Technical,,,,FALSE,,Resource Educational Level,,,,,,,,
+Adult Education,,,,FALSE,,Resource Educational Level,,,,,,,,
