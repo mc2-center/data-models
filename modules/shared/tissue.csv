@@ -16,6 +16,7 @@ Bone Marrow,The tissue occupying the spaces of some bones. It consists of blood 
 Brain,An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.,,,False,,Tissue,,ICD-O-3,,"CNS-Brain, Nervous System",C71.9,,NCIt,
 Breast,One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest. (NCI),,,False,,Tissue,,ICD-O-3,,Breasts,C50.9,,NCIt,
 Caecum,,,,False,,Tissue,,UBERON,,,UBERON:0001153,http://purl.obolibrary.org/obo/UBERON_0001153,,Added by Rancho 1/7/2022
+Cancer-Associated Fibroblast,A fibroblast found proximal to or within cancerous tissue.,,,False,,Tissue,,NCIT,,CAF,NCIT:C168534,http://purl.obolibrary.org/obo/NCIT_C168534,C168534,OB 4/18/23
 Cardia,,,,False,,Tissue,,ICD-O-3,,,C16.0,,,
 Cartilage,"A type of connective tissue composed of chondrocytes and an extracellular matrix, composed of collagen, elastin, and ground substance. There are three types of cartilage; namely elastic, hyaline, and fibrocartilage.",,,False,,Tissue,,,,Cartilagenous,,,C12373,
 Cervix Uteri,The portion of the uterus (or uterine horns) that empties into the vagina.,,,False,,Tissue,,ICD-O-3,,"Uterine Cervix, Uterus, Cervix, Genital System, Female, Cervix, CERVIX, cervix, Cervix",C53.9,,NCIt,
@@ -111,3 +112,4 @@ Vagina,The muscular canal extending from the uterus to the exterior of the body.
 Vascular Endothelium,The layer of simple squamous epithelial tissue that lines the luminal surface of the entire circulatory system.,,,False,,Tissue,,,,,,,C13053,
 Vein,A blood vessel that carries blood towards the heart.,,,False,,Tissue,,ICD-O-3,,Venous,C49.9,,NCIt,
 Vertebra,Any of the ring-shaped bony structures that constitute the spinal column and surround the spinal cord.,,,False,,Tissue,,ICD-O-3,,"Vertebrae, Spinal Bone, Spinal bone",C41.2,,NCIt,
+Peripheral Blood Mononuclear Cell,A peripheral blood cell with a single nucleus. This category includes lymphocytes and monocytes.,,,False,,Tissue,,NCIT,,,NCIT:C12954,http://purl.obolibrary.org/obo/NCIT_C12954,C12954,OB 6/9/23
