@@ -331,3 +331,24 @@ smRNA-seq,"A molecular genetic technique that combines chromatin immunoprecipita
 snRNA-seq,"A molecular genetic technique that combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the DNA sequences that are obtained can be mapped to their genomic locations.",,,FALSE,,Assay,,,,,,,,
 Isothermal Titration Calorimetry,The measurement of thermodynamic parameters (e.g. enthalpy) at constant temperature during a titration.,,,FALSE,,Assay,,CHMO,,,CHMO:0000683,https://www.ebi.ac.uk/ols/ontologies/chmo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHMO_0000683,,Added by Brynn 01/05/2023
 Suspended Microchannel Resonator,"Particles are weighed in real-time with the suspended microchannel resonator (SMR) as they flow through a hollow cantilever. In addition to weighing particles with femtogram precision, the SMR can also measure mass density with a resolution of 10-4 g/mL. This is possible since the microchannel resonant frequency is determined by the difference in mass of the particle with respect to that of the displaced fluid. Thus, the particle's density is determined by measuring its mass in two fluids of different densities. The SMR can measure the growth of single cells as well as the absorption of biomolecules to microchannel walls. Scaling the current SMR design by ten-fold will result in a thousand-fold improvement in mass resolution (attogram) and thereby enable single viruses to be weighed with high precision.",,,FALSE,,Assay,,PubMed,,SMR,PMID:17460669,https://www.nature.com/articles/nature05741,,
+10x Multiome,,,,FALSE,,Assay,,EFO,,,EFO:0030059,http://www.ebi.ac.uk/efo/EFO_0030059,,OB 4/25/23
+Visium Spatial Gene Expression,,,,FALSE,,Assay,,EFO,,,EFO:0010961,http://www.ebi.ac.uk/efo/EFO_0010961,,OB 4/18/23
+Antitumor Drug Screening Assay,,,,FALSE,,Assay,,NCIT,,,NCIT:C15229,http://purl.obolibrary.org/obo/NCIT_C15229,,OB 5/22/23
+Bioelectrochemical Analysis,,,,FALSE,,Assay,,CHMO,,,CHMO:0002504,http://purl.obolibrary.org/obo/CHMO_0002504,,OB 5/23/23
+Chimeric Antigen Receptor T-Cell Therapy,,,,FALSE,,Assay,,NCIT,,,NCIT:C126102,http://purl.obolibrary.org/obo/NCIT_C126102,,OB 4/19/23
+Clinical Trial,,,,FALSE,,Assay,,NCIT,,,NCIT:C71104,http://purl.obolibrary.org/obo/NCIT_C71104,,OB 4/19/23
+Cell Cycle Assay,,,,FALSE,,Assay,,BAO,,,BAO:0002041,http://www.bioassayontology.org/bao#BAO_0002041,,OB 4/24/23
+Clonality Analysis,,,,FALSE,,Assay,,NCIT,,,NCIT:C63327,http://purl.obolibrary.org/obo/NCIT_C63327,,OB 5/18/23
+Comparative Genomic Hybridization,,,,FALSE,,Assay,,NCIT,,,NCIT:C18084,http://purl.obolibrary.org/obo/NCIT_C18084,,OB 5/22/23
+Cryo-Electron Microscopy,,,,FALSE,,Assay,,NCIT,,,NCIT:C18113,http://purl.obolibrary.org/obo/NCIT_C18113,,OB 5/17/23
+Cryo-Electron Tomography,,,,FALSE,,Assay,,PubMed,,,,https://pubmed.ncbi.nlm.nih.gov/33020915/,,OB 5/17/23
+Data Integration,,,,FALSE,,Assay,,T4FS,,,T4FS:0000487,http://purl.obolibrary.org/obo/T4FS_0000487,,OB 4/14/23
+Field-Emission Scanning Electron Microscopy,,,,FALSE,,Assay,,CHMO,,,CHMO:0000074,http://purl.obolibrary.org/obo/CHMO_0000074,,OB 4/19/23
+Label-free Protein Quantification by LC/MS,,,,FALSE,,Assay,,NCIT,,,NCIT:C161825,http://purl.obolibrary.org/obo/NCIT_C161825,,OB 4/24/23
+Metabolite Profiling Assay,,,,FALSE,,Assay,,OBI,,,OBI:0000366,http://purl.obolibrary.org/obo/OBI_0000366,,OB 4/19/23
+Reporter Gene Assay,,,,FALSE,,Assay,,BAO,,,BAO:0003006,http://www.bioassayontology.org/bao#BAO_0003006,,OB 4/24/23
+Single-Molecule Localization Microscopy,,,,FALSE,,Assay,,PubMed,,,,https://pubmed.ncbi.nlm.nih.gov/35663461/,,OB 4/14/23
+Synthesis,,,,FALSE,,Assay,,NCIT,,,NCIT:C61408,http://purl.obolibrary.org/obo/NCIT_C61408,,OB 5/17/23
+Targeted Therapy Agent,,,,FALSE,,Assay,,NCIT,,,NCIT:C163758,http://purl.obolibrary.org/obo/NCIT_C163758,,OB 5/17/23
+Trichrome Staining Method,,,,FALSE,,Assay,,NCIT,,,NCIT:C23012,http://purl.obolibrary.org/obo/NCIT_C23012,,OB 5/19/23
+Ultrasound Imaging,,,,FALSE,,Assay,,NCIT,,,NCIT:C17230,http://purl.obolibrary.org/obo/NCIT_C17230,,OB 5/19/23
