@@ -1,0 +1,187 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+aa,Afar,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ab,Abkhazian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ae,Avestan,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+af,Afrikaans,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ak,Akan,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+am,Amharic,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+an,Aragonese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ar,Arabic,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+as,Assamese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+av,Avaric,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ay,Aymara,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+az,Azerbaijani,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ba,Bashkir,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+be,Belarusian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bg,Bulgarian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bh,Bihari languages,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bi,Bislama,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bm,Bambara,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bn,Bengali,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bo,Tibetan,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+br,Breton,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+bs,Bosnian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ca,Catalan,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ca,Valencian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ce,Chechen,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ch,Chamorro,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+co,Corsican,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+cr,Cree,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+cs,Czech,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+cu,"Church Slavic, Old Slavonic, Old Church Slavonic, Old Bulgarian, Church Slavonic",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+cv,Chuvash,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+cy,Welsh,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+da,Danish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+de,German,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+dv,"Dhivehi, Divehi",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+dv,Maldivian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+dz,Dzongkha,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ee,Ewe,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+el,"Greek, Modern (1453-)",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+en,English,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+eo,Esperanto,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+es,"Spanish, Castilian",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+et,Estonian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+eu,Basque,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fa,Persian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ff,Fulah,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fi,Finnish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fj,Fijian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fo,Faroese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fr,French,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+fy,Western Frisian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ga,Irish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+gd,"Gaelic, Scottish Gaelic",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+gl,Galician,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+gn,Guarani,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+gu,Gujarati,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+gv,Manx,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ha,Hausa,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+he,Hebrew,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+hi,Hindi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ho,Hiri Motu,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+hr,Croatian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ht,"Haitian, Haitian Creole",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+hu,Hungarian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+hy,Armenian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+hz,Herero,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ia,Interlingua (International Auxiliary Language Association),,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+id,Indonesian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ie,"Interlingue, Occidental",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ig,Igbo,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ii,"Nuosu, Sichuan Yi",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ik,Inupiaq,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+io,Ido,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+is,Icelandic,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+it,Italian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+iu,Inuktitut,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ja,Japanese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+jv,Javanese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ka,Georgian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kg,Kongo,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ki,"Gikuyu, Kikuyu",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kj,"Kuanyama, Kwanyama",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kk,Kazakh,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kl,"Greenlandic, Kalaallisut",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+km,Central Khmer,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kn,Kannada,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ko,Korean,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kr,Kanuri,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ks,Kashmiri,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ku,Kurdish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kv,Komi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+kw,Cornish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ky,"Kirghiz, Kyrgyz",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+la,Latin,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lb,"Letzeburgesch, Luxembourgish",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lg,Ganda,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+li,"Limburgan, Limburgish, Limburger",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ln,Lingala,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lo,Lao,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lt,Lithuanian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lu,Luba-Katanga,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+lv,Latvian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mg,Malagasy,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mh,Marshallese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mi,Maori,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mk,Macedonian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ml,Malayalam,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mn,Mongolian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mr,Marathi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ms,Malay,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+mt,Maltese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+my,Burmese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+na,Nauru,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nb,"Bokmål, Norwegian, Norwegian Bokmål",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nd,"Ndebele, North, North Ndebele",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ne,Nepali,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ng,Ndonga,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nl,"Dutch, Flemish",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nn,"Norwegian Nynorsk, Nynorsk, Norwegian",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+no,Norwegian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nr,South Ndebele,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+nv,"Navaho, Navajo",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ny,"Chewa, Chichewa, Nyanja",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+oc,Occitan (post 1500),,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+oj,Ojibwa,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+om,Oromo,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+or,Oriya,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+os,"Ossetian, Ossetic",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+pa,Panjabi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+pi,Pali,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+pl,Polish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ps,"Pashto, Pushto",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+pt,Portuguese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+qu,Quechua,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+rm,Romansh,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+rn,Rundi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ro,"Romanian, Moldavian, Moldovan",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ru,Russian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+rw,Kinyarwanda,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sa,Sanskrit,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sc,Sardinian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sd,Sindhi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+se,Northern Sami,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sg,Sango,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+si,"Sinhala, Sinhalese",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sk,Slovak,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sl,Slovenian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sm,Samoan,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sn,Shona,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+so,Somali,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sq,Albanian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sr,Serbian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ss,Swati,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+st,"Sotho, Southern",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+su,Sundanese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sv,Swedish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+sw,Swahili,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ta,Tamil,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+te,Telugu,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tg,Tajik,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+th,Thai,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ti,Tigrinya,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tk,Turkmen,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tl,Tagalog,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tn,Tswana,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+to,Tonga (Tonga Islands),,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tr,Turkish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ts,Tsonga,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tt,Tatar,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+tw,Twi,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ty,Tahitian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ug,"Uighur, Uyghur",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+uk,Ukrainian,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ur,Urdu,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+uz,Uzbek,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+ve,Venda,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+vi,Vietnamese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+vo,Volapük,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+wa,Walloon,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+wo,Wolof,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+xh,Xhosa,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+yi,Yiddish,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+yo,Yoruba,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+za,"Chuang, Zhuang",,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+zh,Chinese,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
+zu,Zulu,,,FALSE,,Resource Language,,https://www.loc.gov/standards/iso639-2/php/English_list.php,,,,,,ISO 639-1 2-letter language codes updated 1/11/2013
