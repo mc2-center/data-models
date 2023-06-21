@@ -352,3 +352,4 @@ Synthesis,,,,FALSE,,Assay,,NCIT,,,NCIT:C61408,http://purl.obolibrary.org/obo/NCI
 Targeted Therapy Agent,,,,FALSE,,Assay,,NCIT,,,NCIT:C163758,http://purl.obolibrary.org/obo/NCIT_C163758,,OB 5/17/23
 Trichrome Staining Method,,,,FALSE,,Assay,,NCIT,,,NCIT:C23012,http://purl.obolibrary.org/obo/NCIT_C23012,,OB 5/19/23
 Ultrasound Imaging,,,,FALSE,,Assay,,NCIT,,,NCIT:C17230,http://purl.obolibrary.org/obo/NCIT_C17230,,OB 5/19/23
+Transcription profiling by NanoString,,,,FALSE,,Assay,,EFO,,Nanostring nCounter,EFO:0030058,http://www.ebi.ac.uk/efo/EFO_0030058,,OB 6/20/23
