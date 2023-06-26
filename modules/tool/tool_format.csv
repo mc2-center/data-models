@@ -116,3 +116,7 @@ pkl,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 sif,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 xls,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 xlsx,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+PDB,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
+HED,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
+MRC,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
+Unspecified,,,,FALSE,,Tool Format,,,,,,,,OB 6/21/23
