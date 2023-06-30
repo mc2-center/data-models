@@ -336,7 +336,6 @@ Visium Spatial Gene Expression,,,,FALSE,,Assay,,EFO,,,EFO:0010961,http://www.ebi
 Antitumor Drug Screening Assay,,,,FALSE,,Assay,,NCIT,,,NCIT:C15229,http://purl.obolibrary.org/obo/NCIT_C15229,,OB 5/22/23
 Bioelectrochemical Analysis,,,,FALSE,,Assay,,CHMO,,,CHMO:0002504,http://purl.obolibrary.org/obo/CHMO_0002504,,OB 5/23/23
 Chimeric Antigen Receptor T-Cell Therapy,,,,FALSE,,Assay,,NCIT,,,NCIT:C126102,http://purl.obolibrary.org/obo/NCIT_C126102,,OB 4/19/23
-Clinical Trial,,,,FALSE,,Assay,,NCIT,,,NCIT:C71104,http://purl.obolibrary.org/obo/NCIT_C71104,,OB 4/19/23
 Cell Cycle Assay,,,,FALSE,,Assay,,BAO,,,BAO:0002041,http://www.bioassayontology.org/bao#BAO_0002041,,OB 4/24/23
 Clonality Analysis,,,,FALSE,,Assay,,NCIT,,,NCIT:C63327,http://purl.obolibrary.org/obo/NCIT_C63327,,OB 5/18/23
 Comparative Genomic Hybridization,,,,FALSE,,Assay,,NCIT,,,NCIT:C18084,http://purl.obolibrary.org/obo/NCIT_C18084,,OB 5/22/23
