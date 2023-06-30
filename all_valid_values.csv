@@ -66,6 +66,15 @@ dataset_file_format,pptx
 dataset_file_format,rcc
 dataset_file_format,xls
 dataset_file_format,xlsx
+dataset_file_format,MGF
+dataset_file_format,BIGWIG
+dataset_file_format,H5AD
+dataset_file_format,H5
+dataset_file_format,SF
+dataset_file_format,PKL
+dataset_file_format,BPM
+dataset_file_format,Unspecified
+dataset_file_format,Pending Annotation
 dataset_species,African Bush Elephant
 dataset_species,Armadillo
 dataset_species,Asian Elephant
@@ -553,6 +562,27 @@ assay,smRNA-seq
 assay,snRNA-seq
 assay,Isothermal Titration Calorimetry
 assay,Suspended Microchannel Resonator
+assay,10x Multiome
+assay,Visium Spatial Gene Expression
+assay,Antitumor Drug Screening Assay
+assay,Bioelectrochemical Analysis
+assay,Chimeric Antigen Receptor T-Cell Therapy
+assay,Cell Cycle Assay
+assay,Clonality Analysis
+assay,Comparative Genomic Hybridization
+assay,Cryo-Electron Microscopy
+assay,Cryo-Electron Tomography
+assay,Data Integration
+assay,Field-Emission Scanning Electron Microscopy
+assay,Label-free Protein Quantification by LC/MS
+assay,Metabolite Profiling Assay
+assay,Reporter Gene Assay
+assay,Single-Molecule Localization Microscopy
+assay,Synthesis
+assay,Targeted Therapy Agent
+assay,Trichrome Staining Method
+assay,Ultrasound Imaging
+assay,Transcription profiling by NanoString
 tissue,Gonad
 tissue,Abdominal Esophagus
 tissue,Adipose Tissue
@@ -570,6 +600,7 @@ tissue,Bone Marrow
 tissue,Brain
 tissue,Breast
 tissue,Caecum
+tissue,Cancer-Associated Fibroblast
 tissue,Cardia
 tissue,Cartilage
 tissue,Cervix Uteri
@@ -665,6 +696,7 @@ tissue,Vagina
 tissue,Vascular Endothelium
 tissue,Vein
 tissue,Vertebra
+tissue,Peripheral Blood Mononuclear Cell
 tumorType,Cutaneous Melanoma
 tumorType,Acinar Cell Carcinoma
 tumorType,Acute Lymphoblastic Leukemia
@@ -1428,6 +1460,10 @@ tool_format,pkl
 tool_format,sif
 tool_format,xls
 tool_format,xlsx
+tool_format,PDB
+tool_format,HED
+tool_format,MRC
+tool_format,Unspecified
 tool_language,AWK
 tool_language,ActionScript
 tool_language,Ada
