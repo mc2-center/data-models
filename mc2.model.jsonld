@@ -3376,9 +3376,6 @@
                     "@id": "bts:ChimericAntigenReceptorT-CellTherapy"
                 },
                 {
-                    "@id": "bts:ClinicalTrial"
-                },
-                {
                     "@id": "bts:CellCycleAssay"
                 },
                 {
@@ -9271,9 +9268,6 @@
                 },
                 {
                     "@id": "bts:ChimericAntigenReceptorT-CellTherapy"
-                },
-                {
-                    "@id": "bts:ClinicalTrial"
                 },
                 {
                     "@id": "bts:CellCycleAssay"
