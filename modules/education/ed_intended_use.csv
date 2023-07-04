@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Curriculum/Instruction,,,,FALSE,,Resource Intended Use,,OER,,,,,,
+Assessment,,,,FALSE,,Resource Intended Use,,OER,,,,,,
+Professional Development,,,,FALSE,,Resource Intended Use,,OER,,,,,,
+Other,,,,FALSE,,Resource Intended Use,,OER,,,,,,

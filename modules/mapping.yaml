@@ -16,6 +16,30 @@ dataset:
   - name: Dataset Tumor Type
     src: shared/tumorType.csv
 
+education:
+  - name: Resource Topic
+    src: education/ed_topic.csv
+  - name: Resource Activity Type
+    src: education/ed_activity_type.csv
+  - name: Resource Primary Format
+    src: education/ed_primary_format.csv
+  - name: Resource Intended Use
+    src: education/ed_intended_use.csv
+  - name: Resource Primary Audience
+    src: education/ed_primary_audience.csv
+  - name: Resource Educational Level
+    src: education/ed_level.csv
+  - name: Resource Language
+    src: education/ed_language.csv
+  - name: Resource Grant Number
+    src: grant/grant_number.csv
+  - name: Resource License
+    src: tool/tool_license.csv
+  - name: Resource Media Accessibility
+    src: education/ed_accessibility.csv
+  - name: Resource Access Hazard
+    src: education/ed_hazard.csv
+
 grant:
   - name: Grant Consortium Name
     src: consortium/consortium_name.csv
