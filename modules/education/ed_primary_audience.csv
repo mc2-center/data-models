@@ -1,0 +1,8 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Student,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+Teacher,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+Administrator,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+Parent,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+Professor,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+General Audience,,,,FALSE,,Resource Primary Audience,,OER,,,,,,
+Other,,,,FALSE,,Resource Primary Audience,,OER,,,,,,

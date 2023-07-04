@@ -1,0 +1,11 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Audio,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Braille/BNF,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Downloadable docs,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+eBook,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Graphics/Photos,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Interactive,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Mobile,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Text/HTML,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Video,,,,FALSE,,Resource Primary Format,,OER,,,,,,
+Other,,,,FALSE,,Resource Primary Format,,OER,,,,,,
