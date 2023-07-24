@@ -5,7 +5,7 @@ Alternative Names,"Other ways the individual's name is displayed. Multiple value
 Email,Email address of the individual,,,FALSE,,,,,
 Url,"URL, e.g., individual's home page address",,,FALSE,,,,,
 Orcid Id,Unique identifier (ORCID ID) of the individual,,,FALSE,,,,,regex search \d{4}\-\d{4}\-\d{4}\-\d{3}(\d|X)
-Synapse Profile Id,"Unique identifier (Synapse Profile ID) of the individual. See identifer in the url of the synapse profile page. ",,,FALSE,,,,,unique
+Synapse Profile Id,Unique identifier (Synapse Profile ID) of the individual. See identifer in the url of the synapse profile page. ,,,FALSE,,,,,unique
 Last Known Institution,Last known institutional affiliation of the individual.,,,TRUE,,,,,
 Working Group Participation,"CSBC/PSON working group(s) of which the individual is a member (current and former). Multiple values permitted, comma separated.","Cancer Metabolism, Cell and Tissue Mechanics, Education and Outreach, Image Analysis, Navigating Cancer with Science and Art, None, Patient Advocacy Working Group, Protein-Protein Interactions, Resource and Data Sharing",,TRUE,,,,,list like
 Chair Roles,"Committee or working group chair role(s) the individual fulfilled (current and former). Multiple values permitted, comma separated.","Annual Meeting, None, Steering Committee, Working Group",,TRUE,,,,,list like
