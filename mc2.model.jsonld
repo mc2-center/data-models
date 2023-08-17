@@ -4769,6 +4769,9 @@
                     "@id": "bts:Component"
                 },
                 {
+                    "@id": "bts:DatasetViewId"
+                },
+                {
                     "@id": "bts:DatasetPubmedId"
                 },
                 {
@@ -5241,6 +5244,25 @@
             ]
         },
         {
+            "@id": "bts:DatasetViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "DatasetViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "DatasetView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
             "@id": "bts:EducationalResource",
             "@type": "rdfs:Class",
             "rdfs:comment": "Manifest for describing educational resources.",
@@ -5269,6 +5291,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:EducationalResourceId"
                 },
                 {
                     "@id": "bts:ResourceTitle"
@@ -6391,7 +6416,7 @@
         {
             "@id": "bts:ResourceContributors",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name(s) of the contributor(s) to the item. Multiple contributor names should be provided as a comma-separated list. ",
+            "rdfs:comment": "The name(s) of the contributor(s) to the item. Multiple contributor names should be provided as a comma-separated list.",
             "rdfs:label": "ResourceContributors",
             "rdfs:subClassOf": [
                 {
@@ -8043,6 +8068,25 @@
             ]
         },
         {
+            "@id": "bts:EducationalResourceId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "EducationalResourceId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "EducationalResource_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
             "@id": "bts:Grant",
             "@type": "rdfs:Class",
             "rdfs:comment": "Consortium grant information",
@@ -8198,6 +8242,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:GrantViewId"
                 },
                 {
                     "@id": "bts:GrantName"
@@ -8902,6 +8949,25 @@
             "sms:displayName": "Grant Consortium Name",
             "sms:required": "sms:true",
             "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GrantViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "GrantViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GrantView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
         },
         {
             "@id": "bts:Institution",
@@ -9649,6 +9715,9 @@
                     "@id": "bts:Component"
                 },
                 {
+                    "@id": "bts:PersonViewId"
+                },
+                {
                     "@id": "bts:PersonGrantNumber"
                 },
                 {
@@ -10247,6 +10316,25 @@
             ]
         },
         {
+            "@id": "bts:PersonViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "PersonViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PersonView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
             "@id": "bts:Project",
             "@type": "rdfs:Class",
             "rdfs:comment": "Projects associated with consortia grants",
@@ -10386,6 +10474,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:ProjectViewId"
                 },
                 {
                     "@id": "bts:ProjectName"
@@ -10888,8 +10979,27 @@
                 }
             ],
             "sms:displayName": "Project Consortium Name",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProjectViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "ProjectViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "ProjectView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
         },
         {
             "@id": "bts:Publication",
@@ -13182,6 +13292,9 @@
                     "@id": "bts:Component"
                 },
                 {
+                    "@id": "bts:PublicationViewId"
+                },
+                {
                     "@id": "bts:PublicationGrantNumber"
                 },
                 {
@@ -13760,6 +13873,25 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "PublicationViewDCA_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:PublicationViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "PublicationViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PublicationView_id",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
@@ -18301,6 +18433,9 @@
                     "@id": "bts:Component"
                 },
                 {
+                    "@id": "bts:ToolViewId"
+                },
+                {
                     "@id": "bts:ToolPubmedId"
                 },
                 {
@@ -18824,6 +18959,25 @@
             "sms:required": "sms:false",
             "sms:validationRules": [
                 "int"
+            ]
+        },
+        {
+            "@id": "bts:ToolViewId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique primary key that enables record updates using schematic.",
+            "rdfs:label": "ToolViewId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "ToolView_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
             ]
         },
         {
