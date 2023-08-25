@@ -13915,6 +13915,1761 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:GeoMXLevel0",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMXLevel0",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMX Level 0",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenID"
+                },
+                {
+                    "@id": "bts:SynapseIDofDataFile"
+                },
+                {
+                    "@id": "bts:SynapseIDofRCCorDCCFile"
+                },
+                {
+                    "@id": "bts:SequencingDepth"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SequencingDepth",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SequencingDepth",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sequencing Depth",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReadLength",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ReadLength",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Read Length",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMXLevel1",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMXLevel1",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMX Level 1",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenID"
+                },
+                {
+                    "@id": "bts:SynapseIDofFile"
+                },
+                {
+                    "@id": "bts:GeoMxDSPAssayType"
+                },
+                {
+                    "@id": "bts:SynapseIDofGeoMxDSPPKCFile"
+                },
+                {
+                    "@id": "bts:SoftwareandVersion"
+                },
+                {
+                    "@id": "bts:GeoMxDSPNGSSequencingPlatform"
+                },
+                {
+                    "@id": "bts:GeoMxDSPNGSLibrarySelectionMethod"
+                },
+                {
+                    "@id": "bts:GeoMxDSPNGSLibraryPreparationKitName"
+                },
+                {
+                    "@id": "bts:GeoMxDSPLibraryPreparationKitVendor"
+                },
+                {
+                    "@id": "bts:GeoMxDSPLibraryPreparationKitVersion"
+                },
+                {
+                    "@id": "bts:SynapseIDofGeoMxLabWorksheetFile"
+                },
+                {
+                    "@id": "bts:SynapseIDoffastqfile(s)"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Filename",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Filename",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Filename",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FileFormat",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FileFormat",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "File Format",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BiospecimenID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "BiospecimenID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Biospecimen ID",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofDataFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofDataFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of Data File",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPAssayType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPAssayType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Assay Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofGeoMxDSPPKCFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofGeoMxDSPPKCFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of GeoMx DSP PKC File",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SoftwareandVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SoftwareandVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Software and Version",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPNGSSequencingPlatform",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPNGSSequencingPlatform",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP NGS Sequencing Platform",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPNGSLibrarySelectionMethod",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPNGSLibrarySelectionMethod",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP NGS Library Selection Method",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPNGSLibraryPreparationKitName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPNGSLibraryPreparationKitName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP NGS Library Preparation Kit Name",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPLibraryPreparationKitVendor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPLibraryPreparationKitVendor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Library Preparation Kit Vendor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPLibraryPreparationKitVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPLibraryPreparationKitVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Library Preparation Kit Version",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofGeoMxLabWorksheetFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofGeoMxLabWorksheetFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of GeoMx Lab Worksheet File",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDoffastqfile(s)",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDoffastqfile(s)",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of fastq file(s)",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ImagingLevel2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ImagingLevel2",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Imaging Level 2",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:AssayType"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SynapseIDofDataFile"
+                },
+                {
+                    "@id": "bts:BiospecimenID"
+                },
+                {
+                    "@id": "bts:SynapseIDofParentDataFile"
+                },
+                {
+                    "@id": "bts:ParticipantID"
+                },
+                {
+                    "@id": "bts:ProtocolsLink"
+                },
+                {
+                    "@id": "bts:SoftwareandVersion"
+                },
+                {
+                    "@id": "bts:WorkflowStartDate-time"
+                },
+                {
+                    "@id": "bts:WorkflowEndDate-time"
+                },
+                {
+                    "@id": "bts:ChannelMetadataFilename"
+                },
+                {
+                    "@id": "bts:ImageAcquisitionDate"
+                },
+                {
+                    "@id": "bts:Microscope"
+                },
+                {
+                    "@id": "bts:Objective"
+                },
+                {
+                    "@id": "bts:NominalMagnification"
+                },
+                {
+                    "@id": "bts:LensNA"
+                },
+                {
+                    "@id": "bts:WorkingDistance"
+                },
+                {
+                    "@id": "bts:WorkingDistanceUnit"
+                },
+                {
+                    "@id": "bts:Immersion"
+                },
+                {
+                    "@id": "bts:Pyramid"
+                },
+                {
+                    "@id": "bts:Z-stack"
+                },
+                {
+                    "@id": "bts:T-series"
+                },
+                {
+                    "@id": "bts:PassedQC"
+                },
+                {
+                    "@id": "bts:Comment"
+                },
+                {
+                    "@id": "bts:FOVnumber"
+                },
+                {
+                    "@id": "bts:FOVX"
+                },
+                {
+                    "@id": "bts:FOVXUnit"
+                },
+                {
+                    "@id": "bts:FOVY"
+                },
+                {
+                    "@id": "bts:FOVYUnit"
+                },
+                {
+                    "@id": "bts:ImageID"
+                },
+                {
+                    "@id": "bts:DimensionOrder"
+                },
+                {
+                    "@id": "bts:PhysicalSizeX"
+                },
+                {
+                    "@id": "bts:PhysicalSizeXUnit"
+                },
+                {
+                    "@id": "bts:PhysicalSizeY"
+                },
+                {
+                    "@id": "bts:PhysicalSizeYUnit"
+                },
+                {
+                    "@id": "bts:PhysicalSizeZ"
+                },
+                {
+                    "@id": "bts:PhysicalSizeZUnit"
+                },
+                {
+                    "@id": "bts:PixelsBigEndian"
+                },
+                {
+                    "@id": "bts:PlaneCount"
+                },
+                {
+                    "@id": "bts:SizeC"
+                },
+                {
+                    "@id": "bts:SizeT"
+                },
+                {
+                    "@id": "bts:SizeX"
+                },
+                {
+                    "@id": "bts:SizeY"
+                },
+                {
+                    "@id": "bts:SizeZ"
+                },
+                {
+                    "@id": "bts:Type"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AssayType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Assay Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofParentDataFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofParentDataFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of Parent Data File",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ParticipantID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ParticipantID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Participant ID",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProtocolsLink",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ProtocolsLink",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Protocols Link",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SoftwareandVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SoftwareandVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Software and Version",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WorkflowStartDate-time",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WorkflowStartDate-time",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Workflow Start Date-time",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WorkflowEndDate-time",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WorkflowEndDate-time",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Workflow End Date-time",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ChannelMetadataFilename",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ChannelMetadataFilename",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Channel Metadata Filename",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ImageAcquisitionDate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ImageAcquisitionDate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Image Acquisition Date",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Microscope",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Microscope",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Microscope",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Objective",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Objective",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Objective",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NominalMagnification",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NominalMagnification",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "NominalMagnification",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LensNA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LensNA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "LensNA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WorkingDistance",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WorkingDistance",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "WorkingDistance",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WorkingDistanceUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WorkingDistanceUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "WorkingDistanceUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Immersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Immersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Immersion",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pyramid",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pyramid",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pyramid",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Z-stack",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Z-stack",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Z-stack",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:T-series",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "T-series",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "T-series",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PassedQC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PassedQC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "passed QC",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Comment",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Comment",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Comment",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FOVnumber",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FOVnumber",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FOV number",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FOVX",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FOVX",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FOVX",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FOVXUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FOVXUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FOVXUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FOVY",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FOVY",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FOVY",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FOVYUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FOVYUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FOVYUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ImageID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ImageID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Image ID",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DimensionOrder",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DimensionOrder",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "DimensionOrder",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeX",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeX",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeX",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeXUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeXUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeXUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeY",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeY",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeY",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeYUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeYUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeYUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeZ",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeZ",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeZ",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhysicalSizeZUnit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhysicalSizeZUnit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PhysicalSizeZUnit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PixelsBigEndian",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PixelsBigEndian",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pixels BigEndian",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlaneCount",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PlaneCount",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PlaneCount",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SizeC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SizeC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SizeC",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SizeT",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SizeT",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SizeT",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SizeX",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SizeX",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SizeX",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SizeY",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SizeY",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SizeY",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SizeZ",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SizeZ",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SizeZ",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Type",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Type",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMXLevel3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMXLevel3",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMX Level 3",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenID"
+                },
+                {
+                    "@id": "bts:SynapseIDofDataFile"
+                },
+                {
+                    "@id": "bts:GeoMxDSPAssayType"
+                },
+                {
+                    "@id": "bts:SynapseIDGeoMxROISegmentAnnotationFile"
+                },
+                {
+                    "@id": "bts:GeoMxDSPUniqueProbeCount"
+                },
+                {
+                    "@id": "bts:GeoMxDSPUniqueTargetCount"
+                },
+                {
+                    "@id": "bts:MatrixType"
+                },
+                {
+                    "@id": "bts:GeoMxDSPGenomicReference"
+                },
+                {
+                    "@id": "bts:GeoMxDSPWorkflowType"
+                },
+                {
+                    "@id": "bts:GeoMxDSPWorkflowParameterDescription"
+                },
+                {
+                    "@id": "bts:GeoMxDSPWorkflowLink"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDGeoMxROISegmentAnnotationFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDGeoMxROISegmentAnnotationFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID GeoMx ROI Segment Annotation File",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPUniqueProbeCount",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPUniqueProbeCount",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Unique Probe Count",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPUniqueTargetCount",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPUniqueTargetCount",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Unique Target Count",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MatrixType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MatrixType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Matrix Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPGenomicReference",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPGenomicReference",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Genomic Reference",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPWorkflowType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowParameterDescription",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPWorkflowParameterDescription",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Parameter Description",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowLink",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPWorkflowLink",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Link",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMXROISegmentAnnotation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMXROISegmentAnnotation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMX ROI Segment Annotation",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:BiospecimenID"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:GeoMxDSPROIID"
+                },
+                {
+                    "@id": "bts:GeoMxDSPSegmentID"
+                },
+                {
+                    "@id": "bts:SegmentTag"
+                },
+                {
+                    "@id": "bts:GeoMxDSPROIXCoordinate"
+                },
+                {
+                    "@id": "bts:GeoMxDSPROIYCoordinate"
+                },
+                {
+                    "@id": "bts:ROIQCPassed"
+                },
+                {
+                    "@id": "bts:GeoMxDSPSlideScanHeight"
+                },
+                {
+                    "@id": "bts:GeoMxDSPSlideScanWidth"
+                },
+                {
+                    "@id": "bts:SynapseIDofRCCorDCCFile"
+                },
+                {
+                    "@id": "bts:PositiveNormFactor"
+                },
+                {
+                    "@id": "bts:Surfacearea"
+                },
+                {
+                    "@id": "bts:Nucleicount"
+                },
+                {
+                    "@id": "bts:TissueStain"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RunID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "RunID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Run ID",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPROIID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPROIID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP ROI ID",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPSegmentID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPSegmentID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Segment ID",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SegmentTag",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SegmentTag",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Segment Tag",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPROIXCoordinate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPROIXCoordinate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP ROI X Coordinate",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPROIYCoordinate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPROIYCoordinate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP ROI Y Coordinate",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ROIQCPassed",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ROIQCPassed",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "ROI QC Passed",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPSlideScanHeight",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPSlideScanHeight",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Slide Scan Height",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPSlideScanWidth",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeoMxDSPSlideScanWidth",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Slide Scan Width",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofRCCorDCCFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofRCCorDCCFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of RCC or DCC File",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PositiveNormFactor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PositiveNormFactor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Positive Norm Factor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Surfacearea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Surfacearea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Surface area",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Nucleicount",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Nucleicount",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Nuclei count",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TissueStain",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TissueStain",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tissue Stain",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Theme",
             "@type": "rdfs:Class",
             "rdfs:comment": "Themes associated with resources derived from consortia activities",
@@ -48421,6 +50176,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Restricted Access",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynapseIDofFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynapseIDofFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GeoMXLevel1"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse ID of File",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
