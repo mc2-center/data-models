@@ -107,7 +107,7 @@ Fluorescence Microscopy,"The use of a special microscope to see objects that giv
 Fluorescence Recovery After Photo-Bleaching,"The use of a special microscope to see objects that give off fluorescent light. For example, cells or tissue can be treated with a substance that contains a fluorescent dye. The dye lights up when viewed under a microscope with a special light.",,,FALSE,,Assay,,CHMO,,"Fluorescence recovery after photo-bleaching, FRAP",CHMO:0000065,http://purl.obolibrary.org/obo/CHMO_0000065,,
 Fluorescent Antibody Procedure,An immunological procedure in which the antibodies are coupled with molecules which fluoresce under ultra violet (UV) light. This makes them particularly suitable for detection of specific antigens in tissues or on cells.,,,FALSE,,Assay,,,,"Immunofluorescence, immunofluorescence, Immunologic, Immunofluorescence, FLUORESCENT IMMUNOASSAY, Fluorescent Antibody Procedure, Quantitative Immunofluorescence, Immunofluorescence Assay, Fluorescent Antibody Assay",,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17370,C17370,
 Fluorescent Cell Barcoding,An immunological procedure in which the antibodies are coupled with molecules which fluoresce under ultra violet (UV) light. This makes them particularly suitable for detection of specific antigens in tissues or on cells.,,,FALSE,,Assay,,PMID,,Fluorescent cell barcoding,PMID:33960644,https://pubmed.ncbi.nlm.nih.gov/33960644/,,
-"Fluorescent In Situ Sequencing ","Use of a DNA or RNA probe to detect the presence of complementary sequences in chromosomes, cells, or tissues. (NCI)",,,FALSE,,Assay,,EFO,,"FISSEQ, Fluorescent in situ sequencing , Fluorescent In Situ Sequencing of RNA",EFO:0008990,http://www.ebi.ac.uk/efo/EFO_0008990,,
+Fluorescent In Situ Sequencing ,"Use of a DNA or RNA probe to detect the presence of complementary sequences in chromosomes, cells, or tissues. (NCI)",,,FALSE,,Assay,,EFO,,"FISSEQ, Fluorescent in situ sequencing , Fluorescent In Situ Sequencing of RNA",EFO:0008990,http://www.ebi.ac.uk/efo/EFO_0008990,,
 Focused Ion Beam Scanning Electron Microscopy,"Technique of electron microscopy in which the specimen is coated with heavy metal and then scanned by an electron beam. The resolution is not as great as with transmission electron microscopy, but preparation is easier (often by fixation followed by critical point drying), the depth of focus is relatively enormous, the surface of a specimen can be seen (though not the interior unless the specimen is cracked open) and the image is aesthetically pleasing.",,,FALSE,,Assay,,,,Focused ion beam scanning electron microscopy,,https://pubmed.ncbi.nlm.nih.gov/24707797/,,
 Forster resonance energy transfer,,,,FALSE,,Assay,,,,,,,,
 Fourier Transform Ion Cyclotron Resonance Mass Spectrometry,A type of mass spectrometry that uses the cyclotron frequency of ions in a fixed magnetic field to determine their ionic mass-to-charge ratio.,,,FALSE,,Assay,,,,"Fourier transform ion cyclotron resonance mass spectrometry, Fourier Transform Ion Cyclotron Resonance Mass Spectrometry",,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116571,C116571,
@@ -352,3 +352,37 @@ Targeted Therapy Agent,,,,FALSE,,Assay,,NCIT,,,NCIT:C163758,http://purl.obolibra
 Trichrome Staining Method,,,,FALSE,,Assay,,NCIT,,,NCIT:C23012,http://purl.obolibrary.org/obo/NCIT_C23012,,OB 5/19/23
 Ultrasound Imaging,,,,FALSE,,Assay,,NCIT,,,NCIT:C17230,http://purl.obolibrary.org/obo/NCIT_C17230,,OB 5/19/23
 Transcription profiling by NanoString,,,,FALSE,,Assay,,EFO,,Nanostring nCounter,EFO:0030058,http://www.ebi.ac.uk/efo/EFO_0030058,,OB 6/20/23
+3D Hydrogel,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Alcian Blue Staining Method,,,,FALSE,,Assay,,NCIt,,,NCIT:C92299,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C92299&key=1182540900&b=1&n=null,,AG 2023-09-22
+Artificial Intelligence,,,,FALSE,,Assay,,NCIt,,,NCIT:C16309,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C16309&key=n1483307350&b=1&n=null,,AG 2023-09-22
+Calcium flux assay,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Cell Culture,,,,FALSE,,Assay,,NCIt,,,NCIT:C16396,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C16396&key=n1965245771&b=1&n=null,,AG 2023-09-22
+Clinical Trial,,,,FALSE,,Assay,,NCIt,,,NCIT:C71104,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C71104&key=n620723826&b=1&n=null,,AG 2023-09-22
+Cell-free Circulating Tumor DNA Assay,,,,FALSE,,Assay,,NCIt,,,NCIT:C182622,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C182622&key=n1866747733&b=1&n=null,,AG 2023-09-22
+Co-Immunoprecipitation Mass Spectrometry,,,,FALSE,,Assay,,EBI,,,,https://www.ebi.ac.uk/training/online/courses/protein-interactions-and-their-importance/where-do-the-data-come-from/co-immunoprecipitation/,,AG 2023-09-22
+Deep Learning,,,,FALSE,,Assay,,NCIt,,,NCIT:C176258,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/message.jsf,,AG 2023-09-22
+Fluorescent In Situ Sequencing,,,,FALSE,,Assay,,Wikipedia,,,,hthttps://en.wikipedia.org/wiki/Fluorescent_in_situ_sequencingtps://wyss.harvard.edu/technology/fluorescent-in-situ-sequencing-fisseq/,,AG 2023-09-22
+Gene Ontology Enrichment Analysis,,,,FALSE,,Assay,,GO,,,,https://geneontology.org/docs/go-enrichment-analysis/,,AG 2023-09-22
+Gene Set Enrichment Analysis (GSEA),,,,FALSE,,Assay,,GSEA,,,,https://www.gsea-msigdb.org/gsea/index.jsp,,AG 2023-09-22
+Gene Silencing ,,,,FALSE,,Assay,,NCIt,,,NCIT:C39200,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C39200&key=n1874356328&b=1&n=null,,AG 2023-09-22
+GloSensor-based cAMP assay,,,,FALSE,,Assay,,,,,,https://www.promega.com/products/cell-signaling/gpcr-signaling/glosensor-camp-cgmp-protease-biosensors/?catNum=E1290,,AG 2023-09-22
+H&E Staining Method,,,,FALSE,,Assay,,NCIt,,,NCIT:C23011,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C23011&key=n1961629460&b=1&n=null,,AG 2023-09-22
+Human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM) culture,,,,FALSE,,Assay,,NCBI,,,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6831300/,,AG 2023-09-22
+Imaging Mass Cytometry (IMC),,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Immunofluorescent Staining Method,,,,FALSE,,Assay,,NCIt,,,NCIT:C142337,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C142337&key=1090177504&b=1&n=null,,AG 2023-09-22
+Immunotherapy,,,,FALSE,,Assay,,NCIt,,,NCIT:C15262,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C15262&key=1335721185&b=1&n=null,,AG 2023-09-22
+Intraoperative Confocal Microscopy,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Viral Transduction,,,,FALSE,,Assay,,NCIt,,,NCIT:C142787,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C142787&key=1177194019&b=1&n=null,,AG 2023-09-22
+Metastatic colonization assay,,,,FALSE,,Assay,,NCBI,,,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5029466/,,AG 2023-09-22
+NAD/NADH-Glo assay,,,,FALSE,,Assay,,,,,,https://www.promega.com/products/energy-metabolism/nucleotide-and-co-factor-detection-assays/nicotinamide-adenine-dinucleotide-cell-based-assays/?catNum=G9071,,AG 2023-09-22
+NanoBiT-based G-protein dissociation assay,,,,FALSE,,Assay,,,,,,https://bio-protocol.org/exchange/minidetail?type=30&id=8643531,,AG 2023-09-22
+Oblique Plane Microscopy,,,,FALSE,,Assay,,,,,,"https://www.imperial.ac.uk/photonics/research/biophotonics-group/instruments-and-software/oblique-plane-microscopy-opm/#:~:text=Oblique%20Plane%20Microscopy%20(OPM)%20is,from%20the%20tilted%20illuminated%20plane.",,AG 2023-09-22
+Picrosirius staining,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Quantum-Cascade-Laser-Based Mid-Infrared Microscopy,,,,FALSE,,Assay,,,,,,https://www.bruker.com/en/products-and-solutions/infrared-and-raman/ft-ir-microscopes/what-is-QCL-microscopy.html,,AG 2023-09-22
+Scratch assay,,,,FALSE,,Assay,,Pubmed,,,,"https://pubmed.ncbi.nlm.nih.gov/21748666/#:~:text=The%20scratch%2Dwound%20assay%20is,migrate%20into%20the%20wound%20space.",,AG 2023-09-22
+Sialidase treatment,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Structured Illumination Microscopy,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Structural Variant Analysis,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Survival Analysis,,,,FALSE,,Assay,,NCIt,,,NCIT:C53372,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C53372&key=732684547&b=1&n=null://en.wikipedia.org/wiki/Survival_analysis,,AG 2023-09-22
+T cell motility assay,,,,FALSE,,Assay,,,,,,,,AG 2023-09-22
+Targeted error correction sequencing (TEC-Seq) ,,,,FALSE,,Assay,,NCBI,,,,"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6714979/#:~:text=We%20have%20developed%20an%20approach,related%20genes%20encompassing%2081%20kb.",,AG 2023-09-22
