@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+RNA nCounter,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
+Protein nCounter,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
+Protein NGS,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
+RNA NGS,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,

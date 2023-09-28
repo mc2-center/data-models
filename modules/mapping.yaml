@@ -123,3 +123,32 @@ tool:
     src: tool/tool_topic.csv
   - name: Tool Type
     src: tool/tool_type.csv
+
+geomx:
+  - name: Biospecimen Tumor Type
+    src: shared/tumorType.csv
+  - name: Tumor Grade
+    src: shared/tumorGrade.csv
+  - name: Metastasis at Diagnosis
+    src: shared/metStatus.csv
+  - name: Last Known Disease Status
+    src: shared/diseaseStatus.csv
+  - name: Preservation Method
+    src: shared/preservation.csv
+  - name: Site of Resection or Biopsy
+    src: shared/tumorOrigin.csv
+  - name: File Format
+    src: tool/tool_format.csv
+  - name: GeoMx DSP Assay Type
+    src: geomx/assayType.csv
+  - name: Imaging Assay Type
+    src: shared/imageAssay.csv
+  - name: Matrix Type
+    src: shared/matrixType.csv
+  - name: Channel Passed QC
+    src: shared/channelQC.csv
+  - name: Antibody Role
+    src: shared/abRole.csv
+  - name: Metal Isotope Element
+    src: shared/elementType.csv
+  
