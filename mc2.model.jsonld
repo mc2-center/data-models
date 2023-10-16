@@ -3433,7 +3433,7 @@
                     "@id": "bts:CellCulture"
                 },
                 {
-                    "@id": "bts:ClinicalTrial"
+                    "@id": "bts:ClinicalStudy"
                 },
                 {
                     "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
@@ -12339,7 +12339,7 @@
                     "@id": "bts:CellCulture"
                 },
                 {
-                    "@id": "bts:ClinicalTrial"
+                    "@id": "bts:ClinicalStudy"
                 },
                 {
                     "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
@@ -25196,6 +25196,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Cell Culture",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ClinicalStudy",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ClinicalStudy",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Clinical Study",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
