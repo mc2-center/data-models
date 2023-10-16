@@ -3422,6 +3422,75 @@
                 },
                 {
                     "@id": "bts:TranscriptionprofilingbyNanoString"
+                },
+                {
+                    "@id": "bts:AlcianBlueStainingMethod"
+                },
+                {
+                    "@id": "bts:ArtificialIntelligence"
+                },
+                {
+                    "@id": "bts:CellCulture"
+                },
+                {
+                    "@id": "bts:ClinicalTrial"
+                },
+                {
+                    "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
+                },
+                {
+                    "@id": "bts:Co-ImmunoprecipitationMassSpectrometry"
+                },
+                {
+                    "@id": "bts:DeepLearning"
+                },
+                {
+                    "@id": "bts:FluorescentInSituSequencing"
+                },
+                {
+                    "@id": "bts:GeneOntologyEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSetEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSilencing"
+                },
+                {
+                    "@id": "bts:HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture"
+                },
+                {
+                    "@id": "bts:ImagingMassCytometry"
+                },
+                {
+                    "@id": "bts:ImmunofluorescentStainingMethod"
+                },
+                {
+                    "@id": "bts:Immunotherapy"
+                },
+                {
+                    "@id": "bts:ViralTransduction"
+                },
+                {
+                    "@id": "bts:MetastaticColonizationAssay"
+                },
+                {
+                    "@id": "bts:PhylogeneticAnalysis"
+                },
+                {
+                    "@id": "bts:PicrosiriusStaining"
+                },
+                {
+                    "@id": "bts:ScratchAssay"
+                },
+                {
+                    "@id": "bts:StructuralVariantAnalysis"
+                },
+                {
+                    "@id": "bts:SurvivalAnalysis"
+                },
+                {
+                    "@id": "bts:TargetedErrorCorrectionSequencing"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -4088,6 +4157,12 @@
                 },
                 {
                     "@id": "bts:VascularNeoplasm"
+                },
+                {
+                    "@id": "bts:Not-Applicable"
+                },
+                {
+                    "@id": "bts:PlexiformNeurofibroma"
                 }
             ],
             "sms:displayName": "Dataset Tumor Type",
@@ -12253,6 +12328,75 @@
                 },
                 {
                     "@id": "bts:TranscriptionprofilingbyNanoString"
+                },
+                {
+                    "@id": "bts:AlcianBlueStainingMethod"
+                },
+                {
+                    "@id": "bts:ArtificialIntelligence"
+                },
+                {
+                    "@id": "bts:CellCulture"
+                },
+                {
+                    "@id": "bts:ClinicalTrial"
+                },
+                {
+                    "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
+                },
+                {
+                    "@id": "bts:Co-ImmunoprecipitationMassSpectrometry"
+                },
+                {
+                    "@id": "bts:DeepLearning"
+                },
+                {
+                    "@id": "bts:FluorescentInSituSequencing"
+                },
+                {
+                    "@id": "bts:GeneOntologyEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSetEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSilencing"
+                },
+                {
+                    "@id": "bts:HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture"
+                },
+                {
+                    "@id": "bts:ImagingMassCytometry"
+                },
+                {
+                    "@id": "bts:ImmunofluorescentStainingMethod"
+                },
+                {
+                    "@id": "bts:Immunotherapy"
+                },
+                {
+                    "@id": "bts:ViralTransduction"
+                },
+                {
+                    "@id": "bts:MetastaticColonizationAssay"
+                },
+                {
+                    "@id": "bts:PhylogeneticAnalysis"
+                },
+                {
+                    "@id": "bts:PicrosiriusStaining"
+                },
+                {
+                    "@id": "bts:ScratchAssay"
+                },
+                {
+                    "@id": "bts:StructuralVariantAnalysis"
+                },
+                {
+                    "@id": "bts:SurvivalAnalysis"
+                },
+                {
+                    "@id": "bts:TargetedErrorCorrectionSequencing"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -12826,6 +12970,12 @@
                 },
                 {
                     "@id": "bts:VascularNeoplasm"
+                },
+                {
+                    "@id": "bts:Not-Applicable"
+                },
+                {
+                    "@id": "bts:PlexiformNeurofibroma"
                 }
             ],
             "sms:displayName": "Publication Tumor Type",
@@ -24999,6 +25149,363 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:AlcianBlueStainingMethod",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AlcianBlueStainingMethod",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Alcian Blue Staining Method",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ArtificialIntelligence",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ArtificialIntelligence",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Artificial Intelligence",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CellCulture",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CellCulture",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cell Culture",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cell-freeCirculatingTumorDNAAssay",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cell-freeCirculatingTumorDNAAssay",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cell-free Circulating Tumor DNA Assay",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Co-ImmunoprecipitationMassSpectrometry",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Co-ImmunoprecipitationMassSpectrometry",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Co-Immunoprecipitation Mass Spectrometry",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DeepLearning",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DeepLearning",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Deep Learning",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeneOntologyEnrichmentAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeneOntologyEnrichmentAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gene Ontology Enrichment Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeneSetEnrichmentAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeneSetEnrichmentAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gene Set Enrichment Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeneSilencing",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeneSilencing",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gene Silencing",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Human Induced Pluripotent Stem Cell-derived Cardiomyocytes Culture",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ImagingMassCytometry",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ImagingMassCytometry",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Imaging Mass Cytometry",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ImmunofluorescentStainingMethod",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ImmunofluorescentStainingMethod",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Immunofluorescent Staining Method",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Immunotherapy",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Immunotherapy",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Immunotherapy",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ViralTransduction",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ViralTransduction",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Viral Transduction",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MetastaticColonizationAssay",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MetastaticColonizationAssay",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Metastatic Colonization Assay",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PhylogeneticAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PhylogeneticAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Phylogenetic Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PicrosiriusStaining",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PicrosiriusStaining",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Picrosirius Staining",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ScratchAssay",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ScratchAssay",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Scratch Assay",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:StructuralVariantAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "StructuralVariantAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Structural Variant Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SurvivalAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SurvivalAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Survival Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TargetedErrorCorrectionSequencing",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TargetedErrorCorrectionSequencing",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Targeted Error Correction Sequencing",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AfricanBushElephant",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -28480,6 +28987,40 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Vascular Neoplasm",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Not-Applicable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Not-Applicable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetTumorType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not-Applicable",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlexiformNeurofibroma",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PlexiformNeurofibroma",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetTumorType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Plexiform Neurofibroma",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -33988,23 +34529,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Heterogeneity",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Immunotherapy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Immunotherapy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ResourceTopic"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Immunotherapy",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -49526,23 +50050,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Peak Calling",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PhylogeneticAnalysis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PhylogeneticAnalysis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ToolOperation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Phylogenetic Analysis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
