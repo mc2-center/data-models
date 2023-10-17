@@ -583,6 +583,29 @@ assay,Targeted Therapy Agent
 assay,Trichrome Staining Method
 assay,Ultrasound Imaging
 assay,Transcription profiling by NanoString
+assay,Alcian Blue Staining Method
+assay,Artificial Intelligence
+assay,Cell Culture
+assay,Clinical Study
+assay,Cell-free Circulating Tumor DNA Assay
+assay,Co-Immunoprecipitation Mass Spectrometry
+assay,Deep Learning
+assay,Fluorescent In Situ Sequencing
+assay,Gene Ontology Enrichment Analysis
+assay,Gene Set Enrichment Analysis
+assay,Gene Silencing 
+assay,Human Induced Pluripotent Stem Cell-derived Cardiomyocytes Culture
+assay,Imaging Mass Cytometry
+assay,Immunofluorescent Staining Method
+assay,Immunotherapy
+assay,Viral Transduction
+assay,Metastatic Colonization Assay
+assay,Phylogenetic Analysis
+assay,Picrosirius Staining
+assay,Scratch Assay
+assay,Structural Variant Analysis
+assay,Survival Analysis
+assay,Targeted Error Correction Sequencing
 tissue,Gonad
 tissue,Abdominal Esophagus
 tissue,Adipose Tissue
@@ -881,6 +904,8 @@ tumorType,Uterine Adenosarcoma
 tumorType,Uveal Melanoma
 tumorType,Uveal Neoplasm
 tumorType,Vascular Neoplasm
+tumorType,Not-Applicable
+tumorType,Plexiform Neurofibroma
 ed_topic,Computational Model Development
 ed_topic,Computational Resource
 ed_topic,Diversity/Equity/Inclusion
