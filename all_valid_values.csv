@@ -1,4 +1,386 @@
 category,valid_value
+specimenType,Tissue
+specimenType,Blood
+specimenType,Analyte
+specimenType,Mouth Rinse
+specimenType,Stool
+specimenType,Urine
+specimenType,Ascites
+specimenType,Sputum
+specimenType,Fluids
+specimenType,Bone Marrow
+specimenType,Cells
+dataset_species,African Bush Elephant
+dataset_species,Armadillo
+dataset_species,Asian Elephant
+dataset_species,Boar
+dataset_species,Cat
+dataset_species,Chicken
+dataset_species,Cow
+dataset_species,Dog
+dataset_species,Escherichia coli
+dataset_species,Guinea Pig
+dataset_species,Horse
+dataset_species,Human
+dataset_species,Mouse
+dataset_species,Opossum
+dataset_species,Rabbit
+dataset_species,Rat
+dataset_species,Rhesus monkey
+dataset_species,Sheep
+dataset_species,Trichoplax adhaerens
+dataset_species,Unknown
+dataset_species,Unspecified
+dataset_species,Worm
+dataset_species,Yeast
+dataset_species,Fruit Fly
+tumorType,Cutaneous Melanoma
+tumorType,Acinar Cell Carcinoma
+tumorType,Acute Lymphoblastic Leukemia
+tumorType,Acute Monocytic Leukemia
+tumorType,Acute Myeloid Leukemia
+tumorType,Acute Promyelocytic Leukemia
+tumorType,Adenocarcinoma
+tumorType,Angiosarcoma
+tumorType,Astrocytoma
+tumorType,Atypical Teratoid/Rhabdoid Tumor
+tumorType,B Acute Lymphoblastic Leukemia
+tumorType,B-Cell Non-Hodgkin Lymphoma
+tumorType,Barrett Esophagus
+tumorType,Basal Cell Neoplasm
+tumorType,Basal-Like Breast Carcinoma
+tumorType,Biliary Tract Carcinoma
+tumorType,Bladder Carcinoma
+tumorType,Bladder Neoplasm
+tumorType,Bone Neoplasm
+tumorType,Brain Neoplasm
+tumorType,Breast Adenocarcinoma
+tumorType,Breast Carcinoma
+tumorType,Breast Neoplasm
+tumorType,Carcinoma
+tumorType,Carcinoma In Situ
+tumorType,Castration-Resistant Prostate Carcinoma
+tumorType,Cellular Schwannoma
+tumorType,Central Nervous System Cavernous Hemangioma
+tumorType,Central Nervous System Neoplasm
+tumorType,Cerebellar Neoplasm
+tumorType,Cervical Carcinoma
+tumorType,Cervical Neoplasm
+tumorType,Cervical Small Cell Carcinoma
+tumorType,Cholangiocarcinoma
+tumorType,Chondroblastoma
+tumorType,Choriocarcinoma
+tumorType,Chronic Lymphocytic Leukemia
+tumorType,Chronic Myeloid Leukemia
+tumorType,Clear Cell Renal Cell Carcinoma
+tumorType,Colon Adenocarcinoma
+tumorType,Colon Carcinoma
+tumorType,Colorectal Adenocarcinoma
+tumorType,Colorectal Adenoma
+tumorType,Colorectal Carcinoma
+tumorType,Colorectal Neoplasm
+tumorType,Combined Hepatocellular Carcinoma and Cholangiocarcinoma
+tumorType,Craniopharyngioma
+tumorType,Cutaneous T Cell Lymphoma
+tumorType,Diffuse Large B-Cell Lymphoma
+tumorType,Ductal Breast Carcinoma In Situ
+tumorType,Dysembryoplastic Neuroepithelial Neoplasm
+tumorType,Endometrial Carcinoma
+tumorType,Endometrial Neoplasm
+tumorType,Ependymoma
+tumorType,Esophageal Adenocarcinoma
+tumorType,Esophageal Carcinoma
+tumorType,Esophageal Squamous Cell Carcinoma
+tumorType,Ewing Sarcoma
+tumorType,Extraventricular Neurocytoma
+tumorType,Fibroepithelial Polyp
+tumorType,Fibrolamellar Carcinoma
+tumorType,Fibrosarcoma
+tumorType,Follicular Lymphoma
+tumorType,Gallbladder Carcinoma
+tumorType,Gastric Adenocarcinoma
+tumorType,Gastric Carcinoma
+tumorType,Gastric Neoplasm
+tumorType,Gastroesophageal Adenocarcinoma
+tumorType,Gastroesophageal Junction Adenocarcinoma
+tumorType,Gastrointestinal Stromal Neoplasm
+tumorType,Giant Cell Tumor
+tumorType,Glioblastoma
+tumorType,Glioma
+tumorType,Head and Neck Carcinoma
+tumorType,Head and Neck Neoplasm
+tumorType,Head and Neck Squamous Cell Carcinoma
+tumorType,Hepatocellular Carcinoma
+tumorType,High Grade Ovarian Serous Adenocarcinoma
+tumorType,Histiocytic Sarcoma
+tumorType,Hodgkin Lymphoma
+tumorType,Intestinal Neoplasm
+tumorType,Intrahepatic Cholangiocarcinoma
+tumorType,Invasive Ductal Breast Carcinoma
+tumorType,Kaposi Sarcoma
+tumorType,Leiomyoma
+tumorType,Leukemia
+tumorType,Liver and Intrahepatic Bile Duct Carcinoma
+tumorType,Liver and Intrahepatic Bile Duct Neoplasm
+tumorType,Low Grade Glioma
+tumorType,Luminal A Breast Carcinoma
+tumorType,Lung Adenocarcinoma
+tumorType,Lung Carcinoma
+tumorType,Lung Neoplasm
+tumorType,Lung Non-Small Cell Carcinoma
+tumorType,Lung Small Cell Carcinoma
+tumorType,Lung Squamous Cell Carcinoma
+tumorType,Lymphoid Leukemia
+tumorType,Lymphoma
+tumorType,Malignant Brain Neoplasm
+tumorType,Malignant Digestive System Neoplasm
+tumorType,Malignant Genitourinary System Neoplasm
+tumorType,Malignant Glioma
+tumorType,Malignant Neoplasm
+tumorType,Malignant Ovarian Neoplasm
+tumorType,Malignant Pancreatic Neoplasm
+tumorType,Malignant Peripheral Nerve Sheath Tumor
+tumorType,Malignant Peritoneal Neoplasm
+tumorType,Malignant Skin Neoplasm
+tumorType,Mantle Cell Lymphoma
+tumorType,Marginal Zone Lymphoma
+tumorType,Medulloblastoma
+tumorType,Melanoma
+tumorType,Meningioma
+tumorType,Mesothelioma
+tumorType,Multiple Myeloma
+tumorType,Mycosis Fungoides
+tumorType,Myeloid Leukemia
+tumorType,Myeloid Neoplasm
+tumorType,Myeloproliferative Neoplasm
+tumorType,Myoepithelioma
+tumorType,Nasopharyngeal Carcinoma
+tumorType,Neuroblastoma
+tumorType,Neuroendocrine Neoplasm
+tumorType,Neuroepithelial Neoplasm
+tumorType,Neurofibroma
+tumorType,Non-Functioning Pituitary Gland Adenoma
+tumorType,Non-Hodgkin Lymphoma
+tumorType,Not Applicable
+tumorType,Oral Cavity Neoplasm
+tumorType,Oral Cavity Squamous Cell Carcinoma
+tumorType,Oropharyngeal Neoplasm
+tumorType,Osteosarcoma
+tumorType,Ovarian Adenosarcoma
+tumorType,Ovarian Carcinoma
+tumorType,Ovarian Neoplasm
+tumorType,Ovarian Serous Adenocarcinoma
+tumorType,Pan-cancer
+tumorType,Pancreatic Adenocarcinoma
+tumorType,Pancreatic Carcinoma
+tumorType,Pancreatic Ductal Adenocarcinoma
+tumorType,Pancreatic Neoplasm
+tumorType,Pancreatic Neuroendocrine Carcinoma
+tumorType,Pending Annotation
+tumorType,Penile Carcinoma
+tumorType,Pheochromocytoma
+tumorType,Pilocytic Astrocytoma
+tumorType,Pituitary Gland Adenoma
+tumorType,Plasmablastic Lymphoma
+tumorType,Plasmacytoma
+tumorType,Plexiform Schwannoma
+tumorType,Precursor B-cell lymphoblastic leukemia
+tumorType,Primary Central Nervous System Lymphoma
+tumorType,Primary Myelofibrosis
+tumorType,Prostate Adenocarcinoma
+tumorType,Prostate Carcinoma
+tumorType,Prostate Neoplasm
+tumorType,Rectal Adenocarcinoma
+tumorType,Renal Cell Carcinoma
+tumorType,Retinoblastoma
+tumorType,Rhabdomyosarcoma
+tumorType,Rosette-Forming Glioneuronal Tumor
+tumorType,Salivary Gland Adenoid Cystic Carcinoma
+tumorType,Sarcoma
+tumorType,Schwannoma
+tumorType,Serous Tubal Intraepithelial Carcinoma
+tumorType,Sinonasal Squamous Cell Carcinoma
+tumorType,Skin Carcinoma
+tumorType,Skin Neoplasm
+tumorType,Soft Tissue Sarcoma
+tumorType,Squamous Cell Carcinoma
+tumorType,Synovial Sarcoma
+tumorType,T Acute Lymphoblastic Leukemia
+tumorType,T-Cell Lymphoma
+tumorType,Teratoma
+tumorType,Testicular Embryonal Carcinoma
+tumorType,Thyroid Gland Anaplastic Carcinoma
+tumorType,Thyroid Gland Carcinoma
+tumorType,Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features
+tumorType,Triple-Negative Breast Carcinoma
+tumorType,Urothelial Carcinoma
+tumorType,Uterine Adenosarcoma
+tumorType,Uveal Melanoma
+tumorType,Uveal Neoplasm
+tumorType,Vascular Neoplasm
+tumorType,Not-Applicable
+tumorType,Plexiform Neurofibroma
+tumorGrade,G1
+tumorGrade,G2
+tumorGrade,G3
+tumorGrade,G4
+tumorGrade,GX
+tumorGrade,GB
+tumorGrade,High Grade
+tumorGrade,Intermediate Grade
+tumorGrade,Low Grade
+tumorGrade,unknown
+tumorGrade,Not Reported
+tumorGrade,Not Applicable
+metStatus,Distant Metastasis
+metStatus,Metastasis NOS
+metStatus,No Metastasis
+metStatus,Regional Metastasis
+metStatus,unknown
+metStatus,Not Reported
+diseaseStatus,Distant met recurrence/progression
+diseaseStatus,Loco-regional recurrence/progression
+diseaseStatus,Biochemical evidence of disease without structural correlate
+diseaseStatus,Tumor free
+diseaseStatus,unknown tumor status
+diseaseStatus,With tumor
+diseaseStatus,Not Reported
+diseaseStatus,Not Allowed To Collect
+diseaseStatus,Not Applicable
+preservation,Cryopreserved
+preservation,Cryopreservation in liquid nitrogen - dead tissue
+preservation,Cryopreservation in dry ice - dead tissue
+preservation,Cryopreservation in liquid nitrogen - live cells
+preservation,Formalin fixed paraffin embedded - FFPE
+preservation,Formalin fixed-unbuffered
+preservation,Formalin fixed-buffered
+preservation,Fresh
+preservation,Fresh dissociated and single cell sorted into plates in NP40 buffer
+preservation,OCT
+preservation,Snap Frozen
+preservation,Frozen
+preservation,Negative 80 Deg C
+preservation,Liquid Nitrogen
+preservation,Fresh dissociated
+preservation,Fresh dissociated and single cell sorted
+preservation,Fresh dissociated and single cell sorted into plates
+preservation,Methacarn fixed paraffin embedded - MFPE
+preservation,unknown
+preservation,Not Reported
+tissue,Gonad
+tissue,Abdominal Esophagus
+tissue,Adipose Tissue
+tissue,Adrenal Gland
+tissue,Alveolus
+tissue,Aorta
+tissue,Artery
+tissue,Ascending Colon
+tissue,Bile Duct
+tissue,Bladder
+tissue,Blood
+tissue,Blood Vessel
+tissue,Bone
+tissue,Bone Marrow
+tissue,Brain
+tissue,Breast
+tissue,Caecum
+tissue,Cancer-Associated Fibroblast
+tissue,Cardia
+tissue,Cartilage
+tissue,Cervix Uteri
+tissue,Choroid
+tissue,Colon
+tissue,Connective and Soft Tissue
+tissue,Cornea
+tissue,Duodenum
+tissue,Ear
+tissue,Embryo
+tissue,Embryonic Heart
+tissue,Endocervix
+tissue,Endometrium
+tissue,Endothelium
+tissue,Epithelium
+tissue,Esophagus
+tissue,Eye
+tissue,Fallopian Tube
+tissue,Foreskin
+tissue,Frontal Lobe
+tissue,Gastroesophageal Junction
+tissue,Gastrointestinal Tract
+tissue,Genitourinary
+tissue,Hair Follicle
+tissue,Head and Neck
+tissue,Heart
+tissue,Heart Muscle
+tissue,Hematopoietic System
+tissue,Hippocampus
+tissue,Intestine
+tissue,Intra-Abdominal Lymph Nodes
+tissue,Intrathoracic Lymph Nodes
+tissue,Joint
+tissue,Kidney
+tissue,Larynx
+tissue,Ligament
+tissue,Liver
+tissue,Lung
+tissue,Lymph
+tissue,Lymph Node
+tissue,Lymph Nodes of Axilla or Arm
+tissue,Lymph Nodes of Inguinal Region or Leg
+tissue,Lymphatic System
+tissue,Lymphoid Tissue
+tissue,Main Bronchus
+tissue,Mammary Gland
+tissue,Meninges
+tissue,Mesenchyme
+tissue,Mucosa
+tissue,Muscle
+tissue,Nasal Cavity
+tissue,Nervous System
+tissue,Not Applicable
+tissue,Olfactory Mucosa
+tissue,Omentum
+tissue,Oral Cavity
+tissue,Oral Mucosa
+tissue,Ovary
+tissue,Pancreas
+tissue,Pelvic Lymph Nodes
+tissue,Pending Annotation
+tissue,Periodontal Ligament
+tissue,Peripheral Nerves
+tissue,Peritoneum
+tissue,Pharynx
+tissue,Pituitary Gland
+tissue,Placenta
+tissue,Pleura
+tissue,Prostate Gland
+tissue,Rectum
+tissue,Reproductive System
+tissue,Respiratory System
+tissue,Salivary Gland
+tissue,Sclera
+tissue,Sinonasal Tract
+tissue,Skin
+tissue,Small Intestine
+tissue,Spinal Cord
+tissue,Spleen
+tissue,Stomach
+tissue,Synovial Membrane
+tissue,Tendon
+tissue,Testis
+tissue,Thymus
+tissue,Thyroid Gland
+tissue,Tongue
+tissue,Tonsil
+tissue,Trachea
+tissue,Umbilical Cord
+tissue,Unspecified
+tissue,Uterus
+tissue,Vagina
+tissue,Vascular Endothelium
+tissue,Vein
+tissue,Vertebra
+tissue,Peripheral Blood Mononuclear Cell
 consortium_funding_agency,NIH
 dataset_file_format,AVI
 dataset_file_format,BAI
@@ -75,30 +457,6 @@ dataset_file_format,PKL
 dataset_file_format,BPM
 dataset_file_format,Unspecified
 dataset_file_format,Pending Annotation
-dataset_species,African Bush Elephant
-dataset_species,Armadillo
-dataset_species,Asian Elephant
-dataset_species,Boar
-dataset_species,Cat
-dataset_species,Chicken
-dataset_species,Cow
-dataset_species,Dog
-dataset_species,Escherichia coli
-dataset_species,Guinea Pig
-dataset_species,Horse
-dataset_species,Human
-dataset_species,Mouse
-dataset_species,Opossum
-dataset_species,Rabbit
-dataset_species,Rat
-dataset_species,Rhesus monkey
-dataset_species,Sheep
-dataset_species,Trichoplax adhaerens
-dataset_species,Unknown
-dataset_species,Unspecified
-dataset_species,Worm
-dataset_species,Yeast
-dataset_species,Fruit Fly
 grant_number,Affiliated/Non-Grant Associated
 grant_number,CA184897
 grant_number,CA184898
@@ -606,306 +964,6 @@ assay,Scratch Assay
 assay,Structural Variant Analysis
 assay,Survival Analysis
 assay,Targeted Error Correction Sequencing
-tissue,Gonad
-tissue,Abdominal Esophagus
-tissue,Adipose Tissue
-tissue,Adrenal Gland
-tissue,Alveolus
-tissue,Aorta
-tissue,Artery
-tissue,Ascending Colon
-tissue,Bile Duct
-tissue,Bladder
-tissue,Blood
-tissue,Blood Vessel
-tissue,Bone
-tissue,Bone Marrow
-tissue,Brain
-tissue,Breast
-tissue,Caecum
-tissue,Cancer-Associated Fibroblast
-tissue,Cardia
-tissue,Cartilage
-tissue,Cervix Uteri
-tissue,Choroid
-tissue,Colon
-tissue,Connective and Soft Tissue
-tissue,Cornea
-tissue,Duodenum
-tissue,Ear
-tissue,Embryo
-tissue,Embryonic Heart
-tissue,Endocervix
-tissue,Endometrium
-tissue,Endothelium
-tissue,Epithelium
-tissue,Esophagus
-tissue,Eye
-tissue,Fallopian Tube
-tissue,Foreskin
-tissue,Frontal Lobe
-tissue,Gastroesophageal Junction
-tissue,Gastrointestinal Tract
-tissue,Genitourinary
-tissue,Hair Follicle
-tissue,Head and Neck
-tissue,Heart
-tissue,Heart Muscle
-tissue,Hematopoietic System
-tissue,Hippocampus
-tissue,Intestine
-tissue,Intra-Abdominal Lymph Nodes
-tissue,Intrathoracic Lymph Nodes
-tissue,Joint
-tissue,Kidney
-tissue,Larynx
-tissue,Ligament
-tissue,Liver
-tissue,Lung
-tissue,Lymph
-tissue,Lymph Node
-tissue,Lymph Nodes of Axilla or Arm
-tissue,Lymph Nodes of Inguinal Region or Leg
-tissue,Lymphatic System
-tissue,Lymphoid Tissue
-tissue,Main Bronchus
-tissue,Mammary Gland
-tissue,Meninges
-tissue,Mesenchyme
-tissue,Mucosa
-tissue,Muscle
-tissue,Nasal Cavity
-tissue,Nervous System
-tissue,Not Applicable
-tissue,Olfactory Mucosa
-tissue,Omentum
-tissue,Oral Cavity
-tissue,Oral Mucosa
-tissue,Ovary
-tissue,Pancreas
-tissue,Pelvic Lymph Nodes
-tissue,Pending Annotation
-tissue,Periodontal Ligament
-tissue,Peripheral Nerves
-tissue,Peritoneum
-tissue,Pharynx
-tissue,Pituitary Gland
-tissue,Placenta
-tissue,Pleura
-tissue,Prostate Gland
-tissue,Rectum
-tissue,Reproductive System
-tissue,Respiratory System
-tissue,Salivary Gland
-tissue,Sclera
-tissue,Sinonasal Tract
-tissue,Skin
-tissue,Small Intestine
-tissue,Spinal Cord
-tissue,Spleen
-tissue,Stomach
-tissue,Synovial Membrane
-tissue,Tendon
-tissue,Testis
-tissue,Thymus
-tissue,Thyroid Gland
-tissue,Tongue
-tissue,Tonsil
-tissue,Trachea
-tissue,Umbilical Cord
-tissue,Unspecified
-tissue,Uterus
-tissue,Vagina
-tissue,Vascular Endothelium
-tissue,Vein
-tissue,Vertebra
-tissue,Peripheral Blood Mononuclear Cell
-tumorType,Cutaneous Melanoma
-tumorType,Acinar Cell Carcinoma
-tumorType,Acute Lymphoblastic Leukemia
-tumorType,Acute Monocytic Leukemia
-tumorType,Acute Myeloid Leukemia
-tumorType,Acute Promyelocytic Leukemia
-tumorType,Adenocarcinoma
-tumorType,Angiosarcoma
-tumorType,Astrocytoma
-tumorType,Atypical Teratoid/Rhabdoid Tumor
-tumorType,B Acute Lymphoblastic Leukemia
-tumorType,B-Cell Non-Hodgkin Lymphoma
-tumorType,Barrett Esophagus
-tumorType,Basal Cell Neoplasm
-tumorType,Basal-Like Breast Carcinoma
-tumorType,Biliary Tract Carcinoma
-tumorType,Bladder Carcinoma
-tumorType,Bladder Neoplasm
-tumorType,Bone Neoplasm
-tumorType,Brain Neoplasm
-tumorType,Breast Adenocarcinoma
-tumorType,Breast Carcinoma
-tumorType,Breast Neoplasm
-tumorType,Carcinoma
-tumorType,Carcinoma In Situ
-tumorType,Castration-Resistant Prostate Carcinoma
-tumorType,Cellular Schwannoma
-tumorType,Central Nervous System Cavernous Hemangioma
-tumorType,Central Nervous System Neoplasm
-tumorType,Cerebellar Neoplasm
-tumorType,Cervical Carcinoma
-tumorType,Cervical Neoplasm
-tumorType,Cervical Small Cell Carcinoma
-tumorType,Cholangiocarcinoma
-tumorType,Chondroblastoma
-tumorType,Choriocarcinoma
-tumorType,Chronic Lymphocytic Leukemia
-tumorType,Chronic Myeloid Leukemia
-tumorType,Clear Cell Renal Cell Carcinoma
-tumorType,Colon Adenocarcinoma
-tumorType,Colon Carcinoma
-tumorType,Colorectal Adenocarcinoma
-tumorType,Colorectal Adenoma
-tumorType,Colorectal Carcinoma
-tumorType,Colorectal Neoplasm
-tumorType,Combined Hepatocellular Carcinoma and Cholangiocarcinoma
-tumorType,Craniopharyngioma
-tumorType,Cutaneous T Cell Lymphoma
-tumorType,Diffuse Large B-Cell Lymphoma
-tumorType,Ductal Breast Carcinoma In Situ
-tumorType,Dysembryoplastic Neuroepithelial Neoplasm
-tumorType,Endometrial Carcinoma
-tumorType,Endometrial Neoplasm
-tumorType,Ependymoma
-tumorType,Esophageal Adenocarcinoma
-tumorType,Esophageal Carcinoma
-tumorType,Esophageal Squamous Cell Carcinoma
-tumorType,Ewing Sarcoma
-tumorType,Extraventricular Neurocytoma
-tumorType,Fibroepithelial Polyp
-tumorType,Fibrolamellar Carcinoma
-tumorType,Fibrosarcoma
-tumorType,Follicular Lymphoma
-tumorType,Gallbladder Carcinoma
-tumorType,Gastric Adenocarcinoma
-tumorType,Gastric Carcinoma
-tumorType,Gastric Neoplasm
-tumorType,Gastroesophageal Adenocarcinoma
-tumorType,Gastroesophageal Junction Adenocarcinoma
-tumorType,Gastrointestinal Stromal Neoplasm
-tumorType,Giant Cell Tumor
-tumorType,Glioblastoma
-tumorType,Glioma
-tumorType,Head and Neck Carcinoma
-tumorType,Head and Neck Neoplasm
-tumorType,Head and Neck Squamous Cell Carcinoma
-tumorType,Hepatocellular Carcinoma
-tumorType,High Grade Ovarian Serous Adenocarcinoma
-tumorType,Histiocytic Sarcoma
-tumorType,Hodgkin Lymphoma
-tumorType,Intestinal Neoplasm
-tumorType,Intrahepatic Cholangiocarcinoma
-tumorType,Invasive Ductal Breast Carcinoma
-tumorType,Kaposi Sarcoma
-tumorType,Leiomyoma
-tumorType,Leukemia
-tumorType,Liver and Intrahepatic Bile Duct Carcinoma
-tumorType,Liver and Intrahepatic Bile Duct Neoplasm
-tumorType,Low Grade Glioma
-tumorType,Luminal A Breast Carcinoma
-tumorType,Lung Adenocarcinoma
-tumorType,Lung Carcinoma
-tumorType,Lung Neoplasm
-tumorType,Lung Non-Small Cell Carcinoma
-tumorType,Lung Small Cell Carcinoma
-tumorType,Lung Squamous Cell Carcinoma
-tumorType,Lymphoid Leukemia
-tumorType,Lymphoma
-tumorType,Malignant Brain Neoplasm
-tumorType,Malignant Digestive System Neoplasm
-tumorType,Malignant Genitourinary System Neoplasm
-tumorType,Malignant Glioma
-tumorType,Malignant Neoplasm
-tumorType,Malignant Ovarian Neoplasm
-tumorType,Malignant Pancreatic Neoplasm
-tumorType,Malignant Peripheral Nerve Sheath Tumor
-tumorType,Malignant Peritoneal Neoplasm
-tumorType,Malignant Skin Neoplasm
-tumorType,Mantle Cell Lymphoma
-tumorType,Marginal Zone Lymphoma
-tumorType,Medulloblastoma
-tumorType,Melanoma
-tumorType,Meningioma
-tumorType,Mesothelioma
-tumorType,Multiple Myeloma
-tumorType,Mycosis Fungoides
-tumorType,Myeloid Leukemia
-tumorType,Myeloid Neoplasm
-tumorType,Myeloproliferative Neoplasm
-tumorType,Myoepithelioma
-tumorType,Nasopharyngeal Carcinoma
-tumorType,Neuroblastoma
-tumorType,Neuroendocrine Neoplasm
-tumorType,Neuroepithelial Neoplasm
-tumorType,Neurofibroma
-tumorType,Non-Functioning Pituitary Gland Adenoma
-tumorType,Non-Hodgkin Lymphoma
-tumorType,Not Applicable
-tumorType,Oral Cavity Neoplasm
-tumorType,Oral Cavity Squamous Cell Carcinoma
-tumorType,Oropharyngeal Neoplasm
-tumorType,Osteosarcoma
-tumorType,Ovarian Adenosarcoma
-tumorType,Ovarian Carcinoma
-tumorType,Ovarian Neoplasm
-tumorType,Ovarian Serous Adenocarcinoma
-tumorType,Pan-cancer
-tumorType,Pancreatic Adenocarcinoma
-tumorType,Pancreatic Carcinoma
-tumorType,Pancreatic Ductal Adenocarcinoma
-tumorType,Pancreatic Neoplasm
-tumorType,Pancreatic Neuroendocrine Carcinoma
-tumorType,Pending Annotation
-tumorType,Penile Carcinoma
-tumorType,Pheochromocytoma
-tumorType,Pilocytic Astrocytoma
-tumorType,Pituitary Gland Adenoma
-tumorType,Plasmablastic Lymphoma
-tumorType,Plasmacytoma
-tumorType,Plexiform Schwannoma
-tumorType,Precursor B-cell lymphoblastic leukemia
-tumorType,Primary Central Nervous System Lymphoma
-tumorType,Primary Myelofibrosis
-tumorType,Prostate Adenocarcinoma
-tumorType,Prostate Carcinoma
-tumorType,Prostate Neoplasm
-tumorType,Rectal Adenocarcinoma
-tumorType,Renal Cell Carcinoma
-tumorType,Retinoblastoma
-tumorType,Rhabdomyosarcoma
-tumorType,Rosette-Forming Glioneuronal Tumor
-tumorType,Salivary Gland Adenoid Cystic Carcinoma
-tumorType,Sarcoma
-tumorType,Schwannoma
-tumorType,Serous Tubal Intraepithelial Carcinoma
-tumorType,Sinonasal Squamous Cell Carcinoma
-tumorType,Skin Carcinoma
-tumorType,Skin Neoplasm
-tumorType,Soft Tissue Sarcoma
-tumorType,Squamous Cell Carcinoma
-tumorType,Synovial Sarcoma
-tumorType,T Acute Lymphoblastic Leukemia
-tumorType,T-Cell Lymphoma
-tumorType,Teratoma
-tumorType,Testicular Embryonal Carcinoma
-tumorType,Thyroid Gland Anaplastic Carcinoma
-tumorType,Thyroid Gland Carcinoma
-tumorType,Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features
-tumorType,Triple-Negative Breast Carcinoma
-tumorType,Urothelial Carcinoma
-tumorType,Uterine Adenosarcoma
-tumorType,Uveal Melanoma
-tumorType,Uveal Neoplasm
-tumorType,Vascular Neoplasm
-tumorType,Not-Applicable
-tumorType,Plexiform Neurofibroma
 ed_topic,Computational Model Development
 ed_topic,Computational Resource
 ed_topic,Diversity/Equity/Inclusion
@@ -1527,6 +1585,135 @@ ed_hazard,Flashing
 ed_hazard,Motion
 ed_hazard,Simulation
 ed_hazard,Sound
+tool_format,Alignment Format
+tool_format,Alignment Format (Pair Only)
+tool_format,Alignment Format (Text)
+tool_format,Annotated Text Format
+tool_format,Antimony
+tool_format,BAM
+tool_format,BCF
+tool_format,BED
+tool_format,BLAST Results
+tool_format,BNGL
+tool_format,Binary Format
+tool_format,Biological Model Format
+tool_format,Biological Pathway Or Network Format
+tool_format,CSV
+tool_format,Chemical Data Format
+tool_format,Cytoband Format
+tool_format,Cytoscape Input File Format
+tool_format,DCD
+tool_format,DSV
+tool_format,Database Hits (Sequence) Format 
+tool_format,Docker Image Format
+tool_format,Document Format
+tool_format,Dot-Bracket Format
+tool_format,FASTA
+tool_format,FASTQ
+tool_format,FASTQ-Illumina
+tool_format,FCS
+tool_format,GCT/Res Format
+tool_format,GFF
+tool_format,GFF3
+tool_format,GIF
+tool_format,GML
+tool_format,GTF
+tool_format,Gene Annotation Format
+tool_format,Gene Cluster Format
+tool_format,Gene Expression Report Format
+tool_format,Genotype And Phenotype Annotation Format
+tool_format,Graph Format
+tool_format,H5AD
+tool_format,HDF
+tool_format,HDF5
+tool_format,HTML
+tool_format,Hidden Markov Model Format
+tool_format,Image Format
+tool_format,Individual Genetic Data Format
+tool_format,JPG
+tool_format,JSON
+tool_format,LSM
+tool_format,MAF
+tool_format,MAGE-ML
+tool_format,MAGE-TAB
+tool_format,MAT
+tool_format,MATLAB Script
+tool_format,MSF
+tool_format,Map Format
+tool_format,Mass Spectrometry Data Format
+tool_format,Matrix Format
+tool_format,NIFTI Format
+tool_format,Nexus Format
+tool_format,Not Applicable
+tool_format,NumPy Format
+tool_format,OME-TIFF
+tool_format,Ontology Format
+tool_format,PDF
+tool_format,PNG
+tool_format,PS
+tool_format,PSF
+tool_format,Phylip Format
+tool_format,Phylip Format Variant
+tool_format,Phylogenetic Tree Format
+tool_format,Phylogenetic Tree Format (Text)
+tool_format,Protein Interaction Format
+tool_format,Python Script
+tool_format,R File Format
+tool_format,R Script
+tool_format,RDS
+tool_format,RNA Annotation Format
+tool_format,RNA Secondary Structure Format
+tool_format,RPKM
+tool_format,Raw Sequence Format
+tool_format,SAM
+tool_format,SBML
+tool_format,SQLite Format
+tool_format,SVG
+tool_format,Scores Format
+tool_format,Sequence Annotation Track Format
+tool_format,Sequence Cluster Format
+tool_format,Sequence Cluster Format (Protein)
+tool_format,Sequence Feature Annotation Format
+tool_format,Sequence Feature Table Format
+tool_format,Sequence Feature Table Format (Text)
+tool_format,Sequence Profile Format
+tool_format,Sequence Range Format
+tool_format,Sequence Record Format
+tool_format,Sequence Trace Format
+tool_format,Sequence Variation Annotation Format
+tool_format,TIFF
+tool_format,TSV
+tool_format,TXT
+tool_format,Tertiary Structure Format
+tool_format,Textual Format
+tool_format,Topology Format
+tool_format,Trajectory Format
+tool_format,VCF
+tool_format,Workflow Format
+tool_format,XML
+tool_format,YAML
+tool_format,bedgraph
+tool_format,bigWig
+tool_format,cel
+tool_format,imzML Metadata File
+tool_format,mzML
+tool_format,nii
+tool_format,pkl
+tool_format,sif
+tool_format,xls
+tool_format,xlsx
+tool_format,PDB
+tool_format,HED
+tool_format,MRC
+tool_format,Unspecified
+assayType,RNA nCounter
+assayType,Protein nCounter
+assayType,Protein NGS
+assayType,RNA NGS
+matrixType,Raw Counts
+matrixType,Normalized Counts
+matrixType,Scaled Counts
+matrixType,Batch Corrected Counts
 consortium_name,CCBIR
 consortium_name,CSBC
 consortium_name,HTAN
@@ -1724,6 +1911,142 @@ theme_name,Oncogenic Stress
 theme_name,Platform Development
 theme_name,Tumor Progression
 theme_name,Tumor-Immune
+imageAssay,H&E
+imageAssay,CyCIF
+imageAssay,t-CyCIF
+imageAssay,IHC
+imageAssay,mIHC
+imageAssay,MxIF
+imageAssay,SABER
+imageAssay,IMC
+imageAssay,CODEX
+imageAssay,GeoMX-DSP
+imageAssay,MIBI
+imageAssay,MERFISH
+imageAssay,ExSeq
+imageAssay,RareCyte Orion
+imageAssay,Not Applicable
+channelQC,Yes
+channelQC,No - Channel Failed QC
+abRole,Primary
+abRole,Secondary
+elementType,H
+elementType,He
+elementType,Li
+elementType,Be
+elementType,B
+elementType,C
+elementType,N
+elementType,O
+elementType,F
+elementType,Ne
+elementType,Na
+elementType,Mg
+elementType,Al
+elementType,Si
+elementType,P
+elementType,S
+elementType,Cl
+elementType,Ar
+elementType,K
+elementType,Ca
+elementType,Sc
+elementType,Ti
+elementType,V
+elementType,Cr
+elementType,Mn
+elementType,Fe
+elementType,Co
+elementType,Ni
+elementType,Cu
+elementType,Zn
+elementType,Ga
+elementType,Ge
+elementType,As
+elementType,Se
+elementType,Br
+elementType,Kr
+elementType,Rb
+elementType,Sr
+elementType,Y
+elementType,Zr
+elementType,Nb
+elementType,Mo
+elementType,Tc
+elementType,Ru
+elementType,Rh
+elementType,Pd
+elementType,Ag
+elementType,Cd
+elementType,In
+elementType,Sn
+elementType,Sb
+elementType,Te
+elementType,I
+elementType,Xe
+elementType,Cs
+elementType,Ba
+elementType,La
+elementType,Ce
+elementType,Pr
+elementType,Nd
+elementType,Pm
+elementType,Sm
+elementType,Eu
+elementType,Gd
+elementType,Tb
+elementType,Dy
+elementType,Ho
+elementType,Er
+elementType,Tm
+elementType,Yb
+elementType,Lu
+elementType,Hf
+elementType,Ta
+elementType,W
+elementType,Re
+elementType,Os
+elementType,Ir
+elementType,Pt
+elementType,Au
+elementType,Hg
+elementType,Tl
+elementType,Pb
+elementType,Bi
+elementType,Po
+elementType,At
+elementType,Rn
+elementType,Fr
+elementType,Ra
+elementType,Ac
+elementType,Th
+elementType,Pa
+elementType,U
+elementType,Np
+elementType,Pu
+elementType,Am
+elementType,Bk
+elementType,Cf
+elementType,Es
+elementType,Fm
+elementType,Md
+elementType,No
+elementType,Lr
+elementType,Rf
+elementType,Db
+elementType,Sg
+elementType,Bh
+elementType,Hs
+elementType,Mt
+elementType,Ds
+elementType,Rg
+elementType,Cn
+elementType,Nh
+elementType,Fl
+elementType,Mc
+elementType,Lv
+elementType,Ts
+elementType,Og
 institution_location_state,Alabama
 institution_location_state,Alaska
 institution_location_state,American Samoa
@@ -1989,127 +2312,6 @@ tool_download_type,Tool Wrapper (Galaxy)
 tool_download_type,Tool Wrapper (Taverna)
 tool_download_type,Tool wrapper (Other)
 tool_download_type,VM Image
-tool_format,Alignment Format
-tool_format,Alignment Format (Pair Only)
-tool_format,Alignment Format (Text)
-tool_format,Annotated Text Format
-tool_format,Antimony
-tool_format,BAM
-tool_format,BCF
-tool_format,BED
-tool_format,BLAST Results
-tool_format,BNGL
-tool_format,Binary Format
-tool_format,Biological Model Format
-tool_format,Biological Pathway Or Network Format
-tool_format,CSV
-tool_format,Chemical Data Format
-tool_format,Cytoband Format
-tool_format,Cytoscape Input File Format
-tool_format,DCD
-tool_format,DSV
-tool_format,Database Hits (Sequence) Format 
-tool_format,Docker Image Format
-tool_format,Document Format
-tool_format,Dot-Bracket Format
-tool_format,FASTA
-tool_format,FASTQ
-tool_format,FASTQ-Illumina
-tool_format,FCS
-tool_format,GCT/Res Format
-tool_format,GFF
-tool_format,GFF3
-tool_format,GIF
-tool_format,GML
-tool_format,GTF
-tool_format,Gene Annotation Format
-tool_format,Gene Cluster Format
-tool_format,Gene Expression Report Format
-tool_format,Genotype And Phenotype Annotation Format
-tool_format,Graph Format
-tool_format,H5AD
-tool_format,HDF
-tool_format,HDF5
-tool_format,HTML
-tool_format,Hidden Markov Model Format
-tool_format,Image Format
-tool_format,Individual Genetic Data Format
-tool_format,JPG
-tool_format,JSON
-tool_format,LSM
-tool_format,MAF
-tool_format,MAGE-ML
-tool_format,MAGE-TAB
-tool_format,MAT
-tool_format,MATLAB Script
-tool_format,MSF
-tool_format,Map Format
-tool_format,Mass Spectrometry Data Format
-tool_format,Matrix Format
-tool_format,NIFTI Format
-tool_format,Nexus Format
-tool_format,Not Applicable
-tool_format,NumPy Format
-tool_format,OME-TIFF
-tool_format,Ontology Format
-tool_format,PDF
-tool_format,PNG
-tool_format,PS
-tool_format,PSF
-tool_format,Phylip Format
-tool_format,Phylip Format Variant
-tool_format,Phylogenetic Tree Format
-tool_format,Phylogenetic Tree Format (Text)
-tool_format,Protein Interaction Format
-tool_format,Python Script
-tool_format,R File Format
-tool_format,R Script
-tool_format,RDS
-tool_format,RNA Annotation Format
-tool_format,RNA Secondary Structure Format
-tool_format,RPKM
-tool_format,Raw Sequence Format
-tool_format,SAM
-tool_format,SBML
-tool_format,SQLite Format
-tool_format,SVG
-tool_format,Scores Format
-tool_format,Sequence Annotation Track Format
-tool_format,Sequence Cluster Format
-tool_format,Sequence Cluster Format (Protein)
-tool_format,Sequence Feature Annotation Format
-tool_format,Sequence Feature Table Format
-tool_format,Sequence Feature Table Format (Text)
-tool_format,Sequence Profile Format
-tool_format,Sequence Range Format
-tool_format,Sequence Record Format
-tool_format,Sequence Trace Format
-tool_format,Sequence Variation Annotation Format
-tool_format,TIFF
-tool_format,TSV
-tool_format,TXT
-tool_format,Tertiary Structure Format
-tool_format,Textual Format
-tool_format,Topology Format
-tool_format,Trajectory Format
-tool_format,VCF
-tool_format,Workflow Format
-tool_format,XML
-tool_format,YAML
-tool_format,bedgraph
-tool_format,bigWig
-tool_format,cel
-tool_format,imzML Metadata File
-tool_format,mzML
-tool_format,nii
-tool_format,pkl
-tool_format,sif
-tool_format,xls
-tool_format,xlsx
-tool_format,PDB
-tool_format,HED
-tool_format,MRC
-tool_format,Unspecified
 tool_language,AWK
 tool_language,ActionScript
 tool_language,Ada
