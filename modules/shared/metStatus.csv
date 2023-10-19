@@ -1,0 +1,7 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Distant Metastasis,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,
+Metastasis NOS,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,
+No Metastasis,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,
+Regional Metastasis,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,
+unknown,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,
+Not Reported,,,,FALSE,,Metastasis at Diagnosis,,,,,,,,

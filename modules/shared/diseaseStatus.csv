@@ -1,0 +1,10 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Distant met recurrence/progression,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Loco-regional recurrence/progression,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Biochemical evidence of disease without structural correlate,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Tumor free,,,,FALSE,,Last Known Disease Status,,,,,,,,
+unknown tumor status,,,,FALSE,,Last Known Disease Status,,,,,,,,
+With tumor,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Not Reported,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Not Allowed To Collect,,,,FALSE,,Last Known Disease Status,,,,,,,,
+Not Applicable,,,,FALSE,,Last Known Disease Status,,,,,,,,

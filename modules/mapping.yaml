@@ -1,4 +1,24 @@
-﻿consortium:
+﻿biospecimen:
+  - name: Biospecimen Type
+    src: shared/specimenType.csv
+  - name: Biospecimen Species
+    src: dataset/dataset_species.csv
+  - name: Biospecimen Tumor Type
+    src: shared/tumorType.csv
+  - name: Tumor Grade
+    src: shared/tumorGrade.csv
+  - name: Metastasis at Diagnosis
+    src: shared/metStatus.csv
+  - name: Last Known Disease Status
+    src: shared/diseaseStatus.csv
+  - name: Preservation Method
+    src: shared/preservation.csv
+  - name: Site of Resection or Biopsy
+    src: shared/tissue.csv
+  - name: Tissue or Organ of Origin
+    src: shared/tissue.csv
+
+consortium:
   - name: Consortium Funding Agency
     src: consortium/consortium_funding_agency.csv
 
@@ -40,6 +60,14 @@ education:
   - name: Resource Access Hazard
     src: education/ed_hazard.csv
 
+geomx:
+  - name: File Format
+    src: tool/tool_format.csv
+  - name: GeoMx DSP Assay Type
+    src: geomx/assayType.csv
+  - name: Matrix Type
+    src: shared/matrixType.csv
+
 grant:
   - name: Grant Consortium Name
     src: consortium/consortium_name.csv
@@ -52,6 +80,16 @@ grant:
   - name: Grant Theme Name
     src: theme/theme_name.csv
 
+imaging:
+  - name: Imaging Assay Type
+    src: shared/imageAssay.csv
+  - name: Channel Passed QC
+    src: shared/channelQC.csv
+  - name: Antibody Role
+    src: shared/abRole.csv
+  - name: Metal Isotope Element
+    src: shared/elementType.csv
+  
 institution:
   - name: Institution Location State
     src: institution/institution_location_state.csv
