@@ -7506,6 +7506,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Dataset Grant Number",
@@ -9128,6 +9134,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Resource Grant Number",
@@ -12503,6 +12515,9 @@
                     "@id": "bts:UniversityofMichigan"
                 },
                 {
+                    "@id": "bts:UniversityofNevadaReno"
+                },
+                {
                     "@id": "bts:UniversityofMinnesota"
                 },
                 {
@@ -12768,6 +12783,9 @@
                 },
                 {
                     "@id": "bts:UNC"
+                },
+                {
+                    "@id": "bts:UNR"
                 },
                 {
                     "@id": "bts:UNSW"
@@ -15812,6 +15830,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Person Grant Number",
@@ -16540,6 +16564,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Project Grant Number",
@@ -19458,6 +19488,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Publication Grant Number",
@@ -24644,6 +24680,12 @@
                 },
                 {
                     "@id": "bts:CA275808"
+                },
+                {
+                    "@id": "bts:CA279408"
+                },
+                {
+                    "@id": "bts:CA279560"
                 }
             ],
             "sms:displayName": "Tool Grant Number",
@@ -40790,6 +40832,40 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:CA279408",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA279408",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA279408",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA279560",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA279560",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA279560",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ComputationalModelDevelopment",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -54118,6 +54194,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:UniversityofNevadaReno",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "UniversityofNevadaReno",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "University of Nevada Reno",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:UniversityofMinnesota",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -55406,6 +55499,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "UNC",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:UNR",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "UNR",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionAlias"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "UNR",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
