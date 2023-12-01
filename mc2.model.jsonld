@@ -7512,6 +7512,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Dataset Grant Number",
@@ -9140,6 +9173,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Resource Grant Number",
@@ -12560,6 +12626,9 @@
                     "@id": "bts:VanderbiltUniversity"
                 },
                 {
+                    "@id": "bts:WashingtonUniversityinSt.Louis"
+                },
+                {
                     "@id": "bts:WakeForest"
                 },
                 {
@@ -12827,6 +12896,9 @@
                     "@id": "bts:Vanderbilt"
                 },
                 {
+                    "@id": "bts:WUSTL"
+                },
+                {
                     "@id": "bts:WCM"
                 },
                 {
@@ -12940,6 +13012,10 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
             "rdfs:label": "ImagingLevel2",
+            "@id": "bts:GrantStartDate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The start date of the grant YYYY-MM-DD format",
+            "rdfs:label": "GrantStartDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13850,6 +13926,17 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "This must match the corresponding field in the OME-XML / TIFF header. (eg 'Channel:0:1')",
             "rdfs:label": "ChannelID",
+            "sms:displayName": "Grant Start Date",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "date"
+            ]
+        },
+        {
+            "@id": "bts:NIHRePORTERLink",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link to the search results for this grant number on the NIH Reporter website",
+            "rdfs:label": "NIHRePORTERLink",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13867,6 +13954,17 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin')",
             "rdfs:label": "ChannelName",
+            "sms:displayName": "NIH RePORTER Link",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "url"
+            ]
+        },
+        {
+            "@id": "bts:DurationofFunding",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Duration of the funding period, in years",
+            "rdfs:label": "DurationofFunding",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13901,6 +13999,7 @@
                 }
             ],
             "sms:displayName": "Channel Passed QC",
+            "sms:displayName": "Duration of Funding",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -13909,6 +14008,10 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "The cycle # in which the co-listed reagent(s) was(were) used. Integer >= 1 (up to number of cycles)",
             "rdfs:label": "CycleNumber",
+            "@id": "bts:DurationofDataEmbargo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Duration that the data are embargoed, in months",
+            "rdfs:label": "DurationofDataEmbargo",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -14619,6 +14722,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Concentration",
+            "sms:displayName": "Duration of Data Embargo",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -15836,6 +15940,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Person Grant Number",
@@ -16570,6 +16707,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Project Grant Number",
@@ -19494,6 +19664,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Publication Grant Number",
@@ -24686,6 +24889,39 @@
                 },
                 {
                     "@id": "bts:CA279560"
+                },
+                {
+                    "@id": "bts:CA280984"
+                },
+                {
+                    "@id": "bts:CA280849"
+                },
+                {
+                    "@id": "bts:CA280829"
+                },
+                {
+                    "@id": "bts:CA284090"
+                },
+                {
+                    "@id": "bts:CA284086"
+                },
+                {
+                    "@id": "bts:CA274504"
+                },
+                {
+                    "@id": "bts:CA283114"
+                },
+                {
+                    "@id": "bts:CA274507"
+                },
+                {
+                    "@id": "bts:CA274506"
+                },
+                {
+                    "@id": "bts:CA274511"
+                },
+                {
+                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Tool Grant Number",
@@ -40866,6 +41102,193 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:CA280984",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA280984",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA280984",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA280849",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA280849",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA280849",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA280829",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA280829",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA280829",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA284090",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA284090",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA284090",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA284086",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA284086",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA284086",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA274504",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA274504",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA274504",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA283114",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA283114",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA283114",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA274507",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA274507",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA274507",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA274506",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA274506",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA274506",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA274511",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA274511",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA274511",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CA282451",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CA282451",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetGrantNumber"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CA282451",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ComputationalModelDevelopment",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -54449,6 +54872,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:WashingtonUniversityinSt.Louis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WashingtonUniversityinSt.Louis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Washington University in St. Louis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:WakeForest",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -55703,6 +56143,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Vanderbilt",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WUSTL",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WUSTL",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionAlias"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "WUSTL",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
