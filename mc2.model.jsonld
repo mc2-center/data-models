@@ -12522,18 +12522,6 @@
                 },
                 {
                     "@id": "bts:GrantConsortiumName"
-                },
-                {
-                    "@id": "bts:GrantStartDate"
-                },
-                {
-                    "@id": "bts:NIHRePORTERLink"
-                },
-                {
-                    "@id": "bts:DurationofFunding"
-                },
-                {
-                    "@id": "bts:DurationofDataEmbargo"
                 }
             ],
             "sms:validationRules": []
