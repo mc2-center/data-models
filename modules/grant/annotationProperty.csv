@@ -13,5 +13,5 @@ Grant Consortium Name,Consortium(s) associated with the grant. 1...1,"CCBIR, CSB
 GrantView_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
 Grant Start Date,The start date of the grant YYYY-MM-DD format,,,TRUE,,,,,date
 NIH RePORTER Link,Link to the search results for this grant number on the NIH Reporter website,,,TRUE,,,,,url
-Duration of Funding,"Duration of the funding period, in years",,,FALSE,,,,,
-Duration of Data Embargo,"Duration that the data are embargoed, in months",,,FALSE,,,,,
+Duration of Funding,"Duration of the funding period, in years",,,FALSE,,,,,int
+Duration of Data Embargo,"Duration that the data are embargoed, in months",,,FALSE,,,,,int
