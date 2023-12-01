@@ -7,16 +7,22 @@
     src: shared/tumorType.csv
   - name: Tumor Grade
     src: shared/tumorGrade.csv
-  - name: Metastasis at Diagnosis
-    src: shared/metStatus.csv
-  - name: Last Known Disease Status
+  - name: Biospecimen Composition
+    src: shared/specimenComp.csv
+  - name: Survival Outcome
     src: shared/diseaseStatus.csv
   - name: Preservation Method
     src: shared/preservation.csv
   - name: Site of Resection or Biopsy
     src: shared/tissue.csv
-  - name: Tissue or Organ of Origin
+  - name: Site of Origin
     src: shared/tissue.csv
+  - name: Known Metastasis Sites
+    src: shared/tissue.csv
+  - name: Tumor Subtype
+    src: shared/tumorSubtype.csv
+  - name: Sex
+    src: shared/biologicalSex.csv
 
 consortium:
   - name: Consortium Funding Agency
