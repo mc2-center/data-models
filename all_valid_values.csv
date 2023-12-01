@@ -232,11 +232,12 @@ tumorGrade,Low Grade
 tumorGrade,unknown
 tumorGrade,Not Reported
 tumorGrade,Not Applicable
-specimenComp,Primary Tumor
-specimenComp,Metastatic Tumor
-specimenComp,Normal Tissue
-specimenComp,Mixed
-specimenComp,Not Applicable
+metStatus,Distant Metastasis
+metStatus,Metastasis NOS
+metStatus,No Metastasis
+metStatus,Regional Metastasis
+metStatus,unknown
+metStatus,Not Reported
 diseaseStatus,Distant met recurrence/progression
 diseaseStatus,Loco-regional recurrence/progression
 diseaseStatus,Biochemical evidence of disease without structural correlate
@@ -246,7 +247,6 @@ diseaseStatus,With tumor
 diseaseStatus,Not Reported
 diseaseStatus,Not Allowed To Collect
 diseaseStatus,Not Applicable
-diseaseStatus,Deceased
 preservation,Cryopreserved
 preservation,Cryopreservation in liquid nitrogen - dead tissue
 preservation,Cryopreservation in dry ice - dead tissue
@@ -381,15 +381,6 @@ tissue,Vascular Endothelium
 tissue,Vein
 tissue,Vertebra
 tissue,Peripheral Blood Mononuclear Cell
-tumorSubtype,TNBC
-tumorSubtype,LumA
-tumorSubtype,LumB
-tumorSubtype,HER2
-tumorSubtype,Not Applicable
-biologicalSex,M
-biologicalSex,F
-biologicalSex,Other
-biologicalSex,Unknown
 consortium_funding_agency,NIH
 dataset_file_format,AVI
 dataset_file_format,BAI
