@@ -2044,9 +2044,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:BiospecimenId"
-                },
-                {
                     "@id": "bts:IndividualID"
                 },
                 {
@@ -2062,7 +2059,7 @@
                     "@id": "bts:Sex"
                 },
                 {
-                    "@id": "bts:AgeatSampleCollection"
+                    "@id": "bts:AgeatDiagnosis"
                 },
                 {
                     "@id": "bts:BiospecimenTumorType"
@@ -2074,13 +2071,10 @@
                     "@id": "bts:TumorGrade"
                 },
                 {
-                    "@id": "bts:BiospecimenComposition"
+                    "@id": "bts:MetastasisatDiagnosis"
                 },
                 {
-                    "@id": "bts:KnownMetastasisSites"
-                },
-                {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 },
                 {
                     "@id": "bts:PreservationMethod"
@@ -2099,25 +2093,6 @@
                 }
             ],
             "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BiospecimenId",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "BiospecimenId",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Biospecimen_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
         },
         {
             "@id": "bts:IndividualID",
@@ -2309,20 +2284,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:M"
-                },
-                {
-                    "@id": "bts:F"
-                },
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "Sex",
             "sms:required": "sms:false",
             "sms:validationRules": [
@@ -2330,10 +2291,10 @@
             ]
         },
         {
-            "@id": "bts:AgeatSampleCollection",
+            "@id": "bts:AgeatDiagnosis",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Age at the time the biospecimen was collected, expressed in number of years since birth.",
-            "rdfs:label": "AgeatSampleCollection",
+            "rdfs:comment": "Age at the time of diagnosis expressed in number of days since birth.",
+            "rdfs:label": "AgeatDiagnosis",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -2342,7 +2303,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Age at Sample Collection",
+            "sms:displayName": "Age at Diagnosis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -2936,23 +2897,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:TNBC"
-                },
-                {
-                    "@id": "bts:LumA"
-                },
-                {
-                    "@id": "bts:LumB"
-                },
-                {
-                    "@id": "bts:HER2"
-                },
-                {
-                    "@id": "bts:NotApplicable"
-                }
-            ],
             "sms:displayName": "Tumor Subtype",
             "sms:required": "sms:false",
             "sms:validationRules": []
@@ -3013,10 +2957,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BiospecimenComposition",
+            "@id": "bts:MetastasisatDiagnosis",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The text term used to describe the type(s) of tissue contained in the biospecimen.",
-            "rdfs:label": "BiospecimenComposition",
+            "rdfs:comment": "The text term used to describe the extent of metastatic disease present at diagnosis.",
+            "rdfs:label": "MetastasisatDiagnosis",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -3027,393 +2971,33 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:PrimaryTumor"
+                    "@id": "bts:DistantMetastasis"
                 },
                 {
-                    "@id": "bts:MetastaticTumor"
+                    "@id": "bts:MetastasisNOS"
                 },
                 {
-                    "@id": "bts:NormalTissue"
+                    "@id": "bts:NoMetastasis"
                 },
                 {
-                    "@id": "bts:Mixed"
+                    "@id": "bts:RegionalMetastasis"
                 },
                 {
-                    "@id": "bts:NotApplicable"
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:NotReported"
                 }
             ],
-            "sms:displayName": "Biospecimen Composition",
+            "sms:displayName": "Metastasis at Diagnosis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:KnownMetastasisSites",
+            "@id": "bts:LastKnownDiseaseStatus",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The text term(s) used to describe the anatomic site(s) of metastasis associated with the patient's malignant disease.",
-            "rdfs:label": "KnownMetastasisSites",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Gonad"
-                },
-                {
-                    "@id": "bts:AbdominalEsophagus"
-                },
-                {
-                    "@id": "bts:AdiposeTissue"
-                },
-                {
-                    "@id": "bts:AdrenalGland"
-                },
-                {
-                    "@id": "bts:Alveolus"
-                },
-                {
-                    "@id": "bts:Aorta"
-                },
-                {
-                    "@id": "bts:Artery"
-                },
-                {
-                    "@id": "bts:AscendingColon"
-                },
-                {
-                    "@id": "bts:BileDuct"
-                },
-                {
-                    "@id": "bts:Bladder"
-                },
-                {
-                    "@id": "bts:Blood"
-                },
-                {
-                    "@id": "bts:BloodVessel"
-                },
-                {
-                    "@id": "bts:Bone"
-                },
-                {
-                    "@id": "bts:BoneMarrow"
-                },
-                {
-                    "@id": "bts:Brain"
-                },
-                {
-                    "@id": "bts:Breast"
-                },
-                {
-                    "@id": "bts:Caecum"
-                },
-                {
-                    "@id": "bts:Cancer-AssociatedFibroblast"
-                },
-                {
-                    "@id": "bts:Cardia"
-                },
-                {
-                    "@id": "bts:Cartilage"
-                },
-                {
-                    "@id": "bts:CervixUteri"
-                },
-                {
-                    "@id": "bts:Choroid"
-                },
-                {
-                    "@id": "bts:Colon"
-                },
-                {
-                    "@id": "bts:ConnectiveandSoftTissue"
-                },
-                {
-                    "@id": "bts:Cornea"
-                },
-                {
-                    "@id": "bts:Duodenum"
-                },
-                {
-                    "@id": "bts:Ear"
-                },
-                {
-                    "@id": "bts:Embryo"
-                },
-                {
-                    "@id": "bts:EmbryonicHeart"
-                },
-                {
-                    "@id": "bts:Endocervix"
-                },
-                {
-                    "@id": "bts:Endometrium"
-                },
-                {
-                    "@id": "bts:Endothelium"
-                },
-                {
-                    "@id": "bts:Epithelium"
-                },
-                {
-                    "@id": "bts:Esophagus"
-                },
-                {
-                    "@id": "bts:Eye"
-                },
-                {
-                    "@id": "bts:FallopianTube"
-                },
-                {
-                    "@id": "bts:Foreskin"
-                },
-                {
-                    "@id": "bts:FrontalLobe"
-                },
-                {
-                    "@id": "bts:GastroesophagealJunction"
-                },
-                {
-                    "@id": "bts:GastrointestinalTract"
-                },
-                {
-                    "@id": "bts:Genitourinary"
-                },
-                {
-                    "@id": "bts:HairFollicle"
-                },
-                {
-                    "@id": "bts:HeadandNeck"
-                },
-                {
-                    "@id": "bts:Heart"
-                },
-                {
-                    "@id": "bts:HeartMuscle"
-                },
-                {
-                    "@id": "bts:HematopoieticSystem"
-                },
-                {
-                    "@id": "bts:Hippocampus"
-                },
-                {
-                    "@id": "bts:Intestine"
-                },
-                {
-                    "@id": "bts:Intra-AbdominalLymphNodes"
-                },
-                {
-                    "@id": "bts:IntrathoracicLymphNodes"
-                },
-                {
-                    "@id": "bts:Joint"
-                },
-                {
-                    "@id": "bts:Kidney"
-                },
-                {
-                    "@id": "bts:Larynx"
-                },
-                {
-                    "@id": "bts:Ligament"
-                },
-                {
-                    "@id": "bts:Liver"
-                },
-                {
-                    "@id": "bts:Lung"
-                },
-                {
-                    "@id": "bts:Lymph"
-                },
-                {
-                    "@id": "bts:LymphNode"
-                },
-                {
-                    "@id": "bts:LymphNodesofAxillaorArm"
-                },
-                {
-                    "@id": "bts:LymphNodesofInguinalRegionorLeg"
-                },
-                {
-                    "@id": "bts:LymphaticSystem"
-                },
-                {
-                    "@id": "bts:LymphoidTissue"
-                },
-                {
-                    "@id": "bts:MainBronchus"
-                },
-                {
-                    "@id": "bts:MammaryGland"
-                },
-                {
-                    "@id": "bts:Meninges"
-                },
-                {
-                    "@id": "bts:Mesenchyme"
-                },
-                {
-                    "@id": "bts:Mucosa"
-                },
-                {
-                    "@id": "bts:Muscle"
-                },
-                {
-                    "@id": "bts:NasalCavity"
-                },
-                {
-                    "@id": "bts:NervousSystem"
-                },
-                {
-                    "@id": "bts:NotApplicable"
-                },
-                {
-                    "@id": "bts:OlfactoryMucosa"
-                },
-                {
-                    "@id": "bts:Omentum"
-                },
-                {
-                    "@id": "bts:OralCavity"
-                },
-                {
-                    "@id": "bts:OralMucosa"
-                },
-                {
-                    "@id": "bts:Ovary"
-                },
-                {
-                    "@id": "bts:Pancreas"
-                },
-                {
-                    "@id": "bts:PelvicLymphNodes"
-                },
-                {
-                    "@id": "bts:PendingAnnotation"
-                },
-                {
-                    "@id": "bts:PeriodontalLigament"
-                },
-                {
-                    "@id": "bts:PeripheralNerves"
-                },
-                {
-                    "@id": "bts:Peritoneum"
-                },
-                {
-                    "@id": "bts:Pharynx"
-                },
-                {
-                    "@id": "bts:PituitaryGland"
-                },
-                {
-                    "@id": "bts:Placenta"
-                },
-                {
-                    "@id": "bts:Pleura"
-                },
-                {
-                    "@id": "bts:ProstateGland"
-                },
-                {
-                    "@id": "bts:Rectum"
-                },
-                {
-                    "@id": "bts:ReproductiveSystem"
-                },
-                {
-                    "@id": "bts:RespiratorySystem"
-                },
-                {
-                    "@id": "bts:SalivaryGland"
-                },
-                {
-                    "@id": "bts:Sclera"
-                },
-                {
-                    "@id": "bts:SinonasalTract"
-                },
-                {
-                    "@id": "bts:Skin"
-                },
-                {
-                    "@id": "bts:SmallIntestine"
-                },
-                {
-                    "@id": "bts:SpinalCord"
-                },
-                {
-                    "@id": "bts:Spleen"
-                },
-                {
-                    "@id": "bts:Stomach"
-                },
-                {
-                    "@id": "bts:SynovialMembrane"
-                },
-                {
-                    "@id": "bts:Tendon"
-                },
-                {
-                    "@id": "bts:Testis"
-                },
-                {
-                    "@id": "bts:Thymus"
-                },
-                {
-                    "@id": "bts:ThyroidGland"
-                },
-                {
-                    "@id": "bts:Tongue"
-                },
-                {
-                    "@id": "bts:Tonsil"
-                },
-                {
-                    "@id": "bts:Trachea"
-                },
-                {
-                    "@id": "bts:UmbilicalCord"
-                },
-                {
-                    "@id": "bts:Unspecified"
-                },
-                {
-                    "@id": "bts:Uterus"
-                },
-                {
-                    "@id": "bts:Vagina"
-                },
-                {
-                    "@id": "bts:VascularEndothelium"
-                },
-                {
-                    "@id": "bts:Vein"
-                },
-                {
-                    "@id": "bts:Vertebra"
-                },
-                {
-                    "@id": "bts:PeripheralBloodMononuclearCell"
-                }
-            ],
-            "sms:displayName": "Known Metastasis Sites",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
-            "@id": "bts:SurvivalOutcome",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Text term that describes the last known status of an individual.",
-            "rdfs:label": "SurvivalOutcome",
+            "rdfs:comment": "Text term that describes the last known state or condition of an individual's neoplasm.",
+            "rdfs:label": "LastKnownDiseaseStatus",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -3449,12 +3033,9 @@
                 },
                 {
                     "@id": "bts:NotApplicable"
-                },
-                {
-                    "@id": "bts:Deceased"
                 }
             ],
-            "sms:displayName": "Survival Outcome",
+            "sms:displayName": "Last Known Disease Status",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -4296,6 +3877,367 @@
             "sms:validationRules": [
                 "str"
             ]
+        },
+        {
+            "@id": "bts:TissueorOrganofOrigin",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TissueorOrganofOrigin",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Gonad"
+                },
+                {
+                    "@id": "bts:AbdominalEsophagus"
+                },
+                {
+                    "@id": "bts:AdiposeTissue"
+                },
+                {
+                    "@id": "bts:AdrenalGland"
+                },
+                {
+                    "@id": "bts:Alveolus"
+                },
+                {
+                    "@id": "bts:Aorta"
+                },
+                {
+                    "@id": "bts:Artery"
+                },
+                {
+                    "@id": "bts:AscendingColon"
+                },
+                {
+                    "@id": "bts:BileDuct"
+                },
+                {
+                    "@id": "bts:Bladder"
+                },
+                {
+                    "@id": "bts:Blood"
+                },
+                {
+                    "@id": "bts:BloodVessel"
+                },
+                {
+                    "@id": "bts:Bone"
+                },
+                {
+                    "@id": "bts:BoneMarrow"
+                },
+                {
+                    "@id": "bts:Brain"
+                },
+                {
+                    "@id": "bts:Breast"
+                },
+                {
+                    "@id": "bts:Caecum"
+                },
+                {
+                    "@id": "bts:Cancer-AssociatedFibroblast"
+                },
+                {
+                    "@id": "bts:Cardia"
+                },
+                {
+                    "@id": "bts:Cartilage"
+                },
+                {
+                    "@id": "bts:CervixUteri"
+                },
+                {
+                    "@id": "bts:Choroid"
+                },
+                {
+                    "@id": "bts:Colon"
+                },
+                {
+                    "@id": "bts:ConnectiveandSoftTissue"
+                },
+                {
+                    "@id": "bts:Cornea"
+                },
+                {
+                    "@id": "bts:Duodenum"
+                },
+                {
+                    "@id": "bts:Ear"
+                },
+                {
+                    "@id": "bts:Embryo"
+                },
+                {
+                    "@id": "bts:EmbryonicHeart"
+                },
+                {
+                    "@id": "bts:Endocervix"
+                },
+                {
+                    "@id": "bts:Endometrium"
+                },
+                {
+                    "@id": "bts:Endothelium"
+                },
+                {
+                    "@id": "bts:Epithelium"
+                },
+                {
+                    "@id": "bts:Esophagus"
+                },
+                {
+                    "@id": "bts:Eye"
+                },
+                {
+                    "@id": "bts:FallopianTube"
+                },
+                {
+                    "@id": "bts:Foreskin"
+                },
+                {
+                    "@id": "bts:FrontalLobe"
+                },
+                {
+                    "@id": "bts:GastroesophagealJunction"
+                },
+                {
+                    "@id": "bts:GastrointestinalTract"
+                },
+                {
+                    "@id": "bts:Genitourinary"
+                },
+                {
+                    "@id": "bts:HairFollicle"
+                },
+                {
+                    "@id": "bts:HeadandNeck"
+                },
+                {
+                    "@id": "bts:Heart"
+                },
+                {
+                    "@id": "bts:HeartMuscle"
+                },
+                {
+                    "@id": "bts:HematopoieticSystem"
+                },
+                {
+                    "@id": "bts:Hippocampus"
+                },
+                {
+                    "@id": "bts:Intestine"
+                },
+                {
+                    "@id": "bts:Intra-AbdominalLymphNodes"
+                },
+                {
+                    "@id": "bts:IntrathoracicLymphNodes"
+                },
+                {
+                    "@id": "bts:Joint"
+                },
+                {
+                    "@id": "bts:Kidney"
+                },
+                {
+                    "@id": "bts:Larynx"
+                },
+                {
+                    "@id": "bts:Ligament"
+                },
+                {
+                    "@id": "bts:Liver"
+                },
+                {
+                    "@id": "bts:Lung"
+                },
+                {
+                    "@id": "bts:Lymph"
+                },
+                {
+                    "@id": "bts:LymphNode"
+                },
+                {
+                    "@id": "bts:LymphNodesofAxillaorArm"
+                },
+                {
+                    "@id": "bts:LymphNodesofInguinalRegionorLeg"
+                },
+                {
+                    "@id": "bts:LymphaticSystem"
+                },
+                {
+                    "@id": "bts:LymphoidTissue"
+                },
+                {
+                    "@id": "bts:MainBronchus"
+                },
+                {
+                    "@id": "bts:MammaryGland"
+                },
+                {
+                    "@id": "bts:Meninges"
+                },
+                {
+                    "@id": "bts:Mesenchyme"
+                },
+                {
+                    "@id": "bts:Mucosa"
+                },
+                {
+                    "@id": "bts:Muscle"
+                },
+                {
+                    "@id": "bts:NasalCavity"
+                },
+                {
+                    "@id": "bts:NervousSystem"
+                },
+                {
+                    "@id": "bts:NotApplicable"
+                },
+                {
+                    "@id": "bts:OlfactoryMucosa"
+                },
+                {
+                    "@id": "bts:Omentum"
+                },
+                {
+                    "@id": "bts:OralCavity"
+                },
+                {
+                    "@id": "bts:OralMucosa"
+                },
+                {
+                    "@id": "bts:Ovary"
+                },
+                {
+                    "@id": "bts:Pancreas"
+                },
+                {
+                    "@id": "bts:PelvicLymphNodes"
+                },
+                {
+                    "@id": "bts:PendingAnnotation"
+                },
+                {
+                    "@id": "bts:PeriodontalLigament"
+                },
+                {
+                    "@id": "bts:PeripheralNerves"
+                },
+                {
+                    "@id": "bts:Peritoneum"
+                },
+                {
+                    "@id": "bts:Pharynx"
+                },
+                {
+                    "@id": "bts:PituitaryGland"
+                },
+                {
+                    "@id": "bts:Placenta"
+                },
+                {
+                    "@id": "bts:Pleura"
+                },
+                {
+                    "@id": "bts:ProstateGland"
+                },
+                {
+                    "@id": "bts:Rectum"
+                },
+                {
+                    "@id": "bts:ReproductiveSystem"
+                },
+                {
+                    "@id": "bts:RespiratorySystem"
+                },
+                {
+                    "@id": "bts:SalivaryGland"
+                },
+                {
+                    "@id": "bts:Sclera"
+                },
+                {
+                    "@id": "bts:SinonasalTract"
+                },
+                {
+                    "@id": "bts:Skin"
+                },
+                {
+                    "@id": "bts:SmallIntestine"
+                },
+                {
+                    "@id": "bts:SpinalCord"
+                },
+                {
+                    "@id": "bts:Spleen"
+                },
+                {
+                    "@id": "bts:Stomach"
+                },
+                {
+                    "@id": "bts:SynovialMembrane"
+                },
+                {
+                    "@id": "bts:Tendon"
+                },
+                {
+                    "@id": "bts:Testis"
+                },
+                {
+                    "@id": "bts:Thymus"
+                },
+                {
+                    "@id": "bts:ThyroidGland"
+                },
+                {
+                    "@id": "bts:Tongue"
+                },
+                {
+                    "@id": "bts:Tonsil"
+                },
+                {
+                    "@id": "bts:Trachea"
+                },
+                {
+                    "@id": "bts:UmbilicalCord"
+                },
+                {
+                    "@id": "bts:Unspecified"
+                },
+                {
+                    "@id": "bts:Uterus"
+                },
+                {
+                    "@id": "bts:Vagina"
+                },
+                {
+                    "@id": "bts:VascularEndothelium"
+                },
+                {
+                    "@id": "bts:Vein"
+                },
+                {
+                    "@id": "bts:Vertebra"
+                },
+                {
+                    "@id": "bts:PeripheralBloodMononuclearCell"
+                }
+            ],
+            "sms:displayName": "Tissue or Organ of Origin",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Consortium",
@@ -7564,45 +7506,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Dataset Grant Number",
@@ -9225,45 +9128,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Resource Grant Number",
@@ -10532,9 +10396,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:NanoStringGeoMxDSPLevel1Id"
-                },
-                {
                     "@id": "bts:Filename"
                 },
                 {
@@ -10595,25 +10456,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NanoStringGeoMxDSPLevel1Id",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "NanoStringGeoMxDSPLevel1Id",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoStringGeoMxDSPLevel1_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
             "@id": "bts:Filename",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of a file",
@@ -10628,9 +10470,7 @@
             },
             "sms:displayName": "Filename",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:FileFormat",
@@ -11012,9 +10852,7 @@
             ],
             "sms:displayName": "File Format",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ParentBiospecimenID",
@@ -11031,9 +10869,7 @@
             },
             "sms:displayName": "Parent Biospecimen ID",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "list like"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SynapseIDofDataFile",
@@ -11376,9 +11212,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:NanoStringGeoMxDSPLevel2Id"
-                },
-                {
                     "@id": "bts:Filename"
                 },
                 {
@@ -11433,25 +11266,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NanoStringGeoMxDSPLevel2Id",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "NanoStringGeoMxDSPLevel2Id",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoStringGeoMxDSPLevel2_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
             "@id": "bts:SynapseIDofParentFASTQFile",
             "@type": "rdfs:Class",
             "rdfs:comment": "Synapse ID(s) indicating the FASTQ(s) associated with the file; multiple parent files should be comma-separated",
@@ -11491,9 +11305,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:NanoStringGeoMxDSPImagingLevel2Id"
-                },
-                {
                     "@id": "bts:Filename"
                 },
                 {
@@ -11522,25 +11333,6 @@
                 }
             ],
             "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NanoStringGeoMxDSPImagingLevel2Id",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "NanoStringGeoMxDSPImagingLevel2Id",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoStringGeoMxDSPImagingLevel2_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
         },
         {
             "@id": "bts:SynapseIDofParentDataFile",
@@ -11601,9 +11393,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:NanoStringGeoMxDSPLevel3Id"
-                },
-                {
                     "@id": "bts:Filename"
                 },
                 {
@@ -11644,25 +11433,6 @@
                 }
             ],
             "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NanoStringGeoMxDSPLevel3Id",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "NanoStringGeoMxDSPLevel3Id",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoStringGeoMxDSPLevel3_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
         },
         {
             "@id": "bts:GeoMxDSPUniqueProbeCount",
@@ -11753,9 +11523,6 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:NanoStringGeoMXROISegmentAnnotationId"
-                },
-                {
                     "@id": "bts:ParentBiospecimenID"
                 },
                 {
@@ -11843,25 +11610,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NanoStringGeoMXROISegmentAnnotationId",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "NanoStringGeoMXROISegmentAnnotationId",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoStringGeoMXROISegmentAnnotation_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
             "@id": "bts:Scanname",
             "@type": "rdfs:Class",
             "rdfs:comment": "GeoMx Scan name (as appears in Segment Summary)",
@@ -11876,9 +11624,7 @@
             },
             "sms:displayName": "Scan name",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Tags",
@@ -11895,9 +11641,7 @@
             },
             "sms:displayName": "Tags",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ROIXCoordinate",
@@ -11914,9 +11658,7 @@
             },
             "sms:displayName": "ROI X Coordinate",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ROIYCoordinate",
@@ -11933,9 +11675,7 @@
             },
             "sms:displayName": "ROI Y Coordinate",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:AOIXCoordinate",
@@ -11952,9 +11692,7 @@
             },
             "sms:displayName": "AOI X Coordinate",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:AOIYCoordinate",
@@ -11971,9 +11709,7 @@
             },
             "sms:displayName": "AOI Y Coordinate",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:QCstatus",
@@ -11990,9 +11726,7 @@
             },
             "sms:displayName": "QC status",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ScanHeight",
@@ -12009,9 +11743,7 @@
             },
             "sms:displayName": "Scan Height",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ScanWidth",
@@ -12028,9 +11760,7 @@
             },
             "sms:displayName": "Scan Width",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ScanOffsetX",
@@ -12047,9 +11777,7 @@
             },
             "sms:displayName": "Scan Offset X",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ScanOffsetY",
@@ -12066,9 +11794,7 @@
             },
             "sms:displayName": "Scan Offset Y",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:BindingDensity",
@@ -12085,9 +11811,7 @@
             },
             "sms:displayName": "Binding Density",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Positivenormfactor",
@@ -12104,9 +11828,7 @@
             },
             "sms:displayName": "Positive norm factor",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Surfacearea",
@@ -12123,9 +11845,7 @@
             },
             "sms:displayName": "Surface area",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Nucleicount",
@@ -12142,9 +11862,7 @@
             },
             "sms:displayName": "Nuclei count",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TissueStain",
@@ -12161,9 +11879,7 @@
             },
             "sms:displayName": "Tissue Stain",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Slidename",
@@ -12180,9 +11896,7 @@
             },
             "sms:displayName": "Slide name",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "str"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Rawreads",
@@ -12199,9 +11913,7 @@
             },
             "sms:displayName": "Raw reads",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Stitchedreads",
@@ -12218,9 +11930,7 @@
             },
             "sms:displayName": "Stitched reads",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Alignedreads",
@@ -12237,9 +11947,7 @@
             },
             "sms:displayName": "Aligned reads",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Deduplicatedreads",
@@ -12256,9 +11964,7 @@
             },
             "sms:displayName": "Deduplicated reads",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:InSituNegativemedian",
@@ -12275,9 +11981,7 @@
             },
             "sms:displayName": "In Situ Negative median",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Biologicalprobemedian",
@@ -12294,9 +11998,7 @@
             },
             "sms:displayName": "Biological probe median",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SequencingSaturation",
@@ -12313,9 +12015,7 @@
             },
             "sms:displayName": "Sequencing Saturation",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:MapQ30",
@@ -12332,9 +12032,7 @@
             },
             "sms:displayName": "MapQ30",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "num"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Grant",
@@ -12522,6 +12220,18 @@
                 },
                 {
                     "@id": "bts:GrantConsortiumName"
+                },
+                {
+                    "@id": "bts:GrantStartDate"
+                },
+                {
+                    "@id": "bts:NIHRePORTERLink"
+                },
+                {
+                    "@id": "bts:DurationofFunding"
+                },
+                {
+                    "@id": "bts:EmbargoEndDate"
                 }
             ],
             "sms:validationRules": []
@@ -12805,9 +12515,6 @@
                     "@id": "bts:UniversityofMichigan"
                 },
                 {
-                    "@id": "bts:UniversityofNevadaReno"
-                },
-                {
                     "@id": "bts:UniversityofMinnesota"
                 },
                 {
@@ -12848,9 +12555,6 @@
                 },
                 {
                     "@id": "bts:VanderbiltUniversity"
-                },
-                {
-                    "@id": "bts:WashingtonUniversityinSt.Louis"
                 },
                 {
                     "@id": "bts:WakeForest"
@@ -13078,9 +12782,6 @@
                     "@id": "bts:UNC"
                 },
                 {
-                    "@id": "bts:UNR"
-                },
-                {
                     "@id": "bts:UNSW"
                 },
                 {
@@ -13118,9 +12819,6 @@
                 },
                 {
                     "@id": "bts:Vanderbilt"
-                },
-                {
-                    "@id": "bts:WUSTL"
                 },
                 {
                     "@id": "bts:WCM"
@@ -13289,10 +12987,10 @@
             ]
         },
         {
-            "@id": "bts:DurationofDataEmbargo",
+            "@id": "bts:EmbargoEndDate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Duration that the data are embargoed, in months",
-            "rdfs:label": "DurationofDataEmbargo",
+            "rdfs:comment": "Date at which an embargo on related resources had lifted",
+            "rdfs:label": "EmbargoEndDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13301,10 +12999,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Duration of Data Embargo",
+            "sms:displayName": "Embargo End Date",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "int"
+                "date"
             ]
         },
         {
@@ -16202,45 +15900,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Person Grant Number",
@@ -16969,45 +16628,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Project Grant Number",
@@ -19926,45 +19546,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Publication Grant Number",
@@ -25151,45 +24732,6 @@
                 },
                 {
                     "@id": "bts:CA275808"
-                },
-                {
-                    "@id": "bts:CA279408"
-                },
-                {
-                    "@id": "bts:CA279560"
-                },
-                {
-                    "@id": "bts:CA280984"
-                },
-                {
-                    "@id": "bts:CA280849"
-                },
-                {
-                    "@id": "bts:CA280829"
-                },
-                {
-                    "@id": "bts:CA284090"
-                },
-                {
-                    "@id": "bts:CA284086"
-                },
-                {
-                    "@id": "bts:CA274504"
-                },
-                {
-                    "@id": "bts:CA283114"
-                },
-                {
-                    "@id": "bts:CA274507"
-                },
-                {
-                    "@id": "bts:CA274506"
-                },
-                {
-                    "@id": "bts:CA274511"
-                },
-                {
-                    "@id": "bts:CA282451"
                 }
             ],
             "sms:displayName": "Tool Grant Number",
@@ -25828,57 +25370,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Fruit Fly",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:M",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "M",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "M",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:F",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "F",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "F",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Other",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Other",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Other",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -29045,74 +28536,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:TNBC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "TNBC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:TumorSubtype"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "TNBC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LumA",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LumA",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:TumorSubtype"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "LumA",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LumB",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LumB",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:TumorSubtype"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "LumB",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HER2",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HER2",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:TumorSubtype"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HER2",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:G1",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -29283,1923 +28706,70 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:PrimaryTumor",
+            "@id": "bts:DistantMetastasis",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "PrimaryTumor",
+            "rdfs:label": "DistantMetastasis",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:BiospecimenComposition"
+                    "@id": "bts:MetastasisatDiagnosis"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Primary Tumor",
+            "sms:displayName": "Distant Metastasis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:MetastaticTumor",
+            "@id": "bts:MetastasisNOS",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "MetastaticTumor",
+            "rdfs:label": "MetastasisNOS",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:BiospecimenComposition"
+                    "@id": "bts:MetastasisatDiagnosis"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Metastatic Tumor",
+            "sms:displayName": "Metastasis NOS",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NormalTissue",
+            "@id": "bts:NoMetastasis",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "NormalTissue",
+            "rdfs:label": "NoMetastasis",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:BiospecimenComposition"
+                    "@id": "bts:MetastasisatDiagnosis"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Normal Tissue",
+            "sms:displayName": "No Metastasis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Mixed",
+            "@id": "bts:RegionalMetastasis",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Mixed",
+            "rdfs:label": "RegionalMetastasis",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:BiospecimenComposition"
+                    "@id": "bts:MetastasisatDiagnosis"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Mixed",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Gonad",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Gonad",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Gonad",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:AbdominalEsophagus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "AbdominalEsophagus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Abdominal Esophagus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:AdiposeTissue",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "AdiposeTissue",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Adipose Tissue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:AdrenalGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "AdrenalGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Adrenal Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Alveolus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Alveolus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Alveolus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Aorta",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Aorta",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Aorta",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Artery",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Artery",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Artery",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:AscendingColon",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "AscendingColon",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Ascending Colon",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BileDuct",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "BileDuct",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Bile Duct",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Bladder",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Bladder",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Bladder",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BloodVessel",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "BloodVessel",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Blood Vessel",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Bone",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Bone",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Bone",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Brain",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Brain",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Brain",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Breast",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Breast",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Breast",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Caecum",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Caecum",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Caecum",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Cancer-AssociatedFibroblast",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Cancer-AssociatedFibroblast",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Cancer-Associated Fibroblast",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Cardia",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Cardia",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Cardia",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Cartilage",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Cartilage",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Cartilage",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CervixUteri",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CervixUteri",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Cervix Uteri",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Choroid",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Choroid",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Choroid",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Colon",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Colon",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Colon",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ConnectiveandSoftTissue",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ConnectiveandSoftTissue",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Connective and Soft Tissue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Cornea",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Cornea",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Cornea",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Duodenum",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Duodenum",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Duodenum",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Ear",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Ear",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Ear",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Embryo",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Embryo",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Embryo",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:EmbryonicHeart",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "EmbryonicHeart",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Embryonic Heart",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Endocervix",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Endocervix",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Endocervix",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Endometrium",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Endometrium",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Endometrium",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Endothelium",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Endothelium",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Endothelium",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Epithelium",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Epithelium",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Epithelium",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Esophagus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Esophagus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Esophagus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Eye",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Eye",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Eye",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:FallopianTube",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "FallopianTube",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Fallopian Tube",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Foreskin",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Foreskin",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Foreskin",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:FrontalLobe",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "FrontalLobe",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Frontal Lobe",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GastroesophagealJunction",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GastroesophagealJunction",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Gastroesophageal Junction",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GastrointestinalTract",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GastrointestinalTract",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Gastrointestinal Tract",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Genitourinary",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Genitourinary",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Genitourinary",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HairFollicle",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HairFollicle",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Hair Follicle",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HeadandNeck",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HeadandNeck",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Head and Neck",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Heart",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Heart",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Heart",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HeartMuscle",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HeartMuscle",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Heart Muscle",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HematopoieticSystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HematopoieticSystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Hematopoietic System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Hippocampus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Hippocampus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Hippocampus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Intestine",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Intestine",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Intestine",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Intra-AbdominalLymphNodes",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Intra-AbdominalLymphNodes",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Intra-Abdominal Lymph Nodes",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:IntrathoracicLymphNodes",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "IntrathoracicLymphNodes",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Intrathoracic Lymph Nodes",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Joint",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Joint",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Joint",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Kidney",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Kidney",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Kidney",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Larynx",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Larynx",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Larynx",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Ligament",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Ligament",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Ligament",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Liver",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Liver",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Liver",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Lung",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Lung",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lung",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Lymph",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Lymph",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymph",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LymphNode",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LymphNode",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymph Node",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LymphNodesofAxillaorArm",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LymphNodesofAxillaorArm",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymph Nodes of Axilla or Arm",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LymphNodesofInguinalRegionorLeg",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LymphNodesofInguinalRegionorLeg",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymph Nodes of Inguinal Region or Leg",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LymphaticSystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LymphaticSystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymphatic System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LymphoidTissue",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LymphoidTissue",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Lymphoid Tissue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MainBronchus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MainBronchus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Main Bronchus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MammaryGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MammaryGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Mammary Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Meninges",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Meninges",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Meninges",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Mesenchyme",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Mesenchyme",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Mesenchyme",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Mucosa",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Mucosa",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Mucosa",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Muscle",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Muscle",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Muscle",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NasalCavity",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NasalCavity",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Nasal Cavity",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NervousSystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NervousSystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Nervous System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OlfactoryMucosa",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "OlfactoryMucosa",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Olfactory Mucosa",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Omentum",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Omentum",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Omentum",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OralCavity",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "OralCavity",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Oral Cavity",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OralMucosa",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "OralMucosa",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Oral Mucosa",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Ovary",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Ovary",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Ovary",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Pancreas",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Pancreas",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pancreas",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PelvicLymphNodes",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PelvicLymphNodes",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pelvic Lymph Nodes",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PeriodontalLigament",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PeriodontalLigament",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Periodontal Ligament",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PeripheralNerves",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PeripheralNerves",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Peripheral Nerves",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Peritoneum",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Peritoneum",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Peritoneum",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Pharynx",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Pharynx",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pharynx",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PituitaryGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PituitaryGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pituitary Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Placenta",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Placenta",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Placenta",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Pleura",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Pleura",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pleura",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ProstateGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ProstateGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Prostate Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Rectum",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Rectum",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Rectum",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ReproductiveSystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ReproductiveSystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Reproductive System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:RespiratorySystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "RespiratorySystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Respiratory System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SalivaryGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SalivaryGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Salivary Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Sclera",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Sclera",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Sclera",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SinonasalTract",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SinonasalTract",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Sinonasal Tract",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Skin",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Skin",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Skin",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SmallIntestine",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SmallIntestine",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Small Intestine",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SpinalCord",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SpinalCord",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Spinal Cord",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Spleen",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Spleen",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Spleen",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Stomach",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Stomach",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Stomach",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SynovialMembrane",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SynovialMembrane",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Synovial Membrane",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Tendon",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Tendon",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tendon",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Testis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Testis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Testis",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Thymus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Thymus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Thymus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ThyroidGland",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ThyroidGland",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Thyroid Gland",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Tongue",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Tongue",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tongue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Tonsil",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Tonsil",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tonsil",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Trachea",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Trachea",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Trachea",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UmbilicalCord",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UmbilicalCord",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Umbilical Cord",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Uterus",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Uterus",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Uterus",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Vagina",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Vagina",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Vagina",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:VascularEndothelium",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "VascularEndothelium",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Vascular Endothelium",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Vein",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Vein",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Vein",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Vertebra",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Vertebra",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Vertebra",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PeripheralBloodMononuclearCell",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PeripheralBloodMononuclearCell",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Peripheral Blood Mononuclear Cell",
+            "sms:displayName": "Regional Metastasis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -31210,7 +28780,7 @@
             "rdfs:label": "Distantmetrecurrence/progression",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31227,7 +28797,7 @@
             "rdfs:label": "Loco-regionalrecurrence/progression",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31244,7 +28814,7 @@
             "rdfs:label": "Biochemicalevidenceofdiseasewithoutstructuralcorrelate",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31261,7 +28831,7 @@
             "rdfs:label": "Tumorfree",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31278,7 +28848,7 @@
             "rdfs:label": "Unknowntumorstatus",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31295,7 +28865,7 @@
             "rdfs:label": "Withtumor",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
@@ -31312,30 +28882,13 @@
             "rdfs:label": "NotAllowedToCollect",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:SurvivalOutcome"
+                    "@id": "bts:LastKnownDiseaseStatus"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Not Allowed To Collect",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Deceased",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Deceased",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:SurvivalOutcome"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Deceased",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -31642,6 +29195,1859 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Methacarn fixed paraffin embedded - MFPE",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Gonad",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Gonad",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gonad",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AbdominalEsophagus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AbdominalEsophagus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Abdominal Esophagus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AdiposeTissue",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AdiposeTissue",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Adipose Tissue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AdrenalGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AdrenalGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Adrenal Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Alveolus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Alveolus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Alveolus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Aorta",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Aorta",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Aorta",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Artery",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Artery",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Artery",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AscendingColon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AscendingColon",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ascending Colon",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BileDuct",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "BileDuct",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bile Duct",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bladder",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bladder",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bladder",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BloodVessel",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "BloodVessel",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Blood Vessel",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bone",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bone",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bone",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Brain",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Brain",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Brain",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Breast",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Breast",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Breast",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Caecum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Caecum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Caecum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cancer-AssociatedFibroblast",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cancer-AssociatedFibroblast",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cancer-Associated Fibroblast",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cardia",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cardia",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cardia",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cartilage",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cartilage",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cartilage",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CervixUteri",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CervixUteri",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cervix Uteri",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Choroid",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Choroid",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Choroid",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Colon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Colon",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Colon",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ConnectiveandSoftTissue",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ConnectiveandSoftTissue",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Connective and Soft Tissue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cornea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cornea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cornea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Duodenum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Duodenum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Duodenum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ear",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ear",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ear",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Embryo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Embryo",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Embryo",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:EmbryonicHeart",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "EmbryonicHeart",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Embryonic Heart",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Endocervix",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Endocervix",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Endocervix",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Endometrium",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Endometrium",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Endometrium",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Endothelium",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Endothelium",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Endothelium",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Epithelium",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Epithelium",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Epithelium",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Esophagus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Esophagus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Esophagus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Eye",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Eye",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Eye",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FallopianTube",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FallopianTube",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Fallopian Tube",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Foreskin",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Foreskin",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Foreskin",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FrontalLobe",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FrontalLobe",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Frontal Lobe",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GastroesophagealJunction",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GastroesophagealJunction",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gastroesophageal Junction",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GastrointestinalTract",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GastrointestinalTract",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Gastrointestinal Tract",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Genitourinary",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Genitourinary",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Genitourinary",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HairFollicle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HairFollicle",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hair Follicle",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HeadandNeck",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HeadandNeck",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Head and Neck",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Heart",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Heart",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Heart",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HeartMuscle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HeartMuscle",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Heart Muscle",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HematopoieticSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HematopoieticSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hematopoietic System",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Hippocampus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Hippocampus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hippocampus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Intestine",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Intestine",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Intestine",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Intra-AbdominalLymphNodes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Intra-AbdominalLymphNodes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Intra-Abdominal Lymph Nodes",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:IntrathoracicLymphNodes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "IntrathoracicLymphNodes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Intrathoracic Lymph Nodes",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Joint",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Joint",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Joint",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Kidney",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Kidney",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Kidney",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Larynx",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Larynx",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Larynx",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ligament",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ligament",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ligament",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Liver",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Liver",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Liver",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Lung",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Lung",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lung",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Lymph",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Lymph",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymph",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LymphNode",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LymphNode",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymph Node",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LymphNodesofAxillaorArm",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LymphNodesofAxillaorArm",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymph Nodes of Axilla or Arm",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LymphNodesofInguinalRegionorLeg",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LymphNodesofInguinalRegionorLeg",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymph Nodes of Inguinal Region or Leg",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LymphaticSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LymphaticSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymphatic System",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LymphoidTissue",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LymphoidTissue",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Lymphoid Tissue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MainBronchus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MainBronchus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Main Bronchus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MammaryGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MammaryGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mammary Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Meninges",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Meninges",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Meninges",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mesenchyme",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mesenchyme",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mesenchyme",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mucosa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mucosa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mucosa",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Muscle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Muscle",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Muscle",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NasalCavity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NasalCavity",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Nasal Cavity",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NervousSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NervousSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Nervous System",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:OlfactoryMucosa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "OlfactoryMucosa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Olfactory Mucosa",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Omentum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Omentum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Omentum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:OralCavity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "OralCavity",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Oral Cavity",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:OralMucosa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "OralMucosa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Oral Mucosa",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ovary",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ovary",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ovary",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pancreas",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pancreas",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pancreas",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PelvicLymphNodes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PelvicLymphNodes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pelvic Lymph Nodes",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PeriodontalLigament",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PeriodontalLigament",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Periodontal Ligament",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PeripheralNerves",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PeripheralNerves",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peripheral Nerves",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Peritoneum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Peritoneum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peritoneum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pharynx",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pharynx",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pharynx",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PituitaryGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PituitaryGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pituitary Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Placenta",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Placenta",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Placenta",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pleura",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pleura",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pleura",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProstateGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ProstateGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Prostate Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Rectum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Rectum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Rectum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReproductiveSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ReproductiveSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Reproductive System",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RespiratorySystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "RespiratorySystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Respiratory System",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SalivaryGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SalivaryGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Salivary Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sclera",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sclera",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sclera",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SinonasalTract",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SinonasalTract",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sinonasal Tract",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Skin",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Skin",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Skin",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SmallIntestine",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SmallIntestine",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Small Intestine",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SpinalCord",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SpinalCord",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spinal Cord",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spleen",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spleen",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spleen",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Stomach",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Stomach",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Stomach",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SynovialMembrane",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SynovialMembrane",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synovial Membrane",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tendon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tendon",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tendon",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Testis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Testis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Testis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Thymus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Thymus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Thymus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ThyroidGland",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ThyroidGland",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Thyroid Gland",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tongue",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tongue",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tongue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tonsil",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tonsil",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tonsil",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Trachea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Trachea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Trachea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:UmbilicalCord",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "UmbilicalCord",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Umbilical Cord",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Uterus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Uterus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Uterus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vagina",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vagina",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vagina",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:VascularEndothelium",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "VascularEndothelium",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vascular Endothelium",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vein",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vein",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vein",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vertebra",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vertebra",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vertebra",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PeripheralBloodMononuclearCell",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PeripheralBloodMononuclearCell",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peripheral Blood Mononuclear Cell",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -41472,227 +40878,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CA279408",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA279408",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA279408",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA279560",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA279560",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA279560",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA280984",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA280984",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA280984",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA280849",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA280849",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA280849",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA280829",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA280829",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA280829",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA284090",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA284090",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA284090",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA284086",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA284086",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA284086",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA274504",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA274504",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA274504",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA283114",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA283114",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA283114",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA274507",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA274507",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA274507",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA274506",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA274506",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA274506",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA274511",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA274511",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA274511",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CA282451",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CA282451",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DatasetGrantNumber"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CA282451",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:ComputationalModelDevelopment",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -41944,6 +41129,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Oncogenic Stress",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Other",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Other",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ResourceTopic"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Other",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -55004,23 +54206,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UniversityofNevadaReno",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UniversityofNevadaReno",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:GrantInstitutionName"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "University of Nevada Reno",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:UniversityofMinnesota",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -55255,23 +54440,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Vanderbilt University",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:WashingtonUniversityinSt.Louis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "WashingtonUniversityinSt.Louis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:GrantInstitutionName"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Washington University in St. Louis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -56330,23 +55498,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UNR",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UNR",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:GrantInstitutionAlias"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UNR",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:UNSW",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -56530,23 +55681,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Vanderbilt",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:WUSTL",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "WUSTL",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:GrantInstitutionAlias"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "WUSTL",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -57176,6 +56310,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "O",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:F",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "F",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetalIsotopeElement"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "F",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
