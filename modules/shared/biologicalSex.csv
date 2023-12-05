@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+M,,,,FALSE,,Biological Sex,,,,,,,,
+F,,,,FALSE,,Biological Sex,,,,,,,,
+Other,,,,FALSE,,Biological Sex,,,,,,,,
+Unknown,,,,FALSE,,Biological Sex,,,,,,,,
