@@ -12522,6 +12522,18 @@
                 },
                 {
                     "@id": "bts:GrantConsortiumName"
+                },
+                {
+                    "@id": "bts:GrantStartDate"
+                },
+                {
+                    "@id": "bts:NIHRePORTERLink"
+                },
+                {
+                    "@id": "bts:DurationofFunding"
+                },
+                {
+                    "@id": "bts:EmbargoEndDate"
                 }
             ],
             "sms:validationRules": []
@@ -13289,10 +13301,10 @@
             ]
         },
         {
-            "@id": "bts:DurationofDataEmbargo",
+            "@id": "bts:EmbargoEndDate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Duration that the data are embargoed, in months",
-            "rdfs:label": "DurationofDataEmbargo",
+            "rdfs:comment": "Date at which an embargo on related resources had lifted",
+            "rdfs:label": "EmbargoEndDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13301,10 +13313,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Duration of Data Embargo",
+            "sms:displayName": "Embargo End Date",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "int"
+                "date"
             ]
         },
         {
