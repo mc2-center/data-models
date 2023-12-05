@@ -232,11 +232,12 @@ tumorGrade,Low Grade
 tumorGrade,unknown
 tumorGrade,Not Reported
 tumorGrade,Not Applicable
-specimenComp,Primary Tumor
-specimenComp,Metastatic Tumor
-specimenComp,Normal Tissue
-specimenComp,Mixed
-specimenComp,Not Applicable
+metStatus,Distant Metastasis
+metStatus,Metastasis NOS
+metStatus,No Metastasis
+metStatus,Regional Metastasis
+metStatus,unknown
+metStatus,Not Reported
 diseaseStatus,Distant met recurrence/progression
 diseaseStatus,Loco-regional recurrence/progression
 diseaseStatus,Biochemical evidence of disease without structural correlate
@@ -246,7 +247,6 @@ diseaseStatus,With tumor
 diseaseStatus,Not Reported
 diseaseStatus,Not Allowed To Collect
 diseaseStatus,Not Applicable
-diseaseStatus,Deceased
 preservation,Cryopreserved
 preservation,Cryopreservation in liquid nitrogen - dead tissue
 preservation,Cryopreservation in dry ice - dead tissue
@@ -381,15 +381,6 @@ tissue,Vascular Endothelium
 tissue,Vein
 tissue,Vertebra
 tissue,Peripheral Blood Mononuclear Cell
-tumorSubtype,TNBC
-tumorSubtype,LumA
-tumorSubtype,LumB
-tumorSubtype,HER2
-tumorSubtype,Not Applicable
-biologicalSex,M
-biologicalSex,F
-biologicalSex,Other
-biologicalSex,Unknown
 consortium_funding_agency,NIH
 dataset_file_format,AVI
 dataset_file_format,BAI
@@ -597,19 +588,6 @@ grant_number,CA274499
 grant_number,CA274502
 grant_number,CA274509
 grant_number,CA275808
-grant_number,CA279408
-grant_number,CA279560
-grant_number,CA280984
-grant_number,CA280849
-grant_number,CA280829
-grant_number,CA284090
-grant_number,CA284086
-grant_number,CA274504
-grant_number,CA283114
-grant_number,CA274507
-grant_number,CA274506
-grant_number,CA274511
-grant_number,CA282451
 assay,10-cell RNA Sequencing
 assay,16S Ribosomal Gene Sequencing Assay
 assay,3' RNA-seq
@@ -1817,7 +1795,6 @@ institution_alias,UMMS
 institution_alias,UMichigan
 institution_alias,UMinn
 institution_alias,UNC
-institution_alias,UNR
 institution_alias,UNSW
 institution_alias,UPenn
 institution_alias,USC
@@ -1831,7 +1808,6 @@ institution_alias,UWM
 institution_alias,University of Illinois
 institution_alias,University of Texas MD Anderson Cancer Center
 institution_alias,Vanderbilt
-institution_alias,WUSTL
 institution_alias,WCM
 institution_alias,Wake Forest
 institution_alias,Wistar
@@ -1899,7 +1875,6 @@ institution_name,University of Illinois at Chicago
 institution_name,University of Massachusetts Medical School
 institution_name,University of Miami
 institution_name,University of Michigan
-institution_name,University of Nevada Reno
 institution_name,University of Minnesota
 institution_name,University of New South Wales
 institution_name,University of North Carolina at Chapel Hill
@@ -1914,7 +1889,6 @@ institution_name,University of Virginia
 institution_name,University of Washington
 institution_name,University of Wisconsin-Madison
 institution_name,Vanderbilt University
-institution_name,Washington University in St. Louis
 institution_name,Wake Forest
 institution_name,Weill Cornell Medicine
 institution_name,Wistar Institute
