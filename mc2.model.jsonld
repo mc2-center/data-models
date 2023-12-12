@@ -13244,6 +13244,44 @@
             ]
         },
         {
+            "@id": "bts:GrantSynapseTeam",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The Synapse team associated with the grant, created by the MC2 Center",
+            "rdfs:label": "GrantSynapseTeam",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Grant Synapse Team",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "url"
+            ]
+        },
+        {
+            "@id": "bts:GrantSynapseProject",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The Synapse project associated with the grant, created by the MC2 Center",
+            "rdfs:label": "GrantSynapseProject",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Grant Synapse Project",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "url"
+            ]
+        },
+        {
             "@id": "bts:GrantStartDate",
             "@type": "rdfs:Class",
             "rdfs:comment": "The start date of the grant YYYY-MM-DD format",

@@ -138,6 +138,8 @@ Grant Institution Alias,The alias of the institution(s) associated with the gran
 Grant Investigator,Investigator(s) associated witht the grant. 1...*,,,TRUE,,,,,list like
 Grant Consortium Name,Consortium(s) associated with the grant. 1...1,"CCBIR, CSBC, HTAN, ICBP, MetNet, NCI, NCI Clinical and Translational Exploratory/Developmental Studies, PDMC, PS-ON, Sage Bionetworks, TEC",,TRUE,,,,,
 GrantView_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
+Grant Synapse Team,"The Synapse team associated with the grant, created by the MC2 Center",,,TRUE,,,,,url
+Grant Synapse Project,"The Synapse project associated with the grant, created by the MC2 Center",,,TRUE,,,,,url
 Grant Start Date,The start date of the grant YYYY-MM-DD format,,,TRUE,,,,,date
 NIH RePORTER Link,Link to the search results for this grant number on the NIH Reporter website,,,TRUE,,,,,url
 Duration of Funding,"Duration of the funding period, in years",,,FALSE,,,,,int
