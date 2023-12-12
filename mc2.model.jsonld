@@ -12534,6 +12534,12 @@
                 },
                 {
                     "@id": "bts:EmbargoEndDate"
+                },
+                {
+                    "@id": "bts:GrantSynapseTeam"
+                },
+                {
+                    "@id": "bts:GrantSynapseProject"
                 }
             ],
             "sms:validationRules": []
@@ -13257,7 +13263,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Grant Synapse Team",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "url"
             ]
@@ -13276,7 +13282,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Grant Synapse Project",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "url"
             ]
