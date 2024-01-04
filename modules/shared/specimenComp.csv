@@ -2,5 +2,5 @@
 Primary Tumor,,,,FALSE,,Biospecimen Composition,,,,,,,,
 Metastatic Tumor,,,,FALSE,,Biospecimen Composition,,,,,,,,
 Normal Tissue,,,,FALSE,,Biospecimen Composition,,,,,,,,
-Mixed,,,,FALSE,,Biospecimen Composition,,,,,,,,
+Tumor-adjacent Normal Tissue,,,,FALSE,,Biospecimen Composition,,,,,,,,
 Not Applicable,,,,FALSE,,Biospecimen Composition,,,,,,,,
