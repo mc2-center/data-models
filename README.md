@@ -37,5 +37,5 @@ When a new valid value needs to be added to the data model:
 
 ## Release Notes 
 
-The latest version release is v23.12.1. Moving forward, this repository will adopt <a href="https://semvar.org/" target="_blank"> Semanting Versioning</a>  (SemVar), which provides a standard way of versioning software based on meaningful changes in functionality.
+The version release tag for January 2024 is v23.12.1. Moving forward, this repository will adopt <a href="https://semvar.org/" target="_blank"> Semanting Versioning</a>  (SemVar), which provides a standard way of versioning software based on meaningful changes in functionality.
 
