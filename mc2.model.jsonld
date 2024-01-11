@@ -3015,7 +3015,7 @@
         {
             "@id": "bts:BiospecimenComposition",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The text term used to describe the type(s) of tissue contained in the biospecimen.",
+            "rdfs:comment": "The text term used to describe the type(s) of tissue contained in the biospecimen. Multiple values permitted, comma separated.",
             "rdfs:label": "BiospecimenComposition",
             "rdfs:subClassOf": [
                 {
@@ -3036,7 +3036,7 @@
                     "@id": "bts:NormalTissue"
                 },
                 {
-                    "@id": "bts:Mixed"
+                    "@id": "bts:Tumor-adjacentNormalTissue"
                 },
                 {
                     "@id": "bts:NotApplicable"
@@ -3044,7 +3044,9 @@
             ],
             "sms:displayName": "Biospecimen Composition",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "list like"
+            ]
         },
         {
             "@id": "bts:KnownMetastasisSites",
@@ -12737,6 +12739,9 @@
                 },
                 {
                     "@id": "bts:MoffittCancerCenter"
+                },
+                {
+                    "@id": "bts:NortheasternUniversity"
                 },
                 {
                     "@id": "bts:NewYorkUniversity"
@@ -29390,10 +29395,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Mixed",
+            "@id": "bts:Tumor-adjacentNormalTissue",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Mixed",
+            "rdfs:label": "Tumor-adjacentNormalTissue",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenComposition"
@@ -29402,7 +29407,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Mixed",
+            "sms:displayName": "Tumor-adjacent Normal Tissue",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -54580,6 +54585,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Moffitt Cancer Center",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NortheasternUniversity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NortheasternUniversity",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Northeastern University",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
