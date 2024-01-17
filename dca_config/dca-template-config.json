@@ -1,0 +1,56 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "Dataset View",
+      "schema_name": "DatasetView",
+      "type": "record"
+    },
+    {
+      "display_name": "Educational Resource",
+      "schema_name": "EducationalResource",
+      "type": "record"
+    },
+    {
+      "display_name": "Publication View",
+      "schema_name": "PublicationView",
+      "type": "record"
+    },
+    {
+      "display_name": "Tool View",
+      "schema_name": "ToolView",
+      "type": "record"
+    },
+    {
+      "display_name": "Biospecimen",
+      "schema_name": "Biospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Level 1",
+      "schema_name": "NanoStringGeoMxDSPLevel1",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Level 2",
+      "schema_name": "NanoStringGeoMxDSPLevel2",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Level 3",
+      "schema_name": "NanoStringGeoMxDSPLevel3",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMX ROI Segment Annotation",
+      "schema_name": "NanoStringGeoMXROISegmentAnnotation",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Imaging Level 2",
+      "schema_name": "NanoStringGeoMxDSPImagingLevel2",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.8.1",
+  "schema_version": ""
+}
