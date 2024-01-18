@@ -16,6 +16,7 @@ CSV,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 Chemical Data Format,,,,FALSE,,Tool Format,,EDAM,,,,,,
 Cytoband Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 Cytoscape Input File Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+DCC,,,,FALSE,,Tool Format,,Nanostring,,,,,,"OB 1/11/2024, to be used in GeoMX metadata "
 DCD,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 DSV,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
 "Database Hits (Sequence) Format ",,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022

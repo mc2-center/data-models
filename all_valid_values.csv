@@ -235,7 +235,7 @@ tumorGrade,Not Applicable
 specimenComp,Primary Tumor
 specimenComp,Metastatic Tumor
 specimenComp,Normal Tissue
-specimenComp,Mixed
+specimenComp,Tumor-adjacent Normal Tissue
 specimenComp,Not Applicable
 diseaseStatus,Distant met recurrence/progression
 diseaseStatus,Loco-regional recurrence/progression
@@ -1624,6 +1624,7 @@ tool_format,CSV
 tool_format,Chemical Data Format
 tool_format,Cytoband Format
 tool_format,Cytoscape Input File Format
+tool_format,DCC
 tool_format,DCD
 tool_format,DSV
 tool_format,Database Hits (Sequence) Format 
@@ -1871,6 +1872,7 @@ institution_name,Massachusetts Institute of Technology
 institution_name,Mayo Clinic
 institution_name,Memorial Sloan Kettering Cancer Center
 institution_name,Moffitt Cancer Center
+institution_name,Northeastern University
 institution_name,New York University
 institution_name,Northwestern University
 institution_name,Oregon Health & Science University
