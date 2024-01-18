@@ -13014,6 +13014,9 @@
                     "@id": "bts:Moffitt"
                 },
                 {
+                    "@id": "bts:NEU"
+                },
+                {
                     "@id": "bts:NU"
                 },
                 {
@@ -55928,6 +55931,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Moffitt",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NEU",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NEU",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GrantInstitutionAlias"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "NEU",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
