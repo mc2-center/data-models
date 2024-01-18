@@ -10576,9 +10576,6 @@
                     "@id": "bts:AOIName"
                 },
                 {
-                    "@id": "bts:SoftwareandVersion"
-                },
-                {
                     "@id": "bts:GeoMxDSPNGSSequencingPlatform"
                 },
                 {
@@ -10698,6 +10695,9 @@
                 },
                 {
                     "@id": "bts:CytoscapeInputFileFormat"
+                },
+                {
+                    "@id": "bts:DCC"
                 },
                 {
                     "@id": "bts:DCD"
@@ -11417,6 +11417,9 @@
                     "@id": "bts:SoftwareandVersion"
                 },
                 {
+                    "@id": "bts:GeoMxDSPGenomicReference"
+                },
+                {
                     "@id": "bts:GeoMxDSPNGSSequencingPlatform"
                 },
                 {
@@ -11508,9 +11511,6 @@
                     "@id": "bts:SynapseIDofDataFile"
                 },
                 {
-                    "@id": "bts:SynapseIDofParentDataFile"
-                },
-                {
                     "@id": "bts:SynapseIDofGeoMxROISegmentAnnotationFile"
                 },
                 {
@@ -11545,6 +11545,25 @@
             ]
         },
         {
+            "@id": "bts:GeoMxDSPGenomicReference",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link or identifier for the reference genome associated with the files",
+            "rdfs:label": "GeoMxDSPGenomicReference",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Genomic Reference",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
             "@id": "bts:SynapseIDofParentDataFile",
             "@type": "rdfs:Class",
             "rdfs:comment": "Synapse ID indicating the file(s) from which the file was derived; multiple parent files should be comma-separated",
@@ -11558,7 +11577,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Synapse ID of Parent Data File",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "list",
                 "regex match syn\\d+"
@@ -11631,9 +11650,6 @@
                 },
                 {
                     "@id": "bts:MatrixType"
-                },
-                {
-                    "@id": "bts:GeoMxDSPGenomicReference"
                 },
                 {
                     "@id": "bts:GeoMxDSPWorkflowType"
@@ -11734,6 +11750,63 @@
             "sms:displayName": "Matrix Type",
             "sms:required": "sms:false",
             "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Type of computational workflow used to generate the file.",
+            "rdfs:label": "GeoMxDSPWorkflowType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Type",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowLink",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link to documentation or webpage associated with the computational workflow used to generate the file.",
+            "rdfs:label": "GeoMxDSPWorkflowLink",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Link",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "url"
+            ]
+        },
+        {
+            "@id": "bts:GeoMxDSPWorkflowParameterDescription",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link or text description of flags or options provided to the workflow used to generate the file.",
+            "rdfs:label": "GeoMxDSPWorkflowParameterDescription",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GeoMx DSP Workflow Parameter Description",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "str"
+            ]
         },
         {
             "@id": "bts:NanoStringGeoMXROISegmentAnnotation",
@@ -21844,6 +21917,9 @@
                     "@id": "bts:CytoscapeInputFileFormat"
                 },
                 {
+                    "@id": "bts:DCC"
+                },
+                {
                     "@id": "bts:DCD"
                 },
                 {
@@ -22226,6 +22302,9 @@
                 },
                 {
                     "@id": "bts:CytoscapeInputFileFormat"
+                },
+                {
+                    "@id": "bts:DCC"
                 },
                 {
                     "@id": "bts:DCD"
@@ -52379,6 +52458,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:DCC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DCC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:FileFormat"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "DCC",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:DCD",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -53752,74 +53848,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Synapse ID GeoMx ROI Segment Annotation File",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GeoMxDSPGenomicReference",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GeoMxDSPGenomicReference",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:NanoStringGeoMxDSPLevel3"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "GeoMx DSP Genomic Reference",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GeoMxDSPWorkflowType",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GeoMxDSPWorkflowType",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:NanoStringGeoMxDSPLevel3"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "GeoMx DSP Workflow Type",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GeoMxDSPWorkflowParameterDescription",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GeoMxDSPWorkflowParameterDescription",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:NanoStringGeoMxDSPLevel3"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "GeoMx DSP Workflow Parameter Description",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:GeoMxDSPWorkflowLink",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GeoMxDSPWorkflowLink",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:NanoStringGeoMxDSPLevel3"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "GeoMx DSP Workflow Link",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

@@ -1624,6 +1624,7 @@ tool_format,CSV
 tool_format,Chemical Data Format
 tool_format,Cytoband Format
 tool_format,Cytoscape Input File Format
+tool_format,DCC
 tool_format,DCD
 tool_format,DSV
 tool_format,Database Hits (Sequence) Format 
