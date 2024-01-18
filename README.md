@@ -37,5 +37,5 @@ When a new valid value needs to be added to the data model:
 
 ## Release Notes 
 
-The version release tag for January 2024 is v23.12.1. Moving forward, this repository will adopt <a href="https://semver.org/" target="_blank"> Semantic Versioning</a>  (SemVer), which provides a standard way of versioning software based on meaningful changes in functionality.
+The version release tag for January 2024 is v4.1.0. This repository adopts <a href="https://semver.org/" target="_blank"> Semantic Versioning</a>  (SemVer), which provides a standard way of versioning software based on meaningful changes in functionality.
 
