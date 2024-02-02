@@ -40,7 +40,7 @@ jobs:
           python3.12 -m venv .venv
           chmod 755 .venv/bin/activate
           source .venv/bin/activate
-          pip3 install schematicpy==24.1.1
+          pip3.12 install schematicpy==24.1.1
           make CSV=$schema_filename
     
       - name: Commit files
