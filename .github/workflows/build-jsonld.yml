@@ -37,7 +37,7 @@ jobs:
       - name: Install schematic and convert schema
         shell: bash
         run: |
-          python3 -m venv .venv
+          python3.12 -m venv .venv
           chmod 755 .venv/bin/activate
           source .venv/bin/activate
           pip3 install schematicpy==24.1.1
