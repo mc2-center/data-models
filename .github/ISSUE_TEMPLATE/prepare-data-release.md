@@ -3,7 +3,9 @@ name: Release preparation
 about: Prepare a release of the data model
 title: '[release] NEW_VERSION_NUMBER'
 labels: release
-assignees: bankso vpchung
+assignees: 
+  - bankso
+  - vpchung
 
 ---
 
@@ -15,4 +17,3 @@ assignees: bankso vpchung
  
 
  ## Additional comments
- 
