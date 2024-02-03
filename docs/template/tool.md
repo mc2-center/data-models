@@ -1,0 +1,1 @@
+{{ read_csv('tool/annotationProperty.csv', usecols=['Attribute','Description','Required']) }}
