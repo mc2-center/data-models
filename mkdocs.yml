@@ -10,8 +10,8 @@ repo_name: data-models
 # Navigation
 nav:
   - Home: 
-    - home.md
-    - Terms by category:
+    - Introduction: index.md
+    - Terms by model:
       - Consortium: vocab/consortium.md
       - Dataset: vocab/dataset.md
       - Education: vocab/education.md
@@ -22,7 +22,7 @@ nav:
       - Publication: vocab/publication.md
       - Theme: vocab/theme.md
       - Tool: vocab/tool.md
-    - Shared terms:
+    - Shared models:
       - Assay: vocab/shared/assay.md
       - Biological sex: vocab/shared/sex.md
       - Disease status: vocab/shared/disease_status.md
