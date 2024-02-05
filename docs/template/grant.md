@@ -1,0 +1,1 @@
+{{ read_csv('grant/annotationProperty.csv', usecols=['Attribute','Description','Required']) }}

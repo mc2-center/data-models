@@ -1,0 +1,87 @@
+# Project
+site_name: "MC2 Center Data Model Dictionary"
+site_description: >-
+  Versioned history of the MC2 Center data model.
+
+# Repository
+repo_url: https://github.com/mc2-center/data-models
+repo_name: data-models
+
+# Navigation
+nav:
+  - Home: 
+    - home.md
+    - Terms by category:
+      - Consortium: vocab/consortium.md
+      - Dataset: vocab/dataset.md
+      - Education: vocab/education.md
+      - Grant: vocab/grant.md
+      - Institution: vocab/institution.md
+      - Person: vocab/person.md
+      - Project: vocab/project.md
+      - Publication: vocab/publication.md
+      - Theme: vocab/theme.md
+      - Tool: vocab/tool.md
+    - Shared terms:
+      - Assay: vocab/shared/assay.md
+      - Biological sex: vocab/shared/sex.md
+      - Disease status: vocab/shared/disease_status.md
+      - Element type: vocab/shared/element_type.md
+      - Matrix type: vocab/shared/matrix_type.md
+      - Preservation: vocab/shared/preservation.md
+      - Specimen: vocab/shared/specimen.md
+      - Tissue: vocab/shared/tissue.md
+      - Tumor: vocab/shared/tumor.md
+  - Annotation templates:
+    - Dataset: template/dataset.md
+    - Education: template/education.md
+    - Grant: template/grant.md
+    - Person: template/person.md
+    - Publication: template/publication.md
+    - Tool: template/tool.md
+  - Next steps: next-steps.md
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: assets/cckp-logo.png
+  icon:
+    admonition:
+      note: octicons/tag-16
+      info: octicons/info-16
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.footer
+    - navigation.sections
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+plugins:
+- search
+- table-reader:
+    data_path: "modules"
+    select_readers:
+      - read_csv
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
