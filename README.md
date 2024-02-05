@@ -37,5 +37,53 @@ When a new valid value needs to be added to the data model:
 
 ## Release Notes 
 
-The version release tag for January 2024 is v4.1.0. This repository adopts <a href="https://semver.org/" target="_blank"> Semantic Versioning</a>  (SemVer), which provides a standard way of versioning software based on meaningful changes in functionality.
+## Documentation
+
+The documentation uses [MkDocs], [mkdocs-table-reader-plugin], and the
+[Material theme]. All docs are located in the `./docs` directory and
+are written in Markdown format.
+
+* **Update the docs site:**
+
+  The docs site is configured to rebuild automatically whenever a change
+  is found in the `.docs/` folder, `mc2.model.csv`, or `mkdocs.yml`
+  (the MkDocs configuration file). No further manual steps are required.
+
+* **To add a new page:**
+
+    Create a Markdown file in `./docs`, then add the page to the `nav` 
+    setting in `./mkdocs.yml`.
+
+* **To test your changes:**
+
+    Build a local docs site that will auto-reload with any changes:
+
+    ```console
+    $ mkdocs serve
+    INFO    -  Building documentation...
+    INFO    -  Cleaning site directory
+    INFO    -  Documentation built in 0.51 seconds
+    INFO    -  [10:20:58] Watching paths for changes: 'docs', 'mkdocs.yml'
+    INFO    -  [10:20:58] Serving on http://127.0.0.1:8000/
+    ```
+
+    This will serve the documentation on `http://127.0.0.1:8000`. Enter Ctrl + C
+    to close the server.
+
+    Note that to test locally, you will need to install the dependencies
+    first (ideally in a virtual environment), e.g.
+
+    ```console
+    conda create -n docs python=3.12
+    conda activate docs
+    pip install mkdocs mkdocs-material mkdocs-table-reader-plugin
+    ```
+
+
+
+[Cancer Complexity Knowledge Portal]: https://cancercomplexity.synapse.org/
+[Semantic Versioning]: https://semver.org/
+[MKDocs]: https://www.mkdocs.org/
+[mkdocs-table-reader-plugin]: https://timvink.github.io/mkdocs-table-reader-plugin/
+[Material theme]: https://squidfunk.github.io/mkdocs-material/
 
