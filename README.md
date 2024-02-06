@@ -66,19 +66,19 @@ functionality.
 ## Documentation
 
 The documentation uses [MkDocs], [mkdocs-table-reader-plugin], and the
-[Material theme]. All docs are located in the `./docs` directory and
+[Material theme]. All docs are located in the `docs` directory and
 are written in Markdown format.
 
 * **Update the docs site:**
 
   The docs site is configured to rebuild automatically whenever a change
-  is found in the `.docs/` folder, `mc2.model.csv`, or `mkdocs.yml`
+  is found in the `docs` folder, `mc2.model.csv`, or `mkdocs.yml`
   (the MkDocs configuration file). No further manual steps are required.
 
 * **To add a new page:**
 
-    Create a Markdown file in `./docs`, then add the page to the `nav` 
-    setting in `./mkdocs.yml`.
+    Create a Markdown file in `docs`, then add the page to the `nav` 
+    setting in `mkdocs.yml`.
 
 * **To test your changes:**
 
@@ -93,7 +93,7 @@ are written in Markdown format.
     INFO    -  [10:20:58] Serving on http://127.0.0.1:8000/
     ```
 
-    This will serve the documentation on `http://127.0.0.1:8000`. Enter Ctrl + C
+    This will serve the documentation on http://127.0.0.1:8000. Enter Ctrl + C
     to close the server.
 
     Note that to test locally, you will need to install the dependencies
