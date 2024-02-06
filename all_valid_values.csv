@@ -466,6 +466,8 @@ dataset_file_format,PKL
 dataset_file_format,BPM
 dataset_file_format,Unspecified
 dataset_file_format,Pending Annotation
+dataset_file_format,maf
+dataset_file_format,CLS
 grant_number,Affiliated/Non-Grant Associated
 grant_number,CA184897
 grant_number,CA184898
@@ -720,7 +722,7 @@ assay,Fluorescent Antibody Procedure
 assay,Fluorescent Cell Barcoding
 assay,Fluorescent In Situ Sequencing 
 assay,Focused Ion Beam Scanning Electron Microscopy
-assay,Forster resonance energy transfer
+assay,Forster Resonance Energy Transfer
 assay,Fourier Transform Ion Cyclotron Resonance Mass Spectrometry
 assay,Fourier-Transform Infrared Spectroscopy
 assay,Gas Chromatography Mass Spectrometry
@@ -986,6 +988,9 @@ assay,Scratch Assay
 assay,Structural Variant Analysis
 assay,Survival Analysis
 assay,Targeted Error Correction Sequencing
+assay,Tuba-Seq
+assay,SDS-PAGE
+assay,Cell Fractionation
 ed_topic,Computational Model Development
 ed_topic,Computational Resource
 ed_topic,Diversity/Equity/Inclusion
