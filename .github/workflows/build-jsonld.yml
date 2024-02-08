@@ -14,14 +14,18 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        schematic-version: [ 24.1.1 ]
 
     steps:
       - name: Install System Dependencies
         run: |
+          sudo add-apt-repository ppa:deadsnakes/ppa
           sudo apt-get update
-          sudo apt-get install -y pip python3.8-venv libcurl4-openssl-dev
+          sudo apt-get install -y pip python3.10-venv libcurl4-openssl-dev
       
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.1
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
@@ -36,10 +40,10 @@ jobs:
       - name: Install schematic and convert schema
         shell: bash
         run: |
-          python3 -m venv .venv
+          python3.10 -m venv .venv
           chmod 755 .venv/bin/activate
           source .venv/bin/activate
-          pip3 install schematicpy
+          pip3.10 install schematicpy==${{ matrix.schematic-version }}
           make CSV=$schema_filename
     
       - name: Commit files
