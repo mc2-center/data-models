@@ -2544,6 +2544,8 @@ tool_operation,Variant Classification
 tool_operation,Variant Effect Prediction
 tool_operation,Visualisation
 tool_operation,scRNA-Seq Analysis
+tool_operation,Agent-Based Cell Modelling
+tool_operation,Not Applicable
 tool_topic,Allergy Clinical Immunology and Immunotherapeutics
 tool_topic,Biochemistry
 tool_topic,Bioimaging

@@ -6101,6 +6101,9 @@
                     "@id": "bts:PublicationTissue"
                 },
                 {
+                    "@id": "bts:ToolOperation"
+                },
+                {
                     "@id": "bts:BiospecimenTumorType"
                 },
                 {
@@ -61393,6 +61396,12 @@
                 },
                 {
                     "@id": "bts:ScRNA-SeqAnalysis"
+                },
+                {
+                    "@id": "bts:Agent-BasedCellModelling"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "Tool Operation",
@@ -63829,7 +63838,7 @@
         {
             "@id": "bts:ToolLicense",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Software or data usage license.",
+            "rdfs:comment": "Software or data usage license. Multiple values permitted, comma separated.",
             "rdfs:label": "ToolLicense",
             "rdfs:subClassOf": [
                 {
@@ -64821,7 +64830,9 @@
             ],
             "sms:displayName": "Tool License",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "list like"
+            ]
         },
         {
             "@id": "bts:ToolCost",
@@ -67101,6 +67112,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "scRNA-Seq Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Agent-BasedCellModelling",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Agent-BasedCellModelling",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ToolOperation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Agent-Based Cell Modelling",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
