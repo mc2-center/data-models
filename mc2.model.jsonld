@@ -29735,8 +29735,8 @@
             "sms:displayName": "Resource Language",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "list like ",
-                " regex search [a-z]{2}"
+                "list like",
+                "regex search [a-z]{2}"
             ]
         },
         {
