@@ -6101,6 +6101,9 @@
                     "@id": "bts:PublicationTissue"
                 },
                 {
+                    "@id": "bts:ToolOperation"
+                },
+                {
                     "@id": "bts:BiospecimenTumorType"
                 },
                 {
@@ -11734,7 +11737,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Dataset Description",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -12099,7 +12102,7 @@
                     "@id": "bts:FocusedIonBeamScanningElectronMicroscopy"
                 },
                 {
-                    "@id": "bts:Forsterresonanceenergytransfer"
+                    "@id": "bts:ForsterResonanceEnergyTransfer"
                 },
                 {
                     "@id": "bts:FourierTransformIonCyclotronResonanceMassSpectrometry"
@@ -12892,6 +12895,15 @@
                 },
                 {
                     "@id": "bts:TargetedErrorCorrectionSequencing"
+                },
+                {
+                    "@id": "bts:Tuba-Seq"
+                },
+                {
+                    "@id": "bts:SDS-PAGE"
+                },
+                {
+                    "@id": "bts:CellFractionation"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -13567,7 +13579,7 @@
                 }
             ],
             "sms:displayName": "Dataset Tumor Type",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "list like"
             ]
@@ -13930,7 +13942,7 @@
                 }
             ],
             "sms:displayName": "Dataset Tissue",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "list like"
             ]
@@ -13949,7 +13961,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Dataset Url",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": [
                 "url"
             ]
@@ -14192,6 +14204,12 @@
                 },
                 {
                     "@id": "bts:PendingAnnotation"
+                },
+                {
+                    "@id": "bts:Maf"
+                },
+                {
+                    "@id": "bts:CLS"
                 }
             ],
             "sms:displayName": "Dataset File Formats",
@@ -16404,10 +16422,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Forsterresonanceenergytransfer",
+            "@id": "bts:ForsterResonanceEnergyTransfer",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Forsterresonanceenergytransfer",
+            "rdfs:label": "ForsterResonanceEnergyTransfer",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DatasetAssay"
@@ -16419,7 +16437,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Forster resonance energy transfer",
+            "sms:displayName": "Forster Resonance Energy Transfer",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -21662,6 +21680,66 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Tuba-Seq",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tuba-Seq",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tuba-Seq",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SDS-PAGE",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SDS-PAGE",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SDS-PAGE",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CellFractionation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CellFractionation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cell Fractionation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AVI",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -23182,6 +23260,40 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Maf",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Maf",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetFileFormats"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "maf",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CLS",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CLS",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetFileFormats"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CLS",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:DatasetGrant",
             "@type": "rdfs:Class",
             "rdfs:comment": "Datasets associated with a grant, joined by uuids from the dataset and grant table.",
@@ -23336,7 +23448,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Dataset Pubmed Id",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "list like"
             ]
@@ -29623,8 +29735,8 @@
             "sms:displayName": "Resource Language",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "list like ",
-                " regex fullmatch [a-z]{2}"
+                "list like",
+                "regex search [a-z]{2}"
             ]
         },
         {
@@ -58233,7 +58345,7 @@
                     "@id": "bts:FocusedIonBeamScanningElectronMicroscopy"
                 },
                 {
-                    "@id": "bts:Forsterresonanceenergytransfer"
+                    "@id": "bts:ForsterResonanceEnergyTransfer"
                 },
                 {
                     "@id": "bts:FourierTransformIonCyclotronResonanceMassSpectrometry"
@@ -59026,6 +59138,15 @@
                 },
                 {
                     "@id": "bts:TargetedErrorCorrectionSequencing"
+                },
+                {
+                    "@id": "bts:Tuba-Seq"
+                },
+                {
+                    "@id": "bts:SDS-PAGE"
+                },
+                {
+                    "@id": "bts:CellFractionation"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -61275,6 +61396,12 @@
                 },
                 {
                     "@id": "bts:ScRNA-SeqAnalysis"
+                },
+                {
+                    "@id": "bts:Agent-BasedCellModelling"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "Tool Operation",
@@ -63711,7 +63838,7 @@
         {
             "@id": "bts:ToolLicense",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Software or data usage license.",
+            "rdfs:comment": "Software or data usage license. Multiple values permitted, comma separated.",
             "rdfs:label": "ToolLicense",
             "rdfs:subClassOf": [
                 {
@@ -64703,7 +64830,9 @@
             ],
             "sms:displayName": "Tool License",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "list like"
+            ]
         },
         {
             "@id": "bts:ToolCost",
@@ -66983,6 +67112,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "scRNA-Seq Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Agent-BasedCellModelling",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Agent-BasedCellModelling",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ToolOperation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Agent-Based Cell Modelling",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

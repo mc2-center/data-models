@@ -41,3 +41,4 @@ vignettes/*.pdf
 
 # schematic-related files
 great_expectations/
+.DS_Store
