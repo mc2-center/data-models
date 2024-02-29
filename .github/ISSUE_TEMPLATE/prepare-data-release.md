@@ -1,7 +1,7 @@
 ---
 name: ⭐ Release preparation
 about: Prepare a release of the data model
-title: '[release] NEW_VERSION_NUMBER'
+title: '[release] CURRENT_SPRINT_MONTH'
 labels: release
 assignees: 
   - bankso
@@ -14,6 +14,11 @@ assignees:
 This checklist covers the post-curation steps that should be performed
 when releasing a new data model version and syncing content to the Cancer
 Complexity Knowledge Portal (CCKP).
+
+> [!NOTE]
+> Closing this ticket will create a new release!  Before closing, ensure
+> that all relevent PRs have been merged into `main` and that each PR has
+> been labeled with either `major`, `minor` or `patch`.
 
 ### Data model
 - [ ] Add updates to a new branch in the data-models repo
