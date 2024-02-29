@@ -1,0 +1,27 @@
+name: Check if PR has requird labels
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, labeled, unlabeled, synchronize]
+  # pull_request_target:
+  #   types: [opened, reopened, labeled, unlabeled, synchronize]
+
+jobs:
+  check-for-pr-label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: mheap/github-action-required-labels@v5
+        with:
+          mode: exactly
+          count: 1
+          labels: "patch, minor, major"
+          add_comment: true
+          message: |
+            Before this PR can be merged, add one of the following labels:
+            * `major`<br/>This PR will include a major update (non-backwards compatible changes to the data models)<br/><br/>
+            * `minor`<br/>This PR will include a minor update (changes that extend on the current models)<br/><br/>
+            * `patch`<br/>This PR will include a patch update (small fixes like bugs, typos, etc.)<br/><br/>
+            * `non-release`<br/>This PR is not related to the data model
