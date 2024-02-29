@@ -17,7 +17,7 @@ jobs:
         with:
           mode: exactly
           count: 1
-          labels: "patch, minor, major"
+          labels: "major, minor, patch, non-release"
           add_comment: true
           message: |
             Before this PR can be merged, add one of the following labels:
