@@ -1,7 +1,7 @@
 ---
 name: ⭐ Release preparation
 about: Prepare a release of the data model
-title: '[release] CURRENT_SPRINT_MONTH'
+title: '[release] CURRENT_SPRINT'
 labels: release
 assignees: 
   - bankso
