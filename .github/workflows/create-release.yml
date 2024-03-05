@@ -1,0 +1,42 @@
+name: Create a new data model release
+
+on:
+  issues:
+    types: [ closed ]
+  workflow_run:
+    workflows: [ Check if PR has requird labels ]
+    types: [ completed ]
+
+jobs:
+  create-update-draft:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Create or update a release draft
+        uses: release-drafter/release-drafter@v6.0.0
+        with:
+          config-name: release-template.yml
+          disable-autolabeler: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # publish-release:
+  #   runs-on: ubuntu-latest
+  #   if: contains(github.event.issue.labels.*.name, 'release')
+  #   steps:
+  #     - name: Get latest releast draft
+  #       id: latest_draft
+  #       uses: pozetroninc/github-action-get-latest-release@master
+  #       with:
+  #         repository: mc2-center/data-models
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  
+  #     - name: Publish release draft
+  #       uses: eregon/publish-release@v1.0.6
+  #       with:
+  #         release_id: ${{ steps.latest_draft.outputs.id }}
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
