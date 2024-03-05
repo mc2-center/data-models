@@ -1,0 +1,23 @@
+name: Draft a new data model release
+
+on:
+  workflow_run:
+    workflows: [ Check if PR has requird labels ]
+    types: [ completed ]
+
+jobs:
+  create-update-draft:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Create or update a release draft
+        uses: release-drafter/release-drafter@v6.0.0
+        with:
+          config-name: release-template.yml
+          disable-autolabeler: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
