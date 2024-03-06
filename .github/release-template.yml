@@ -14,8 +14,17 @@ version-resolver:
   default: patch
 exclude-labels:
   - 'non-release'
+categories:
+  - title: '🚀 Major changes'
+    label: 'major'
+  - title: '✨ Enhancements'
+    label: 'minor'
+  - title: '🐛 Bug fixes'
+    label: 'patch'
+  - title: '📖 Documentation'
+    label: 'documentation'
 template: |
-  ## What's Changed
+  ## Changelog
 
   $CHANGES
 
