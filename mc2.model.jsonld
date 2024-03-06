@@ -43694,7 +43694,7 @@
             "sms:displayName": "Synapse ID of Data File",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -43714,7 +43714,7 @@
             "sms:displayName": "Synapse ID of GeoMx Lab Worksheet File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -43734,7 +43734,7 @@
             "sms:displayName": "Synapse ID of GeoMx DSP PKC File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -43754,7 +43754,7 @@
             "sms:displayName": "Synapse ID of GeoMx DSP ROI Segment Annotation File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -43774,7 +43774,7 @@
             "sms:displayName": "Synapse ID of GeoMx DSP Config File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -46251,7 +46251,7 @@
             "sms:displayName": "Synapse ID of Parent FASTQ File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
@@ -46394,7 +46394,7 @@
             "sms:displayName": "Synapse ID of Parent Data File",
             "sms:required": "sms:false",
             "sms:validationRules": [
-                "list",
+                "list like",
                 "regex match syn\\d+"
             ]
         },
