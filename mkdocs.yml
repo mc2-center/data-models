@@ -66,6 +66,8 @@ theme:
   features:
     - content.code.copy
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
     - navigation.footer
     - navigation.sections
     - search.highlight
