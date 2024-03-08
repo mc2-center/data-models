@@ -1,1 +1,1 @@
-{{ read_csv('shared/biologicalSex.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('shared/biologicalSex.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}

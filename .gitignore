@@ -43,3 +43,4 @@ vignettes/*.pdf
 great_expectations/
 .DS_Store
 **/.DS_Store
+**/**/.DS_Store

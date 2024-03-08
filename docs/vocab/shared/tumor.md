@@ -1,15 +1,15 @@
-## Type
+## Attribute: Tumor type
 
-{{ read_csv('shared/tumorType.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('shared/tumorType.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Subtype
+## Attribute: Tumor subtype
 
-{{ read_csv('shared/tumorSubtype.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('shared/tumorSubtype.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Grade
+## Attribute: Tumor grade
 
-{{ read_csv('shared/tumorGrade.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('shared/tumorGrade.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Origin
+## Attribute: Tumor origin
 
-{{ read_csv('shared/tumorOrigin.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('shared/tumorOrigin.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}

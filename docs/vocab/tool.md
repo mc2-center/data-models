@@ -1,51 +1,51 @@
-## Accessibility
+## Attribute: Accessibility
 
-{{ read_csv('tool/tool_accessibility.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_accessibility.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Cost
+## Attribute: Cost
 
-{{ read_csv('tool/tool_cost.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_cost.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Data
+## Attribute: Data
 
-{{ read_csv('tool/tool_data.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_data.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Documentation type
+## Attribute: Documentation type
 
-{{ read_csv('tool/tool_documentation_type.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_documentation_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Download type
+## Attribute: Download type
 
-{{ read_csv('tool/tool_download_type.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_download_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Format
+## Attribute: Format
 
-{{ read_csv('tool/tool_format.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_format.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}'
 
-## Language
+## Attribute: Language
 
-{{ read_csv('tool/tool_language.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_language.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## License
+## Attribute: License
 
-{{ read_csv('tool/tool_license.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_license.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Link type
+## Attribute: Link type
 
-{{ read_csv('tool/tool_link_type.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_link_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Operating system
+## Attribute: Operating system
 
-{{ read_csv('tool/tool_operating_system.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_operating_system.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Operation
+## Attribute: Operation
 
-{{ read_csv('tool/tool_operation.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_operation.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Topic
+## Attribute: Topic
 
-{{ read_csv('tool/tool_topic.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_topic.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Type
+## Attribute: Type
 
-{{ read_csv('tool/tool_type.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('tool/tool_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}

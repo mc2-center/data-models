@@ -1,7 +1,7 @@
-## Number
+## Attribute: Number
 
-{{ read_csv('grant/grant_number.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('grant/grant_number.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Type
+## Attribute: Type
 
-{{ read_csv('grant/grant_type.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('grant/grant_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}

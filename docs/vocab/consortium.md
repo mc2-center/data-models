@@ -1,7 +1,13 @@
-## Name
+## Attribute: Name
 
-{{ read_csv('consortium/consortium_name.csv', usecols=['Attribute','Description']) }}
+<!-- <div style="max-height:400px; overflow-x: hidden; overflow-y: auto;"> -->
 
-## Funding agency
+{{ read_csv('consortium/consortium_name.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-{{ read_csv('consortium/consortium_funding_agency.csv', usecols=['Attribute','Description']) }}
+<!-- </div> -->
+
+
+## Attribute: Funding agency
+
+{{ read_csv('consortium/consortium_funding_agency.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+

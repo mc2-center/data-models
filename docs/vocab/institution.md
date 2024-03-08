@@ -1,11 +1,11 @@
-## Name
+## Attribute: Name
 
-{{ read_csv('institution/institution_name.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('institution/institution_name.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## Alias
+## Attribute: Alias
 
-{{ read_csv('institution/institution_alias.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('institution/institution_alias.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
-## State location
+## Attribute: State location
 
-{{ read_csv('institution/institution_location_state.csv', usecols=['Attribute','Description']) }}
+{{ read_csv('institution/institution_location_state.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
