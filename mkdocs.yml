@@ -12,12 +12,12 @@ nav:
   - Home: 
     - Introduction: index.md
     - MC2 Center Data Models:
-      - Dataset: template/dataset.md
-      - Education: template/education.md
-      - Grant: template/grant.md
-      - Person: template/person.md
-      - Publication: template/publication.md
-      - Tool: template/tool.md
+      - Dataset Data Model: model/dataset.md
+      - Education Data Model: model/education.md
+      - Grant Data Model: model/grant.md
+      - Person Data Model: model/person.md
+      - Publication Data Model: model/publication.md
+      - Tool Data Model: model/tool.md
   - Standard Terms:
     - Terms by model:
       - Consortium: vocab/consortium.md
