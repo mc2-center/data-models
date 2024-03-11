@@ -3,7 +3,9 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/release/mc2-center/mc2-data-models?label=latest%20release&display_name=release&style=flat-square">
+  <a href="https://github.com/mc2-center/data-models/releases/latest" target="_blank"  rel="noreferrer noopener">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/release/mc2-center/mc2-data-models?label=latest%20release&display_name=release&style=flat-square">
+  </a>
 </p>
 
 **Welcome!** 👋 Explore metadata terms used by MC<sup>2</sup> Center
