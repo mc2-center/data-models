@@ -1,1 +1,0 @@
-{{ read_csv('publication/annotationProperty.csv', usecols=['Attribute','Description','Required']) }}

@@ -1,1 +1,0 @@
-{{ read_csv('shared/tissue.csv', usecols=['Attribute','Description']) }}

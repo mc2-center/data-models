@@ -1,0 +1,1 @@
+{{ read_csv('publication/template.csv') }}
