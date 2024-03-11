@@ -1,6 +1,5 @@
 from os.path import join
 import pandas as pd
-import numpy as np
 
 DATA_MODELS = [
     "dataset",
@@ -32,10 +31,11 @@ def on_pre_build(config, **kwargs) -> None:
             .fillna(""))
 
         # If attribute has a list of valid values, create a link.
-        df['Attribute'] = np.where(
-            ~df['Valid Values'].eq(""),
-            "[" + df['Attribute'] + f"](../valid_values/{model}.md#attribute-dataset-tissue)",
-            df['Attribute'])
+        for _, row in df[df['Valid Values'].ne("")].iterrows():
+            attr_link = "[" + row['Attribute'] + (
+                f"](../valid_values/{model}.md#attribute-"
+                f"{row['Attribute'].lower().replace(' ', '-')})")
+            df.at[_, 'Attribute'] = attr_link
         
         # For any validation rules with a regex, replace `\` with `\\`
         # for proper rendering.
