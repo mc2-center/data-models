@@ -1,1 +1,1 @@
-{{ read_csv('education/annotationProperty.csv', usecols=['Attribute','Description','Required']) }}
+{{ read_csv('education/template.csv') }}

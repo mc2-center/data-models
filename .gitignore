@@ -44,3 +44,6 @@ great_expectations/
 .DS_Store
 **/.DS_Store
 **/**/.DS_Store
+
+# MKDocs
+scripts/__pycache__

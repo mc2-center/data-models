@@ -1,1 +1,1 @@
-{{ read_csv('dataset/annotationProperty.csv', usecols=['Attribute','Description','Required']) }}
+{{ read_csv('dataset/template.csv') }}
