@@ -10,41 +10,30 @@ repo_name: data-models
 # Navigation
 nav:
   - Home: 
-    - Introduction: index.md
+    - index.md
     - MC2 Center Data Models:
       - Dataset Data Model: model/dataset.md
-      - Education Data Model: model/education.md
+      - Education Resource Data Model: model/education.md
       - Grant Data Model: model/grant.md
       - Person Data Model: model/person.md
       - Publication Data Model: model/publication.md
       - Tool Data Model: model/tool.md
   - Standard Terms:
+    - All terms: valid_values/all_terms.md
     - Terms by model:
-      - Consortium: vocab/consortium.md
-      - Dataset: vocab/dataset.md
-      - Education: vocab/education.md
-      - Grant: vocab/grant.md
-      - Institution: vocab/institution.md
-      - Person: vocab/person.md
-      - Project: vocab/project.md
-      - Publication: vocab/publication.md
-      - Theme: vocab/theme.md
-      - Tool: vocab/tool.md
-    - Shared models:
-      - Assay: vocab/shared/assay.md
-      - Biological sex: vocab/shared/sex.md
-      - Disease status: vocab/shared/disease_status.md
-      - Element type: vocab/shared/element_type.md
-      - Matrix type: vocab/shared/matrix_type.md
-      - Preservation: vocab/shared/preservation.md
-      - Specimen: vocab/shared/specimen.md
-      - Tissue: vocab/shared/tissue.md
-      - Tumor: vocab/shared/tumor.md
-  - Next steps: next-steps.md
+      - Dataset: valid_values/dataset.md
+      - Education Resource: valid_values/education.md
+      - Grant: valid_values/grant.md
+      - Person: valid_values/person.md
+      - Publication: valid_values/publication.md
+      - Tool: valid_values/tool.md
+  - Next Steps: next-steps.md
 
 # Theme configuration
 theme:
   name: material
+  font:
+    text: DM Sans
   palette:
     - media: "(prefers-color-scheme: light)" 
       scheme: default
@@ -65,11 +54,10 @@ theme:
       info: octicons/info-16
   features:
     - content.code.copy
+    - navigation.indexes
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.indexes
-    - navigation.footer
-    - navigation.sections
     - search.highlight
     - search.share
     - search.suggest
