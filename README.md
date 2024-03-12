@@ -15,7 +15,7 @@
 
 ---
 
-📖 **Data Models Explorer**: https://mc2-center.github.io/data-models/
+🔎 **Data Models Explorer**: https://mc2-center.github.io/data-models/
 
 ---
 
