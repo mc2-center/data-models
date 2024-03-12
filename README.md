@@ -34,7 +34,7 @@ a new `mc2.model.csv`` and `mc2.model.jsonld`` will automatically update. See
 documentation below for more information.
 
 
-## Updating the Data Model
+## How to Contribute
 
 ### Adding a new valid value
  
@@ -62,16 +62,27 @@ made, the valid values will automatically get added to `mc2.model.csv` and its
 JSON-LD file.
 
 
-## Release Notes 
+### Releasing a new version
 
-This repository adopts [Semantic Versioning] (SemVer), which provides a
-standard way of versioning software based on meaningful changes in
-functionality.
+This repository has a workflow in-place that will auto-update the next release
+draft.  Whenever a PR is merged, the workflow will run and add it to the draft.
+
+For versioning, we adopt [Semantic Versioning] (SemVer), which the workflow will
+also determine, based on the PR(s) included in the next planned release. Specifically:
+   * any PR labeled with `major` will increment `x`
+   * any PR labeled with `minor` will increment `y`
+   * any PR labeled with `patch` will increment `z`
+
+> [!NOTE]
+> Only _one_ number will increment, where `x` will take precedence, followed by
+> `y`, then finally `z`.
+
+To release a new version, go to [Releases] > edit the release draft > **Publish release**
 
 
-## Documentation
+### Updating documentation
 
-The documentation uses [MkDocs], [mkdocs-table-reader-plugin], and the
+The Data Models Explorer uses [MkDocs], [mkdocs-table-reader-plugin], and the
 [Material theme]. All docs are located in the `docs` directory and
 are written in Markdown format.
 
@@ -115,6 +126,7 @@ are written in Markdown format.
 
 [Cancer Complexity Knowledge Portal]: https://cancercomplexity.synapse.org/
 [Semantic Versioning]: https://semver.org/
+[Release]: https://github.com/mc2-center/data-models/releases
 [MKDocs]: https://www.mkdocs.org/
 [mkdocs-table-reader-plugin]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [Material theme]: https://squidfunk.github.io/mkdocs-material/
