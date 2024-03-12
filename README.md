@@ -25,16 +25,32 @@ This repository contains the released versions of the JSON-LD schemas for the
 [Cancer Complexity Knowledge Portal] (CCKP), and more broadly, MC2 Center.
 You can learn more about the schemas/data models and other aspects of this
 project in our portal documentation - coming soon! The MC2 Center data model
-is in both a csv and jsonld format. It is separated into modules (see the
-module folder) where various peices of the data model can be updated,
-including the standard terms/valid values (please see "Adding a new valid
-value" below). To edit the data model, create a new branch, make edits, and
-when ready, create a pull request. Once the new branch is merged with `main`,
-a new `mc2.model.csv`` and `mc2.model.jsonld`` will automatically update. See
-documentation below for more information.
+is in both a csv and jsonld format.
+
+### Folder Structure
+Valid values are separated into modules (see the `modules` folder), where
+various pieces of the data model can be updated, including the standard
+terms/valid values (please see "Adding a new valid value" below).
 
 
 ## How to Contribute
+
+### Development process
+
+To edit the data model, modify the project in your own fork or in a feature
+branch, then issue a PR once you are ready for the MC2 Center internal data
+team to review and discuss.
+
+Generally, you should:
+
+1. **Branch off `main` and develop your contribution**. Ensure `main` is
+   up-to-date in your local project, then create a new feature branch.
+2. Push changes to the fork.
+3. **Open a PR to (upstream) `main` once ready.**  Follow our PR template.
+   Someone from the MC2 Center internal data team will then review, and either
+   approve + merge or ask for futher discussion.
+4. If approved and once the branch is merged into `main`, a workflow will run
+   to generate a new `mc2.model.csv` and `mc2.model.jsonld`.
 
 ### Adding a new valid value
  
