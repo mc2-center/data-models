@@ -13,6 +13,12 @@
   <img alt="GitHub" src="https://img.shields.io/github/license/mc2-center/mc2-data-models?style=flat-square&color=orange">
 </p>
 
+---
+
+📖 **Data Models Explorer**: https://mc2-center.github.io/data-models/
+
+---
+
 ## Overview
 
 This repository contains the released versions of the JSON-LD schemas for the
