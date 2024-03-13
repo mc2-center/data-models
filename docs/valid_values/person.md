@@ -9,6 +9,15 @@ List of standard terms for the [Person Data Model](../model/person.md).
 </div>
 
 
+## Attribute: `Consent For Portal Display`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('person/consent_for_portal_display.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
 ## Attribute: `Last Known Institution`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
@@ -32,6 +41,15 @@ List of standard terms for the [Person Data Model](../model/person.md).
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
 {{ read_csv('grant/grant_number.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
+## Attribute: `Portal Display`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('person/portal_display.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
 </div>
 
