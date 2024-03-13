@@ -187,7 +187,7 @@ The Data Models Explorer uses [MkDocs], [mkdocs-table-reader-plugin], and the
 [open a ticket]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
 [Data Curator App (DCA)]: https://dca.app.sagebionetworks.org/
 [Semantic Versioning]: https://semver.org/
-[Release]: https://github.com/mc2-center/data-models/releases
+[Releases]: https://github.com/mc2-center/data-models/releases
 [MKDocs]: https://www.mkdocs.org/
 [mkdocs-table-reader-plugin]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [Material theme]: https://squidfunk.github.io/mkdocs-material/
