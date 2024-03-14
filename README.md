@@ -116,8 +116,8 @@ Generally, you should:
    Someone from the MC2 Center internal data team will then review, and either
    approve + merge or ask for futher discussion.
 
-4. Once the branch is merged into `main` (pending approval), a workflow will
-   run to generate a new `mc2.model.csv` and `mc2.model.jsonld`.
+4. Once the changes are merged into `main`, a workflow will run to generate
+   a new `mc2.model.csv` and `mc2.model.jsonld`.
 
 
 ### Releasing a new version
@@ -137,7 +137,7 @@ release. Specifically:
   > Only _one_ number will increment, where `x` will take precedence, followed
   > by `y`, then finally `z`.
 
-To release a new version, go to [Releases] > edit the release draft > **Publish release**
+To release a new version, go to [Releases] > edit the release draft > **Publish release**.
 
 
 ### Updating documentation
