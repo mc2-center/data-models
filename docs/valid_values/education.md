@@ -54,6 +54,15 @@ List of standard terms for the [Education Resource Data Model](../model/educatio
 </div>
 
 
+## Attribute: `Resource License`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('tool/tool_license.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
 ## Attribute: `Resource Media Accessibility`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
