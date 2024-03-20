@@ -28,6 +28,7 @@ nav:
       - Publication: valid_values/publication.md
       - Tool: valid_values/tool.md
   - Next Steps: next-steps.md
+  - Contributing: contributing.md
 
 # Theme configuration
 theme:
