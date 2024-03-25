@@ -2,7 +2,7 @@ name: Draft a new data model release
 
 on:
   workflow_run:
-    workflows: [ Check if PR has requird labels ]
+    workflows: [ Check if PR has required labels ]
     types: [ completed ]
 
 jobs:
