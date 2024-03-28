@@ -97,8 +97,13 @@ A collection of ready-for-use templates are available in `./templates`, that
 can be used with the [Data Curator App (DCA)] to add/update entities on the
 CCKP.
 
+## How to Contribute
+
+Thank you helping us continuously improve the MC2 Center data models!  To
+contribute, please read our [contributing guidelines] on the docs site.
 
 
 [Cancer Complexity Knowledge Portal]: https://cancercomplexity.synapse.org/
 [open a ticket]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
 [Data Curator App (DCA)]: https://dca.app.sagebionetworks.org/
+[Contributing guidelines]: https://mc2-center.github.io/data-models/contributing/
