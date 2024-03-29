@@ -1,2 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
 Component,"Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",,,TRUE,,,,,
+Project key,"Unique ProjectView_id foreign key(s) that group the resource with other components, as part of the same grant-associated studies. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,list like
+Study key,"The unique Study_id foreign keys associated with the resource, found in the grant Study information. Please provide multiple values as a comma-separated list.",,,TRUE,,,,,list like
+Person key,"Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",,,TRUE,,,,,list like
+Consortium key,"Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",,,TRUE,,,,,list like
+Grant key,"Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",,,TRUE,,,,,list like
