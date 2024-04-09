@@ -1,3 +1,4 @@
-Please read the [Contributing] guidelines on the docs site.
+Please read the [Contributing guidelines] on the Data Models Explorer
+docs site.
 
-[Contributing]: https://mc2-center.github.io/data-models/contributing/
+[Contributing guidelines]: https://mc2-center.github.io/data-models/contributing/

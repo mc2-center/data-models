@@ -16,7 +16,12 @@ Generally, you should:
 2. **Branch off `main` and develop your contribution(s)**. Ensure `main` is
    up-to-date in your local project before creating a new feature branch.
 
-3. **Push changes** to the feature branch
+3. **Push changes** to the feature branch.  For best practice:
+      - commit related changes together
+      - commit often
+      - avoid committing half-done work
+      - write git messages that are brief enough to read but detailed
+        enough to understand
 
 4. **Open a PR to (upstream) `main` once ready.** Follow our PR template.
    Someone from the MC2 Center internal data team will then review, and either

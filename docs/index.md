@@ -1,5 +1,5 @@
 <h1 align="center">
-  MC<sup>2</sup> Center Data Models Dictionary
+  MC<sup>2</sup> Center Data Models Explorer
 </h1>
 
 <p align="center">
