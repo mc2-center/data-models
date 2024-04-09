@@ -1,7 +1,7 @@
 # Project
-site_name: "MC2 Center Data Model Dictionary"
+site_name: "MC2 Center Data Models Explorer"
 site_description: >-
-  Versioned history of the MC2 Center data model.
+  Versioned history of the MC2 Center data models.
 
 # Repository
 repo_url: https://github.com/mc2-center/data-models
