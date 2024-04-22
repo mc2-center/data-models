@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Study,Studies associated with a grant,,"Component, Study_id, Grant key, Project key, Study Name, Study Description, Study Investigator, Study Reuse Requirements",FALSE,,,Grant,,
+Study,Studies associated with a grant,,"Component, Study_id, Grant key, Project key, Study Name, Study Description, Study Investigator, Person key, Study Reuse Statement",FALSE,,,,,
 Study Name,Name of the study,,,TRUE,,,,,str
 Study Description,"Description of the study, including the types of experimental assays, model systems, types of analysis, etc.",,,TRUE,,,,,str
 Study Investigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,,,TRUE,,,,,list like
-Study Reuse Requirements,"The funder-, contributor-, patient-, etc., derived requirements that must be satisfied as a term of reusing the resource(s).",,,TRUE,,,,,list like
+Study Reuse Statement,"The funder-, contributor-, patient-, etc., derived content that includes terms, conditions, or statements associated with accessing and reusing the resource(s).",,,FALSE,,,,,str
 Study_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
