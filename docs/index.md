@@ -22,7 +22,7 @@ project by key, value, or descriptions.
 ### Next Steps
 
 To start contributing to your resources on the Cancer Complexity Knowledge
-Portal (CCKP), please read [our guidelines on how to contribute].
+Portal (CCKP), please read [our CCKP docs].
 
 ---
 
@@ -31,9 +31,13 @@ Portal (CCKP), please read [our guidelines on how to contribute].
 We are always looking for ways to improve our data models.  If there is
 an issue with an existing term - or if you have a suggestion - [let us know]!
 
-Please note that changing existing terminology may result in breaking
-changes downstream, so not all suggestions will be considered unless
-they are well-justified.
+Or, if you would like to contribute to the project directly, read our
+[contribution guidelines].
 
-[our guidelines on how to contribute] https://help.cancercomplexity.synapse.org/doc/contributing-and-updating-data-in-the-portal
+!!!important
+    Changing existing terminology may result in breaking changes downstream,
+    so not all suggestions may be considered unless they are well-justified.
+
+[our CCKP docs]: https://help.cancercomplexity.synapse.org/doc/contributing-and-updating-data-in-the-portal
+[contribution guidelines]: https://mc2-center.github.io/data-models/contributing/
 [let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
