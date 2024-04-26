@@ -104,4 +104,4 @@ please reach out to us on the [Discussions board]!
 [mkdocs-table-reader-plugin]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [Material theme]: https://squidfunk.github.io/mkdocs-material/
 [pandas]: https://pandas.pydata.org/docs/index.html
-[Discussion board]: https://github.com/mc2-center/data-models/discussions
+[Discussions board]: https://github.com/mc2-center/data-models/discussions
