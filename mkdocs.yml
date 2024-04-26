@@ -9,9 +9,8 @@ repo_name: data-models
 
 # Navigation
 nav:
-  - Home: 
-    - index.md
-    - MC2 Center Data Models:
+  - Home: index.md
+  - Data Models:
       - Dataset Data Model: model/dataset.md
       - Education Resource Data Model: model/education.md
       - Grant Data Model: model/grant.md
