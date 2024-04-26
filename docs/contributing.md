@@ -1,6 +1,6 @@
 Thank you for contributing to the MC2 Center data models project! This page
-will guide you through our development workflow and data model releases, as
-well as how to update this docs site.
+will guide you through our development workflow, data model release process, 
+and how to update this docs site.
 
 ### Development process
 
@@ -92,6 +92,11 @@ The Data Models Explorer uses [MkDocs], [mkdocs-table-reader-plugin], and the
     pip install mkdocs mkdocs-material mkdocs-table-reader-plugin pandas
     ```
 
+### I want to contribute something else...
+
+If there is something you'd like to contribute that was not covered on this page,
+please reach out to us on the [Discussions board]!
+
 [data-models repo]: https://github.com/mc2-center/data-models
 [Semantic Versioning]: https://semver.org/
 [Releases]: https://github.com/mc2-center/data-models/releases
@@ -99,3 +104,4 @@ The Data Models Explorer uses [MkDocs], [mkdocs-table-reader-plugin], and the
 [mkdocs-table-reader-plugin]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [Material theme]: https://squidfunk.github.io/mkdocs-material/
 [pandas]: https://pandas.pydata.org/docs/index.html
+[Discussion board]: https://github.com/mc2-center/data-models/discussions
