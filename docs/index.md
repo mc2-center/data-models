@@ -19,11 +19,21 @@ project by key, value, or descriptions.
 
 ---
 
+### Next Steps
+
+To start contributing to your resources on the Cancer Complexity Knowledge
+Portal (CCKP), please read [our guidelines on how to contribute].
+
+---
+
 ### Found an error?
 
 We are always looking for ways to improve our data models.  If there is
-an issue with an existing term - or if you have a suggestion - [let us know](https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+)!
+an issue with an existing term - or if you have a suggestion - [let us know]!
 
 Please note that changing existing terminology may result in breaking
 changes downstream, so not all suggestions will be considered unless
 they are well-justified.
+
+[our guidelines on how to contribute] https://help.cancercomplexity.synapse.org/doc/contributing-and-updating-data-in-the-portal
+[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
