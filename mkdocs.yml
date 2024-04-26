@@ -9,9 +9,8 @@ repo_name: data-models
 
 # Navigation
 nav:
-  - Home: 
-    - index.md
-    - MC2 Center Data Models:
+  - Home: index.md
+  - Data Models:
       - Dataset Data Model: model/dataset.md
       - Education Resource Data Model: model/education.md
       - Grant Data Model: model/grant.md
@@ -27,8 +26,7 @@ nav:
       - Person: valid_values/person.md
       - Publication: valid_values/publication.md
       - Tool: valid_values/tool.md
-  - Next Steps: next-steps.md
-  - Contributing: contributing.md
+  - Contributing to the Data Model: contributing.md
 
 # Theme configuration
 theme:
