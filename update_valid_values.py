@@ -7,8 +7,8 @@ containing the full list of valid values for the data models.
 
 import os
 
-import yaml
 import pandas as pd
+import yaml
 
 PARENT_DIR = "modules"
 
@@ -24,10 +24,13 @@ def main(mapping):
         # Read all columns as strings, so that `TRUE/FALSE` values are
         # not rewritten as `True/False`. NaN values should also not be
         # used.
-        df = (pd.read_csv(to_update, dtype=str, keep_default_na=False)
-              .set_index('Attribute'))
+        df = (
+            pd.read_csv(to_update, dtype=str, keep_default_na=False)
+            .set_index("Attribute")
+        )
 
         for attribute in attributes:
+            cv_file = os.path.join(PARENT_DIR, attribute["src"])
             cv_df = pd.read_csv(
                 cv_file, dtype=str,
                 keep_default_na=False,
@@ -36,13 +39,18 @@ def main(mapping):
             cv_terms = cv_df["Attribute"].tolist()
             cv_nonpreferred = cv_df["Nonpreferred Terms"].tolist()
 
+            # Replace list of valid values in annotationProperty file
+            # with latest terms for the given attribute.
+            df.loc[attribute["name"], "Valid Values"] = ", ".join(cv_terms)
+
             # Add latest terms to list of all valid values.
             terms_to_add = pd.DataFrame()
             terms_to_add["valid_value"] = cv_terms
             terms_to_add["nonpreferred_values"] = cv_nonpreferred
+            terms_to_add["category"] = os.path.basename(cv_file).split(".")[0]
             all_terms = pd.concat([all_terms, terms_to_add])
         df.to_csv(to_update)
-    all_terms.drop_duplicates().to_csv('all_valid_values.csv', index=False)
+    all_terms.drop_duplicates().to_csv("all_valid_values.csv", index=False)
 
 
 if __name__ == "__main__":
