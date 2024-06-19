@@ -1,7 +1,7 @@
 """Update Valid Values
 
 For every module listed in the mapping file, update the list of valid
-values in annotationProperty.csv.  This will also generate a file 
+values in annotationProperty.csv.  This will also generate a file
 containing the full list of valid values for the data models.
 """
 
