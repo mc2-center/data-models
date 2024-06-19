@@ -15,7 +15,9 @@ PARENT_DIR = "modules"
 
 def main(mapping):
     """Main function."""
-    all_terms = pd.DataFrame(columns=["category", "valid_value"])
+    all_terms = pd.DataFrame(
+        columns=["category", "valid_value", "nonpreferred_values"]
+    )
     for module, attributes in mapping.items():
         to_update = os.path.join(PARENT_DIR, module, "annotationProperty.csv")
 
@@ -26,16 +28,18 @@ def main(mapping):
               .set_index('Attribute'))
 
         for attribute in attributes:
-            cv_file = os.path.join(PARENT_DIR, attribute['src'])
-            cv_terms = pd.read_csv(cv_file, dtype=str, keep_default_na=False)['Attribute'].tolist()
-            # Replace list of valid values with latest terms for the
-            # given attribute.
-            df.loc[attribute['name'], 'Valid Values'] = ", ".join(cv_terms)
+            cv_df = pd.read_csv(
+                cv_file, dtype=str,
+                keep_default_na=False,
+                usecols=["Attribute", "Nonpreferred Terms"]
+            )
+            cv_terms = cv_df["Attribute"].tolist()
+            cv_nonpreferred = cv_df["Nonpreferred Terms"].tolist()
 
             # Add latest terms to list of all valid values.
             terms_to_add = pd.DataFrame()
-            terms_to_add['valid_value'] = cv_terms
-            terms_to_add['category'] = os.path.basename(cv_file).split(".")[0]
+            terms_to_add["valid_value"] = cv_terms
+            terms_to_add["nonpreferred_values"] = cv_nonpreferred
             all_terms = pd.concat([all_terms, terms_to_add])
         df.to_csv(to_update)
     all_terms.drop_duplicates().to_csv('all_valid_values.csv', index=False)
