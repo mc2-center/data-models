@@ -1,8 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Biospecimen,Metadata attributes for describing a tissue or tumor sample,,"Component, Biospecimen_id, Project Key, Study Key, Individual ID, Biospecimen ID, Biospecimen Type, Biospecimen Species, Sex, Age at Sample Collection, Biospecimen Tumor Type, Tumor Subtype, Tumor Grade, Biospecimen Composition, Known Metastasis Sites, Survival Outcome, Preservation Method, Site of Resection or Biopsy, Site of Origin, Timepoint, Health Care Site",FALSE,,,,,
-Biospecimen_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
-Individual ID,ID associated with a study participant,,,TRUE,,,,HTAN,
-Biospecimen ID,ID associated with a biosample,,,TRUE,,,,HTAN,
+Biospecimen,Metadata attributes for describing a tissue or tumor sample,,"Component, Biospecimen_id, Study Key, Individual key, Biospecimen Type, Biospecimen Species, Sex, Age at Sample Collection, Biospecimen Tumor Type, Tumor Subtype, Tumor Grade, Biospecimen Composition, Known Metastasis Sites, Survival Outcome, Preservation Method, Site of Resection or Biopsy, Site of Origin, Timepoint, Health Care Site",FALSE,,,,,
+Biospecimen_id,"Unique ID associated with a biosample, used as a key for record linking and updates",,,TRUE,,,,MC2,unique
 Biospecimen Type,The type of biospecimen,"Tissue, Blood, Analyte, Mouth Rinse, Stool, Urine, Ascites, Sputum, Fluids, Bone Marrow, Cells",,TRUE,,,,HTAN,
 Biospecimen Species,The species from which the biospecimen originates,"African Bush Elephant, Armadillo, Asian Elephant, Boar, Cat, Chicken, Cow, Dog, Escherichia coli, Guinea Pig, Horse, Human, Mouse, Opossum, Rabbit, Rat, Rhesus monkey, Sheep, Trichoplax adhaerens, Unknown, Unspecified, Worm, Yeast, Fruit Fly",,TRUE,,,,MC2,
 Sex,Biological sex associated with the specimen donor,"M, F, Other, Unknown",,FALSE,,,,MC2/STE,str
