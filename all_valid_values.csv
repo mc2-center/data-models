@@ -991,6 +991,12 @@ assay,Targeted Error Correction Sequencing
 assay,Tuba-Seq
 assay,SDS-PAGE
 assay,Cell Fractionation
+processLevel,Level 1
+processLevel,Level 2
+processLevel,Level 3
+processLevel,Level 4
+processLevel,Auxilliary
+processLevel,Not Applicable
 ed_topic,Computational Model Development
 ed_topic,Computational Resource
 ed_topic,Diversity/Equity/Inclusion
@@ -2160,6 +2166,30 @@ project_type,Core
 project_type,Project
 publication_accessibility,Open Access
 publication_accessibility,Restricted Access
+duo,IRB
+duo,HMB
+duo,PUB
+duo,US
+duo,NPOA
+duo,COL
+duo,NCU
+duo,NPUNCU
+duo,RS
+duo,TS
+duo,NRES
+duo,NPU
+duo,DUM
+duo,POA
+duo,MOR
+duo,GSO
+duo,RTN
+duo,CC
+duo,NMDS
+duo,IS
+duo,GS
+duo,DS
+duo,GRU
+duo,PS
 tool_accessibility,Open Access
 tool_accessibility,Open Access (With Restrictions)
 tool_accessibility,Restricted Access
