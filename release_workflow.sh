@@ -5,7 +5,7 @@
 #This script will:
 #- update controlled vocabulary sets listed in annotationProperty.csv files and the all_valid_values.csv
 #- build a model CSV and convert to JSON-LD, using schematic
-#- create CSV template files, saving them in a new 'template' folder
+#- create XLSX template files, saving them in a new 'template' folder
 
 #Intended for use when creating a data model release package.
 
@@ -15,7 +15,7 @@
 
 config="$1"
 homedir="$2"
-datatypes="DataDSP Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
+datatypes="DataDSP Individual Study Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
 
 cd "$homedir"
 
@@ -27,5 +27,5 @@ make
 
 for i in $datatypes;
 do
-	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" || continue
+	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s || continue
 done
