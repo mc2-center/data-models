@@ -1,2 +1,2 @@
-Component,ProjectView_id,Project Name,Project Type,Project Description,Project Investigator,Project Consortium Name,Project Grant Number
-ProjectView,,,,,,,
+Component,ProjectView_id,Grant key,Project Name,Project Type,Project Description,Project Investigator
+ProjectView,,,,,,
