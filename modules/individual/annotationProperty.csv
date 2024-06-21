@@ -1,0 +1,3 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Individual,Information about models and individuals from which biospecimen(s) were collected.,,"Component, Individual_id, Study key",FALSE,,,,,
+Individual_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
