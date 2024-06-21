@@ -15,7 +15,7 @@
 
 config="$1"
 homedir="$2"
-datatypes="Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
+datatypes="DataDSP Individual Study Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
 
 cd "$homedir"
 
@@ -27,5 +27,5 @@ make
 
 for i in $datatypes;
 do
-	schematic manifest -c "$config" get -dt "$i" -oxlsx "$homedir/templates/$i.xlsx" || continue
+	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s || continue
 done
