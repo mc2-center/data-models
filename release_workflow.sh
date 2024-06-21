@@ -5,7 +5,8 @@
 #This script will:
 #- update controlled vocabulary sets listed in annotationProperty.csv files and the all_valid_values.csv
 #- build a model CSV and convert to JSON-LD, using schematic
-#- create XLSX template files, saving them in a new 'template' folder
+#- create CSV template files, saving them in a new 'template' folder
+#- generate Google Sheet links and print to terminal
 
 #Intended for use when creating a data model release package.
 
