@@ -2,7 +2,7 @@
   - name: Biospecimen Type
     src: shared/specimenType.csv
   - name: Biospecimen Species
-    src: dataset/dataset_species.csv
+    src: shared/dataset_species.csv
   - name: Biospecimen Tumor Type
     src: shared/tumorType.csv
   - name: Tumor Grade
@@ -30,9 +30,9 @@ consortium:
 
 dataset:
   - name: Dataset File Formats
-    src: dataset/dataset_file_format.csv
+    src: shared/dataset_file_format.csv
   - name: Dataset Species
-    src: dataset/dataset_species.csv
+    src: shared/dataset_species.csv
   - name: Dataset Grant Number
     src: grant/grant_number.csv
   - name: Dataset Assay
@@ -41,6 +41,22 @@ dataset:
     src: shared/tissue.csv
   - name: Dataset Tumor Type
     src: shared/tumorType.csv
+
+dsp:
+  - name: DSP Dataset File Formats
+    src: shared/dataset_file_format.csv
+  - name: DSP Dataset Species
+    src: shared/dataset_species.csv
+  - name: DSP Dataset Grant Number
+    src: grant/grant_number.csv
+  - name: DSP Dataset Type
+    src: shared/assay.csv
+  - name: DSP Dataset Tissue
+    src: shared/tissue.csv
+  - name: DSP Dataset Tumor Type
+    src: shared/tumorType.csv
+  - name: DSP Dataset Level
+    src: shared/processLevel.csv
 
 education:
   - name: Resource Topic
@@ -134,6 +150,10 @@ publication:
   - name: Publication Tumor Type
     src: shared/tumorType.csv
 
+shared:
+  - name: Data Use Codes
+    src: shared/duo.csv
+    
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
