@@ -1,0 +1,3 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Model,Information about a non-human organism or any cell line from which experimental data is derived.,,,FALSE,,,Study,,
+Model_id,A unique identifier used by schematic for record updates and as a reference key in other schemas.,,,TRUE,,,,,unique
