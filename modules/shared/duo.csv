@@ -1,0 +1,25 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+IRB,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.,,,,,,,,,,DUO:0000021,,,ethics approval required
+HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,,,,,,,,,,DUO:0000006,,,health or medical or biomedical research
+PUB,This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.,,,,,,,,,,DUO:0000019,,,publication required
+US,This data use modifier indicates that use is limited to use by approved users.,,,,,,,,,,DUO:0000026,,,user specific restriction
+NPOA,"This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",,,,,,,,,,DUO:0000044,,,population origins or ancestry research prohibited
+COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,,,,,,,,,,DUO:0000020,,,collaboration required
+NCU,This data use modifier indicates that use of the data is limited to not-for-profit use.,,,,,,,,,,DUO:0000046,,,non-commercial use only
+NPUNCU,"This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",,,,,,,,,,DUO:0000018,,,"not for profit, non commercial use only"
+RS,This data use modifier indicates that use is limited to studies of a certain research type.,,,,,,,,,,DUO:0000012,,,research specific restrictions
+TS,This data use modifier indicates that use is approved for a specific number of months.,,,,,,,,,,DUO:0000025,,,time limit on use
+NRES,This data use permission indicates there is no restriction on use.,,,,,,,,,,DUO:0000004,,,no restriction
+NPU,This data use modifier indicates that use of the data is limited to not-for-profit organizations.,,,,,,,,,,DUO:0000045,,,not for profit organisation use only
+DUM,Data use modifiers indicate additional conditions for use.,,,,,,,,,,DUO:0000017,,,data use modifier
+POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,,,,,,,,,,DUO:0000011,,,population origins or ancestry research only
+MOR,This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.,,,,,,,,,,DUO:0000024,,,publication moratorium
+GSO,"This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)",,,,,,,,,,DUO:0000016,,,genetic studies only
+RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,,,,,,,,,,DUO:0000029,,,return to database or resource
+CC,This data use modifier indicates that use is allowed for clinical use and care.,,,,,,,,,,DUO:0000043,,,clinical care use
+NMDS,"This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).",,,,,,,,,,DUO:0000015,,,no general methods research
+IS,This data use modifier indicates that use is limited to use within an approved institution.,,,,,,,,,,DUO:0000028,,,institution specific restriction
+GS,This data use modifier indicates that use is limited to within a specific geographic region.,,,,,,,,,,DUO:0000022,,,geographical restriction
+DS,This data use permission indicates that use is allowed provided it is related to the specified disease.,,,,,,,,,,DUO:0000007,,,disease specific research
+GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,,,,,,,,,DUO:0000042,,,general research use
+PS,This data use modifier indicates that use is limited to use within an approved project.,,,,,,,,,,DUO:0000027,,,project specific restriction
