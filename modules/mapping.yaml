@@ -42,7 +42,7 @@ dataset:
   - name: Dataset Tumor Type
     src: shared/tumorType.csv
 
-dsp:
+sharingPlans:
   - name: DSP Dataset File Formats
     src: shared/dataset_file_format.csv
   - name: DSP Dataset Species
