@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
 Project,Projects associated with consortia grants,,"Component, Project Name, Project Type, Project Description",FALSE,,,Grant,,
 Project Name,Name of the project,,,TRUE,,,,,
-Project Type,Type of project,"Core, Project",,TRUE,,,,,
+Project Type,Type of project,,,TRUE,,,,,
 Project Description,Description of the project,,,TRUE,,,,,
 Project Investigator,Investigator(s) associated witht the project. 1...*,,,TRUE,,,,,list like
 Project View,The denormalized manifest for project submission.,,"Component, ProjectView_id, Project Name, Project Type, Project Description, Project Investigator, Project Consortium Name, Project Grant Number",FALSE,,,"Project, Grant",,
