@@ -1,0 +1,2 @@
+Component,NanoStringGeoMXROISegmentAnnotation_id,Parent Biospecimen ID,Scan name,ROI Name,AOI Name,Tags,ROI X Coordinate,ROI Y Coordinate,AOI X Coordinate,AOI Y Coordinate,QC status,Scan Height,Scan Width,Scan Offset X,Scan Offset Y,Binding Density,Positive norm factor,Surface area,Nuclei count,Tissue Stain,Slide name,Raw reads,Stitched reads,Aligned reads,Deduplicated reads,In Situ Negative median,Biological probe median,Sequencing Saturation,MapQ30
+NanoStringGeoMXROISegmentAnnotation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
