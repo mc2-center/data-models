@@ -43,7 +43,7 @@ jobs:
           python3.10 -m venv .venv
           chmod 755 .venv/bin/activate
           source .venv/bin/activate
-          pip3.10 install schematicpy==${{ matrix.schematic-version }}
+          pip3.10 install schematicpy==${{ matrix.schematic-version }} ipython==8.18.1
           make CSV=$schema_filename
     
       - name: Commit files
