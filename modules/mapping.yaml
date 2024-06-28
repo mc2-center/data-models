@@ -5,23 +5,19 @@
     src: shared/dataset_species.csv
   - name: Biospecimen Tumor Type
     src: shared/tumorType.csv
-  - name: Tumor Grade
+  - name: Biospecimen Tumor Grade
     src: shared/tumorGrade.csv
   - name: Biospecimen Composition
     src: shared/specimenComp.csv
-  - name: Survival Outcome
-    src: shared/diseaseStatus.csv
-  - name: Preservation Method
+  - name: Biospecimen Preservation Method
     src: shared/preservation.csv
-  - name: Site of Resection or Biopsy
+  - name: Biospecimen Site of Resection or Biopsy
     src: shared/tissue.csv
-  - name: Site of Origin
+  - name: Biospecimen Site of Origin
     src: shared/tissue.csv
-  - name: Known Metastasis Sites
-    src: shared/tissue.csv
-  - name: Tumor Subtype
+  - name: Biospecimen Tumor Subtype
     src: shared/tumorSubtype.csv
-  - name: Sex
+  - name: Biospecimen Sex
     src: shared/biologicalSex.csv
 
 consortium:
