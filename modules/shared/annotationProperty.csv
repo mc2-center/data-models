@@ -1,3 +1,3 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
 Component,"Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",,,TRUE,,,,,
 Data Use Codes,"DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.","IRB, HMB, PUB, US, NPOA, COL, NCU, NPUNCU, RS, TS, NRES, NPU, DUM, POA, MOR, GSO, RTN, CC, NMDS, IS, GS, DS, GRU, PS",,FALSE,,,,Data Use Ontology,list like
