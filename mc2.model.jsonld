@@ -59896,7 +59896,7 @@
             "rdfs:label": "Project",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:ProjectType"
+                    "@id": "bts:Thing"
                 }
             ],
             "schema:isPartOf": {
@@ -59960,7 +59960,7 @@
                     "@id": "bts:Core"
                 },
                 {
-                    "@id": "bts:Project"
+                    "@id": "bts:Subproject"
                 }
             ],
             "sms:displayName": "Project Type",
@@ -59998,6 +59998,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Core",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Subproject",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Subproject",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ProjectType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Subproject",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

@@ -241,7 +241,7 @@ Person Educational Resources,"A list of educational resource identifiers associa
 PersonView_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
 Project,Projects associated with consortia grants,,"Component, Project Name, Project Type, Project Description",FALSE,,,Grant,,
 Project Name,Name of the project,,,TRUE,,,,,
-Project Type,Type of project,"Core, Project",,TRUE,,,,,
+Project Type,Type of project,"Core, Subproject",,TRUE,,,,,
 Project Description,Description of the project,,,TRUE,,,,,
 Project Investigator,Investigator(s) associated witht the project. 1...*,,,TRUE,,,,,list like
 Project View,The denormalized manifest for project submission.,,"Component, ProjectView_id, Project Name, Project Type, Project Description, Project Investigator, Project Consortium Name, Project Grant Number",FALSE,,,Grant,,
