@@ -49,7 +49,7 @@ sharingPlans:
     src: shared/dataset_species.csv
   - name: DSP Dataset Grant Number
     src: grant/grant_number.csv
-  - name: DSP Dataset Type
+  - name: DSP Dataset Assay
     src: shared/assay.csv
   - name: DSP Dataset Tissue
     src: shared/tissue.csv
