@@ -1,5 +1,14 @@
 List of standard terms for the [Dataset Sharing Plan Model](../model/DataDSP.md).
 
+## Attribute: `DSP Data Use Codes`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('shared/duo.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
 ## Attribute: `DSP Dataset Assay`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
