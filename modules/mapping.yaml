@@ -57,6 +57,8 @@ sharingPlans:
     src: shared/tumorType.csv
   - name: DSP Dataset Level
     src: shared/processLevel.csv
+  - name: DSP Data Use Codes
+    src: shared/duo.csv
 
 education:
   - name: Resource Topic
