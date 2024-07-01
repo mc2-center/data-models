@@ -13,7 +13,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
-{{ read_csv('dataset/dataset_file_format.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+{{ read_csv('shared/dataset_file_format.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
 </div>
 
@@ -31,7 +31,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
-{{ read_csv('dataset/dataset_species.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+{{ read_csv('shared/dataset_species.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
 </div>
 
