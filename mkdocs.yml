@@ -12,6 +12,7 @@ nav:
   - Home: index.md
   - Data Models:
       - Dataset Data Model: model/dataset.md
+      - Dataset Sharing Plan: model/DataDSP.md
       - Education Resource Data Model: model/education.md
       - Grant Data Model: model/grant.md
       - Person Data Model: model/person.md
@@ -21,6 +22,7 @@ nav:
     - All terms: valid_values/all_terms.md
     - Terms by model:
       - Dataset: valid_values/dataset.md
+      - Dataset Sharing Plan: valid_values/sharingPlans.md
       - Education Resource: valid_values/education.md
       - Grant: valid_values/grant.md
       - Person: valid_values/person.md
