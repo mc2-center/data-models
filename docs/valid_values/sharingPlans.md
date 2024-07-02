@@ -1,6 +1,15 @@
-List of standard terms for the [Dataset Data Model](../model/dataset.md).
+List of standard terms for the [Dataset Sharing Plan Model](../model/DataDSP.md).
 
-## Attribute: `Dataset Assay`
+## Attribute: `DSP Data Use Codes`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('shared/duo.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
+## Attribute: `DSP Dataset Assay`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
@@ -9,7 +18,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 </div>
 
 
-## Attribute: `Dataset File Formats`
+## Attribute: `DSP Dataset File Formats`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
@@ -18,7 +27,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 </div>
 
 
-## Attribute: `Dataset Grant Number`
+## Attribute: `DSP Dataset Grant Number`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
@@ -26,8 +35,15 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 
 </div>
 
+## Attribute: `DSP Dataset Level`
 
-## Attribute: `Dataset Species`
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('shared/processLevel.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+## Attribute: `DSP Dataset Species`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
@@ -36,7 +52,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 </div>
 
 
-## Attribute: `Dataset Tissue`
+## Attribute: `DSP Dataset Tissue`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
@@ -46,7 +62,7 @@ List of standard terms for the [Dataset Data Model](../model/dataset.md).
 
 
 
-## Attribute: `Dataset Tumor Type`
+## Attribute: `DSP Dataset Tumor Type`
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 

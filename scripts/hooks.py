@@ -3,6 +3,7 @@ import pandas as pd
 
 DATA_MODELS = [
     "dataset",
+    "sharingPlans",
     "education",
     "grant",
     "person",
