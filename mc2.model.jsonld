@@ -3046,7 +3046,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -6596,7 +6596,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -7019,7 +7019,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15221,7 +15221,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15244,7 +15244,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15267,7 +15267,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15290,7 +15290,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15313,7 +15313,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15336,7 +15336,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15359,7 +15359,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15382,7 +15382,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15405,7 +15405,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15428,7 +15428,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15451,7 +15451,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15474,7 +15474,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15497,7 +15497,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15520,7 +15520,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15543,7 +15543,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15566,7 +15566,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15589,7 +15589,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15612,7 +15612,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15635,7 +15635,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15658,7 +15658,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15681,7 +15681,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15704,7 +15704,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15727,7 +15727,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15750,7 +15750,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15773,7 +15773,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15796,7 +15796,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15819,7 +15819,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15842,7 +15842,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15865,7 +15865,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15888,7 +15888,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15911,7 +15911,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15934,7 +15934,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15957,7 +15957,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -15980,7 +15980,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16003,7 +16003,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16026,7 +16026,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16049,7 +16049,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16072,7 +16072,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16095,7 +16095,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16118,7 +16118,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16141,7 +16141,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16164,7 +16164,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16187,7 +16187,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16210,7 +16210,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16233,7 +16233,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16256,7 +16256,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16279,7 +16279,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16302,7 +16302,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16325,7 +16325,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16348,7 +16348,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16371,7 +16371,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16394,7 +16394,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16417,7 +16417,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16440,7 +16440,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16463,7 +16463,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16486,7 +16486,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16509,7 +16509,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16532,7 +16532,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16555,7 +16555,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16578,7 +16578,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16601,7 +16601,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16624,7 +16624,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16647,7 +16647,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16670,7 +16670,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16693,7 +16693,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16716,7 +16716,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16739,7 +16739,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16762,7 +16762,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16785,7 +16785,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16808,7 +16808,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16831,7 +16831,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16854,7 +16854,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16877,7 +16877,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16900,7 +16900,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16923,7 +16923,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16946,7 +16946,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16969,7 +16969,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -16992,7 +16992,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17015,7 +17015,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17038,7 +17038,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17061,7 +17061,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17084,7 +17084,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17107,7 +17107,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17130,7 +17130,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17153,7 +17153,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17176,7 +17176,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17199,7 +17199,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17222,7 +17222,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17248,7 +17248,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17271,7 +17271,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17294,7 +17294,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17317,7 +17317,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17340,7 +17340,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17363,7 +17363,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17386,7 +17386,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17409,7 +17409,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17432,7 +17432,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17455,7 +17455,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17478,7 +17478,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17501,7 +17501,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17524,7 +17524,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17547,7 +17547,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17570,7 +17570,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17593,7 +17593,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17616,7 +17616,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17639,7 +17639,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17662,7 +17662,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17685,7 +17685,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17708,7 +17708,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17731,7 +17731,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17754,7 +17754,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17777,7 +17777,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17800,7 +17800,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17823,7 +17823,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17846,7 +17846,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17872,7 +17872,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17895,7 +17895,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17918,7 +17918,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17941,7 +17941,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17964,7 +17964,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -17987,7 +17987,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18010,7 +18010,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18033,7 +18033,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18056,7 +18056,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18079,7 +18079,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18102,7 +18102,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18125,7 +18125,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18148,7 +18148,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18171,7 +18171,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18197,7 +18197,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18220,7 +18220,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18243,7 +18243,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18266,7 +18266,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18289,7 +18289,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18312,7 +18312,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18335,7 +18335,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18358,7 +18358,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18381,7 +18381,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18404,7 +18404,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18427,7 +18427,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18450,7 +18450,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18473,7 +18473,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18496,7 +18496,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18519,7 +18519,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18542,7 +18542,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18565,7 +18565,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18588,7 +18588,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18611,7 +18611,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18634,7 +18634,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18657,7 +18657,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18680,7 +18680,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18703,7 +18703,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18726,7 +18726,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18749,7 +18749,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18772,7 +18772,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18795,7 +18795,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18818,7 +18818,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18841,7 +18841,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18864,7 +18864,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18887,7 +18887,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18910,7 +18910,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18933,7 +18933,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18956,7 +18956,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -18979,7 +18979,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19002,7 +19002,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19025,7 +19025,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19048,7 +19048,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19071,7 +19071,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19094,7 +19094,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19117,7 +19117,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19140,7 +19140,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19163,7 +19163,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19186,7 +19186,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19209,7 +19209,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19232,7 +19232,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19255,7 +19255,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19278,7 +19278,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19301,7 +19301,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19324,7 +19324,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19347,7 +19347,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19370,7 +19370,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19393,7 +19393,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19416,7 +19416,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19439,7 +19439,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19462,7 +19462,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19485,7 +19485,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19508,7 +19508,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19531,7 +19531,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19554,7 +19554,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19577,7 +19577,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19600,7 +19600,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19623,7 +19623,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19646,7 +19646,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19669,7 +19669,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19692,7 +19692,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19715,7 +19715,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19738,7 +19738,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19761,7 +19761,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19784,7 +19784,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19807,7 +19807,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19830,7 +19830,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19853,7 +19853,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19876,7 +19876,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19899,7 +19899,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19922,7 +19922,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19945,7 +19945,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19968,7 +19968,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -19991,7 +19991,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20014,7 +20014,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20037,7 +20037,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20060,7 +20060,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20083,7 +20083,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20106,7 +20106,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20129,7 +20129,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20152,7 +20152,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20175,7 +20175,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20198,7 +20198,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20221,7 +20221,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20244,7 +20244,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20267,7 +20267,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20290,7 +20290,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20313,7 +20313,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20336,7 +20336,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20359,7 +20359,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20382,7 +20382,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20405,7 +20405,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20428,7 +20428,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20451,7 +20451,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20474,7 +20474,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20497,7 +20497,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20520,7 +20520,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20543,7 +20543,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20566,7 +20566,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20589,7 +20589,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20612,7 +20612,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20635,7 +20635,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20658,7 +20658,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20681,7 +20681,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20704,7 +20704,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20727,7 +20727,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20750,7 +20750,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20773,7 +20773,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20796,7 +20796,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20819,7 +20819,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20842,7 +20842,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20865,7 +20865,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20888,7 +20888,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20911,7 +20911,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20934,7 +20934,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20957,7 +20957,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -20980,7 +20980,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21003,7 +21003,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21026,7 +21026,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21049,7 +21049,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21072,7 +21072,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21095,7 +21095,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21118,7 +21118,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21141,7 +21141,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21164,7 +21164,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21187,7 +21187,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21210,7 +21210,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21233,7 +21233,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21256,7 +21256,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21279,7 +21279,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21302,7 +21302,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21325,7 +21325,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21348,7 +21348,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21371,7 +21371,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21394,7 +21394,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21417,7 +21417,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21440,7 +21440,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21463,7 +21463,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21486,7 +21486,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21509,7 +21509,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21532,7 +21532,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21555,7 +21555,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21578,7 +21578,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21601,7 +21601,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21624,7 +21624,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21647,7 +21647,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21670,7 +21670,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21693,7 +21693,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21716,7 +21716,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21739,7 +21739,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21762,7 +21762,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21785,7 +21785,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21808,7 +21808,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21831,7 +21831,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21854,7 +21854,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21877,7 +21877,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21900,7 +21900,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21923,7 +21923,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21946,7 +21946,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21969,7 +21969,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -21992,7 +21992,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22015,7 +22015,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22038,7 +22038,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22061,7 +22061,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22084,7 +22084,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22107,7 +22107,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22130,7 +22130,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22153,7 +22153,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22176,7 +22176,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22199,7 +22199,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22222,7 +22222,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22245,7 +22245,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22268,7 +22268,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22294,7 +22294,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22317,7 +22317,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22340,7 +22340,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22363,7 +22363,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22386,7 +22386,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22409,7 +22409,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22432,7 +22432,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22455,7 +22455,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22478,7 +22478,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22501,7 +22501,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22524,7 +22524,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22547,7 +22547,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22570,7 +22570,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22593,7 +22593,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22616,7 +22616,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22639,7 +22639,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22662,7 +22662,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22685,7 +22685,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22708,7 +22708,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22731,7 +22731,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22754,7 +22754,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22777,7 +22777,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22800,7 +22800,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22823,7 +22823,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22846,7 +22846,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22869,7 +22869,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22892,7 +22892,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22915,7 +22915,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22938,7 +22938,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22961,7 +22961,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -22984,7 +22984,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23007,7 +23007,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23030,7 +23030,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23053,7 +23053,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23076,7 +23076,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23099,7 +23099,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23122,7 +23122,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23145,7 +23145,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23168,7 +23168,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23191,7 +23191,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23214,7 +23214,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23237,7 +23237,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23260,7 +23260,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23283,7 +23283,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23306,7 +23306,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23329,7 +23329,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23352,7 +23352,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23375,7 +23375,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23398,7 +23398,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23421,7 +23421,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23444,7 +23444,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23467,7 +23467,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23490,7 +23490,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23513,7 +23513,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23536,7 +23536,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23559,7 +23559,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23588,7 +23588,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23611,7 +23611,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23634,7 +23634,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23660,7 +23660,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23683,7 +23683,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23706,7 +23706,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23729,7 +23729,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23752,7 +23752,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23775,7 +23775,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23798,7 +23798,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23821,7 +23821,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -23844,7 +23844,7 @@
                     "@id": "bts:PublicationAssay"
                 },
                 {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetAssay"
                 }
             ],
             "schema:isPartOf": {
@@ -47843,6 +47843,9 @@
                     "@id": "bts:DataUseCodes"
                 },
                 {
+                    "@id": "bts:DSPDataUseCodes"
+                },
+                {
                     "@id": "bts:FileFormat"
                 },
                 {
@@ -63732,6 +63735,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63749,6 +63755,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63766,6 +63775,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63783,6 +63795,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63800,6 +63815,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63817,6 +63835,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63834,6 +63855,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63851,6 +63875,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63868,6 +63895,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63885,6 +63915,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63902,6 +63935,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63919,6 +63955,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63936,6 +63975,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63953,6 +63995,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63970,6 +64015,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -63987,6 +64035,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64004,6 +64055,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64021,6 +64075,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64038,6 +64095,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64055,6 +64115,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64072,6 +64135,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64089,6 +64155,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64106,6 +64175,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "schema:isPartOf": {
@@ -64144,10 +64216,7 @@
                     "@id": "bts:DSPDatasetName"
                 },
                 {
-                    "@id": "bts:DSPDatasetIdentifier"
-                },
-                {
-                    "@id": "bts:DSPDatasetType"
+                    "@id": "bts:DSPDatasetUrl"
                 },
                 {
                     "@id": "bts:DSPDatasetLevel"
@@ -64165,22 +64234,22 @@
                     "@id": "bts:DSPDatasetFileFormats"
                 },
                 {
-                    "@id": "bts:NumberofFiles"
+                    "@id": "bts:DSPNumberofFiles"
                 },
                 {
-                    "@id": "bts:NumberofSamples"
+                    "@id": "bts:DSPNumberofSamples"
                 },
                 {
-                    "@id": "bts:StorageSize"
+                    "@id": "bts:DSPStorageSize"
                 },
                 {
-                    "@id": "bts:PlannedUploadDate"
+                    "@id": "bts:DSPPlannedUploadDate"
                 },
                 {
-                    "@id": "bts:PlannedReleaseDate"
+                    "@id": "bts:DSPPlannedReleaseDate"
                 },
                 {
-                    "@id": "bts:DataUseCodes"
+                    "@id": "bts:DSPDataUseCodes"
                 }
             ],
             "sms:validationRules": []
@@ -64243,10 +64312,10 @@
             ]
         },
         {
-            "@id": "bts:DSPDatasetIdentifier",
+            "@id": "bts:DSPDatasetUrl",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DSPDatasetIdentifier",
+            "rdfs:comment": "The url of where the dataset is or will be stored.",
+            "rdfs:label": "DSPDatasetUrl",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -64255,1163 +64324,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "DSP Dataset Identifier",
+            "sms:displayName": "DSP Dataset Url",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DSPDatasetType",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The type of data contained in this group of files. Multiple values permitted, comma separated.",
-            "rdfs:label": "DSPDatasetType",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:10-cellRNASequencing"
-                },
-                {
-                    "@id": "bts:16SRibosomalGeneSequencingAssay"
-                },
-                {
-                    "@id": "bts:3'RNA-seq"
-                },
-                {
-                    "@id": "bts:3C"
-                },
-                {
-                    "@id": "bts:3C-qPCR"
-                },
-                {
-                    "@id": "bts:3DBioprinting"
-                },
-                {
-                    "@id": "bts:3DCellCulture"
-                },
-                {
-                    "@id": "bts:4C"
-                },
-                {
-                    "@id": "bts:5C"
-                },
-                {
-                    "@id": "bts:ATAC-Seq"
-                },
-                {
-                    "@id": "bts:ATPBioluminescenceAssay"
-                },
-                {
-                    "@id": "bts:AffinityPurificationMassSpectrometry"
-                },
-                {
-                    "@id": "bts:Allograft"
-                },
-                {
-                    "@id": "bts:AmpliconSequencing"
-                },
-                {
-                    "@id": "bts:AngiogenesisAssay"
-                },
-                {
-                    "@id": "bts:ApoptosisAssay"
-                },
-                {
-                    "@id": "bts:AtomicAbsorptionSpectrophotometry"
-                },
-                {
-                    "@id": "bts:AtomicAbsorptionSpectroscopy"
-                },
-                {
-                    "@id": "bts:AtomicForceMicroscopy"
-                },
-                {
-                    "@id": "bts:Autoradiography"
-                },
-                {
-                    "@id": "bts:Barcode-Seq"
-                },
-                {
-                    "@id": "bts:BicinchoninicAcidAssay"
-                },
-                {
-                    "@id": "bts:BindingAssay"
-                },
-                {
-                    "@id": "bts:Bio-LayerInterferometry"
-                },
-                {
-                    "@id": "bts:BioluminescenceImaging"
-                },
-                {
-                    "@id": "bts:BisulfiteSequencing"
-                },
-                {
-                    "@id": "bts:BrightfieldMicroscopy"
-                },
-                {
-                    "@id": "bts:BrillouinMicroscopy"
-                },
-                {
-                    "@id": "bts:CASFISH"
-                },
-                {
-                    "@id": "bts:CITE-seq"
-                },
-                {
-                    "@id": "bts:CLIP-qPCR"
-                },
-                {
-                    "@id": "bts:CRISPR"
-                },
-                {
-                    "@id": "bts:CUT&RUN"
-                },
-                {
-                    "@id": "bts:CUT&Tag-Sequencing"
-                },
-                {
-                    "@id": "bts:CellAdhesionAssay"
-                },
-                {
-                    "@id": "bts:CellProliferationAssay"
-                },
-                {
-                    "@id": "bts:CellViabilityAssay"
-                },
-                {
-                    "@id": "bts:Cell-spreadingAssay"
-                },
-                {
-                    "@id": "bts:CellTiter-GloLuminescentCellViabilityAssay"
-                },
-                {
-                    "@id": "bts:CerenkovLuminescenceImaging"
-                },
-                {
-                    "@id": "bts:ChIA-PET"
-                },
-                {
-                    "@id": "bts:ChIP-PCR"
-                },
-                {
-                    "@id": "bts:ChIP-Seq"
-                },
-                {
-                    "@id": "bts:ChIP-qPCRassay"
-                },
-                {
-                    "@id": "bts:ChemiluminescentAssay"
-                },
-                {
-                    "@id": "bts:ChemotaxisAssay"
-                },
-                {
-                    "@id": "bts:CircularDichroismSpectroscopy"
-                },
-                {
-                    "@id": "bts:Co-Immunoprecipitation"
-                },
-                {
-                    "@id": "bts:Co-cultureAssay"
-                },
-                {
-                    "@id": "bts:Collision-InducedDissociation"
-                },
-                {
-                    "@id": "bts:ColorimetricCellViabilityAssay"
-                },
-                {
-                    "@id": "bts:ComputationalModeling"
-                },
-                {
-                    "@id": "bts:ComputationalTool"
-                },
-                {
-                    "@id": "bts:ComputedTomography"
-                },
-                {
-                    "@id": "bts:ConfocalMicroscopy"
-                },
-                {
-                    "@id": "bts:ConfocalReflectanceQuantitativePhaseMicroscopy"
-                },
-                {
-                    "@id": "bts:Cross-LinkingImmunoprecipitationHigh-throughputSequencing"
-                },
-                {
-                    "@id": "bts:Cross-LinkingMassSpectrometry"
-                },
-                {
-                    "@id": "bts:CyclicImmunofluorescence"
-                },
-                {
-                    "@id": "bts:CytochemicalStain"
-                },
-                {
-                    "@id": "bts:CytokineExpressionProfile"
-                },
-                {
-                    "@id": "bts:CytometricBeadArrayAssay"
-                },
-                {
-                    "@id": "bts:CytotoxicityAssay"
-                },
-                {
-                    "@id": "bts:DBiT-Seq"
-                },
-                {
-                    "@id": "bts:DNAGene-ExpressionMicroarray"
-                },
-                {
-                    "@id": "bts:DNAMethylationArray"
-                },
-                {
-                    "@id": "bts:DNASequencing"
-                },
-                {
-                    "@id": "bts:DNase-Seq"
-                },
-                {
-                    "@id": "bts:DRIP-seq"
-                },
-                {
-                    "@id": "bts:DarkFieldMicroscopy"
-                },
-                {
-                    "@id": "bts:DeepMutationalScanning"
-                },
-                {
-                    "@id": "bts:DesorptionElectrosprayIonization"
-                },
-                {
-                    "@id": "bts:DideoxyChainTerminationDNASequencing"
-                },
-                {
-                    "@id": "bts:DifferentialInterferenceContrastMicroscopy"
-                },
-                {
-                    "@id": "bts:DifferentialScanningFluorimetry"
-                },
-                {
-                    "@id": "bts:DiffusionWeightedImaging"
-                },
-                {
-                    "@id": "bts:DirectLong-ReadRNASequencing"
-                },
-                {
-                    "@id": "bts:Drop-Seq"
-                },
-                {
-                    "@id": "bts:DropletDigitalPCR"
-                },
-                {
-                    "@id": "bts:Dual-LuciferaseReporterAssay"
-                },
-                {
-                    "@id": "bts:DyeEndocytosisAssay"
-                },
-                {
-                    "@id": "bts:DynamicContrast-EnhancedMagneticResonanceImaging"
-                },
-                {
-                    "@id": "bts:DynamicForceSpectroscopy"
-                },
-                {
-                    "@id": "bts:DynamicLightScattering"
-                },
-                {
-                    "@id": "bts:DynamicSusceptibilityContrast-EnhancedMagneticResonanceImaging"
-                },
-                {
-                    "@id": "bts:ELISA"
-                },
-                {
-                    "@id": "bts:EfferocytosisAssay"
-                },
-                {
-                    "@id": "bts:ElectronDiffraction"
-                },
-                {
-                    "@id": "bts:ElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:ElectronParamagneticResonanceSpectroscopy"
-                },
-                {
-                    "@id": "bts:ElectrophoreticMobilityShiftAssay"
-                },
-                {
-                    "@id": "bts:ElectrosprayIonizationTime-of-FlightMassSpectrometry"
-                },
-                {
-                    "@id": "bts:EndotoxinAssay"
-                },
-                {
-                    "@id": "bts:Energy-DispersiveX-RaySpectroscopy"
-                },
-                {
-                    "@id": "bts:EnzymeActivityAssay"
-                },
-                {
-                    "@id": "bts:Enzyme-LinkedImmunospotAssay"
-                },
-                {
-                    "@id": "bts:EpidemiologicalMethod"
-                },
-                {
-                    "@id": "bts:FAIRE-Seq"
-                },
-                {
-                    "@id": "bts:FISH"
-                },
-                {
-                    "@id": "bts:FlowCytometry"
-                },
-                {
-                    "@id": "bts:FluorescenceActivatedCellSorting"
-                },
-                {
-                    "@id": "bts:FluorescenceCorrelationSpectroscopy"
-                },
-                {
-                    "@id": "bts:FluorescenceImaging"
-                },
-                {
-                    "@id": "bts:FluorescenceLifetimeImagingMicroscopy"
-                },
-                {
-                    "@id": "bts:FluorescenceMicroscopy"
-                },
-                {
-                    "@id": "bts:FluorescenceRecoveryAfterPhoto-Bleaching"
-                },
-                {
-                    "@id": "bts:FluorescentAntibodyProcedure"
-                },
-                {
-                    "@id": "bts:FluorescentCellBarcoding"
-                },
-                {
-                    "@id": "bts:FluorescentInSituSequencing"
-                },
-                {
-                    "@id": "bts:FocusedIonBeamScanningElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:ForsterResonanceEnergyTransfer"
-                },
-                {
-                    "@id": "bts:FourierTransformIonCyclotronResonanceMassSpectrometry"
-                },
-                {
-                    "@id": "bts:Fourier-TransformInfraredSpectroscopy"
-                },
-                {
-                    "@id": "bts:GasChromatographyMassSpectrometry"
-                },
-                {
-                    "@id": "bts:GelatinZymography"
-                },
-                {
-                    "@id": "bts:Genotyping"
-                },
-                {
-                    "@id": "bts:GlobalChromatinProfiling"
-                },
-                {
-                    "@id": "bts:GlobalRun-OnSequencing"
-                },
-                {
-                    "@id": "bts:GraphiteFurnaceAtomicAbsorptionSpectrometry"
-                },
-                {
-                    "@id": "bts:HL-Chip"
-                },
-                {
-                    "@id": "bts:HPLC-MSMS"
-                },
-                {
-                    "@id": "bts:HematoxylinandEosinStainingMethod"
-                },
-                {
-                    "@id": "bts:Hi-C"
-                },
-                {
-                    "@id": "bts:HiChIP"
-                },
-                {
-                    "@id": "bts:HighThroughputScreening"
-                },
-                {
-                    "@id": "bts:High-ContentScreen"
-                },
-                {
-                    "@id": "bts:Hydrogels"
-                },
-                {
-                    "@id": "bts:HydrophilicInteractionChromatography"
-                },
-                {
-                    "@id": "bts:ImageCytometry"
-                },
-                {
-                    "@id": "bts:Imaging"
-                },
-                {
-                    "@id": "bts:ImmobilizedMetalAffinityChromatography"
-                },
-                {
-                    "@id": "bts:ImmunoFISH"
-                },
-                {
-                    "@id": "bts:Immunoassay"
-                },
-                {
-                    "@id": "bts:Immunocytochemistry"
-                },
-                {
-                    "@id": "bts:ImmunohistochemistryStainingMethod"
-                },
-                {
-                    "@id": "bts:Immunoprecipitation"
-                },
-                {
-                    "@id": "bts:InSituHybridization"
-                },
-                {
-                    "@id": "bts:InVitroCellKillingAssay"
-                },
-                {
-                    "@id": "bts:InVitroModel"
-                },
-                {
-                    "@id": "bts:InVitroSelection"
-                },
-                {
-                    "@id": "bts:InVitroTranslation"
-                },
-                {
-                    "@id": "bts:InVivoBioluminescence"
-                },
-                {
-                    "@id": "bts:In-CellWesternAssay"
-                },
-                {
-                    "@id": "bts:Inductively-CoupledPlasmaMassSpectrometry"
-                },
-                {
-                    "@id": "bts:InterferenceReflectionMicroscopy"
-                },
-                {
-                    "@id": "bts:IntravitalMicroscopy"
-                },
-                {
-                    "@id": "bts:InvasionAssay"
-                },
-                {
-                    "@id": "bts:Karyotyping"
-                },
-                {
-                    "@id": "bts:Knife-EdgeScanningMicroscopy"
-                },
-                {
-                    "@id": "bts:L1000mRNAProfilingAssay"
-                },
-                {
-                    "@id": "bts:LatticeLightSheetMicroscopy"
-                },
-                {
-                    "@id": "bts:LiquidChromatographyMassSpectrometry"
-                },
-                {
-                    "@id": "bts:LiquidChromatography/TandemMassSpectrometry"
-                },
-                {
-                    "@id": "bts:Low-VacuumScanningElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:LuciferaseReporterAssay"
-                },
-                {
-                    "@id": "bts:LuminescentCellViabilityAssay"
-                },
-                {
-                    "@id": "bts:MALDI-TOFMassSpectrometry"
-                },
-                {
-                    "@id": "bts:MEMACellGrowthAssay"
-                },
-                {
-                    "@id": "bts:MNase-Seq"
-                },
-                {
-                    "@id": "bts:MULTI-Seq"
-                },
-                {
-                    "@id": "bts:MULTI-seq"
-                },
-                {
-                    "@id": "bts:MacrophagePolarizationAssay"
-                },
-                {
-                    "@id": "bts:MagneticResonanceImaging"
-                },
-                {
-                    "@id": "bts:MagneticTweezers"
-                },
-                {
-                    "@id": "bts:MagneticTwistingCytometry"
-                },
-                {
-                    "@id": "bts:MagneticallyActivatedCellSorting"
-                },
-                {
-                    "@id": "bts:MammosphereFormationAssay"
-                },
-                {
-                    "@id": "bts:MassCytometry"
-                },
-                {
-                    "@id": "bts:MassSpectrometry"
-                },
-                {
-                    "@id": "bts:MathematicalModeling"
-                },
-                {
-                    "@id": "bts:MeDIP"
-                },
-                {
-                    "@id": "bts:MeRIP-Seq"
-                },
-                {
-                    "@id": "bts:MethylBindingDomainSequencing"
-                },
-                {
-                    "@id": "bts:Methylation-SpecificPCR"
-                },
-                {
-                    "@id": "bts:Micro-computedTomography"
-                },
-                {
-                    "@id": "bts:MicroRNAExpressionArray"
-                },
-                {
-                    "@id": "bts:MicroRNASequencing"
-                },
-                {
-                    "@id": "bts:MicrocontactPrinting"
-                },
-                {
-                    "@id": "bts:Microfluidics"
-                },
-                {
-                    "@id": "bts:MicropipetteAdhesionAssay"
-                },
-                {
-                    "@id": "bts:MicropipetteAspiration"
-                },
-                {
-                    "@id": "bts:Microscopy"
-                },
-                {
-                    "@id": "bts:MigrationAssay"
-                },
-                {
-                    "@id": "bts:Mint-ChIP"
-                },
-                {
-                    "@id": "bts:Modeling"
-                },
-                {
-                    "@id": "bts:MolecularSimulations"
-                },
-                {
-                    "@id": "bts:MonolayerStressMicroscopy"
-                },
-                {
-                    "@id": "bts:Multi-AngleLightScattering"
-                },
-                {
-                    "@id": "bts:Multi-IsotopeMassSpectrometry"
-                },
-                {
-                    "@id": "bts:MultiparametricMagneticResonanceImaging"
-                },
-                {
-                    "@id": "bts:MultiphotonMicroscopy"
-                },
-                {
-                    "@id": "bts:MultiplexedError-RobustFluorescenceInSituHybridization"
-                },
-                {
-                    "@id": "bts:MultiplexedImmunofluorescence"
-                },
-                {
-                    "@id": "bts:MultiplexedImmunohistochemistry"
-                },
-                {
-                    "@id": "bts:MultiplexedIonBeamImaging"
-                },
-                {
-                    "@id": "bts:MurineModel"
-                },
-                {
-                    "@id": "bts:Nano-hmC-Seal"
-                },
-                {
-                    "@id": "bts:NanoStringDigitalSpatialProfiling"
-                },
-                {
-                    "@id": "bts:Nanopatterning"
-                },
-                {
-                    "@id": "bts:NanoporeSequencing"
-                },
-                {
-                    "@id": "bts:Nanowire"
-                },
-                {
-                    "@id": "bts:NestedPCR"
-                },
-                {
-                    "@id": "bts:NextGenerationSequencing"
-                },
-                {
-                    "@id": "bts:Nm-seq"
-                },
-                {
-                    "@id": "bts:NotApplicable"
-                },
-                {
-                    "@id": "bts:NuclearMagneticResonance"
-                },
-                {
-                    "@id": "bts:OpticalCoherenceTomography"
-                },
-                {
-                    "@id": "bts:OpticalEmissionSpectroscopy"
-                },
-                {
-                    "@id": "bts:OpticalMapping"
-                },
-                {
-                    "@id": "bts:OpticalStretcher"
-                },
-                {
-                    "@id": "bts:OpticalTweezers"
-                },
-                {
-                    "@id": "bts:OptogeneticAssay"
-                },
-                {
-                    "@id": "bts:Organoid"
-                },
-                {
-                    "@id": "bts:PCR"
-                },
-                {
-                    "@id": "bts:PET-CT"
-                },
-                {
-                    "@id": "bts:ParaquatSurvivalAssay"
-                },
-                {
-                    "@id": "bts:PartialWaveSpectroscopy"
-                },
-                {
-                    "@id": "bts:PatientDerivedXenograft"
-                },
-                {
-                    "@id": "bts:PendingAnnotation"
-                },
-                {
-                    "@id": "bts:PermeabilityAssay"
-                },
-                {
-                    "@id": "bts:PhagocytosisAssay"
-                },
-                {
-                    "@id": "bts:PhotoacousticImaging"
-                },
-                {
-                    "@id": "bts:Photolithography"
-                },
-                {
-                    "@id": "bts:PlasmidConstruction"
-                },
-                {
-                    "@id": "bts:PlateSeq"
-                },
-                {
-                    "@id": "bts:PointAccumulationforImaginginNanoscaleTopography"
-                },
-                {
-                    "@id": "bts:PositronEmissionTomography"
-                },
-                {
-                    "@id": "bts:PrecisionRun-OnSequencing"
-                },
-                {
-                    "@id": "bts:ProteomicsAssay"
-                },
-                {
-                    "@id": "bts:ProximityLigationAssay"
-                },
-                {
-                    "@id": "bts:Pull-DownAssay"
-                },
-                {
-                    "@id": "bts:QFISH"
-                },
-                {
-                    "@id": "bts:QuantitativeMultiplexImmunofluorescence"
-                },
-                {
-                    "@id": "bts:QuantitativePointAccumulationforImaginginNanoscaleTopography"
-                },
-                {
-                    "@id": "bts:Questionnaire"
-                },
-                {
-                    "@id": "bts:RASProteinFamilyActivationAssay"
-                },
-                {
-                    "@id": "bts:RIP"
-                },
-                {
-                    "@id": "bts:RIP-Seq"
-                },
-                {
-                    "@id": "bts:RNASequencing"
-                },
-                {
-                    "@id": "bts:RNAiScreen"
-                },
-                {
-                    "@id": "bts:RT-PCR"
-                },
-                {
-                    "@id": "bts:RT-qPCR"
-                },
-                {
-                    "@id": "bts:RamanSpectroscopy"
-                },
-                {
-                    "@id": "bts:ReducedRepresentationBisulfiteSequencing"
-                },
-                {
-                    "@id": "bts:ReversePhaseProteinArray"
-                },
-                {
-                    "@id": "bts:Reverse-PhaseHigh-PerformanceliquidChromatography"
-                },
-                {
-                    "@id": "bts:Rheometry"
-                },
-                {
-                    "@id": "bts:Ribo-Seq"
-                },
-                {
-                    "@id": "bts:RibosomalPProteinAntibodyMeasurement"
-                },
-                {
-                    "@id": "bts:ScanningAngleInterferenceMicroscopy"
-                },
-                {
-                    "@id": "bts:ScanningElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:Second-HarmonicImagingMicroscopy"
-                },
-                {
-                    "@id": "bts:ShotgunMassSpectrometry"
-                },
-                {
-                    "@id": "bts:SingleCellATAC-Seq"
-                },
-                {
-                    "@id": "bts:SingleCellCytokineDetectionChipAssay"
-                },
-                {
-                    "@id": "bts:SingleCellDNASequencing"
-                },
-                {
-                    "@id": "bts:SingleCellGelElectrophoresis"
-                },
-                {
-                    "@id": "bts:SingleCellRNA-Sequencing"
-                },
-                {
-                    "@id": "bts:SingleMoleculeForsterResonanceEnergyTransfer"
-                },
-                {
-                    "@id": "bts:SingleNucleotidePolymorphismArray"
-                },
-                {
-                    "@id": "bts:SingleNucleusRNA-Sequencing"
-                },
-                {
-                    "@id": "bts:Single-CellBCRSequencing"
-                },
-                {
-                    "@id": "bts:Single-CellBarcodeChip"
-                },
-                {
-                    "@id": "bts:Single-CellTCRSequencing"
-                },
-                {
-                    "@id": "bts:Single-MoleculeTracking"
-                },
-                {
-                    "@id": "bts:SiriusRedStaining"
-                },
-                {
-                    "@id": "bts:SizeExclusionChromatography"
-                },
-                {
-                    "@id": "bts:Small-AngleX-rayScattering"
-                },
-                {
-                    "@id": "bts:SoftAgarAssay"
-                },
-                {
-                    "@id": "bts:SouthernBlotting"
-                },
-                {
-                    "@id": "bts:Spectroscopy"
-                },
-                {
-                    "@id": "bts:StatisticalModeling"
-                },
-                {
-                    "@id": "bts:StimulatedEmissionDepletionMicroscopy"
-                },
-                {
-                    "@id": "bts:StimulatedRamanScattering"
-                },
-                {
-                    "@id": "bts:StochasticOpticalReconstructionMicroscopy"
-                },
-                {
-                    "@id": "bts:Super-ResolutionMicroscopy"
-                },
-                {
-                    "@id": "bts:SurfacePlasmonResonance"
-                },
-                {
-                    "@id": "bts:SurveyorNucleaseAssay"
-                },
-                {
-                    "@id": "bts:SynaptophysinStainingMethod"
-                },
-                {
-                    "@id": "bts:SyntheticGeneticArray"
-                },
-                {
-                    "@id": "bts:TAB-Seq"
-                },
-                {
-                    "@id": "bts:TCRSequencing"
-                },
-                {
-                    "@id": "bts:TIRFMicroscopy"
-                },
-                {
-                    "@id": "bts:TRAPStaining"
-                },
-                {
-                    "@id": "bts:TUNELassay"
-                },
-                {
-                    "@id": "bts:TandemMassSpectrometry"
-                },
-                {
-                    "@id": "bts:TandemMassTagging"
-                },
-                {
-                    "@id": "bts:TargetEngagementAssay"
-                },
-                {
-                    "@id": "bts:TargetedGenomeSequencing"
-                },
-                {
-                    "@id": "bts:TargetedTranscriptomeSequencing"
-                },
-                {
-                    "@id": "bts:ThermalShiftAssay"
-                },
-                {
-                    "@id": "bts:Thin-LayerChromatography"
-                },
-                {
-                    "@id": "bts:TilingArray"
-                },
-                {
-                    "@id": "bts:TimeLapseMicroscopy"
-                },
-                {
-                    "@id": "bts:Time-CorrelatedSinglePhotonCounting"
-                },
-                {
-                    "@id": "bts:TissueEngineering"
-                },
-                {
-                    "@id": "bts:TissueMicroarray"
-                },
-                {
-                    "@id": "bts:TotalInternalReflectionFluorescenceMicroscopy"
-                },
-                {
-                    "@id": "bts:TractionForceMicroscopy"
-                },
-                {
-                    "@id": "bts:TransmissionElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:TranswellAssay"
-                },
-                {
-                    "@id": "bts:UPLC-MSMS"
-                },
-                {
-                    "@id": "bts:UVPhotocrosslinking"
-                },
-                {
-                    "@id": "bts:Unspecified"
-                },
-                {
-                    "@id": "bts:VibrationalSpectroscopy"
-                },
-                {
-                    "@id": "bts:VirusPlaqueAssay"
-                },
-                {
-                    "@id": "bts:VonKossaStaining"
-                },
-                {
-                    "@id": "bts:WesternBlotting"
-                },
-                {
-                    "@id": "bts:WholeExomeSequencing"
-                },
-                {
-                    "@id": "bts:WholeGenomeBisulfiteSequencing"
-                },
-                {
-                    "@id": "bts:WholeGenomeSequencing"
-                },
-                {
-                    "@id": "bts:WidefieldFluorescenceMicroscopy"
-                },
-                {
-                    "@id": "bts:Wound-HealingAssay"
-                },
-                {
-                    "@id": "bts:X-RayCrystallography"
-                },
-                {
-                    "@id": "bts:X-RayDiffraction"
-                },
-                {
-                    "@id": "bts:X-RayMicro-ComputedTomography"
-                },
-                {
-                    "@id": "bts:Xenograft"
-                },
-                {
-                    "@id": "bts:CDNAArray"
-                },
-                {
-                    "@id": "bts:ECLIP-Seq"
-                },
-                {
-                    "@id": "bts:MRNASequencing"
-                },
-                {
-                    "@id": "bts:QPCR"
-                },
-                {
-                    "@id": "bts:ScCGI-seq"
-                },
-                {
-                    "@id": "bts:ScNT-Seq"
-                },
-                {
-                    "@id": "bts:ScSLAM-seq"
-                },
-                {
-                    "@id": "bts:SeqFISH"
-                },
-                {
-                    "@id": "bts:ShRNA"
-                },
-                {
-                    "@id": "bts:SiRNA"
-                },
-                {
-                    "@id": "bts:SmFISH"
-                },
-                {
-                    "@id": "bts:SmRNA-seq"
-                },
-                {
-                    "@id": "bts:SnRNA-seq"
-                },
-                {
-                    "@id": "bts:IsothermalTitrationCalorimetry"
-                },
-                {
-                    "@id": "bts:SuspendedMicrochannelResonator"
-                },
-                {
-                    "@id": "bts:10xMultiome"
-                },
-                {
-                    "@id": "bts:VisiumSpatialGeneExpression"
-                },
-                {
-                    "@id": "bts:AntitumorDrugScreeningAssay"
-                },
-                {
-                    "@id": "bts:BioelectrochemicalAnalysis"
-                },
-                {
-                    "@id": "bts:ChimericAntigenReceptorT-CellTherapy"
-                },
-                {
-                    "@id": "bts:CellCycleAssay"
-                },
-                {
-                    "@id": "bts:ClonalityAnalysis"
-                },
-                {
-                    "@id": "bts:ComparativeGenomicHybridization"
-                },
-                {
-                    "@id": "bts:Cryo-ElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:Cryo-ElectronTomography"
-                },
-                {
-                    "@id": "bts:DataIntegration"
-                },
-                {
-                    "@id": "bts:Field-EmissionScanningElectronMicroscopy"
-                },
-                {
-                    "@id": "bts:Label-freeProteinQuantificationbyLC/MS"
-                },
-                {
-                    "@id": "bts:MetaboliteProfilingAssay"
-                },
-                {
-                    "@id": "bts:ReporterGeneAssay"
-                },
-                {
-                    "@id": "bts:Single-MoleculeLocalizationMicroscopy"
-                },
-                {
-                    "@id": "bts:Synthesis"
-                },
-                {
-                    "@id": "bts:TargetedTherapyAgent"
-                },
-                {
-                    "@id": "bts:TrichromeStainingMethod"
-                },
-                {
-                    "@id": "bts:UltrasoundImaging"
-                },
-                {
-                    "@id": "bts:TranscriptionprofilingbyNanoString"
-                },
-                {
-                    "@id": "bts:AlcianBlueStainingMethod"
-                },
-                {
-                    "@id": "bts:ArtificialIntelligence"
-                },
-                {
-                    "@id": "bts:CellCulture"
-                },
-                {
-                    "@id": "bts:ClinicalStudy"
-                },
-                {
-                    "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
-                },
-                {
-                    "@id": "bts:Co-ImmunoprecipitationMassSpectrometry"
-                },
-                {
-                    "@id": "bts:DeepLearning"
-                },
-                {
-                    "@id": "bts:GeneOntologyEnrichmentAnalysis"
-                },
-                {
-                    "@id": "bts:GeneSetEnrichmentAnalysis"
-                },
-                {
-                    "@id": "bts:GeneSilencing"
-                },
-                {
-                    "@id": "bts:HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture"
-                },
-                {
-                    "@id": "bts:ImagingMassCytometry"
-                },
-                {
-                    "@id": "bts:ImmunofluorescentStainingMethod"
-                },
-                {
-                    "@id": "bts:Immunotherapy"
-                },
-                {
-                    "@id": "bts:ViralTransduction"
-                },
-                {
-                    "@id": "bts:MetastaticColonizationAssay"
-                },
-                {
-                    "@id": "bts:PhylogeneticAnalysis"
-                },
-                {
-                    "@id": "bts:PicrosiriusStaining"
-                },
-                {
-                    "@id": "bts:ScratchAssay"
-                },
-                {
-                    "@id": "bts:StructuralVariantAnalysis"
-                },
-                {
-                    "@id": "bts:SurvivalAnalysis"
-                },
-                {
-                    "@id": "bts:TargetedErrorCorrectionSequencing"
-                },
-                {
-                    "@id": "bts:Tuba-Seq"
-                },
-                {
-                    "@id": "bts:SDS-PAGE"
-                },
-                {
-                    "@id": "bts:CellFractionation"
-                }
-            ],
-            "sms:displayName": "DSP Dataset Type",
-            "sms:required": "sms:true",
             "sms:validationRules": [
-                "list like"
+                "url"
             ]
         },
         {
@@ -66741,10 +65657,10 @@
             ]
         },
         {
-            "@id": "bts:NumberofFiles",
+            "@id": "bts:DSPNumberofFiles",
             "@type": "rdfs:Class",
             "rdfs:comment": "The number of files that will be uploaded as part of this dataset.",
-            "rdfs:label": "NumberofFiles",
+            "rdfs:label": "DSPNumberofFiles",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -66753,17 +65669,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Number of Files",
+            "sms:displayName": "DSP Number of Files",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "num"
             ]
         },
         {
-            "@id": "bts:NumberofSamples",
+            "@id": "bts:DSPNumberofSamples",
             "@type": "rdfs:Class",
             "rdfs:comment": "The number of biospecimens associated with the files included in the dataset",
-            "rdfs:label": "NumberofSamples",
+            "rdfs:label": "DSPNumberofSamples",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -66772,17 +65688,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Number of Samples",
+            "sms:displayName": "DSP Number of Samples",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "num"
             ]
         },
         {
-            "@id": "bts:StorageSize",
+            "@id": "bts:DSPStorageSize",
             "@type": "rdfs:Class",
             "rdfs:comment": "The expected total storage space required for the dataset in gigabytes (GB)",
-            "rdfs:label": "StorageSize",
+            "rdfs:label": "DSPStorageSize",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -66791,17 +65707,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Storage Size",
+            "sms:displayName": "DSP Storage Size",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "num"
             ]
         },
         {
-            "@id": "bts:PlannedUploadDate",
+            "@id": "bts:DSPPlannedUploadDate",
             "@type": "rdfs:Class",
             "rdfs:comment": "A non-binding, estimated date by which the files are expected to be uploaded to a repository.",
-            "rdfs:label": "PlannedUploadDate",
+            "rdfs:label": "DSPPlannedUploadDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -66810,17 +65726,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Planned Upload Date",
+            "sms:displayName": "DSP Planned Upload Date",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "date"
             ]
         },
         {
-            "@id": "bts:PlannedReleaseDate",
+            "@id": "bts:DSPPlannedReleaseDate",
             "@type": "rdfs:Class",
             "rdfs:comment": "The projected date that marks the end of any requested or required sharing embargo for the dataset.",
-            "rdfs:label": "PlannedReleaseDate",
+            "rdfs:label": "DSPPlannedReleaseDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -66829,10 +65745,1258 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Planned Release Date",
+            "sms:displayName": "DSP Planned Release Date",
             "sms:required": "sms:false",
             "sms:validationRules": [
                 "date"
+            ]
+        },
+        {
+            "@id": "bts:DSPDataUseCodes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.",
+            "rdfs:label": "DSPDataUseCodes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:IRB"
+                },
+                {
+                    "@id": "bts:HMB"
+                },
+                {
+                    "@id": "bts:PUB"
+                },
+                {
+                    "@id": "bts:US"
+                },
+                {
+                    "@id": "bts:NPOA"
+                },
+                {
+                    "@id": "bts:COL"
+                },
+                {
+                    "@id": "bts:NCU"
+                },
+                {
+                    "@id": "bts:NPUNCU"
+                },
+                {
+                    "@id": "bts:RS"
+                },
+                {
+                    "@id": "bts:TS"
+                },
+                {
+                    "@id": "bts:NRES"
+                },
+                {
+                    "@id": "bts:NPU"
+                },
+                {
+                    "@id": "bts:DUM"
+                },
+                {
+                    "@id": "bts:POA"
+                },
+                {
+                    "@id": "bts:MOR"
+                },
+                {
+                    "@id": "bts:GSO"
+                },
+                {
+                    "@id": "bts:RTN"
+                },
+                {
+                    "@id": "bts:CC"
+                },
+                {
+                    "@id": "bts:NMDS"
+                },
+                {
+                    "@id": "bts:IS"
+                },
+                {
+                    "@id": "bts:GS"
+                },
+                {
+                    "@id": "bts:DS"
+                },
+                {
+                    "@id": "bts:GRU"
+                },
+                {
+                    "@id": "bts:PS"
+                }
+            ],
+            "sms:displayName": "DSP Data Use Codes",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "list like"
+            ]
+        },
+        {
+            "@id": "bts:DSPDatasetAssay",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The type of data contained in this group of files. Multiple values permitted, comma separated.",
+            "rdfs:label": "DSPDatasetAssay",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:10-cellRNASequencing"
+                },
+                {
+                    "@id": "bts:16SRibosomalGeneSequencingAssay"
+                },
+                {
+                    "@id": "bts:3'RNA-seq"
+                },
+                {
+                    "@id": "bts:3C"
+                },
+                {
+                    "@id": "bts:3C-qPCR"
+                },
+                {
+                    "@id": "bts:3DBioprinting"
+                },
+                {
+                    "@id": "bts:3DCellCulture"
+                },
+                {
+                    "@id": "bts:4C"
+                },
+                {
+                    "@id": "bts:5C"
+                },
+                {
+                    "@id": "bts:ATAC-Seq"
+                },
+                {
+                    "@id": "bts:ATPBioluminescenceAssay"
+                },
+                {
+                    "@id": "bts:AffinityPurificationMassSpectrometry"
+                },
+                {
+                    "@id": "bts:Allograft"
+                },
+                {
+                    "@id": "bts:AmpliconSequencing"
+                },
+                {
+                    "@id": "bts:AngiogenesisAssay"
+                },
+                {
+                    "@id": "bts:ApoptosisAssay"
+                },
+                {
+                    "@id": "bts:AtomicAbsorptionSpectrophotometry"
+                },
+                {
+                    "@id": "bts:AtomicAbsorptionSpectroscopy"
+                },
+                {
+                    "@id": "bts:AtomicForceMicroscopy"
+                },
+                {
+                    "@id": "bts:Autoradiography"
+                },
+                {
+                    "@id": "bts:Barcode-Seq"
+                },
+                {
+                    "@id": "bts:BicinchoninicAcidAssay"
+                },
+                {
+                    "@id": "bts:BindingAssay"
+                },
+                {
+                    "@id": "bts:Bio-LayerInterferometry"
+                },
+                {
+                    "@id": "bts:BioluminescenceImaging"
+                },
+                {
+                    "@id": "bts:BisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:BrightfieldMicroscopy"
+                },
+                {
+                    "@id": "bts:BrillouinMicroscopy"
+                },
+                {
+                    "@id": "bts:CASFISH"
+                },
+                {
+                    "@id": "bts:CITE-seq"
+                },
+                {
+                    "@id": "bts:CLIP-qPCR"
+                },
+                {
+                    "@id": "bts:CRISPR"
+                },
+                {
+                    "@id": "bts:CUT&RUN"
+                },
+                {
+                    "@id": "bts:CUT&Tag-Sequencing"
+                },
+                {
+                    "@id": "bts:CellAdhesionAssay"
+                },
+                {
+                    "@id": "bts:CellProliferationAssay"
+                },
+                {
+                    "@id": "bts:CellViabilityAssay"
+                },
+                {
+                    "@id": "bts:Cell-spreadingAssay"
+                },
+                {
+                    "@id": "bts:CellTiter-GloLuminescentCellViabilityAssay"
+                },
+                {
+                    "@id": "bts:CerenkovLuminescenceImaging"
+                },
+                {
+                    "@id": "bts:ChIA-PET"
+                },
+                {
+                    "@id": "bts:ChIP-PCR"
+                },
+                {
+                    "@id": "bts:ChIP-Seq"
+                },
+                {
+                    "@id": "bts:ChIP-qPCRassay"
+                },
+                {
+                    "@id": "bts:ChemiluminescentAssay"
+                },
+                {
+                    "@id": "bts:ChemotaxisAssay"
+                },
+                {
+                    "@id": "bts:CircularDichroismSpectroscopy"
+                },
+                {
+                    "@id": "bts:Co-Immunoprecipitation"
+                },
+                {
+                    "@id": "bts:Co-cultureAssay"
+                },
+                {
+                    "@id": "bts:Collision-InducedDissociation"
+                },
+                {
+                    "@id": "bts:ColorimetricCellViabilityAssay"
+                },
+                {
+                    "@id": "bts:ComputationalModeling"
+                },
+                {
+                    "@id": "bts:ComputationalTool"
+                },
+                {
+                    "@id": "bts:ComputedTomography"
+                },
+                {
+                    "@id": "bts:ConfocalMicroscopy"
+                },
+                {
+                    "@id": "bts:ConfocalReflectanceQuantitativePhaseMicroscopy"
+                },
+                {
+                    "@id": "bts:Cross-LinkingImmunoprecipitationHigh-throughputSequencing"
+                },
+                {
+                    "@id": "bts:Cross-LinkingMassSpectrometry"
+                },
+                {
+                    "@id": "bts:CyclicImmunofluorescence"
+                },
+                {
+                    "@id": "bts:CytochemicalStain"
+                },
+                {
+                    "@id": "bts:CytokineExpressionProfile"
+                },
+                {
+                    "@id": "bts:CytometricBeadArrayAssay"
+                },
+                {
+                    "@id": "bts:CytotoxicityAssay"
+                },
+                {
+                    "@id": "bts:DBiT-Seq"
+                },
+                {
+                    "@id": "bts:DNAGene-ExpressionMicroarray"
+                },
+                {
+                    "@id": "bts:DNAMethylationArray"
+                },
+                {
+                    "@id": "bts:DNASequencing"
+                },
+                {
+                    "@id": "bts:DNase-Seq"
+                },
+                {
+                    "@id": "bts:DRIP-seq"
+                },
+                {
+                    "@id": "bts:DarkFieldMicroscopy"
+                },
+                {
+                    "@id": "bts:DeepMutationalScanning"
+                },
+                {
+                    "@id": "bts:DesorptionElectrosprayIonization"
+                },
+                {
+                    "@id": "bts:DideoxyChainTerminationDNASequencing"
+                },
+                {
+                    "@id": "bts:DifferentialInterferenceContrastMicroscopy"
+                },
+                {
+                    "@id": "bts:DifferentialScanningFluorimetry"
+                },
+                {
+                    "@id": "bts:DiffusionWeightedImaging"
+                },
+                {
+                    "@id": "bts:DirectLong-ReadRNASequencing"
+                },
+                {
+                    "@id": "bts:Drop-Seq"
+                },
+                {
+                    "@id": "bts:DropletDigitalPCR"
+                },
+                {
+                    "@id": "bts:Dual-LuciferaseReporterAssay"
+                },
+                {
+                    "@id": "bts:DyeEndocytosisAssay"
+                },
+                {
+                    "@id": "bts:DynamicContrast-EnhancedMagneticResonanceImaging"
+                },
+                {
+                    "@id": "bts:DynamicForceSpectroscopy"
+                },
+                {
+                    "@id": "bts:DynamicLightScattering"
+                },
+                {
+                    "@id": "bts:DynamicSusceptibilityContrast-EnhancedMagneticResonanceImaging"
+                },
+                {
+                    "@id": "bts:ELISA"
+                },
+                {
+                    "@id": "bts:EfferocytosisAssay"
+                },
+                {
+                    "@id": "bts:ElectronDiffraction"
+                },
+                {
+                    "@id": "bts:ElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:ElectronParamagneticResonanceSpectroscopy"
+                },
+                {
+                    "@id": "bts:ElectrophoreticMobilityShiftAssay"
+                },
+                {
+                    "@id": "bts:ElectrosprayIonizationTime-of-FlightMassSpectrometry"
+                },
+                {
+                    "@id": "bts:EndotoxinAssay"
+                },
+                {
+                    "@id": "bts:Energy-DispersiveX-RaySpectroscopy"
+                },
+                {
+                    "@id": "bts:EnzymeActivityAssay"
+                },
+                {
+                    "@id": "bts:Enzyme-LinkedImmunospotAssay"
+                },
+                {
+                    "@id": "bts:EpidemiologicalMethod"
+                },
+                {
+                    "@id": "bts:FAIRE-Seq"
+                },
+                {
+                    "@id": "bts:FISH"
+                },
+                {
+                    "@id": "bts:FlowCytometry"
+                },
+                {
+                    "@id": "bts:FluorescenceActivatedCellSorting"
+                },
+                {
+                    "@id": "bts:FluorescenceCorrelationSpectroscopy"
+                },
+                {
+                    "@id": "bts:FluorescenceImaging"
+                },
+                {
+                    "@id": "bts:FluorescenceLifetimeImagingMicroscopy"
+                },
+                {
+                    "@id": "bts:FluorescenceMicroscopy"
+                },
+                {
+                    "@id": "bts:FluorescenceRecoveryAfterPhoto-Bleaching"
+                },
+                {
+                    "@id": "bts:FluorescentAntibodyProcedure"
+                },
+                {
+                    "@id": "bts:FluorescentCellBarcoding"
+                },
+                {
+                    "@id": "bts:FluorescentInSituSequencing"
+                },
+                {
+                    "@id": "bts:FocusedIonBeamScanningElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:ForsterResonanceEnergyTransfer"
+                },
+                {
+                    "@id": "bts:FourierTransformIonCyclotronResonanceMassSpectrometry"
+                },
+                {
+                    "@id": "bts:Fourier-TransformInfraredSpectroscopy"
+                },
+                {
+                    "@id": "bts:GasChromatographyMassSpectrometry"
+                },
+                {
+                    "@id": "bts:GelatinZymography"
+                },
+                {
+                    "@id": "bts:Genotyping"
+                },
+                {
+                    "@id": "bts:GlobalChromatinProfiling"
+                },
+                {
+                    "@id": "bts:GlobalRun-OnSequencing"
+                },
+                {
+                    "@id": "bts:GraphiteFurnaceAtomicAbsorptionSpectrometry"
+                },
+                {
+                    "@id": "bts:HL-Chip"
+                },
+                {
+                    "@id": "bts:HPLC-MSMS"
+                },
+                {
+                    "@id": "bts:HematoxylinandEosinStainingMethod"
+                },
+                {
+                    "@id": "bts:Hi-C"
+                },
+                {
+                    "@id": "bts:HiChIP"
+                },
+                {
+                    "@id": "bts:HighThroughputScreening"
+                },
+                {
+                    "@id": "bts:High-ContentScreen"
+                },
+                {
+                    "@id": "bts:Hydrogels"
+                },
+                {
+                    "@id": "bts:HydrophilicInteractionChromatography"
+                },
+                {
+                    "@id": "bts:ImageCytometry"
+                },
+                {
+                    "@id": "bts:Imaging"
+                },
+                {
+                    "@id": "bts:ImmobilizedMetalAffinityChromatography"
+                },
+                {
+                    "@id": "bts:ImmunoFISH"
+                },
+                {
+                    "@id": "bts:Immunoassay"
+                },
+                {
+                    "@id": "bts:Immunocytochemistry"
+                },
+                {
+                    "@id": "bts:ImmunohistochemistryStainingMethod"
+                },
+                {
+                    "@id": "bts:Immunoprecipitation"
+                },
+                {
+                    "@id": "bts:InSituHybridization"
+                },
+                {
+                    "@id": "bts:InVitroCellKillingAssay"
+                },
+                {
+                    "@id": "bts:InVitroModel"
+                },
+                {
+                    "@id": "bts:InVitroSelection"
+                },
+                {
+                    "@id": "bts:InVitroTranslation"
+                },
+                {
+                    "@id": "bts:InVivoBioluminescence"
+                },
+                {
+                    "@id": "bts:In-CellWesternAssay"
+                },
+                {
+                    "@id": "bts:Inductively-CoupledPlasmaMassSpectrometry"
+                },
+                {
+                    "@id": "bts:InterferenceReflectionMicroscopy"
+                },
+                {
+                    "@id": "bts:IntravitalMicroscopy"
+                },
+                {
+                    "@id": "bts:InvasionAssay"
+                },
+                {
+                    "@id": "bts:Karyotyping"
+                },
+                {
+                    "@id": "bts:Knife-EdgeScanningMicroscopy"
+                },
+                {
+                    "@id": "bts:L1000mRNAProfilingAssay"
+                },
+                {
+                    "@id": "bts:LatticeLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:LiquidChromatographyMassSpectrometry"
+                },
+                {
+                    "@id": "bts:LiquidChromatography/TandemMassSpectrometry"
+                },
+                {
+                    "@id": "bts:Low-VacuumScanningElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:LuciferaseReporterAssay"
+                },
+                {
+                    "@id": "bts:LuminescentCellViabilityAssay"
+                },
+                {
+                    "@id": "bts:MALDI-TOFMassSpectrometry"
+                },
+                {
+                    "@id": "bts:MEMACellGrowthAssay"
+                },
+                {
+                    "@id": "bts:MNase-Seq"
+                },
+                {
+                    "@id": "bts:MULTI-Seq"
+                },
+                {
+                    "@id": "bts:MULTI-seq"
+                },
+                {
+                    "@id": "bts:MacrophagePolarizationAssay"
+                },
+                {
+                    "@id": "bts:MagneticResonanceImaging"
+                },
+                {
+                    "@id": "bts:MagneticTweezers"
+                },
+                {
+                    "@id": "bts:MagneticTwistingCytometry"
+                },
+                {
+                    "@id": "bts:MagneticallyActivatedCellSorting"
+                },
+                {
+                    "@id": "bts:MammosphereFormationAssay"
+                },
+                {
+                    "@id": "bts:MassCytometry"
+                },
+                {
+                    "@id": "bts:MassSpectrometry"
+                },
+                {
+                    "@id": "bts:MathematicalModeling"
+                },
+                {
+                    "@id": "bts:MeDIP"
+                },
+                {
+                    "@id": "bts:MeRIP-Seq"
+                },
+                {
+                    "@id": "bts:MethylBindingDomainSequencing"
+                },
+                {
+                    "@id": "bts:Methylation-SpecificPCR"
+                },
+                {
+                    "@id": "bts:Micro-computedTomography"
+                },
+                {
+                    "@id": "bts:MicroRNAExpressionArray"
+                },
+                {
+                    "@id": "bts:MicroRNASequencing"
+                },
+                {
+                    "@id": "bts:MicrocontactPrinting"
+                },
+                {
+                    "@id": "bts:Microfluidics"
+                },
+                {
+                    "@id": "bts:MicropipetteAdhesionAssay"
+                },
+                {
+                    "@id": "bts:MicropipetteAspiration"
+                },
+                {
+                    "@id": "bts:Microscopy"
+                },
+                {
+                    "@id": "bts:MigrationAssay"
+                },
+                {
+                    "@id": "bts:Mint-ChIP"
+                },
+                {
+                    "@id": "bts:Modeling"
+                },
+                {
+                    "@id": "bts:MolecularSimulations"
+                },
+                {
+                    "@id": "bts:MonolayerStressMicroscopy"
+                },
+                {
+                    "@id": "bts:Multi-AngleLightScattering"
+                },
+                {
+                    "@id": "bts:Multi-IsotopeMassSpectrometry"
+                },
+                {
+                    "@id": "bts:MultiparametricMagneticResonanceImaging"
+                },
+                {
+                    "@id": "bts:MultiphotonMicroscopy"
+                },
+                {
+                    "@id": "bts:MultiplexedError-RobustFluorescenceInSituHybridization"
+                },
+                {
+                    "@id": "bts:MultiplexedImmunofluorescence"
+                },
+                {
+                    "@id": "bts:MultiplexedImmunohistochemistry"
+                },
+                {
+                    "@id": "bts:MultiplexedIonBeamImaging"
+                },
+                {
+                    "@id": "bts:MurineModel"
+                },
+                {
+                    "@id": "bts:Nano-hmC-Seal"
+                },
+                {
+                    "@id": "bts:NanoStringDigitalSpatialProfiling"
+                },
+                {
+                    "@id": "bts:Nanopatterning"
+                },
+                {
+                    "@id": "bts:NanoporeSequencing"
+                },
+                {
+                    "@id": "bts:Nanowire"
+                },
+                {
+                    "@id": "bts:NestedPCR"
+                },
+                {
+                    "@id": "bts:NextGenerationSequencing"
+                },
+                {
+                    "@id": "bts:Nm-seq"
+                },
+                {
+                    "@id": "bts:NotApplicable"
+                },
+                {
+                    "@id": "bts:NuclearMagneticResonance"
+                },
+                {
+                    "@id": "bts:OpticalCoherenceTomography"
+                },
+                {
+                    "@id": "bts:OpticalEmissionSpectroscopy"
+                },
+                {
+                    "@id": "bts:OpticalMapping"
+                },
+                {
+                    "@id": "bts:OpticalStretcher"
+                },
+                {
+                    "@id": "bts:OpticalTweezers"
+                },
+                {
+                    "@id": "bts:OptogeneticAssay"
+                },
+                {
+                    "@id": "bts:Organoid"
+                },
+                {
+                    "@id": "bts:PCR"
+                },
+                {
+                    "@id": "bts:PET-CT"
+                },
+                {
+                    "@id": "bts:ParaquatSurvivalAssay"
+                },
+                {
+                    "@id": "bts:PartialWaveSpectroscopy"
+                },
+                {
+                    "@id": "bts:PatientDerivedXenograft"
+                },
+                {
+                    "@id": "bts:PendingAnnotation"
+                },
+                {
+                    "@id": "bts:PermeabilityAssay"
+                },
+                {
+                    "@id": "bts:PhagocytosisAssay"
+                },
+                {
+                    "@id": "bts:PhotoacousticImaging"
+                },
+                {
+                    "@id": "bts:Photolithography"
+                },
+                {
+                    "@id": "bts:PlasmidConstruction"
+                },
+                {
+                    "@id": "bts:PlateSeq"
+                },
+                {
+                    "@id": "bts:PointAccumulationforImaginginNanoscaleTopography"
+                },
+                {
+                    "@id": "bts:PositronEmissionTomography"
+                },
+                {
+                    "@id": "bts:PrecisionRun-OnSequencing"
+                },
+                {
+                    "@id": "bts:ProteomicsAssay"
+                },
+                {
+                    "@id": "bts:ProximityLigationAssay"
+                },
+                {
+                    "@id": "bts:Pull-DownAssay"
+                },
+                {
+                    "@id": "bts:QFISH"
+                },
+                {
+                    "@id": "bts:QuantitativeMultiplexImmunofluorescence"
+                },
+                {
+                    "@id": "bts:QuantitativePointAccumulationforImaginginNanoscaleTopography"
+                },
+                {
+                    "@id": "bts:Questionnaire"
+                },
+                {
+                    "@id": "bts:RASProteinFamilyActivationAssay"
+                },
+                {
+                    "@id": "bts:RIP"
+                },
+                {
+                    "@id": "bts:RIP-Seq"
+                },
+                {
+                    "@id": "bts:RNASequencing"
+                },
+                {
+                    "@id": "bts:RNAiScreen"
+                },
+                {
+                    "@id": "bts:RT-PCR"
+                },
+                {
+                    "@id": "bts:RT-qPCR"
+                },
+                {
+                    "@id": "bts:RamanSpectroscopy"
+                },
+                {
+                    "@id": "bts:ReducedRepresentationBisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:ReversePhaseProteinArray"
+                },
+                {
+                    "@id": "bts:Reverse-PhaseHigh-PerformanceliquidChromatography"
+                },
+                {
+                    "@id": "bts:Rheometry"
+                },
+                {
+                    "@id": "bts:Ribo-Seq"
+                },
+                {
+                    "@id": "bts:RibosomalPProteinAntibodyMeasurement"
+                },
+                {
+                    "@id": "bts:ScanningAngleInterferenceMicroscopy"
+                },
+                {
+                    "@id": "bts:ScanningElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:Second-HarmonicImagingMicroscopy"
+                },
+                {
+                    "@id": "bts:ShotgunMassSpectrometry"
+                },
+                {
+                    "@id": "bts:SingleCellATAC-Seq"
+                },
+                {
+                    "@id": "bts:SingleCellCytokineDetectionChipAssay"
+                },
+                {
+                    "@id": "bts:SingleCellDNASequencing"
+                },
+                {
+                    "@id": "bts:SingleCellGelElectrophoresis"
+                },
+                {
+                    "@id": "bts:SingleCellRNA-Sequencing"
+                },
+                {
+                    "@id": "bts:SingleMoleculeForsterResonanceEnergyTransfer"
+                },
+                {
+                    "@id": "bts:SingleNucleotidePolymorphismArray"
+                },
+                {
+                    "@id": "bts:SingleNucleusRNA-Sequencing"
+                },
+                {
+                    "@id": "bts:Single-CellBCRSequencing"
+                },
+                {
+                    "@id": "bts:Single-CellBarcodeChip"
+                },
+                {
+                    "@id": "bts:Single-CellTCRSequencing"
+                },
+                {
+                    "@id": "bts:Single-MoleculeTracking"
+                },
+                {
+                    "@id": "bts:SiriusRedStaining"
+                },
+                {
+                    "@id": "bts:SizeExclusionChromatography"
+                },
+                {
+                    "@id": "bts:Small-AngleX-rayScattering"
+                },
+                {
+                    "@id": "bts:SoftAgarAssay"
+                },
+                {
+                    "@id": "bts:SouthernBlotting"
+                },
+                {
+                    "@id": "bts:Spectroscopy"
+                },
+                {
+                    "@id": "bts:StatisticalModeling"
+                },
+                {
+                    "@id": "bts:StimulatedEmissionDepletionMicroscopy"
+                },
+                {
+                    "@id": "bts:StimulatedRamanScattering"
+                },
+                {
+                    "@id": "bts:StochasticOpticalReconstructionMicroscopy"
+                },
+                {
+                    "@id": "bts:Super-ResolutionMicroscopy"
+                },
+                {
+                    "@id": "bts:SurfacePlasmonResonance"
+                },
+                {
+                    "@id": "bts:SurveyorNucleaseAssay"
+                },
+                {
+                    "@id": "bts:SynaptophysinStainingMethod"
+                },
+                {
+                    "@id": "bts:SyntheticGeneticArray"
+                },
+                {
+                    "@id": "bts:TAB-Seq"
+                },
+                {
+                    "@id": "bts:TCRSequencing"
+                },
+                {
+                    "@id": "bts:TIRFMicroscopy"
+                },
+                {
+                    "@id": "bts:TRAPStaining"
+                },
+                {
+                    "@id": "bts:TUNELassay"
+                },
+                {
+                    "@id": "bts:TandemMassSpectrometry"
+                },
+                {
+                    "@id": "bts:TandemMassTagging"
+                },
+                {
+                    "@id": "bts:TargetEngagementAssay"
+                },
+                {
+                    "@id": "bts:TargetedGenomeSequencing"
+                },
+                {
+                    "@id": "bts:TargetedTranscriptomeSequencing"
+                },
+                {
+                    "@id": "bts:ThermalShiftAssay"
+                },
+                {
+                    "@id": "bts:Thin-LayerChromatography"
+                },
+                {
+                    "@id": "bts:TilingArray"
+                },
+                {
+                    "@id": "bts:TimeLapseMicroscopy"
+                },
+                {
+                    "@id": "bts:Time-CorrelatedSinglePhotonCounting"
+                },
+                {
+                    "@id": "bts:TissueEngineering"
+                },
+                {
+                    "@id": "bts:TissueMicroarray"
+                },
+                {
+                    "@id": "bts:TotalInternalReflectionFluorescenceMicroscopy"
+                },
+                {
+                    "@id": "bts:TractionForceMicroscopy"
+                },
+                {
+                    "@id": "bts:TransmissionElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:TranswellAssay"
+                },
+                {
+                    "@id": "bts:UPLC-MSMS"
+                },
+                {
+                    "@id": "bts:UVPhotocrosslinking"
+                },
+                {
+                    "@id": "bts:Unspecified"
+                },
+                {
+                    "@id": "bts:VibrationalSpectroscopy"
+                },
+                {
+                    "@id": "bts:VirusPlaqueAssay"
+                },
+                {
+                    "@id": "bts:VonKossaStaining"
+                },
+                {
+                    "@id": "bts:WesternBlotting"
+                },
+                {
+                    "@id": "bts:WholeExomeSequencing"
+                },
+                {
+                    "@id": "bts:WholeGenomeBisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                },
+                {
+                    "@id": "bts:WidefieldFluorescenceMicroscopy"
+                },
+                {
+                    "@id": "bts:Wound-HealingAssay"
+                },
+                {
+                    "@id": "bts:X-RayCrystallography"
+                },
+                {
+                    "@id": "bts:X-RayDiffraction"
+                },
+                {
+                    "@id": "bts:X-RayMicro-ComputedTomography"
+                },
+                {
+                    "@id": "bts:Xenograft"
+                },
+                {
+                    "@id": "bts:CDNAArray"
+                },
+                {
+                    "@id": "bts:ECLIP-Seq"
+                },
+                {
+                    "@id": "bts:MRNASequencing"
+                },
+                {
+                    "@id": "bts:QPCR"
+                },
+                {
+                    "@id": "bts:ScCGI-seq"
+                },
+                {
+                    "@id": "bts:ScNT-Seq"
+                },
+                {
+                    "@id": "bts:ScSLAM-seq"
+                },
+                {
+                    "@id": "bts:SeqFISH"
+                },
+                {
+                    "@id": "bts:ShRNA"
+                },
+                {
+                    "@id": "bts:SiRNA"
+                },
+                {
+                    "@id": "bts:SmFISH"
+                },
+                {
+                    "@id": "bts:SmRNA-seq"
+                },
+                {
+                    "@id": "bts:SnRNA-seq"
+                },
+                {
+                    "@id": "bts:IsothermalTitrationCalorimetry"
+                },
+                {
+                    "@id": "bts:SuspendedMicrochannelResonator"
+                },
+                {
+                    "@id": "bts:10xMultiome"
+                },
+                {
+                    "@id": "bts:VisiumSpatialGeneExpression"
+                },
+                {
+                    "@id": "bts:AntitumorDrugScreeningAssay"
+                },
+                {
+                    "@id": "bts:BioelectrochemicalAnalysis"
+                },
+                {
+                    "@id": "bts:ChimericAntigenReceptorT-CellTherapy"
+                },
+                {
+                    "@id": "bts:CellCycleAssay"
+                },
+                {
+                    "@id": "bts:ClonalityAnalysis"
+                },
+                {
+                    "@id": "bts:ComparativeGenomicHybridization"
+                },
+                {
+                    "@id": "bts:Cryo-ElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:Cryo-ElectronTomography"
+                },
+                {
+                    "@id": "bts:DataIntegration"
+                },
+                {
+                    "@id": "bts:Field-EmissionScanningElectronMicroscopy"
+                },
+                {
+                    "@id": "bts:Label-freeProteinQuantificationbyLC/MS"
+                },
+                {
+                    "@id": "bts:MetaboliteProfilingAssay"
+                },
+                {
+                    "@id": "bts:ReporterGeneAssay"
+                },
+                {
+                    "@id": "bts:Single-MoleculeLocalizationMicroscopy"
+                },
+                {
+                    "@id": "bts:Synthesis"
+                },
+                {
+                    "@id": "bts:TargetedTherapyAgent"
+                },
+                {
+                    "@id": "bts:TrichromeStainingMethod"
+                },
+                {
+                    "@id": "bts:UltrasoundImaging"
+                },
+                {
+                    "@id": "bts:TranscriptionprofilingbyNanoString"
+                },
+                {
+                    "@id": "bts:AlcianBlueStainingMethod"
+                },
+                {
+                    "@id": "bts:ArtificialIntelligence"
+                },
+                {
+                    "@id": "bts:CellCulture"
+                },
+                {
+                    "@id": "bts:ClinicalStudy"
+                },
+                {
+                    "@id": "bts:Cell-freeCirculatingTumorDNAAssay"
+                },
+                {
+                    "@id": "bts:Co-ImmunoprecipitationMassSpectrometry"
+                },
+                {
+                    "@id": "bts:DeepLearning"
+                },
+                {
+                    "@id": "bts:GeneOntologyEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSetEnrichmentAnalysis"
+                },
+                {
+                    "@id": "bts:GeneSilencing"
+                },
+                {
+                    "@id": "bts:HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture"
+                },
+                {
+                    "@id": "bts:ImagingMassCytometry"
+                },
+                {
+                    "@id": "bts:ImmunofluorescentStainingMethod"
+                },
+                {
+                    "@id": "bts:Immunotherapy"
+                },
+                {
+                    "@id": "bts:ViralTransduction"
+                },
+                {
+                    "@id": "bts:MetastaticColonizationAssay"
+                },
+                {
+                    "@id": "bts:PhylogeneticAnalysis"
+                },
+                {
+                    "@id": "bts:PicrosiriusStaining"
+                },
+                {
+                    "@id": "bts:ScratchAssay"
+                },
+                {
+                    "@id": "bts:StructuralVariantAnalysis"
+                },
+                {
+                    "@id": "bts:SurvivalAnalysis"
+                },
+                {
+                    "@id": "bts:TargetedErrorCorrectionSequencing"
+                },
+                {
+                    "@id": "bts:Tuba-Seq"
+                },
+                {
+                    "@id": "bts:SDS-PAGE"
+                },
+                {
+                    "@id": "bts:CellFractionation"
+                }
+            ],
+            "sms:displayName": "DSP Dataset Assay",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "list like"
             ]
         },
         {
@@ -66923,7 +67087,7 @@
         {
             "@id": "bts:DSPDatasetGrantNumber",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
+            "rdfs:comment": "Grant number(s) associated with the dataset's development. Multiple values permitted, comma separated.",
             "rdfs:label": "DSPDatasetGrantNumber",
             "rdfs:subClassOf": [
                 {
@@ -67368,8 +67532,10 @@
                 }
             ],
             "sms:displayName": "DSP Dataset Grant Number",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "list like"
+            ]
         },
         {
             "@id": "bts:ThemeName",
