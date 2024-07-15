@@ -259,9 +259,6 @@
                     "@id": "bts:Mouse"
                 },
                 {
-                    "@id": "bts:Multispecies"
-                },
-                {
                     "@id": "bts:Opossum"
                 },
                 {
@@ -2821,29 +2818,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Mouse",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Multispecies",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Multispecies",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenSpecies"
-                },
-                {
-                    "@id": "bts:DatasetSpecies"
-                },
-                {
-                    "@id": "bts:DSPDatasetSpecies"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Multispecies",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -13980,9 +13954,6 @@
                 },
                 {
                     "@id": "bts:Mouse"
-                },
-                {
-                    "@id": "bts:Multispecies"
                 },
                 {
                     "@id": "bts:Opossum"
@@ -64450,9 +64421,6 @@
                 },
                 {
                     "@id": "bts:Mouse"
-                },
-                {
-                    "@id": "bts:Multispecies"
                 },
                 {
                     "@id": "bts:Opossum"
