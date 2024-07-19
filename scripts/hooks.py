@@ -5,9 +5,11 @@ DATA_MODELS = [
     "dataset",
     "sharingPlans",
     "education",
+    "file",
     "grant",
     "person",
     "publication",
+    "study",
     "tool",
 ]
 
