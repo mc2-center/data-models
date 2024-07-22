@@ -84,6 +84,20 @@ education:
   - name: Resource Access Hazard
     src: education/ed_hazard.csv
 
+file:
+  - name: File Format
+    src: shared/dataset_file_format.csv
+  - name: File Species
+    src: shared/dataset_species.csv
+  - name: File Assay
+    src: shared/assay.csv
+  - name: File Tissue
+    src: shared/tissue.csv
+  - name: File Tumor Type
+    src: shared/tumorType.csv
+  - name: File Level
+    src: shared/processLevel.csv
+
 geomx:
   - name: File Format
     src: tool/tool_format.csv
