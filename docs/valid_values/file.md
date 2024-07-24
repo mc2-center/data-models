@@ -1,4 +1,4 @@
-List of standard terms for the [Dataset Sharing Plan Model](../model/file.md).
+List of standard terms for the [File Data Model](../model/file.md).
 
 ## Attribute: `File Level`
 
