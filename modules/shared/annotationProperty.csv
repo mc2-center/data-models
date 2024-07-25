@@ -10,7 +10,7 @@ DatasetView Key,Unique DatasetView_id foreign key(s) that link metadata entries 
 Biospecimen Key,Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
 Individual Key,Unique Individual_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
 PublicationView Key,Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
-ToolView Key,Unique ToolView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,T,,unique
+ToolView Key,Unique ToolView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
 EducationalResource Key,Unique EducationalResource_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
 DataDSP Key,Unique DataDSP_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
 Model Key,Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.,,,FALSE,,,,,unique

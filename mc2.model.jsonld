@@ -68640,31 +68640,9 @@
             },
             "sms:displayName": "ToolView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:T"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
-        },
-        {
-            "@id": "bts:T",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "T",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "T",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
         },
         {
             "@id": "bts:EducationalResourceKey",
