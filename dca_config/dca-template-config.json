@@ -49,6 +49,21 @@
       "display_name": "NanoString GeoMx DSP Imaging Level 2",
       "schema_name": "NanoStringGeoMxDSPImagingLevel2",
       "type": "record"
+    },
+    {
+      "display_name": "Study",
+      "schema_name": "Study",
+      "type": "record"
+    },
+    {
+      "display_name": "File View",
+      "schema_name": "FileView",
+      "type": "file"
+    },
+    {
+      "display_name": "Dataset Sharing Plan",
+      "schema_name": "DataDSP",
+      "type": "record"
     }
   ],
   "service_version": "v23.8.1",

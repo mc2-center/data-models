@@ -134,3 +134,30 @@ See [Tool Input Data](#attribute-tool-input-format)
 {{ read_csv('tool/tool_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
 </div>
+
+
+## Attribute: `Tool Entity Role`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('tool/entity_role.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
+## Attribute: `Tool Entity Type`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('tool/entity_type.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
+
+
+## Attribute: `Tool Package Dependencies Present`
+
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+{{ read_csv('shared/boolean.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+
+</div>
