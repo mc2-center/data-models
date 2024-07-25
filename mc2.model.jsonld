@@ -52956,7 +52956,7 @@
         {
             "@id": "bts:FileView",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
+            "rdfs:comment": "The denormalized manifest for file submission.",
             "rdfs:label": "FileView",
             "rdfs:subClassOf": [
                 {
@@ -52966,7 +52966,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "FileView",
+            "sms:displayName": "File View",
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
@@ -53065,11 +53065,6 @@
             },
             "sms:displayName": "Biospecimen Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Biospecimen"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -53089,11 +53084,6 @@
             },
             "sms:displayName": "Study Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -53113,11 +53103,6 @@
             },
             "sms:displayName": "DatasetView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:DatasetView"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68541,11 +68526,6 @@
             },
             "sms:displayName": "ProjectView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:ProjectView"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68565,11 +68545,6 @@
             },
             "sms:displayName": "PersonView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:PersonView"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68589,11 +68564,6 @@
             },
             "sms:displayName": "Consortium Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Consortium"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68613,11 +68583,6 @@
             },
             "sms:displayName": "GrantView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68637,31 +68602,9 @@
             },
             "sms:displayName": "Individual Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Individual"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
-        },
-        {
-            "@id": "bts:Individual",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Individual",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Individual",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
         },
         {
             "@id": "bts:PublicationViewKey",
@@ -68678,11 +68621,6 @@
             },
             "sms:displayName": "PublicationView Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:PublicationView"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68704,12 +68642,29 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:ToolView"
+                    "@id": "bts:T"
                 }
             ],
             "sms:validationRules": [
                 "unique"
             ]
+        },
+        {
+            "@id": "bts:T",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "T",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "T",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
         },
         {
             "@id": "bts:EducationalResourceKey",
@@ -68726,11 +68681,6 @@
             },
             "sms:displayName": "EducationalResource Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:EducationalResource"
-                }
-            ],
             "sms:validationRules": [
                 "unique"
             ]
@@ -68750,11 +68700,44 @@
             },
             "sms:displayName": "DataDSP Key",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:ModelKey",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.",
+            "rdfs:label": "ModelKey",
+            "rdfs:subClassOf": [
                 {
-                    "@id": "bts:DataDSP"
+                    "@id": "bts:Thing"
                 }
             ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Model Key",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:FileViewKey",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique FileView_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+            "rdfs:label": "FileViewKey",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FileView Key",
+            "sms:required": "sms:false",
             "sms:validationRules": [
                 "unique"
             ]
@@ -68825,71 +68808,6 @@
                 }
             ],
             "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ModelKey",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.",
-            "rdfs:label": "ModelKey",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Model Key",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Model"
-                }
-            ],
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
-            "@id": "bts:Model",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Model",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Model",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:FileViewKey",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique FileView_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
-            "rdfs:label": "FileViewKey",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "FileView Key",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:FileView"
-                }
-            ],
-            "sms:validationRules": [
-                "unique"
-            ]
         },
         {
             "@id": "bts:DataDSPId",
