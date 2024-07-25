@@ -28284,16 +28284,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Dataset"
-                },
-                {
-                    "@id": "bts:Tool"
-                },
-                {
-                    "@id": "bts:Grant"
-                },
-                {
-                    "@id": "bts:Publication"
+                    "@id": "bts:GrantView"
                 }
             ],
             "sms:requiresDependency": [
@@ -33489,13 +33480,13 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Dataset"
+                    "@id": "bts:DatasetView"
                 },
                 {
-                    "@id": "bts:Tool"
+                    "@id": "bts:ToolView"
                 },
                 {
-                    "@id": "bts:Grant"
+                    "@id": "bts:GrantView"
                 }
             ],
             "sms:requiresDependency": [
@@ -36330,10 +36321,10 @@
             ]
         },
         {
-            "@id": "bts:Dataset",
+            "@id": "bts:ToolView",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Dataset",
+            "rdfs:comment": "The denormalized manifest for tool submission.",
+            "rdfs:label": "ToolView",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -36342,42 +36333,138 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Dataset",
+            "sms:displayName": "Tool View",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Tool",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Tool",
-            "rdfs:subClassOf": [
+            "sms:requiresComponent": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:PublicationView"
+                },
+                {
+                    "@id": "bts:GrantView"
                 }
             ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tool",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Grant",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Grant",
-            "rdfs:subClassOf": [
+            "sms:requiresDependency": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:ToolViewId"
+                },
+                {
+                    "@id": "bts:ToolPubmedId"
+                },
+                {
+                    "@id": "bts:ToolGrantNumber"
+                },
+                {
+                    "@id": "bts:ToolName"
+                },
+                {
+                    "@id": "bts:ToolDescription"
+                },
+                {
+                    "@id": "bts:ToolHomepage"
+                },
+                {
+                    "@id": "bts:ToolVersion"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolFunctionNote"
+                },
+                {
+                    "@id": "bts:ToolCmd"
+                },
+                {
+                    "@id": "bts:ToolType"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                },
+                {
+                    "@id": "bts:ToolOperatingSystem"
+                },
+                {
+                    "@id": "bts:ToolLanguage"
+                },
+                {
+                    "@id": "bts:ToolLicense"
+                },
+                {
+                    "@id": "bts:ToolCost"
+                },
+                {
+                    "@id": "bts:ToolAccessibility"
+                },
+                {
+                    "@id": "bts:ToolDownloadUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadType"
+                },
+                {
+                    "@id": "bts:ToolDownloadNote"
+                },
+                {
+                    "@id": "bts:ToolDownloadVersion"
+                },
+                {
+                    "@id": "bts:ToolDocumentationUrl"
+                },
+                {
+                    "@id": "bts:ToolDocumentationType"
+                },
+                {
+                    "@id": "bts:ToolDocumentationNote"
+                },
+                {
+                    "@id": "bts:ToolLinkUrl"
+                },
+                {
+                    "@id": "bts:ToolLinkType"
+                },
+                {
+                    "@id": "bts:ToolLinkNote"
+                },
+                {
+                    "@id": "bts:ToolDateLastModified"
+                },
+                {
+                    "@id": "bts:ToolReleaseDate"
+                },
+                {
+                    "@id": "bts:ToolPackageDependencies"
+                },
+                {
+                    "@id": "bts:ToolPackageDependenciesPresent"
+                },
+                {
+                    "@id": "bts:ToolComputeRequirements"
+                },
+                {
+                    "@id": "bts:ToolEntityName"
+                },
+                {
+                    "@id": "bts:ToolEntityType"
+                },
+                {
+                    "@id": "bts:ToolEntityRole"
                 }
             ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Grant",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -64474,153 +64561,6 @@
             ]
         },
         {
-            "@id": "bts:ToolView",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ToolView",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "ToolView",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:PublicationView"
-                },
-                {
-                    "@id": "bts:GrantView"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:ToolViewId"
-                },
-                {
-                    "@id": "bts:ToolPubmedId"
-                },
-                {
-                    "@id": "bts:ToolGrantNumber"
-                },
-                {
-                    "@id": "bts:ToolName"
-                },
-                {
-                    "@id": "bts:ToolDescription"
-                },
-                {
-                    "@id": "bts:ToolHomepage"
-                },
-                {
-                    "@id": "bts:ToolVersion"
-                },
-                {
-                    "@id": "bts:ToolOperation"
-                },
-                {
-                    "@id": "bts:ToolInputData"
-                },
-                {
-                    "@id": "bts:ToolOutputData"
-                },
-                {
-                    "@id": "bts:ToolInputFormat"
-                },
-                {
-                    "@id": "bts:ToolOutputFormat"
-                },
-                {
-                    "@id": "bts:ToolFunctionNote"
-                },
-                {
-                    "@id": "bts:ToolCmd"
-                },
-                {
-                    "@id": "bts:ToolType"
-                },
-                {
-                    "@id": "bts:ToolTopic"
-                },
-                {
-                    "@id": "bts:ToolOperatingSystem"
-                },
-                {
-                    "@id": "bts:ToolLanguage"
-                },
-                {
-                    "@id": "bts:ToolLicense"
-                },
-                {
-                    "@id": "bts:ToolCost"
-                },
-                {
-                    "@id": "bts:ToolAccessibility"
-                },
-                {
-                    "@id": "bts:ToolDownloadUrl"
-                },
-                {
-                    "@id": "bts:ToolDownloadType"
-                },
-                {
-                    "@id": "bts:ToolDownloadNote"
-                },
-                {
-                    "@id": "bts:ToolDownloadVersion"
-                },
-                {
-                    "@id": "bts:ToolDocumentationUrl"
-                },
-                {
-                    "@id": "bts:ToolDocumentationType"
-                },
-                {
-                    "@id": "bts:ToolDocumentationNote"
-                },
-                {
-                    "@id": "bts:ToolLinkUrl"
-                },
-                {
-                    "@id": "bts:ToolLinkType"
-                },
-                {
-                    "@id": "bts:ToolLinkNote"
-                },
-                {
-                    "@id": "bts:ToolDateLastModified"
-                },
-                {
-                    "@id": "bts:ToolReleaseDate"
-                },
-                {
-                    "@id": "bts:ToolPackageDependencies"
-                },
-                {
-                    "@id": "bts:ToolPackageDependenciesPresent"
-                },
-                {
-                    "@id": "bts:ToolComputeRequirements"
-                },
-                {
-                    "@id": "bts:ToolEntityName"
-                },
-                {
-                    "@id": "bts:ToolEntityType"
-                },
-                {
-                    "@id": "bts:ToolEntityRole"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:ProjectName",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of the project",
@@ -68125,23 +68065,6 @@
             "sms:validationRules": [
                 "list like"
             ]
-        },
-        {
-            "@id": "bts:Publication",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Publication",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Publication",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
         },
         {
             "@id": "bts:IRB",
