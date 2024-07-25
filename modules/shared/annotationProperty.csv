@@ -1,18 +1,18 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
 Component,"Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",,,TRUE,,,,,
 Data Use Codes,"DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.","IRB, HMB, PUB, US, NPOA, COL, NCU, NPUNCU, RS, TS, NRES, NPU, DUM, POA, MOR, GSO, RTN, CC, NMDS, IS, GS, DS, GRU, PS",,FALSE,,,,Data Use Ontology,list like
-ProjectView Key,"Unique ProjectView_id foreign key(s) that group the resource with other components, as part of the same grant-associated studies. Please provide multiple values as a comma-separated list.",,,FALSE,,,ProjectView,,unique
-Study Key,"The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",,,FALSE,,,Study,,unique
-PersonView Key,"Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",,,FALSE,,,PersonView,,unique
-Consortium Key,"Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",,,FALSE,,,Consortium,,unique
-GrantView Key,"Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",,,FALSE,,,GrantView,,unique
-DatasetView Key,Unique DatasetView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,DatasetView,,unique
-Biospecimen Key,Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,Biospecimen,,unique
-Individual Key,Unique Individual_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,Individual,,unique
-PublicationView Key,Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,PublicationView,,unique
-ToolView Key,Unique ToolView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,ToolView,,unique
-EducationalResource Key,Unique EducationalResource_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,EducationalResource,,unique
-DataDSP Key,Unique DataDSP_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,DataDSP,,unique
-Model Key,Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.,,,FALSE,,,Model,,unique
-FileView Key,Unique FileView_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,,FileView,,unique
+ProjectView Key,"Unique ProjectView_id foreign key(s) that group the resource with other components, as part of the same grant-associated studies. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,unique
+Study Key,"The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,unique
+PersonView Key,"Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,unique
+Consortium Key,"Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,unique
+GrantView Key,"Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",,,FALSE,,,,,unique
+DatasetView Key,Unique DatasetView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+Biospecimen Key,Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+Individual Key,Unique Individual_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+PublicationView Key,Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+ToolView Key,Unique ToolView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,T,,unique
+EducationalResource Key,Unique EducationalResource_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+DataDSP Key,Unique DataDSP_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.,,,FALSE,,,,,unique
+Model Key,Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.,,,FALSE,,,,,unique
+FileView Key,Unique FileView_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,,,,unique
 Filename,Name of a file,,,TRUE,,,,HTAN,str
