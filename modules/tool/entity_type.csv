@@ -1,0 +1,7 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Person,,,,FALSE,,Tool Entity Type,,,,,,,,
+Project,,,,FALSE,,Tool Entity Type,,,,,,,,
+Division,,,,FALSE,,Tool Entity Type,,,,,,,,
+Institute,,,,FALSE,,Tool Entity Type,,,,,,,,
+Research Consortium,,,,FALSE,,Tool Entity Type,,,,,,,,
+Funding Agency,,,,FALSE,,Tool Entity Type,,,,,,,,

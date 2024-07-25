@@ -203,3 +203,9 @@ tool:
     src: tool/tool_topic.csv
   - name: Tool Type
     src: tool/tool_type.csv
+  - name: Tool Package Dependencies Present
+    src: shared/boolean.csv
+  - name: Tool Entity Role
+    src: tool/entity_role.csv
+  - name: Tool Entity Type
+    src: tool/entity_type.csv  

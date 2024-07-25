@@ -1,0 +1,8 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Developer,,,,FALSE,,Tool Entity Role,,,,,,,,
+Maintainer,,,,FALSE,,Tool Entity Role,,,,,,,,
+Provider,,,,FALSE,,Tool Entity Role,,,,,,,,
+Documentor,,,,FALSE,,Tool Entity Role,,,,,,,,
+Contributor,,,,FALSE,,Tool Entity Role,,,,,,,,
+Support,,,,FALSE,,Tool Entity Role,,,,,,,,
+Primary Contact,,,,FALSE,,Tool Entity Role,,,,,,,,
