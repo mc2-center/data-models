@@ -21,13 +21,12 @@ The following checklist covers the post-curation steps that should be performed 
 - [ ] Add updates to a new branch in the data-models repo
 - [ ] Make a PR to merge updates into main
 - [ ] Verify CSV and JSON-LD were updated and added to branch or build and add manually
-- [ ] Build manifest templates in xlsx format and store in "templates" folder
+- [ ] Build manifest templates in CSV format and store in "templates" folder. Optionally, you can use [release_workflow.sh](https://github.com/mc2-center/data-models/blob/main/release_workflow.sh) to generate template manifests in bulk.
 - [ ] Review and merge PR to main
 
 ### Data Curator Config
 - [ ] Update data model and dca-template-config.json version number in data_curator_config/MC2/dca_config.json
-- [ ] Copy templates to display in DCA from data-models/templates to data_curator_config/MC2/templates
-- [ ] Ensure any templates that should be listed in the DCA are provided in data-models/dca_config/dca-template-config.json
+- [ ] Ensure any templates that should be listed in the DCA are listed in data-models/dca_config/dca-template-config.json
 
 ### Synapse
 - [ ] Process and upload metadata to grant-based Synapse projects (if needed)
