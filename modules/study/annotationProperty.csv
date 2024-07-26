@@ -1,7 +1,8 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Study,Studies associated with a grant,,"Component, Study_id, GrantView Key, ProjectView Key, Study Name, Study Description, Study Investigator, PersonView Key, Study Reuse Statement",FALSE,,,"Grant View, Project View, Person View",,
+Study,Studies associated with a grant,,"Component, Study_id, GrantView Key, ProjectView Key, Study Name, Study Description, Study Investigator, PersonView Key, Study Reuse Statement, Study Data Use Codes",FALSE,,,"Grant View, Project View, Person View",,
 Study Name,Name of the study,,,TRUE,,,,,str
 Study Description,"Description of the study, including the types of experimental assays, model systems, types of analysis, etc.",,,TRUE,,,,,str
 Study Investigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,,,TRUE,,,,,list like
 Study Reuse Statement,"The funder-, contributor-, patient-, etc., derived content that includes terms, conditions, or statements associated with accessing and reusing the resource(s).",,,FALSE,,,,,str
 Study_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
+Study Data Use Codes,"DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used.","IRB, HMB, PUB, US, NPOA, COL, NCU, NPUNCU, RS, TS, NRES, NPU, DUM, POA, MOR, GSO, RTN, CC, NMDS, IS, GS, DS, GRU, PS",,FALSE,,,,Data Use Ontology,list like

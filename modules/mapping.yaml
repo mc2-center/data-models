@@ -97,20 +97,6 @@ file:
     src: shared/duo.csv
 
 geomx:
-  - name: File Format
-    src: shared/dataset_file_format.csv
-  - name: File Species
-    src: shared/dataset_species.csv
-  - name: File Assay
-    src: shared/assay.csv
-  - name: File Tissue
-    src: shared/tissue.csv
-  - name: File Tumor Type
-    src: shared/tumorType.csv
-  - name: File Level
-    src: shared/processLevel.csv
-
-geomx:
   - name: GeoMx File Format
     src: tool/tool_format.csv
   - name: GeoMx DSP Assay Type
@@ -180,6 +166,10 @@ publication:
 
 shared:
   - name: Data Use Codes
+    src: shared/duo.csv
+
+study:
+  - name: Study Data Use Codes
     src: shared/duo.csv
     
 tool:
