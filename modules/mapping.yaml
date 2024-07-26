@@ -97,6 +97,8 @@ file:
     src: shared/tumorType.csv
   - name: File Level
     src: shared/processLevel.csv
+  - name: File Data Use Codes
+    src: shared/duo.csv
 
 geomx:
   - name: File Format
