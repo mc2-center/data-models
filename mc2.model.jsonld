@@ -1965,6 +1965,9 @@
                 },
                 {
                     "@id": "bts:ProjectView"
+                },
+                {
+                    "@id": "bts:PersonView"
                 }
             ],
             "sms:requiresDependency": [
@@ -1988,6 +1991,9 @@
                 },
                 {
                     "@id": "bts:StudyInvestigator"
+                },
+                {
+                    "@id": "bts:PersonViewKey"
                 },
                 {
                     "@id": "bts:StudyReuseStatement"
@@ -67667,25 +67673,10 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:PublicationView"
-                },
-                {
-                    "@id": "bts:DatasetView"
-                },
-                {
-                    "@id": "bts:ToolView"
-                },
-                {
                     "@id": "bts:Consortium"
                 },
                 {
                     "@id": "bts:GrantView"
-                },
-                {
-                    "@id": "bts:EducationalResource"
-                },
-                {
-                    "@id": "bts:Study"
                 }
             ],
             "sms:requiresDependency": [
@@ -67696,10 +67687,7 @@
                     "@id": "bts:PersonViewId"
                 },
                 {
-                    "@id": "bts:StudyKey"
-                },
-                {
-                    "@id": "bts:PersonGrantNumber"
+                    "@id": "bts:GrantViewKey"
                 },
                 {
                     "@id": "bts:PersonConsortiumName"
@@ -67769,6 +67757,155 @@
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
+            ]
+        },
+        {
+            "@id": "bts:GrantViewKey",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+            "rdfs:label": "GrantViewKey",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GrantView Key",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "matchAtLeastOne GrantView.GrantView_id Value"
+            ]
+        },
+        {
+            "@id": "bts:PersonConsortiumName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Consortium(s) associated with the person. Multiple values permitted, comma separated.",
+            "rdfs:label": "PersonConsortiumName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:CCBIR"
+                },
+                {
+                    "@id": "bts:CSBC"
+                },
+                {
+                    "@id": "bts:HTAN"
+                },
+                {
+                    "@id": "bts:ICBP"
+                },
+                {
+                    "@id": "bts:MetNet"
+                },
+                {
+                    "@id": "bts:NCI"
+                },
+                {
+                    "@id": "bts:NCIClinicalandTranslationalExploratory/DevelopmentalStudies"
+                },
+                {
+                    "@id": "bts:PDMC"
+                },
+                {
+                    "@id": "bts:PS-ON"
+                },
+                {
+                    "@id": "bts:SageBionetworks"
+                },
+                {
+                    "@id": "bts:TEC"
+                }
+            ],
+            "sms:displayName": "Person Consortium Name",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "list like"
+            ]
+        },
+        {
+            "@id": "bts:PersonPublications",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",
+            "rdfs:label": "PersonPublications",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Person Publications",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "list like"
+            ]
+        },
+        {
+            "@id": "bts:PersonDatasets",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the person. Multiple values permitted, comma separated.",
+            "rdfs:label": "PersonDatasets",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Person Datasets",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "list like"
+            ]
+        },
+        {
+            "@id": "bts:PersonTools",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A list of the tool names associated with the person. Multiple values permitted, comma separated.",
+            "rdfs:label": "PersonTools",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Person Tools",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "list like"
+            ]
+        },
+        {
+            "@id": "bts:PersonEducationalResources",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A list of educational resource identifiers associated with the person. Multiple values permitted, comma separated.",
+            "rdfs:label": "PersonEducationalResources",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Person Educational Resources",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "list like"
             ]
         },
         {
@@ -68225,136 +68362,6 @@
             ]
         },
         {
-            "@id": "bts:PersonConsortiumName",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Consortium(s) associated with the person. Multiple values permitted, comma separated.",
-            "rdfs:label": "PersonConsortiumName",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:CCBIR"
-                },
-                {
-                    "@id": "bts:CSBC"
-                },
-                {
-                    "@id": "bts:HTAN"
-                },
-                {
-                    "@id": "bts:ICBP"
-                },
-                {
-                    "@id": "bts:MetNet"
-                },
-                {
-                    "@id": "bts:NCI"
-                },
-                {
-                    "@id": "bts:NCIClinicalandTranslationalExploratory/DevelopmentalStudies"
-                },
-                {
-                    "@id": "bts:PDMC"
-                },
-                {
-                    "@id": "bts:PS-ON"
-                },
-                {
-                    "@id": "bts:SageBionetworks"
-                },
-                {
-                    "@id": "bts:TEC"
-                }
-            ],
-            "sms:displayName": "Person Consortium Name",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
-            "@id": "bts:PersonPublications",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",
-            "rdfs:label": "PersonPublications",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Person Publications",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
-            "@id": "bts:PersonDatasets",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the person. Multiple values permitted, comma separated.",
-            "rdfs:label": "PersonDatasets",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Person Datasets",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
-            "@id": "bts:PersonTools",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A list of the tool names associated with the person. Multiple values permitted, comma separated.",
-            "rdfs:label": "PersonTools",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Person Tools",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
-            "@id": "bts:PersonEducationalResources",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A list of educational resource identifiers associated with the person. Multiple values permitted, comma separated.",
-            "rdfs:label": "PersonEducationalResources",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Person Educational Resources",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "list like"
-            ]
-        },
-        {
             "@id": "bts:ProjectName",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of the project",
@@ -68531,25 +68538,6 @@
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
-            ]
-        },
-        {
-            "@id": "bts:GrantViewKey",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
-            "rdfs:label": "GrantViewKey",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "GrantView Key",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "matchAtLeastOne GrantView.GrantView_id Value"
             ]
         },
         {
