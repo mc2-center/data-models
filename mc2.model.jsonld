@@ -28925,12 +28925,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:GrantView"
-                },
-                {
-                    "@id": "bts:ProjectView"
-                },
-                {
-                    "@id": "bts:PersonView"
                 }
             ],
             "sms:requiresDependency": [
