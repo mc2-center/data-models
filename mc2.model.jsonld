@@ -24,9 +24,6 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Study"
-                },
-                {
                     "@id": "bts:Individual"
                 },
                 {
@@ -1945,66 +1942,6 @@
             ]
         },
         {
-            "@id": "bts:Study",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Studies associated with a grant",
-            "rdfs:label": "Study",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Study",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                },
-                {
-                    "@id": "bts:ProjectView"
-                },
-                {
-                    "@id": "bts:PersonView"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:StudyId"
-                },
-                {
-                    "@id": "bts:GrantViewKey"
-                },
-                {
-                    "@id": "bts:ProjectViewKey"
-                },
-                {
-                    "@id": "bts:StudyName"
-                },
-                {
-                    "@id": "bts:StudyDescription"
-                },
-                {
-                    "@id": "bts:StudyInvestigator"
-                },
-                {
-                    "@id": "bts:PersonViewKey"
-                },
-                {
-                    "@id": "bts:StudyReuseStatement"
-                },
-                {
-                    "@id": "bts:StudyDataUseCodes"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:Individual",
             "@type": "rdfs:Class",
             "rdfs:comment": "Information about models and individuals from which biospecimen(s) were collected.",
@@ -2078,7 +2015,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Study"
+                    "@id": "bts:Individual"
                 }
             ],
             "sms:requiresDependency": [
@@ -2090,6 +2027,9 @@
                 },
                 {
                     "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:IndividualKey"
                 },
                 {
                     "@id": "bts:ModelAge"
@@ -28804,9 +28744,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Study"
-                },
-                {
-                    "@id": "bts:PublicationView"
                 }
             ],
             "sms:requiresDependency": [
@@ -28971,10 +28908,10 @@
             ]
         },
         {
-            "@id": "bts:PublicationView",
+            "@id": "bts:Study",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The denormalized manifest for publication submission.",
-            "rdfs:label": "PublicationView",
+            "rdfs:comment": "Studies associated with a grant",
+            "rdfs:label": "Study",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -28983,11 +28920,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Publication View",
+            "sms:displayName": "Study",
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Study"
+                    "@id": "bts:GrantView"
+                },
+                {
+                    "@id": "bts:ProjectView"
+                },
+                {
+                    "@id": "bts:PersonView"
                 }
             ],
             "sms:requiresDependency": [
@@ -28995,49 +28938,31 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:PublicationViewId"
+                    "@id": "bts:StudyId"
                 },
                 {
-                    "@id": "bts:StudyKey"
+                    "@id": "bts:GrantViewKey"
                 },
                 {
-                    "@id": "bts:PublicationDoi"
+                    "@id": "bts:ProjectViewKey"
                 },
                 {
-                    "@id": "bts:PublicationJournal"
+                    "@id": "bts:StudyName"
                 },
                 {
-                    "@id": "bts:PubmedId"
+                    "@id": "bts:StudyDescription"
                 },
                 {
-                    "@id": "bts:PubmedUrl"
+                    "@id": "bts:StudyInvestigator"
                 },
                 {
-                    "@id": "bts:PublicationTitle"
+                    "@id": "bts:PersonViewKey"
                 },
                 {
-                    "@id": "bts:PublicationYear"
+                    "@id": "bts:StudyReuseStatement"
                 },
                 {
-                    "@id": "bts:PublicationKeywords"
-                },
-                {
-                    "@id": "bts:PublicationAuthors"
-                },
-                {
-                    "@id": "bts:PublicationAbstract"
-                },
-                {
-                    "@id": "bts:PublicationAssay"
-                },
-                {
-                    "@id": "bts:PublicationTumorType"
-                },
-                {
-                    "@id": "bts:PublicationTissue"
-                },
-                {
-                    "@id": "bts:PublicationAccessibility"
+                    "@id": "bts:StudyDataUseCodes"
                 }
             ],
             "sms:validationRules": []
@@ -34572,15 +34497,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Study"
-                },
-                {
-                    "@id": "bts:PublicationView"
-                },
-                {
-                    "@id": "bts:DatasetView"
-                },
-                {
-                    "@id": "bts:ToolView"
                 }
             ],
             "sms:requiresDependency": [
@@ -36903,159 +36819,6 @@
             "sms:validationRules": [
                 "list like"
             ]
-        },
-        {
-            "@id": "bts:ToolView",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The denormalized manifest for tool submission.",
-            "rdfs:label": "ToolView",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tool View",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:DatasetView"
-                },
-                {
-                    "@id": "bts:PublicationView"
-                },
-                {
-                    "@id": "bts:Study"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:ToolViewId"
-                },
-                {
-                    "@id": "bts:Studykey"
-                },
-                {
-                    "@id": "bts:DatasetViewKey"
-                },
-                {
-                    "@id": "bts:PublicationViewKey"
-                },
-                {
-                    "@id": "bts:ToolName"
-                },
-                {
-                    "@id": "bts:ToolDescription"
-                },
-                {
-                    "@id": "bts:ToolHomepage"
-                },
-                {
-                    "@id": "bts:ToolVersion"
-                },
-                {
-                    "@id": "bts:ToolOperation"
-                },
-                {
-                    "@id": "bts:ToolInputData"
-                },
-                {
-                    "@id": "bts:ToolOutputData"
-                },
-                {
-                    "@id": "bts:ToolInputFormat"
-                },
-                {
-                    "@id": "bts:ToolOutputFormat"
-                },
-                {
-                    "@id": "bts:ToolFunctionNote"
-                },
-                {
-                    "@id": "bts:ToolCmd"
-                },
-                {
-                    "@id": "bts:ToolType"
-                },
-                {
-                    "@id": "bts:ToolTopic"
-                },
-                {
-                    "@id": "bts:ToolOperatingSystem"
-                },
-                {
-                    "@id": "bts:ToolLanguage"
-                },
-                {
-                    "@id": "bts:ToolLicense"
-                },
-                {
-                    "@id": "bts:ToolCost"
-                },
-                {
-                    "@id": "bts:ToolAccessibility"
-                },
-                {
-                    "@id": "bts:ToolDownloadUrl"
-                },
-                {
-                    "@id": "bts:ToolDownloadType"
-                },
-                {
-                    "@id": "bts:ToolDownloadNote"
-                },
-                {
-                    "@id": "bts:ToolDownloadVersion"
-                },
-                {
-                    "@id": "bts:ToolDocumentationUrl"
-                },
-                {
-                    "@id": "bts:ToolDocumentationType"
-                },
-                {
-                    "@id": "bts:ToolDocumentationNote"
-                },
-                {
-                    "@id": "bts:ToolLinkUrl"
-                },
-                {
-                    "@id": "bts:ToolLinkType"
-                },
-                {
-                    "@id": "bts:ToolLinkNote"
-                },
-                {
-                    "@id": "bts:ToolDateLastModified"
-                },
-                {
-                    "@id": "bts:ToolReleaseDate"
-                },
-                {
-                    "@id": "bts:ToolPackageDependencies"
-                },
-                {
-                    "@id": "bts:ToolPackageDependenciesPresent"
-                },
-                {
-                    "@id": "bts:ToolComputeRequirements"
-                },
-                {
-                    "@id": "bts:ToolEntityName"
-                },
-                {
-                    "@id": "bts:ToolEntityType"
-                },
-                {
-                    "@id": "bts:ToolEntityRole"
-                }
-            ],
-            "sms:validationRules": []
         },
         {
             "@id": "bts:ComputationalModelDevelopment",
@@ -51859,9 +51622,6 @@
             "sms:displayName": "File View",
             "sms:required": "sms:false",
             "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                },
                 {
                     "@id": "bts:Biospecimen"
                 },
@@ -71371,6 +71131,78 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:PublicationView",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for publication submission.",
+            "rdfs:label": "PublicationView",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Publication View",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:PublicationViewId"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:PublicationDoi"
+                },
+                {
+                    "@id": "bts:PublicationJournal"
+                },
+                {
+                    "@id": "bts:PubmedId"
+                },
+                {
+                    "@id": "bts:PubmedUrl"
+                },
+                {
+                    "@id": "bts:PublicationTitle"
+                },
+                {
+                    "@id": "bts:PublicationYear"
+                },
+                {
+                    "@id": "bts:PublicationKeywords"
+                },
+                {
+                    "@id": "bts:PublicationAuthors"
+                },
+                {
+                    "@id": "bts:PublicationAbstract"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:PublicationTumorType"
+                },
+                {
+                    "@id": "bts:PublicationTissue"
+                },
+                {
+                    "@id": "bts:PublicationAccessibility"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:PublicationViewId",
             "@type": "rdfs:Class",
             "rdfs:comment": "A unique primary key that enables record updates using schematic.",
@@ -71972,9 +71804,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Study"
-                },
-                {
-                    "@id": "bts:DatasetView"
                 }
             ],
             "sms:requiresDependency": [
@@ -89353,6 +89182,153 @@
             },
             "sms:displayName": "Tool Version",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolView",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for tool submission.",
+            "rdfs:label": "ToolView",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tool View",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:ToolViewId"
+                },
+                {
+                    "@id": "bts:Studykey"
+                },
+                {
+                    "@id": "bts:DatasetViewKey"
+                },
+                {
+                    "@id": "bts:PublicationViewKey"
+                },
+                {
+                    "@id": "bts:ToolName"
+                },
+                {
+                    "@id": "bts:ToolDescription"
+                },
+                {
+                    "@id": "bts:ToolHomepage"
+                },
+                {
+                    "@id": "bts:ToolVersion"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolFunctionNote"
+                },
+                {
+                    "@id": "bts:ToolCmd"
+                },
+                {
+                    "@id": "bts:ToolType"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                },
+                {
+                    "@id": "bts:ToolOperatingSystem"
+                },
+                {
+                    "@id": "bts:ToolLanguage"
+                },
+                {
+                    "@id": "bts:ToolLicense"
+                },
+                {
+                    "@id": "bts:ToolCost"
+                },
+                {
+                    "@id": "bts:ToolAccessibility"
+                },
+                {
+                    "@id": "bts:ToolDownloadUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadType"
+                },
+                {
+                    "@id": "bts:ToolDownloadNote"
+                },
+                {
+                    "@id": "bts:ToolDownloadVersion"
+                },
+                {
+                    "@id": "bts:ToolDocumentationUrl"
+                },
+                {
+                    "@id": "bts:ToolDocumentationType"
+                },
+                {
+                    "@id": "bts:ToolDocumentationNote"
+                },
+                {
+                    "@id": "bts:ToolLinkUrl"
+                },
+                {
+                    "@id": "bts:ToolLinkType"
+                },
+                {
+                    "@id": "bts:ToolLinkNote"
+                },
+                {
+                    "@id": "bts:ToolDateLastModified"
+                },
+                {
+                    "@id": "bts:ToolReleaseDate"
+                },
+                {
+                    "@id": "bts:ToolPackageDependencies"
+                },
+                {
+                    "@id": "bts:ToolPackageDependenciesPresent"
+                },
+                {
+                    "@id": "bts:ToolComputeRequirements"
+                },
+                {
+                    "@id": "bts:ToolEntityName"
+                },
+                {
+                    "@id": "bts:ToolEntityType"
+                },
+                {
+                    "@id": "bts:ToolEntityRole"
+                }
+            ],
             "sms:validationRules": []
         },
         {
