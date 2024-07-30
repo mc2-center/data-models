@@ -52454,6 +52454,14 @@
             },
             "sms:displayName": "NanoString GeoMx DSP Level 1",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:FileView"
+                },
+                {
+                    "@id": "bts:NanoStringGeoMXROISegmentAnnotation"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -53228,6 +53236,123 @@
             "sms:validationRules": [
                 "str"
             ]
+        },
+        {
+            "@id": "bts:NanoStringGeoMXROISegmentAnnotation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "GeoMx ROI and Segment Metadata Attributes. The assayed biospecimen should be reported one per row with the associated ROI and AOI coordinates.",
+            "rdfs:label": "NanoStringGeoMXROISegmentAnnotation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "NanoString GeoMX ROI Segment Annotation",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimen"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:NanoStringGeoMXROISegmentAnnotationId"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:Scanname"
+                },
+                {
+                    "@id": "bts:ROIName"
+                },
+                {
+                    "@id": "bts:AOIName"
+                },
+                {
+                    "@id": "bts:Tags"
+                },
+                {
+                    "@id": "bts:ROIXCoordinate"
+                },
+                {
+                    "@id": "bts:ROIYCoordinate"
+                },
+                {
+                    "@id": "bts:AOIXCoordinate"
+                },
+                {
+                    "@id": "bts:AOIYCoordinate"
+                },
+                {
+                    "@id": "bts:QCstatus"
+                },
+                {
+                    "@id": "bts:ScanHeight"
+                },
+                {
+                    "@id": "bts:ScanWidth"
+                },
+                {
+                    "@id": "bts:ScanOffsetX"
+                },
+                {
+                    "@id": "bts:ScanOffsetY"
+                },
+                {
+                    "@id": "bts:BindingDensity"
+                },
+                {
+                    "@id": "bts:Positivenormfactor"
+                },
+                {
+                    "@id": "bts:Surfacearea"
+                },
+                {
+                    "@id": "bts:Nucleicount"
+                },
+                {
+                    "@id": "bts:TissueStain"
+                },
+                {
+                    "@id": "bts:Slidename"
+                },
+                {
+                    "@id": "bts:Rawreads"
+                },
+                {
+                    "@id": "bts:Stitchedreads"
+                },
+                {
+                    "@id": "bts:Alignedreads"
+                },
+                {
+                    "@id": "bts:Deduplicatedreads"
+                },
+                {
+                    "@id": "bts:InSituNegativemedian"
+                },
+                {
+                    "@id": "bts:Biologicalprobemedian"
+                },
+                {
+                    "@id": "bts:SequencingSaturation"
+                },
+                {
+                    "@id": "bts:MapQ30"
+                }
+            ],
+            "sms:validationRules": []
         },
         {
             "@id": "bts:AlignmentFormat",
@@ -55378,6 +55503,14 @@
             },
             "sms:displayName": "NanoString GeoMx DSP Level 2",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:FileView"
+                },
+                {
+                    "@id": "bts:NanoStringGeoMXROISegmentAnnotation"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -55518,6 +55651,14 @@
             },
             "sms:displayName": "NanoString GeoMx DSP Imaging Level 2",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:FileView"
+                },
+                {
+                    "@id": "bts:NanoStringGeoMXROISegmentAnnotation"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -55645,6 +55786,14 @@
             },
             "sms:displayName": "NanoString GeoMx DSP Level 3",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:FileView"
+                },
+                {
+                    "@id": "bts:NanoStringGeoMXROISegmentAnnotation"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -55922,118 +56071,6 @@
             },
             "sms:displayName": "Batch Corrected Counts",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NanoStringGeoMXROISegmentAnnotation",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "GeoMx ROI and Segment Metadata Attributes. The assayed biospecimen should be reported one per row with the associated ROI and AOI coordinates.",
-            "rdfs:label": "NanoStringGeoMXROISegmentAnnotation",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NanoString GeoMX ROI Segment Annotation",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:NanoStringGeoMXROISegmentAnnotationId"
-                },
-                {
-                    "@id": "bts:StudyKey"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:Scanname"
-                },
-                {
-                    "@id": "bts:ROIName"
-                },
-                {
-                    "@id": "bts:AOIName"
-                },
-                {
-                    "@id": "bts:Tags"
-                },
-                {
-                    "@id": "bts:ROIXCoordinate"
-                },
-                {
-                    "@id": "bts:ROIYCoordinate"
-                },
-                {
-                    "@id": "bts:AOIXCoordinate"
-                },
-                {
-                    "@id": "bts:AOIYCoordinate"
-                },
-                {
-                    "@id": "bts:QCstatus"
-                },
-                {
-                    "@id": "bts:ScanHeight"
-                },
-                {
-                    "@id": "bts:ScanWidth"
-                },
-                {
-                    "@id": "bts:ScanOffsetX"
-                },
-                {
-                    "@id": "bts:ScanOffsetY"
-                },
-                {
-                    "@id": "bts:BindingDensity"
-                },
-                {
-                    "@id": "bts:Positivenormfactor"
-                },
-                {
-                    "@id": "bts:Surfacearea"
-                },
-                {
-                    "@id": "bts:Nucleicount"
-                },
-                {
-                    "@id": "bts:TissueStain"
-                },
-                {
-                    "@id": "bts:Slidename"
-                },
-                {
-                    "@id": "bts:Rawreads"
-                },
-                {
-                    "@id": "bts:Stitchedreads"
-                },
-                {
-                    "@id": "bts:Alignedreads"
-                },
-                {
-                    "@id": "bts:Deduplicatedreads"
-                },
-                {
-                    "@id": "bts:InSituNegativemedian"
-                },
-                {
-                    "@id": "bts:Biologicalprobemedian"
-                },
-                {
-                    "@id": "bts:SequencingSaturation"
-                },
-                {
-                    "@id": "bts:MapQ30"
-                }
-            ],
             "sms:validationRules": []
         },
         {
@@ -60598,6 +60635,11 @@
             },
             "sms:displayName": "Imaging Level 2",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:FileView"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
