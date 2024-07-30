@@ -2015,7 +2015,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Individual"
+                    "@id": "bts:Study"
                 }
             ],
             "sms:requiresDependency": [
@@ -51624,9 +51624,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimen"
-                },
-                {
-                    "@id": "bts:DatasetView"
                 }
             ],
             "sms:requiresDependency": [
@@ -56746,17 +56743,6 @@
             },
             "sms:displayName": "Grant View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Theme"
-                },
-                {
-                    "@id": "bts:Institution"
-                },
-                {
-                    "@id": "bts:Consortium"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -57636,77 +57622,6 @@
             "sms:validationRules": [
                 "url"
             ]
-        },
-        {
-            "@id": "bts:Theme",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Themes associated with resources derived from consortia activities",
-            "rdfs:label": "Theme",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Theme",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:ThemeName"
-                },
-                {
-                    "@id": "bts:ThemeDisplayName"
-                },
-                {
-                    "@id": "bts:ThemeDescription"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Institution",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Institutions participating in consortia activities",
-            "rdfs:label": "Institution",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Institution",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:InstitutionName"
-                },
-                {
-                    "@id": "bts:InstitutionFullName"
-                },
-                {
-                    "@id": "bts:InstitutionAlias"
-                },
-                {
-                    "@id": "bts:InstitutionLocationState"
-                },
-                {
-                    "@id": "bts:InstitutionLocationCity"
-                },
-                {
-                    "@id": "bts:Rorid"
-                }
-            ],
-            "sms:validationRules": []
         },
         {
             "@id": "bts:ArizonaStateUniversity",
@@ -65445,6 +65360,46 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Institution",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Institutions participating in consortia activities",
+            "rdfs:label": "Institution",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Institution",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:InstitutionName"
+                },
+                {
+                    "@id": "bts:InstitutionFullName"
+                },
+                {
+                    "@id": "bts:InstitutionAlias"
+                },
+                {
+                    "@id": "bts:InstitutionLocationState"
+                },
+                {
+                    "@id": "bts:InstitutionLocationCity"
+                },
+                {
+                    "@id": "bts:Rorid"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:InstitutionName",
             "@type": "rdfs:Class",
             "rdfs:comment": "Machine readable name of the institution. (e.g. ArizonaStatUniversity, BostonUniversity, etc.)",
@@ -67432,9 +67387,6 @@
             "sms:displayName": "Person View",
             "sms:required": "sms:false",
             "sms:requiresComponent": [
-                {
-                    "@id": "bts:Consortium"
-                },
                 {
                     "@id": "bts:GrantView"
                 }
@@ -75261,6 +75213,37 @@
             "sms:validationRules": [
                 "list like"
             ]
+        },
+        {
+            "@id": "bts:Theme",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Themes associated with resources derived from consortia activities",
+            "rdfs:label": "Theme",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Theme",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:ThemeName"
+                },
+                {
+                    "@id": "bts:ThemeDisplayName"
+                },
+                {
+                    "@id": "bts:ThemeDescription"
+                }
+            ],
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ThemeName",
