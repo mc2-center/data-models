@@ -68271,7 +68271,7 @@
         {
             "@id": "bts:UMITag",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SAM tag for the UMI field; please provide a valid UB, UMI (e.g. UB:Z or UR:Z)",
+            "rdfs:comment": "SAM tag for the UMI field; please provide a valid tag-type pair, consisting of a tag (e.g. UB or UR) and type (e.g. Z) separated by a colon.",
             "rdfs:label": "UMITag",
             "rdfs:subClassOf": [
                 {
@@ -68309,7 +68309,7 @@
         {
             "@id": "bts:SpatialBarcodeTag",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SAM tag for spot barcode field; please provide a valid spot barcode tag (e.g. CB:Z)",
+            "rdfs:comment": "SAM tag for spot barcode field; please provide a valid tag-type pair, consisting of a tag (e.g. CB or CR) and type (e.g. Z) separated by a colon.",
             "rdfs:label": "SpatialBarcodeTag",
             "rdfs:subClassOf": [
                 {
@@ -68412,7 +68412,7 @@
         {
             "@id": "bts:GenomicReferenceURL",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Link to human genome sequence (e.g. ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/GRCh38.primary_assembly.genome.fa.gz)",
+            "rdfs:comment": "Link to human genome sequence; ftp or reference URL will be accepted.",
             "rdfs:label": "GenomicReferenceURL",
             "rdfs:subClassOf": [
                 {
@@ -68431,7 +68431,7 @@
         {
             "@id": "bts:GenomeAnnotationURL",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Link to the human genome annotation (GTF) file (e.g. ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/gencode.v34.annotation.gtf.gz)",
+            "rdfs:comment": "Link to the human genome annotation (GTF) file; ftp or reference URL will be accepted.",
             "rdfs:label": "GenomeAnnotationURL",
             "rdfs:subClassOf": [
                 {
