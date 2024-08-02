@@ -87867,6 +87867,236 @@
             ]
         },
         {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-AuxiliaryFiles",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Auxiliary data associated with spot/slide analysis (aligned Images, quality control files, etc)  from Spatial Transcriptomics.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-AuxiliaryFiles",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - Auxiliary Files",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
+                },
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
+                },
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
+                },
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:VisiumAuxId"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel1Key"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel2Key"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel3Key"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel4Key"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:VisiumFileType"
+                },
+                {
+                    "@id": "bts:SlideID"
+                },
+                {
+                    "@id": "bts:CaptureArea"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:VisiumAuxId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
+            "rdfs:label": "VisiumAuxId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "VisiumAux_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:RunID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A unique identifier for this individual run (typically associated with a single slide) of the spatial transcriptomic processing workflow.",
+            "rdfs:label": "RunID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Run ID",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:VisiumFileType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The file type generated for the visium experiment.",
+            "rdfs:label": "VisiumFileType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Referencepng"
+                },
+                {
+                    "@id": "bts:Referencejpg"
+                },
+                {
+                    "@id": "bts:Jsonscalefactors"
+                },
+                {
+                    "@id": "bts:Probedatasetcsv"
+                },
+                {
+                    "@id": "bts:Qcresulthtml"
+                },
+                {
+                    "@id": "bts:Filteredmex"
+                },
+                {
+                    "@id": "bts:Unfilteredmex"
+                },
+                {
+                    "@id": "bts:TissuePositions"
+                },
+                {
+                    "@id": "bts:Barcodes"
+                },
+                {
+                    "@id": "bts:Features"
+                },
+                {
+                    "@id": "bts:Fiducialimagepng"
+                },
+                {
+                    "@id": "bts:Fiducialimagejpg"
+                },
+                {
+                    "@id": "bts:Detectedimagepng"
+                },
+                {
+                    "@id": "bts:Detectedjpg"
+                },
+                {
+                    "@id": "bts:Highresimage"
+                },
+                {
+                    "@id": "bts:Lowresimage"
+                }
+            ],
+            "sms:displayName": "Visium File Type",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
+            "@id": "bts:CaptureArea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Area (or Capture Area) - One of the either four or two active regions where tissue can be placed on a Visium slide. Each area is intended to contain only one tissue sample. Slide areas are named consecutively from top to bottom: A1, B1, C1, D1 for Visium slides with 6.5 mm Capture Area and A, B for CytAssist slides with 11 mm Capture Area. Both CytAssist slides with 6.5 mm Capture Area and Gateway Slides contain only two slide areas, A1 and D1.",
+            "rdfs:label": "CaptureArea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:A"
+                },
+                {
+                    "@id": "bts:B"
+                },
+                {
+                    "@id": "bts:C"
+                },
+                {
+                    "@id": "bts:D"
+                },
+                {
+                    "@id": "bts:A1"
+                },
+                {
+                    "@id": "bts:B1"
+                },
+                {
+                    "@id": "bts:C1"
+                },
+                {
+                    "@id": "bts:D1"
+                }
+            ],
+            "sms:displayName": "Capture Area",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
             "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1",
             "@type": "rdfs:Class",
             "rdfs:comment": "Files contain raw RNA-seq data associated with spot/slide data.",
@@ -87963,6 +88193,228 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 2",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel2Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Checksum"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel1Key"
+                },
+                {
+                    "@id": "bts:FileAlias"
+                },
+                {
+                    "@id": "bts:UMITag"
+                },
+                {
+                    "@id": "bts:WhitelistSpatialBarcodeFileLink"
+                },
+                {
+                    "@id": "bts:SpatialBarcodeTag"
+                },
+                {
+                    "@id": "bts:AppliedHardTrimming"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:GenomicReference"
+                },
+                {
+                    "@id": "bts:GenomicReferenceURL"
+                },
+                {
+                    "@id": "bts:GenomeAnnotationURL"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:CaptureArea"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics Auxiliary files.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 3",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel3Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel2Key"
+                },
+                {
+                    "@id": "bts:VisiumAuxKey"
+                },
+                {
+                    "@id": "bts:FileAlias"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:VisiumFileType"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:CaptureArea"
+                },
+                {
+                    "@id": "bts:Spotsundertissue"
+                },
+                {
+                    "@id": "bts:MeanReadsperSpatialSpot"
+                },
+                {
+                    "@id": "bts:MedianNumberGenesperSpatialSpot"
+                },
+                {
+                    "@id": "bts:SequencingSaturation"
+                },
+                {
+                    "@id": "bts:ProportionReadsMapped"
+                },
+                {
+                    "@id": "bts:ProportionReadsMappedtoTranscriptome"
+                },
+                {
+                    "@id": "bts:MedianUMICountsperSpot"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 3.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel4Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel3Key"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:VisiumWorkflowType"
+                },
+                {
+                    "@id": "bts:VisiumWorkflowParametersDescription"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:VisiumRNALevel1Id",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
@@ -87979,70 +88431,6 @@
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
-            ]
-        },
-        {
-            "@id": "bts:RunID",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A unique identifier for this individual run (typically associated with a single slide) of the spatial transcriptomic processing workflow.",
-            "rdfs:label": "RunID",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Run ID",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
-            "@id": "bts:CaptureArea",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Area (or Capture Area) - One of the either four or two active regions where tissue can be placed on a Visium slide. Each area is intended to contain only one tissue sample. Slide areas are named consecutively from top to bottom: A1, B1, C1, D1 for Visium slides with 6.5 mm Capture Area and A, B for CytAssist slides with 11 mm Capture Area. Both CytAssist slides with 6.5 mm Capture Area and Gateway Slides contain only two slide areas, A1 and D1.",
-            "rdfs:label": "CaptureArea",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:A"
-                },
-                {
-                    "@id": "bts:B"
-                },
-                {
-                    "@id": "bts:C"
-                },
-                {
-                    "@id": "bts:D"
-                },
-                {
-                    "@id": "bts:A1"
-                },
-                {
-                    "@id": "bts:B1"
-                },
-                {
-                    "@id": "bts:C1"
-                },
-                {
-                    "@id": "bts:D1"
-                }
-            ],
-            "sms:displayName": "Capture Area",
-            "sms:required": "sms:false",
-            "sms:validationRules": [
-                "str"
             ]
         },
         {
@@ -88232,87 +88620,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 2",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel2Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:Checksum"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel1Key"
-                },
-                {
-                    "@id": "bts:FileAlias"
-                },
-                {
-                    "@id": "bts:UMITag"
-                },
-                {
-                    "@id": "bts:WhitelistSpatialBarcodeFileLink"
-                },
-                {
-                    "@id": "bts:SpatialBarcodeTag"
-                },
-                {
-                    "@id": "bts:AppliedHardTrimming"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:GenomicReference"
-                },
-                {
-                    "@id": "bts:GenomicReferenceURL"
-                },
-                {
-                    "@id": "bts:GenomeAnnotationURL"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:CaptureArea"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:VisiumRNALevel2Id",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
@@ -88349,90 +88656,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics Auxiliary files.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 3",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel3Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel2Key"
-                },
-                {
-                    "@id": "bts:VisiumAuxKey"
-                },
-                {
-                    "@id": "bts:FileAlias"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:VisiumFileType"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:CaptureArea"
-                },
-                {
-                    "@id": "bts:Spotsundertissue"
-                },
-                {
-                    "@id": "bts:MeanReadsperSpatialSpot"
-                },
-                {
-                    "@id": "bts:MedianNumberGenesperSpatialSpot"
-                },
-                {
-                    "@id": "bts:SequencingSaturation"
-                },
-                {
-                    "@id": "bts:ProportionReadsMapped"
-                },
-                {
-                    "@id": "bts:ProportionReadsMappedtoTranscriptome"
-                },
-                {
-                    "@id": "bts:MedianUMICountsperSpot"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:VisiumRNALevel3Id",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
@@ -88446,286 +88669,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "VisiumRNALevel3_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
-            "@id": "bts:VisiumFileType",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The file type generated for the visium experiment.",
-            "rdfs:label": "VisiumFileType",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Referencepng"
-                },
-                {
-                    "@id": "bts:Referencejpg"
-                },
-                {
-                    "@id": "bts:Jsonscalefactors"
-                },
-                {
-                    "@id": "bts:Probedatasetcsv"
-                },
-                {
-                    "@id": "bts:Qcresulthtml"
-                },
-                {
-                    "@id": "bts:Filteredmex"
-                },
-                {
-                    "@id": "bts:Unfilteredmex"
-                },
-                {
-                    "@id": "bts:TissuePositions"
-                },
-                {
-                    "@id": "bts:Barcodes"
-                },
-                {
-                    "@id": "bts:Features"
-                },
-                {
-                    "@id": "bts:Fiducialimagepng"
-                },
-                {
-                    "@id": "bts:Fiducialimagejpg"
-                },
-                {
-                    "@id": "bts:Detectedimagepng"
-                },
-                {
-                    "@id": "bts:Detectedjpg"
-                },
-                {
-                    "@id": "bts:Highresimage"
-                },
-                {
-                    "@id": "bts:Lowresimage"
-                }
-            ],
-            "sms:displayName": "Visium File Type",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
-        },
-        {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 3.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel4Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel3Key"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:VisiumWorkflowType"
-                },
-                {
-                    "@id": "bts:VisiumWorkflowParametersDescription"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:VisiumRNALevel4Id",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "VisiumRNALevel4Id",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "VisiumRNALevel4_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "unique"
-            ]
-        },
-        {
-            "@id": "bts:VisiumWorkflowType",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Generic name for the workflow used to analyze the visium data set.",
-            "rdfs:label": "VisiumWorkflowType",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Visium Workflow Type",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
-        },
-        {
-            "@id": "bts:VisiumWorkflowParametersDescription",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Parameters used to run the workflow.",
-            "rdfs:label": "VisiumWorkflowParametersDescription",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Visium Workflow Parameters Description",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
-        },
-        {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-AuxiliaryFiles",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Auxiliary data associated with spot/slide analysis (aligned Images, quality control files, etc)  from Spatial Transcriptomics.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-AuxiliaryFiles",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - Auxiliary Files",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:VisiumAuxId"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel1Key"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel2Key"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel3Key"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel4Key"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:VisiumFileType"
-                },
-                {
-                    "@id": "bts:SlideID"
-                },
-                {
-                    "@id": "bts:CaptureArea"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:VisiumAuxId",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
-            "rdfs:label": "VisiumAuxId",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "VisiumAux_id",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "unique"
@@ -89002,6 +88945,63 @@
             "sms:displayName": "low res image",
             "sms:required": "sms:false",
             "sms:validationRules": []
+        },
+        {
+            "@id": "bts:VisiumRNALevel4Id",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
+            "rdfs:label": "VisiumRNALevel4Id",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "VisiumRNALevel4_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "unique"
+            ]
+        },
+        {
+            "@id": "bts:VisiumWorkflowType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Generic name for the workflow used to analyze the visium data set.",
+            "rdfs:label": "VisiumWorkflowType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Visium Workflow Type",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
+            "@id": "bts:VisiumWorkflowParametersDescription",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Parameters used to run the workflow.",
+            "rdfs:label": "VisiumWorkflowParametersDescription",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Visium Workflow Parameters Description",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "str"
+            ]
         }
     ],
     "@id": "http://schema.biothings.io/#0.1"
