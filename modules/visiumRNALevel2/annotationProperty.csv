@@ -1,0 +1,3 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+10x Visium Spatial Transcriptomics - RNA-seq Level 2,Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.,,"Component,VisiumRNALevel2_id,Filename,File Format,Checksum,VisiumRNALevel1 Key,File Alias,UMI Tag,Whitelist Spatial Barcode File Link,Spatial Barcode Tag,Applied Hard Trimming,Workflow Version,Workflow Link,Genomic Reference,Genomic Reference URL,Genome Annotation URL,Biospecimen Key,Run ID,Capture Area",FALSE,,visium,10x Visium Spatial Transcriptomics - RNA-seq Level 1,HTAN,
+VisiumRNALevel2_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,visium,,MC2,unique
