@@ -6,4 +6,3 @@ Consortium Full Name,Full name of research consortium. (e.g. Cancer Systems Biol
 Consortium Description,Description of research consortium,,,TRUE,,,,,
 Consortium Funding Agency,Funding agency of research consortium ,NIH,,TRUE,,,,,
 Website,Website of research consortium,,,TRUE,,,,,url
-Consortium Grant,"Consortiums associated with a grant, joined by uuids from the consortium and grant table.",,"Component, Consortium, Grant",FALSE,,,"Consortium, Grant",,

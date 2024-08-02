@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+R1,,,,FALSE,,Read Indicator,,,,,,,,
+R2,,,,FALSE,,Read Indicator,,,,,,,,
+R1&R2,,,,FALSE,,Read Indicator,,,,,,,,
+I1,,,,FALSE,,Read Indicator,,,,,,,,
+Other,,,,FALSE,,Read Indicator,,,,,,,,
