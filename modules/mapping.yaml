@@ -81,8 +81,6 @@ education:
     src: education/ed_hazard.csv
 
 file:
-  - name: File Format
-    src: shared/dataset_file_format.csv
   - name: File Species
     src: shared/dataset_species.csv
   - name: File Assay
@@ -97,8 +95,6 @@ file:
     src: shared/duo.csv
 
 geomx:
-  - name: GeoMx File Format
-    src: tool/tool_format.csv
   - name: GeoMx DSP Assay Type
     src: geomx/assayType.csv
   - name: Matrix Type
@@ -172,6 +168,25 @@ study:
   - name: Study Data Use Codes
     src: shared/duo.csv
     
+  - name: File Format
+    src: shared/dataset_file_format.csv
+  - name: Read Indicator
+    src: shared/readIndicator.csv
+  - name: Image Re-orientation
+    src: shared/boolean.csv 
+  - name: Spatial Read1
+    src: shared/spatialReads.csv
+  - name: Spatial Read2
+    src: shared/spatialReads.csv
+  - name: Spatial Library Construction Method
+    src: shared/spatialLibrary.csv
+  - name: End Bias
+    src: shared/endBias.csv
+  - name: Reverse Transcription Primer
+    src: shared/rtPrimer.csv
+  - name: Applied Hard Trimming
+    src: shared/boolean.csv
+  
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
@@ -210,4 +225,12 @@ tool:
   - name: Tool Entity Role
     src: tool/entity_role.csv
   - name: Tool Entity Type
-    src: tool/entity_type.csv  
+    src: tool/entity_type.csv
+
+visium:
+  - name: Capture Area
+    src: visium/captureArea.csv
+  - name: Slide Version
+    src: visium/slideVersion.csv
+  - name: Visium File Type
+    src: visium/visiumFileType.csv
