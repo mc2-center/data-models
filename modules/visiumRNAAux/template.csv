@@ -1,0 +1,3 @@
+Attribute,Description,Required,Validation Rules
+10x Visium Spatial Transcriptomics - Auxiliary Files,"Auxiliary data associated with spot/slide analysis (aligned Images, quality control files, etc)  from Spatial Transcriptomics.",False,_None_
+VisiumAux_id,"Unique row identifier, used as a primary key for record updates",True,unique

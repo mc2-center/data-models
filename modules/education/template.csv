@@ -1,0 +1,25 @@
+Attribute,Description,Required,Validation Rules
+Educational Resource,Manifest for describing educational resources.,False,_None_
+Resource Title,Title of the item.,True,str
+Resource Link,The URL or DOI that links to the item.,True,url
+[Resource Topic](../valid_values/education.md#attribute-resource-topic),"General topic or research context of the item. If 'other' is selected, please provide additional topics in the 'Resource Secondary Topic' field. Multiple values should be provided as a comma separated list.",True,list like
+[Resource Activity Type](../valid_values/education.md#attribute-resource-activity-type),The type(s) of activities for which the item is intended to be used. Multiple values should be provided as a comma separated list.,True,list like
+[Resource Primary Format](../valid_values/education.md#attribute-resource-primary-format),"The media type(s) of the item (video, audio, text, etc.) Multiple values should be provided as a comma separated list.",True,list like
+[Resource Intended Use](../valid_values/education.md#attribute-resource-intended-use),The purpose of the material for education. Multiple values should be provided as a comma separated list.,True,list like
+[Resource Primary Audience](../valid_values/education.md#attribute-resource-primary-audience),The intended end user audience for the resource. Multiple values should be provided as a comma separated list.,True,list like
+[Resource Educational Level](../valid_values/education.md#attribute-resource-educational-level),"Educational context (pre-school, lower-primary, upper-primary…) in which the item was intended to be used. Multiple values should be provided as a comma separated list.",True,list like
+Resource Description,Abstract or summary of the item.,True,str
+Resource Origin Institution,Institution(s) of origin for this item. Multiple values should be provided as a comma separated list.,True,list like
+[Resource Language](../valid_values/education.md#attribute-resource-language),Language of the item (not of the metadata). Multiple values should be provided as a comma separated list.,True,list like::regex search [a-z]{2}
+Resource Contributors,The name(s) of the contributor(s) to the item. Multiple contributor names should be provided as a comma-separated list.,True,list like
+[Resource Grant Number](../valid_values/education.md#attribute-resource-grant-number),"The grant number(s) associated with the contributor(s) of the item. If no grant number listed is applicable, please select 'Affiliated/Non-Grant Associated'. Multiple values should be provided as a comma separated list.",True,list like
+Resource Secondary Topic,"Additional topics or keywords to describe the content of the item, in addition to the primary topic. Multiple values should be provided as a comma-separated list.",False,list like
+[Resource License](../valid_values/education.md#attribute-resource-license),"The name of the license applied to the item by the contributor(s), if applicable. Multiple values should be provided as a comma separated list.",False,list like
+Resource Use Requirements,"A list of materials, hardware, software, computing power, and network requirements that the end user would need to satisfy before using the resource, if applicable. Multiple values should be provided as a comma separated list.",False,str
+Resource Alias,"A unique identifier (DOI, Synapse ID) for the item, if it exists.",False,unique
+Resource Internal Identifier,"The institution-specific ID for the item, if applicable. May be non-unique. Multiple values should be provided as a comma separated list.",False,list like
+[Resource Media Accessibility](../valid_values/education.md#attribute-resource-media-accessibility),"Accessibility features (Alternative Text, Audio Description, etc.) incorporated into the item. Multiple values should be provided as a comma separated list.",False,list like
+[Resource Access Hazard](../valid_values/education.md#attribute-resource-access-hazard),"Sensory hazards (Flashing, Motion, etc.) applicable to the item. Multiple values should be provided as a comma separated list.",False,list like
+Resource Dataset Alias,"URL or persistent identifier (DOI, Synapse ID) for any dataset(s) that is intended to be used with the item. Multiple values should be provided as a comma separated list.",False,list like
+Resource Tool Link,"URL or persistent identifier (DOI, Synapse ID) for any software or tool that is intended to be used with the item. Multiple values should be provided as a comma separated list.",False,list like
+EducationalResource_id,A unique primary key that enables record updates using schematic.,True,unique

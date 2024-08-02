@@ -20,6 +20,12 @@ nav:
       - Publication Data Model: model/publication.md
       - Study Data Model: model/study.md
       - Tool Data Model: model/tool.md
+      - 10X Visium RNA Spatial Profiling Data Model:
+        - 10X Visium RNA Spatial Profiling Level 1 Data Model: model/visiumRNALevel1.md
+        - 10X Visium RNA Spatial Profiling Level 2 Data Model: model/visiumRNALevel2.md
+        - 10X Visium RNA Spatial Profiling Level 3 Data Model: model/visiumRNALevel3.md
+        - 10X Visium RNA Spatial Profiling Level 4 Data Model: model/visiumRNALevel4.md
+        - 10X Visium RNA Spatial Profiling Auxiliary Files Data Model: model/visiumRNAAux.md
      
   - Standard Terms:
     - All terms: valid_values/all_terms.md
@@ -32,6 +38,12 @@ nav:
       - Person: valid_values/person.md
       - Publication: valid_values/publication.md
       - Tool: valid_values/tool.md
+      - 10X Visium RNA Spatial Profiling:
+        - 10X Visium RNA Spatial Profiling Level 1: valid_values/visiumRNALevel1.md
+        - 10X Visium RNA Spatial Profiling Level 2: valid_values/visiumRNALevel2.md
+        - 10X Visium RNA Spatial Profiling Level 3: valid_values/visiumRNALevel3.md
+        - 10X Visium RNA Spatial Profiling Level 4: valid_values/visiumRNALevel4.md
+        - 10X Visium RNA Spatial Profiling Auxiliary Files: valid_values/visiumRNAAux.md
   - Contributing to the Data Model: contributing.md
 
 # Theme configuration

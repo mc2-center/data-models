@@ -1,0 +1,5 @@
+Attribute,Description,Required,Validation Rules
+10x Visium Spatial Transcriptomics - RNA-seq Level 4,Processed data files based on Spatial Transcriptomics RNA-seq Level 3.,False,_None_
+VisiumRNALevel4_id,"Unique row identifier, used as a primary key for record updates",True,unique
+Visium Workflow Type,Generic name for the workflow used to analyze the visium data set.,True,str
+Visium Workflow Parameters Description,Parameters used to run the workflow.,True,str

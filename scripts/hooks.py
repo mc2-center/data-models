@@ -11,6 +11,11 @@ DATA_MODELS = [
     "publication",
     "study",
     "tool",
+    "visiumRNAAux",
+    "visiumRNALevel1",
+    "visiumRNALevel2",
+    "visiumRNALevel3",
+    "visiumRNALevel4"
 ]
 
 COLS_TO_RENDER = [

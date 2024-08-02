@@ -1,0 +1,3 @@
+Attribute,Description,Required,Validation Rules
+10x Visium Spatial Transcriptomics - RNA-seq Level 2,Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.,False,_None_
+VisiumRNALevel2_id,"Unique row identifier, used as a primary key for record updates",True,unique

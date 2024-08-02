@@ -1,0 +1,4 @@
+Attribute,Description,Required,Validation Rules
+10x Visium Spatial Transcriptomics - RNA-seq Level 3,Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics Auxiliary files.,False,_None_
+VisiumRNALevel3_id,"Unique row identifier, used as a primary key for record updates",True,unique
+[Visium File Type](../valid_values/visiumRNALevel3.md#attribute-visium-file-type),The file type generated for the visium experiment.,True,str

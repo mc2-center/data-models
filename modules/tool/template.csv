@@ -1,0 +1,43 @@
+Attribute,Description,Required,Validation Rules
+Tool,"Application software derived from consortia activity with well-defined processing functions (inputs, outputs, and operations).",False,_None_
+[Tool Accessibility](../valid_values/tool.md#attribute-tool-accessibility),Whether there are non-monetary restrictions on accessing an online service.,False,_None_
+Tool Cmd,"Relevant command, command-line fragment, or option for executing this function/running the tool in this mode.",False,_None_
+Tool Compute Requirements,"Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).",False,"list like, url"
+[Tool Cost](../valid_values/tool.md#attribute-tool-cost),Monetary cost of acquiring the software.,False,_None_
+Tool Date Last Modified,"The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information.",False,date
+Tool Description,Textual description of the tool.,True,_None_
+Tool Documentation Note,Comment about the documentation.,False,_None_
+[Tool Documentation Type](../valid_values/tool.md#attribute-tool-documentation-type),"Type of documentation that is linked to. Multiple values permitted, comma separated.",False,list like
+Tool Documentation Url,Link to documentation on the web for the tool.,False,_None_
+Tool Download Note,Comment about the download.,False,_None_
+[Tool Download Type](../valid_values/tool.md#attribute-tool-download-type),"The type of data, information, or system that is obtained when the link is resolved.",False,_None_
+Tool Download Url,Link to download (or repo providing a download) for the software.,False,_None_
+Tool Download Version,Version information (typically a version number) of the software applicable to this download.,False,_None_
+Tool Entity Name,Name of the entities that may be credited,False,list like
+[Tool Entity Role](../valid_values/tool.md#attribute-tool-entity-role),"Role performed by entity that is credited, e.g. “Developer”",True,list like
+[Tool Entity Type](../valid_values/tool.md#attribute-tool-entity-type),"Types of entities that may be credited, e.g. ‘Person’.",True,list like
+Tool Function Note,"Concise comment about this function, if not apparent from the software description and EDAM annotations.",False,_None_
+Tool Grant,"Tools associated with a grant, joined by uuids from the tool table and grant table.",False,_None_
+[Tool Grant Number](../valid_values/tool.md#attribute-tool-grant-number),"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,list like
+Tool Homepage,"Homepage of the software, or some URL that best serves this purpose.",True,url
+[Tool Input Data](../valid_values/tool.md#attribute-tool-input-data),"Type of primary input data. Multiple values permitted, comma separated.",True,list like
+[Tool Input Format](../valid_values/tool.md#attribute-tool-input-format),"Allowed format(s) of the input data. Multiple values permitted, comma separated.",True,list like
+[Tool Language](../valid_values/tool.md#attribute-tool-language),"Name of programming language the software source code was written in. Multiple values permitted, comma separated.",False,list like
+[Tool License](../valid_values/tool.md#attribute-tool-license),"Software or data usage license. Multiple values permitted, comma separated.",False,list like
+Tool Link Note,Comment about the link.,False,_None_
+[Tool Link Type](../valid_values/tool.md#attribute-tool-link-type),"The type of data, information or system that is obtained when the link is resolved. Multiple values permitted, comma separated.",False,list like
+Tool Link Url,A link of some relevance to the software (URL).,False,_None_
+Tool Name,Canonical tool name provided by the tool developer or service provider.,True,unique
+[Tool Operating System](../valid_values/tool.md#attribute-tool-operating-system),"The operating system supported by a downloadable software package. Multiple values permitted, comma separated.",False,list like
+[Tool Operation](../valid_values/tool.md#attribute-tool-operation),"The basic operation(s) performed by this software function. Multiple values permitted, comma separated.",True,list like
+[Tool Output Data](../valid_values/tool.md#attribute-tool-output-data),"Type of primary output data. Multiple values permitted, comma separated.",True,list like
+[Tool Output Format](../valid_values/tool.md#attribute-tool-output-format),"Allowed format(s) of the output data. Multiple values permitted, comma separated.",True,list like
+Tool Package Dependencies,"Specifies the software libraries, frameworks, or other components that a tool or package relies on for its proper functioning. This attribute helps users understand the prerequisites needed for installation and usage of the tool within a given computational environment",False,list like
+[Tool Package Dependencies Present](../valid_values/tool.md#attribute-tool-package-dependencies-present),Indicates whether the required package dependencies for tool are present.,True,_None_
+Tool Pubmed Id,The pubMed identifer associated with the development of the tool.,False,int
+Tool Release Date,The release date of a product or product model. This can be used to distinguish the exact variant of a product.,True,date
+[Tool Topic](../valid_values/tool.md#attribute-tool-topic),"General scientific domain the software serves, or other general category. Multiple values permitted, comma separated.",False,list like
+[Tool Type](../valid_values/tool.md#attribute-tool-type),"A type of application software: a discrete software entity can have more than one type. Multiple values permitted, comma separated.",False,list like
+Tool Version,Version information (typically a version number) of the software applicable to this entry.,False,_None_
+Tool View,The denormalized manifest for tool submission.,False,_None_
+ToolView_id,A unique primary key that enables record updates using schematic.,True,unique

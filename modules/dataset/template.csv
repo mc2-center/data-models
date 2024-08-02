@@ -1,0 +1,16 @@
+Attribute,Description,Required,Validation Rules
+Dataset Name,Name of the dataset,True,_None_
+Dataset Alias,"Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters.",True,unique
+Dataset Description,Description of the dataset.,False,_None_
+Dataset Design,The overall design of the dataset.,False,_None_
+Dataset Url,The url of where the dataset is stored.,True,url
+[Dataset Assay](../valid_values/dataset.md#attribute-dataset-assay),"The assay the dataset is representative of. Multiple values permitted, comma separated.",True,list like
+[Dataset Species](../valid_values/dataset.md#attribute-dataset-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like
+[Dataset Tumor Type](../valid_values/dataset.md#attribute-dataset-tumor-type),"The tumor type(s), if applicable, of the data collected on. Multiple values permitted, comma separated.",False,list like
+[Dataset Tissue](../valid_values/dataset.md#attribute-dataset-tissue),"Tissue type(s) associated with the dataset. Multiple values permitted, comma separated.",False,list like
+[Dataset File Formats](../valid_values/dataset.md#attribute-dataset-file-formats),"A list of file formats associated with the dataset. Multiple values permitted, comma separated.",False,list like
+Dataset Grant,"Datasets associated with a grant, joined by uuids from the dataset and grant table.",False,_None_
+Dataset View,The denormalized manifest for dataset submission.,False,_None_
+[Dataset Grant Number](../valid_values/dataset.md#attribute-dataset-grant-number),"Grant number(s) associated with the dataset's development. Multiple values permitted, comma separated.",True,list like
+Dataset Pubmed Id,"The PubMed identifer(s) associated with the development of the dataset. Multiple values permitted, comma separated.",False,list like
+DatasetView_id,A unique primary key that enables record updates using schematic.,True,unique

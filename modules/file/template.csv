@@ -1,0 +1,11 @@
+Attribute,Description,Required,Validation Rules
+File Description,Description of the file.,False,_None_
+File Design,The overall design of the dataset or file.,False,_None_
+File Url,The url of where the file is stored.,True,url
+[File Assay](../valid_values/file.md#attribute-file-assay),The assay the file is representative of.,True,_None_
+[File Level](../valid_values/file.md#attribute-file-level),The processing level the file can be mapped to. ,True,_None_
+[File Species](../valid_values/file.md#attribute-file-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like
+[File Tumor Type](../valid_values/file.md#attribute-file-tumor-type),"The tumor type(s), if applicable, of the data collected. Multiple values permitted, comma separated.",False,list like
+[File Tissue](../valid_values/file.md#attribute-file-tissue),"Tissue type(s) associated with the file. Multiple values permitted, comma separated.",False,list like
+File View,The denormalized manifest for file submission.,False,_None_
+FileView_id,A unique primary key that enables record updates using schematic.,True,unique

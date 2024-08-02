@@ -1,0 +1,7 @@
+Attribute,Description,Required,Validation Rules
+Study,Studies associated with a grant,False,_None_
+Study Name,Name of the study,True,str
+Study Description,"Description of the study, including the types of experimental assays, model systems, types of analysis, etc.",True,str
+Study Investigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,True,list like
+Study Reuse Statement,"The funder-, contributor-, patient-, etc., derived content that includes terms, conditions, or statements associated with accessing and reusing the resource(s).",False,str
+Study_id,A unique primary key that enables record updates using schematic.,True,unique
