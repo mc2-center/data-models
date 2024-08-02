@@ -34,15 +34,15 @@ Permeabilization Time,Fixed and stained tissue sections are permeabilized for di
 RIN,A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products. Number,,,FALSE,,visium,,HTAN,num
 DV200,Represents the percentage of RNA fragments that are >200 nucleotides in size. Number,,,FALSE,,visium,,HTAN,num
 VisiumRNALevel1 Key,Unique VisiumRNALevel1_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,visium,,MC2,list like
-UMI Tag,"SAM tag for the UMI field; please provide a valid UB, UMI (e.g. UB:Z or UR:Z)",,,TRUE,,visium,,HTAN,str
+UMI Tag,"SAM tag for the UMI field; please provide a valid tag-type pair, consisting of a tag (e.g. UB or UR) and type (e.g. Z) separated by a colon.",,,TRUE,,visium,,HTAN,str
 Whitelist Spatial Barcode File Link,Link to file listing all possible spatial barcodes. URL,,,TRUE,,visium,,HTAN,url
-Spatial Barcode Tag,SAM tag for spot barcode field; please provide a valid spot barcode tag (e.g. CB:Z),,,TRUE,,visium,,HTAN,str
+Spatial Barcode Tag,"SAM tag for spot barcode field; please provide a valid tag-type pair, consisting of a tag (e.g. CB or CR) and type (e.g. Z) separated by a colon.",,,TRUE,,visium,,HTAN,str
 Applied Hard Trimming,Was Hard Trimming applied,"True, False",,TRUE,,visium,,HTAN,str
 Workflow Version,Major version of the workflow (e.g. Cell Ranger v3.1),,,FALSE,,visium,,HTAN,str
 Workflow Link,Link to workflow or command. URL,,,FALSE,,visium,,HTAN,url
 Genomic Reference,Exact version of the human genome reference used in the alignment of reads (e.g. GCF_000001405.39),,,TRUE,,visium,,HTAN,str
-Genomic Reference URL,Link to human genome sequence (e.g. ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/GRCh38.primary_assembly.genome.fa.gz),,,TRUE,,visium,,HTAN,url
-Genome Annotation URL,Link to the human genome annotation (GTF) file (e.g. ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/gencode.v34.annotation.gtf.gz),,,TRUE,,visium,,HTAN,url
+Genomic Reference URL,Link to human genome sequence; ftp or reference URL will be accepted.,,,TRUE,,visium,,HTAN,url
+Genome Annotation URL,Link to the human genome annotation (GTF) file; ftp or reference URL will be accepted.,,,TRUE,,visium,,HTAN,url
 VisiumRNALevel2 Key,Unique VisiumRNALevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,visium,,MC2,list like
 VisiumRNALevel3 Key,Unique VisiumRNALevel3_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,visium,,MC2,list like
 VisiumRNALevel4 Key,Unique VisiumRNALevel4_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.,,,FALSE,,visium,,MC2,list like
