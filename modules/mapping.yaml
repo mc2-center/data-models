@@ -170,6 +170,8 @@ study:
     
   - name: File Format
     src: shared/dataset_file_format.csv
+  - name: Sequencing Platform
+    src: shared/seqPlatform.csv
   - name: Read Indicator
     src: shared/readIndicator.csv
   - name: Image Re-orientation
