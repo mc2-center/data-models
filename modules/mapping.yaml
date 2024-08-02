@@ -229,10 +229,13 @@ tool:
   - name: Tool Entity Type
     src: tool/entity_type.csv
 
-visium:
+visiumRNALevel1:
   - name: Capture Area
-    src: visium/captureArea.csv
+    src: visiumRNALevel1/captureArea.csv
   - name: Slide Version
-    src: visium/slideVersion.csv
+    src: visiumRNALevel1/slideVersion.csv
+  
+visiumRNALevel3:
   - name: Visium File Type
-    src: visium/visiumFileType.csv
+    src: visiumRNALevel3/visiumFileType.csv
+    
