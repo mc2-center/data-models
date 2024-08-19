@@ -1,5 +1,0 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Oligo-dT,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Poly-dT,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Feature barcoding,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Random,,,,FALSE,,Reverse Transcription Primer,,,,,,,,

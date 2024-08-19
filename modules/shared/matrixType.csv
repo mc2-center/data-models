@@ -1,5 +1,0 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Raw Counts,,,,FALSE,,Matrix Type,,,,,,,,
-Normalized Counts,,,,FALSE,,Matrix Type,,,,,,,,
-Scaled Counts,,,,FALSE,,Matrix Type,,,,,,,,
-Batch Corrected Counts,,,,FALSE,,Matrix Type,,,,,,,,
