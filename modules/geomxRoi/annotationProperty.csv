@@ -1,0 +1,25 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+NanoString GeoMX ROI Segment Annotation,"GeoMx ROI and Segment Metadata Attributes. The assayed biospecimen should be reported one per row with the associated ROI and AOI coordinates. ",,"Component, NanoStringGeoMXROISegmentAnnotation_id, Biospecimen Key, Scan name, ROI Name, AOI Name, Tags, ROI X Coordinate, ROI Y Coordinate, AOI X Coordinate, AOI Y Coordinate, QC status, Scan Height, Scan Width, Scan Offset X, Scan Offset Y, Binding Density, Positive norm factor, Surface area, Nuclei count, Tissue Stain, Slide name, Raw reads, Stitched reads, Aligned reads, Deduplicated reads, Trimmed reads, Sequencing Saturation, MapQ30, Negative count mean, No Template Control count, Excluded Outlier Probes, Limit of Quantification",FALSE,,,Biospecimen,HTAN,
+NanoStringGeoMXROISegmentAnnotation_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
+Scan name,GeoMx Scan name (as appears in Segment Summary),,,TRUE,,,,HTAN,str
+ROI X Coordinate,Region of Interest X location within the image,,,FALSE,,,,HTAN,num
+ROI Y Coordinate,Region of Interest Y location within the image,,,FALSE,,,,HTAN,num
+AOI X Coordinate,Area of Illumination X location within the image,,,FALSE,,,,MC2/STE,num
+AOI Y Coordinate,Area of Illumination Y location within the image,,,FALSE,,,,MC2/STE,num
+QC status,ROI quality control flag as reported by the application,,,FALSE,,,,HTAN,list like
+Scan Height,Height of the scan for GeoMx Analysis,,,FALSE,,,,HTAN,num
+Scan Width,Width of the scan for GeoMx Analysis,,,FALSE,,,,HTAN,num
+Scan Offset X,Offset X of the scan for GeoMx Analysis,,,FALSE,,,,HTAN,num
+Scan Offset Y,Offset Y of the scan for GeoMx Analysis,,,FALSE,,,,HTAN,num
+Binding Density,The binding density as reported by the application,,,FALSE,,,,HTAN,num
+Positive norm factor,The Positive Control Normalization factor calculated using pos-hyb controls,,,FALSE,,,,HTAN,num
+Surface area,Surface area of the ROI in square microns (µm2),,,FALSE,,,,HTAN,num
+Nuclei count,Number of nuclei detected in the segment (if applicable),,,FALSE,,,,HTAN,num
+Slide name,"Similar to a Run ID, the slide name indicates the slide a given ROI is linked to (as reported in Segment Summary).",,,FALSE,,,,HTAN,str
+In Situ Negative median,Is the median of all negative control probes for a given segment. A measure of signal to background for each segment.,,,FALSE,,,,HTAN,num
+Biological probe median,Is the median count from all probes except the negative control probes. A measure of signal to background for each segment,,,FALSE,,,,HTAN,num
+Negative count mean,The geometric mean of the unique negative probes in a GeoMx panel that do not target mRNA and establish the background count level per segment,,,FALSE,,,,STE,num
+No Template Control count,The number of reads detected by the GeoMx probe panel in the control associated with this ROI.,,,FALSE,,,,STE,num
+Excluded Outlier Probes,The list of probes excluded from analysis.,,,FALSE,,,,STE,num
+Limit of Quantification,The calculated limit of quantification associated with the segment.,,,FALSE,,,,STE,num
+Sequencing Saturation,"The fraction of reads originating from an already-observed UMI. This is a function of library complexity and sequencing depth. More specifically, this is the fraction of confidently mapped, valid spot-barcode, valid UMI reads that had a non-unique (spot-barcode, UMI, gene).",,,FALSE,,,,HTAN,num
