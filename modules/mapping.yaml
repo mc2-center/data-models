@@ -1,24 +1,28 @@
 ﻿biospecimen:
   - name: Biospecimen Type
-    src: shared/specimenType.csv
+    src: biospecimen/specimenType.csv
   - name: Biospecimen Species
     src: shared/dataset_species.csv
   - name: Biospecimen Tumor Type
     src: shared/tumorType.csv
-  - name: Biospecimen Tumor Grade
-    src: shared/tumorGrade.csv
+  - name: Tumor Grade
+    src: biospecimen/tumorGrade.csv
   - name: Biospecimen Composition
-    src: shared/specimenComp.csv
-  - name: Biospecimen Preservation Method
-    src: shared/preservation.csv
-  - name: Biospecimen Site of Resection or Biopsy
+    src: biospecimen/specimenComp.csv
+  - name: Survival Outcome
+    src: biospecimen/diseaseStatus.csv
+  - name: Preservation Method
+    src: biospecimen/preservation.csv
+  - name: Site of Resection or Biopsy
     src: shared/tissue.csv
   - name: Biospecimen Site of Origin
     src: shared/tissue.csv
-  - name: Biospecimen Tumor Subtype
-    src: shared/tumorSubtype.csv
-  - name: Biospecimen Sex
-    src: shared/biologicalSex.csv
+  - name: Known Metastasis Sites
+    src: shared/tissue.csv
+  - name: Tumor Subtype
+    src: biospecimen/tumorSubtype.csv
+  - name: Sex
+    src: biospecimen/biologicalSex.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -52,7 +56,7 @@ sharingPlans:
   - name: DSP Dataset Tumor Type
     src: shared/tumorType.csv
   - name: DSP Dataset Level
-    src: shared/processLevel.csv
+    src: file/processLevel.csv
   - name: DSP Data Use Codes
     src: shared/duo.csv
 
@@ -90,16 +94,14 @@ file:
   - name: File Tumor Type
     src: shared/tumorType.csv
   - name: File Level
-    src: shared/processLevel.csv
+    src: file/processLevel.csv
   - name: File Data Use Codes
     src: shared/duo.csv
 
-geomx:
+geomxLevel1:
   - name: GeoMx DSP Assay Type
-    src: geomx/assayType.csv
-  - name: Matrix Type
-    src: shared/matrixType.csv
-
+    src: geomxLevel1/assayType.csv
+  
 grant:
   - name: Grant Consortium Name
     src: consortium/consortium_name.csv
@@ -114,13 +116,13 @@ grant:
 
 imaging:
   - name: Imaging Assay Type
-    src: shared/imageAssay.csv
+    src: imagingLevel1/imageAssay.csv
   - name: Channel Passed QC
-    src: shared/channelQC.csv
+    src: imagingChannel/channelQC.csv
   - name: Antibody Role
-    src: shared/abRole.csv
+    src: imagingChannel/abRole.csv
   - name: Metal Isotope Element
-    src: shared/elementType.csv
+    src: imagingChannel/elementType.csv
   
 institution:
   - name: Institution Location State
@@ -160,6 +162,20 @@ publication:
   - name: Publication Tumor Type
     src: shared/tumorType.csv
 
+sequencingLevel1:
+  - name: Sequencing Platform
+    src: sequencingLevel1/seqPlatform.csv
+  - name: End Bias
+    src: sequencingLevel1/endBias.csv
+  - name: Read Indicator
+    src: sequencingLevel1/readIndicator.csv
+  - name: Reverse Transcription Primer
+    src: sequencingLevel1/rtPrimer.csv
+
+sequencingLevel3:
+  - name: Matrix Type
+    src: sequencingLevel3/matrixType.csv
+
 shared:
   - name: Data Use Codes
     src: shared/duo.csv
@@ -170,24 +186,6 @@ study:
     
   - name: File Format
     src: shared/dataset_file_format.csv
-  - name: Sequencing Platform
-    src: shared/seqPlatform.csv
-  - name: Read Indicator
-    src: shared/readIndicator.csv
-  - name: Image Re-orientation
-    src: shared/boolean.csv 
-  - name: Spatial Read1
-    src: shared/spatialReads.csv
-  - name: Spatial Read2
-    src: shared/spatialReads.csv
-  - name: Spatial Library Construction Method
-    src: shared/spatialLibrary.csv
-  - name: End Bias
-    src: shared/endBias.csv
-  - name: Reverse Transcription Primer
-    src: shared/rtPrimer.csv
-  - name: Applied Hard Trimming
-    src: shared/boolean.csv
   
 tool:
   - name: Tool Grant Number
@@ -234,7 +232,19 @@ visiumRNALevel1:
     src: visiumRNALevel1/captureArea.csv
   - name: Slide Version
     src: visiumRNALevel1/slideVersion.csv
-  
+  - name: Image Re-orientation
+    src: shared/boolean.csv 
+  - name: Spatial Read1
+    src: visiumRNALevel1/spatialReads.csv
+  - name: Spatial Read2
+    src: visiumRNALevel1/spatialReads.csv
+  - name: Spatial Library Construction Method
+    src: visiumRNALevel1/spatialLibrary.csv
+
+visiumRNALevel2:
+  - name: Applied Hard Trimming
+    src: shared/boolean.csv
+
 visiumRNALevel3:
   - name: Visium File Type
     src: visiumRNALevel3/visiumFileType.csv
