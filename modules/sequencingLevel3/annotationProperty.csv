@@ -1,0 +1,4 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Unique Probe Count,Total number of unique probes reported.,,,FALSE,,,,HTAN,num
+Unique Target Count,Total number of unique genes reported.,,,FALSE,,,,HTAN,num
+Matrix Type,Type of count data stored in matrix.,"Raw Counts, Normalized Counts, Scaled Counts, Batch Corrected Counts",,FALSE,,,,HTAN,
