@@ -1,3 +1,0 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Yes,,,,FALSE,,Channel Passed QC,,,,,,,,
-No - Channel Failed QC,,,,FALSE,,Channel Passed QC,,,,,,,,
