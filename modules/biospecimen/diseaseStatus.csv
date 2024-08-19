@@ -1,0 +1,11 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Distant met recurrence/progression,,,,FALSE,,Survival Outcome,,,,,,,,
+Loco-regional recurrence/progression,,,,FALSE,,Survival Outcome,,,,,,,,
+Biochemical evidence of disease without structural correlate,,,,FALSE,,Survival Outcome,,,,,,,,
+Tumor free,,,,FALSE,,Survival Outcome,,,,,,,,
+unknown tumor status,,,,FALSE,,Survival Outcome,,,,,,,,
+With tumor,,,,FALSE,,Survival Outcome,,,,,,,,
+Not Reported,,,,FALSE,,Survival Outcome,,,,,,,,
+Not Allowed To Collect,,,,FALSE,,Survival Outcome,,,,,,,,
+Not Applicable,,,,FALSE,,Survival Outcome,,,,,,,,
+Deceased,,,,FALSE,,Survival Outcome,,,,,,,,
