@@ -1,3 +1,4 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
 NanoString GeoMx DSP Imaging,Images acquired by the GeoMx instrument,,"Component, NanoStringGeoMxDSPImaging_id, Filename, NanoStringGeoMxDSPLevel1 Key, NanoStringGeoMxDSPLevel2 Key, NanoStringGeoMxAuxiliaryFiles Key, ROI Name, AOI Name, Imaging Channel Names",FALSE,,,"File View, NanoString GeoMX ROI Segment Annotation",HTAN,
 NanoStringGeoMxDSPImaging_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
+Imaging Channel Names,Name(s) of imaging channel(s) associated with the image; multiple values should be provided as a comma-separated list.,,,FALSE,,,,HTAN,list like
