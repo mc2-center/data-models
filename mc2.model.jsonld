@@ -22,6 +22,14 @@
             },
             "sms:displayName": "Biospecimen",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                },
+                {
+                    "@id": "bts:Model"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -2304,6 +2312,74 @@
             "sms:validationRules": [
                 "str"
             ]
+        },
+        {
+            "@id": "bts:Study",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Studies associated with a grant",
+            "rdfs:label": "Study",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Study",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:GrantView"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:StudyId"
+                },
+                {
+                    "@id": "bts:GrantViewKey"
+                },
+                {
+                    "@id": "bts:ProjectViewKey"
+                },
+                {
+                    "@id": "bts:StudyName"
+                },
+                {
+                    "@id": "bts:StudyDescription"
+                },
+                {
+                    "@id": "bts:StudyInvestigator"
+                },
+                {
+                    "@id": "bts:PersonViewKey"
+                },
+                {
+                    "@id": "bts:StudyReuseStatement"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Model",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Model",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Model",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Tissue",
@@ -27958,7 +28034,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:GrantView"
+                    "@id": "bts:Study"
                 }
             ],
             "sms:requiresDependency": [
@@ -28497,76 +28573,6 @@
             "sms:validationRules": [
                 "list like"
             ]
-        },
-        {
-            "@id": "bts:GrantView",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The denormalized manifest for grant submission.",
-            "rdfs:label": "GrantView",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Grant View",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:GrantViewId"
-                },
-                {
-                    "@id": "bts:GrantName"
-                },
-                {
-                    "@id": "bts:GrantNumber"
-                },
-                {
-                    "@id": "bts:GrantAbstract"
-                },
-                {
-                    "@id": "bts:GrantType"
-                },
-                {
-                    "@id": "bts:GrantThemeName"
-                },
-                {
-                    "@id": "bts:GrantInstitutionName"
-                },
-                {
-                    "@id": "bts:GrantInstitutionAlias"
-                },
-                {
-                    "@id": "bts:GrantInvestigator"
-                },
-                {
-                    "@id": "bts:GrantConsortiumName"
-                },
-                {
-                    "@id": "bts:GrantStartDate"
-                },
-                {
-                    "@id": "bts:NIHRePORTERLink"
-                },
-                {
-                    "@id": "bts:DurationofFunding"
-                },
-                {
-                    "@id": "bts:EmbargoEndDate"
-                },
-                {
-                    "@id": "bts:GrantSynapseTeam"
-                },
-                {
-                    "@id": "bts:GrantSynapseProject"
-                }
-            ],
-            "sms:validationRules": []
         },
         {
             "@id": "bts:Affiliated/Non-GrantAssociated",
@@ -33625,7 +33631,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:GrantView"
+                    "@id": "bts:Study"
                 }
             ],
             "sms:requiresDependency": [
@@ -50480,7 +50486,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:Study"
+                    "@id": "bts:Biospecimen"
                 }
             ],
             "sms:requiresDependency": [
@@ -50999,57 +51005,6 @@
             "sms:validationRules": [
                 "list like"
             ]
-        },
-        {
-            "@id": "bts:Study",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Studies associated with a grant",
-            "rdfs:label": "Study",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Study",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:StudyId"
-                },
-                {
-                    "@id": "bts:GrantViewKey"
-                },
-                {
-                    "@id": "bts:ProjectViewKey"
-                },
-                {
-                    "@id": "bts:StudyName"
-                },
-                {
-                    "@id": "bts:StudyDescription"
-                },
-                {
-                    "@id": "bts:StudyInvestigator"
-                },
-                {
-                    "@id": "bts:PersonViewKey"
-                },
-                {
-                    "@id": "bts:StudyReuseStatement"
-                }
-            ],
-            "sms:validationRules": []
         },
         {
             "@id": "bts:NanoStringGeoMxDSPLevel1",
@@ -52902,6 +52857,76 @@
             },
             "sms:displayName": "U54",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GrantView",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for grant submission.",
+            "rdfs:label": "GrantView",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Grant View",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:GrantViewId"
+                },
+                {
+                    "@id": "bts:GrantName"
+                },
+                {
+                    "@id": "bts:GrantNumber"
+                },
+                {
+                    "@id": "bts:GrantAbstract"
+                },
+                {
+                    "@id": "bts:GrantType"
+                },
+                {
+                    "@id": "bts:GrantThemeName"
+                },
+                {
+                    "@id": "bts:GrantInstitutionName"
+                },
+                {
+                    "@id": "bts:GrantInstitutionAlias"
+                },
+                {
+                    "@id": "bts:GrantInvestigator"
+                },
+                {
+                    "@id": "bts:GrantConsortiumName"
+                },
+                {
+                    "@id": "bts:GrantStartDate"
+                },
+                {
+                    "@id": "bts:NIHRePORTERLink"
+                },
+                {
+                    "@id": "bts:DurationofFunding"
+                },
+                {
+                    "@id": "bts:EmbargoEndDate"
+                },
+                {
+                    "@id": "bts:GrantSynapseTeam"
+                },
+                {
+                    "@id": "bts:GrantSynapseProject"
+                }
+            ],
             "sms:validationRules": []
         },
         {
@@ -61631,26 +61656,6 @@
             },
             "sms:displayName": "Person View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:PublicationView"
-                },
-                {
-                    "@id": "bts:DatasetView"
-                },
-                {
-                    "@id": "bts:ToolView"
-                },
-                {
-                    "@id": "bts:Consortium"
-                },
-                {
-                    "@id": "bts:GrantView"
-                },
-                {
-                    "@id": "bts:EducationalResource"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -62315,225 +62320,6 @@
             ]
         },
         {
-            "@id": "bts:PublicationView",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The denormalized manifest for publication submission.",
-            "rdfs:label": "PublicationView",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Publication View",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:PublicationViewId"
-                },
-                {
-                    "@id": "bts:PublicationGrantNumber"
-                },
-                {
-                    "@id": "bts:PublicationDoi"
-                },
-                {
-                    "@id": "bts:PublicationJournal"
-                },
-                {
-                    "@id": "bts:PubmedId"
-                },
-                {
-                    "@id": "bts:PubmedUrl"
-                },
-                {
-                    "@id": "bts:PublicationTitle"
-                },
-                {
-                    "@id": "bts:PublicationYear"
-                },
-                {
-                    "@id": "bts:PublicationKeywords"
-                },
-                {
-                    "@id": "bts:PublicationAuthors"
-                },
-                {
-                    "@id": "bts:PublicationAbstract"
-                },
-                {
-                    "@id": "bts:PublicationAssay"
-                },
-                {
-                    "@id": "bts:PublicationTumorType"
-                },
-                {
-                    "@id": "bts:PublicationTissue"
-                },
-                {
-                    "@id": "bts:PublicationAccessibility"
-                },
-                {
-                    "@id": "bts:PublicationDatasetAlias"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ToolView",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The denormalized manifest for tool submission.",
-            "rdfs:label": "ToolView",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Tool View",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:ToolViewId"
-                },
-                {
-                    "@id": "bts:ToolPubmedId"
-                },
-                {
-                    "@id": "bts:ToolGrantNumber"
-                },
-                {
-                    "@id": "bts:ToolName"
-                },
-                {
-                    "@id": "bts:ToolDescription"
-                },
-                {
-                    "@id": "bts:ToolHomepage"
-                },
-                {
-                    "@id": "bts:ToolVersion"
-                },
-                {
-                    "@id": "bts:ToolOperation"
-                },
-                {
-                    "@id": "bts:ToolInputData"
-                },
-                {
-                    "@id": "bts:ToolOutputData"
-                },
-                {
-                    "@id": "bts:ToolInputFormat"
-                },
-                {
-                    "@id": "bts:ToolOutputFormat"
-                },
-                {
-                    "@id": "bts:ToolFunctionNote"
-                },
-                {
-                    "@id": "bts:ToolCmd"
-                },
-                {
-                    "@id": "bts:ToolType"
-                },
-                {
-                    "@id": "bts:ToolTopic"
-                },
-                {
-                    "@id": "bts:ToolOperatingSystem"
-                },
-                {
-                    "@id": "bts:ToolLanguage"
-                },
-                {
-                    "@id": "bts:ToolLicense"
-                },
-                {
-                    "@id": "bts:ToolCost"
-                },
-                {
-                    "@id": "bts:ToolAccessibility"
-                },
-                {
-                    "@id": "bts:ToolDownloadUrl"
-                },
-                {
-                    "@id": "bts:ToolDownloadType"
-                },
-                {
-                    "@id": "bts:ToolDownloadNote"
-                },
-                {
-                    "@id": "bts:ToolDownloadVersion"
-                },
-                {
-                    "@id": "bts:ToolDocumentationUrl"
-                },
-                {
-                    "@id": "bts:ToolDocumentationType"
-                },
-                {
-                    "@id": "bts:ToolDocumentationNote"
-                },
-                {
-                    "@id": "bts:ToolLinkUrl"
-                },
-                {
-                    "@id": "bts:ToolLinkType"
-                },
-                {
-                    "@id": "bts:ToolLinkNote"
-                },
-                {
-                    "@id": "bts:ToolDateLastModified"
-                },
-                {
-                    "@id": "bts:ToolReleaseDate"
-                },
-                {
-                    "@id": "bts:ToolPackageDependencies"
-                },
-                {
-                    "@id": "bts:ToolPackageDependenciesPresent"
-                },
-                {
-                    "@id": "bts:ToolComputeRequirements"
-                },
-                {
-                    "@id": "bts:ToolEntityName"
-                },
-                {
-                    "@id": "bts:ToolEntityType"
-                },
-                {
-                    "@id": "bts:ToolEntityRole"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:ProjectName",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of the project",
@@ -62663,14 +62449,6 @@
             },
             "sms:displayName": "Project View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:GrantView"
-                },
-                {
-                    "@id": "bts:Consortium"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -65546,6 +65324,81 @@
             },
             "sms:displayName": "Restricted Access",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PublicationView",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for publication submission.",
+            "rdfs:label": "PublicationView",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Publication View",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:PublicationViewId"
+                },
+                {
+                    "@id": "bts:PublicationGrantNumber"
+                },
+                {
+                    "@id": "bts:PublicationDoi"
+                },
+                {
+                    "@id": "bts:PublicationJournal"
+                },
+                {
+                    "@id": "bts:PubmedId"
+                },
+                {
+                    "@id": "bts:PubmedUrl"
+                },
+                {
+                    "@id": "bts:PublicationTitle"
+                },
+                {
+                    "@id": "bts:PublicationYear"
+                },
+                {
+                    "@id": "bts:PublicationKeywords"
+                },
+                {
+                    "@id": "bts:PublicationAuthors"
+                },
+                {
+                    "@id": "bts:PublicationAbstract"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:PublicationTumorType"
+                },
+                {
+                    "@id": "bts:PublicationTissue"
+                },
+                {
+                    "@id": "bts:PublicationAccessibility"
+                },
+                {
+                    "@id": "bts:PublicationDatasetAlias"
+                }
+            ],
             "sms:validationRules": []
         },
         {
@@ -68669,6 +68522,11 @@
             },
             "sms:displayName": "DataDSP",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -87848,6 +87706,150 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:ToolView",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The denormalized manifest for tool submission.",
+            "rdfs:label": "ToolView",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tool View",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Study"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:ToolViewId"
+                },
+                {
+                    "@id": "bts:ToolPubmedId"
+                },
+                {
+                    "@id": "bts:ToolGrantNumber"
+                },
+                {
+                    "@id": "bts:ToolName"
+                },
+                {
+                    "@id": "bts:ToolDescription"
+                },
+                {
+                    "@id": "bts:ToolHomepage"
+                },
+                {
+                    "@id": "bts:ToolVersion"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolFunctionNote"
+                },
+                {
+                    "@id": "bts:ToolCmd"
+                },
+                {
+                    "@id": "bts:ToolType"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                },
+                {
+                    "@id": "bts:ToolOperatingSystem"
+                },
+                {
+                    "@id": "bts:ToolLanguage"
+                },
+                {
+                    "@id": "bts:ToolLicense"
+                },
+                {
+                    "@id": "bts:ToolCost"
+                },
+                {
+                    "@id": "bts:ToolAccessibility"
+                },
+                {
+                    "@id": "bts:ToolDownloadUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadType"
+                },
+                {
+                    "@id": "bts:ToolDownloadNote"
+                },
+                {
+                    "@id": "bts:ToolDownloadVersion"
+                },
+                {
+                    "@id": "bts:ToolDocumentationUrl"
+                },
+                {
+                    "@id": "bts:ToolDocumentationType"
+                },
+                {
+                    "@id": "bts:ToolDocumentationNote"
+                },
+                {
+                    "@id": "bts:ToolLinkUrl"
+                },
+                {
+                    "@id": "bts:ToolLinkType"
+                },
+                {
+                    "@id": "bts:ToolLinkNote"
+                },
+                {
+                    "@id": "bts:ToolDateLastModified"
+                },
+                {
+                    "@id": "bts:ToolReleaseDate"
+                },
+                {
+                    "@id": "bts:ToolPackageDependencies"
+                },
+                {
+                    "@id": "bts:ToolPackageDependenciesPresent"
+                },
+                {
+                    "@id": "bts:ToolComputeRequirements"
+                },
+                {
+                    "@id": "bts:ToolEntityName"
+                },
+                {
+                    "@id": "bts:ToolEntityType"
+                },
+                {
+                    "@id": "bts:ToolEntityRole"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ToolViewId",
             "@type": "rdfs:Class",
             "rdfs:comment": "A unique primary key that enables record updates using schematic.",
@@ -87883,16 +87885,7 @@
             "sms:required": "sms:false",
             "sms:requiresComponent": [
                 {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
-                },
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4"
+                    "@id": "bts:FileView"
                 }
             ],
             "sms:requiresDependency": [
@@ -88193,228 +88186,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 2",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel2Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:Checksum"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel1Key"
-                },
-                {
-                    "@id": "bts:FileAlias"
-                },
-                {
-                    "@id": "bts:UMITag"
-                },
-                {
-                    "@id": "bts:WhitelistSpatialBarcodeFileLink"
-                },
-                {
-                    "@id": "bts:SpatialBarcodeTag"
-                },
-                {
-                    "@id": "bts:AppliedHardTrimming"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:GenomicReference"
-                },
-                {
-                    "@id": "bts:GenomicReferenceURL"
-                },
-                {
-                    "@id": "bts:GenomeAnnotationURL"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:CaptureArea"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics Auxiliary files.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 3",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel3Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel2Key"
-                },
-                {
-                    "@id": "bts:VisiumAuxKey"
-                },
-                {
-                    "@id": "bts:FileAlias"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:VisiumFileType"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:CaptureArea"
-                },
-                {
-                    "@id": "bts:Spotsundertissue"
-                },
-                {
-                    "@id": "bts:MeanReadsperSpatialSpot"
-                },
-                {
-                    "@id": "bts:MedianNumberGenesperSpatialSpot"
-                },
-                {
-                    "@id": "bts:SequencingSaturation"
-                },
-                {
-                    "@id": "bts:ProportionReadsMapped"
-                },
-                {
-                    "@id": "bts:ProportionReadsMappedtoTranscriptome"
-                },
-                {
-                    "@id": "bts:MedianUMICountsperSpot"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 3.",
-            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Visium"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
-                }
-            ],
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel4Id"
-                },
-                {
-                    "@id": "bts:Filename"
-                },
-                {
-                    "@id": "bts:FileFormat"
-                },
-                {
-                    "@id": "bts:BiospecimenKey"
-                },
-                {
-                    "@id": "bts:VisiumRNALevel3Key"
-                },
-                {
-                    "@id": "bts:RunID"
-                },
-                {
-                    "@id": "bts:WorkflowVersion"
-                },
-                {
-                    "@id": "bts:WorkflowLink"
-                },
-                {
-                    "@id": "bts:VisiumWorkflowType"
-                },
-                {
-                    "@id": "bts:VisiumWorkflowParametersDescription"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:VisiumRNALevel1Id",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
@@ -88620,6 +88391,87 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 2",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel1"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel2Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Checksum"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel1Key"
+                },
+                {
+                    "@id": "bts:FileAlias"
+                },
+                {
+                    "@id": "bts:UMITag"
+                },
+                {
+                    "@id": "bts:WhitelistSpatialBarcodeFileLink"
+                },
+                {
+                    "@id": "bts:SpatialBarcodeTag"
+                },
+                {
+                    "@id": "bts:AppliedHardTrimming"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:GenomicReference"
+                },
+                {
+                    "@id": "bts:GenomicReferenceURL"
+                },
+                {
+                    "@id": "bts:GenomeAnnotationURL"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:CaptureArea"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:VisiumRNALevel2Id",
             "@type": "rdfs:Class",
             "rdfs:comment": "Unique row identifier, used as a primary key for record updates",
@@ -88653,6 +88505,90 @@
             },
             "sms:displayName": "Checksum",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics Auxiliary files.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 3",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel2"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel3Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel2Key"
+                },
+                {
+                    "@id": "bts:VisiumAuxKey"
+                },
+                {
+                    "@id": "bts:FileAlias"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:VisiumFileType"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:CaptureArea"
+                },
+                {
+                    "@id": "bts:Spotsundertissue"
+                },
+                {
+                    "@id": "bts:MeanReadsperSpatialSpot"
+                },
+                {
+                    "@id": "bts:MedianNumberGenesperSpatialSpot"
+                },
+                {
+                    "@id": "bts:SequencingSaturation"
+                },
+                {
+                    "@id": "bts:ProportionReadsMapped"
+                },
+                {
+                    "@id": "bts:ProportionReadsMappedtoTranscriptome"
+                },
+                {
+                    "@id": "bts:MedianUMICountsperSpot"
+                }
+            ],
             "sms:validationRules": []
         },
         {
@@ -88944,6 +88880,63 @@
             },
             "sms:displayName": "low res image",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Processed data files based on Spatial Transcriptomics RNA-seq Level 3.",
+            "rdfs:label": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Visium"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:10xVisiumSpatialTranscriptomics-RNA-seqLevel3"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel4Id"
+                },
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:BiospecimenKey"
+                },
+                {
+                    "@id": "bts:VisiumRNALevel3Key"
+                },
+                {
+                    "@id": "bts:RunID"
+                },
+                {
+                    "@id": "bts:WorkflowVersion"
+                },
+                {
+                    "@id": "bts:WorkflowLink"
+                },
+                {
+                    "@id": "bts:VisiumWorkflowType"
+                },
+                {
+                    "@id": "bts:VisiumWorkflowParametersDescription"
+                }
+            ],
             "sms:validationRules": []
         },
         {
