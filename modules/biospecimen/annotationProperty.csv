@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Biospecimen,Metadata attributes for describing a tissue or tumor sample,,"Component, Biospecimen_id, Individual ID, Biospecimen ID, Biospecimen Type, Biospecimen Species, Sex, Age at Sample Collection, Biospecimen Tumor Type, Tumor Subtype, Tumor Grade, Biospecimen Composition, Known Metastasis Sites, Survival Outcome, Preservation Method, Site of Resection or Biopsy, Site of Origin, Timepoint, Health Care Site",FALSE,,,"Study, Model",,
+Biospecimen,Metadata attributes for describing a tissue or tumor sample,,"Component, Biospecimen_id, Individual ID, Biospecimen ID, Biospecimen Type, Biospecimen Species, Sex, Age at Sample Collection, Biospecimen Tumor Type, Tumor Subtype, Tumor Grade, Biospecimen Composition, Known Metastasis Sites, Survival Outcome, Preservation Method, Site of Resection or Biopsy, Site of Origin, Timepoint, Health Care Site",FALSE,,,Study,,
 Biospecimen_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
 Individual ID,ID associated with a study participant,,,TRUE,,,,HTAN,
 Biospecimen ID,ID associated with a biosample,,,TRUE,,,,HTAN,

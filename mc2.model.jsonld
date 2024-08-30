@@ -25,9 +25,6 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Study"
-                },
-                {
-                    "@id": "bts:Model"
                 }
             ],
             "sms:requiresDependency": [
@@ -2362,23 +2359,6 @@
                     "@id": "bts:StudyReuseStatement"
                 }
             ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Model",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Model",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Model",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
