@@ -27928,14 +27928,6 @@
             },
             "sms:displayName": "Dataset Grant",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Dataset"
-                },
-                {
-                    "@id": "bts:Grant"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component.Dataset"
@@ -27981,23 +27973,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Dataset",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Dataset",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Dataset",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:DatasetView",
             "@type": "rdfs:Class",
             "rdfs:comment": "The denormalized manifest for dataset submission.",
@@ -28012,11 +27987,6 @@
             },
             "sms:displayName": "Dataset View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -33609,11 +33579,6 @@
             },
             "sms:displayName": "Educational Resource",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -65321,11 +65286,6 @@
             },
             "sms:displayName": "Publication View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -68502,11 +68462,6 @@
             },
             "sms:displayName": "DataDSP",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
@@ -87700,11 +87655,6 @@
             },
             "sms:displayName": "Tool View",
             "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:Study"
-                }
-            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
