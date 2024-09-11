@@ -114,9 +114,17 @@ grant:
   - name: Grant Theme Name
     src: theme/theme_name.csv
 
-imaging:
+imagingLevel1:
   - name: Imaging Assay Type
     src: imagingLevel1/imageAssay.csv
+
+imagingLevel2:
+  - name: Image Immersion Type
+    src: imagingLevel2/immersion.csv
+  - name: Image Working Distance Unit
+    src: imagingLevel2/unit.csv
+
+imagingChannel:
   - name: Channel Passed QC
     src: imagingChannel/channelQC.csv
   - name: Antibody Role
