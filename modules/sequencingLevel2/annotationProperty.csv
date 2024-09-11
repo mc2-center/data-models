@@ -1,7 +1,11 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+Sequencing Level 2,"Sequencing data that has been aligned with a reference genome.",,"Component, SequencingLevel2_id, SequencingLevel1 Key, Filename, Raw reads, Stitched reads, Aligned reads, Deduplicated reads, Trimmed reads, MapQ30, NGS Unique Bases, NGS Read Length, NGS Sequencing Coverage, Genomic Reference, Software and Version",FALSE,,,,,
+SequencingLevel2_id,A unique identifier used by schematic for record updates and as a reference key in other schemas,,,TRUE,,,,MC2,unique
 Raw reads,"Reads not yet analyzed in any way to be used for data analysis. The number of reads that pass filter from the flow cell represented in the FASTQ file. ",,,FALSE,,,,HTAN,num
 Stitched reads,"Represents consensus from the overlapping sequence of read 1 and 2. This is a % of the aligned reads that were overlapped and consensus confirmed, usually upward of 80% but less in terms of number of reads than aligned reads",,,FALSE,,,,HTAN,num
 Aligned reads,Is a sequence that has been aligned to a gene/probe. Typically these reads can number from the hundreds of thousands to tens of millions. In GeoMx alignment is via mapping the RTS ID to a white list of sequences that represent targets.,,,FALSE,,,,HTAN,num
 Deduplicated reads,Is the replacement of blocks of duplicate data with a Virtual Index Pointer linking the new sub-block to the existing block of data in a duplicate repository. This is used to reduce the amount of space need to store the data.,,,FALSE,,,,HTAN,num
 Trimmed reads,Number of the reads remaining after trimming has been applied.,,,FALSE,,,,STE,num
 MapQ30,Number of reads with Quality >= 30.,,,FALSE,,,,HTAN,num
+NGS Unique Bases,Count of unique basecalls present in the data.,,,FALSE,,,,CDS/Sequencing,num
+NGS Sequencing Coverage,Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length),,,FALSE,,,,CDS/Sequencing,num
