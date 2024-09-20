@@ -14845,6 +14845,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:3DATAC-PALM"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -24621,6 +24624,32 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Multiscale Light Sheet Microscopy",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:3DATAC-PALM",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "3DATAC-PALM",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:FileAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "3D ATAC-PALM",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -49279,6 +49308,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:3DATAC-PALM"
                 }
             ],
             "sms:displayName": "File Assay",
@@ -64533,6 +64565,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:3DATAC-PALM"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -71467,6 +71502,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:3DATAC-PALM"
                 }
             ],
             "sms:displayName": "DSP Dataset Assay",
