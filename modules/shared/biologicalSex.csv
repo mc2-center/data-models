@@ -1,0 +1,10 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Decline to answer,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Don't know,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Female,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Intersex,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Male,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+None of these describe me,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Prefer not to answer,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+Unknown,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
+X,,,,FALSE,,Biological Sex,,CDS Imaging V1.0,,,,,,
