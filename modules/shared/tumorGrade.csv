@@ -1,0 +1,13 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+G1,,,,FALSE,,Tumor Grade,,,,,,,,
+G2,,,,FALSE,,Tumor Grade,,,,,,,,
+G3,,,,FALSE,,Tumor Grade,,,,,,,,
+G4,,,,FALSE,,Tumor Grade,,,,,,,,
+GX,,,,FALSE,,Tumor Grade,,,,,,,,
+GB,,,,FALSE,,Tumor Grade,,,,,,,,
+High Grade,,,,FALSE,,Tumor Grade,,,,,,,,
+Intermediate Grade,,,,FALSE,,Tumor Grade,,,,,,,,
+Low Grade,,,,FALSE,,Tumor Grade,,,,,,,,
+Unknown,,,,FALSE,,Tumor Grade,,,,,,,,
+Not Reported,,,,FALSE,,Tumor Grade,,,,,,,,
+Not Applicable,,,,FALSE,,Tumor Grade,,,,,,,,
