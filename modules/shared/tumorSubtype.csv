@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+TNBC,,,,FALSE,,Tumor Subtype,,,,,,,,
+LumA,,,,FALSE,,Tumor Subtype,,,,,,,,
+LumB,,,,FALSE,,Tumor Subtype,,,,,,,,
+HER2,,,,FALSE,,Tumor Subtype,,,,,,,,
+Not Applicable,,,,FALSE,,Tumor Subtype,,,,,,,,
