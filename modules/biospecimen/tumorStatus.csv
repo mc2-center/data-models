@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Tumor,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
+Normal,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
+Abnormal,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
+Peritumoral,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
+Unknown,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
