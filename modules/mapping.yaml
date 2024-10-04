@@ -4,25 +4,41 @@
   - name: Biospecimen Species
     src: shared/dataset_species.csv
   - name: Biospecimen Tumor Type
-    src: shared/tumorType.csv
-  - name: Tumor Grade
-    src: biospecimen/tumorGrade.csv
+    src: shared/diseaseType.csv
+  - name: Biospecimen Tumor Grade
+    src: shared/tumorGrade.csv
   - name: Biospecimen Composition
     src: biospecimen/specimenComp.csv
-  - name: Survival Outcome
-    src: biospecimen/diseaseStatus.csv
-  - name: Preservation Method
+  - name: Biospecimen Preservation Method
     src: biospecimen/preservation.csv
-  - name: Site of Resection or Biopsy
-    src: shared/tissue.csv
+  - name: Biospecimen Site of Resection or Biopsy
+    src: shared/resectionBiopsySiteCDS.csv
   - name: Biospecimen Site of Origin
-    src: shared/tissue.csv
-  - name: Known Metastasis Sites
-    src: shared/tissue.csv
-  - name: Tumor Subtype
-    src: biospecimen/tumorSubtype.csv
-  - name: Sex
-    src: biospecimen/biologicalSex.csv
+    src: shared/tissueOrganOriginCDS.csv
+  - name: Biospecimen Known Metastasis Sites
+    src: shared/anatomicSite.csv
+  - name: Biospecimen Tumor Subtype
+    src: shared/tumorSubtype.csv
+  - name: Biospecimen Sex
+    src: shared/biologicalSex.csv
+  - name: Biospecimen Last Known Disease Status
+    src: shared/diseaseStatus.csv
+  - name: Biospecimen Therapeutic Agent
+    src: shared/therapeuticAgent.csv
+  - name: Biospecimen Tumor Morphology
+    src: biospecimen/tumorMorphology.csv
+  - name: Biospecimen Fixative
+    src: biospecimen/fixative.csv
+  - name: Biospecimen Embedding Medium
+    src: biospecimen/embeddingMedium.csv
+  - name: Biospecimen Pathology
+    src: biospecimen/pathology.csv
+  - name: Biospecimen Tumor Status
+    src: biospecimen/tumorStatus.csv
+  - name: Biospecimen Anatomic Site
+    src: shared/anatomicSite.csv
+  - name: Biospecimen Primary Site
+    src: shared/primaryDiseaseSite.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -41,6 +57,8 @@ dataset:
     src: shared/tissue.csv
   - name: Dataset Tumor Type
     src: shared/tumorType.csv
+  - name: Dataset Data Use Codes
+    src: shared/duo.csv
 
 sharingPlans:
   - name: DSP Dataset File Formats
@@ -97,6 +115,8 @@ file:
     src: file/processLevel.csv
   - name: File Data Use Codes
     src: shared/duo.csv
+  - name: File Format
+    src: shared/dataset_file_format.csv
 
 geomxLevel1:
   - name: GeoMx DSP Assay Type
@@ -115,7 +135,7 @@ grant:
     src: theme/theme_name.csv
 
 imagingLevel1:
-  - name: Imaging Assay Type
+  - name: Image Assay Type
     src: imagingLevel1/imageAssay.csv
 
 imagingLevel2:
@@ -124,17 +144,81 @@ imagingLevel2:
   - name: Image Working Distance Unit
     src: imagingLevel2/unit.csv
 
+imagingLevel3Segments:
+  - name: Image Segmentation Data Type
+    src: imagingLevel3Segments/segmentType.csv
+  - name: Image Object Class
+    src: imagingLevel3Segments/objectClass.csv
+
+imagingLevel4:
+  - name: Image Summary Statistic
+    src: imagingLevel4/summaryStat.csv
+
 imagingChannel:
   - name: Channel Passed QC
     src: imagingChannel/channelQC.csv
-  - name: Antibody Role
+  - name: Channel Antibody Role
     src: imagingChannel/abRole.csv
-  - name: Metal Isotope Element
+  - name: Channel Metal Isotope Element
     src: imagingChannel/elementType.csv
-  
+
+individual:
+  - name: Individual Known Metastasis Sites
+    src: shared/anatomicSite.csv
+  - name: Individual Last Known Disease Status
+    src: shared/diseaseStatus.csv
+  - name: Individual Sex
+    src: shared/biologicalSex.csv
+  - name: Individual Tumor Type
+    src: shared/diseaseType.csv
+  - name: Individual Tumor Subtype
+    src: shared/tumorSubtype.csv
+  - name: Individual Tumor Grade
+    src: shared/tumorGrade.csv
+  - name: Individual Site of Origin
+    src: shared/tissueOrganOriginCDS.csv
+  - name: Individual Gender
+    src: individual/gender.csv
+  - name: Individual Primary Tumor Stage
+    src: individual/primaryStage.csv
+  - name: Individual Tumor Lymph Node Stage
+    src: individual/lymphStage.csv
+  - name: Individual Treatment Type
+    src: shared/treatmentType.csv
+  - name: Individual Therapeutic Agent
+    src: shared/therapeuticAgent.csv
+  - name: Individual Metastasis Stage
+    src: individual/metStage.csv
+  - name: Individual Recurrence Status
+    src: individual/recurrence.csv
+  - name: Individual Treatment Outcome
+    src: shared/treatmentOutcome.csv
+  - name: Individual Primary Diagnosis
+    src: shared/primaryDiagnosisCDS.csv
+  - name: Individual Primary Site
+    src: shared/primaryDiseaseSite.csv
+
 institution:
   - name: Institution Location State
     src: institution/institution_location_state.csv
+
+model:
+  - name: Model Sex
+    src: shared/biologicalSex.csv
+  - name: Model Tumor Type
+    src: shared/diseaseType.csv
+  - name: Model Tumor Subtype
+    src: shared/tumorSubtype.csv
+  - name: Model Species
+    src: shared/dataset_species.csv
+  - name: Model Treatment Type
+    src: shared/treatmentType.csv
+  - name: Model Therapeutic Agent
+    src: shared/therapeuticAgent.csv
+  - name: Model Primary Diagnosis
+    src: shared/primaryDiagnosisCDS.csv
+  - name: Model Site of Origin
+    src: shared/tissueOrganOriginCDS.csv
 
 person:
   - name: Person Consortium Name
@@ -171,17 +255,25 @@ publication:
     src: shared/tumorType.csv
 
 sequencingLevel1:
-  - name: Sequencing Platform
+  - name: NGS Sequencing Platform
     src: sequencingLevel1/seqPlatform.csv
-  - name: End Bias
+  - name: NGS End Bias
     src: sequencingLevel1/endBias.csv
-  - name: Read Indicator
+  - name: NGS Read Indicator
     src: sequencingLevel1/readIndicator.csv
-  - name: Reverse Transcription Primer
+  - name: NGS Reverse Transcription Primer
     src: sequencingLevel1/rtPrimer.csv
+  - name: NGS Library Layout
+    src: sequencingLevel1/libraryLayout.csv
+  - name: NGS Library Strategy
+    src: sequencingLevel1/libraryStrategy.csv
+  - name: NGS Library Source
+    src: sequencingLevel1/librarySource.csv
+  - name: NGS Library Selection Method
+    src: sequencingLevel1/librarySelection.csv
 
 sequencingLevel3:
-  - name: Matrix Type
+  - name: NGS Matrix Type
     src: sequencingLevel3/matrixType.csv
 
 shared:
@@ -191,10 +283,11 @@ shared:
 study:
   - name: Study Data Use Codes
     src: shared/duo.csv
+  - name: Study De-identification Method Type
+    src: study/deIdMethod.csv
+  - name: Study License
+    src: study/studyLicense.csv
     
-  - name: File Format
-    src: shared/dataset_file_format.csv
-  
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
@@ -236,21 +329,21 @@ tool:
     src: tool/entity_type.csv
 
 visiumRNALevel1:
-  - name: Capture Area
+  - name: Visium Capture Area
     src: visiumRNALevel1/captureArea.csv
-  - name: Slide Version
+  - name: Visium Slide Version
     src: visiumRNALevel1/slideVersion.csv
-  - name: Image Re-orientation
+  - name: Visium Image Re-orientation
     src: shared/boolean.csv 
-  - name: Spatial Read1
+  - name: Visium Spatial Read1
     src: visiumRNALevel1/spatialReads.csv
-  - name: Spatial Read2
+  - name: Visium Spatial Read2
     src: visiumRNALevel1/spatialReads.csv
-  - name: Spatial Library Construction Method
+  - name: Visium Spatial Library Construction Method
     src: visiumRNALevel1/spatialLibrary.csv
 
 visiumRNALevel2:
-  - name: Applied Hard Trimming
+  - name: Visium Applied Hard Trimming
     src: shared/boolean.csv
 
 visiumRNALevel3:

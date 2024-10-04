@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Level 1,Raw or minimally processed data,,,FALSE,,Processing Level,,,,,,,,
-Level 2,"Data that has undergone a basic or initial processing step, like quality control, alignment, or stitching",,,FALSE,,Processing Level,,,,,,,,
-Level 3,"Files that contain summary counts, coverage files, or other matrix-based representations of the data",,,FALSE,,Processing Level,,,,,,,,
-Level 4,Files that are processed through multiple steps or contain descriptors of the data,,,FALSE,,Processing Level,,,,,,,,
-Auxiliary,"Additional files that contain information or experimental details, but do not contain data or processed derivatives",,,FALSE,,Processing Level,,,,,,,,
-Not Applicable,Files that fall outside of the level structure or are uploaded as a package.,,,FALSE,,Processing Level,,,,,,,,
+Level 1,Raw or minimally processed data,,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
+Level 2,"Data that has undergone a basic or initial processing step, like quality control, alignment, or stitching. Typically derived from Level 1 files.",,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
+Level 3,"Files that contain summary counts, coverage files, or other processed representations of the data. Typically derived from Level 2 files.",,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
+Level 4,"""Files that are processed through multiple steps or contain descriptors of the data. Typically derived from Level 2, Level 3, and/or auxiliary files.""",,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
+Auxiliary,"Additional files that contain information or experimental details, but do not contain data or processed derivatives",,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
+Not Applicable,Files that fall outside of the level structure or are uploaded as a package.,,,FALSE,,Processing Level,,HTAN/MC2,,,,,,
