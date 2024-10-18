@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+CC BY 3.0,http://creativecommons.org/licenses/by/3.0/,,,FALSE,,Study License,,CDS Imaging V1.0,,,,,,
+CC BY 4.0,https://creativecommons.org/licenses/by/4.0/,,,FALSE,,Study License,,CDS Imaging V1.0,,,,,,
+CC BY-NC 4.0,https://creativecommons.org/licenses/by-nc/4.0/,,,FALSE,,Study License,,CDS Imaging V1.0,,,,,,
+CC BY-NC 3.0,https://creativecommons.org/licenses/by-nc/3.0/,,,FALSE,,Study License,,CDS Imaging V1.0,,,,,,

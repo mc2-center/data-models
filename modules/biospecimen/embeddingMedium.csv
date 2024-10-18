@@ -1,0 +1,11 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Paraffin wax,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Carbowax,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Methacrylate,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Epoxy Resin (Araldite),,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Agar embedding,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Celloidin media,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Gelatin,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Other,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+None,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+Unknown,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,

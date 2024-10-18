@@ -1,0 +1,4 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+NanoString GeoMx DSP Level 1,Raw sequencing files from GeoMX experiments,,"Component, NanoStringGeoMxDSPLevel1_id, NanoStringGeoMxAuxiliaryFiles Key, NanoStringGeoMXROISegmentAnnotation Key, Filename, GeoMx DSP Assay Type, NGS Target Sequencing Depth, NGS Read Length, NGS Sequencing Platform, NGS Library Selection Method, NGS Library Preparation Kit Name, NGS Library Preparation Kit Vendor, NGS Library Preparation Kit Version",FALSE,,,"File View, NanoString GeoMX ROI Segment Annotation",MC2/STE,
+NanoStringGeoMxDSPLevel1_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
+GeoMx DSP Assay Type,The assay type which was used for the GeoMx DSP pipeline.,"RNA nCounter, Protein nCounter, Protein NGS, RNA NGS",,FALSE,,,,HTAN,

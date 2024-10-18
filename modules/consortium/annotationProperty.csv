@@ -1,8 +1,9 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Consortium,Consortium information,,"Component, Consortium Name, Consortium Display Name, Consortium Full Name, Consortium Description, Consortium Funding Agency, Website",FALSE,,,,,
+Consortium,Consortium information,,"Component, Consortium_id, Consortium Name, Consortium Display Name, Consortium Full Name, Consortium Description, Consortium Funding Agency, Website",FALSE,,,,,
 Consortium Name,"Machine readable name of the research consortium. (e.g. sage_bionetworks, csbc_pson, etc.)",,,TRUE,,,,,
 Consortium Display Name,"Human readable display name of research consortium (e.g. Sage Bionetworks, CSBC, PS-ON, etc.)",,,TRUE,,,,,
 Consortium Full Name,Full name of research consortium. (e.g. Cancer Systems Biology Consortium).,,,TRUE,,,,,
 Consortium Description,Description of research consortium,,,TRUE,,,,,
 Consortium Funding Agency,Funding agency of research consortium ,NIH,,TRUE,,,,,
 Website,Website of research consortium,,,TRUE,,,,,url
+Consortium_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique

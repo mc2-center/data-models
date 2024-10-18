@@ -1,0 +1,4 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Mean,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
+Median,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
+Not Specified,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
