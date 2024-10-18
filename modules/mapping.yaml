@@ -3,7 +3,7 @@
     src: biospecimen/specimenType.csv
   - name: Biospecimen Species
     src: shared/dataset_species.csv
-  - name: Biospecimen Tumor Type
+  - name: Biospecimen Disease Type
     src: shared/diseaseType.csv
   - name: Biospecimen Tumor Grade
     src: shared/tumorGrade.csv
@@ -17,8 +17,6 @@
     src: shared/tissueOrganOriginCDS.csv
   - name: Biospecimen Known Metastasis Sites
     src: shared/anatomicSite.csv
-  - name: Biospecimen Tumor Subtype
-    src: shared/tumorSubtype.csv
   - name: Biospecimen Sex
     src: shared/biologicalSex.csv
   - name: Biospecimen Last Known Disease Status
@@ -39,6 +37,8 @@
     src: shared/anatomicSite.csv
   - name: Biospecimen Primary Site
     src: shared/primaryDiseaseSite.csv
+  - name: Biospecimen Primary Diagnosis
+    src: shared/primaryDiagnosisCDS.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -169,10 +169,8 @@ individual:
     src: shared/diseaseStatus.csv
   - name: Individual Sex
     src: shared/biologicalSex.csv
-  - name: Individual Tumor Type
+  - name: Individual Disease Type
     src: shared/diseaseType.csv
-  - name: Individual Tumor Subtype
-    src: shared/tumorSubtype.csv
   - name: Individual Tumor Grade
     src: shared/tumorGrade.csv
   - name: Individual Site of Origin
@@ -205,10 +203,8 @@ institution:
 model:
   - name: Model Sex
     src: shared/biologicalSex.csv
-  - name: Model Tumor Type
+  - name: Model Disease Type
     src: shared/diseaseType.csv
-  - name: Model Tumor Subtype
-    src: shared/tumorSubtype.csv
   - name: Model Species
     src: shared/dataset_species.csv
   - name: Model Treatment Type
