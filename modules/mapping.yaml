@@ -57,9 +57,7 @@ dataset:
     src: shared/tissue.csv
   - name: Dataset Tumor Type
     src: shared/tumorType.csv
-  - name: Dataset Data Use Codes
-    src: shared/duo.csv
-
+    
 sharingPlans:
   - name: DSP Dataset File Formats
     src: shared/dataset_file_format.csv
@@ -113,8 +111,6 @@ file:
     src: shared/tumorType.csv
   - name: File Level
     src: file/processLevel.csv
-  - name: File Data Use Codes
-    src: shared/duo.csv
   - name: File Format
     src: shared/dataset_file_format.csv
 
