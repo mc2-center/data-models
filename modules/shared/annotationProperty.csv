@@ -42,7 +42,6 @@ Workflow Link,Link to documentation or webpage associated with the computational
 Workflow Parameter Description,Link or text description of flags or options provided to the workflow used to generate the file.,,,FALSE,,shared,,HTAN,str
 Software and Version,Name of software used to generate the information contained in the file. String,,,FALSE,,shared,,HTAN,str
 Workflow Version,Major version of the workflow (e.g. Cell Ranger v3.1),,,FALSE,,shared,,HTAN,str
-Workflow Link,Link to workflow or command. URL,,,FALSE,,shared,,HTAN,url
 Genomic Reference,Exact version of the human genome reference used in the alignment of reads (e.g. GCF_000001405.39),,,TRUE,,shared,,HTAN,str
 Genomic Reference URL,Link to human genome sequence; ftp or reference URL will be accepted.,,,TRUE,,shared,,HTAN,url
 Genome Annotation URL,Link to the human genome annotation (GTF) file; ftp or reference URL will be accepted.,,,TRUE,,shared,,HTAN,url
