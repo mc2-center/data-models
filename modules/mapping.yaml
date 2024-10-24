@@ -159,7 +159,7 @@ imagingChannel:
     src: imagingChannel/channelQC.csv
   - name: Channel Antibody Role
     src: imagingChannel/abRole.csv
-  - name: Channel Metal Isotope Element
+  - name: Channel Metal Symbol
     src: imagingChannel/elementType.csv
 
 individual:
