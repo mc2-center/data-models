@@ -1,2 +1,2 @@
-Component,PersonView_id,Grant key,Name,Alternative Names,Email,Url,Orcid Id,Synapse Profile Id,Last Known Institution,Working Group Participation,Chair Roles,Consent For Portal Display,Portal Display
-PersonView,,,,,,,,,,,,,
+Component,PersonView_id,GrantView Key,Person Consortium Name,Name,Alternative Names,Email,Url,Orcid Id,Synapse Profile Id,Last Known Institution,Working Group Participation,Chair Roles,Consent For Portal Display,Portal Display,Person Publications,Person Datasets,Person Tools,Person Educational Resources
+PersonView,,,,,,,,,,,,,,,,,,

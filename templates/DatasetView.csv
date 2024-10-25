@@ -1,2 +1,2 @@
-Component,DatasetView_id,Study key,Dataset Name,Dataset Alias,Dataset Description,Dataset Design,Dataset Assay,Dataset Species,Dataset Tumor Type,Dataset Tissue,Dataset Url,Dataset File Formats,Data Use Codes
-DatasetView,,,,,,,,,,,,,
+Component,DatasetView_id,Study Key,PublicationView Key,Dataset Name,Dataset Alias,Dataset Description,Dataset Design,Dataset Assay,Dataset Species,Dataset Tumor Type,Dataset Tissue,Dataset Url,Dataset File Formats,Data Use Codes
+DatasetView,,,,,,,,,,,,,,
