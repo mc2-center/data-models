@@ -1,0 +1,310 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Grant Number": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Grant Institution Alias": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "UWM",
+          "Mayo",
+          "USC",
+          "UVA",
+          "Wake Forest",
+          "UUtah",
+          "Yale",
+          "UIC",
+          "University of Illinois",
+          "UT Southwestern",
+          "UChicago",
+          "UCD",
+          "Salk",
+          "CSHL",
+          "MGH",
+          "NEU",
+          "UPenn",
+          "Pitt",
+          "Houston Methodist",
+          "UD",
+          "Moffitt",
+          "PNNL",
+          "GTech",
+          "UW",
+          "Caltech",
+          "U Miami",
+          "BCM",
+          "MIT",
+          "UNC",
+          "Cornell",
+          "HUJI",
+          "UCBerkeley",
+          "Lurie Children's Hospital",
+          "IU",
+          "SBU",
+          "DFCI",
+          "Jackson Laboratory",
+          "Stanford",
+          "BIDMC",
+          "WUSTL",
+          "UCI",
+          "Barrow",
+          "Duke",
+          "COH",
+          "Harvard",
+          "StJude",
+          "University of Texas MD Anderson Cancer Center",
+          "UNR",
+          "Rockefeller University",
+          "BMC",
+          "OHSU",
+          "UMinn",
+          "UT Austin",
+          "NYU",
+          "IUPUI",
+          "NU",
+          "Vanderbilt",
+          "JHU",
+          "Wistar",
+          "CHOP",
+          "ISB",
+          "Dartmouth",
+          "HMS",
+          "UCMC",
+          "Sage",
+          "BU",
+          "UMichigan",
+          "UTHSCSA",
+          "BWH",
+          "UNSW",
+          "Emory",
+          "UCSF",
+          "UA",
+          "Columbia",
+          "UCSD",
+          "MSKCC",
+          "UCLA",
+          "UMMS",
+          "AU",
+          "ASU",
+          "UFL",
+          "WCM",
+          "Cleveland Clinic",
+          "UAB"
+        ]
+      },
+      "maxItems": 84
+    },
+    "GrantView_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Grant Investigator": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Embargo End Date": {},
+    "Grant Theme Name": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Evolution",
+          "Epigenetics",
+          "Immunotherapy",
+          "Metabolism",
+          "Mechano-genetics",
+          "Oncogenic Stress",
+          "Platform Development",
+          "Mechano-resistance",
+          "Metastasis",
+          "Computational Model Development",
+          "Heterogeneity",
+          "Method/Assay Development",
+          "Computational Resource",
+          "Drug Resistance/Sensitivity",
+          "Tumor Progression",
+          "Tumor-Immune",
+          "Microenvironment",
+          "Experimental Model Development"
+        ]
+      },
+      "maxItems": 18
+    },
+    "Grant Institution Name": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Duke University",
+          "Indiana University",
+          "Dana-Farber Cancer Institute",
+          "Mayo Clinic",
+          "Indiana University - Purdue University Indianapolis",
+          "University of California; San Francisco",
+          "Emory University",
+          "University of Washington",
+          "Wake Forest",
+          "Cold Spring Harbor Laboratory",
+          "University of Illinois",
+          "Institute for Systems Biology",
+          "Northeastern University",
+          "Sage Bionetworks",
+          "University of Chicago",
+          "University of Arizona",
+          "Boston Medical Center",
+          "Vanderbilt University",
+          "Salk Institute for Biological Studies",
+          "The University of Texas Health Science Center at San Antonio",
+          "University of Minnesota",
+          "Brigham and Womens Hospital",
+          "Houston Methodist",
+          "Auburn University",
+          "Washington University in St. Louis",
+          "Columbia University",
+          "Arizona State University",
+          "University of Miami",
+          "Harvard University",
+          "Memorial Sloan Kettering Cancer Center",
+          "Stony Brook University",
+          "University of California; San Diego",
+          "University of Nevada Reno",
+          "University of Southern California",
+          "New York University",
+          "University of California; Berkeley",
+          "University of Texas at Austin",
+          "University of California; Irvine",
+          "Lurie Children's Hospital",
+          "Wistar Institute",
+          "Jackson Laboratory",
+          "St. Jude Children's Research Hospital",
+          "Johns Hopkins University",
+          "Yale University",
+          "Oregon Health & Science University",
+          "University of Illinois at Chicago",
+          "Harvard Medical School",
+          "University of Michigan",
+          "Hebrew University of Jerusalem",
+          "Childrens Hospital of Philadelphia",
+          "University of Delaware",
+          "University of Florida",
+          "Weill Cornell Medicine",
+          "University of California; Los Angeles",
+          "Cornell University",
+          "University of Massachusetts Medical School",
+          "University of Pennsylvania",
+          "University of Texas MD Anderson Cancer Center",
+          "University of Colorado Denver",
+          "University of Chicago Medical Center",
+          "Rockefeller University",
+          "University of North Carolina at Chapel Hill",
+          "Massachusetts Institute of Technology",
+          "California Institute of Technology",
+          "City Of Hope",
+          "Baylor College Of Medicine",
+          "Georgia Institute of Technology",
+          "University of Virginia",
+          "University of Utah",
+          "University of New South Wales",
+          "Pacific Northwest National Laboratory",
+          "Dartmouth College",
+          "Stanford University",
+          "Massachusetts General Hospital",
+          "Beth Israel Deaconess Hospital",
+          "Northwestern University",
+          "University of Pittsburgh",
+          "University of Alabama at Birmingham",
+          "Barrow Neurological Institute",
+          "University of Wisconsin-Madison",
+          "Boston University",
+          "University of Texas Southwestern Medical Center",
+          "Cleveland Clinic",
+          "Moffitt Cancer Center"
+        ]
+      },
+      "maxItems": 84
+    },
+    "Grant Abstract": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Duration of Funding": {},
+    "Grant Start Date": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NIH RePORTER Link": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Grant Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Grant Consortium Name": {
+      "enum": [
+        "CSBC",
+        "MetNet",
+        "PS-ON",
+        "CCBIR",
+        "PDMC",
+        "HTAN",
+        "Sage Bionetworks",
+        "NCI",
+        "TEC",
+        "NCI Clinical and Translational Exploratory/Developmental Studies",
+        "ICBP"
+      ]
+    },
+    "Grant Type": {
+      "enum": [
+        "R37",
+        "U01",
+        "U54",
+        "U24",
+        "R21",
+        "R01"
+      ]
+    },
+    "Grant Synapse Team": {},
+    "Grant Synapse Project": {}
+  },
+  "required": [
+    "Component",
+    "Grant Number",
+    "Grant Institution Alias",
+    "GrantView_id",
+    "Grant Investigator",
+    "Grant Theme Name",
+    "Grant Institution Name",
+    "Grant Abstract",
+    "Grant Start Date",
+    "NIH RePORTER Link",
+    "Grant Name",
+    "Grant Consortium Name",
+    "Grant Type"
+  ]
+}

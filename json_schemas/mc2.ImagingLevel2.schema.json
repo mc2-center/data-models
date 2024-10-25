@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Image Assay Type": {
+      "enum": [
+        "CyCIF",
+        "IMC",
+        "GeoMX-DSP",
+        "CODEX",
+        "H&E",
+        "MIBI",
+        "MERFISH",
+        "Not Applicable",
+        "SABER",
+        "mIHC",
+        "ExSeq",
+        "t-CyCIF",
+        "MxIF",
+        "RareCyte Orion",
+        "IHC"
+      ]
+    },
+    "Image FOV Size X Unit": {},
+    "Image FOV Size Y Unit": {},
+    "Image Dimension Order": {},
+    "Image Physical Size Z": {},
+    "Image Lense Aperture": {},
+    "Image Protocol Link": {},
+    "Image Identifier": {},
+    "Image Pixel Type": {},
+    "Image Immersion Type": {
+      "enum": [
+        "other",
+        "Oil",
+        "Air",
+        "Water",
+        ""
+      ]
+    },
+    "Image Z Pixels": {},
+    "ImagingChannel Key": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image FOV Size X": {},
+    "Image Working Distance Unit": {
+      "enum": [
+        "cm",
+        "mm",
+        "nm",
+        "\u00c5",
+        "\u00b5m",
+        ""
+      ]
+    },
+    "Image Frame Averaging": {},
+    "Image Plane Count": {},
+    "Image Channel Size": {},
+    "Image Physical Size Y": {},
+    "ImagingLevel2_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Y Pixels": {},
+    "Image Physical Size Z Unit": {},
+    "Image Platform Manufacturer": {},
+    "ImagingLevel1 Key": {},
+    "Image Pixels BigEndian": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Physical Size X": {},
+    "Image Working Distance": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Physical Size X Unit": {},
+    "Image Objective": {},
+    "Image Pyramidal": {},
+    "Image Z stack": {},
+    "Image FOV Size Y": {},
+    "Image Timeseries": {},
+    "Image Nominal Magnification": {},
+    "Image Physical Size Y Unit": {},
+    "Image Number of Timepoints": {},
+    "Image FOV Index": {},
+    "Image X Pixels": {},
+    "Image Software": {},
+    "Image Platform Model": {}
+  },
+  "required": [
+    "Image Assay Type",
+    "ImagingChannel Key",
+    "ImagingLevel2_id",
+    "Filename",
+    "Component"
+  ]
+}

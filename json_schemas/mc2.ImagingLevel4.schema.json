@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Image Parameter file": {},
+    "Image Number of Features": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Number of Objects": {},
+    "Image Software": {},
+    "ImagingLevel3Image Key": {},
+    "Image Object Class": {
+      "enum": [
+        "Whole Cell",
+        "Plasma Membrane",
+        "Spot",
+        "Nucleus",
+        "Cytoplasm",
+        "other",
+        ""
+      ]
+    },
+    "Image Summary Statistic": {
+      "enum": [
+        "Not Specified",
+        "Median",
+        "Mean"
+      ]
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "ImagingLevel3Segments Key": {},
+    "ImagingLevel2 Key": {},
+    "ImagingLevel4_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "Image Number of Features",
+    "Image Summary Statistic",
+    "Component",
+    "ImagingLevel4_id",
+    "Filename"
+  ]
+}
