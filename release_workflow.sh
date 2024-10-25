@@ -16,7 +16,8 @@
 
 config="$1"
 homedir="$2"
-datatypes="DataDSP Individual Study Model FileView ImagingChannel ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 SequencingLevel1 SequencingLevel2 SequencingLevel3 10xVisiumAuxiliaryFiles 10xVisiumRNALevel1 10xVisiumRNALevel2 10xVisiumRNALevel3 10xVisiumRNALevel4 Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
+convert="$3"
+datatypes="DataDSP Individual Study Model FileView ImagingChannel ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 SequencingLevel1 SequencingLevel2 SequencingLevel3 10xVisiumAuxiliaryFiles 10xVisiumRNALevel1 10xVisiumRNALevel2 10xVisiumRNALevel3 10xVisiumRNALevel4 Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxAuxiliaryFiles NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImaging NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
 
 cd "$homedir"
 
@@ -24,7 +25,9 @@ mkdir -p $homedir/templates
 
 python update_valid_values.py
 
-make
+if [ $convert = "true" ]; then
+	make
+fi
 
 for i in $datatypes;
 do
