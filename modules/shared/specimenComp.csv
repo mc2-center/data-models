@@ -1,6 +1,0 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Primary Tumor,,,,FALSE,,Biospecimen Composition,,,,,,,,
-Metastatic Tumor,,,,FALSE,,Biospecimen Composition,,,,,,,,
-Normal Tissue,,,,FALSE,,Biospecimen Composition,,,,,,,,
-Tumor-adjacent Normal Tissue,,,,FALSE,,Biospecimen Composition,,,,,,,,
-Not Applicable,,,,FALSE,,Biospecimen Composition,,,,,,,,
