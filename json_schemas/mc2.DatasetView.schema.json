@@ -388,8 +388,7 @@
           "Optogenetic Assay",
           "cDNA Array"
         ]
-      },
-      "maxItems": 378
+      }
     },
     "Dataset Name": {
       "not": {
@@ -430,8 +429,7 @@
           "Rhesus monkey",
           "Boar"
         ]
-      },
-      "maxItems": 28
+      }
     },
     "Dataset Design": {},
     "Dataset Tumor Type": {
@@ -626,8 +624,7 @@
           "Prostate Neoplasm",
           ""
         ]
-      },
-      "maxItems": 186
+      }
     },
     "Data Use Codes": {
       "type": "array",
@@ -659,8 +656,7 @@
           "GRU",
           ""
         ]
-      },
-      "maxItems": 24
+      }
     },
     "Component": {
       "not": {
@@ -794,8 +790,7 @@
           "Pancreas",
           ""
         ]
-      },
-      "maxItems": 114
+      }
     },
     "Dataset Description": {},
     "PublicationView Key": {},
@@ -891,8 +886,7 @@
           "GTF",
           ""
         ]
-      },
-      "maxItems": 80
+      }
     },
     "DatasetView_id": {
       "not": {
