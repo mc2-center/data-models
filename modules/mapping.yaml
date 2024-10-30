@@ -249,12 +249,8 @@ publication:
 sequencingLevel1:
   - name: NGS Sequencing Platform
     src: sequencingLevel1/seqPlatform.csv
-  - name: NGS End Bias
-    src: sequencingLevel1/endBias.csv
   - name: NGS Read Indicator
     src: sequencingLevel1/readIndicator.csv
-  - name: NGS Reverse Transcription Primer
-    src: sequencingLevel1/rtPrimer.csv
   - name: NGS Library Layout
     src: sequencingLevel1/libraryLayout.csv
   - name: NGS Library Strategy
@@ -268,6 +264,12 @@ sequencingLevel3:
   - name: NGS Matrix Type
     src: sequencingLevel3/matrixType.csv
 
+sequencingRNALevel1:
+  - name: NGS RNA End Bias
+    src: sequencingRNALevel1/endBias.csv
+  - name: NGS RNA Reverse Transcription Primer
+    src: sequencingRNALevel1/rtPrimer.csv
+
 shared:
   - name: Data Use Codes
     src: shared/duo.csv
@@ -279,7 +281,7 @@ study:
     src: study/deIdMethod.csv
   - name: Study License
     src: study/studyLicense.csv
-    
+
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
