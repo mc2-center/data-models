@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Study_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study De-identification Method Type": {
+      "enum": [
+        "Not applicable",
+        "Semiautomatic",
+        "Automatic",
+        "Manual"
+      ]
+    },
+    "GrantView Key": {},
+    "Study dbGaP Accession Id": {},
+    "Study Investigator": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study Description": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "ProjectView Key": {},
+    "Study De-identification Method Software": {},
+    "Study Data Use Codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "MOR",
+          "GRU",
+          "PS",
+          "US",
+          "COL",
+          "DS",
+          "IRB",
+          "GSO",
+          "CC",
+          "NCU",
+          "NRES",
+          "DUM",
+          "HMB",
+          "POA",
+          "NMDS",
+          "NPU",
+          "RS",
+          "PUB",
+          "TS",
+          "NPOA",
+          "IS",
+          "RTN",
+          "GS",
+          "NPUNCU",
+          ""
+        ]
+      },
+      "maxItems": 24
+    },
+    "Study License": {
+      "enum": [
+        "CC BY-NC 4.0",
+        "CC BY 4.0",
+        "CC BY 3.0",
+        "CC BY-NC 3.0",
+        ""
+      ]
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study Reuse Statement": {},
+    "PersonView Key": {},
+    "Study Number of Participants": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study De-identification Method Description": {}
+  },
+  "required": [
+    "Study_id",
+    "Study De-identification Method Type",
+    "Study Investigator",
+    "Study Description",
+    "Component",
+    "Study Number of Participants",
+    "Study Name"
+  ]
+}

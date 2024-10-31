@@ -6,6 +6,7 @@
 #- update controlled vocabulary sets listed in annotationProperty.csv files and the all_valid_values.csv
 #- build a model CSV and convert to JSON-LD, using schematic
 #- create CSV template files, saving them in a new 'template' folder
+#- generate Google Sheet links and print to terminal
 
 #Intended for use when creating a data model release package.
 
@@ -15,7 +16,8 @@
 
 config="$1"
 homedir="$2"
-datatypes="DataDSP Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImagingLevel2 NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
+convert="$3"
+datatypes="DataDSP Individual Study Model FileView ImagingChannel ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 SequencingLevel1 SequencingLevel2 SequencingLevel3 10xVisiumAuxiliaryFiles 10xVisiumRNALevel1 10xVisiumRNALevel2 10xVisiumRNALevel3 10xVisiumRNALevel4 Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxAuxiliaryFiles NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImaging NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
 
 cd "$homedir"
 
@@ -23,9 +25,11 @@ mkdir -p $homedir/templates
 
 python update_valid_values.py
 
-make
+if [ $convert = "true" ]; then
+	make
+fi
 
 for i in $datatypes;
 do
-	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" || continue
+	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s || continue
 done

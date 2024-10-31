@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Synapse ID of GeoMx DSP ROI Segment Annotation File": {},
+    "Synapse ID of GeoMx DSP Config File": {},
+    "Synapse ID of GeoMx Lab Worksheet File": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Synapse ID of GeoMx DSP PKC File": {},
+    "NanoStringGeoMxAuxiliaryFiles_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "Component",
+    "NanoStringGeoMxAuxiliaryFiles_id"
+  ]
+}

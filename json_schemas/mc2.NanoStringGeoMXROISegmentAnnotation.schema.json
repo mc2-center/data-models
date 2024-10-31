@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "GeoMx ROI Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "GeoMx Limit of Quantification": {},
+    "GeoMx Scan Width": {},
+    "GeoMx AOI X Coordinate": {},
+    "GeoMx Slide name": {},
+    "GeoMx Scan Height": {},
+    "GeoMx Tags": {},
+    "GeoMx Scan Offset X": {},
+    "GeoMx Surface area": {},
+    "GeoMx Nuclei count": {},
+    "NGS Stitched reads": {},
+    "GeoMx Scan name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Biospecimen Key": {},
+    "NGS MapQ30": {},
+    "NGS Sequencing Coverage": {},
+    "NGS Deduplicated reads": {},
+    "NGS Aligned reads": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "GeoMx Positive norm factor": {},
+    "GeoMx Tissue Stain": {},
+    "NanoStringGeoMXROISegmentAnnotation_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "GeoMx Scan Offset Y": {},
+    "GeoMx Binding Density": {},
+    "GeoMx AOI Y Coordinate": {},
+    "GeoMx QC status": {},
+    "GeoMx Excluded Outlier Probes": {},
+    "GeoMx No Template Control count": {},
+    "GeoMx ROI X Coordinate": {},
+    "GeoMx ROI Y Coordinate": {},
+    "NGS Trimmed reads": {},
+    "GeoMx AOI Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Raw reads": {},
+    "GeoMx Negative count mean": {}
+  },
+  "required": [
+    "GeoMx ROI Name",
+    "GeoMx Scan name",
+    "Component",
+    "NanoStringGeoMXROISegmentAnnotation_id",
+    "GeoMx AOI Name"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Channel Emission Wavelength": {},
+    "Channel Antibody Catalog Number": {},
+    "Channel Oligo Barcode Upper Strand": {},
+    "Channel Identifier": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Channel Excitation Wavelength": {},
+    "Channel Passed QC": {
+      "enum": [
+        "Yes",
+        "No - Channel Failed QC",
+        ""
+      ]
+    },
+    "Channel Resource ID": {},
+    "Channel Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Channel Antibody Role": {
+      "enum": [
+        "Primary",
+        "Secondary",
+        ""
+      ]
+    },
+    "Channel Excitation Bandwidth": {},
+    "Channel Fluorophore": {},
+    "Channel Antibody Vendor": {},
+    "Channel Antibody Name": {},
+    "Channel Oligo Barcode Lower Strand": {},
+    "Channel Antibody Lot": {},
+    "Channel Target Name": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Channel Sub-cycle Number": {},
+    "ImagingChannel_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study Key": {},
+    "Channel Emission Bandwidth": {},
+    "Channel Metal Symbol": {
+      "enum": [
+        "In",
+        "Mo",
+        "Nd",
+        "Cn",
+        "Rg",
+        "Eu",
+        "Os",
+        "Te",
+        "C",
+        "Ce",
+        "Pm",
+        "Pu",
+        "Db",
+        "Rn",
+        "Tc",
+        "Ir",
+        "Ag",
+        "He",
+        "P",
+        "Rb",
+        "Sb",
+        "Np",
+        "Ru",
+        "Sr",
+        "Er",
+        "Mt",
+        "Bh",
+        "Zr",
+        "Mn",
+        "Ni",
+        "Dy",
+        "Fe",
+        "Ge",
+        "Kr",
+        "K",
+        "La",
+        "N",
+        "Am",
+        "Al",
+        "Hs",
+        "Es",
+        "Tm",
+        "U",
+        "Hf",
+        "Lu",
+        "Co",
+        "Ar",
+        "Au",
+        "Ga",
+        "At",
+        "Ra",
+        "No",
+        "W",
+        "Li",
+        "Ti",
+        "Ho",
+        "Hg",
+        "Fl",
+        "O",
+        "Se",
+        "Pd",
+        "Ca",
+        "Md",
+        "Cd",
+        "Lv",
+        "Tl",
+        "Og",
+        "Br",
+        "Rh",
+        "Fr",
+        "Sm",
+        "Y",
+        "Cf",
+        "Tb",
+        "Ta",
+        "Pa",
+        "Po",
+        "Bk",
+        "F",
+        "Nb",
+        "Nh",
+        "Mc",
+        "Pt",
+        "V",
+        "Re",
+        "S",
+        "Ac",
+        "Bi",
+        "Rf",
+        "As",
+        "Zn",
+        "Ne",
+        "Si",
+        "Cs",
+        "B",
+        "Mg",
+        "Na",
+        "Fm",
+        "Yb",
+        "Pb",
+        "Cr",
+        "Ds",
+        "H",
+        "Ts",
+        "Sn",
+        "Ba",
+        "Lr",
+        "Xe",
+        "Be",
+        "Sg",
+        "Cl",
+        "Cu",
+        "Gd",
+        "Pr",
+        "Sc",
+        "Th",
+        "I",
+        ""
+      ]
+    },
+    "Channel Probe Concentration": {},
+    "Channel Metal Isotope": {},
+    "Channel Probe Dilution Ratio": {},
+    "Channel Cycle Number": {},
+    "Channel Antibody Clone": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "Channel Identifier",
+    "Channel Name",
+    "Channel Target Name",
+    "ImagingChannel_id",
+    "Component"
+  ]
+}

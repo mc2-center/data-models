@@ -1,0 +1,10 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+GENOMIC,Genomic DNA (includes PCR products from genomic DNA),,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+GENOMIC SINGLE CELL,,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+METAGENOMIC,Mixed material from metagenome,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+METATRANSCRIPTOMIC,Transcription products from community targets,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+OTHER,"Other, unspecified, or unknown library source material (please include additional info in the “design description”)",,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+SYNTHETIC,Synthetic DNA,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+TRANSCRIPTOMIC,"Transcription products or non genomic DNA (EST, cDNA, RT-PCR, screened libraries)",,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+TRANSCRIPTOMIC SINGLE CELL,,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,
+VIRAL RNA,Viral RNA,,,FALSE,,library source,,CDS Metadata v1.3.3,,,,,,

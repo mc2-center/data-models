@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+"Manual ",,,,FALSE,,Study Deidentification Method Type,,CDS Imaging V1.0,,,,,,
+"Semiautomatic ",,,,FALSE,,Study Deidentification Method Type,,CDS Imaging V1.0,,,,,,
+"Automatic ",,,,FALSE,,Study Deidentification Method Type,,CDS Imaging V1.0,,,,,,
+Not applicable,,,,FALSE,,Study Deidentification Method Type,,CDS Imaging V1.0,,,,,,

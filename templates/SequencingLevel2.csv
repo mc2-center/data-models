@@ -1,0 +1,2 @@
+Component,SequencingLevel2_id,SequencingLevel1 Key,Filename,NGS Library Strategy,NGS Library Source,NGS Library Selection Method,NGS Library Layout,NGS Sequencing Platform,NGS Sequencing Design Description,NGS Raw reads,NGS Stitched reads,NGS Aligned reads,NGS Deduplicated reads,NGS Trimmed reads,NGS MapQ30,NGS Unique Bases,NGS Read Length,NGS Sequencing Coverage,Genomic Reference,Software and Version
+SequencingLevel2,,,,,,,,,,,,,,,,,,,,
