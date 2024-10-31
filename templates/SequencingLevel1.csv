@@ -1,2 +1,2 @@
-Component,SequencingLevel1_id,Filename,NGS Library Strategy,NGS Library Source,NGS Library Selection Method,NGS Library Layout,NGS Sequencing Platform,NGS Sequencing Design Description,NGS Library Preparation Kit Name,NGS Library Preparation Kit Vendor,NGS Library Preparation Kit Version,NGS Read Indicator,NGS Library Preparation Days from Index,NGS Sequencing Library Construction Days from Index,NGS End Bias,NGS Reverse Transcription Primer,NGS RIN,NGS DV200
-SequencingLevel1,,,,,,,,,,,,,,,,,,
+Component,SequencingLevel1_id,Filename,NGS Library Strategy,NGS Library Source,NGS Library Selection Method,NGS Library Layout,NGS Sequencing Platform,NGS Sequencing Design Description,NGS Library Preparation Kit Name,NGS Library Preparation Kit Vendor,NGS Library Preparation Kit Version,NGS Read Indicator,NGS Library Preparation Days from Index,NGS Sequencing Library Construction Days from Index
+SequencingLevel1,,,,,,,,,,,,,,
