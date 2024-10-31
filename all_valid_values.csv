@@ -10044,6 +10044,7 @@ assay,Tuba-Seq,
 assay,SDS-PAGE,
 assay,Cell Fractionation,
 assay,Multiscale Light Sheet Microscopy,
+assay,Light Sheet Microscopy,
 tissue,Gonad,"Gonadal, Gonads"
 tissue,Abdominal Esophagus,"ESOPHAGUS, ABDOMINAL"
 tissue,Adipose Tissue,"Adipose, Body Fat, Fat Tissue, Human Adipose Tissue"
@@ -10410,6 +10411,7 @@ ed_topic,Statistics and Probability,
 ed_topic,Chemistry,
 ed_topic,Physics,
 ed_topic,Systems Biology,
+ed_topic,Patient Advocacy,
 ed_activity_type,Activity/Lab,
 ed_activity_type,Assessment,
 ed_activity_type,Case Study,
