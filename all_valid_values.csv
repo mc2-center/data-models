@@ -36,6 +36,7 @@ dataset_species,Worm,
 dataset_species,Yeast,
 dataset_species,Fruit Fly,Drosophila melanogaster
 dataset_species,Zebrafish,Danio rerio
+dataset_species,Not Applicable,
 tumorType,Cutaneous Melanoma,"Melanoma of Skin, Malignant Melanoma of Skin, Skin Melanoma, Malignant Melanoma (of Skin), Stage Unspecified, Cutaneous (Skin) Melanoma, CM, Skin, Melanoma, Skin Cutaneous Melanoma, Melanoma of the Skin, Malignant Melanoma of Skin Stage Unspecified, Malignant Cutaneous Melanoma"
 tumorType,Acinar Cell Carcinoma,"Acinar Carcinoma, Acinar adenocarcinoma, Acinar Cell Adenocarcinoma, Acinar carcinoma, Acinic Cell Carcinoma, Acinic Cell Adenocarcinoma, Acinar Adenocarcinoma, Acinic cell adenocarcinoma"
 tumorType,Acute Lymphoblastic Leukemia,"Precursor Lymphoblasic Leukemia, Acute lymphatic leukemia, Precursor Lymphoblastic Leukemia, Acute Lymphoid Leukemia, Precursor Cell Lymphoblastic Leukemia, Acute Lymphoblastic Leukemia (ALL), Acute lymphoblastic leukemia (ALL), Acute lymphoblastic leukemia, precursor cell type, Lymphoblastic Leukemia, ALL, Acute Lymphogenous Leukemia, ALL - Acute Lymphocytic Leukemia, Acute lymphoid leukemia, Acute Lymphocytic Leukaemia, Acute Lymphocytic Leukemia, ALL_TYPE, Acute Lymphocytic Leukemias, Acute lymphocytic leukemia, acute lymphocytic leukemia"
@@ -994,6 +995,7 @@ assay,Tuba-Seq,
 assay,SDS-PAGE,
 assay,Cell Fractionation,
 assay,Multiscale Light Sheet Microscopy,
+assay,Light Sheet Microscopy,
 processLevel,Level 1,
 processLevel,Level 2,
 processLevel,Level 3,
@@ -1060,6 +1062,7 @@ ed_topic,Statistics and Probability,
 ed_topic,Chemistry,
 ed_topic,Physics,
 ed_topic,Systems Biology,
+ed_topic,Patient Advocacy,
 ed_activity_type,Activity/Lab,
 ed_activity_type,Assessment,
 ed_activity_type,Case Study,
