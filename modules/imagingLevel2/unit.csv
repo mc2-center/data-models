@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+cm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+mm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+µm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+nm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+Å,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,

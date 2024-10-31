@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "File Format": {
+      "enum": [
+        "FCS",
+        "H5AD",
+        "DAE",
+        "MGF",
+        "MAP",
+        "Pending Annotation",
+        "SGI",
+        "MTX",
+        "mzIdentML",
+        "CLS",
+        "COOL",
+        "FREQ",
+        "cloupe",
+        "TIFF",
+        "GCT",
+        "GCTx",
+        "TSV",
+        "JPG",
+        "SF",
+        "GZIP Format",
+        "VCF",
+        "MATLAB script",
+        "mzXML",
+        "rcc",
+        "SVS",
+        "RTF",
+        "GCG",
+        "FASTQ",
+        "unspecified",
+        "XML",
+        "GFF3",
+        "ZIP",
+        "FIG",
+        "R File Format",
+        "SRA",
+        "MAT",
+        "CSV",
+        "DB",
+        "TXT",
+        "FASTA",
+        "PZFX",
+        "TDF",
+        "HDF",
+        "HDF5",
+        "xls",
+        "SCN",
+        "AVI",
+        "PDF",
+        "WIG",
+        "bed12",
+        "BAM",
+        "Python Script",
+        "PNG",
+        "HTML",
+        "cel",
+        "LIF",
+        "maf",
+        "BED",
+        "BPM",
+        "ROUT",
+        "BIGWIG",
+        "STAT",
+        "xlsx",
+        "PKL",
+        "TAR Format",
+        "DS_Store",
+        "IDAT",
+        "H5",
+        "docx",
+        "BAI",
+        "bedgraph",
+        "JSON",
+        "CHP",
+        "RPROJ",
+        "RAW",
+        "CDS",
+        "pptx",
+        "RDS",
+        "GTF",
+        "MSF"
+      ]
+    },
+    "Workflow Link": {},
+    "Visium Workflow Type": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Biospecimen Key": {},
+    "10xVisiumRNALevel3 Key": {},
+    "Run ID": {},
+    "Visium Workflow Parameters Description": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "10xVisiumRNALevel4_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Workflow Version": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "Component",
+    "File Format",
+    "Visium Workflow Type",
+    "Visium Workflow Parameters Description",
+    "10xVisiumRNALevel4_id",
+    "Filename"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Image Object Class": {
+      "enum": [
+        "Nucleus",
+        "Spot",
+        "Cytoplasm",
+        "other",
+        "Whole Cell",
+        "Plasma Membrane",
+        ""
+      ]
+    },
+    "ImagingLevel3Segments_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "ImagingLevel2 Key": {},
+    "ImagingLevel3Image Key": {},
+    "Image Number of Objects": {},
+    "Image Segmentation Data Type": {
+      "enum": [
+        "Polygon",
+        "Mask",
+        "Probability Map",
+        "Point",
+        "Outline"
+      ]
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Object Class Description": {},
+    "Software and Version": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Parameter file": {}
+  },
+  "required": [
+    "ImagingLevel3Segments_id",
+    "Image Segmentation Data Type",
+    "Component",
+    "Filename"
+  ]
+}

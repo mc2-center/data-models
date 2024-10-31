@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Image Working Distance": {},
+    "Image Z stack": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image FOV Size Y Unit": {},
+    "Image Timeseries": {},
+    "Image Pyramidal": {},
+    "Image FOV Index": {},
+    "Image Objective": {},
+    "Image Platform Model": {},
+    "ImagingLevel3Image_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Software": {},
+    "Image Frame Averaging": {},
+    "Image Protocol Link": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image FOV Size X": {},
+    "Image Nominal Magnification": {},
+    "Image Lense Aperture": {},
+    "Image Assay Type": {
+      "enum": [
+        "t-CyCIF",
+        "IMC",
+        "MERFISH",
+        "ExSeq",
+        "RareCyte Orion",
+        "mIHC",
+        "MxIF",
+        "IHC",
+        "MIBI",
+        "CODEX",
+        "Not Applicable",
+        "H&E",
+        "GeoMX-DSP",
+        "CyCIF",
+        "SABER"
+      ]
+    },
+    "Image FOV Size Y": {},
+    "ImagingChannel Key": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Immersion Type": {
+      "enum": [
+        "Water",
+        "Oil",
+        "Air",
+        "other",
+        ""
+      ]
+    },
+    "ImagingLevel2 Key": {},
+    "Image Platform Manufacturer": {}
+  },
+  "required": [
+    "Filename",
+    "ImagingLevel3Image_id",
+    "Component",
+    "Image Assay Type",
+    "ImagingChannel Key"
+  ]
+}

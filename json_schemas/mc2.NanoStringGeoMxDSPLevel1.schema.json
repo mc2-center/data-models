@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "NGS Library Selection Method": {
+      "enum": [
+        "MSLL",
+        "Padlock probes capture method",
+        "MBD2 protein methyl-CpG binding domain",
+        "HMPR",
+        "MNase",
+        "Oligo-dT",
+        "CF-M",
+        "unspecified",
+        "Reduced Representation",
+        "CF-T",
+        "cDNA_oligo_dT",
+        "RANDOM",
+        "cDNA_randomPriming",
+        "RT-PCR",
+        "Hybrid Selection",
+        "CF-S",
+        "ChIP",
+        "5-methylcytidine antibody",
+        "cDNA",
+        "MDA",
+        "RANDOM PCR",
+        "CF-H",
+        "Restriction Digest",
+        "RACE",
+        "DNAse",
+        "size fractionation",
+        "Inverse rRNA",
+        "other",
+        "CAGE",
+        "PCR",
+        "MF",
+        "PolyA",
+        "repeat fractionation",
+        ""
+      ]
+    },
+    "NanoStringGeoMXROISegmentAnnotation Key": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "GeoMx DSP Assay Type": {
+      "enum": [
+        "Protein NGS",
+        "RNA NGS",
+        "Protein nCounter",
+        "RNA nCounter",
+        ""
+      ]
+    },
+    "NGS Target Sequencing Depth": {},
+    "NGS Library Preparation Kit Name": {},
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NanoStringGeoMxDSPLevel1_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Read Length": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Sequencing Platform": {
+      "enum": [
+        "Illumina iSeq 100",
+        "Illumina HiSeq X Five",
+        "Illumina NextSeq",
+        "AB 3500 Genetic Analyzer",
+        "Illumina HiSeq X Ten",
+        "Illumina NextSeq 2500",
+        "DNBSEQ-T7",
+        "AB SOLiD PI System",
+        "AB 3130xL Genetic Analyzer",
+        "AB 3500xL Genetic Analyzer",
+        "AB SOLiD 4 System",
+        "Illumina HiSeq 3000",
+        "Illumina MiniSeq",
+        "Illumina MiSeq",
+        "Ion Torrent PGM",
+        "454 GS",
+        "Complete Genomics",
+        "Illumina NextSeq 500",
+        "Helicos HeliScope",
+        "MGISEQ-2000RS",
+        "Illumina HiSeq 2500",
+        "AB SOLiD System",
+        "AB SOLiD System 3.0",
+        "Ion Torrent S5 XL",
+        "Ion Torrent Proton",
+        "Oxford Nanopore MinION",
+        "AB 3730 Genetic Analyzer",
+        "DNBSEQ-G400",
+        "PacBio RS",
+        "Ion Torrent S5",
+        "454 GS FLX Titanium",
+        "Illumina Genome Analyzer IIx",
+        "PacBio RS II",
+        "Illumina HiSeq 1500",
+        "Illumina NextSeq 550",
+        "AB 5500xl Genetic Analyzer",
+        "Illumina NextSeq 2000",
+        "AB 5500 Genetic Analyzer",
+        "Illumina HiSeq 4000",
+        "Oxford Nanopore GridION",
+        "AB SOLiD 3 Plus System",
+        "454 GS FLX",
+        "454 GS FLX+",
+        "Illumina Genome Analyzer",
+        "Illumina Genome Analyzer II",
+        "Illumina HiScanSQ",
+        "Illumina HiSeq 2000",
+        "Ultima Genomics UG100",
+        "BGISEQ-500",
+        "454 GS 20",
+        "AB 310 Genetic Analyzer",
+        "Illumina HiSeq 1000",
+        "AB SOLiD 4hq System",
+        "Illumina NextSeq 1000",
+        "AB 3730xL Genetic Analyzer",
+        "AB 5500x-Wl Genetic Analyzer",
+        "AB 3130 Genetic Analyzer",
+        "454 GS Junior",
+        "DNBSEQ-G50",
+        "Illumina NovaSeq 6000",
+        "AB SOLiD System 2.0",
+        "PacBio Sequel II",
+        "Oxford Nanopore PromethION",
+        "Revio",
+        "PacBio Sequel"
+      ]
+    },
+    "NGS Library Preparation Kit Version": {},
+    "NanoStringGeoMxAuxiliaryFiles Key": {},
+    "NGS Library Preparation Kit Vendor": {}
+  },
+  "required": [
+    "Filename",
+    "Component",
+    "NanoStringGeoMxDSPLevel1_id",
+    "NGS Read Length",
+    "NGS Sequencing Platform"
+  ]
+}

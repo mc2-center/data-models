@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Matrix Type": {
+      "enum": [
+        "Scaled Counts",
+        "Normalized Counts",
+        "Batch Corrected Counts",
+        "Raw Counts",
+        ""
+      ]
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Unique Target Count": {},
+    "SequencingLevel2 Key": {},
+    "NGS Unique Probe Count": {},
+    "SequencingLevel3_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Software and Version": {}
+  },
+  "required": [
+    "Filename",
+    "Component",
+    "SequencingLevel3_id"
+  ]
+}

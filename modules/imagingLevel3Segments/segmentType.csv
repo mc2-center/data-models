@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Mask,,,,FALSE,,"Imaging Segmentation Data Type ",,HTAN,,,,,,
+Outline,,,,FALSE,,"Imaging Segmentation Data Type ",,HTAN,,,,,,
+Polygon,,,,FALSE,,"Imaging Segmentation Data Type ",,HTAN,,,,,,
+Probability Map,,,,FALSE,,"Imaging Segmentation Data Type ",,HTAN,,,,,,
+Point,,,,FALSE,,"Imaging Segmentation Data Type ",,HTAN,,,,,,

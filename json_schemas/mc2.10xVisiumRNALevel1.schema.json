@@ -1,0 +1,307 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "NGS Reverse Transcription Primer": {
+      "enum": [
+        "Random",
+        "Feature barcoding",
+        "Oligo-dT",
+        "Poly-dT"
+      ]
+    },
+    "10xVisiumRNALevel1_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS RIN": {},
+    "NGS Sequencing Library Construction Days from Index": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Visium Run ID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Visium Spatial Library Construction Method": {
+      "enum": [
+        "Drop-seq",
+        "10xV3.1",
+        "Smart-SeqV4",
+        "10xV1.1",
+        "TruDrop",
+        "10xV1.0",
+        "Nextera XT",
+        "inDropsV3",
+        "10xV2",
+        "10xV3",
+        "inDropsV2",
+        "Smart-seq2"
+      ]
+    },
+    "Visium Capture Area": {
+      "enum": [
+        "C",
+        "D1",
+        "B",
+        "A1",
+        "C1",
+        "D",
+        "A",
+        "B1",
+        ""
+      ]
+    },
+    "Visium Slide ID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "File Format": {
+      "enum": [
+        "JSON",
+        "Python Script",
+        "STAT",
+        "JPG",
+        "PKL",
+        "CSV",
+        "GCTx",
+        "bedgraph",
+        "Pending Annotation",
+        "GCT",
+        "ROUT",
+        "unspecified",
+        "xlsx",
+        "GFF3",
+        "rcc",
+        "VCF",
+        "BPM",
+        "WIG",
+        "MAP",
+        "FCS",
+        "RPROJ",
+        "PDF",
+        "CLS",
+        "TDF",
+        "SF",
+        "CHP",
+        "GCG",
+        "MGF",
+        "AVI",
+        "RDS",
+        "DS_Store",
+        "DAE",
+        "HTML",
+        "BAI",
+        "DB",
+        "BAM",
+        "ZIP",
+        "FASTA",
+        "GTF",
+        "maf",
+        "xls",
+        "mzIdentML",
+        "RAW",
+        "MATLAB script",
+        "pptx",
+        "H5",
+        "BIGWIG",
+        "IDAT",
+        "BED",
+        "bed12",
+        "mzXML",
+        "LIF",
+        "TXT",
+        "COOL",
+        "cel",
+        "PNG",
+        "TAR Format",
+        "HDF",
+        "MSF",
+        "cloupe",
+        "R File Format",
+        "MAT",
+        "MTX",
+        "SVS",
+        "HDF5",
+        "RTF",
+        "PZFX",
+        "FASTQ",
+        "FIG",
+        "GZIP Format",
+        "XML",
+        "TSV",
+        "SCN",
+        "TIFF",
+        "docx",
+        "CDS",
+        "FREQ",
+        "SRA",
+        "H5AD",
+        "SGI"
+      ]
+    },
+    "NGS Sequencing Platform": {
+      "enum": [
+        "Illumina HiSeq X Five",
+        "Illumina NextSeq 550",
+        "Ultima Genomics UG100",
+        "Helicos HeliScope",
+        "AB 5500 Genetic Analyzer",
+        "AB SOLiD 4 System",
+        "BGISEQ-500",
+        "AB 3130 Genetic Analyzer",
+        "Illumina MiSeq",
+        "Illumina NextSeq 2000",
+        "DNBSEQ-G50",
+        "454 GS FLX",
+        "AB SOLiD System 2.0",
+        "Ion Torrent S5 XL",
+        "DNBSEQ-G400",
+        "PacBio RS",
+        "454 GS FLX+",
+        "Illumina iSeq 100",
+        "Illumina NovaSeq 6000",
+        "PacBio RS II",
+        "Illumina NextSeq",
+        "AB 5500xl Genetic Analyzer",
+        "MGISEQ-2000RS",
+        "Illumina NextSeq 500",
+        "Ion Torrent PGM",
+        "Illumina HiSeq 4000",
+        "Illumina HiSeq 1000",
+        "AB SOLiD PI System",
+        "Illumina HiSeq 2500",
+        "Illumina Genome Analyzer II",
+        "Illumina MiniSeq",
+        "Illumina HiSeq 1500",
+        "Oxford Nanopore GridION",
+        "Oxford Nanopore MinION",
+        "Illumina HiScanSQ",
+        "Illumina NextSeq 1000",
+        "454 GS FLX Titanium",
+        "AB 3730xL Genetic Analyzer",
+        "PacBio Sequel",
+        "AB 3500 Genetic Analyzer",
+        "AB SOLiD System 3.0",
+        "AB SOLiD 4hq System",
+        "Ion Torrent Proton",
+        "AB 3730 Genetic Analyzer",
+        "Illumina Genome Analyzer IIx",
+        "PacBio Sequel II",
+        "Revio",
+        "AB 310 Genetic Analyzer",
+        "Oxford Nanopore PromethION",
+        "AB 5500x-Wl Genetic Analyzer",
+        "DNBSEQ-T7",
+        "Illumina HiSeq 2000",
+        "454 GS Junior",
+        "AB SOLiD 3 Plus System",
+        "Illumina HiSeq X Ten",
+        "Illumina NextSeq 2500",
+        "Complete Genomics",
+        "AB 3500xL Genetic Analyzer",
+        "454 GS",
+        "454 GS 20",
+        "Illumina Genome Analyzer",
+        "Ion Torrent S5",
+        "AB 3130xL Genetic Analyzer",
+        "Illumina HiSeq 3000",
+        "AB SOLiD System"
+      ]
+    },
+    "Visium Spatial Read1": {
+      "enum": [
+        "Spatial Barcode and UMI",
+        "cDNA"
+      ]
+    },
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS DV200": {},
+    "Visium Slide Version": {
+      "enum": [
+        "V2",
+        "V1",
+        "V3",
+        "V4"
+      ]
+    },
+    "Biospecimen Key": {},
+    "Visium Spatial Read2": {
+      "enum": [
+        "Spatial Barcode and UMI",
+        "cDNA"
+      ]
+    },
+    "Visium Image Re-orientation": {
+      "enum": [
+        "True",
+        "False",
+        ""
+      ]
+    },
+    "Protocol Link": {},
+    "NGS End Bias": {
+      "enum": [
+        "5 Prime",
+        "Full Length Transcript",
+        "3 Prime"
+      ]
+    },
+    "NGS Library Preparation Days from Index": {},
+    "File Alias": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Visium Permeabilization Time": {},
+    "NGS Read Indicator": {
+      "enum": [
+        "R1",
+        "other",
+        "I1",
+        "R1&R2",
+        "R2"
+      ]
+    }
+  },
+  "required": [
+    "NGS Reverse Transcription Primer",
+    "10xVisiumRNALevel1_id",
+    "NGS Sequencing Library Construction Days from Index",
+    "Visium Run ID",
+    "Visium Spatial Library Construction Method",
+    "Visium Slide ID",
+    "Component",
+    "File Format",
+    "NGS Sequencing Platform",
+    "Visium Spatial Read1",
+    "Filename",
+    "Visium Slide Version",
+    "Visium Spatial Read2",
+    "NGS End Bias",
+    "File Alias",
+    "NGS Read Indicator"
+  ]
+}

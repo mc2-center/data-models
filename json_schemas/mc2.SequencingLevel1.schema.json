@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "NGS Library Strategy": {
+      "enum": [
+        "MRE-Seq",
+        "RIP-Seq",
+        "Synthetic-Long-Read",
+        "FINISHING",
+        "Targeted-Capture",
+        "CLONEEND",
+        "Hi-C",
+        "Bisulfite-Seq",
+        "WGS",
+        "POOLCLONE",
+        "DNase-Hypersensitivity",
+        "MeDIP-Seq",
+        "WGA",
+        "MNase-Seq",
+        "Tethered Chromatin Conformation Capture",
+        "OTHER",
+        "ChIA-PET",
+        "miRNA-Seq",
+        "RNA-Seq",
+        "RAD-Seq",
+        "FAIRE-seq",
+        "AMPLICON",
+        "WCS",
+        "Tn-Seq",
+        "ChIP-Seq",
+        "SELEX",
+        "ATAC-seq",
+        "CTS",
+        "ncRNA-Seq",
+        "CLONE",
+        "WXS",
+        "ssRNA-seq",
+        "MBD-Seq",
+        "EST",
+        "FL-cDNA"
+      ]
+    },
+    "NGS Library Preparation Kit Version": {},
+    "NGS Sequencing Design Description": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Library Selection Method": {
+      "enum": [
+        "Inverse rRNA",
+        "MNase",
+        "HMPR",
+        "Padlock probes capture method",
+        "CF-H",
+        "PolyA",
+        "DNAse",
+        "size fractionation",
+        "CF-T",
+        "CAGE",
+        "MSLL",
+        "PCR",
+        "cDNA_randomPriming",
+        "cDNA",
+        "Reduced Representation",
+        "CF-M",
+        "MF",
+        "RT-PCR",
+        "RACE",
+        "RANDOM PCR",
+        "unspecified",
+        "cDNA_oligo_dT",
+        "CF-S",
+        "RANDOM",
+        "5-methylcytidine antibody",
+        "MDA",
+        "other",
+        "repeat fractionation",
+        "ChIP",
+        "MBD2 protein methyl-CpG binding domain",
+        "Restriction Digest",
+        "Oligo-dT",
+        "Hybrid Selection",
+        ""
+      ]
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Sequencing Platform": {
+      "enum": [
+        "Ion Torrent S5",
+        "AB 3500xL Genetic Analyzer",
+        "Illumina NextSeq 2000",
+        "Ion Torrent Proton",
+        "AB SOLiD PI System",
+        "Ion Torrent PGM",
+        "Illumina HiSeq X Ten",
+        "AB 3730xL Genetic Analyzer",
+        "Illumina HiSeq 4000",
+        "Illumina NextSeq 1000",
+        "AB 5500x-Wl Genetic Analyzer",
+        "MGISEQ-2000RS",
+        "PacBio RS",
+        "454 GS Junior",
+        "Illumina HiSeq 1500",
+        "Illumina NextSeq 500",
+        "454 GS FLX",
+        "Ultima Genomics UG100",
+        "PacBio RS II",
+        "BGISEQ-500",
+        "DNBSEQ-T7",
+        "Illumina NextSeq 550",
+        "Illumina HiScanSQ",
+        "PacBio Sequel II",
+        "454 GS",
+        "AB 5500xl Genetic Analyzer",
+        "AB SOLiD 3 Plus System",
+        "AB 3730 Genetic Analyzer",
+        "AB SOLiD System 3.0",
+        "Illumina HiSeq X Five",
+        "Illumina iSeq 100",
+        "DNBSEQ-G50",
+        "Illumina HiSeq 2500",
+        "Illumina HiSeq 2000",
+        "Illumina Genome Analyzer",
+        "AB SOLiD 4 System",
+        "Oxford Nanopore PromethION",
+        "AB 5500 Genetic Analyzer",
+        "Ion Torrent S5 XL",
+        "Illumina Genome Analyzer IIx",
+        "Oxford Nanopore GridION",
+        "AB 310 Genetic Analyzer",
+        "AB 3500 Genetic Analyzer",
+        "Illumina Genome Analyzer II",
+        "AB SOLiD 4hq System",
+        "454 GS FLX Titanium",
+        "Illumina NextSeq",
+        "Illumina NovaSeq 6000",
+        "Oxford Nanopore MinION",
+        "Revio",
+        "454 GS FLX+",
+        "Illumina MiniSeq",
+        "PacBio Sequel",
+        "DNBSEQ-G400",
+        "AB 3130 Genetic Analyzer",
+        "AB SOLiD System 2.0",
+        "AB SOLiD System",
+        "Complete Genomics",
+        "Helicos HeliScope",
+        "Illumina MiSeq",
+        "454 GS 20",
+        "Illumina HiSeq 1000",
+        "Illumina HiSeq 3000",
+        "Illumina NextSeq 2500",
+        "AB 3130xL Genetic Analyzer"
+      ]
+    },
+    "NGS Library Preparation Days from Index": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Library Preparation Kit Vendor": {},
+    "NGS Library Source": {
+      "enum": [
+        "SYNTHETIC",
+        "TRANSCRIPTOMIC SINGLE CELL",
+        "VIRAL RNA",
+        "GENOMIC",
+        "TRANSCRIPTOMIC",
+        "METATRANSCRIPTOMIC",
+        "GENOMIC SINGLE CELL",
+        "OTHER",
+        "METAGENOMIC"
+      ]
+    },
+    "NGS Sequencing Library Construction Days from Index": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NGS Library Layout": {
+      "enum": [
+        "Paired-end",
+        "Single-end"
+      ]
+    },
+    "NGS Library Preparation Kit Name": {},
+    "NGS Read Indicator": {
+      "enum": [
+        "R1&R2",
+        "other",
+        "R1",
+        "R2",
+        "I1"
+      ]
+    },
+    "SequencingLevel1_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "NGS Library Strategy",
+    "NGS Sequencing Design Description",
+    "Component",
+    "NGS Sequencing Platform",
+    "Filename",
+    "NGS Library Source",
+    "NGS Sequencing Library Construction Days from Index",
+    "NGS Library Layout",
+    "NGS Read Indicator",
+    "SequencingLevel1_id"
+  ]
+}

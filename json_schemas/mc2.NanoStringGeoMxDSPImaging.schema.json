@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/MC2",
+  "title": "MC2",
+  "type": "object",
+  "properties": {
+    "GeoMx Imaging Channel Names": {},
+    "NanoStringGeoMxAuxiliaryFiles Key": {},
+    "Filename": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NanoStringGeoMxDSPLevel1 Key": {},
+    "NanoStringGeoMXROISegmentAnnotation Key": {},
+    "NanoStringGeoMxDSPImaging_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "NanoStringGeoMxDSPLevel2 Key": {}
+  },
+  "required": [
+    "Filename",
+    "Component",
+    "NanoStringGeoMxDSPImaging_id"
+  ]
+}

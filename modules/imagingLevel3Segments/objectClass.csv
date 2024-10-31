@@ -1,0 +1,7 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Nucleus,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+Cytoplasm,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+Plasma Membrane,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+Whole Cell,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+Spot,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+Other,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
