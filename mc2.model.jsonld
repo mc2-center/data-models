@@ -296,6 +296,9 @@
                 },
                 {
                     "@id": "bts:Zebrafish"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "Biospecimen Species",
@@ -3267,6 +3270,119 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Zebrafish",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NotApplicable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotApplicable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:TumorSubtype"
+                },
+                {
+                    "@id": "bts:BiospecimenComposition"
+                },
+                {
+                    "@id": "bts:FileLevel"
+                },
+                {
+                    "@id": "bts:DSPDatasetLevel"
+                },
+                {
+                    "@id": "bts:SurvivalOutcome"
+                },
+                {
+                    "@id": "bts:TumorGrade"
+                },
+                {
+                    "@id": "bts:ImagingAssayType"
+                },
+                {
+                    "@id": "bts:BiospecimenSpecies"
+                },
+                {
+                    "@id": "bts:DatasetSpecies"
+                },
+                {
+                    "@id": "bts:FileSpecies"
+                },
+                {
+                    "@id": "bts:DSPDatasetSpecies"
+                },
+                {
+                    "@id": "bts:InstitutionLocationState"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:KnownMetastasisSites"
+                },
+                {
+                    "@id": "bts:SiteofResectionorBiopsy"
+                },
+                {
+                    "@id": "bts:SiteofOrigin"
+                },
+                {
+                    "@id": "bts:DatasetTissue"
+                },
+                {
+                    "@id": "bts:FileTissue"
+                },
+                {
+                    "@id": "bts:PublicationTissue"
+                },
+                {
+                    "@id": "bts:DSPDatasetTissue"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:BiospecimenTumorType"
+                },
+                {
+                    "@id": "bts:DatasetTumorType"
+                },
+                {
+                    "@id": "bts:FileTumorType"
+                },
+                {
+                    "@id": "bts:PublicationTumorType"
+                },
+                {
+                    "@id": "bts:DSPDatasetTumorType"
+                },
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:FileAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Applicable",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -7043,107 +7159,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Non-Hodgkin Lymphoma",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NotApplicable",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NotApplicable",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:TumorSubtype"
-                },
-                {
-                    "@id": "bts:BiospecimenComposition"
-                },
-                {
-                    "@id": "bts:FileLevel"
-                },
-                {
-                    "@id": "bts:DSPDatasetLevel"
-                },
-                {
-                    "@id": "bts:SurvivalOutcome"
-                },
-                {
-                    "@id": "bts:TumorGrade"
-                },
-                {
-                    "@id": "bts:ImagingAssayType"
-                },
-                {
-                    "@id": "bts:InstitutionLocationState"
-                },
-                {
-                    "@id": "bts:ToolInputFormat"
-                },
-                {
-                    "@id": "bts:ToolOutputFormat"
-                },
-                {
-                    "@id": "bts:ToolInputData"
-                },
-                {
-                    "@id": "bts:ToolOutputData"
-                },
-                {
-                    "@id": "bts:KnownMetastasisSites"
-                },
-                {
-                    "@id": "bts:SiteofResectionorBiopsy"
-                },
-                {
-                    "@id": "bts:SiteofOrigin"
-                },
-                {
-                    "@id": "bts:DatasetTissue"
-                },
-                {
-                    "@id": "bts:FileTissue"
-                },
-                {
-                    "@id": "bts:PublicationTissue"
-                },
-                {
-                    "@id": "bts:DSPDatasetTissue"
-                },
-                {
-                    "@id": "bts:ToolOperation"
-                },
-                {
-                    "@id": "bts:BiospecimenTumorType"
-                },
-                {
-                    "@id": "bts:DatasetTumorType"
-                },
-                {
-                    "@id": "bts:FileTumorType"
-                },
-                {
-                    "@id": "bts:PublicationTumorType"
-                },
-                {
-                    "@id": "bts:DSPDatasetTumorType"
-                },
-                {
-                    "@id": "bts:DatasetAssay"
-                },
-                {
-                    "@id": "bts:FileAssay"
-                },
-                {
-                    "@id": "bts:PublicationAssay"
-                },
-                {
-                    "@id": "bts:DSPDatasetAssay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Not Applicable",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -14845,6 +14860,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:LightSheetMicroscopy"
                 }
             ],
             "sms:displayName": "Dataset Assay",
@@ -24625,6 +24643,32 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:LightSheetMicroscopy",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "LightSheetMicroscopy",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DatasetAssay"
+                },
+                {
+                    "@id": "bts:FileAssay"
+                },
+                {
+                    "@id": "bts:PublicationAssay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Light Sheet Microscopy",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:DatasetSpecies",
             "@type": "rdfs:Class",
             "rdfs:comment": "The species the data was collected on. Multiple values permitted, comma separated.",
@@ -24715,6 +24759,9 @@
                 },
                 {
                     "@id": "bts:Zebrafish"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "Dataset Species",
@@ -33882,6 +33929,9 @@
                 },
                 {
                     "@id": "bts:SystemsBiology"
+                },
+                {
+                    "@id": "bts:PatientAdvocacy"
                 }
             ],
             "sms:displayName": "Resource Topic",
@@ -37115,6 +37165,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Systems Biology",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PatientAdvocacy",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PatientAdvocacy",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ResourceTopic"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Patient Advocacy",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -49279,6 +49346,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:LightSheetMicroscopy"
                 }
             ],
             "sms:displayName": "File Assay",
@@ -49513,6 +49583,9 @@
                 },
                 {
                     "@id": "bts:Zebrafish"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "File Species",
@@ -64533,6 +64606,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:LightSheetMicroscopy"
                 }
             ],
             "sms:displayName": "Publication Assay",
@@ -68927,6 +69003,9 @@
                 },
                 {
                     "@id": "bts:Zebrafish"
+                },
+                {
+                    "@id": "bts:NotApplicable"
                 }
             ],
             "sms:displayName": "DSP Dataset Species",
@@ -71467,6 +71546,9 @@
                 },
                 {
                     "@id": "bts:MultiscaleLightSheetMicroscopy"
+                },
+                {
+                    "@id": "bts:LightSheetMicroscopy"
                 }
             ],
             "sms:displayName": "DSP Dataset Assay",
