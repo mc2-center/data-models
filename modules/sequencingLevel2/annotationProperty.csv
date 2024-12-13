@@ -8,4 +8,3 @@ NGS Deduplicated reads,Is the replacement of blocks of duplicate data with a Vir
 NGS Trimmed reads,Number of the reads remaining after trimming has been applied.,,,FALSE,,,,STE,num
 NGS MapQ30,Number of reads with Quality >= 30.,,,FALSE,,,,HTAN,num
 NGS Unique Bases,Count of unique basecalls present in the data.,,,FALSE,,,,CDS/Sequencing,num
-NGS Sequencing Coverage,Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length),,,FALSE,,,,CDS/Sequencing,num
