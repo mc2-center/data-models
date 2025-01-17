@@ -33,3 +33,7 @@ for i in $datatypes;
 do
 	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s || continue
 done
+
+#clean up leftover files
+mv *.schema.json json_schemas
+rm -r *.manifest.csv
