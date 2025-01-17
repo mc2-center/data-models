@@ -47,3 +47,4 @@ great_expectations/
 
 # MKDocs
 scripts/__pycache__
+mc2_all_attributes_map.csv

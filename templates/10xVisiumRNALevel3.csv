@@ -1,2 +1,2 @@
-Component,10xVisiumRNALevel3_id,Filename,File Format,Biospecimen Key,10xVisiumRNALevel2 Key,10xVisiumAuxiliaryFiles Key,File Alias,Visium Run ID,Visium File Type,Workflow Version,Workflow Link,Visium Capture Area,Visium Spots under tissue,Visium Mean Reads per Spatial Spot,Visium Median Number Genes per Spatial Spot,NGS Sequencing Coverage,Visium Proportion Reads Mapped,Visium Proportion Reads Mapped to Transcriptome,Visium Median UMI Counts per Spot
-10xVisiumRNALevel3,,,,,,,,,,,,,,,,,,,
+Component,10xVisiumRNALevel3_id,Filename,10xVisiumRNALevel2 Key,10xVisiumAuxiliaryFiles Key,Visium Run ID,Visium File Type,Workflow Version,Workflow Link,Visium Capture Area,Visium Spots under tissue,Visium Mean Reads per Spatial Spot,Visium Median Number Genes per Spatial Spot,NGS Sequencing Coverage,Visium Proportion Reads Mapped,Visium Proportion Reads Mapped to Transcriptome,Visium Median UMI Counts per Spot
+10xVisiumRNALevel3,,,,,,,,,,,,,,,,
