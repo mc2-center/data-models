@@ -1,3 +1,8 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Collection,The set of metadata entries associated with a Study. A collection defines which resources should be grouped for sharing and reuse.,,"Component, Collection_id, GrantView Key, Study Key, PublicationView Key, Biospecimen Key, Model Key, Individual Key, DatasetView Key, ToolView Key, EducationalResource Key",FALSE,,,,,
+Collection,The set of metadata entries associated with a Study. A collection defines which resources should be grouped for sharing and reuse.,,"Component, Collection_id, GrantView Key, Study Key, PublicationView Key, DatasetView Key, ToolView Key, EducationalResource Key, Biospecimen Table Id, Model Table Id, Individual Table Id, Imaging Channel Table Id, GeoMx ROI Table Id",FALSE,,,,,
 Collection_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
+Biospecimen Table Id,The Synapse Id corresponding to a Biospecimen metadata table associated with the Dataset(s),,,FALSE,,,,,"regex search ^syn\d{7,8}$"
+Model Table Id,The Synapse Id corresponding to a Model metadata table associated with the Dataset(s),,,FALSE,,,,,"regex search ^syn\d{7,8}$"
+Individual Table Id,The Synapse Id corresponding to a Individual metadata table associated with the Dataset(s),,,FALSE,,,,,"regex search ^syn\d{7,8}$"
+Imaging Channel Table Id,The Synapse Id corresponding to a Imaging Channel metadata table associated with the Dataset(s),,,FALSE,,,,,"regex search ^syn\d{7,8}$"
+GeoMx ROI Table Id,The Synapse Id corresponding to a GeoMx ROI/Segment Annotations metadata table associated with the Dataset(s),,,FALSE,,,,,"regex search ^syn\d{7,8}$"
