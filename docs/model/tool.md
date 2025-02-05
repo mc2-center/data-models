@@ -1,9 +1,14 @@
-This section outlines the data attributes for registering and documenting a software tool in a structured and standardized manner. Each attribute in the table below has a distinct purpose, helping improve the usability, traceability, and functionality of the tool in research or technical environments.
+A **Tool** entry documents software applications, utilities, or platforms designed to perform specific operations in research or technical workflows. These tools can include anything from data analysis programs to machine learning frameworks and bioinformatics utilities. Accurate documentation ensures that tools are easily discoverable, traceable, and appropriately integrated into research processes.
 
+### **Why You Should Contribute Tool Entries**
+Contributing tool entries supports collaboration, reproducibility, and innovation by helping researchers and teams discover and use essential software for data analysis, visualization, and processing. Accurate documentation ensures tools are accessible and impactful across projects.
 
-## Required Attributes
-Mandatory attributes such as 'Tool Name', 'Tool Description', 'Tool Entity Role', 'Tool Entity Type', 'Tool Release Date', and others are necessary for completeness and usability. These attributes provide essential data points for tool identification, description, and functionality.
-
+#### **Who Should Be Contributing Tool Entries?**
+1. **Developers** – Share tools to boost adoption and integration.
+2. **Researchers** – Document tools for replicability and collaboration.
+3. **Data Scientists** – Ensure tools critical to workflows are recorded.
+4. **Project Managers** – Maintain visibility of tools used across teams.
+5. **IT and Support Specialists** – Provide operational details and support resources.
 
 ## Download Template
 You can download the [ToolView CSV template](https://github.com/mc2-center/data-models/raw/main/templates/ToolView.csv) to streamline data entry.
@@ -30,6 +35,8 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Tool License                  | Apache-2.0                                                                                                              |
 
 ## Full Field Reference
+
+Below is the full field reference table with attributes and their descriptions.
 
 [⤓ Download template](https://github.com/mc2-center/data-models/raw/main/templates/ToolView.csv)
 

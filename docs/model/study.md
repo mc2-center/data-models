@@ -1,7 +1,21 @@
-This section provides detailed guidance for creating and maintaining a study entry in compliance with data model standards. It is essential to follow these specifications to ensure accuracy, consistency, and usability of study-related data.
+A **Study** entry documents key information about research projects, including methodologies, participants, and ethical considerations. Properly maintaining study records ensures that data is compliant with research standards, traceable, and usable across various scientific fields. This section explains how to create and maintain a valid study entry using the required fields, templates, and example data provided.
 
-## Required Fields 
-Certain attributes, such as 'Study Name', 'Study Description', 'Study Investigator', 'Study_id', 'Study Number of Participants', and 'Study De-identification Method Type', are marked as mandatory. Completing these fields ensures a comprehensive and standardized data entry.  
+
+### **Why You Should Contribute Study Entries**
+Contributing study entries ensures that critical research details such as methodology, investigators, and related datasets are documented and accessible. This fosters transparency, collaboration, and reproducibility in research. A well-maintained study entry also helps stakeholders understand the scope, purpose, and outcomes of research efforts, enabling better data integration and analysis across projects.
+
+#### **Who Should Be Contributing Study Entries?**
+1. **Principal Investigators (PIs)** – Provide clear documentation of your studies to enhance visibility and demonstrate research contributions for funding agencies and collaborators.
+
+2. **Research Coordinators and Project Leads** – Ensure proper record-keeping of studies under your supervision, supporting compliance, reporting, and resource allocation.
+
+3. **Data Managers** – Create study entries to link related datasets, publications, and tools, improving data provenance and facilitating cross-references within research ecosystems.
+
+4. **Consortium Participants** – Contribute study information to showcase collaborative research efforts and track joint achievements.
+
+5. **Funding Agencies and Grant Monitors** – Monitor study progress by ensuring that all funded research is accurately documented and accessible.
+
+6. **Ethics and Compliance Officers** – Maintain study entries to verify that all necessary de-identification methods, IRB protocols, and data use policies are in place.
 
 
 ## Download Template
@@ -29,6 +43,8 @@ The table below includes sample values to demonstrate proper attribute usage.
 
 
 ## Full Field Reference
+
+Below is the full field reference table with attributes and their descriptions.
 
 [⤓ Download template](https://github.com/mc2-center/data-models/raw/main/templates/Study.csv)
 
