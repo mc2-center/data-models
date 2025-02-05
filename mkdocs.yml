@@ -80,9 +80,6 @@ plugins:
 hooks:
   - scripts/hooks.py
 
-extra_css:
-  - assets/custom.css
-
 markdown_extensions:
   - admonition
   - pymdownx.details
