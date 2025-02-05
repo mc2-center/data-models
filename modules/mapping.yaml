@@ -113,6 +113,8 @@ file:
     src: file/processLevel.csv
   - name: File Format
     src: shared/dataset_file_format.csv
+  - name: File Anatomic Site
+    src: shared/anatomicSiteImageCDS.csv
 
 geomxLevel1:
   - name: GeoMx DSP Assay Type
