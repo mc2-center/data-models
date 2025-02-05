@@ -1,0 +1,2 @@
+Component,VisiumRNALevel3_id,Filename,File Format,Biospecimen Key,VisiumRNALevel2 Key,VisiumAux Key,File Alias,Run ID,Visium File Type,Workflow Version,Workflow Link,Capture Area,Spots under tissue,Mean Reads per Spatial Spot,Median Number Genes per Spatial Spot,Sequencing Saturation,Proportion Reads Mapped,Proportion Reads Mapped to Transcriptome,Median UMI Counts per Spot
+10xVisiumSpatialTranscriptomics-RNA-seqLevel3,,,,,,,,,,,,,,,,,,,

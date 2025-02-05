@@ -1,0 +1,10 @@
+a[title] {
+    position: relative;
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  a[title]:hover {
+    text-decoration: underline;
+  }
+  

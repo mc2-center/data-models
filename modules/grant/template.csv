@@ -1,0 +1,18 @@
+Attribute,Description,Required,Validation Rules,Examples
+Grant Name,Name of the grant,True,_None_,"""COVID-19 Small Business Relief Fund"""
+Grant Number,"Number of the grant (i.e. ""CA------"" format)",True,regex search ^CA\\d{6}$,DE-FG02-01ER45923
+Grant Abstract,Abstract for the grant,True,_None_,"""This grant aims to study the effects of climate change on the migration patterns of bird species across North America. Over the course of the five-year project, the research team will employ cutting-edge tracking techniques and extensive field work to gather data. The findings will be used to predict future shifts in bird migration, and inform wildlife conservation strategies. In addition, this study will contribute to the broader understanding of the impacts of global warming on biodiversity and ecosystems."""
+[Grant Type](../valid_values/grant.md#attribute-grant-type),Type of grant,True,_None_,R37
+Grant View,The denormalized manifest for grant submission.,False,_None_,Grant View: Public
+[Grant Theme Name](../valid_values/grant.md#attribute-grant-theme-name),Theme(s) associated with the grant. 1...*,True,list like,"Interaction, Viral/Bacterial Oncogenesis"
+[Grant Institution Name](../valid_values/grant.md#attribute-grant-institution-name),The full name of the institution(s) associated with the grant. (e.g. Harvard University). 1...*,True,list like,Brigham and Womens Hospital
+[Grant Institution Alias](../valid_values/grant.md#attribute-grant-institution-alias),The alias of the institution(s) associated with the grant (e.g. UCSD). 1...*,True,list like,Stanford
+Grant Investigator,Investigator(s) associated witht the grant. 1...*,True,list like,Dr. John Smith
+[Grant Consortium Name](../valid_values/grant.md#attribute-grant-consortium-name),Consortium(s) associated with the grant. 1...1,True,_None_,Grant Consortium Name: HTAN
+GrantView_id,A unique primary key that enables record updates using schematic.,True,unique,"""GV12345"""
+Grant Synapse Team,"The Synapse team associated with the grant, created by the MC2 Center",False,url,"Team: Project Management, Permission: Edit"
+Grant Synapse Project,"The Synapse project associated with the grant, created by the MC2 Center",False,url,"Synapse_ID: syn123456789, Grant_Name: NIH Brain Initiative Grant"
+Grant Start Date,The start date of the grant YYYY-MM-DD format,True,date,01/01/2022
+NIH RePORTER Link,Link to the search results for this grant number on the NIH Reporter website,True,url,https://projectreporter.nih.gov/project_info_description.cfm?aid=9813521&icde=49775456&ddparam=&ddvalue=&ddsub=&cr=1&csb=default&cs=ASC&pball=
+Duration of Funding,"Duration of the funding period, in years",False,int,3 years
+Embargo End Date,Date at which an embargo on related resources had lifted,False,date,2023-12-31

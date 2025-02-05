@@ -1,0 +1,2 @@
+Component,10xVisiumRNALevel1_id,Filename,Visium Run ID,File Format,Biospecimen Key,File Alias,NGS Read Indicator,Visium Spatial Read1,Visium Spatial Read2,Visium Spatial Library Construction Method,NGS Library Preparation Days from Index,NGS Sequencing Library Construction Days from Index,NGS End Bias,NGS Reverse Transcription Primer,NGS Sequencing Platform,Visium Capture Area,Protocol Link,Visium Slide Version,Visium Slide ID,Visium Image Re-orientation,Visium Permeabilization Time,NGS RIN,NGS DV200
+10xVisiumRNALevel1,,,,,,,,,,,,,,,,,,,,,,,

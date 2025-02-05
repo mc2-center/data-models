@@ -17,7 +17,8 @@ COLS_TO_RENDER = [
     'Attribute',
     'Description',
     'Required',
-    'Validation Rules'
+    'Validation Rules',
+    'Examples'
 ]
 
 def on_pre_build(config, **kwargs) -> None:
