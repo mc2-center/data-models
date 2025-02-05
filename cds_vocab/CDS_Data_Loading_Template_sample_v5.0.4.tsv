@@ -1,0 +1,2 @@
+type	 participant.study_participant_id	sample_id	sample_type	sample_description	sample_type_category	sample_tumor_status	sample_anatomic_site	sample_age_at_collection	derived_from_specimen	biosample_accession
+sample
