@@ -5,14 +5,14 @@ Pubmed Id,The PubMed identifier associated with the publication.,True,unique,265
 Pubmed Url,Pubmed URL for the publication,True,url,https://www.ncbi.nlm.nih.gov/pubmed/12345678
 Publication Title,Title of the publication,True,_None_,"""The New York Times"""
 Publication Year,Year of the publication,True,_None_,2018
-Publication Keywords,"Keywords associated with the publication. Multiple values permitted, comma separated.",False,list like,"""Climate Change, Global Warming, Greenhouse Gases, Environmental Impact, Sustainability"""
-Publication Authors,"Authors of the publication. Multiple values permitted, comma separated.",True,list like,"""J.K. Rowling, Stephen King, Jane Austen"""
-Publication Abstract,The abstract of the publication.,True,_None_,"""This article explores the developmental effects of cannabinoid exposure in zebrafish, one of the important vertebrate model systems in functional and comparative genomics. Drawing from a series of rigorous molecular analysis, the study establishes that prolonged exposure to cannabinoids impairs critical developmental processes at particular stages. The findings of this research not only contribute to our understanding of zebrafish neurobiology but also raise critical implications for human health, particularly in the context of increasing medicinal use of cannabinoids."""
-[Publication Assay](../valid_values/publication.md#attribute-publication-assay),"Assay(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Publication Assay: In Vivo Bioluminescence
+Publication Keywords,"Keywords associated with the publication. Multiple values permitted, comma separated.",False,list like,"""Cancer Pathways, Inflammation, Tumor Microenvironment"""
+Publication Authors,"Authors of the publication. Multiple values permitted, comma separated.",True,list like,"""Dr. Sarah Johnson, Dr. Michael Lee, Prof. Amanda Carter"""
+Publication Abstract,The abstract of the publication.,True,_None_,Nan
+[Publication Assay](../valid_values/publication.md#attribute-publication-assay),"Assay(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,In Vivo Bioluminescence
 [Publication Tumor Type](../valid_values/publication.md#attribute-publication-tumor-type),"Tumor type(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Acute Lymphoblastic Leukemia
-[Publication Tissue](../valid_values/publication.md#attribute-publication-tissue),"Tissue type(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Publication Tissue: Brain
-[Publication Accessibility](../valid_values/publication.md#attribute-publication-accessibility),Whether there are non-monetary restrictions on accessing an the publication.,True,_None_,Publication Accessibility: Open Access
+[Publication Tissue](../valid_values/publication.md#attribute-publication-tissue),"Tissue type(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Brain
+[Publication Accessibility](../valid_values/publication.md#attribute-publication-accessibility),Whether there are non-monetary restrictions on accessing an the publication.,True,_None_,Open Access
 Publication View,The denormalized manifest for publication submission.,False,_None_,Online
-[Publication Grant Number](../valid_values/publication.md#attribute-publication-grant-number),"Relevant grant number associated witht the publication's development. Multiple values permitted, comma separated.",True,list like,Publication Grant Number: CA202123
-Publication Dataset Alias,"A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the publication. Multiple values permitted, comma separated.",False,list like,"""Annual Crime Report 2020"""
-PublicationView_id,A unique primary key that enables record updates using schematic.,True,unique,1012
+[Publication Grant Number](../valid_values/publication.md#attribute-publication-grant-number),"Relevant grant number associated witht the publication's development. Multiple values permitted, comma separated.",True,list like,CA202123
+Publication Dataset Alias,"A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the publication. Multiple values permitted, comma separated.",False,list like,"GSE45678, DOI:10.1000/exampledataset"
+PublicationView_id,A unique primary key that enables record updates using schematic.,True,unique,PublicationView_45678
