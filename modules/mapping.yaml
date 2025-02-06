@@ -39,6 +39,10 @@
     src: shared/primaryDiseaseSite.csv
   - name: Biospecimen Primary Diagnosis
     src: shared/primaryDiagnosisCDS.csv
+  - name: Biospecimen Treatment Response
+    src: shared/treatmentOutcome.csv
+  - name: Biospecimen Type Category
+    src: biospecimen/biospecimenCategory.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -187,7 +191,7 @@ individual:
     src: individual/metStage.csv
   - name: Individual Recurrence Status
     src: individual/recurrence.csv
-  - name: Individual Treatment Outcome
+  - name: Individual Treatment Response
     src: shared/treatmentOutcome.csv
   - name: Individual Primary Diagnosis
     src: shared/primaryDiagnosisCDS.csv
@@ -213,6 +217,10 @@ model:
     src: shared/primaryDiagnosisCDS.csv
   - name: Model Site of Origin
     src: shared/tissueOrganOriginCDS.csv
+  - name: Model Treatment Response
+    src: shared/treatmentOutcome.csv
+  - name: Model Primary Site
+    src: shared/primaryDiseaseSite.csv
 
 person:
   - name: Person Consortium Name
@@ -283,7 +291,9 @@ study:
     src: study/deIdMethod.csv
   - name: Study License
     src: study/studyLicense.csv
-
+  - name: Study Index Date
+    src: study/indexDate.csv
+    
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
