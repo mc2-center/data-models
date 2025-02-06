@@ -1,6 +1,8 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Yes,,,,FALSE,,Individual Recurrence Status,,CDS Metadata v1.3.3,,,,,,
-No,,,,FALSE,,Individual Recurrence Status,,CDS Metadata v1.3.3,,,,,,
-Unknown,,,,FALSE,,Individual Recurrence Status,,CDS Metadata v1.3.3,,,,,,
-Not Reported,,,,FALSE,,Individual Recurrence Status,,CDS Metadata v1.3.3,,,,,,
-Not Allowed To Collect,,,,FALSE,,Individual Recurrence Status,,CDS Metadata v1.3.3,,,,,,
+Yes,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+Unknown,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+Not Reported,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+Not Applicable,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+Not Allowed to Collect,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+No,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
+Censored,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis,,,,,,
