@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Diagnosis Date ,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study,,,,,,
+Enrollment Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study,,,,,,
+Collection Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study,,,,,,
+Birth Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study,,,,,,
