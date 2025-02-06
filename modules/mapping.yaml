@@ -43,6 +43,8 @@
     src: shared/treatmentOutcome.csv
   - name: Biospecimen Type Category
     src: biospecimen/biospecimenCategory.csv
+  - name: Biospecimen Incidence Type
+    src: biospecimen/specimenIncidence.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -119,6 +121,8 @@ file:
     src: shared/dataset_file_format.csv
   - name: File Anatomic Site
     src: shared/anatomicSiteImageCDS.csv
+  - name: File Longitudinal Event Type
+    src: file/eventType.csv
 
 geomxLevel1:
   - name: GeoMx DSP Assay Type
