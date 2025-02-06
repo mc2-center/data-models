@@ -1,6 +1,6 @@
 A **Person** entry provides detailed information about individuals involved in research projects, including their affiliations, roles, and contributions. Accurate person records are essential for tracking collaborations, grant participation, working group involvement, and expertise within scientific initiatives.
 
-This section outlines how to create a valid person entry, ensuring that all necessary details are captured to support identification, categorization, and data integration within MC2 Center-supported projects.
+This section outlines how to create a valid person entry, ensuring that all necessary details are captured to support identification, categorization, and data integration within  MC<sup>2</sup> Center-supported projects.
 
 ### **Why You Should Contribute Person Entries**
 Contributing person entries enhances collaboration by providing clear visibility into expertise, roles, and project involvement within research teams. It helps connect researchers and contributors across projects, facilitates networking opportunities, and allows stakeholders to easily identify key personnel for collaboration or consultation. Maintaining up-to-date profiles also supports transparency and improves recognition of contributions to research initiatives.

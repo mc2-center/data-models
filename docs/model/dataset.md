@@ -1,4 +1,4 @@
-A **Dataset** refers to a structured collection of data that is organized for analysis, sharing, and research. Datasets can include various types of information such as demographic statistics, experimental results, or survey responses. In MC2 Center-supported projects, dataset entries help ensure data is properly categorized, easily retrievable, and compliant with sharing and storage requirements.
+A **Dataset** refers to a structured collection of data that is organized for analysis, sharing, and research. Datasets can include various types of information such as demographic statistics, experimental results, or survey responses. In  MC<sup>2</sup> Center-supported projects, dataset entries help ensure data is properly categorized, easily retrievable, and compliant with sharing and storage requirements.
 
 This model outlines key attributes that describe and manage datasets, including metadata about the data type, format, number of samples, and related grant information. By maintaining these attributes, datasets can be efficiently tracked and referenced within data repositories.
 

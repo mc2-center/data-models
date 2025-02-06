@@ -20,7 +20,7 @@ Tool Function Note,"Concise comment about this function, if not apparent from th
 Tool Homepage,"Homepage of the software, or some URL that best serves this purpose.",True,url,https://www.example.com/
 [Tool Input Data](../valid_values/tool.md#attribute-tool-input-data),"Type of primary input data. Multiple values permitted, comma separated.",True,list like,DNA Sequence
 [Tool Input Format](../valid_values/tool.md#attribute-tool-input-format),"Allowed format(s) of the input data. Multiple values permitted, comma separated.",True,list like,CSV
-[Tool Language](../valid_values/tool.md#attribute-tool-language),"Name of programming language the software source code was written in. Multiple values permitted, comma separated.",False,list like,Tool Language: Python
+[Tool Language](../valid_values/tool.md#attribute-tool-language),"Name of programming language the software source code was written in. Multiple values permitted, comma separated.",False,list like,Python
 [Tool License](../valid_values/tool.md#attribute-tool-license),"Software or data usage license. Multiple values permitted, comma separated.",False,list like,Apache-2.0
 Tool Link Note,Comment about the link.,False,_None_,"""This tool cannot be accessed without a valid institutional login."""
 [Tool Link Type](../valid_values/tool.md#attribute-tool-link-type),"The type of data, information or system that is obtained when the link is resolved. Multiple values permitted, comma separated.",False,list like,Social Media
@@ -28,7 +28,7 @@ Tool Link Url,A link of some relevance to the software (URL).,False,_None_,https
 Tool Name,Canonical tool name provided by the tool developer or service provider.,True,unique,Adobe Photoshop
 [Tool Operating System](../valid_values/tool.md#attribute-tool-operating-system),"The operating system supported by a downloadable software package. Multiple values permitted, comma separated.",False,list like,Linux
 [Tool Operation](../valid_values/tool.md#attribute-tool-operation),"The basic operation(s) performed by this software function. Multiple values permitted, comma separated.",True,list like,DNA Barcoding
-[Tool Output Data](../valid_values/tool.md#attribute-tool-output-data),"Type of primary output data. Multiple values permitted, comma separated.",True,list like,Gene ID (NCBI): NM_001282392.1
+[Tool Output Data](../valid_values/tool.md#attribute-tool-output-data),"Type of primary output data. Multiple values permitted, comma separated.",True,list like,"Accession, Alignment,Biological Model ID"
 [Tool Output Format](../valid_values/tool.md#attribute-tool-output-format),"Allowed format(s) of the output data. Multiple values permitted, comma separated.",True,list like,FASTQ
 Tool Package Dependencies,"Specifies the software libraries, frameworks, or other components that a tool or package relies on for its proper functioning. This attribute helps users understand the prerequisites needed for installation and usage of the tool within a given computational environment",False,list like,"Python 3.7 or above, Django 2.2 or above, Postgresql 12.0 or above."
 [Tool Package Dependencies Present](../valid_values/tool.md#attribute-tool-package-dependencies-present),Indicates whether the required package dependencies for tool are present.,True,_None_,True

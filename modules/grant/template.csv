@@ -3,15 +3,15 @@ Grant Name,Name of the grant,True,_None_,"""Research Grant for Cancer Genomics""
 Grant Number,"Number of the grant (i.e. ""CA------"" format)",True,regex search ^CA\\d{6}$,DE-FG02-01ER45923
 Grant Abstract,Abstract for the grant,True,_None_,"""Your grant abstract."""
 [Grant Type](../valid_values/grant.md#attribute-grant-type),Type of grant,True,_None_,R37
-Grant View,The denormalized manifest for grant submission.,False,_None_,Grant View: Public
+Grant View,The denormalized manifest for grant submission.,False,_None_,Public
 [Grant Theme Name](../valid_values/grant.md#attribute-grant-theme-name),Theme(s) associated with the grant. ,True,list like,"Interaction, Viral/Bacterial Oncogenesis"
 [Grant Institution Name](../valid_values/grant.md#attribute-grant-institution-name),The full name of the institution(s) associated with the grant. (e.g. Harvard University). ,True,list like,Brigham and Womens Hospital
 [Grant Institution Alias](../valid_values/grant.md#attribute-grant-institution-alias),The alias of the institution(s) associated with the grant (e.g. UCSD). ,True,list like,Stanford
 Grant Investigator,Investigator(s) associated witht the grant. ,True,list like,Dr. John Smith
-[Grant Consortium Name](../valid_values/grant.md#attribute-grant-consortium-name),Consortium(s) associated with the grant. ,True,_None_,Grant Consortium Name: HTAN
+[Grant Consortium Name](../valid_values/grant.md#attribute-grant-consortium-name),Consortium(s) associated with the grant. ,True,_None_,HTAN
 GrantView_id,A unique primary key that enables record updates using schematic.,True,unique,"""GV12345"""
-Grant Synapse Team,"The Synapse team associated with the grant, created by the MC2 Center",False,url,"Team: Project Management, Permission: Edit"
-Grant Synapse Project,"The Synapse project associated with the grant, created by the MC2 Center",False,url,"Synapse_ID: syn123456789, Grant_Name: NIH Brain Initiative Grant"
+Grant Synapse Team,"The Synapse team associated with the grant, created by the MC2 Center",False,url,
+Grant Synapse Project,"The Synapse project associated with the grant, created by the MC2 Center",False,url,
 Grant Start Date,The start date of the grant YYYY-MM-DD format,True,date,01/01/2022
 NIH RePORTER Link,Link to the search results for this grant number on the NIH Reporter website,True,url,https://projectreporter.nih.gov/project_info_description.cfm?aid=9813521&icde=49775456&ddparam=&ddvalue=&ddsub=&cr=1&csb=default&cs=ASC&pball=
 Duration of Funding,"Duration of the funding period, in years",False,int,3 years
