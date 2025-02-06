@@ -1,0 +1,7 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Primary,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
+Progression,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
+Recurrence,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
+Metastasis,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
+Remission,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
+No Disease,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis,,,,,,
