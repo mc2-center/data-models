@@ -12,7 +12,7 @@
   - name: Biospecimen Preservation Method
     src: biospecimen/preservation.csv
   - name: Biospecimen Site of Resection or Biopsy
-    src: shared/resectionBiopsySiteCDS.csv
+    src: shared/tissueOrganOriginCDS.csv
   - name: Biospecimen Site of Origin
     src: shared/tissueOrganOriginCDS.csv
   - name: Biospecimen Known Metastasis Sites
@@ -45,6 +45,8 @@
     src: biospecimen/biospecimenCategory.csv
   - name: Biospecimen Incidence Type
     src: biospecimen/specimenIncidence.csv
+  - name: Biospecimen Acquisition Method
+    src: biospecimen/acquisitionMethod.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -149,6 +151,10 @@ imagingLevel2:
     src: imagingLevel2/immersion.csv
   - name: Image Working Distance Unit
     src: imagingLevel2/unit.csv
+  - name: Image Pyramidal
+    src: shared/boolean.csv
+  - name: Image Pixels BigEndian
+    src: shared/boolean.csv
 
 imagingLevel3Segments:
   - name: Image Segmentation Data Type
