@@ -1,3 +1,3 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Enrollment,,,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image,,,,,,
-Baseline,,,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image,,,,,,
+Enrollment,,,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image-longitudinal_temporal_event_type,,,,,,
+Baseline,,,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image-longitudinal_temporal_event_type,,,,,,
