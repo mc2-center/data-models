@@ -1,7 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Female,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
-Male,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
-Intersex,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
-Unknown,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
-Unspecified,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
-Not Reported,,,,FALSE,,gender,,CDS v5.0.4/Participant,,,,,,
+Female,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+Male,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+Intersex,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+Unknown,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+Unspecified,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+Not Reported,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
