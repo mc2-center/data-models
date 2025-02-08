@@ -1,801 +1,801 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Head and Neck Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astroblastoma; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Hypercellular Lesion With Marked Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Posterior Fossa Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Precursor Cell Lymphoblastic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hypercellular Neuroepithelial Tumor With Some Features Of Glioma; Possibly High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligoastrocytoma; NOS; Glioneuronal And Neuronal Tumors; Papillary Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High-grade serous carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choriocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Carcinoma; NOS; Embryonal Tumor With Multilayered Rosettes; C19MC Altered; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Giant Cell Tumor Of Bone; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; Intestinal Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Not Specified In Data,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Choroid Plexus Tumors; Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ductal Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Renal Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With T(1;19)(Q23;P13.3); E2A-PBX1 (TCF3-PBX1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myelodysplastic Syndrome; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Fibromyxoid Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Benign Cystic Nephroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glial Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Telangiectatic Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Giant Cell Tumor Of Soft Parts; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Giant Cell Tumor Of Bone; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli-Leydig Cell Tumor; Poorly Differentiated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Megakaryoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Germinoma; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor With Adjacent Cortical Dysplasia; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Supratentorial Ependymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxoid Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Combined Small Cell-Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Spindle Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Group 3 Subtype (WHO Grade 4),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Monocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Retinoblastoma; Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Yolk Sac Tumor; NOS; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myofibroblastic Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sex Cord-Gonadal Stromal Tumor; Mixed Forms,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mesoblastic Nephroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor; Low-Grade Glioma; Polymorphous Low-Grade Neuroepithelial Tumor Of The Young,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; High-Grade Glioma; Infant-Type Hemispheric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucinous Adenocarcinoma; Endocervical Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dermoid Cyst,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma Combined With Other Types Of Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Precursor Cell Lymphoblastic Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Posterior Fossa Ependymoma; CNS WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pituitary Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sex Cord-Gonadal Stromal Tumor; Incompletely Differentiated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Follicular Derived Thyroid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Perineuroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Midline Glioma; H3K27M-Mutant; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Paratesticular Rhabdomyosarcoma With Diffuse Anaplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Colorectal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myelomonocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Midline Glioma; H3 K27-Altered,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-T-Lymphoblastic Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lymphangioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Intralymphatic Angioendothelioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Supratentorial Ependymoma; ZFTA Fusion-Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Unclassified Sarcoma With Round Cell Morphology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Classic (Biphasic) Histologic Type; Non-SHH/Non-WNT Molecular Group; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Soft Tissue Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Xanthogranuloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Bronchio-Alveolar Carcinoma; Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatocellular Carcinoma; Fibrolamellar,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreatic Neuroendocrine Tumor; Nonfunctioning,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxopapillary Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chondrosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Tumor Of Pineal Region,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With Mutated NPM1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelioid Hemangioendothelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chondroid Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Duct And Lobular Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mitotically Active Glial/ Glioneuronal Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-CPNET,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mycosis Fungoides; Langerhans Cell Histiocytosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-T-Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Meningioma; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ameloblastic Carcinosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningothelial Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelioid Cell Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Prostate Cancer,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Paraganglioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Small Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Cystosarcoma Phyllodes; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Seminoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Yolk Sac Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Intraductal Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; Endocervical Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neurofibroma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astroblastoma; Astroblastoma; MN1-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningothelial Meningioma; Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Unknown,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; CNS Sarcoma; Ewing Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Diffuse Hemispheric Glioma; H3 G34-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Endometrioid Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreas-Adenocarcinoma Ductal Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Giant Cell Glioblastoma; Glioblastoma; IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Angiomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenosquamous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Metastatic Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Sarcoma Of Kidney,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Duct Mixed With Other Types Of Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Carcinoma; NOS; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Low-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Cumulative Sun Damage Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Supratentorial Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ossifying Fibromyxoid Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Large B-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma With Neuroendocrine Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pineoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chronic Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Posterior Fossa Ependymoma; Group PFB,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Xanthoastrocytoma; NOS; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oxyphilic Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Pilocytic Astrocytoma; CNS WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Poorly Differentiated; Intermediate Mitotic-Karyorrhectic Index,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Classic Histologic Type; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Appearances Consistent With Alveolar Soft Part Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dedifferentiated Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; ATRT; NOS Or NEC; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tubular Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdomyosarcoma; Most Likely An Embryonal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleuropulmonary Blastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Basaloid Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; Anaplastic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Not Applicable,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Abdominal Fibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hamartoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Papilloma; NOS; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Burkitt Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lymphoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Bronchiolo-Alveolar Carcinoma; Non-Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Kidney Clear Cell Renal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma In Situ In Adenomatous Polyp,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Small Blue Cell Tumor. Favor Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Tumor With Multi-Layered Rosettes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chronic Eosinophilic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Basal Cell Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Olfactory Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Transitional Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Rhabdomyosarcoma; High-Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Angiocentric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Midline Glioma; H3 K27 Altered; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Osteoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Neoplasm With Rhabdomyoblastic Differentiation; High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxopapillary Ependymoma (CNS WHO Grade II),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Melanoma In Situ,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Secretory Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdomyosarcoma; Favor Alveolar Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; Metastatic NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Fibrosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Choroid Plexus Papilloma; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroma; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Soft Tissue Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma; NOS; Medulloblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Residual Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With T(V;11q23); MLL Rearranged,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Extra Adrenal Paraganglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucoepidermoid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Germ Cell Tumor; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Papilloma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B-Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hodgkin Lymphoma; Nodular Sclerosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Craniopharyngioma; NOS; Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-T-Cell/Histiocyte Rich Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; IDH-Mutant; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Erythroid Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Histologically Low Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Ganglioglioma; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Nodular Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Synovial Sarcoma; Biphasic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Metastatic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Thymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Ependymoma; Posterior Fossa Ependymoma; Group PFA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic/Nodular Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Phenotype Acute Leukemia; T/Myeloid; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Cholangiocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astroblastoma; MN1-Altered. Histologically High-Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli-Leydig Cell Tumor; Poorly Differentiated; With Heterologous Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; High-Grade Glioma; Infant-Type Hemispheric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Neoplasm With INI-1 Loss By Immunohistochemistry,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myeloid Leukemia With Myelodysplasia-Related Changes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Primary Cutaneous Follicle Center Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Carcinoma; WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Duct Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-T Lymphoblastic Leukemia/Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Germ Cell Tumor; Myelodysplastic Syndrome With Excess Blasts,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Cutaneous T-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; ATRT; NOS Or NEC; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningeal Melanocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Promyelocytic Leukemia; T(15;17)(Q22;Q11-12),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Alveolar Soft Part Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Epithelioid And Spindle Cell Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-CNS Embryonal Tumor; NOS; CNS Embryonal Tumor; NOS Or NEC; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Tumor; Spindle Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Endometrioid Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lung Squamous Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Urothelial Carcinoma; Non-Invasive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroblastoma; Undifferentiated Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Periosteal Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Phenotype Acute Leukemia; B/Myeloid; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Inflammatory Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma; NOS; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hypocellular Low Grade Lesion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma Multiforme,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreas-Undifferentiated Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Differentiating Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxoid Spindle Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Merkel Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Peripheral Nerve Sheath Tumor; NOS; CNS Sarcoma; CNS Sarcoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With Abnormal Marrow Eosinophils,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Well Differentiated Neuroendocrince Tumor; Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Synovial Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Thymic Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilomyxoid Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Carcinoma; Columnar Cell,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Plexiform Fibrohistiocytic Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma; Undifferentiated; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dermatofibrosarcoma Protuberans; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Glioma With Necrosis; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating ductular carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With Myelodysplasia-Related Changes; Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Duct And Mucinous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Intraductal Papillary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Serous Surface Papillary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Invasive Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Malignant Epithelioid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Pilocytic Astrocytoma With Increased Proliferation Indices,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Classic Morphology; CNS WHO Grade 4; NON-WNT/NON-SHH; Group 4 Subtype By Methylation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Composite Hodgkin And Non-Hodgkin Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid/Rhabdoid Tumor; ATRT; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid/Rhabdoid Tumor; ATRT-TYR,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorder,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioendothelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hypercellular Lesion With Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Subependymoma; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Germ Cell Tumor; Nonseminomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adrenal Cortical Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Olfactory Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Large Cell Medulloblastoma; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Nuclear Protein In Testis (NUT)-Associated Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelial-Myoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma; Keratinizing; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroma; Other; Schwannoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glomus Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Lymphoma; Non-Hodgkin; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Rhabdomyosarcoma; NOS; CNS Embryonal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tenosynovial Giant Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Histologically Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chordoma; NOS; Ganglioneuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Invasive Mammary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdoid Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Classic Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma In Villous Adenoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Undifferentiated Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Thyroid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Renal Cell Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hodgkin Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Histiocytosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Nodular Medulloblastoma; Medulloblastoma; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Solid Pseudopapillary Tumor Of Ovary,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytic Glioma; Histologically Low-Grade; Most Compatible With Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Inflammatory Myofibroblastic Tumor With An Associated Odontogenic Keratocyst,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myofibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Small Round Blue Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioma; Atypical; CNS WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Adamantinomatous Craniopharyngioma; Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lobular And Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic/Nodular Medulloblastoma (Histologically Defined); CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Peripheral Nerve Sheath Tumor With Rhabdomyoblastic Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Malignant; Diffuse Leptomeningeal Glioneuronal Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Brain Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gastrointestinal Stromal Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rasmussen Encephalitis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Diffuse Hemispheric Glioma; H3 G34-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma;NOS; Glioblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Peripheral Nerve Sheath Tumor (Mpnst),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Anaplastic Large Cell Lymphoma; T-Cell And Null-Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Teratoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Xanthoastrocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating duct and lobular carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sclerosing Stromal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Uncertain Whether Benign Or Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; NOS; Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lobular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Schwannoma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-CNS Embryonal Tumor With Rhabdoid Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glial Neoplasm; Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreas-Adenosquamous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mesenchymal Lesion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Serous Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sex Cord-Gonadal Stromal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenoid Cystic Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; T(8;21)(Q22;Q22),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindled And Epithelioid Tumor With Features Of Intracranial Mesenchymal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Cavernoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Tumor; Small Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Germ Cell Tumor; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Neoplasm. Features Suggestive Of Pilocytic Astrocytoma.,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Serous Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Metastatic Secondary Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Yolk Sac Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Morphologically Consistent With Pilocytic Astrocytoma; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroendocrine Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Germ Cell Tumor; Acute Megakaryoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Juvenile Myelomonocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With T(9;11)(P22;Q23); MLLT3-MLL,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; High-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Glioneuronal Tumor; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Adenocarcinoma And Squamous Cell Carcinoma; Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Subcutaneous Panniculitis-Like T-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myofibroblastic Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Nephroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Melanoma; NOS; Meningeal Melanocytic Neoplasms (Includes Melanoma); Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma; Metastatic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Follicular Carcinoma; Minimally Invasive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Angiomyofibroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Classic Medulloblastoma; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid/Rhabdoid Tumor; ATRT-MYC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningothelial Meningioma; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Poorly Differentiated Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chronic Myelogenous Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Supratentorial Ependymoma CNS WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Leydig Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pigmented Dermatofibrosarcoma Protuberans,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxofibrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Precursor T-Cell Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adrenal Cortical Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; ATRT-SHH; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia (Megakaryoblastic) With T(1;22)(P13;Q13); RBM15-MKL1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; CNS Neuroblastoma; FOXR2-Activated; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating duct and mucinous carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucinous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Retinoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Anaplastic Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Germ Cell Tumor; Nonseminomatous; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Monoblastic And Monocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioblastoma; CNS WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Alveolar Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medullary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adult Granulosa Cell Tumor Of Testis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Craniopharyngioma; Adamantinomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Malignant Peripheral Nerve Sheath Tumor With Heterologous Rhabdomyoblastic Differentiation (Malignant Triton Tumor),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindle Cell Rhabdomyosaroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Midline Glioma; H3 K27M-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelioid Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Multiple Myeloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Triple-Negative Breast Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatocellular Carcinoma; NOS; Nephroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroblastoma; Schwannian Stroma Poor; Poorly Differentiated; Low MKI; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ossifying Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Amelanotic Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Liposarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lactotroph Adenoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Transient Abnormal Myelopoiesis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Posterior Fossa Ependymoma; WHO GRADE 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glial Neoplasm; Favor Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gastrointestinal Stromal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Serous Cystadenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Lesion With Atypical/High Grade Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spinal Ependymoma; WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ductal Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Type Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; SHH-Activated And TP53-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Precursor B-Cell Acute Lymphoblastic Leukemia With Hyperdiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mesenchymal Chondrosarcoma; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Cribriform Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxopapillary Ependymoma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; Anaplastic; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; IDH-Mutant; WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioangiomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; NOS; Myeloproliferative Neoplasm; Unclassifiable,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Endometrioid carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma In Situ; Non-Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Carcinoma; Follicular Variant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Metaplastic Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Carcinoma; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Poorly Differentiated Sertoli-Leydig Cell Tumor With Heterologous Rhabdomyosarcomatous Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sex Cord Stromal Tumor NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Stroma Poor; Poorly Differentiated Neuroblastoma With Low MKI; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Residual Low Grade Neuroendocrine Tumor (Typical Carcinoid),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Melanotic Neuroectodermal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Papillary Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Follicular Adenocarcinoma; Well Differentiated; Neuroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myelodysplastic Syndrome With Multilineage Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Primary Mediastinal (Thymic) Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mast Cell Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pheochromocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Serous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lymphoid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Smooth Muscle Tumor Of Uncertain Malignant Potential,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Combined Small Cell-Large Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli Leydig Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Anaplastic Large Cell Lymphoma; ALK Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdoid Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Merkel Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gangliocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma; NOS; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucinous Non-Cystic Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mucinous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Carcinosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Subependymal Giant Cell Astrocytoma; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma; Metastatic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myeloid Leukemia Associated With Down Syndrome,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningeal Melanomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroepithelial Tumor With Glioneuronal-Like Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma; Large Cell; Nonkeratinizing; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningiomatosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; NOS; Low-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Posterior Fossa Ependymoma; Group PFA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-CNS Embryonal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Anaplastic Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adamantinomatous Craniopharyngioma (CNS WHO Grade 1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Classic Variant; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioneuronal Tumor With Focal Increased Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High Grade Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma; Small Cell; Nonkeratinizing,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mixed Phenotype Acute Leukemia With T(V;11q23); MLL Rearranged,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; Minimal Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Fibrillary Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chordoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Undifferentiated Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myofibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Xanthoastrocytoma; NOS; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Invasive Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Rhabdomyosarcoma With Anaplastic Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High-Grade Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia Without Maturation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma With Mixed Subtypes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With Hyperdiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangiosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Paraganglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; Nodular/Desmoplastic With Anaplastic/Large Cell Features; Non-WNT/Non-SHH; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Signet Ring Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindle Cell Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lobular Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Undiagnosed Spindle Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; WHO Grade 1; KIAA1549-BRAF Fusion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatosplenic T-Cell Lymphoma; Precursor Cell Lymphoblastic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mesenchymal Chondrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Anaplastic Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Osteosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligoastrocytoma; NOS; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lung Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lymphoproliferative Disorder; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Lymphoid Infiltrate,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Genital Rhabdomyoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chondroblastic Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroepithelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Epithelioid And Myxoid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pancreatoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Nephroblastoma (Wilms Tumor),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ewing Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Smooth Muscle Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelial Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Favor Teratoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Neoplasm Of Prostate,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Non-Clear Cell Renal Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioma; NOS; Embryonal Tumor With Multilayered Rosettes; NOS; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Melanotic Schwannoma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; WNT-Activated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinosarcoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Plasmacytoma; Extramedullary,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infantile Fibrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-CNS Primative Neuroectodermal Tumor (PNET),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating duct carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Precursor B-Cell Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Squamous Cell Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; T(16;16)(P 13;Q 11),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Transitional Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low-Grade Glioneuronal; Neuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Combined Small Cell-Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatocellular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindle Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma; Diffuse Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lentiginous Melanocytic Nevus,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Embryonal Tumor With Multilayered Rosettes; C19MC Altered; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Solitary Fibrous Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Granulosa Cell Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroma; Maturing Type; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Invasive Lobular Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Bland Myofibroblastic Proliferation With Associated Florid Lymphoplasmacytic Inflammation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hepatoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Glial/ Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid Rhabdoid Tumor; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligoastrocytoma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Diffuse Glioma; Favor High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Reactive Connective Tissue,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; SHH-Activated And TP53-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Melanocytic Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chronic Myelogenous Leukemia; BCR/ABL Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Vascular Lesion; Consistent With Hemangioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Small Cell Neuroendocrine Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medullary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Anaplastic Astrocytoma; IDH-Wildtype; Glioblastoma; IDH Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdomyosarcoma; Embryonal Subtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma By Morphology; NON-WNT By Immunohistochemistry,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Astrocytoma; IDH-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysembryoplastic Neuroepithelial Tumor; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Angiomatoid Fibrous Histiocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Micropapillary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating Lobular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gastrointestinal Stromal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Nodular Medulloblastoma; Medulloblastoma; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli-Leydig Cell Tumor; Intermediate Differentiation; With Heterologous Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; Inv(16)(P13;Q22),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Subependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gliomatosis Cerebri,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Infiltrating lobular carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Schwannoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Blue Nevus; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; Pancreatobiliary Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Choroid Plexus Tumors; Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroblastoma; Nodular Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Granulosa Cell Tumor; Juvenile,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Juvenile Granulosa Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chronic Myeloid Leukemia; BCR-ABL1-Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Head & Neck Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; NOS; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Intraductal Papillary Mucinous Neoplasm With An Associated Invasive Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adrenal Cortical Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma; Pancreatobiliary Type; Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Lipoblastomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Neurocytoma; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Control,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-HHV8 Positive Diffuse Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; Low-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Large Cell Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With T(12;21)(P13;Q22); TEL-AML1 (ETV6-RUNX1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Osteosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; Diffuse Leptomeningeal Glioneuronal Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pilocytic Astrocytoma; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Dermatofibrosarcoma Protuberans; Fibrosarcomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neuroendocrine Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Monoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Low-Grade Glioma; Polymorphous Low-Grade Neuroepithelial Tumor Of The Young,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloepithelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; NOS; High-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Not Reported,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Aggressive Fibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With Myelodysplasia-Related Changes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Langerhans Cell Histiocytosis; Disseminated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligoastrocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Undifferentiated Nasopharyngeal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Small Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Chordoma; NOS; Chordoma (Including Poorly Differentiated Chordoma); Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Mesothelioma; Biphasic; Malignant; B Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Neurocytoma; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Undifferentiated Small Round Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Rhabdomyoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioblastoma; IDH Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Therapy Related Myeloid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Tumor; Spindle Cell Type; CNS Sarcoma; CNS Sarcoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Leydig Cell Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myelodysplastic Syndrome With Single Lineage Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Germinoma; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Synovial Sarcoma; Spindle Cell,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindle Cell Melanoma; Type B,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Familial Adenomatous Polyposis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Giant Cell Glioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Teratocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acral Lentiginous Melanoma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Poorly Differentiated Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Solid Pseudopapillary Neoplasm Of Pancreas,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Nasopharyngeal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma In Adenomatous Polyposis Coli,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Leiomyoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Rhabdomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Papilloma; NOS; Other CNS Embryonal Tumors; Pineoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Marginal Zone B-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Tumor Cells; Malignant; Other; Pineal Parenchymal Tumor Of Intermediate Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pinealoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Atypical Teratoid/Rhabdoid Tumor; INI1/SMARCB1-Altered; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Metastatic Signet Ring Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Infantile Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Sarcoma With DICER1 Mutation; Favor Primary Intracranial Sarcoma; DICER1 Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With Hypodiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Colon Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Proliferative Dermal Lesion In Congenital Nevus,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; WNT-Activated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Arteriovenous Malformation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acinar Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spinal Ependymoma; Histologically Low Grade (CNS WHO Grade 2),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioblastoma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-High-Grade Serous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; Group 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Schwannian Stroma Poor Peripheral Neuroblastic Tumor; Consistent With Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Acute Myeloid Leukemia With Mutated CEBPA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Parosteal Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Epithelioid Mesothelioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Meningioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Uncertain Whether Benign Or Malignant; ATRT-SHH; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choriocarcinoma Combined With Other Germ Cell Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Brain Tumor; Low Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioglioma; NOS; Diffuse Astrocytoma; MYB- Or MYBL1-Altered; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Tumor With Multilayered Rosettes C19MC-Altered,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; Uncertain Whether Primary Or Metastatic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Small Round Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Embryonal Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Langerhans Cell Histiocytosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glial Neoplasm Showing High-Grade Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myxopapillary Ependymoma; Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Medulloblastoma; NOS; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; CNS Embryonal Tumor; NOS Or NEC; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-B Lymphoblastic Leukemia/Lymphoma With T(9;22)(Q34;Q11.2); BCR-ABL1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Hemangioendothelioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Choroid Plexus Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Craniopharyngioma; Adamantinomatous; Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pinealoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Large Cell Medulloblastoma; Embryonal Tumor With Multilayered Rosettes; NOS; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Spindle Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Gliosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Central Primitive Neuroectodermal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; IDH-Mutant; CNS WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Astrocytoma; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Pleomorphic Rhabdomyosarcoma; Adult Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Myeloid Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Other; Other Low-Grade B-Cell Lymphomas Of The CNS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ganglioneuroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Neoplasm; Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Clear Cell Renal Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Ependymoma; NOS; Atypical Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Oligodendroglioma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Malignant Peripheral Nerve Sheath Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Glioma; Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Sertoli-Leydig Cell Tumor Of Intermediate Differentiation; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Desmoplastic Nodular Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Papillary Microcarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Craniopharyngioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Low Grade Glial Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Leiomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
-Follicular Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis,,,,,,Added by OB 2/6/25
+Head and Neck Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astroblastoma; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Hypercellular Lesion With Marked Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Posterior Fossa Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Precursor Cell Lymphoblastic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hypercellular Neuroepithelial Tumor With Some Features Of Glioma; Possibly High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligoastrocytoma; NOS; Glioneuronal And Neuronal Tumors; Papillary Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High-grade serous carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choriocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Carcinoma; NOS; Embryonal Tumor With Multilayered Rosettes; C19MC Altered; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Giant Cell Tumor Of Bone; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; Intestinal Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Not Specified In Data,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Choroid Plexus Tumors; Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ductal Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Renal Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With T(1;19)(Q23;P13.3); E2A-PBX1 (TCF3-PBX1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myelodysplastic Syndrome; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Fibromyxoid Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Benign Cystic Nephroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glial Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Telangiectatic Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Giant Cell Tumor Of Soft Parts; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Giant Cell Tumor Of Bone; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli-Leydig Cell Tumor; Poorly Differentiated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Megakaryoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Germinoma; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor With Adjacent Cortical Dysplasia; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Supratentorial Ependymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxoid Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Combined Small Cell-Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Spindle Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Group 3 Subtype (WHO Grade 4),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Monocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Retinoblastoma; Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Yolk Sac Tumor; NOS; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myofibroblastic Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sex Cord-Gonadal Stromal Tumor; Mixed Forms,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mesoblastic Nephroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor; Low-Grade Glioma; Polymorphous Low-Grade Neuroepithelial Tumor Of The Young,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; High-Grade Glioma; Infant-Type Hemispheric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucinous Adenocarcinoma; Endocervical Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dermoid Cyst,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma Combined With Other Types Of Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Precursor Cell Lymphoblastic Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Posterior Fossa Ependymoma; CNS WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pituitary Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sex Cord-Gonadal Stromal Tumor; Incompletely Differentiated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Follicular Derived Thyroid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Perineuroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Midline Glioma; H3K27M-Mutant; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Paratesticular Rhabdomyosarcoma With Diffuse Anaplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Colorectal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myelomonocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Midline Glioma; H3 K27-Altered,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+T-Lymphoblastic Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lymphangioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Intralymphatic Angioendothelioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Supratentorial Ependymoma; ZFTA Fusion-Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Unclassified Sarcoma With Round Cell Morphology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Classic (Biphasic) Histologic Type; Non-SHH/Non-WNT Molecular Group; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Soft Tissue Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Xanthogranuloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Bronchio-Alveolar Carcinoma; Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatocellular Carcinoma; Fibrolamellar,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreatic Neuroendocrine Tumor; Nonfunctioning,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxopapillary Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chondrosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Tumor Of Pineal Region,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With Mutated NPM1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelioid Hemangioendothelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chondroid Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Duct And Lobular Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mitotically Active Glial/ Glioneuronal Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+CPNET,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mycosis Fungoides; Langerhans Cell Histiocytosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+T-Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Meningioma; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ameloblastic Carcinosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningothelial Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelioid Cell Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Prostate Cancer,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Paraganglioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Small Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Cystosarcoma Phyllodes; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Seminoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Yolk Sac Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Intraductal Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; Endocervical Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neurofibroma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astroblastoma; Astroblastoma; MN1-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningothelial Meningioma; Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Unknown,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; CNS Sarcoma; Ewing Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Diffuse Hemispheric Glioma; H3 G34-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Endometrioid Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreas-Adenocarcinoma Ductal Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Giant Cell Glioblastoma; Glioblastoma; IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Angiomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenosquamous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Metastatic Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Sarcoma Of Kidney,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Duct Mixed With Other Types Of Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Carcinoma; NOS; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Low-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Cumulative Sun Damage Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Supratentorial Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ossifying Fibromyxoid Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Large B-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma With Neuroendocrine Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pineoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chronic Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Posterior Fossa Ependymoma; Group PFB,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Xanthoastrocytoma; NOS; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oxyphilic Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Pilocytic Astrocytoma; CNS WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Poorly Differentiated; Intermediate Mitotic-Karyorrhectic Index,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Classic Histologic Type; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Appearances Consistent With Alveolar Soft Part Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dedifferentiated Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; ATRT; NOS Or NEC; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tubular Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdomyosarcoma; Most Likely An Embryonal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleuropulmonary Blastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Basaloid Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; Anaplastic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Not Applicable,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Abdominal Fibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hamartoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Papilloma; NOS; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Burkitt Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lymphoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Bronchiolo-Alveolar Carcinoma; Non-Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Kidney Clear Cell Renal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma In Situ In Adenomatous Polyp,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Small Blue Cell Tumor. Favor Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Tumor With Multi-Layered Rosettes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chronic Eosinophilic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Basal Cell Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Olfactory Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Transitional Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Rhabdomyosarcoma; High-Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Angiocentric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Midline Glioma; H3 K27 Altered; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Osteoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Neoplasm With Rhabdomyoblastic Differentiation; High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxopapillary Ependymoma (CNS WHO Grade II),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Melanoma In Situ,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Secretory Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdomyosarcoma; Favor Alveolar Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; Metastatic NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Fibrosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Choroid Plexus Papilloma; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroma; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Soft Tissue Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma; NOS; Medulloblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Residual Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With T(V;11q23); MLL Rearranged,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Extra Adrenal Paraganglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucoepidermoid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Germ Cell Tumor; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Papilloma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B-Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hodgkin Lymphoma; Nodular Sclerosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Craniopharyngioma; NOS; Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+T-Cell/Histiocyte Rich Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; IDH-Mutant; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Erythroid Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Histologically Low Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Ganglioglioma; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Nodular Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Synovial Sarcoma; Biphasic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Metastatic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Thymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Ependymoma; Posterior Fossa Ependymoma; Group PFA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic/Nodular Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Phenotype Acute Leukemia; T/Myeloid; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Cholangiocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astroblastoma; MN1-Altered. Histologically High-Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli-Leydig Cell Tumor; Poorly Differentiated; With Heterologous Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; High-Grade Glioma; Infant-Type Hemispheric Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Neoplasm With INI-1 Loss By Immunohistochemistry,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myeloid Leukemia With Myelodysplasia-Related Changes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Primary Cutaneous Follicle Center Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Carcinoma; WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Duct Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+T Lymphoblastic Leukemia/Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Germ Cell Tumor; Myelodysplastic Syndrome With Excess Blasts,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Cutaneous T-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; ATRT; NOS Or NEC; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningeal Melanocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Promyelocytic Leukemia; T(15;17)(Q22;Q11-12),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Alveolar Soft Part Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Epithelioid And Spindle Cell Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+CNS Embryonal Tumor; NOS; CNS Embryonal Tumor; NOS Or NEC; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Tumor; Spindle Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Endometrioid Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lung Squamous Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Urothelial Carcinoma; Non-Invasive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroblastoma; Undifferentiated Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Periosteal Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Phenotype Acute Leukemia; B/Myeloid; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Inflammatory Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma; NOS; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hypocellular Low Grade Lesion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma Multiforme,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreas-Undifferentiated Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Differentiating Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxoid Spindle Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Merkel Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Peripheral Nerve Sheath Tumor; NOS; CNS Sarcoma; CNS Sarcoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With Abnormal Marrow Eosinophils,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Well Differentiated Neuroendocrince Tumor; Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Synovial Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Thymic Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilomyxoid Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Carcinoma; Columnar Cell,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Plexiform Fibrohistiocytic Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma; Undifferentiated; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dermatofibrosarcoma Protuberans; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Glioma With Necrosis; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating ductular carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With Myelodysplasia-Related Changes; Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Duct And Mucinous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Intraductal Papillary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Serous Surface Papillary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Invasive Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Malignant Epithelioid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Pilocytic Astrocytoma With Increased Proliferation Indices,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Classic Morphology; CNS WHO Grade 4; NON-WNT/NON-SHH; Group 4 Subtype By Methylation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Composite Hodgkin And Non-Hodgkin Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid/Rhabdoid Tumor; ATRT; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid/Rhabdoid Tumor; ATRT-TYR,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorder,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioendothelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hypercellular Lesion With Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Subependymoma; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Germ Cell Tumor; Nonseminomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adrenal Cortical Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Olfactory Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Large Cell Medulloblastoma; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Nuclear Protein In Testis (NUT)-Associated Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelial-Myoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma; Keratinizing; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroma; Other; Schwannoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glomus Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Lymphoma; Non-Hodgkin; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Rhabdomyosarcoma; NOS; CNS Embryonal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tenosynovial Giant Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Histologically Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chordoma; NOS; Ganglioneuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Invasive Mammary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdoid Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Classic Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma In Villous Adenoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Undifferentiated Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Thyroid Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Renal Cell Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hodgkin Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Histiocytosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Nodular Medulloblastoma; Medulloblastoma; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Solid Pseudopapillary Tumor Of Ovary,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytic Glioma; Histologically Low-Grade; Most Compatible With Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Inflammatory Myofibroblastic Tumor With An Associated Odontogenic Keratocyst,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myofibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Small Round Blue Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioma; Atypical; CNS WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Adamantinomatous Craniopharyngioma; Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lobular And Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic/Nodular Medulloblastoma (Histologically Defined); CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Peripheral Nerve Sheath Tumor With Rhabdomyoblastic Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Malignant; Diffuse Leptomeningeal Glioneuronal Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Brain Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gastrointestinal Stromal Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rasmussen Encephalitis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Diffuse Hemispheric Glioma; H3 G34-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma;NOS; Glioblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Peripheral Nerve Sheath Tumor (Mpnst),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Anaplastic Large Cell Lymphoma; T-Cell And Null-Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Teratoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Xanthoastrocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating duct and lobular carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sclerosing Stromal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Uncertain Whether Benign Or Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; NOS; Juvenile Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lobular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Schwannoma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+CNS Embryonal Tumor With Rhabdoid Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glial Neoplasm; Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreas-Adenosquamous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mesenchymal Lesion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Serous Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sex Cord-Gonadal Stromal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenoid Cystic Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; T(8;21)(Q22;Q22),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindled And Epithelioid Tumor With Features Of Intracranial Mesenchymal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Cavernoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Tumor; Small Cell Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Germ Cell Tumor; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Neoplasm. Features Suggestive Of Pilocytic Astrocytoma.,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Serous Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Metastatic Secondary Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Yolk Sac Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Morphologically Consistent With Pilocytic Astrocytoma; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroendocrine Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Germ Cell Tumor; Acute Megakaryoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Juvenile Myelomonocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With T(9;11)(P22;Q23); MLLT3-MLL,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; High-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Glioneuronal Tumor; WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Adenocarcinoma And Squamous Cell Carcinoma; Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Subcutaneous Panniculitis-Like T-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myofibroblastic Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Nephroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Melanoma; NOS; Meningeal Melanocytic Neoplasms (Includes Melanoma); Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma; Metastatic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Follicular Carcinoma; Minimally Invasive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Angiomyofibroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Classic Medulloblastoma; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid/Rhabdoid Tumor; ATRT-MYC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningothelial Meningioma; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Poorly Differentiated Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chronic Myelogenous Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Supratentorial Ependymoma CNS WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Leydig Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pigmented Dermatofibrosarcoma Protuberans,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxofibrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Precursor T-Cell Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neurocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adrenal Cortical Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; ATRT-SHH; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia (Megakaryoblastic) With T(1;22)(P13;Q13); RBM15-MKL1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; CNS Neuroblastoma; FOXR2-Activated; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating duct and mucinous carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucinous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Retinoblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Anaplastic Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Germ Cell Tumor; Nonseminomatous; CNS Germ Cell Tumors; CNS Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Monoblastic And Monocytic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioblastoma; CNS WHO Grade 1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Alveolar Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medullary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adult Granulosa Cell Tumor Of Testis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Craniopharyngioma; Adamantinomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Malignant Peripheral Nerve Sheath Tumor With Heterologous Rhabdomyoblastic Differentiation (Malignant Triton Tumor),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindle Cell Rhabdomyosaroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Midline Glioma; H3 K27M-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelioid Sarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myoepithelial Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Multiple Myeloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Triple-Negative Breast Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatocellular Carcinoma; NOS; Nephroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroblastoma; Schwannian Stroma Poor; Poorly Differentiated; Low MKI; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli Cell Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ossifying Fibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Liposarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Amelanotic Melanoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Liposarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Non-Germinomatous Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lactotroph Adenoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Transient Abnormal Myelopoiesis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Posterior Fossa Ependymoma; WHO GRADE 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glial Neoplasm; Favor Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gastrointestinal Stromal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Serous Cystadenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Lesion With Atypical/High Grade Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spinal Ependymoma; WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ductal Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Type Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; SHH-Activated And TP53-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Precursor B-Cell Acute Lymphoblastic Leukemia With Hyperdiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mesenchymal Chondrosarcoma; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Cribriform Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxopapillary Ependymoma; Anaplastic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; Anaplastic; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; IDH-Mutant; WHO Grade 2,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioangiomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; NOS; Myeloproliferative Neoplasm; Unclassifiable,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Endometrioid carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma In Situ; Non-Mucinous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Carcinoma; Follicular Variant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Metaplastic Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Carcinoma; Choroid Plexus Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Poorly Differentiated Sertoli-Leydig Cell Tumor With Heterologous Rhabdomyosarcomatous Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sex Cord Stromal Tumor NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Stroma Poor; Poorly Differentiated Neuroblastoma With Low MKI; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Residual Low Grade Neuroendocrine Tumor (Typical Carcinoid),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Melanotic Neuroectodermal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Papillary Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Follicular Adenocarcinoma; Well Differentiated; Neuroblastoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myelodysplastic Syndrome With Multilineage Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Primary Mediastinal (Thymic) Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mast Cell Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pheochromocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Serous Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Germ Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lymphoid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Smooth Muscle Tumor Of Uncertain Malignant Potential,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Combined Small Cell-Large Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli Leydig Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Anaplastic Large Cell Lymphoma; ALK Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdoid Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Merkel Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Meningioma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gangliocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma; NOS; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucinous Non-Cystic Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mucinous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Carcinosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Subependymal Giant Cell Astrocytoma; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma; Metastatic; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myeloid Leukemia Associated With Down Syndrome,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningeal Melanomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroepithelial Tumor With Glioneuronal-Like Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma; Large Cell; Nonkeratinizing; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningiomatosis; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; NOS; Low-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Posterior Fossa Ependymoma; Group PFA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+CNS Embryonal Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Anaplastic Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adamantinomatous Craniopharyngioma (CNS WHO Grade 1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Classic Variant; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioneuronal Tumor With Focal Increased Atypia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High Grade Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma; Small Cell; Nonkeratinizing,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mixed Phenotype Acute Leukemia With T(V;11q23); MLL Rearranged,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; Minimal Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Fibrillary Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chordoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Undifferentiated Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myofibroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Xanthoastrocytoma; NOS; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Invasive Ductal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Rhabdomyosarcoma With Anaplastic Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High-Grade Neuroepithelial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia Without Maturation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma With Mixed Subtypes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With Hyperdiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangiosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Paraganglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; Nodular/Desmoplastic With Anaplastic/Large Cell Features; Non-WNT/Non-SHH; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Signet Ring Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindle Cell Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lobular Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Undiagnosed Spindle Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; WHO Grade 1; KIAA1549-BRAF Fusion,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatosplenic T-Cell Lymphoma; Precursor Cell Lymphoblastic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mesenchymal Chondrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Anaplastic Ganglioglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Osteosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligoastrocytoma; NOS; Glioneuronal And Neuronal Tumors; Glioneuronal And Neuronal Tumors; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lung Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lymphoproliferative Disorder; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Lymphoid Infiltrate,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Genital Rhabdomyoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chondroblastic Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroepithelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Epithelioid And Myxoid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pancreatoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Nephroblastoma (Wilms Tumor),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ewing Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Smooth Muscle Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myelomonocytic Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelial Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Favor Teratoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Neoplasm Of Prostate,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Non-Clear Cell Renal Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioma; NOS; Embryonal Tumor With Multilayered Rosettes; NOS; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Melanotic Schwannoma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; WNT-Activated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinosarcoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Plasmacytoma; Extramedullary,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infantile Fibrosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+CNS Primative Neuroectodermal Tumor (PNET),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating duct carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Precursor B-Cell Lymphoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Squamous Cell Carcinoma In Situ; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; T(16;16)(P 13;Q 11),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Transitional Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low-Grade Glioneuronal; Neuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Combined Small Cell-Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatocellular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindle Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma; Diffuse Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lentiginous Melanocytic Nevus,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Embryonal Tumor With Multilayered Rosettes; C19MC Altered; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Solitary Fibrous Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Medulloblastoma; Medulloblastoma; Non-WNT/Non-SHH,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Granulosa Cell Tumor; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroma; Maturing Type; Favorable Histology,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Invasive Lobular Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Bland Myofibroblastic Proliferation With Associated Florid Lymphoplasmacytic Inflammation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hepatoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Glial/ Glioneuronal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid Rhabdoid Tumor; CNS WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligoastrocytoma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Diffuse Glioma; Favor High Grade,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Reactive Connective Tissue,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; SHH-Activated And TP53-Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Malignant; Medulloblastoma; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Malignant Peripheral Nerve Sheath Tumor; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Melanocytic Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chronic Myelogenous Leukemia; BCR/ABL Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Vascular Lesion; Consistent With Hemangioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Small Cell Neuroendocrine Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medullary Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Anaplastic Astrocytoma; IDH-Wildtype; Glioblastoma; IDH Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdomyosarcoma; Embryonal Subtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma By Morphology; NON-WNT By Immunohistochemistry,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Astrocytoma; IDH-Mutant; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysembryoplastic Neuroepithelial Tumor; Angiocentric Glioma; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Angiomatoid Fibrous Histiocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Micropapillary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating Lobular Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gastrointestinal Stromal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Nodular Medulloblastoma; Medulloblastoma; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli-Leydig Cell Tumor; Intermediate Differentiation; With Heterologous Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; Inv(16)(P13;Q22),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Subependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gliomatosis Cerebri,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Infiltrating lobular carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Schwannoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; NOS; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Blue Nevus; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; Pancreatobiliary Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Choroid Plexus Tumors; Choroid Plexus Papilloma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroblastoma; Nodular Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Granulosa Cell Tumor; Juvenile,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Juvenile Granulosa Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chronic Myeloid Leukemia; BCR-ABL1-Positive,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Head & Neck Squamous Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; NOS; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; SHH-Activated And TP53-Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Ependymoma; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Intraductal Papillary Mucinous Neoplasm With An Associated Invasive Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adrenal Cortical Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma; Pancreatobiliary Type; Pancreatobiliary-Type Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Lipoblastomatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Neurocytoma; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Control,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+HHV8 Positive Diffuse Large B-Cell Lymphoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; Low-Grade Glioma; Pleomorphic Xanthoastrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; Medulloblastoma; Medulloblastoma; Group 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Large Cell Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With T(12;21)(P13;Q22); TEL-AML1 (ETV6-RUNX1),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Osteosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chordoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; Diffuse Leptomeningeal Glioneuronal Tumor; Glioneuronal And Neuronal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pilocytic Astrocytoma; Low-Grade Glioma; Low-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Dermatofibrosarcoma Protuberans; Fibrosarcomatous,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neuroendocrine Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Diffuse Pediatric-Type High-Grade Glioma; H3-Wildtype And IDH-Wildtype; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Monoblastic Leukemia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Low-Grade Glioma; Polymorphous Low-Grade Neuroepithelial Tumor Of The Young,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloepithelioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; NOS; High-Grade Glioma; Oligodendroglioma; IDH-Mutant; And 1p/19q-Codeleted,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Not Reported,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Aggressive Fibromatosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With Myelodysplasia-Related Changes,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Langerhans Cell Histiocytosis; Disseminated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Low-Grade Glioma; Pilocytic Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligoastrocytoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Undifferentiated Nasopharyngeal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Small Cell Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Chordoma; NOS; Chordoma (Including Poorly Differentiated Chordoma); Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Mesothelioma; Biphasic; Malignant; B Lymphoblastic Leukemia/Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Neurocytoma; Low-Grade Glioma; Subependymal Giant Cell Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Undifferentiated Small Round Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Rhabdomyoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioblastoma; IDH Wildtype,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Astrocytoma; IDH-Mutant; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Therapy Related Myeloid Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Tumor; Spindle Cell Type; CNS Sarcoma; CNS Sarcoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Leydig Cell Tumor; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myelodysplastic Syndrome With Single Lineage Dysplasia,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Germinoma; CNS Germ Cell Tumors; CNS Germinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glial Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Synovial Sarcoma; Spindle Cell,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindle Cell Melanoma; Type B,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Familial Adenomatous Polyposis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Giant Cell Glioblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Teratocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acral Lentiginous Melanoma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Carcinoma NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Carcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Poorly Differentiated Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Solid Pseudopapillary Neoplasm Of Pancreas,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Nasopharyngeal Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma In Adenomatous Polyposis Coli,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Leiomyoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Rhabdomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Papilloma; NOS; Other CNS Embryonal Tumors; Pineoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Marginal Zone B-Cell Lymphoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Tumor Cells; Malignant; Other; Pineal Parenchymal Tumor Of Intermediate Differentiation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pinealoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Atypical Teratoid/Rhabdoid Tumor; INI1/SMARCB1-Altered; WHO Grade 4,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Metastatic Signet Ring Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Infantile Astrocytoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Sarcoma With DICER1 Mutation; Favor Primary Intracranial Sarcoma; DICER1 Mutant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With Hypodiploidy,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Colon Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Supratentorial Ependymoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Proliferative Dermal Lesion In Congenital Nevus,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Medulloblastoma; Medulloblastoma; WNT-Activated,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Arteriovenous Malformation,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acinar Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spinal Ependymoma; Histologically Low Grade (CNS WHO Grade 2),,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Leukemia; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioblastoma; Other,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+High-Grade Serous Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; Group 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Schwannian Stroma Poor Peripheral Neuroblastic Tumor; Consistent With Neuroblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Acute Myeloid Leukemia With Mutated CEBPA,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Parosteal Osteosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Epithelioid Mesothelioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Meningioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Uncertain Whether Benign Or Malignant; ATRT-SHH; Atypical Teratoid/Rhabdoid Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choriocarcinoma Combined With Other Germ Cell Elements,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Brain Tumor; Low Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioglioma; NOS; Diffuse Astrocytoma; MYB- Or MYBL1-Altered; Low-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Tumor With Multilayered Rosettes C19MC-Altered,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; Uncertain Whether Primary Or Metastatic,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Small Round Cell Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Embryonal Rhabdomyosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Langerhans Cell Histiocytosis,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glial Neoplasm Showing High-Grade Features,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Melanoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myxopapillary Ependymoma; Ependymoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Medulloblastoma; NOS; Medulloblastoma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; CNS Embryonal Tumor; NOS Or NEC; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Adenocarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+B Lymphoblastic Leukemia/Lymphoma With T(9;22)(Q34;Q11.2); BCR-ABL1,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Hemangioendothelioma; Malignant,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Choroid Plexus Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Craniopharyngioma; Adamantinomatous; Adamantinomatous Craniopharyngioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pinealoblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Large Cell Medulloblastoma; Embryonal Tumor With Multilayered Rosettes; NOS; Other CNS Embryonal Tumors,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Spindle Cell Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Gliosarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Central Primitive Neuroectodermal Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; IDH-Mutant; CNS WHO Grade 3,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Astrocytoma; Benign,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Pleomorphic Rhabdomyosarcoma; Adult Type,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Myeloid Sarcoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Other; Other Low-Grade B-Cell Lymphomas Of The CNS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ganglioneuroma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Neoplasm; Malignant; High-Grade Glioma; High-Grade Glioma; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Clear Cell Renal Cell Carcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Ependymoma; NOS; Atypical Meningioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Oligodendroglioma; NOS; Other; Other CNS Tumor; NOS Or NEC,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Malignant Peripheral Nerve Sheath Tumor,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Glioma; Malignant; Diffuse Midline Glioma; H3 K27-Altered; High-Grade Glioma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Sertoli-Leydig Cell Tumor Of Intermediate Differentiation; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Desmoplastic Nodular Medulloblastoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Papillary Microcarcinoma,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Craniopharyngioma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Low Grade Glial Neoplasm,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Leiomyosarcoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
+Follicular Adenocarcinoma; NOS,,,,FALSE,,Primary Diagnosis,,CDS v5.0.4/Diagnosis-primary_diagnosis,,,,,,
