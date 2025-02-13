@@ -20,8 +20,6 @@ def authenticate_google(credentials_file):
         googleapiclient.discovery.Resource: An authenticated client object for interacting
         with the Google Sheets API.
     
-    Raises:
-        google.auth.exceptions.GoogleAuthError: If authentication fails due to invalid or missing credentials.
     """
     creds = Credentials.from_service_account_file(credentials_file, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
     return build('sheets', 'v4', credentials=creds)
