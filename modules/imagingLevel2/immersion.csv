@@ -1,5 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Air,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-Oil,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-Water,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-Other,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+Air,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,
+Oil,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,
+Water,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,
+Other,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,
+Multi,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,
+Glycerol,,,,FALSE,,Image Immersion Type,,CDS v5.0.4/Multiplexedmicroscopy-immersion,,,,,,

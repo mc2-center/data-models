@@ -1,4 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-NanoString GeoMx DSP Imaging,Images acquired by the GeoMx instrument,,"Component, NanoStringGeoMxDSPImaging_id, Filename, NanoStringGeoMxDSPLevel1 Key, NanoStringGeoMxDSPLevel2 Key, NanoStringGeoMxAuxiliaryFiles Key, NanoStringGeoMXROISegmentAnnotation Key, GeoMx Imaging Channel Names",FALSE,,,"File View, NanoString GeoMx Auxiliary Files",HTAN,
+NanoString GeoMx DSP Imaging,Images acquired by the GeoMx instrument,,"Component, NanoStringGeoMxDSPImaging_id, Filename, NanoStringGeoMxDSPLevel1 Key, NanoStringGeoMxDSPLevel2 Key, NanoStringGeoMxAuxiliaryFiles Key, NanoStringGeoMXROISegmentAnnotation Key, GeoMx Imaging Channel Names, GeoMx Imaging AOI Coordinates",FALSE,,,"File View, NanoString GeoMx Auxiliary Files",HTAN,
 NanoStringGeoMxDSPImaging_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,,,MC2,unique
 GeoMx Imaging Channel Names,Name(s) of imaging channel(s) associated with the image; multiple values should be provided as a comma-separated list.,,,FALSE,,,,HTAN,list like
+GeoMx Imaging AOI Coordinates,Synapse Id(s) of tabular file(s) containing coordinate points for AOIs found in the image; multiple values should be provided as a comma-separated list.,,,FALSE,,,,MC2/STE,list like

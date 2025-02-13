@@ -1,0 +1,12 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Analyte,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Ascites,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Blood,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Bone Marrow,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Cells,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Fluids,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Mouth Rinse,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Sputum,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Stool,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Tissue,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+Urine,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,

@@ -1,10 +1,10 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Metastatic Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Not Applicable,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Not Otherwise Specified,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Not Reported,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Premalignant Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Primary Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Recurrent Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Unknown,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
-Xenograft,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,
+Metastatic Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Not Applicable,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Not Otherwise Specified,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Not Reported,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Premalignant Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Primary Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Recurrent Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Unknown,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+Xenograft,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x

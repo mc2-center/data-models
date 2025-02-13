@@ -4,25 +4,25 @@
   "title": "MC2",
   "type": "object",
   "properties": {
-    "Synapse ID of GeoMx DSP ROI Segment Annotation File": {},
+    "NanoStringGeoMxAuxiliaryFiles_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
     "Synapse ID of GeoMx DSP Config File": {},
-    "Synapse ID of GeoMx Lab Worksheet File": {},
     "Component": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "Synapse ID of GeoMx DSP PKC File": {},
-    "NanoStringGeoMxAuxiliaryFiles_id": {
-      "not": {
-        "type": "null"
-      },
-      "minLength": 1
-    }
+    "Synapse ID of GeoMx DSP ROI Segment Annotation File": {},
+    "Synapse ID of GeoMx Lab Worksheet File": {},
+    "Synapse ID of GeoMx DSP PKC File": {}
   },
   "required": [
-    "Component",
-    "NanoStringGeoMxAuxiliaryFiles_id"
+    "NanoStringGeoMxAuxiliaryFiles_id",
+    "Component"
   ]
 }

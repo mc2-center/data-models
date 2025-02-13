@@ -4,64 +4,62 @@
   "title": "MC2",
   "type": "object",
   "properties": {
-    "Image Assay Type": {
-      "enum": [
-        "CyCIF",
-        "IMC",
-        "GeoMX-DSP",
-        "CODEX",
-        "H&E",
-        "MIBI",
-        "MERFISH",
-        "Not Applicable",
-        "SABER",
-        "mIHC",
-        "ExSeq",
-        "t-CyCIF",
-        "MxIF",
-        "RareCyte Orion",
-        "IHC"
-      ]
-    },
+    "Image Z stack": {},
+    "Image FOV Index": {},
     "Image FOV Size X Unit": {},
-    "Image FOV Size Y Unit": {},
-    "Image Dimension Order": {},
-    "Image Physical Size Z": {},
-    "Image Lense Aperture": {},
-    "Image Protocol Link": {},
-    "Image Identifier": {},
-    "Image Pixel Type": {},
-    "Image Immersion Type": {
-      "enum": [
-        "other",
-        "Oil",
-        "Air",
-        "Water",
-        ""
-      ]
-    },
-    "Image Z Pixels": {},
+    "Image Pixels BigEndian": {},
+    "Image X Pixels": {},
+    "Image Physical Size Y Unit": {},
+    "Image Timeseries": {},
+    "Image Channel Size": {},
+    "Image Software": {},
+    "Image Physical Size X Unit": {},
+    "ImagingLevel1 Key": {},
+    "Image Pyramidal": {},
     "ImagingChannel Key": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
+    "Image Working Distance": {},
+    "Image Pixel Type": {},
     "Image FOV Size X": {},
-    "Image Working Distance Unit": {
+    "Component": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Image Physical Size Z Unit": {},
+    "Image Objective": {},
+    "Image Dimension Order": {},
+    "Image Plane Count": {},
+    "Image Assay Type": {
       "enum": [
-        "cm",
-        "mm",
-        "nm",
-        "\u00c5",
-        "\u00b5m",
-        ""
+        "CyCIF",
+        "CODEX",
+        "MERFISH",
+        "SABER",
+        "IMC",
+        "IHC",
+        "MxIF",
+        "GeoMX-DSP",
+        "ExSeq",
+        "Not Applicable",
+        "mIHC",
+        "MIBI",
+        "RareCyte Orion",
+        "t-CyCIF",
+        "H&E"
       ]
     },
+    "Image Physical Size Z": {},
+    "Image Nominal Magnification": {},
+    "Image FOV Size Y": {},
+    "Image FOV Size Y Unit": {},
     "Image Frame Averaging": {},
-    "Image Plane Count": {},
-    "Image Channel Size": {},
-    "Image Physical Size Y": {},
+    "Image Z Pixels": {},
     "ImagingLevel2_id": {
       "not": {
         "type": "null"
@@ -69,43 +67,45 @@
       "minLength": 1
     },
     "Image Y Pixels": {},
-    "Image Physical Size Z Unit": {},
-    "Image Platform Manufacturer": {},
-    "ImagingLevel1 Key": {},
-    "Image Pixels BigEndian": {},
     "Filename": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "Image Physical Size X": {},
-    "Image Working Distance": {},
-    "Component": {
-      "not": {
-        "type": "null"
-      },
-      "minLength": 1
+    "Image Working Distance Unit": {
+      "enum": [
+        "cm",
+        "nm",
+        "\u00c5",
+        "mm",
+        "\u00b5m",
+        ""
+      ]
     },
-    "Image Physical Size X Unit": {},
-    "Image Objective": {},
-    "Image Pyramidal": {},
-    "Image Z stack": {},
-    "Image FOV Size Y": {},
-    "Image Timeseries": {},
-    "Image Nominal Magnification": {},
-    "Image Physical Size Y Unit": {},
+    "Image Protocol Link": {},
+    "Image Platform Model": {},
+    "Image Identifier": {},
+    "Image Platform Manufacturer": {},
+    "Image Lense Aperture": {},
     "Image Number of Timepoints": {},
-    "Image FOV Index": {},
-    "Image X Pixels": {},
-    "Image Software": {},
-    "Image Platform Model": {}
+    "Image Physical Size Y": {},
+    "Image Immersion Type": {
+      "enum": [
+        "Oil",
+        "Water",
+        "other",
+        "Air",
+        ""
+      ]
+    },
+    "Image Physical Size X": {}
   },
   "required": [
-    "Image Assay Type",
     "ImagingChannel Key",
+    "Component",
+    "Image Assay Type",
     "ImagingLevel2_id",
-    "Filename",
-    "Component"
+    "Filename"
   ]
 }
