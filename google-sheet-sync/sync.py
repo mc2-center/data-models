@@ -6,19 +6,17 @@ from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from github import Github, GithubException
 
-def authenticate_google(credentials_file):
-     """
-    Authenticate and create a Google Sheets API client.
+def authenticate_google(credentials_file: str) -> googleapiclient.discovery.Resource:
+     """Authenticate and create a Google Sheets API client.
 
     This function reads a Google service account credentials file to authenticate
     and build a client for accessing the Google Sheets API. 
+    
     Args:
-        credentials_file (str): The path to the Google service account JSON credentials file. 
-        GOOGLE_CREDENTIALS stored securely as GitHub Secret on the mc2-centerbot account
+        credentials_file: The path to the Google service account JSON credentials file.
 
     Returns:
-        googleapiclient.discovery.Resource: An authenticated client object for interacting
-        with the Google Sheets API.
+        An authenticated client object for interacting with the Google Sheets API.
     
     """
     creds = Credentials.from_service_account_file(credentials_file, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
