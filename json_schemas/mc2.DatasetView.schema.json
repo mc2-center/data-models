@@ -4,9 +4,21 @@
   "title": "DatasetView_validation",
   "type": "object",
   "properties": {
-    "Study Key": {},
-    "PublicationView Key": {},
-    "GrantView Key": {},
+    "Study Key": {
+      "type": "string",
+      "title": "StudyKey",
+      "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components."
+    },
+    "PublicationView Key": {
+      "type": "string",
+      "title": "PublicationViewKey",
+      "description": "Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection."
+    },
+    "GrantView Key": {
+      "type": "string",
+      "title": "GrantViewKey",
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection."
+    },
     "Dataset File Formats": {
       "type": "array",
       "items": {
@@ -96,15 +108,25 @@
       },
       "maxItems": 80
     },
-    "Dataset Design": {},
+    "Dataset Design": {
+      "type": "string",
+      "title": "DatasetDesign",
+      "description": "The overall design of the dataset.",
+      "maxLength": 500
+    },
     "Dataset Name": {
       "not": {
         "type": "null"
       },
-      "minLength": 1
+      "type": "string",
+      "title": "DatasetName",
+      "description": "Name of the dataset.",
+      "maxLength": 250
     },
     "Data Use Codes": {
       "type": "array",
+      "title": "DataUseCodes",
+      "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/file/#attribute-data-use-codes",
       "items": {
         "enum": [
           "US",
@@ -137,12 +159,18 @@
       "maxItems": 24
     },
     "Dataset Alias": {
+      "type": "string",
+      "title": "DatasetAlias",
+      "description": "Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345 or the dataset Synapse Id",
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
     "Dataset Url": {
+      "type": "string",
+      "title": "DatasetUrl",
+      "description": "The url of where the dataset is stored.",
       "not": {
         "type": "null"
       },
@@ -150,6 +178,8 @@
     },
     "Dataset Assay": {
       "type": "array",
+      "title": "DatasetAssay",
+      "description": "The assay(s) the dataset is representative of.",
       "items": {
         "enum": [
           "3C-qPCR",
@@ -535,8 +565,16 @@
       },
       "maxItems": 379
     },
-    "Dataset Description": {},
+    "Dataset Description": {
+      "type": "string",
+      "title": "DatasetDescription",
+      "description": "Text description of the dataset.",
+      "maxLength": 500
+    },
     "DatasetView_id": {
+      "type": "string",
+      "title": "DatasetViewid",
+      "description": "A unique primary key that enables record updates using schematic",
       "not": {
         "type": "null"
       },
@@ -544,6 +582,8 @@
     },
     "Dataset Species": {
       "type": "array",
+      "title": "DatasetSpecies",
+      "description": "The species the data was collected on.",
       "items": {
         "enum": [
           "Boar",
@@ -580,6 +620,8 @@
     },
     "Dataset Tumor Type": {
       "type": "array",
+      "title": "DatasetTumorType",
+      "description": "The tumor type(s), if applicable, of the data collected on",
       "items": {
         "enum": [
           "Angiosarcoma",
@@ -775,6 +817,8 @@
     },
     "Dataset Tissue": {
       "type": "array",
+      "title": "DatasetTissue",
+      "description": "Tissue type(s) associated with the dataset",
       "items": {
         "enum": [
           "Cervix Uteri",
@@ -897,6 +941,18 @@
       "maxItems": 114
     },
     "Component": {
+      "type": "string",
+      "title": "Component",
+      "description": "Type of metadata associated with this entity.",
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Dataset Doi":{
+      "type": "string",
+      "title": "DatasetDoi",
+      "description": "The Digital Object Identifier (DOI) associated with the dataset.",
       "not": {
         "type": "null"
       },
@@ -910,6 +966,7 @@
     "Dataset Assay",
     "DatasetView_id",
     "Dataset Species",
-    "Component"
+    "Component",
+    "Dataset Doi"
   ]
 }
