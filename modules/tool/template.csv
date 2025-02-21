@@ -41,5 +41,7 @@ Tool Release Date,The release date of a product or product model. This can be us
 [Tool Type](../valid_values/tool.md#attribute-tool-type),"A type of application software: a discrete software entity can have more than one type. Multiple values permitted, comma separated.",False,list like,Command-Line Tool
 Tool Version,Version information (typically a version number) of the software applicable to this entry.,False,_None_,3.2.1
 Tool View,The denormalized manifest for tool submission.,False,_None_,"In a software interface, the 'Tool View' attribute might be set to ""Detail View"" or ""Thumbnail View""."
+Tool View,The denormalized manifest for tool submission.,False,_None_,"In a software interface, the 'Tool View' attribute might be set to ""Detail View"" or ""Thumbnail View""."
 ToolView_id,A unique primary key that enables record updates using schematic.,True,unique,ToolView_6749
+Tool Doi,The Digital Object Identifier (DOI) associated with the computational tool.,True,url,https://doi.org/10.1234/example1
 Tool Doi,The Digital Object Identifier (DOI) associated with the computational tool.,True,url,https://doi.org/10.1234/example1
