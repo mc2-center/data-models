@@ -105,8 +105,7 @@
           "SVS",
           ""
         ]
-      },
-      "maxItems": 80
+      }
     },
     "Dataset Design": {
       "type": "string",
@@ -155,8 +154,7 @@
           "GRU",
           ""
         ]
-      },
-      "maxItems": 24
+      }
     },
     "Dataset Alias": {
       "type": "string",
@@ -562,8 +560,7 @@
           "Binding Assay",
           "Synthetic Genetic Array"
         ]
-      },
-      "maxItems": 379
+      }
     },
     "Dataset Description": {
       "type": "string",
@@ -615,8 +612,7 @@
           "Zebrafish",
           "African Bush Elephant"
         ]
-      },
-      "maxItems": 28
+      }
     },
     "Dataset Tumor Type": {
       "type": "array",
@@ -812,8 +808,7 @@
           "Malignant Brain Neoplasm",
           ""
         ]
-      },
-      "maxItems": 186
+      }
     },
     "Dataset Tissue": {
       "type": "array",
@@ -937,8 +932,7 @@
           "Sclera",
           ""
         ]
-      },
-      "maxItems": 114
+      }
     },
     "Component": {
       "type": "string",
