@@ -4,6 +4,7 @@ Dataset Alias,"Alias of the dataset. Must be unique. Can be the GEO identifier s
 Dataset Description,Description of the dataset.,False,_None_,"This dataset contains RNA sequencing data from 200 lung cancer samples, including gene expression profiles and patient clinical data. It is designed to study differential gene expression and mutation burden across tumor stages."
 Dataset Design,The overall design of the dataset.,False,_None_,"'Cross-sectional' to compare gene expression in healthy vs. tumor tissues, or 'Time-series' to observe changes during treatment."
 Dataset Url,The url of where the dataset is stored.,True,url,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789
+Dataset Doi,The Digital Object Identifier (DOI) associated with the dataset.,True,url,
 [Dataset Assay](../valid_values/dataset.md#attribute-dataset-assay),"The assay the dataset is representative of. Multiple values permitted, comma separated.",True,list like,RNA Sequencing
 [Dataset Species](../valid_values/dataset.md#attribute-dataset-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like,Homo sapiens
 [Dataset Tumor Type](../valid_values/dataset.md#attribute-dataset-tumor-type),"The tumor type(s), if applicable, of the data collected on. Multiple values permitted, comma separated.",False,list like,Glioblastoma

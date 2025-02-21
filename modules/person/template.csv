@@ -13,7 +13,7 @@ Last Known Institution,Last known institutional affiliation of the individual.,T
 Person View,The denormalized manifest for person submission.,False,_None_,Public Profile View
 [Person Grant Number](../valid_values/person.md#attribute-person-grant-number),"Grant number(s) associated with the person. Multiple values permitted, comma separated.",True,list like,CA202177
 [Person Consortium Name](../valid_values/person.md#attribute-person-consortium-name),"Consortium(s) associated with the person. Multiple values permitted, comma separated.",True,list like,PDMC
-Person Publications,"A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",False,list like,"""23761710,23761712,23762511"
+Person Publications,"A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",False,list like,"23761710,23761712,23762511"
 Person Datasets,"A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the person. Multiple values permitted, comma separated.",False,list like,GSE12345
 Person Tools,"A list of the tool names associated with the person. Multiple values permitted, comma separated.",False,list like,"R Studio, Python, Jupyter Notebook"
 Person Educational Resources,"A list of educational resource identifiers associated with the person. Multiple values permitted, comma separated.",False,list like,Nan
