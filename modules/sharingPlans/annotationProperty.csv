@@ -26,5 +26,4 @@ DSP IRB Form,The Synapse Id for the executed IRB protocol or exemption document 
 DSP Dataset Description,A text description of the files contained in this dataset.,,,FALSE,,,,,str
 DSP Dataset Destination,An identifier representing the repository in which this dataset is intended to be held for long term preservation.,,,FALSE,,,,,str
 DSP Dataset Metadata,The link(s) corresponding to metadata templates that should be used to record information about this data. This field will be populated by the MC2 Center after plan submission.,,,FALSE,,,,,list like
-
 DSP Dataset Metadata,The link(s) corresponding to metadata templates that should be used to record information about this data. This field will be populated by the MC2 Center after plan submission.,,,FALSE,,,,,list like
