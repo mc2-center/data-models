@@ -4,29 +4,30 @@
   "title": "MC2",
   "type": "object",
   "properties": {
-    "GeoMx Imaging Channel Names": {},
+    "NanoStringGeoMxDSPLevel1 Key": {},
     "NanoStringGeoMxAuxiliaryFiles Key": {},
+    "GeoMx Imaging AOI Coordinates": {},
     "Filename": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
+    "NanoStringGeoMxDSPLevel2 Key": {},
     "Component": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "NanoStringGeoMxDSPLevel1 Key": {},
-    "NanoStringGeoMXROISegmentAnnotation Key": {},
     "NanoStringGeoMxDSPImaging_id": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "NanoStringGeoMxDSPLevel2 Key": {}
+    "NanoStringGeoMXROISegmentAnnotation Key": {},
+    "GeoMx Imaging Channel Names": {}
   },
   "required": [
     "Filename",

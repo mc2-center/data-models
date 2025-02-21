@@ -4,76 +4,27 @@
   "title": "MC2",
   "type": "object",
   "properties": {
-    "Study_id": {
+    "Study Reuse Statement": {},
+    "Study De-identification Method Software": {},
+    "Study Name": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "Study De-identification Method Type": {
-      "enum": [
-        "Not applicable",
-        "Semiautomatic",
-        "Automatic",
-        "Manual"
-      ]
-    },
-    "GrantView Key": {},
-    "Study dbGaP Accession Id": {},
     "Study Investigator": {
       "not": {
         "type": "null"
       },
       "minLength": 1
     },
-    "Study Description": {
-      "not": {
-        "type": "null"
-      },
-      "minLength": 1
-    },
-    "ProjectView Key": {},
-    "Study De-identification Method Software": {},
-    "Study Data Use Codes": {
-      "type": "array",
-      "items": {
-        "enum": [
-          "MOR",
-          "GRU",
-          "PS",
-          "US",
-          "COL",
-          "DS",
-          "IRB",
-          "GSO",
-          "CC",
-          "NCU",
-          "NRES",
-          "DUM",
-          "HMB",
-          "POA",
-          "NMDS",
-          "NPU",
-          "RS",
-          "PUB",
-          "TS",
-          "NPOA",
-          "IS",
-          "RTN",
-          "GS",
-          "NPUNCU",
-          ""
-        ]
-      },
-      "maxItems": 24
-    },
-    "Study License": {
+    "PersonView Key": {},
+    "Study De-identification Method Type": {
       "enum": [
-        "CC BY-NC 4.0",
-        "CC BY 4.0",
-        "CC BY 3.0",
-        "CC BY-NC 3.0",
-        ""
+        "Semiautomatic",
+        "Automatic",
+        "Not applicable",
+        "Manual"
       ]
     },
     "Component": {
@@ -82,29 +33,78 @@
       },
       "minLength": 1
     },
-    "Study Reuse Statement": {},
-    "PersonView Key": {},
+    "Study dbGaP Accession Id": {},
+    "GrantView Key": {},
+    "Study_id": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study Data Use Codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "RS",
+          "NPU",
+          "PS",
+          "GSO",
+          "HMB",
+          "NPUNCU",
+          "DS",
+          "TS",
+          "CC",
+          "POA",
+          "US",
+          "IRB",
+          "MOR",
+          "DUM",
+          "GRU",
+          "IS",
+          "RTN",
+          "NMDS",
+          "PUB",
+          "NCU",
+          "GS",
+          "NPOA",
+          "COL",
+          "NRES",
+          ""
+        ]
+      },
+      "maxItems": 24
+    },
+    "Study Description": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "Study License": {
+      "enum": [
+        "CC BY-NC 3.0",
+        "CC BY 4.0",
+        "CC BY 3.0",
+        "CC BY-NC 4.0",
+        ""
+      ]
+    },
+    "ProjectView Key": {},
+    "Study De-identification Method Description": {},
     "Study Number of Participants": {
       "not": {
         "type": "null"
       },
       "minLength": 1
-    },
-    "Study Name": {
-      "not": {
-        "type": "null"
-      },
-      "minLength": 1
-    },
-    "Study De-identification Method Description": {}
+    }
   },
   "required": [
-    "Study_id",
-    "Study De-identification Method Type",
+    "Study Name",
     "Study Investigator",
-    "Study Description",
+    "Study De-identification Method Type",
     "Component",
-    "Study Number of Participants",
-    "Study Name"
+    "Study_id",
+    "Study Description",
+    "Study Number of Participants"
   ]
 }
