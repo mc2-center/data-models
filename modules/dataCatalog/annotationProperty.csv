@@ -1,0 +1,10 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
+community,The Sage Bionetworks project or initiative with which the dataset is associated.,,,FALSE,,,,Synapse Data Catalog,str
+description,A text description of the dataset. Can be identifical to Dataset Description.,,,FALSE,,,,Synapse Data Catalog,str
+contributors,The insitution that generated and/or deposited the data in Synapse. Can be identical to Grant Institution Name.,,,FALSE,,,,Synapse Data Catalog,list like
+keywords,Keywords associated with the dataset. Can be identical to Publication Keywords.,,,FALSE,,,,Synapse Data Catalog,list like
+individuals,"The number of participants or samples associated with the files in the dataset. Can be identical to Study Number of Participants, DSP Number of Participants, or DSP Number of Samples",,,FALSE,,,,Synapse Data Catalog,int
+link,"The url where the dataset is displayed, typically on a public-facing data portal. Can be identical to Dataset Url.",,,FALSE,,,,Synapse Data Catalog,url
+croissant,A Synapse url where the croissant file associated with this dataset is stored.,,,FALSE,,,,Synapse Data Catalog,url
+DataCatalog,The manifest used to describe datasets for the Synapse Data Catalog.,,"Component, DataCatalog_id, community, description, contributors, keywords, individuals, link, croissant",FALSE,,,Study,Synapse Data Catalog,
+DataCatalog_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,MC2,unique
