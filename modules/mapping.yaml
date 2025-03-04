@@ -12,7 +12,7 @@
   - name: Biospecimen Preservation Method
     src: biospecimen/preservation.csv
   - name: Biospecimen Site of Resection or Biopsy
-    src: shared/resectionBiopsySiteCDS.csv
+    src: shared/tissueOrganOriginCDS.csv
   - name: Biospecimen Site of Origin
     src: shared/tissueOrganOriginCDS.csv
   - name: Biospecimen Known Metastasis Sites
@@ -39,6 +39,14 @@
     src: shared/primaryDiseaseSite.csv
   - name: Biospecimen Primary Diagnosis
     src: shared/primaryDiagnosisCDS.csv
+  - name: Biospecimen Treatment Response
+    src: shared/treatmentOutcome.csv
+  - name: Biospecimen Type Category
+    src: biospecimen/biospecimenCategory.csv
+  - name: Biospecimen Incidence Type
+    src: biospecimen/specimenIncidence.csv
+  - name: Biospecimen Acquisition Method
+    src: biospecimen/acquisitionMethod.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -113,6 +121,10 @@ file:
     src: file/processLevel.csv
   - name: File Format
     src: shared/dataset_file_format.csv
+  - name: File Anatomic Site
+    src: shared/anatomicSiteImageCDS.csv
+  - name: File Longitudinal Event Type
+    src: file/eventType.csv
 
 geomxLevel1:
   - name: GeoMx DSP Assay Type
@@ -139,6 +151,10 @@ imagingLevel2:
     src: imagingLevel2/immersion.csv
   - name: Image Working Distance Unit
     src: imagingLevel2/unit.csv
+  - name: Image Pyramidal
+    src: shared/boolean.csv
+  - name: Image Pixels BigEndian
+    src: shared/boolean.csv
 
 imagingLevel3Segments:
   - name: Image Segmentation Data Type
@@ -185,7 +201,7 @@ individual:
     src: individual/metStage.csv
   - name: Individual Recurrence Status
     src: individual/recurrence.csv
-  - name: Individual Treatment Outcome
+  - name: Individual Treatment Response
     src: shared/treatmentOutcome.csv
   - name: Individual Primary Diagnosis
     src: shared/primaryDiagnosisCDS.csv
@@ -211,6 +227,10 @@ model:
     src: shared/primaryDiagnosisCDS.csv
   - name: Model Site of Origin
     src: shared/tissueOrganOriginCDS.csv
+  - name: Model Treatment Response
+    src: shared/treatmentOutcome.csv
+  - name: Model Primary Site
+    src: shared/primaryDiseaseSite.csv
 
 person:
   - name: Person Consortium Name
@@ -281,7 +301,9 @@ study:
     src: study/deIdMethod.csv
   - name: Study License
     src: study/studyLicense.csv
-
+  - name: Study Index Date
+    src: study/indexDate.csv
+    
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv
