@@ -303,6 +303,12 @@ study:
     src: study/studyLicense.csv
   - name: Study Index Date
     src: study/indexDate.csv
+  - name: Study Source Geography
+    src: study/sourceGeography.csv
+  - name: Study Data Permission
+    src: study/dataPermission.csv
+  - name: Study Data Tier
+    src: study/dataTier.csv
     
 tool:
   - name: Tool Grant Number
