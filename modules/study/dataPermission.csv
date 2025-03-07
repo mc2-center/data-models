@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Agreement,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Attestation,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Award,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Other,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
