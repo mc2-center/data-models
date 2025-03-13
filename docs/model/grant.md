@@ -3,7 +3,10 @@ A **Grant** entry captures essential details about funded research projects. Gra
 This section outlines how to create a valid grant entry by defining key metadata, including grant type, institution, investigator, and project duration. Proper grant documentation ensures projects can be easily identified, referenced, and managed across research initiatives.
 
 ### **Why You Should Contribute Grant Entries**
-Contributing grant entries ensures that funding sources, research objectives, and project details are transparent and traceable. This helps stakeholders monitor the progress of research initiatives, improves collaboration by connecting teams with similar funding, and supports compliance with reporting and accountability requirements. Accurate grant documentation also strengthens your ability to secure future funding by showcasing project outcomes and impacts.
+Grant information is maintained by the MC2 Center to ensure accurate tracking of funding sources, research objectives, and project details. This helps stakeholders monitor research progress, facilitates collaboration across funded initiatives, and supports compliance with reporting and accountability requirements.
+
+At this time, grant entries are curated exclusively by MC2 Center staff and are not open for external contributions. If broader contribution access is introduced in the future, updated guidelines will be provided.
+
 
 #### **Who Should Be Contributing Grant Entries?**
 1. **Principal Investigators (PIs)** – Document your funded projects to highlight ongoing research, objectives, and collaborations for visibility and accountability.  
@@ -18,6 +21,7 @@ Use the [grant entry template](https://github.com/mc2-center/data-models/raw/mai
 
 ## Example Data Entry
 The table below includes sample values to demonstrate proper attribute usage.
+It is important to note that where these examples can generally guide you on the structure of the Grant entry, these fields will generally be curated by a member of the MC2 personnel near the beginning of the grant funding period and will be made available via Synapse. 
 
 | **Attribute**              | **Example Value**                                                                                           |
 |----------------------------|-------------------------------------------------------------------------------------------------------------|

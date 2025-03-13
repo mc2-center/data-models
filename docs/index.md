@@ -9,7 +9,7 @@
 </p>
 
 ### **Welcome!**  
-The MC<sup>2</sup> Center Data Models Explorer enables structured, standardized documentation of data and resources for research projects like the [Cancer Complexity Knowledge Portal](https://www.cancercomplexity.synapse.org/). 
+The MC<sup>2</sup> Center Data Models Explorer enables structured, standardized documentation of data and resources for the [Cancer Complexity Knowledge Portal](https://www.cancercomplexity.synapse.org/). 
 
 This platform is designed to support **researchers**, **developers**, and **data contributors** by enhancing collaboration, reproducibility, and data discovery through clear metadata standards. Documenting key attributes of datasets, studies, publications, and more ensures that research outputs remain accessible and reusable across teams and projects.
 

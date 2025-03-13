@@ -5,15 +5,16 @@ This section outlines how to create a valid person entry, ensuring that all nece
 ### **Why You Should Contribute Person Entries**
 Contributing person entries enhances collaboration by providing clear visibility into expertise, roles, and project involvement within research teams. It helps connect researchers and contributors across projects, facilitates networking opportunities, and allows stakeholders to easily identify key personnel for collaboration or consultation. Maintaining up-to-date profiles also supports transparency and improves recognition of contributions to research initiatives.
 
-#### **Who Should Be Contributing Person Entries?**
-1. **Researchers and Scientists** – Document your roles, publications, and collaborations to increase visibility within your field and enable others to reach out for partnerships.  
-2. **Project Leads and Investigators** – Ensure key contributors to your projects are credited and easily searchable for collaboration and reporting purposes.  
-3. **Research Administrators** – Keep records of team members, roles, and working group participation to manage projects efficiently and facilitate compliance reporting.  
-4. **Consortium Members** – Share your expertise and involvement across multiple projects or institutions to encourage cross-disciplinary collaboration and integration of research efforts.  
-5. **Data Managers** – Link researchers to datasets, tools, and resources they have contributed to ensure traceability and acknowledgment of contributions.  
+#### Who Should Be Contributing Person Entries?  
+1. Researchers and Scientists – Document your roles, publications, and collaborations to increase visibility within your field and enable others to reach out for partnerships.  
+2. Project Leads and Investigators – Ensure key contributors to your projects are credited and easily searchable for collaboration and reporting purposes.  
+3. Research Administrators – Keep records of team members, roles, and working group participation to manage projects efficiently and facilitate compliance reporting.  
+4. Consortium Members – Share your expertise and involvement across multiple projects or institutions to encourage cross-disciplinary collaboration and integration of research efforts.  
+5. Data Managers – Link researchers to datasets, tools, and resources they have contributed to ensure traceability and acknowledgment of contributions.  
 
-## Download Template
-Download the [person entry template](https://github.com/mc2-center/data-models/raw/main/templates/PersonView.csv) for streamlined data entry, ensuring that all required fields are filled out.
+## How to Contribute Person Entries  
+To submit a Person entry, complete the [Person Entry Submission Form](https://docs.google.com/forms/d/e/1FAIpQLScuFHETXIdfe0HPqkFQ7jx3wIIwBRqaqIXH_ZM5f2DWvNQa2g/viewform). The MC2 Center will review submissions, collect necessary consent, and curate PersonView entries accordingly.  
+
 
 ## Example Data Entry
 The table below includes sample values to demonstrate proper attribute usage.

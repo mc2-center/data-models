@@ -3,7 +3,10 @@ A **Dataset** refers to a structured collection of data that is organized for an
 This model outlines key attributes that describe and manage datasets, including metadata about the data type, format, number of samples, and related grant information. By maintaining these attributes, datasets can be efficiently tracked and referenced within data repositories.
 
 ## **Why You Should Contribute Dataset Entries**
-Contributing dataset entries helps ensure your data is easily discoverable, accurately documented, and compliant with research standards. By providing well-structured dataset metadata, you enhance opportunities for collaboration, boost data citation potential, and reduce administrative overhead for reporting and compliance. Well-documented datasets also help other researchers and stakeholders use your data effectively, increasing its long-term impact.
+Contributing dataset entries ensures that your data is easily discoverable, accurately documented, and compliant with research standards. Well-structured metadata enhances collaboration opportunities, increases data citation potential, and reduces administrative overhead for reporting and compliance. Additionally, dataset entries are required for sharing through the Cancer Complexity Knowledge Portal (CCKP).
+
+You can submit dataset entries for data stored both within and outside of Synapse, including repositories like the Gene Expression Omnibus (GEO), Database of Genotypes and Phenotypes (dbGaP), and Zenodo, allowing them to be listed on the CCKP. Well-documented datasets help other researchers and stakeholders effectively use your data, maximizing its long-term impact.
+
 
 ### **Who Should Be Contributing Dataset Entries?**
 1. **Principal Investigators (PIs)** – Increase the visibility and impact of your research by contributing properly cataloged datasets, making it easier for others to cite and use your work.  
