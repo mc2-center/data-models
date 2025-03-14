@@ -1,0 +1,20 @@
+Attribute,Example
+File Description,"""CSV file containing gene expression data for breast cancer"""
+File Design,"""Gene expression values derived from RNA sequencing of tumor and normal tissue samples, processed using STAR aligner and featureCounts. Samples collected from 100 patients at diagnosis."""
+File Url,[https://www.example.com/files/breast_cancer_expression_data.csv](https://www.example.com/files/breast_cancer_expression_data.csv)
+File Assay,RNA Sequencing
+File Level,"Level 3"
+File Species,Human
+File Tumor Type,Breast Carcinoma
+File Tissue,Breast
+File View,List View
+FileView_id,"""SynapseID_123456"""
+File Longitudinal Group,"Patient Cohort A - Baseline"
+File Longitudinal Event Type,"Baseline"
+File Longitudinal Sequence Identifier,10-9876543210-12
+File Longitudinal Time Elapsed Unit,Seconds
+File Longitudinal Sequential Time Elapsed,"""9900s"""
+File Longitudinal Total Time Elapsed,"""990000s"""
+File Format,CSV
+File Alias,"""SynapseID_123456"""
+File Anatomic Site,"Brain stem, Cervix uteri"
