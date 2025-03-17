@@ -209,6 +209,8 @@ individual:
     src: shared/primaryDiagnosisCDS.csv
   - name: Individual Primary Site
     src: shared/primaryDiseaseSite.csv
+  - name: Individual Vital Status
+    src: individual/vitalStatus.csv
 
 institution:
   - name: Institution Location State
