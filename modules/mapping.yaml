@@ -47,6 +47,8 @@
     src: biospecimen/specimenIncidence.csv
   - name: Biospecimen Acquisition Method
     src: biospecimen/acquisitionMethod.csv
+  - name: Biospecimen Treatment Type
+    src: shared/treatmentType.csv
 
 consortium:
   - name: Consortium Funding Agency
