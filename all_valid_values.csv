@@ -76,6 +76,7 @@ dataset_species,Human Patient,
 dataset_species,Human Cell Line,
 dataset_species,Mouse,
 dataset_species,Multispecies,
+dataset_species,Not Applicable,
 dataset_species,Opossum,
 dataset_species,Rabbit,Oryctolagus cuniculus
 dataset_species,Rat,
