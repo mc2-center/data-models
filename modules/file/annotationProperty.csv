@@ -10,7 +10,7 @@ File Tissue,"Tissue type(s) associated with the file. Multiple values permitted,
 File View,The denormalized manifest for file submission.,,"Component, FileView_id, Biospecimen Key, Study Key, DatasetView Key, Filename, File Alias, File Description, File Design, File Level, File Assay, File Species, File Tumor Type, File Tissue, File Anatomic Site, File Url, File Format, Data Use Codes, File Longitudinal Group, File Longitudinal Event Type, File Longitudinal Sequence Identifier, File Longitudinal Time Elapsed Unit, File Longitudinal Sequential Time Elapsed, File Longitudinal Total Time Elapsed",FALSE,,,Study,,
 FileView_id,A unique primary key that enables record updates using schematic.,,,TRUE,,,,,unique
 File Longitudinal Group,A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment,,,FALSE,,,,,str
-File Longitudinal Event Type,"The type of event associated with collection of the data contained in the file (e.g., time increment, treatment time elapsed)","Enrollment, Baseline",,FALSE,,,,,str
+File Longitudinal Event Type,"The type of event to which File Longitudinal Total Time Elapsed is related","Enrollment, Baseline",,FALSE,,,,,str
 File Longitudinal Sequence Identifier,"The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",,,FALSE,,,,,int
 File Longitudinal Time Elapsed Unit,The unit of time associated with Sequential and Total Time Elapsed attributes.,,,FALSE,,,,,str
 File Longitudinal Sequential Time Elapsed,The time elapsed between collecting the current and previous files in this longitudinal group. ,,,FALSE,,,,,num
