@@ -1,0 +1,6 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Unspecified,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
+Unknown,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
+Dead,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
+Alive,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
+Not reported,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
