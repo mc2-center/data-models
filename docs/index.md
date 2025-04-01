@@ -78,3 +78,7 @@ You can also read our [contribution guidelines] if you'd like to submit updates 
 
 !!!important  
     Changes to existing terms may have downstream impacts, so please provide clear justifications for any major revisions.
+
+<!-- LINKS -->
+[contribution guidelines]: https://mc2-center.github.io/data-models/contributing/
+[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
