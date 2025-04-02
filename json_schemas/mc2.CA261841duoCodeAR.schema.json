@@ -22,9 +22,6 @@
         "properties": {
           "_accessRequirementIds": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
             "contains": {
               "const": 9606628
             }
