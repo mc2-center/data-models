@@ -86,6 +86,22 @@ sharingPlans:
   - name: DSP Data Use Codes
     src: shared/duo.csv
 
+dataCatalog:
+  - name: accessType
+    src: shared/dataTier.csv
+  - name: countryOfOrigin
+    src: shared/sourceGeography.csv
+  - name: dataUseModifiers
+    src: shared/duo.csv
+  - name: funder
+    src: consortium/consortium_funding_agency.csv
+  - name: license
+    src: study/studyLicense.csv
+  - name: measurementTechnique
+    src: shared/assay.csv
+  - name: species
+    src: shared/dataset_species.csv
+
 education:
   - name: Resource Topic
     src: education/ed_topic.csv
@@ -308,11 +324,11 @@ study:
   - name: Study Index Date
     src: study/indexDate.csv
   - name: Study Source Geography
-    src: study/sourceGeography.csv
+    src: shared/sourceGeography.csv
   - name: Study Data Permission
     src: study/dataPermission.csv
   - name: Study Data Tier
-    src: study/dataTier.csv
+    src: shared/dataTier.csv
     
 tool:
   - name: Tool Grant Number
