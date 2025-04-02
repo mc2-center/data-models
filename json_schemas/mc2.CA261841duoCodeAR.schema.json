@@ -16,7 +16,8 @@
               "const": "RTN, NPUNCU"
             }
           }
-        }
+        },
+        "required": ["duoCodes"]
       },
       "then": {
         "properties": {
