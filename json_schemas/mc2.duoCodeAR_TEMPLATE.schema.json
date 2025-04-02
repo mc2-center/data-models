@@ -22,6 +22,9 @@
         "properties": {
           "_accessRequirementIds": {
             "type": "array",
+            "items": {
+              "type": "string"
+            },
             "contains": {
               "const": 0
             }
@@ -47,6 +50,9 @@
         "properties": {
           "_accessRequirementIds": {
             "type": "array",
+            "items": {
+              "type": "string"
+            },
             "contains": {
               "const": 0
             }
