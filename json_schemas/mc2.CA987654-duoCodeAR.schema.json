@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "MC2 Example CA987654 AR-DUO schema",
+  "$id": "MC2-CA987654-AR-DUO.1.0",
+  "description": "This example schema defines how DUO should be used for MC2 Center Synapse projects.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "duoCodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "RTN"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "_accessRequirementIds": {
+            "type": "array",
+            "contains": {
+              "const": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "duoCodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "NPU"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "_accessRequirementIds": {
+            "type": "array",
+            "contains": {
+              "const": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}
