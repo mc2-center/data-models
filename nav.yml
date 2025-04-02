@@ -1,0 +1,17 @@
+Home: 
+  - index.md
+  - home/tutorial.md
+Data Models:
+  - Dataset Data Model: model/dataset.md
+  - Dataset Sharing Plan: model/DataDSP.md
+  - Education Resource Data Model: model/education.md
+  - File Data Model: model/file.md
+  - Grant Data Model: model/grant.md
+  - Person Data Model: model/person.md
+  - Publication Data Model: model/publication.md
+  - Study Data Model: model/study.md
+  - Tool Data Model: model/tool.md
+Standard Terms:
+  - All terms: valid_values/all_terms.md
+  - Terms by model: []
+Contributing to the Data Model: contributing.md

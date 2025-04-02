@@ -1,4 +1,5 @@
 from os.path import join
+
 import pandas as pd
 import yaml
 
@@ -103,3 +104,24 @@ def on_pre_build(config, **kwargs) -> None:
     for model in DATA_MODELS.keys():
         generate_linked_model(model)
         generate_valid_values_markdown(model)
+
+
+def on_files(_, config) -> None:
+    """Updates the documentation site navigation.
+
+    This is a hacky solution to updating the nav configuration
+    to include the automated markdown pages created by the
+    generate_valid_values_markdown() function.
+    """
+    with open(NAVIGATION_FILE) as f:
+        nav_mapping = yaml.safe_load(f)
+    config["nav"] = nav_mapping
+
+    config["nav"]["Standard Terms"] = {
+        "All terms": "valid_values/all_terms.md",
+        "Terms by model": [],
+    }
+    for model, title in DATA_MODELS.items():
+        config["nav"]["Standard Terms"]["Terms by model"].append(
+            {title: join("valid_values", model + ".md")}
+        )
