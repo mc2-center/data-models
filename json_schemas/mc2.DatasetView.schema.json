@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://example.com/DatasetView_validation",
-  "title": "DatasetView_validation",
+  "title": "DatasetView_validation_EXAMPLE",
   "type": "object",
   "properties": {
     "Study Key": {
