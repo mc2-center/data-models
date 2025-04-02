@@ -49,4 +49,4 @@ It is important to note that where these examples can generally guide you on the
 
 Below is the full field reference table with attributes and their descriptions.
 
-{{ read_csv('grant/template.csv') }}
+{{ read_csv('grant/reference.csv') }}

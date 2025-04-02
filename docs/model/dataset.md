@@ -43,4 +43,4 @@ The table below includes sample values to demonstrate proper attribute usage.
 
 Below is the full field reference table with attributes and their descriptions.
 
-{{ read_csv('dataset/template.csv') }}
+{{ read_csv('dataset/reference.csv') }}
