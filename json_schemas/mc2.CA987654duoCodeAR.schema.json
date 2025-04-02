@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "MC2 Example CA987654 AR-DUO schema",
-  "$id": "MC2-CA987654-AR-DUO.1.0",
+  "$id": "Multi Consortia Coordinating Center-CA987654-duoCodeAR-11.0.0",
   "description": "This example schema defines how DUO should be used for MC2 Center Synapse projects.",
   "allOf": [
     {
