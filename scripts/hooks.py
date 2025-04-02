@@ -65,15 +65,13 @@ def generate_linked_table(model: str):
     examples_df = pd.read_csv(example_file, quoting=1).fillna("")
 
     # First select only the columns we want from annotation_df
-    df = annotation_df[
-        [
-            "Attribute",
-            "Description",
-            "Required",
-            "Validation Rules",
-            "Valid Values",
-        ]
-    ]
+    df = annotation_df[[
+        "Attribute",
+        "Description",
+        "Required",
+        "Validation Rules",
+        "Valid Values",
+    ]]
 
     # Then add the Example column and rename it to Examples
     df = df.merge(
@@ -102,9 +100,8 @@ def generate_valid_values_markdown(model: str):
     """Generate docs page for standard terms of the given data model."""
     dest_parent_dir = join("docs", "valid_values")
 
-    with open(join("modules", MAPPING_FILENAME)) as f, open(
-        join(dest_parent_dir, f"{model}.md"), "w"
-    ) as md:
+    with open(join("modules", MAPPING_FILENAME)) as f, \
+         open(join(dest_parent_dir, f"{model}.md"), "w") as md:
         mapping = yaml.safe_load(f)
 
         # Create a section in the docs page for each attribute that has a list
