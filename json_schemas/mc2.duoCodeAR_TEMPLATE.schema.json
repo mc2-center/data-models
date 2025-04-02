@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "MC2 Example AR-DUO schema",
-  "$id": "MC2-Infrastructure-Design-AR-DUO.1.0",
+  "$id": "Multi Consortia Coordinating Center-CA987654-duoCodeAR-10.0.0",
   "description": "This example schema defines how DUO should be used for MC2 Center Synapse projects.",
   "allOf": [
     {
@@ -13,7 +13,7 @@
               "type": "string"
             },
             "contains": {
-              "const": "RTN"
+              "const": "IRB"
             }
           }
         }
@@ -22,9 +22,6 @@
         "properties": {
           "_accessRequirementIds": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
             "contains": {
               "const": 0
             }
@@ -41,7 +38,7 @@
               "type": "string"
             },
             "contains": {
-              "const": "NPU"
+              "const": "HMB"
             }
           }
         }
@@ -50,9 +47,6 @@
         "properties": {
           "_accessRequirementIds": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
             "contains": {
               "const": 0
             }
