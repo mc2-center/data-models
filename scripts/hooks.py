@@ -42,14 +42,9 @@ def _create_markdown_link(attribute: str, model: str) -> str:
     return f"[{attribute}]({link_prefix}-{slug})"
 
 
-def _escape_backslashes(text: str) -> str:
-    """Escape backslashes for proper markdown rendering."""
-    return text.replace(r"\\", r"\\\\")
-
-
-def _format_validation_rules(rules: str) -> str:
+def _format_validation_rules(col: pd.Series) -> pd.Series:
     """Format validation rules, replacing empty strings with '_None_'."""
-    return _escape_backslashes(rules) if rules else "_None_"
+    return col.str.replace(r"\\", r"\\\\", regex=True).replace("", "_None_")
 
 
 # --- Core logic functions ---
@@ -70,13 +65,15 @@ def generate_linked_table(model: str):
     examples_df = pd.read_csv(example_file, quoting=1).fillna("")
 
     # First select only the columns we want from annotation_df
-    df = annotation_df[[
-        "Attribute",
-        "Description",
-        "Required",
-        "Validation Rules",
-        "Valid Values",
-    ]]
+    df = annotation_df[
+        [
+            "Attribute",
+            "Description",
+            "Required",
+            "Validation Rules",
+            "Valid Values",
+        ]
+    ]
 
     # Then add the Example column and rename it to Examples
     df = df.merge(
@@ -97,7 +94,7 @@ def generate_linked_table(model: str):
 
     # Fix any remaining rendering issues, such as escaping backslashes.
     # then output table as CSV.
-    df["Validation Rules"] = df["Validation Rules"].apply(_format_validation_rules)
+    df["Validation Rules"] = _format_validation_rules(df["Validation Rules"])
     df[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
@@ -105,8 +102,9 @@ def generate_valid_values_markdown(model: str):
     """Generate docs page for standard terms of the given data model."""
     dest_parent_dir = join("docs", "valid_values")
 
-    with open(join("modules", MAPPING_FILENAME)) as f, \
-         open(join(dest_parent_dir, f"{model}.md"), "w") as md:
+    with open(join("modules", MAPPING_FILENAME)) as f, open(
+        join(dest_parent_dir, f"{model}.md"), "w"
+    ) as md:
         mapping = yaml.safe_load(f)
 
         # Create a section in the docs page for each attribute that has a list
