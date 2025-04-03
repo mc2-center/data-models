@@ -11,7 +11,5 @@ Data Models:
   - Publication Data Model: model/publication.md
   - Study Data Model: model/study.md
   - Tool Data Model: model/tool.md
-Standard Terms:
-  - All terms: valid_values/all_terms.md
-  - Terms by model: []
+Standard Terms: {}
 Contributing to the Data Model: contributing.md
