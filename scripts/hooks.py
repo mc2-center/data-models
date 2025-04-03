@@ -1,4 +1,4 @@
-from os.path import join
+from os.path import getsize, isfile, join
 
 import pandas as pd
 import yaml
@@ -106,7 +106,7 @@ def generate_valid_values_markdown(model: str):
 
         # Create a section in the docs page for each attribute that has a list
         # of standard terms.
-        for attribute in mapping[model]:
+        for attribute in mapping.get(model, {}):
             name = attribute.get("name")
             valid_values_src = attribute.get("src")
 
@@ -152,8 +152,11 @@ def on_files(_, config):
         "Terms by model": [],
     }
 
-    # Dynamically add valid_values docs page for each data model to config.nav.
+    # Dynamically add valid_values docs page for each data model to config.nav
+    # if the docs page exists and has contents.
     for model, page_title in DATA_MODELS.items():
-        config["nav"]["Standard Terms"]["Terms by model"].append(
-            {page_title: join("valid_values", model + ".md")}
-        )
+        docs_page = join("valid_values", f"{model}.md")
+        if isfile(join("docs", docs_page)) and getsize(join("docs", docs_page)) > 0:
+            config["nav"]["Standard Terms"]["Terms by model"].append(
+                {page_title: docs_page}
+            )
