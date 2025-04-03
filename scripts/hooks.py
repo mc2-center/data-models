@@ -65,7 +65,7 @@ def generate_linked_table(model: str):
     examples_df = pd.read_csv(example_file, quoting=1).fillna("")
 
     # First select only the columns we want from annotation_df
-    df = annotation_df[[
+    table = annotation_df[[
         "Attribute",
         "Description",
         "Required",
@@ -74,14 +74,14 @@ def generate_linked_table(model: str):
     ]]
 
     # Then add the Example column and rename it to Examples
-    df = df.merge(
+    table = table.merge(
         examples_df[["Attribute", "Example"]],
         on="Attribute",
         how="left",
     ).rename(columns={"Example": "Examples"})
 
     # If attribute has a list of valid values, create a link.
-    df["Attribute"] = df.apply(
+    table["Attribute"] = table.apply(
         lambda row: (
             _create_markdown_link(row["Attribute"], model)
             if row["Valid Values"]
@@ -90,10 +90,9 @@ def generate_linked_table(model: str):
         axis=1,
     )
 
-    # Fix any remaining rendering issues, such as escaping backslashes.
-    # then output table as CSV.
-    df["Validation Rules"] = _format_validation_rules(df["Validation Rules"])
-    df[COLS_TO_RENDER].to_csv(reference_file, index=False)
+    # Fix any remaining rendering issues, then output table as CSV.
+    table["Validation Rules"] = _format_validation_rules(table["Validation Rules"])
+    table[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
 def generate_valid_values_markdown(model: str):
