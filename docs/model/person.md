@@ -45,6 +45,4 @@ The table below includes sample values to demonstrate proper attribute usage.
 
 Below is the full field reference table with attributes and their descriptions.
 
-[⤓ Download template](https://github.com/mc2-center/data-models/raw/main/templates/PersonView.csv)
-
-{{ read_csv('person/template.csv') }}
+{{ read_csv('person/reference.csv') }}
