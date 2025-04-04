@@ -1,0 +1,5 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Anonymous,Data can be viewed and downloaded anonymously by anyone on the internet.,,,FALSE,,Study Data Tier,,DUOplus5,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Open,Users must have a Synapse account to download data.,,,FALSE,,Study Data Tier,,DUOplus5,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Controlled,Users must have a Synapse account and satisfy access conditions to download data.,,,FALSE,,Study Data Tier,,DUOplus5,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Private,Users must be provided access to data in Synapse by a project administrator.,,,FALSE,,Study Data Tier,,DUOplus5,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,

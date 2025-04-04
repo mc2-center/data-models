@@ -47,6 +47,8 @@
     src: biospecimen/specimenIncidence.csv
   - name: Biospecimen Acquisition Method
     src: biospecimen/acquisitionMethod.csv
+  - name: Biospecimen Treatment Type
+    src: shared/treatmentType.csv
 
 consortium:
   - name: Consortium Funding Agency
@@ -83,6 +85,22 @@ sharingPlans:
     src: file/processLevel.csv
   - name: DSP Data Use Codes
     src: shared/duo.csv
+
+dataCatalog:
+  - name: accessType
+    src: shared/dataTier.csv
+  - name: countryOfOrigin
+    src: shared/sourceGeography.csv
+  - name: dataUseModifiers
+    src: shared/duo.csv
+  - name: funder
+    src: consortium/consortium_funding_agency.csv
+  - name: license
+    src: study/studyLicense.csv
+  - name: measurementTechnique
+    src: shared/assay.csv
+  - name: species
+    src: shared/dataset_species.csv
 
 education:
   - name: Resource Topic
@@ -207,6 +225,8 @@ individual:
     src: shared/primaryDiagnosisCDS.csv
   - name: Individual Primary Site
     src: shared/primaryDiseaseSite.csv
+  - name: Individual Vital Status
+    src: individual/vitalStatus.csv
 
 institution:
   - name: Institution Location State
@@ -303,6 +323,12 @@ study:
     src: study/studyLicense.csv
   - name: Study Index Date
     src: study/indexDate.csv
+  - name: Study Source Geography
+    src: shared/sourceGeography.csv
+  - name: Study Data Permission
+    src: study/dataPermission.csv
+  - name: Study Data Tier
+    src: shared/dataTier.csv
     
 tool:
   - name: Tool Grant Number
