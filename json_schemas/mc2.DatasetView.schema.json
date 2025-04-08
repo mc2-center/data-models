@@ -21,6 +21,7 @@
     },
     "Dataset File Formats": {
       "type": "array",
+      "title": "DatasetFileFormats",
       "items": {
         "enum": [
           "PNG",
