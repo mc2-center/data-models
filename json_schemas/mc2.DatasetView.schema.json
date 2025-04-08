@@ -4,22 +4,22 @@
   "title": "DatasetView_validation_EXAMPLE",
   "type": "object",
   "properties": {
-    "StudyKey": {
+    "Study Key": {
       "type": "string",
       "title": "StudyKey",
       "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components."
     },
-    "PublicationViewKey": {
+    "PublicationView Key": {
       "type": "string",
       "title": "PublicationViewKey",
       "description": "Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection."
     },
-    "GrantViewKey": {
+    "GrantView Key": {
       "type": "string",
       "title": "GrantViewKey",
       "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection."
     },
-    "DatasetFileFormats": {
+    "Dataset File Formats": {
       "type": "array",
       "items": {
         "enum": [
@@ -107,13 +107,13 @@
         ]
       }
     },
-    "DatasetDesign": {
+    "Dataset Design": {
       "type": "string",
       "title": "DatasetDesign",
       "description": "The overall design of the dataset.",
       "maxLength": 500
     },
-    "DatasetName": {
+    "Dataset Name": {
       "not": {
         "type": "null"
       },
@@ -122,7 +122,7 @@
       "description": "Name of the dataset.",
       "maxLength": 250
     },
-    "DataUseCodes": {
+    "Data Use Codes": {
       "type": "array",
       "title": "DataUseCodes",
       "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/file/#attribute-data-use-codes",
@@ -156,7 +156,7 @@
         ]
       }
     },
-    "DatasetAlias": {
+    "Dataset Alias": {
       "type": "string",
       "title": "DatasetAlias",
       "description": "Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345 or the dataset Synapse Id",
@@ -165,7 +165,7 @@
       },
       "minLength": 1
     },
-    "DatasetUrl": {
+    "Dataset Url": {
       "type": "string",
       "title": "DatasetUrl",
       "description": "The url of where the dataset is stored.",
@@ -174,7 +174,7 @@
       },
       "minLength": 1
     },
-    "DatasetAssay": {
+    "Dataset Assay": {
       "type": "array",
       "title": "DatasetAssay",
       "description": "The assay(s) the dataset is representative of.",
@@ -562,7 +562,7 @@
         ]
       }
     },
-    "DatasetDescription": {
+    "Dataset Description": {
       "type": "string",
       "title": "DatasetDescription",
       "description": "Text description of the dataset.",
@@ -577,7 +577,7 @@
       },
       "minLength": 1
     },
-    "DatasetSpecies": {
+    "Dataset Species": {
       "type": "array",
       "title": "DatasetSpecies",
       "description": "The species the data was collected on.",
@@ -614,7 +614,7 @@
         ]
       }
     },
-    "DatasetTumorType": {
+    "Dataset Tumor Type": {
       "type": "array",
       "title": "DatasetTumorType",
       "description": "The tumor type(s), if applicable, of the data collected on",
@@ -810,7 +810,7 @@
         ]
       }
     },
-    "DatasetTissue": {
+    "Dataset Tissue": {
       "type": "array",
       "title": "DatasetTissue",
       "description": "Tissue type(s) associated with the dataset",
@@ -943,7 +943,7 @@
       },
       "minLength": 1
     },
-    "DatasetDoi":{
+    "Dataset Doi":{
       "type": "string",
       "title": "DatasetDoi",
       "description": "The Digital Object Identifier (DOI) associated with the dataset.",
