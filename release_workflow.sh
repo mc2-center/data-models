@@ -6,7 +6,7 @@
 #- update controlled vocabulary sets listed in annotationProperty.csv files and the all_valid_values.csv
 #- build a model CSV and convert to JSON-LD, using schematic
 #- create CSV template files, saving them in a new 'template' folder
-#- generate Google Sheet links and print to terminal
+#- generate Google Sheet links and save them in a local file 'release_output.txt'
 
 #Intended for use when creating a data model release package.
 
@@ -17,7 +17,7 @@
 config="$1"
 homedir="$2"
 convert="$3"
-datatypes="DataDSP Individual Study Model FileView ImagingChannel ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 SequencingLevel1 SequencingLevel2 SequencingLevel3 SequencingRNALevel1 10xVisiumAuxiliaryFiles 10xVisiumRNALevel1 10xVisiumRNALevel2 10xVisiumRNALevel3 10xVisiumRNALevel4 Biospecimen PersonView PublicationView GrantView ToolView EducationalResource NanoStringGeoMxAuxiliaryFiles NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMxDSPImaging NanoStringGeoMXROISegmentAnnotation DatasetView ProjectView"
+datatypes="DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView PersonView"
 
 cd "$homedir"
 
@@ -31,9 +31,9 @@ fi
 
 for i in $datatypes;
 do
-	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s || continue
+	schematic manifest -c "$config" get -dt "$i" -o "$homedir/templates/$i.csv" -s >> release_output.txt || continue
 done
 
 #clean up leftover files
-mv *.schema.json json_schemas
-rm -r *.manifest.csv
+rm *.schema.json
+rm *.manifest.csv

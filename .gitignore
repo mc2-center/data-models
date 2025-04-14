@@ -49,3 +49,6 @@ great_expectations/
 
 # MKDocs
 scripts/__pycache__
+
+# Release workflow outputs
+release_output.txt
