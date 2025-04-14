@@ -6,7 +6,7 @@
 #- update controlled vocabulary sets listed in annotationProperty.csv files and the all_valid_values.csv
 #- build a model CSV and convert to JSON-LD, using schematic
 #- create CSV template files, saving them in a new 'template' folder
-#- generate Google Sheet links and print to terminal
+#- generate Google Sheet links and save them in a local file 'release_output.txt'
 
 #Intended for use when creating a data model release package.
 
