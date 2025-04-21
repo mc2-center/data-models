@@ -42,9 +42,9 @@ This will open a CSV file in a Google Sheet on your computer. You can save this 
 
 Open the downloaded CSV template and fill in your data. Use the descriptions and examples provided in the Data Models section to guide you. Below is an example of a completed **Dataset** template:
 
-| **Dataset Name**                         | **Dataset Alias** | **Dataset Description**                                                                                                                                                           | **Dataset Url**                                                                         | **Dataset Assay** | **Dataset Species** | **Dataset Tumor Type** | **Dataset Tissue** | **Dataset File Formats** | **Dataset Grant Number** | **Dataset Pubmed Id** | **Dataset View** | **DatasetView_id**       |
-|-------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------|---------------------|-------------------------|-------------------|---------------------------|--------------------------|------------------------|-----------------|---------------------------|
-| RNA Sequencing of Lung Cancer Samples 2021 | GSE56789          | This dataset contains RNA sequencing data from 200 lung cancer samples... | [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789) | RNA Sequencing   | Homo sapiens         | Glioblastoma            | Lung              | CSV, PDF                  | CA209971                 | Not applicable         | Table           | DatasetView_12345         |
+| **DatasetName** | **DatasetAlias** | **DatasetDescription** | **DatasetUrl** | **DatasetAssay** | **DatasetSpecies** | **DatasetTumorType** | **DatasetTissue** | **DatasetFileFormats** | **DatasetGrantNumber** | **DatasetPubmedId** | **DatasetView** | **DatasetView_id** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| RNASequencingofLungCancerSamples2021 | GSE56789 | This dataset contains RNA sequencing data from 200 lung cancer samples... | [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789) | RNASequencing | Homo sapiens | Glioblastoma | Lung | CSV,PDF | CA209971 | Not applicable | | |
 
 !!!important  
     Please note that to successfully upload this template, you will need to input the following for steps 1-4:
@@ -86,4 +86,3 @@ Now that you've learned how to use the Data Curator App with templates, explore 
 | Tool Data Model           | Use this to describe tools, software, or resources used for data collection, analysis, or visualization. | [Tool Data Model](../model/tool.md)      |
 
 Explore these links to find the right template for your data and continue with your submissions.
-

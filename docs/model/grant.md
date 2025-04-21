@@ -28,26 +28,25 @@ Use the [grant entry template](https://github.com/mc2-center/data-models/raw/mai
 The table below includes sample values to demonstrate proper attribute usage.
 It is important to note that where these examples can generally guide you on the structure of the Grant entry, these fields will generally be curated by a member of the MC2 personnel near the beginning of the grant funding period and will be made available via Synapse. 
 
-| **Attribute**              | **Example Value**                                                                                           |
-|----------------------------|-------------------------------------------------------------------------------------------------------------|
-| Grant Name                 | Research Grant for Cancer Genomics                                                                           |
-| Grant Number               | CA209971                                                                                                     |
-| Grant Abstract             | This grant funds research into genetic mutations contributing to aggressive cancers, focusing on tumor sequencing and gene expression analysis. |
-| Grant Type                 | R37                                                                                                          |
-| Grant View                 | Public                                                                                                       |
-| Grant Theme Name           | Cancer Genomics, Precision Medicine                                                                          |
-| Grant Institution Name      | Stanford University                                                                                         |
-| Grant Institution Alias    | Stanford                                                                                                     |
-| Grant Investigator         | Dr. John Smith                                                                                               |
-| Grant Consortium Name      | HTAN                                                                                                         |
-| GrantView_id               | GV12345                                                                                                      |
-| Grant Synapse Team         | Team: Project Management, Permission: Edit                                                                   |
-| Grant Synapse Project      | Synapse_ID: syn123456789, Grant_Name: NIH Brain Initiative Grant                                             |
-| Grant Start Date           | 2022-01-01                                                                                                   |
-| NIH RePORTER Link          | [NIH Reporter Project Info](https://projectreporter.nih.gov/project_info_description.cfm?aid=9813521)         |
-| Duration of Funding        | 5 years                                                                                                      |
-| Embargo End Date           | 2023-12-31                                                                                                   |
-
+| **Attribute** | **Example Value** |
+|---|---|
+| Grant Name | Research Grant for Cancer Genomics |
+| Grant Number | CA209971 |
+| Grant Abstract | This grant funds research into genetic mutations contributing to aggressive cancers, focusing on tumor sequencing and gene expression analysis. |
+| Grant Type | R37 |
+| Grant View | Public |
+| Grant Theme Name | Cancer Genomics, Precision Medicine |
+| Grant Institution Name | Stanford University |
+| Grant Institution Alias | Stanford |
+| Grant Investigator | Dr. John Smith |
+| Grant Consortium Name | HTAN |
+| GrantView_id | GV12345 |
+| Grant Synapse Team | Team: Project Management, Permission: Edit |
+| Grant Synapse Project | Synapse_ID: syn123456789, Grant_Name: NIH Brain Initiative Grant |
+| Grant Start Date | 2022-01-01 |
+| NIH RePORTER Link | [NIH Reporter Project Info](https://projectreporter.nih.gov/project_info_description.cfm?aid=9813521) |
+| Duration of Funding | 5 years |
+| Embargo End Date | 2023-12-31 |
 
 
 ## Full Field Reference

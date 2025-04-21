@@ -23,24 +23,24 @@ You can submit dataset entries for data stored both within and outside of Synaps
 You can download the [dataset entry template](https://github.com/mc2-center/data-models/raw/main/templates/DatasetView.csv), which includes all required fields, to streamline the data entry process.
 
 ## Example Data Entry
+
 The table below includes sample values to demonstrate proper attribute usage.
 
-| **Attribute**           | **Example Value**                                                                                       |
-|-------------------------|---------------------------------------------------------------------------------------------------------|
-| Dataset Name            | RNA Sequencing of Lung Cancer Samples 2021                                                                                   |
-| Dataset Alias           | GSE56789                                                                                             |
-| Dataset Description     | This dataset contains RNA sequencing data from 200 lung cancer samples, including gene expression profiles and patient clinical data. It is designed to study differential gene expression and mutation burden across tumor stages.             |
-| Dataset Url             | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789                                    |
-| Dataset Assay           | RNA Sequencing                                                                                                    |
-| Dataset Species         | Homo sapiens                                                                                                   |
-| Dataset Tumor Type      | Glioblastoma                                                                                          |
-| Dataset Tissue          | Lung                                                                                          |
-| Dataset File Formats    | CSV, PDF                                                                                                |
-| Dataset Grant Number    | CA209971                                                                                                |
-| Dataset Pubmed Id       | Not applicable                                                                                          |
-| Dataset View            | Table                                                                                                   |
-| DatasetView_id          | DatasetView_12345                                                                                       |
-
+| **Attribute** | **Example Value** |
+|---|---|
+| Dataset Name | RNA Sequencing of Lung Cancer Samples 2021 |
+| Dataset Alias | GSE56789 |
+| Dataset Description | This dataset contains RNA sequencing data from 200 lung cancer samples, including gene expression profiles and patient clinical data. It is designed to study differential gene expression and mutation burden across tumor stages. |
+| Dataset Url | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789 |
+| Dataset Assay | RNA Sequencing |
+| Dataset Species | Homo sapiens |
+| Dataset Tumor Type | Glioblastoma |
+| Dataset Tissue | Lung |
+| Dataset File Formats | CSV, PDF |
+| Dataset Grant Number | CA209971 |
+| Dataset Pubmed Id | Not applicable |
+| Dataset View | Table |
+| DatasetView_id | DatasetView_12345 |
 
 
 ## Full Field Reference

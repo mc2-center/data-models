@@ -22,20 +22,21 @@ Download the [DataDSP CSV template](https://github.com/mc2-center/data-models/ra
 
 
 ## Example Data Entry
+
 The table below includes sample values to demonstrate proper attribute usage.
 
-| **Attribute**               | **Example Value**                                                                                                      |
-|-----------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| DSP Dataset Name            | DSP_Dataset_Lung_Research_2021                                                                                          |
-| DSP Dataset Alias           | Syn123456                                                                                                          |
-| DSP Dataset Assay           | 3D Bioprinting                                                                                                           |
-| DSP Dataset Species         | Asian Elephant                                                                                                           |
-| DSP Dataset File Formats    | CSV, JSON                                                                                                                |
-| DSP Planned Upload Date     | 2022-12-01                                                                                                               |
-| DSP Dataset Grant Number    | CA209971                                                                                                                  |
-| DSP Dataset Description     | "A quick description of your data sharing plan."            |
-| DSP Dataset Destination     | "/home/user/datasets/dsp_output"                                                                                          |
-| DSP Dataset Url             | https://www.example.com/dataset/dsp1234                                                                                   |
+| **Attribute** | **Example Value** |
+|---|---|
+| DSP Dataset Name | DSP_Dataset_Lung_Research_2021 |
+| DSP Dataset Alias | Syn123456 |
+| DSP Dataset Assay | 3D Bioprinting |
+| DSP Dataset Species | Asian Elephant |
+| DSP Dataset File Formats | CSV, JSON |
+| DSP Planned Upload Date | 2022-12-01 |
+| DSP Dataset Grant Number | CA209971 |
+| DSP Dataset Description | "A quick description of your data sharing plan." |
+| DSP Dataset Destination | "/home/user/datasets/dsp_output" |
+| DSP Dataset Url | https://www.example.com/dataset/dsp1234 |
 
 
 ## Full Field Reference
