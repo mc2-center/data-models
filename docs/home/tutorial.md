@@ -5,23 +5,29 @@ This tutorial will guide you through using the templates provided in the Data Mo
 Access the Data Curator App here: [Data Curator App](https://dca.app.sagebionetworks.org/)
 
 
-## **Step 1: Select a Data Coordination Center (DCC)**  
+## Step 1: Select a Data Coordination Center (DCC)**
+
 After launching the app, choose the relevant DCC from the dropdown menu. For example, select **DCA Demo**.
 
 ![Step 1: Select a DCC](../assets/dca-tutorial/select_dcc.png)
 
-## **Step 2: Choose a Project**
+
+## Step 2: Choose a Project
+
 Select the project you want to work with, such as **FAIR Demo Data**.
 
 ![Step 2: Select a Project](../assets/dca-tutorial/select_project.png)
 
 
-## **Step 3: Select a Folder**
+## Step 3: Select a Folder
+
 Choose the appropriate folder for your data. For example, select **A Biospecimen**.
 
 ![Step 3: Select a Folder](../assets/dca-tutorial/select_folder.png)
 
-## **Step 4: Select a Template**
+
+## Step 4: Select a Template
+
 Choose a template that matches the type of data you're working with. The templates available in this app align with the templates provided in the Data Models section of this documentation. Download the selected template to your computer.
 
 ![Step 4: Select a Template](../assets/dca-tutorial/select_template.png)
@@ -32,8 +38,8 @@ This will open a CSV file in a Google Sheet on your computer. You can save this 
 ![Step 4: Biospecimen Template](../assets/dca-tutorial/dca_demo_biospecimen_template.png)
 
 
+## Step 5: Populate the Template with Your Data
 
-## **Step 5: Populate the Template with Your Data**
 Open the downloaded CSV template and fill in your data. Use the descriptions and examples provided in the Data Models section to guide you. Below is an example of a completed **Dataset** template:
 
 | **Dataset Name**                         | **Dataset Alias** | **Dataset Description**                                                                                                                                                           | **Dataset Url**                                                                         | **Dataset Assay** | **Dataset Species** | **Dataset Tumor Type** | **Dataset Tissue** | **Dataset File Formats** | **Dataset Grant Number** | **Dataset Pubmed Id** | **Dataset View** | **DatasetView_id**       |
@@ -50,17 +56,20 @@ Open the downloaded CSV template and fill in your data. Use the descriptions and
 
 
 
-## **Step 6: Upload and Validate Metadata**
+## Step 6: Upload and Validate Metadata
+
 Upload the completed CSV template back into the Data Curator App and proceed to validate your metadata. The app will check for errors and inconsistencies.
 
 ![Step 6: Upload CSV](../assets/dca-tutorial/validate_submit_metadata.png)
 
-## **Benefits of Using the Data Curator App**
+
+## Benefits of Using the Data Curator App
 - **Ease of Use:** Templates are pre-structured, making it easy to input your data correctly.
 - **Metadata Consistency:** The app validates your data to ensure compliance with predefined models and metadata standards.
 - **Efficient Submission:** By using the templates and app, you reduce the risk of errors during submission to data portals like the [**Cancer Complexity Knowledge Portal**](https://www.cancercomplexity.synapse.org/).
 
-## **Next Steps**
+
+## Next Steps
 
 Now that you've learned how to use the Data Curator App with templates, explore other data models to match the specific type of data you're working with. Each template is designed to help you organize and submit structured metadata for various research elements.
 
