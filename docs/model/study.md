@@ -1,10 +1,13 @@
 A **Study** entry documents key information about research projects, including methodologies, participants, and ethical considerations. Properly maintaining study records ensures that data is compliant with research standards, traceable, and usable across various scientific fields. This section explains how to create and maintain a valid study entry using the required fields, templates, and example data provided.
 
 
-### **Why You Should Contribute Study Entries**
+## Why You Should Contribute Study Entries
+
 Contributing study entries ensures that critical research details such as methodology, investigators, and related datasets are documented and accessible. This fosters transparency, collaboration, and reproducibility in research. A well-maintained study entry also helps stakeholders understand the scope, purpose, and outcomes of research efforts, enabling better data integration and analysis across projects.
 
-#### **Who Should Be Contributing Study Entries?**
+
+### Who Should Be Contributing Study Entries?
+
 1. **Principal Investigators (PIs)** – Provide clear documentation of your studies to enhance visibility and demonstrate research contributions for funding agencies and collaborators.
 
 2. **Research Coordinators and Project Leads** – Ensure proper record-keeping of studies under your supervision, supporting compliance, reporting, and resource allocation.
@@ -19,10 +22,12 @@ Contributing study entries ensures that critical research details such as method
 
 
 ## Download Template
+
 To streamline the process, download the [study entry template](https://github.com/mc2-center/data-models/raw/main/templates/Study.csv) for standardized data entry.
 
 
 ## Example Data Entry
+
 The table below includes sample values to demonstrate proper attribute usage.
 
 | **Attribute**                       | **Example Value**                                                                                                    |

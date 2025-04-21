@@ -2,10 +2,14 @@ A **Dataset Sharing Plan (DataDSP)** is a structured framework used to document 
 
 This page outlines the key attributes required to create a data sharing plan, guiding users on how to structure and share datasets while adhering to best practices. It also demonstrates how attributes like planned upload dates, file formats, and grant numbers are used to ensure compliance with both internal and external data-sharing policies.
 
-## **Why You Should Contribute DataDSP Entries**
+
+## Why You Should Contribute DataDSP Entries
+
 Contributing DataDSP entries benefits your research and projects by improving data accessibility, organization, and compliance. With complete entries, you enhance collaboration opportunities, simplify data sharing, and increase the impact and visibility of your datasets in research communities. By ensuring your data is properly documented and discoverable, you also reduce administrative burdens during audits, grant reporting, and data requests.
 
-### **Who Should Be Contributing DataDSP Entries?**
+
+### Who Should Be Contributing DataDSP Entries?
+
 1. **Principal Investigators (PIs)** – Gain recognition for your research by making your data easily accessible and well-documented, improving citation potential and collaboration opportunities.  
 2. **Data Managers** – Ensure efficient data organization and compliance, minimizing time spent addressing data queries or audits.  
 3. **Research Coordinators** – Streamline project workflows by contributing accurate metadata, reducing delays in data sharing and project reporting.  
@@ -13,6 +17,7 @@ Contributing DataDSP entries benefits your research and projects by improving da
 
 
 ## Download Template
+
 Download the [DataDSP CSV template](https://github.com/mc2-center/data-models/raw/main/templates/DataDSP.csv) for streamlined data entry, ensuring that all required fields are filled out.
 
 

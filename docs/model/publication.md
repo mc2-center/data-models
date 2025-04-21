@@ -1,9 +1,13 @@
 A **Publication** entry documents key information about scientific articles, research studies, and related materials. Properly recording publications ensures that data is easily traceable, searchable, and meets compliance standards. This section explains how to create a valid publication entry using required fields, templates, and example data for guidance.
 
-### **Why You Should Contribute Publication Entries**
+
+## Why You Should Contribute Publication Entries
+
 Contributing publication entries helps highlight research achievements, supports compliance with funding and reporting requirements, and ensures the discoverability of research outputs. Accurate publication records promote transparency, facilitate citation tracking, and showcase the impact of research to stakeholders. Including comprehensive details such as PubMed IDs, keywords, and grant numbers enables efficient data organization and cross-referencing within research ecosystems.
 
-#### **Who Should Be Contributing Publication Entries?**
+
+### Who Should Be Contributing Publication Entries?
+
 1. **Researchers and Authors** – Showcase your research contributions, improve visibility, and enable easier access to your published work through linked identifiers and citations.  
 2. **Project Leads and Investigators** – Ensure that key publications resulting from funded research projects are documented, supporting compliance and progress reporting.  
 3. **Research Administrators** – Maintain an accurate record of research outputs tied to grants and projects, which aids in tracking productivity and measuring impact.  
@@ -12,9 +16,12 @@ Contributing publication entries helps highlight research achievements, supports
 
 
 ## Download Template
+
 Download the [publication entry template](https://github.com/mc2-center/data-models/raw/main/templates/PublicationView.csv) to streamline data entry and ensure required fields are completed.
 
+
 ## Example Data Entry
+
 The table below includes sample values to demonstrate proper attribute usage.
 
 | **Attribute**              | **Example Value**                                                                                                  |

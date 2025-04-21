@@ -2,10 +2,14 @@ An **Educational Resource** refers to any material designed to support learning 
 
 This model defines attributes to describe each resource, including its title, topic, educational level, and usage, to facilitate discovery, sharing, and reuse within educational systems.
 
-## **Why You Should Contribute Educational Resource Entries**
+
+## Why You Should Contribute Educational Resource Entries
+
 Contributing educational resource entries helps expand access to valuable learning materials and supports knowledge sharing across the research and educational community. By documenting your resources thoroughly, you increase their discoverability, usability, and impact. Well-structured educational entries also provide opportunities for collaboration, curriculum development, and outreach, ensuring your work benefits a broader audience.
 
-### **Who Should Be Contributing Educational Resource Entries?**
+
+### Who Should Be Contributing Educational Resource Entries?
+
 1. **Educators and Trainers** – Increase the reach of your courses, workshops, and materials by making them easily accessible and categorized for learners.  
 2. **Curriculum Developers** – Contribute structured content that aligns with learning objectives and supports interdisciplinary research education.  
 3. **Researchers** – Share resources like tutorials, research guides, and recorded presentations to help others understand your methods and findings.  
@@ -14,9 +18,12 @@ Contributing educational resource entries helps expand access to valuable learni
 
 
 ## Download Template
+
 Use the [educational resource template](https://github.com/mc2-center/data-models/raw/main/templates/EducationalResource.csv) to streamline your data entry process. The template contains pre-defined required fields.
 
+
 ## Example Data Entry
+
 The table below includes sample values to demonstrate proper attribute usage.
 
 | **Attribute**              | **Example Value**                                                                                           |
