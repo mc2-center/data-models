@@ -1,0 +1,111 @@
+component,attribute,mapping,tag,filter
+PublicationView,Pubmed Id,first,aliasColumn,all
+PublicationView,Component,first,componentColumn,
+PublicationView,PublicationView_id,""","".join",idColumn,strict
+PublicationView,GrantView Key,""","".join",grantColumn,
+PublicationView,Study Key,""","".join",studyColumn,
+PublicationView,Publication Doi,first,,
+PublicationView,Publication Journal,first,,
+PublicationView,Pubmed Url,first,,strict
+PublicationView,Publication Title,first,,
+PublicationView,Publication Year,first,,
+PublicationView,Publication Keywords,first,,
+PublicationView,Publication Authors,first,,
+PublicationView,Publication Abstract,first,,
+PublicationView,Publication Assay,first,,strict
+PublicationView,Publication Tumor Type,first,,strict
+PublicationView,Publication Tissue,first,,strict
+PublicationView,Publication Accessibility,first,,all
+PublicationView,Publication Dataset Alias,first,,
+DatasetView,Dataset Alias,first,aliasColumn,all
+DatasetView,Component,first,componentColumn,
+DatasetView,DatasetView_id,""","".join",idColumn,all
+DatasetView,GrantView Key,""","".join",grantColumn,
+DatasetView,Study Key,""","".join",studyColumn,
+DatasetView,PublicationView Key,""","".join",pubsColumn,
+DatasetView,Dataset Name,first,,
+DatasetView,Dataset Description,first,,
+DatasetView,Dataset Design,first,,
+DatasetView,Dataset Assay,first,,strict
+DatasetView,Dataset Species,first,,strict
+DatasetView,Dataset Tumor Type,first,,strict
+DatasetView,Dataset Tissue,first,,strict
+DatasetView,Dataset Url,first,,all
+DatasetView,Dataset Doi,first,,
+DatasetView,Dataset File Formats,first,,strict
+DatasetView,Data Use Codes,""","".join",,
+DatasetView,entityId,""","".join",,
+ToolView,Tool Name,first,aliasColumn,all
+ToolView,Component,first,componentColumn,
+ToolView,ToolView_id,""","".join",idColumn,strict
+ToolView,PublicationView Key,""","".join",pubsColumn,
+ToolView,GrantView Key,""","".join",grantColumn,
+ToolView,Study Key,""","".join",studyColumn,
+ToolView,DatasetView Key,""","".join",datasetsColumn,
+ToolView,Tool Description,first,,
+ToolView,Tool Homepage,first,,strict
+ToolView,Tool Version,first,,
+ToolView,Tool Operation,first,,
+ToolView,Tool Input Data,first,,
+ToolView,Tool Output Data,first,,
+ToolView,Tool Input Format,first,,
+ToolView,Tool Output Format,first,,
+ToolView,Tool Function Note,first,,
+ToolView,Tool Cmd,first,,
+ToolView,Tool Type,first,,strict
+ToolView,Tool Topic,first,,strict
+ToolView,Tool Operating System,first,,
+ToolView,Tool Language,first,,strict
+ToolView,Tool License,first,,
+ToolView,Tool Cost,first,,
+ToolView,Tool Accessibility,first,,
+ToolView,Tool Download Url,first,,
+ToolView,Tool Download Type,first,,
+ToolView,Tool Download Note,first,,
+ToolView,Tool Download Version,first,,
+ToolView,Tool Documentation Url,first,,strict
+ToolView,Tool Documentation Type,first,,strict
+ToolView,Tool Documentation Note,first,,
+ToolView,Tool Link Url,first,,
+ToolView,Tool Link Type,first,,
+ToolView,Tool Link Note,first,,
+ToolView,Tool Doi,first,,
+ToolView,Tool Date Last Modified,first,,
+ToolView,Tool Release Date,first,,
+ToolView,Tool Package Dependencies,first,,
+ToolView,Tool Package Dependencies Present,first,,
+ToolView,Tool Compute Requirements,first,,
+ToolView,Tool Entity Name,first,,
+ToolView,Tool Entity Type,first,,
+ToolView,Tool Entity Role,first,,
+ToolView,entityId,""","".join",,
+EducationalResource,Resource Alias,first,aliasColumn,all
+EducationalResource,Component,first,componentColumn,
+EducationalResource,EducationalResource_id,""","".join",idColumn,all
+EducationalResource,PublicationView Key,""","".join",pubsColumn,
+EducationalResource,GrantView Key,""","".join",grantColumn,
+EducationalResource,Study Key,""","".join",studyColumn,
+EducationalResource,DatasetView Key,""","".join",datasetsColumn,
+EducationalResource,ToolView Key,""","".join",toolsColumn,
+EducationalResource,Resource Title,first,,
+EducationalResource,Resource Link,first,,
+EducationalResource,Resource Doi,first,,
+EducationalResource,Resource Topic,first,,
+EducationalResource,Resource Activity Type,first,,
+EducationalResource,Resource Primary Format,first,,
+EducationalResource,Resource Intended Use,first,,
+EducationalResource,Resource Primary Audience,first,,
+EducationalResource,Resource Educational Level,first,,
+EducationalResource,Resource Description,first,,
+EducationalResource,Resource Origin Institution,first,,
+EducationalResource,Resource Language,first,,
+EducationalResource,Resource Contributors,first,,
+EducationalResource,Resource Secondary Topic,first,,
+EducationalResource,Resource License,first,,
+EducationalResource,Resource Use Requirements,first,,
+EducationalResource,Resource Internal Identifier,first,,
+EducationalResource,Resource Media Accessibility,first,,
+EducationalResource,Resource Access Hazard,first,,
+EducationalResource,Resource Dataset Alias,first,,
+EducationalResource,Resource Tool Link,first,,
+EducationalResource,entityId,""","".join",,
