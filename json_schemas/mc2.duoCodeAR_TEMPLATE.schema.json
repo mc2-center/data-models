@@ -16,7 +16,8 @@
               "const": "IRB"
             }
           }
-        }
+        },
+        "required": ["duoCodes"]
       },
       "then": {
         "properties": {
@@ -41,7 +42,8 @@
               "const": "HMB"
             }
           }
-        }
+        },
+        "required": ["duoCodes"]
       },
       "then": {
         "properties": {
