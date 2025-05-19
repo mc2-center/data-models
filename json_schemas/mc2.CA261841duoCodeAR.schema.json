@@ -1,7 +1,6 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "MC2 CA261841 AR-DUO schema",
-  "$id": "Multi Consortia Coordinating Center-CA261841-duoCodeAR-10.0.0",
+{"$schema": "http://json-schema.org/draft-07/schema",
+  "title": "MC2CA261841AR-DUOschema",
+  "$id": "MultiConsortiaCoordinatingCenter-CA261841-duoCodeAR",
   "description": "This schema defines how data may be accessed for study CA261841-CR_2024",
   "allOf": [
     {
