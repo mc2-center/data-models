@@ -1,2 +1,2 @@
-DUO_Code,Access_Requirement_ID,Grant_Number,Data_Type
-"RTN, NPUNCU",9606628,CA261841,
+dataUseModifiers,accessRequirementId,activatedByAttribute,activationValue,grantNumber,dataType,entityIdList
+"RTN, NPUNCU",9606628,,,"CA261841",,"syn64713260, syn64713261, syn64713336, syn64780964, syn64779989, syn64713344, syn64713343"
