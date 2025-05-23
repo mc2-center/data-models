@@ -1,4 +1,0 @@
-dataUseModifiers,accessRequirementId,activatedByAttribute,activationValue,grantNumber,dataType,entityIdList
-"IRB",1000001,activateRequirements,True,CA000001,sequencingLevel1Human,syn66638835
-"NPU",1000002,activateRequirements,True,CA000002,imagingLevel2Mouse,syn66638836
-"HMB",1000003,activateRequirements,True,CA000003,proteomicsLevel2Human,syn66638837
