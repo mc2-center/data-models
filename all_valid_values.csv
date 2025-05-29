@@ -7973,6 +7973,7 @@ dataset_file_format,COOL,
 dataset_file_format,CSV,
 dataset_file_format,DAE,
 dataset_file_format,DB,
+dataset_file_format,DCC,
 dataset_file_format,DS_Store,
 dataset_file_format,FASTA,
 dataset_file_format,FASTQ,
@@ -8579,6 +8580,7 @@ assay,SDS-PAGE,
 assay,Cell Fractionation,
 assay,Multiscale Light Sheet Microscopy,
 assay,Light Sheet Microscopy,
+assay,CODEX,
 tissue,Gonad,"Gonadal, Gonads"
 tissue,Abdominal Esophagus,"ESOPHAGUS, ABDOMINAL"
 tissue,Adipose Tissue,"Adipose, Body Fat, Fat Tissue, Human Adipose Tissue"
