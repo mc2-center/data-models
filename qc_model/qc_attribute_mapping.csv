@@ -17,6 +17,7 @@ PublicationView,Publication Tumor Type,first,,strict
 PublicationView,Publication Tissue,first,,strict
 PublicationView,Publication Accessibility,first,,all
 PublicationView,Publication Dataset Alias,first,,
+PublicationView,entityId,""","".join",,
 DatasetView,Dataset Alias,first,aliasColumn,all
 DatasetView,Component,first,componentColumn,
 DatasetView,DatasetView_id,""","".join",idColumn,all

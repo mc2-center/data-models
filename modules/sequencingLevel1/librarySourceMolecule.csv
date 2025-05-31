@@ -1,0 +1,7 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Genomic DNA,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+Metagenomic,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+Metatranscriptomic,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+Not Reported,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+Transcriptome,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+Viral RNA,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
