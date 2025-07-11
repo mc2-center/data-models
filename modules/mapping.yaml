@@ -293,8 +293,10 @@ sequencingLevel1:
     src: sequencingLevel1/libraryLayout.csv
   - name: NGS Library Strategy
     src: sequencingLevel1/libraryStrategy.csv
-  - name: NGS Library Source
-    src: sequencingLevel1/librarySource.csv
+  - name: NGS Library Source Material
+    src: sequencingLevel1/librarySourceMaterial.csv
+  - name: NGS Library Source Molecule
+    src: sequencingLevel1/librarySourceMolecule.csv
   - name: NGS Library Selection Method
     src: sequencingLevel1/librarySelection.csv
 
