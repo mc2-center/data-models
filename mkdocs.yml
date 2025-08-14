@@ -7,32 +7,9 @@ site_description: >-
 repo_url: https://github.com/mc2-center/data-models
 repo_name: data-models
 
-# Navigation
+# Navigation - see nav.yml to edit the actual navigation
 nav:
-  - Home: index.md
-  - Data Models:
-      - Dataset Data Model: model/dataset.md
-      - Dataset Sharing Plan: model/DataDSP.md
-      - Education Resource Data Model: model/education.md
-      - File Data Model: model/file.md
-      - Grant Data Model: model/grant.md
-      - Person Data Model: model/person.md
-      - Publication Data Model: model/publication.md
-      - Study Data Model: model/study.md
-      - Tool Data Model: model/tool.md
-     
-  - Standard Terms:
-    - All terms: valid_values/all_terms.md
-    - Terms by model:
-      - Dataset: valid_values/dataset.md
-      - Dataset Sharing Plan: valid_values/sharingPlans.md
-      - Education Resource: valid_values/education.md
-      - File: valid_values/file.md
-      - Grant: valid_values/grant.md
-      - Person: valid_values/person.md
-      - Publication: valid_values/publication.md
-      - Tool: valid_values/tool.md
-  - Contributing to the Data Model: contributing.md
+  - index.md
 
 # Theme configuration
 theme:

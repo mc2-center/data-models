@@ -4,6 +4,7 @@ Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsO
 3' RNA-seq,"A molecular genetic technique that combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the DNA sequences that are obtained can be mapped to their genomic locations.",,,FALSE,,Assay,,,,,,,,
 3C,,,,FALSE,,Assay,,EFO,,"3c, Chromosome Conformation NG Capture-C Assay, Chromosome Conformation Capture Assay",EFO:0007689,https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0007689,,
 3C-qPCR,,,,FALSE,,Assay,,,,"Quantitative analysis of chromosome conformation capture assays, 3c-qpcr",,,,Not in any ontologies or NCIt
+3D ATAC-PALM,,,,FALSE,,Assay,,,,,,,,AN 2024-09-20
 3D Bioprinting,,,,FALSE,,Assay,,PubMed,,,PMID:26724184,https://pubmed.ncbi.nlm.nih.gov/26724184/,,Added by Brynn 09/23/2022
 3D Cell Culture,,,,FALSE,,Assay,,,,"3d cell culture, 3D culture, 3D cell culture",,,,
 4C,,,,FALSE,,Assay,,EFO,,"4C, 4c",EFO:0007690,http://www.ebi.ac.uk/efo/EFO_0007690,,
@@ -379,3 +380,4 @@ SDS-PAGE,,,,FALSE,,Assay,,,,,,,,OB 2024-02-05
 Cell Fractionation,,,,FALSE,,Assay,,,,,,,,OB 2024-02-05
 Multiscale Light Sheet Microscopy,,,,FALSE,,Assay,,,,,,,,OB 2024-07-18
 Light Sheet Microscopy,,,,FALSE,,Assay,,,,,,,,OB 2024-09-26
+CODEX,,,,FALSE,,Assay,,,,,,,,OB 2025-05-20

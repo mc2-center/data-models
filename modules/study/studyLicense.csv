@@ -1,5 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-CC BY 3.0,http://creativecommons.org/licenses/by/3.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,,,
-CC BY 4.0,https://creativecommons.org/licenses/by/4.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,,,
-CC BY-NC 4.0,https://creativecommons.org/licenses/by-nc/4.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,,,
-CC BY-NC 3.0,https://creativecommons.org/licenses/by-nc/3.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,,,
+CC BY 3.0,http://creativecommons.org/licenses/by/3.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,http://creativecommons.org/licenses/by/3.0/,,
+CC BY 4.0,https://creativecommons.org/licenses/by/4.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,https://creativecommons.org/licenses/by/4.0/,,
+CC BY-NC 4.0,https://creativecommons.org/licenses/by-nc/4.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,https://creativecommons.org/licenses/by-nc/4.0/,,
+CC BY-NC 3.0,https://creativecommons.org/licenses/by-nc/3.0/,,,FALSE,,Study License,,CDS v5.0.4/Image-license,,,,https://creativecommons.org/licenses/by-nc/3.0/,,
+CC BY-SA 4.0,https://creativecommons.org/licenses/by-sa/4.0/,,,FALSE,,Study License,,DUOplus6,,,,https://creativecommons.org/licenses/by-sa/4.0/,,Identified as valid value here: https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md
+CC BY-NC-SA 4.0,https://creativecommons.org/licenses/by-nc-sa/4.0/,,,FALSE,,Study License,,DUOplus6,,,,https://creativecommons.org/licenses/by-nc-sa/4.0/,,Identified as valid value here: https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md

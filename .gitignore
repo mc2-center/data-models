@@ -2,6 +2,8 @@
 .Rhistory
 .Rapp.history
 
+venv/
+
 # Session Data files
 .RData
 
@@ -48,6 +50,5 @@ great_expectations/
 # MKDocs
 scripts/__pycache__
 
-# Working files and folders
-mc2_all_attributes_map.csv
-cds_vocab/
+# Release workflow outputs
+release_output.txt

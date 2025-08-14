@@ -76,12 +76,12 @@ When a new valid value needs to be added to the data model:
    CSV in `./modules`. If not:
 
 2. Add the valid value in the "attribute" column of the applicable csv in
-   the appropriate module folder. E.g. if a new tumor type needs to be added
-   go to `tumorType.csv` and add the new term in the attribute column). Fill
-   out the rest of the columns as completely as possible, this includes the
-   description, the required column, parent column, source column, non-preferred
-   terms column, the ontology identifier, url, NCIt Code, and any notes.
-   Please make a note of who added it and the date.
+the appropriate module folder. E.g. if a new tumor type needs to be added
+go to `tumorType.csv` and add the new term in the attribute column). Fill
+out the rest of the columns as completely as possible, this includes the
+description, the required column, parent column, source column, non-preferred
+terms column, the ontology identifier, url, NCIt Code, and any notes.
+Please make a note of who added it and the date.
 
 3. Be sure to look up any synonyms and add to the "non preferred terms"
    column. This will make annotating easier in the future.
@@ -101,6 +101,7 @@ CCKP.
 
 Thank you helping us continuously improve the MC2 Center data models!  To
 contribute, please read our [contributing guidelines] on the docs site.
+
 
 
 [Cancer Complexity Knowledge Portal]: https://cancercomplexity.synapse.org/
