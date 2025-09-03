@@ -1,5 +1,5 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Imaging Level 4,Derived imaging data or object by feature array,,"Component, ImagingLevel4_id, Filename, ImagingLevel2 Key, ImagingLevel3Image Key, ImagingLevel3Segments Key, Image Parameter file, Image Software, Image Number of Objects, Image Number of Features, Image Object Class, Image Summary Statistic",FALSE,,,File View,HTAN,
-ImagingLevel4_id,A unique identifier used by schematic for record updates and as a reference key in other schemas.,,,TRUE,,,,MC2,
-Image Number of Features,The number of features (eg channels) described,,,TRUE,,,,HTAN,num
-Image Summary Statistic,Function used to summarize object/feature intensity,"Mean, Median, Not Specified",,TRUE,,,,HTAN,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
+Imaging Level 4,Derived imaging data or object by feature array,,"Component, ImagingLevel4_id, Filename, ImagingLevel2 Key, ImagingLevel3Image Key, ImagingLevel3Segments Key, Image Parameter file, Image Software, Image Number of Objects, Image Number of Features, Image Object Class, Image Summary Statistic",FALSE,,,File View,HTAN,,
+ImagingLevel4_id,A unique identifier used by schematic for record updates and as a reference key in other schemas.,,,TRUE,,Imaging Level 4,,MC2,unique,string
+Image Number of Features,The number of features (eg channels) described,,,TRUE,,Imaging Level 4,,HTAN,num,number
+Image Summary Statistic,Function used to summarize object/feature intensity,"Mean, Median, Not Specified",,TRUE,,Imaging Level 4,,HTAN,str,string

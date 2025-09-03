@@ -1,6 +1,6 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Sequencing Level 3,Sequencing data that has been aligned with a reference genome.,,"Component, SequencingLevel3_id, SequencingLevel2 Key, Filename, NGS Unique Probe Count, NGS Unique Target Count, NGS Matrix Type, Software and Version, Workflow Type, Workflow Parameter Description, Workflow Link",FALSE,,,,,
-SequencingLevel3_id,A unique identifier used by schematic for record updates and as a reference key in other schemas,,,TRUE,,,,MC2,unique
-NGS Unique Probe Count,Total number of unique probes reported.,,,FALSE,,,,HTAN,num
-NGS Unique Target Count,Total number of unique genes reported.,,,FALSE,,,,HTAN,num
-NGS Matrix Type,Type of count data stored in matrix.,"Raw Counts, Normalized Counts, Scaled Counts, Batch Corrected Counts",,FALSE,,,,HTAN,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
+Sequencing Level 3,Sequencing data that has been aligned with a reference genome.,,"Component, SequencingLevel3_id, SequencingLevel2 Key, Filename, NGS Unique Probe Count, NGS Unique Target Count, NGS Matrix Type, Software and Version, Workflow Type, Workflow Parameter Description, Workflow Link",FALSE,,,,,,
+SequencingLevel3_id,A unique identifier used by schematic for record updates and as a reference key in other schemas,,,TRUE,,Sequencing Level 3,,MC2,unique,string
+NGS Unique Probe Count,Total number of unique probes reported.,,,FALSE,,Sequencing Level 3,,HTAN,num,number
+NGS Unique Target Count,Total number of unique genes reported.,,,FALSE,,Sequencing Level 3,,HTAN,num,number
+NGS Matrix Type,Type of count data stored in matrix.,"Raw Counts, Normalized Counts, Scaled Counts, Batch Corrected Counts",,FALSE,,Sequencing Level 3,,HTAN,str,string
