@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 Imaging Level 1,Raw imaging data,,"Component, ImagingLevel1_id, Filename, Image Assay Type, Image Protocol Link, Image Platform Model, Image Platform Manufacturer, Image Software, ImagingChannel Key",FALSE,,,File View,HTAN,,
 ImagingLevel1_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,Imaging Level 1,,Mc2,unique,string
-Image Assay Type,Type of imaging assay,"CODEX, CyCIF, ExSeq, GeoMX-DSP, H&E, IHC, IMC, MERFISH, MIBI, mIHC, MxIF, Not Applicable, SABER, t-CyCIF",,TRUE,,Imaging Level 1,,HTAN,str,string
+Image Assay Type,Type of imaging assay,"CODEX, CyCIF, ExSeq, GeoMX-DSP, H&E, IHC, IMC, MERFISH, MIBI, mIHC, MxIF, Not Applicable, SABER, t-CyCIF",,TRUE,CDE:7789196,Imaging Level 1,,HTAN,str,string
 Image Protocol Link,"Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration,  lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the sample was obtained or generated.",,,FALSE,,Imaging Level 1,,HTAN,url,string
 Image Platform Model,The specific model of the instrument used to carry out an imaging experiment.,,,FALSE,,Imaging Level 1,,HTAN,str,string
 Image Platform Manufacturer,Producer of the imaging equipment that was used to generate the digital image,,,FALSE,,Imaging Level 1,,CDS/imaging,str,string

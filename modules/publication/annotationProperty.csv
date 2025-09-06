@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 Publication Doi,The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.,,,FALSE,,Publication View,,,url,string
 Publication Journal,The name of the periodical publication in which the publication was published.,,,TRUE,,Publication View,,,str,string
-Pubmed Id,The PubMed identifier associated with the publication.,,,TRUE,,Publication View,,,unique,string
+Pubmed Id,The PubMed identifier associated with the publication.,,,TRUE,CDE:3443453,Publication View,,,unique,string
 Pubmed Url,Pubmed URL for the publication,,,TRUE,,Publication View,,,url,string
 Publication Title,Title of the publication,,,TRUE,,Publication View,,,str,string
 Publication Year,Year of the publication,,,TRUE,,Publication View,,,int,number

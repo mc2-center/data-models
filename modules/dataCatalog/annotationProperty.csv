@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 community,The Sage Bionetworks project or initiative with which the dataset is associated.,,,FALSE,,DataCatalog,,Synapse Data Catalog,str,string
-description,A text description of the dataset. Can be identifical to Dataset Description.,,,FALSE,,DataCatalog,,Synapse Data Catalog,str,str
-contributor,"Organization(s), insitution(s), or person(s) that generated and/or deposited the data in Synapse. Can be identical to Grant Institution Name.",,,FALSE,,DataCatalog,,Synapse Data Catalog,list like,string_list
+description,A text description of the dataset. Can be identifical to Dataset Description.,,,FALSE,,DataCatalog,,Synapse Data Catalog,str,string
+contributors,"Organization(s), insitution(s), or person(s) that generated and/or deposited the data in Synapse. Can be identical to Grant Institution Name.",,,FALSE,,DataCatalog,,Synapse Data Catalog,list like,string_list
 keywords,Keywords associated with the dataset. Can be identical to Publication Keywords.,,,TRUE,,DataCatalog,,Synapse Data Catalog,list like,string_list
 individuals,"The number of participants or samples associated with the files in the dataset. Can be identical to Study Number of Participants, DSP Number of Participants, or DSP Number of Samples",,,FALSE,,DataCatalog,,Synapse Data Catalog,int,number
 link,"The url where the dataset is displayed, typically on a public-facing data portal. Can be identical to Dataset Url.",,,FALSE,,DataCatalog,,Synapse Data Catalog,url,string
