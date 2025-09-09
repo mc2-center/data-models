@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        schematic-version: [ 24.10.2 ]
+        schematic-version: [ 25.8.1 ]
 
     steps:
       - name: Install System Dependencies
@@ -43,7 +43,8 @@ jobs:
           python3.10 -m venv .venv
           chmod 755 .venv/bin/activate
           source .venv/bin/activate
-          pip3.10 install schematicpy==${{ matrix.schematic-version }} ipython==8.18.1
+          pip3.10 install --upgrade pip
+          pip3.10 install -r requirements.txt
           make CSV=$schema_filename
     
       - name: Commit files
