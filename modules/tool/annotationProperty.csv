@@ -1,7 +1,7 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 Tool Accessibility,Whether there are non-monetary restrictions on accessing an online service.,"Open Access, Open Access (With Restrictions), Restricted Access",,FALSE,,Tool View,,biotoolsschema,str,string
 Tool Cmd,"Relevant command, command-line fragment, or option for executing this function/running the tool in this mode.",,,FALSE,,Tool View,,biotoolsschema,str,string
-Tool Compute Requirements,"Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).",,,FALSE,,Tool View,,schema.org,"list like",string_list
+Tool Compute Requirements,"Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).",,,FALSE,,Tool View,,schema.org,list like,string_list
 Tool Cost,Monetary cost of acquiring the software.,"Commercial, Free of Charge, Free of Charge (With Restrictions)",,FALSE,,Tool View,,biotoolsschema,str,string
 Tool Date Last Modified,"The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information.",,,FALSE,,Tool View,,schema.org,date,string
 Tool Description,Textual description of the tool.,,,TRUE,,Tool View,,biotoolsschema,str,string
