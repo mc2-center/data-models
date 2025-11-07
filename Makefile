@@ -1,6 +1,9 @@
 CSV := mc2.model.csv
+QC := ./qc_model/mc2_qc.model.csv
 
 all: collate fix convert
+
+qc: collate fix qc_fix qc_convert
 
 collate:
 	@echo "Collating module components..."
@@ -12,5 +15,12 @@ fix:
 	awk -F ',' '{ gsub(/string_list/, ""); print }' OFS=',' ${CSV} > tmp.csv
 	mv tmp.csv ${CSV}
 
+qc_fix:
+	awk -F ',' '{ gsub(/matchAtLeastOne.*/, "list like"); print }' OFS=',' ${CSV} > tmp.csv
+	mv tmp.csv ${QC}
+
 convert:
 	schematic schema convert ${CSV}
+
+qc_convert:
+	schematic schema convert ${QC}
