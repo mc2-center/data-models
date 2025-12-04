@@ -15,9 +15,10 @@ collate:
 fix:
 	@echo "Modifying columnType to remove string_list"
 	awk -F ',' '{ gsub(/string_list/, ""); print }' OFS=',' ${CSV} > tmp.csv
-	awk -F ',' '{ gsub(/int/, ""); print }' OFS=',' tmp.csv > final_tmp.csv
+	awk -F ',' '{ gsub(/integer/, "number", $$11); print }' OFS=',' tmp.csv > tmp_2.csv
+	awk -F ',' '{ gsub(/int/, "num", $$10); print }' OFS=',' tmp_2.csv > final_tmp.csv
+	rm ${CSV} tmp.csv tmp_2.csv
 	mv final_tmp.csv ${CSV}
-	rm tmp.csv
 
 qc_fix:
 	awk -F ',' '{ gsub(/matchAtLeastOne.*/, "list like"); print }' OFS=',' ${CSV} > tmp.csv
