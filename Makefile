@@ -1,12 +1,14 @@
 CSV := mc2.model.csv
 QC := ./qc_model/mc2_qc.model.csv
+DATA := DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView DataCatalog
 
-all: collate fix convert
+all: collate fix convert generate-json
 
 qc: collate fix qc_fix qc_convert
 
 collate:
 	@echo "Collating module components..."
+	python update_valid_values.py
 	head -1 modules/consortium/annotationProperty.csv > ${CSV}
 	tail -n +2 -q modules/*/annotationProperty.csv >> ${CSV}
 
@@ -24,3 +26,8 @@ convert:
 
 qc_convert:
 	schematic schema convert ${QC}
+
+generate-json:
+	$(foreach d,$(DATA), schematic schema generate-jsonschema -dms ${CSV} -od . -dt $(d);)
+	$(foreach d,$(DATA), rm ./mc2.model/$(d)_validation_schema.json;)
+	rm *.schema.json
