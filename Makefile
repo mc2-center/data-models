@@ -29,5 +29,4 @@ qc_convert:
 
 generate-json:
 	$(foreach d,$(DATA), schematic schema generate-jsonschema -dms ${CSV} -od . -dt $(d);)
-	$(foreach d,$(DATA), rm ./mc2.model/$(d)_validation_schema.json;)
 	rm *.schema.json
