@@ -2,7 +2,7 @@ CSV := mc2.model.csv
 QC := ./qc_model/mc2_qc.model.csv
 DATA := DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView DataCatalog
 
-all: collate fix generate-json
+all: collate fix generate-json convert
 
 qc: collate fix qc_fix qc_convert
 
