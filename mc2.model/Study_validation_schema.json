@@ -1,0 +1,566 @@
+{
+  "$id": "http://example.com/Study_validation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Studies associated with a grant",
+  "properties": {
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "GrantViewKey": {
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "GrantView Key"
+    },
+    "PersonViewKey": {
+      "description": "Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "PersonView Key"
+    },
+    "ProjectViewKey": {
+      "description": "Unique ProjectView_id foreign key(s) that group the resource with other components, as part of the same grant-associated studies. Please provide multiple values as a comma-separated list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "ProjectView Key"
+    },
+    "StudyDataPermission": {
+      "description": "The list of entities or objects that define or enforce data sharing permissions. Maps to DUOplus4.",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "Agreement",
+              "Attestation",
+              "Award",
+              "Other"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Data Permission"
+    },
+    "StudyDataTier": {
+      "description": "The access tier(s) associated with the data in this study. Maps to DUOplus5.",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "Anonymous",
+              "Controlled",
+              "Open",
+              "Private"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Data Tier"
+    },
+    "StudyDataUseCodes": {
+      "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials and relates to the purposes for which datasets and/or material might be removed, stored, or used. Available DUO code definitions can be found at mc2-center.github.io/data-models/valid_values/sharingPlans/#attribute-dsp-data-use-codes",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "CC",
+              "COL",
+              "DS",
+              "DUM",
+              "GRU",
+              "GS",
+              "GSO",
+              "HMB",
+              "IRB",
+              "IS",
+              "MOR",
+              "NCU",
+              "NMDS",
+              "NPOA",
+              "NPU",
+              "NPUNCU",
+              "NRES",
+              "POA",
+              "PS",
+              "PUB",
+              "Pending Annotation",
+              "RS",
+              "RTN",
+              "TS",
+              "US"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Data Use Codes"
+    },
+    "StudyDe-identificationMethodDescription": {
+      "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study De-identification Method Description"
+    },
+    "StudyDe-identificationMethodSoftware": {
+      "description": "Software that was used to de-identify the data (if used)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study De-identification Method Software"
+    },
+    "StudyDe-identificationMethodType": {
+      "description": "General description of the de-identification method. Maps to DUOplus3.",
+      "oneOf": [
+        {
+          "enum": [
+            "Automatic",
+            "Manual",
+            "Not Applicable",
+            "Semiautomatic"
+          ],
+          "title": "enum"
+        }
+      ],
+      "title": "Study De-identification Method Type"
+    },
+    "StudyDescription": {
+      "description": "Description of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. Maps to DUOplus2.",
+      "title": "Study Description",
+      "type": "string"
+    },
+    "StudyId": {
+      "description": "A unique primary key that enables record updates using schematic.",
+      "title": "Study_id",
+      "type": "string"
+    },
+    "StudyIndexDate": {
+      "description": "The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.",
+      "oneOf": [
+        {
+          "enum": [
+            "Birth Date",
+            "Collection Date",
+            "Diagnosis Date",
+            "Enrollment Date"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Index Date"
+    },
+    "StudyInvestigator": {
+      "description": "Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.",
+      "oneOf": [
+        {
+          "title": "array",
+          "type": "array"
+        }
+      ],
+      "title": "Study Investigator"
+    },
+    "StudyLicense": {
+      "description": "Official or legal permission to do or own a specified thing. Studies with data that will be submitted to CDS are required to provide a license. Maps to DUOplus6.",
+      "oneOf": [
+        {
+          "enum": [
+            "CC BY 3.0",
+            "CC BY 4.0",
+            "CC BY-NC 3.0",
+            "CC BY-NC 4.0",
+            "CC BY-NC-SA 4.0",
+            "CC BY-SA 4.0"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study License"
+    },
+    "StudyName": {
+      "description": "Name of the study",
+      "title": "Study Name",
+      "type": "string"
+    },
+    "StudyNumberofParticipants": {
+      "description": "The number of participant instances associated with systematic investigation into a subject.",
+      "title": "Study Number of Participants",
+      "type": "number"
+    },
+    "StudyNumberofSamples": {
+      "description": "The number of specimens associated with systematic investigation into a subject.",
+      "title": "Study Number of Samples",
+      "type": "number"
+    },
+    "StudyReuseStatement": {
+      "description": "The funder-, contributor-, patient-, etc., derived content that includes terms, conditions, or statements associated with accessing and reusing the resource(s). Maps to DUOplus7.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Reuse Statement"
+    },
+    "StudySourceGeography": {
+      "description": "The list of country(ies) where the data associated with this study was generated. Maps to DUOplus1.",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "AD",
+              "AE",
+              "AF",
+              "AG",
+              "AI",
+              "AL",
+              "AM",
+              "AO",
+              "AQ",
+              "AR",
+              "AS",
+              "AT",
+              "AU",
+              "AW",
+              "AX",
+              "AZ",
+              "BA",
+              "BB",
+              "BD",
+              "BE",
+              "BF",
+              "BG",
+              "BH",
+              "BI",
+              "BJ",
+              "BL",
+              "BM",
+              "BN",
+              "BO",
+              "BQ",
+              "BR",
+              "BS",
+              "BT",
+              "BV",
+              "BW",
+              "BY",
+              "BZ",
+              "CA",
+              "CC",
+              "CD",
+              "CF",
+              "CG",
+              "CH",
+              "CI",
+              "CK",
+              "CL",
+              "CM",
+              "CN",
+              "CO",
+              "CR",
+              "CU",
+              "CV",
+              "CW",
+              "CX",
+              "CY",
+              "CZ",
+              "DE",
+              "DJ",
+              "DK",
+              "DM",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "EH",
+              "ER",
+              "ES",
+              "ET",
+              "FI",
+              "FJ",
+              "FK",
+              "FM",
+              "FO",
+              "FR",
+              "GA",
+              "GB",
+              "GD",
+              "GE",
+              "GF",
+              "GG",
+              "GH",
+              "GI",
+              "GL",
+              "GM",
+              "GN",
+              "GP",
+              "GQ",
+              "GR",
+              "GS",
+              "GT",
+              "GU",
+              "GW",
+              "GY",
+              "HK",
+              "HM",
+              "HN",
+              "HR",
+              "HT",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IM",
+              "IN",
+              "IO",
+              "IQ",
+              "IR",
+              "IS",
+              "IT",
+              "JE",
+              "JM",
+              "JO",
+              "JP",
+              "KE",
+              "KG",
+              "KH",
+              "KI",
+              "KM",
+              "KN",
+              "KP",
+              "KR",
+              "KW",
+              "KY",
+              "KZ",
+              "LA",
+              "LB",
+              "LC",
+              "LI",
+              "LK",
+              "LR",
+              "LS",
+              "LT",
+              "LU",
+              "LV",
+              "LY",
+              "MA",
+              "MC",
+              "MD",
+              "ME",
+              "MF",
+              "MG",
+              "MH",
+              "MK",
+              "ML",
+              "MM",
+              "MN",
+              "MO",
+              "MP",
+              "MQ",
+              "MR",
+              "MS",
+              "MT",
+              "MU",
+              "MV",
+              "MW",
+              "MX",
+              "MY",
+              "MZ",
+              "NA",
+              "NC",
+              "NE",
+              "NF",
+              "NG",
+              "NI",
+              "NL",
+              "NO",
+              "NP",
+              "NR",
+              "NU",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PF",
+              "PG",
+              "PH",
+              "PK",
+              "PL",
+              "PM",
+              "PN",
+              "PR",
+              "PS",
+              "PT",
+              "PW",
+              "PY",
+              "QA",
+              "RE",
+              "RO",
+              "RS",
+              "RU",
+              "RW",
+              "SA",
+              "SB",
+              "SC",
+              "SD",
+              "SE",
+              "SG",
+              "SH",
+              "SI",
+              "SJ",
+              "SK",
+              "SL",
+              "SM",
+              "SN",
+              "SO",
+              "SR",
+              "SS",
+              "ST",
+              "SV",
+              "SX",
+              "SY",
+              "SZ",
+              "TC",
+              "TD",
+              "TF",
+              "TG",
+              "TH",
+              "TJ",
+              "TK",
+              "TL",
+              "TM",
+              "TN",
+              "TO",
+              "TR",
+              "TT",
+              "TV",
+              "TW",
+              "TZ",
+              "UA",
+              "UG",
+              "UM",
+              "US",
+              "UY",
+              "UZ",
+              "VA",
+              "VC",
+              "VE",
+              "VG",
+              "VI",
+              "VN",
+              "VU",
+              "WF",
+              "WS",
+              "YE",
+              "YT",
+              "ZA",
+              "ZM",
+              "ZW"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Source Geography"
+    },
+    "StudydbGaPAccessionId": {
+      "description": "A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study dbGaP Accession Id"
+    }
+  },
+  "required": [
+    "Component",
+    "StudyDe-identificationMethodType",
+    "StudyDescription",
+    "StudyId",
+    "StudyInvestigator",
+    "StudyName",
+    "StudyNumberofParticipants",
+    "StudyNumberofSamples"
+  ],
+  "title": "Study_validation",
+  "type": "object"
+}
