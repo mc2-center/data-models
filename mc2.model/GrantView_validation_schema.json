@@ -1,0 +1,419 @@
+{
+  "$id": "http://example.com/GrantView_validation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "The denormalized manifest for grant submission.",
+  "properties": {
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "DurationofFunding": {
+      "description": "Duration of the funding period, in years",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Duration of Funding"
+    },
+    "EmbargoEndDate": {
+      "description": "Date at which an embargo on related resources had lifted",
+      "format": "date",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Embargo End Date"
+    },
+    "GrantAbstract": {
+      "description": "Abstract for the grant",
+      "title": "Grant Abstract",
+      "type": "string"
+    },
+    "GrantConsortiumName": {
+      "description": "Consortium(s) associated with the grant. 1...1",
+      "oneOf": [
+        {
+          "enum": [
+            "CCBIR",
+            "CSBC",
+            "HTAN",
+            "ICBP",
+            "MetNet",
+            "NCI",
+            "NCI Clinical and Translational Exploratory/Developmental Studies",
+            "PDMC",
+            "PS-ON",
+            "Sage Bionetworks",
+            "TEC"
+          ],
+          "title": "enum"
+        }
+      ],
+      "title": "Grant Consortium Name"
+    },
+    "GrantEndDate": {
+      "description": "The end date of the grant YYYY-MM-DD format",
+      "format": "date",
+      "title": "Grant End Date",
+      "type": "string"
+    },
+    "GrantInstitutionAlias": {
+      "description": "The alias of the institution(s) associated with the grant (e.g. UCSD). 1...*",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "AECM",
+              "ASU",
+              "AU",
+              "BCM",
+              "BIDMC",
+              "BMC",
+              "BRI",
+              "BU",
+              "BWH",
+              "Barrow",
+              "CHOP",
+              "COH",
+              "CSHL",
+              "Caltech",
+              "Clemson",
+              "Cleveland Clinic",
+              "Columbia",
+              "Cornell",
+              "DFCI",
+              "Dartmouth",
+              "Duke",
+              "Emory",
+              "GTech",
+              "HMS",
+              "HUJI",
+              "Harvard",
+              "Houston Methodist",
+              "ISB",
+              "IU",
+              "IUPUI",
+              "JHU",
+              "Jackson Laboratory",
+              "Lurie Children's Hospital",
+              "MGH",
+              "MIT",
+              "MSKCC",
+              "Mayo",
+              "Moffitt",
+              "NEU",
+              "NU",
+              "NYU",
+              "OHSU",
+              "PNNL",
+              "Pitt",
+              "Purdue",
+              "Rockefeller University",
+              "SBU",
+              "Sage",
+              "Salk",
+              "StJude",
+              "Stanford",
+              "TUM",
+              "U Miami",
+              "UA",
+              "UAB",
+              "UARK",
+              "UCBerkeley",
+              "UCD",
+              "UCI",
+              "UCLA",
+              "UCMC",
+              "UCSD",
+              "UCSF",
+              "UChicago",
+              "UD",
+              "UFL",
+              "UIC",
+              "UMMS",
+              "UMichigan",
+              "UMinn",
+              "UNC",
+              "UNR",
+              "UNSW",
+              "UPenn",
+              "USC",
+              "UT Austin",
+              "UT Southwestern",
+              "UTHSCSA",
+              "UUtah",
+              "UVA",
+              "UW",
+              "UWM",
+              "University of Illinois",
+              "University of Texas MD Anderson Cancer Center",
+              "VT",
+              "Vanderbilt",
+              "WCM",
+              "WUSTL",
+              "Wake Forest",
+              "Wistar",
+              "Yale"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        }
+      ],
+      "title": "Grant Institution Alias"
+    },
+    "GrantInstitutionName": {
+      "description": "The full name of the institution(s) associated with the grant. (e.g. Harvard University). 1...*",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "Albert Einstein College of Medicine",
+              "Arizona State University",
+              "Auburn University",
+              "Barrow Neurological Institute",
+              "Baylor College Of Medicine",
+              "Beckman Research Institute of City of Hope",
+              "Beth Israel Deaconess Hospital",
+              "Boston Medical Center",
+              "Boston University",
+              "Brigham and Womens Hospital",
+              "California Institute of Technology",
+              "Childrens Hospital of Philadelphia",
+              "City Of Hope",
+              "Clemson University",
+              "Cleveland Clinic",
+              "Cold Spring Harbor Laboratory",
+              "Columbia University",
+              "Cornell University",
+              "Dana-Farber Cancer Institute",
+              "Dartmouth College",
+              "Duke University",
+              "Emory University",
+              "Georgia Institute of Technology",
+              "Harvard Medical School",
+              "Harvard University",
+              "Hebrew University of Jerusalem",
+              "Houston Methodist",
+              "Indiana University",
+              "Indiana University - Purdue University Indianapolis",
+              "Institute for Systems Biology",
+              "Jackson Laboratory",
+              "Johns Hopkins University",
+              "Lurie Children's Hospital",
+              "Massachusetts General Hospital",
+              "Massachusetts Institute of Technology",
+              "Mayo Clinic",
+              "Memorial Sloan Kettering Cancer Center",
+              "Moffitt Cancer Center",
+              "New York University",
+              "Northeastern University",
+              "Northwestern University",
+              "Oregon Health & Science University",
+              "Pacific Northwest National Laboratory",
+              "Purdue University",
+              "Rockefeller University",
+              "Sage Bionetworks",
+              "Salk Institute for Biological Studies",
+              "St. Jude Children's Research Hospital",
+              "Stanford University",
+              "Stony Brook University",
+              "The University of Texas Health Science Center at San Antonio",
+              "Tufts University Medford",
+              "University of Alabama at Birmingham",
+              "University of Arizona",
+              "University of Arkansas at Fayetteville",
+              "University of California; Berkeley",
+              "University of California; Irvine",
+              "University of California; Los Angeles",
+              "University of California; San Diego",
+              "University of California; San Francisco",
+              "University of Chicago",
+              "University of Chicago Medical Center",
+              "University of Colorado Denver",
+              "University of Delaware",
+              "University of Florida",
+              "University of Illinois",
+              "University of Illinois at Chicago",
+              "University of Massachusetts Medical School",
+              "University of Miami",
+              "University of Michigan",
+              "University of Minnesota",
+              "University of Nevada Reno",
+              "University of New South Wales",
+              "University of North Carolina at Chapel Hill",
+              "University of Pennsylvania",
+              "University of Pittsburgh",
+              "University of Southern California",
+              "University of Texas MD Anderson Cancer Center",
+              "University of Texas Southwestern Medical Center",
+              "University of Texas at Austin",
+              "University of Utah",
+              "University of Virginia",
+              "University of Washington",
+              "University of Wisconsin-Madison",
+              "Vanderbilt University",
+              "Virginia Polytechnic Institute",
+              "Wake Forest",
+              "Washington University in St. Louis",
+              "Weill Cornell Medicine",
+              "Wistar Institute",
+              "Yale University"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        }
+      ],
+      "title": "Grant Institution Name"
+    },
+    "GrantInvestigator": {
+      "description": "Investigator(s) associated witht the grant. 1...*",
+      "oneOf": [
+        {
+          "title": "array",
+          "type": "array"
+        }
+      ],
+      "title": "Grant Investigator"
+    },
+    "GrantName": {
+      "description": "Name of the grant",
+      "title": "Grant Name",
+      "type": "string"
+    },
+    "GrantNumber": {
+      "description": "Number of the grant (i.e. \"CA------\" format)",
+      "pattern": "^CA\\d{6}$",
+      "title": "Grant Number",
+      "type": "string"
+    },
+    "GrantStartDate": {
+      "description": "The start date of the grant YYYY-MM-DD format",
+      "format": "date",
+      "title": "Grant Start Date",
+      "type": "string"
+    },
+    "GrantSynapseProject": {
+      "description": "The Synapse project associated with the grant, created by the MC2 Center",
+      "format": "uri",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Grant Synapse Project"
+    },
+    "GrantSynapseTeam": {
+      "description": "The Synapse team associated with the grant, created by the MC2 Center",
+      "format": "uri",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Grant Synapse Team"
+    },
+    "GrantThemeName": {
+      "description": "Theme(s) associated with the grant. 1...*",
+      "oneOf": [
+        {
+          "items": {
+            "enum": [
+              "Computational Model Development",
+              "Computational Resource",
+              "Drug Resistance/Sensitivity",
+              "Epigenetics",
+              "Evolution",
+              "Experimental Model Development",
+              "Heterogeneity",
+              "Immunotherapy",
+              "Mechano-genetics",
+              "Mechano-resistance",
+              "Metabolism",
+              "Metastasis",
+              "Method/Assay Development",
+              "Microenvironment",
+              "Oncogenic Stress",
+              "Platform Development",
+              "Tumor Progression",
+              "Tumor-Immune"
+            ]
+          },
+          "title": "array",
+          "type": "array"
+        }
+      ],
+      "title": "Grant Theme Name"
+    },
+    "GrantType": {
+      "description": "Type of grant",
+      "oneOf": [
+        {
+          "enum": [
+            "R01",
+            "R21",
+            "R37",
+            "U01",
+            "U24",
+            "U54"
+          ],
+          "title": "enum"
+        }
+      ],
+      "title": "Grant Type"
+    },
+    "GrantViewId": {
+      "description": "A unique primary key that enables record updates using schematic.",
+      "title": "GrantView_id",
+      "type": "string"
+    },
+    "NIHRePORTERLink": {
+      "description": "Link to the search results for this grant number on the NIH Reporter website",
+      "format": "uri",
+      "title": "NIH RePORTER Link",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Component",
+    "GrantAbstract",
+    "GrantConsortiumName",
+    "GrantEndDate",
+    "GrantInstitutionAlias",
+    "GrantInstitutionName",
+    "GrantInvestigator",
+    "GrantName",
+    "GrantNumber",
+    "GrantStartDate",
+    "GrantThemeName",
+    "GrantType",
+    "GrantViewId",
+    "NIHRePORTERLink"
+  ],
+  "title": "GrantView_validation",
+  "type": "object"
+}

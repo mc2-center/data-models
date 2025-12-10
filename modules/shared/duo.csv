@@ -23,3 +23,4 @@ GS,This data use modifier indicates that use is limited to within a specific geo
 DS,This data use permission indicates that use is allowed provided it is related to the specified disease.,,,,,,,,,,DUO:0000007,,,disease specific research
 GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,,,,,,,,,DUO:0000042,,,general research use
 PS,This data use modifier indicates that use is limited to use within an approved project.,,,,,,,,,,DUO:0000027,,,project specific restriction
+Pending Annotation,Data Use Codes have not yet been provided or documented for this resource.,,,,,,,,,,,,,

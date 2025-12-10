@@ -1,7 +1,7 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-Sequencing RNA Level 1,Unaligned/unprocessed RNA sequencing data ,,"Component, SequencingRNALevel1_id, Filename, NGS RNA End Bias, NGS RNA Reverse Transcription Primer, NGS RNA RIN, NGS RNA DV200",FALSE,,,Sequencing Level 1,MC2,
-SequencingRNALevel1_id,A unique identifier used by schematic for record updates and as a reference key in other schemas,,,TRUE,,,,MC2,unique
-NGS RNA End Bias,"The end of the cDNA molecule that is preferentially sequenced, e.g. 3/5 prime tag/end or the full length transcript","3 Prime, 5 Prime, Full Length Transcript",,TRUE,,,,HTAN,str
-NGS RNA Reverse Transcription Primer,"An oligo to which new deoxyribonucleotides can be added by DNA polymerase [SO_0000112]. The type of primer used for reverse transcription, e.g. oligo-dT or random primer. This allows users to identify content of the cDNA library input e.g. enriched for mRNA","Oligo-dT, Poly-dT, Feature barcoding, Random",,TRUE,,,,HTAN,str
-NGS RNA RIN,A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products. Number,,,FALSE,,,,HTAN,num
-NGS RNA DV200,Represents the percentage of RNA fragments that are >200 nucleotides in size. Number,,,FALSE,,,,HTAN,num
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
+Sequencing RNA Level 1,Unaligned/unprocessed RNA sequencing data ,,"Component, SequencingRNALevel1_id, Filename, NGS RNA End Bias, NGS RNA Reverse Transcription Primer, NGS RNA RIN, NGS RNA DV200",FALSE,,,Sequencing Level 1,MC2,,
+SequencingRNALevel1_id,A unique identifier used by schematic for record updates and as a reference key in other schemas,,,TRUE,,Sequencing RNA Level 1,,MC2,unique,string
+NGS RNA End Bias,"The end of the cDNA molecule that is preferentially sequenced, e.g. 3/5 prime tag/end or the full length transcript","3 Prime, 5 Prime, Full Length Transcript",,TRUE,,Sequencing RNA Level 1,,HTAN,str,string
+NGS RNA Reverse Transcription Primer,"An oligo to which new deoxyribonucleotides can be added by DNA polymerase [SO_0000112]. The type of primer used for reverse transcription, e.g. oligo-dT or random primer. This allows users to identify content of the cDNA library input e.g. enriched for mRNA","Oligo-dT, Poly-dT, Feature barcoding, Random",,TRUE,,Sequencing RNA Level 1,,HTAN,str,string
+NGS RNA RIN,A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products. Number,,,FALSE,,Sequencing RNA Level 1,,HTAN,num,number
+NGS RNA DV200,Represents the percentage of RNA fragments that are >200 nucleotides in size. Number,,,FALSE,,Sequencing RNA Level 1,,HTAN,num,number

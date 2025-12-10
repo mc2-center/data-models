@@ -1,5 +1,5 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules
-10x Visium RNA Level 4,Processed data files based on Spatial Transcriptomics RNA-seq Level 3.,,"Component, 10xVisiumRNALevel4_id, Filename, 10xVisiumRNALevel3 Key, Visium Run ID, Workflow Version, Workflow Link, Visium Workflow Type, Visium Workflow Parameters Description",FALSE,,visium,10x Visium RNA Level 3,HTAN,
-10xVisiumRNALevel4_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,visium,,MC2,unique
-Visium Workflow Type,Generic name for the workflow used to analyze the visium data set.,,,TRUE,,visium,,HTAN,str
-Visium Workflow Parameters Description,Parameters used to run the workflow.,,,TRUE,,visium,,HTAN,str
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
+10x Visium RNA Level 4,Processed data files based on Spatial Transcriptomics RNA-seq Level 3.,,"Component, 10xVisiumRNALevel4_id, Filename, 10xVisiumRNALevel3 Key, Visium Run ID, Workflow Version, Workflow Link, Visium Workflow Type, Visium Workflow Parameters Description",FALSE,,,10x Visium RNA Level 3,HTAN,,
+10xVisiumRNALevel4_id,"Unique row identifier, used as a primary key for record updates",,,TRUE,,10x Visium RNA Level 4,,MC2,unique,string
+Visium Workflow Type,Generic name for the workflow used to analyze the visium data set.,,,TRUE,,10x Visium RNA Level 4,,HTAN,str,string
+Visium Workflow Parameters Description,Parameters used to run the workflow.,,,TRUE,,10x Visium RNA Level 4,,HTAN,str,string
