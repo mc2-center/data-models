@@ -1,0 +1,151 @@
+{
+  "$id": "http://example.com/ImagingLevel3Segments_validation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Image segmentation mask information",
+  "properties": {
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "Filename": {
+      "description": "The path of a file in Synapse, relative to the project. The file associated with the path will be annotated with attributes contained in this sheet.",
+      "title": "Filename",
+      "type": "string"
+    },
+    "ImageNumberofObjects": {
+      "description": "The number of objects (eg cells) described",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Number of Objects"
+    },
+    "ImageObjectClass": {
+      "description": "Defines the structure that the mask delineates",
+      "oneOf": [
+        {
+          "enum": [
+            "Cytoplasm",
+            "Nucleus",
+            "Other",
+            "Plasma Membrane",
+            "Spot",
+            "Whole Cell"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Object Class"
+    },
+    "ImageObjectClassDescription": {
+      "description": "If Imaging Object Class is \"Other\", please use this field to provide a text description of the imaging object class associated with the segmentation data",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Object Class Description"
+    },
+    "ImageParameterfile": {
+      "description": "Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Parameter file"
+    },
+    "ImageSegmentationDataType": {
+      "description": "Specifies how the segmentation is stored",
+      "oneOf": [
+        {
+          "enum": [
+            "Mask",
+            "Outline",
+            "Point",
+            "Polygon",
+            "Probability Map"
+          ],
+          "title": "enum"
+        }
+      ],
+      "title": "Image Segmentation Data Type"
+    },
+    "ImagingLevel2Key": {
+      "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "ImagingLevel2 Key"
+    },
+    "ImagingLevel3ImageKey": {
+      "description": "Unique ImagingLevel3Image_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "ImagingLevel3Image Key"
+    },
+    "ImagingLevel3SegmentsId": {
+      "description": "A unique identifier used by schematic for record updates and as a reference key in other schemas.",
+      "title": "ImagingLevel3Segments_id",
+      "type": "string"
+    },
+    "SoftwareandVersion": {
+      "description": "Name of software used to generate the information contained in the file. String",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Software and Version"
+    }
+  },
+  "required": [
+    "Component",
+    "Filename",
+    "ImageSegmentationDataType",
+    "ImagingLevel3SegmentsId"
+  ],
+  "title": "ImagingLevel3Segments_validation",
+  "type": "object"
+}

@@ -1,0 +1,473 @@
+{
+  "$id": "http://example.com/ImagingChannel_validation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Channel-level Metadata Attributes",
+  "properties": {
+    "ChannelAntibodyCatalogNumber": {
+      "description": "Catalog Number",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Catalog Number"
+    },
+    "ChannelAntibodyClone": {
+      "description": "Clone",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Clone"
+    },
+    "ChannelAntibodyLot": {
+      "description": "Lot number from vendor",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Lot"
+    },
+    "ChannelAntibodyName": {
+      "description": "Antibody Name (free text (eg “Keratin”, “CD163”, “DNA”))",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Name"
+    },
+    "ChannelAntibodyRole": {
+      "description": "Is this antibody acting as a primary or secondary antibody?",
+      "oneOf": [
+        {
+          "enum": [
+            "Primary",
+            "Secondary"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Role"
+    },
+    "ChannelAntibodyVendor": {
+      "description": "Vendor",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Antibody Vendor"
+    },
+    "ChannelCycleNumber": {
+      "description": "The cycle # in which the co-listed reagent(s) was(were) used. Integer >= 1 (up to number of cycles)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Cycle Number"
+    },
+    "ChannelEmissionBandwidth": {
+      "description": "Nominal width of emission spectrum (nm)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Emission Bandwidth"
+    },
+    "ChannelEmissionWavelength": {
+      "description": "Center/peak of the emission spectrum (nm)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Emission Wavelength"
+    },
+    "ChannelExcitationBandwidth": {
+      "description": "Nominal width of excitation spectrum (nm)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Excitation Bandwidth"
+    },
+    "ChannelExcitationWavelength": {
+      "description": "Center/peak of the excitation spectrum (nm)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Excitation Wavelength"
+    },
+    "ChannelFluorophore": {
+      "description": "Fluorescent dye label (eg Alexa Fluor 488)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Fluorophore"
+    },
+    "ChannelIdentifier": {
+      "description": "This must match the corresponding field in the OME-XML / TIFF header. (eg 'Channel:0:1')",
+      "title": "Channel Identifier",
+      "type": "string"
+    },
+    "ChannelMetalIsotope": {
+      "description": "Element mass number",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Metal Isotope"
+    },
+    "ChannelMetalSymbol": {
+      "description": "Element abbreviation. eg “La” or “Nd”",
+      "oneOf": [
+        {
+          "enum": [
+            "Ac",
+            "Ag",
+            "Al",
+            "Am",
+            "Ar",
+            "As",
+            "At",
+            "Au",
+            "B",
+            "Ba",
+            "Be",
+            "Bh",
+            "Bi",
+            "Bk",
+            "Br",
+            "C",
+            "Ca",
+            "Cd",
+            "Ce",
+            "Cf",
+            "Cl",
+            "Cn",
+            "Co",
+            "Cr",
+            "Cs",
+            "Cu",
+            "Db",
+            "Ds",
+            "Dy",
+            "Er",
+            "Es",
+            "Eu",
+            "F",
+            "Fe",
+            "Fl",
+            "Fm",
+            "Fr",
+            "Ga",
+            "Gd",
+            "Ge",
+            "H",
+            "He",
+            "Hf",
+            "Hg",
+            "Ho",
+            "Hs",
+            "I",
+            "In",
+            "Ir",
+            "K",
+            "Kr",
+            "La",
+            "Li",
+            "Lr",
+            "Lu",
+            "Lv",
+            "Mc",
+            "Md",
+            "Mg",
+            "Mn",
+            "Mo",
+            "Mt",
+            "N",
+            "Na",
+            "Nb",
+            "Nd",
+            "Ne",
+            "Nh",
+            "Ni",
+            "No",
+            "Np",
+            "O",
+            "Og",
+            "Os",
+            "P",
+            "Pa",
+            "Pb",
+            "Pd",
+            "Pm",
+            "Po",
+            "Pr",
+            "Pt",
+            "Pu",
+            "Ra",
+            "Rb",
+            "Re",
+            "Rf",
+            "Rg",
+            "Rh",
+            "Rn",
+            "Ru",
+            "S",
+            "Sb",
+            "Sc",
+            "Se",
+            "Sg",
+            "Si",
+            "Sm",
+            "Sn",
+            "Sr",
+            "Ta",
+            "Tb",
+            "Tc",
+            "Te",
+            "Th",
+            "Ti",
+            "Tl",
+            "Tm",
+            "Ts",
+            "U",
+            "V",
+            "W",
+            "Xe",
+            "Y",
+            "Yb",
+            "Zn",
+            "Zr"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Metal Symbol"
+    },
+    "ChannelName": {
+      "description": "This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin')",
+      "title": "Channel Name",
+      "type": "string"
+    },
+    "ChannelOligoBarcodeLowerStrand": {
+      "description": "Oligo Barcode - Lower Strand",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Oligo Barcode Lower Strand"
+    },
+    "ChannelOligoBarcodeUpperStrand": {
+      "description": "Oligo Barcode - Upper Strand",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Oligo Barcode Upper Strand"
+    },
+    "ChannelPassedQC": {
+      "description": "Identify stains that did not pass QC but are included in the dataset.",
+      "oneOf": [
+        {
+          "enum": [
+            "No - Channel Failed QC",
+            "Yes"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Passed QC"
+    },
+    "ChannelProbeConcentration": {
+      "description": "Concentration (eg 10ug/mL)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Probe Concentration"
+    },
+    "ChannelProbeDilutionRatio": {
+      "description": "Dilution (eg 1:1000)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Probe Dilution Ratio"
+    },
+    "ChannelResourceID": {
+      "description": "Research Resource Identifier (eg “RRID: AB_394606”)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Resource ID"
+    },
+    "ChannelSub-cycleNumber": {
+      "description": "Sub cycle number",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Channel Sub-cycle Number"
+    },
+    "ChannelTargetName": {
+      "description": "Short descriptive name (abbreviation) for this target (antigen)",
+      "title": "Channel Target Name",
+      "type": "string"
+    },
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "ImagingChannelId": {
+      "description": "A unique identifier used by schematic for record updates and as a reference key in other schemas.",
+      "title": "ImagingChannel_id",
+      "type": "string"
+    },
+    "StudyKey": {
+      "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Study Key"
+    }
+  },
+  "required": [
+    "ChannelIdentifier",
+    "ChannelName",
+    "ChannelTargetName",
+    "Component",
+    "ImagingChannelId"
+  ],
+  "title": "ImagingChannel_validation",
+  "type": "object"
+}

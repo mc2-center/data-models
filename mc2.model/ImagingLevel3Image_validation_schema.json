@@ -1,0 +1,585 @@
+{
+  "$id": "http://example.com/ImagingLevel3Image_validation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Quality controlled or co-registered image data",
+  "properties": {
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "Filename": {
+      "description": "The path of a file in Synapse, relative to the project. The file associated with the path will be annotated with attributes contained in this sheet.",
+      "title": "Filename",
+      "type": "string"
+    },
+    "ImageAssayType": {
+      "description": "Type of imaging assay",
+      "oneOf": [
+        {
+          "enum": [
+            "CODEX",
+            "CyCIF",
+            "ExSeq",
+            "GeoMX-DSP",
+            "H&E",
+            "IHC",
+            "IMC",
+            "MERFISH",
+            "MIBI",
+            "MxIF",
+            "Not Applicable",
+            "SABER",
+            "mIHC",
+            "t-CyCIF"
+          ],
+          "title": "enum"
+        }
+      ],
+      "title": "Image Assay Type"
+    },
+    "ImageChannelSize": {
+      "description": "Number of channels. Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Channel Size"
+    },
+    "ImageDimensionOrder": {
+      "description": "The order in which the individual planes of data are interleaved.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Dimension Order"
+    },
+    "ImageFOVIndex": {
+      "description": "Index of FOV (as it pertains to its sequence order). Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image FOV Index"
+    },
+    "ImageFOVSizeX": {
+      "description": "Field of view X dimension. Floating point",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image FOV Size X"
+    },
+    "ImageFOVSizeXUnit": {
+      "description": "Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image FOV Size X Unit"
+    },
+    "ImageFOVSizeY": {
+      "description": "Field  of view Y dimension. Floating point value",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image FOV Size Y"
+    },
+    "ImageFOVSizeYUnit": {
+      "description": "Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image FOV Size Y Unit"
+    },
+    "ImageFrameAveraging": {
+      "description": "Number of frames averaged together (if no averaging, set to 1). Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Frame Averaging"
+    },
+    "ImageIdentifier": {
+      "description": "Unique internal image identifier. eg \"Image:0\". (To be extracted from OME-XML)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Identifier"
+    },
+    "ImageImmersionType": {
+      "description": "Immersion medium",
+      "oneOf": [
+        {
+          "enum": [
+            "Air",
+            "Glycerol",
+            "Multi",
+            "Oil",
+            "Other",
+            "Water"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Immersion Type"
+    },
+    "ImageLenseAperture": {
+      "description": "The numerical aperture of the lens. Floating point value > 0.",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Lense Aperture"
+    },
+    "ImageNominalMagnification": {
+      "description": "The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Nominal Magnification"
+    },
+    "ImageNumberofTimepoints": {
+      "description": "Number of time points. Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Number of Timepoints"
+    },
+    "ImageObjective": {
+      "description": "Objective lens identifier",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Objective"
+    },
+    "ImagePhysicalSizeX": {
+      "description": "Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0.",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size X"
+    },
+    "ImagePhysicalSizeXUnit": {
+      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size X Unit"
+    },
+    "ImagePhysicalSizeY": {
+      "description": "Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0.",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size Y"
+    },
+    "ImagePhysicalSizeYUnit": {
+      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size Y Unit"
+    },
+    "ImagePhysicalSizeZ": {
+      "description": "Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0.",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size Z"
+    },
+    "ImagePhysicalSizeZUnit": {
+      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Physical Size Z Unit"
+    },
+    "ImagePixelType": {
+      "description": "Data type for each pixel value. E.g. \"uint16\"",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Pixel Type"
+    },
+    "ImagePixelsBigEndian": {
+      "description": "Boolean (True/False)",
+      "oneOf": [
+        {
+          "enum": [
+            "False",
+            "True"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Pixels BigEndian"
+    },
+    "ImagePlaneCount": {
+      "description": "Number of Z-planes (not to be confused with downsampled \"pyramid\"). Integer >=1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Plane Count"
+    },
+    "ImagePlatformManufacturer": {
+      "description": "Producer of the imaging equipment that was used to generate the digital image",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Platform Manufacturer"
+    },
+    "ImagePlatformModel": {
+      "description": "The specific model of the instrument used to carry out an imaging experiment.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Platform Model"
+    },
+    "ImageProtocolLink": {
+      "description": "Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration,  lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the sample was obtained or generated.",
+      "format": "uri",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Protocol Link"
+    },
+    "ImagePyramidal": {
+      "description": "Does data file contain pyramid of images",
+      "oneOf": [
+        {
+          "enum": [
+            "False",
+            "True"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Pyramidal"
+    },
+    "ImageSoftware": {
+      "description": "The name of the software package that was used to capture, generate, and process the image.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Software"
+    },
+    "ImageTimeseries": {
+      "description": "Does data file contain a time-series of images",
+      "oneOf": [
+        {
+          "title": "boolean",
+          "type": "boolean"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Timeseries"
+    },
+    "ImageWorkingDistance": {
+      "description": "The working distance of the lens, expressed as a floating point number. Floating point > 0.",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Working Distance"
+    },
+    "ImageWorkingDistanceUnit": {
+      "description": "The units of the working distance. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+      "oneOf": [
+        {
+          "enum": [
+            "cm",
+            "mm",
+            "nm",
+            "µm",
+            "Å"
+          ],
+          "title": "enum"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Working Distance Unit"
+    },
+    "ImageXPixels": {
+      "description": "Size of image: X dimension (in pixels). Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image X Pixels"
+    },
+    "ImageYPixels": {
+      "description": "Size of image: Y dimension (in pixels). Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Y Pixels"
+    },
+    "ImageZPixels": {
+      "description": "Size of image: Z dimension (in pixels). Integer >= 1",
+      "oneOf": [
+        {
+          "title": "number",
+          "type": "number"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Z Pixels"
+    },
+    "ImageZstack": {
+      "description": "Does data file contain a Z-stack of images",
+      "oneOf": [
+        {
+          "title": "boolean",
+          "type": "boolean"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "Image Z stack"
+    },
+    "ImagingChannelKey": {
+      "description": "Unique ImagingChannel_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "ImagingChannel Key",
+      "type": "string"
+    },
+    "ImagingLevel2Key": {
+      "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "oneOf": [
+        {
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "title": "null",
+          "type": "null"
+        }
+      ],
+      "title": "ImagingLevel2 Key"
+    },
+    "ImagingLevel3ImageId": {
+      "description": "A unique identifier used by schematic for record updates and as a reference key in other schemas.",
+      "title": "ImagingLevel3Image_id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Component",
+    "Filename",
+    "ImageAssayType",
+    "ImagingChannelKey",
+    "ImagingLevel3ImageId"
+  ],
+  "title": "ImagingLevel3Image_validation",
+  "type": "object"
+}
