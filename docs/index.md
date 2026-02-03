@@ -58,6 +58,8 @@ Contributing resources benefits both you and the wider research community. Hereâ
 
 Your contributions make a difference by fostering openness, innovation, and collaboration.
 
+**Ready to contribute your resources?** Visit our [portal docs](https://help.cancercomplexity.synapse.org/cancer-complexity-knowledge-portal-docs/contribute-to-the-cckp) for a step-by-step guide.
+
 
 ### **How to Use This Platform**  
 
@@ -67,8 +69,6 @@ The Data Models Explorer offers easy navigation and search options:
 |-------------------------|----------------------------------------------------------------------------------------------------------|
 | **Search for Terms**     | Use the search bar above to look for specific metadata terms.                                            |
 | **Browse Categories**    | Navigate using the left-hand menu to explore terms organized by resource type.                           |
-
-If you're ready to contribute your resources, check out the [tutorial page](home/tutorial.md) for step-by-step guidance.
 
 ### **Found an Error?**  
 
