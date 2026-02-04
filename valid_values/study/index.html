@@ -1,0 +1,1919 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Versioned history of the MC2 Center data models.">
+      
+      
+      
+      
+        <link rel="prev" href="../publication/">
+      
+      
+        <link rel="next" href="../tool/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Study - MC2 Center Data Models Explorer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attribute-study-data-use-codes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-header__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MC2 Center Data Models Explorer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Study
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/dataset/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Data Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../all_terms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Standard Terms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing to the Data Model
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-nav__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    MC2 Center Data Models Explorer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/DataDSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Sharing Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/education/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Education Resource Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/grant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grant Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/person/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Person Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/publication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publication Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Terms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Standard Terms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms by model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terms by model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharingPlans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Sharing Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../education/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Education Resource
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../person/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Person
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-use-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Use Codes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-de-identification-method-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study De-identification Method Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study License
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-index-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Index Date
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-source-geography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Source Geography
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Permission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Tier
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to the Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-use-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Use Codes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-de-identification-method-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study De-identification Method Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study License
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-index-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Index Date
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-source-geography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Source Geography
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Permission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-study-data-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Study Data Tier
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Study</h1>
+
+<h2 id="attribute-study-data-use-codes">Attribute: <code>Study Data Use Codes</code><a class="headerlink" href="#attribute-study-data-use-codes" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value       </th><th>Description                                                                                                                                                                                                      </th></tr>
+</thead>
+<tbody>
+<tr><td>IRB               </td><td>This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.                                                                                                        </td></tr>
+<tr><td>HMB               </td><td>This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.                                                     </td></tr>
+<tr><td>PUB               </td><td>This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.                                                                   </td></tr>
+<tr><td>US                </td><td>This data use modifier indicates that use is limited to use by approved users.                                                                                                                                   </td></tr>
+<tr><td>NPOA              </td><td>This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.                                                                                                     </td></tr>
+<tr><td>COL               </td><td>This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).                                                                                          </td></tr>
+<tr><td>NCU               </td><td>This data use modifier indicates that use of the data is limited to not-for-profit use.                                                                                                                          </td></tr>
+<tr><td>NPUNCU            </td><td>This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.                                                                     </td></tr>
+<tr><td>RS                </td><td>This data use modifier indicates that use is limited to studies of a certain research type.                                                                                                                      </td></tr>
+<tr><td>TS                </td><td>This data use modifier indicates that use is approved for a specific number of months.                                                                                                                           </td></tr>
+<tr><td>NRES              </td><td>This data use permission indicates there is no restriction on use.                                                                                                                                               </td></tr>
+<tr><td>NPU               </td><td>This data use modifier indicates that use of the data is limited to not-for-profit organizations.                                                                                                                </td></tr>
+<tr><td>DUM               </td><td>Data use modifiers indicate additional conditions for use.                                                                                                                                                       </td></tr>
+<tr><td>POA               </td><td>This data use permission indicates that use of the data is limited to the study of population origins or ancestry.                                                                                               </td></tr>
+<tr><td>MOR               </td><td>This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.                                                                                                  </td></tr>
+<tr><td>GSO               </td><td>This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)</td></tr>
+<tr><td>RTN               </td><td>This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.                                                                                                  </td></tr>
+<tr><td>CC                </td><td>This data use modifier indicates that use is allowed for clinical use and care.                                                                                                                                  </td></tr>
+<tr><td>NMDS              </td><td>This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).                                                                             </td></tr>
+<tr><td>IS                </td><td>This data use modifier indicates that use is limited to use within an approved institution.                                                                                                                      </td></tr>
+<tr><td>GS                </td><td>This data use modifier indicates that use is limited to within a specific geographic region.                                                                                                                     </td></tr>
+<tr><td>DS                </td><td>This data use permission indicates that use is allowed provided it is related to the specified disease.                                                                                                          </td></tr>
+<tr><td>GRU               </td><td>This data use permission indicates that use is allowed for general research use for any research purpose.                                                                                                        </td></tr>
+<tr><td>PS                </td><td>This data use modifier indicates that use is limited to use within an approved project.                                                                                                                          </td></tr>
+<tr><td>Pending Annotation</td><td>Data Use Codes have not yet been provided or documented for this resource.                                                                                                                                       </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-de-identification-method-type">Attribute: <code>Study De-identification Method Type</code><a class="headerlink" href="#attribute-study-de-identification-method-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value   </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Manual        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Semiautomatic </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Automatic     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not Applicable</td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-license">Attribute: <code>Study License</code><a class="headerlink" href="#attribute-study-license" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value    </th><th>Description                                       </th></tr>
+</thead>
+<tbody>
+<tr><td>CC BY 3.0      </td><td>http://creativecommons.org/licenses/by/3.0/       </td></tr>
+<tr><td>CC BY 4.0      </td><td>https://creativecommons.org/licenses/by/4.0/      </td></tr>
+<tr><td>CC BY-NC 4.0   </td><td>https://creativecommons.org/licenses/by-nc/4.0/   </td></tr>
+<tr><td>CC BY-NC 3.0   </td><td>https://creativecommons.org/licenses/by-nc/3.0/   </td></tr>
+<tr><td>CC BY-SA 4.0   </td><td>https://creativecommons.org/licenses/by-sa/4.0/   </td></tr>
+<tr><td>CC BY-NC-SA 4.0</td><td>https://creativecommons.org/licenses/by-nc-sa/4.0/</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-index-date">Attribute: <code>Study Index Date</code><a class="headerlink" href="#attribute-study-index-date" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Diagnosis Date </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Enrollment Date</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Collection Date</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Birth Date     </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-source-geography">Attribute: <code>Study Source Geography</code><a class="headerlink" href="#attribute-study-source-geography" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                               </th></tr>
+</thead>
+<tbody>
+<tr><td>AD           </td><td>Andorra                                                   </td></tr>
+<tr><td>AE           </td><td>United Arab Emirates (the)                                </td></tr>
+<tr><td>AF           </td><td>Afghanistan                                               </td></tr>
+<tr><td>AG           </td><td>Antigua and Barbuda                                       </td></tr>
+<tr><td>AI           </td><td>Anguilla                                                  </td></tr>
+<tr><td>AL           </td><td>Albania                                                   </td></tr>
+<tr><td>AM           </td><td>Armenia                                                   </td></tr>
+<tr><td>AO           </td><td>Angola                                                    </td></tr>
+<tr><td>AQ           </td><td>Antarctica                                                </td></tr>
+<tr><td>AR           </td><td>Argentina                                                 </td></tr>
+<tr><td>AS           </td><td>American Samoa                                            </td></tr>
+<tr><td>AT           </td><td>Austria                                                   </td></tr>
+<tr><td>AU           </td><td>Australia                                                 </td></tr>
+<tr><td>AW           </td><td>Aruba                                                     </td></tr>
+<tr><td>AX           </td><td>Åland Islands                                             </td></tr>
+<tr><td>AZ           </td><td>Azerbaijan                                                </td></tr>
+<tr><td>BA           </td><td>Bosnia and Herzegovina                                    </td></tr>
+<tr><td>BB           </td><td>Barbados                                                  </td></tr>
+<tr><td>BD           </td><td>Bangladesh                                                </td></tr>
+<tr><td>BE           </td><td>Belgium                                                   </td></tr>
+<tr><td>BF           </td><td>Burkina Faso                                              </td></tr>
+<tr><td>BG           </td><td>Bulgaria                                                  </td></tr>
+<tr><td>BH           </td><td>Bahrain                                                   </td></tr>
+<tr><td>BI           </td><td>Burundi                                                   </td></tr>
+<tr><td>BJ           </td><td>Benin                                                     </td></tr>
+<tr><td>BL           </td><td>Saint Barthélemy                                          </td></tr>
+<tr><td>BM           </td><td>Bermuda                                                   </td></tr>
+<tr><td>BN           </td><td>Brunei Darussalam                                         </td></tr>
+<tr><td>BO           </td><td>Bolivia (Plurinational State of)                          </td></tr>
+<tr><td>BQ           </td><td>Bonaire, Sint Eustatius and Saba                          </td></tr>
+<tr><td>BR           </td><td>Brazil                                                    </td></tr>
+<tr><td>BS           </td><td>Bahamas (the)                                             </td></tr>
+<tr><td>BT           </td><td>Bhutan                                                    </td></tr>
+<tr><td>BV           </td><td>Bouvet Island                                             </td></tr>
+<tr><td>BW           </td><td>Botswana                                                  </td></tr>
+<tr><td>BY           </td><td>Belarus                                                   </td></tr>
+<tr><td>BZ           </td><td>Belize                                                    </td></tr>
+<tr><td>CA           </td><td>Canada                                                    </td></tr>
+<tr><td>CC           </td><td>Cocos (Keeling) Islands (the)                             </td></tr>
+<tr><td>CD           </td><td>Congo (the Democratic Republic of the)                    </td></tr>
+<tr><td>CF           </td><td>Central African Republic (the)                            </td></tr>
+<tr><td>CG           </td><td>Congo (the)                                               </td></tr>
+<tr><td>CH           </td><td>Switzerland                                               </td></tr>
+<tr><td>CI           </td><td>Côte d&#x27;Ivoire                                             </td></tr>
+<tr><td>CK           </td><td>Cook Islands (the)                                        </td></tr>
+<tr><td>CL           </td><td>Chile                                                     </td></tr>
+<tr><td>CM           </td><td>Cameroon                                                  </td></tr>
+<tr><td>CN           </td><td>China                                                     </td></tr>
+<tr><td>CO           </td><td>Colombia                                                  </td></tr>
+<tr><td>CR           </td><td>Costa Rica                                                </td></tr>
+<tr><td>CU           </td><td>Cuba                                                      </td></tr>
+<tr><td>CV           </td><td>Cabo Verde                                                </td></tr>
+<tr><td>CW           </td><td>Curaçao                                                   </td></tr>
+<tr><td>CX           </td><td>Christmas Island                                          </td></tr>
+<tr><td>CY           </td><td>Cyprus                                                    </td></tr>
+<tr><td>CZ           </td><td>Czechia                                                   </td></tr>
+<tr><td>DE           </td><td>Germany                                                   </td></tr>
+<tr><td>DJ           </td><td>Djibouti                                                  </td></tr>
+<tr><td>DK           </td><td>Denmark                                                   </td></tr>
+<tr><td>DM           </td><td>Dominica                                                  </td></tr>
+<tr><td>DO           </td><td>Dominican Republic (the)                                  </td></tr>
+<tr><td>DZ           </td><td>Algeria                                                   </td></tr>
+<tr><td>EC           </td><td>Ecuador                                                   </td></tr>
+<tr><td>EE           </td><td>Estonia                                                   </td></tr>
+<tr><td>EG           </td><td>Egypt                                                     </td></tr>
+<tr><td>EH           </td><td>Western Sahara*                                           </td></tr>
+<tr><td>ER           </td><td>Eritrea                                                   </td></tr>
+<tr><td>ES           </td><td>Spain                                                     </td></tr>
+<tr><td>ET           </td><td>Ethiopia                                                  </td></tr>
+<tr><td>FI           </td><td>Finland                                                   </td></tr>
+<tr><td>FJ           </td><td>Fiji                                                      </td></tr>
+<tr><td>FK           </td><td>Falkland Islands (the) [Malvinas]                         </td></tr>
+<tr><td>FM           </td><td>Micronesia (Federated States of)                          </td></tr>
+<tr><td>FO           </td><td>Faroe Islands (the)                                       </td></tr>
+<tr><td>FR           </td><td>France                                                    </td></tr>
+<tr><td>GA           </td><td>Gabon                                                     </td></tr>
+<tr><td>GB           </td><td>United Kingdom of Great Britain and Northern Ireland (the)</td></tr>
+<tr><td>GD           </td><td>Grenada                                                   </td></tr>
+<tr><td>GE           </td><td>Georgia                                                   </td></tr>
+<tr><td>GF           </td><td>French Guiana                                             </td></tr>
+<tr><td>GG           </td><td>Guernsey                                                  </td></tr>
+<tr><td>GH           </td><td>Ghana                                                     </td></tr>
+<tr><td>GI           </td><td>Gibraltar                                                 </td></tr>
+<tr><td>GL           </td><td>Greenland                                                 </td></tr>
+<tr><td>GM           </td><td>Gambia (the)                                              </td></tr>
+<tr><td>GN           </td><td>Guinea                                                    </td></tr>
+<tr><td>GP           </td><td>Guadeloupe                                                </td></tr>
+<tr><td>GQ           </td><td>Equatorial Guinea                                         </td></tr>
+<tr><td>GR           </td><td>Greece                                                    </td></tr>
+<tr><td>GS           </td><td>South Georgia and the South Sandwich Islands              </td></tr>
+<tr><td>GT           </td><td>Guatemala                                                 </td></tr>
+<tr><td>GU           </td><td>Guam                                                      </td></tr>
+<tr><td>GW           </td><td>Guinea-Bissau                                             </td></tr>
+<tr><td>GY           </td><td>Guyana                                                    </td></tr>
+<tr><td>HK           </td><td>Hong Kong                                                 </td></tr>
+<tr><td>HM           </td><td>Heard Island and McDonald Islands                         </td></tr>
+<tr><td>HN           </td><td>Honduras                                                  </td></tr>
+<tr><td>HR           </td><td>Croatia                                                   </td></tr>
+<tr><td>HT           </td><td>Haiti                                                     </td></tr>
+<tr><td>HU           </td><td>Hungary                                                   </td></tr>
+<tr><td>ID           </td><td>Indonesia                                                 </td></tr>
+<tr><td>IE           </td><td>Ireland                                                   </td></tr>
+<tr><td>IL           </td><td>Israel                                                    </td></tr>
+<tr><td>IM           </td><td>Isle of Man                                               </td></tr>
+<tr><td>IN           </td><td>India                                                     </td></tr>
+<tr><td>IO           </td><td>British Indian Ocean Territory (the)                      </td></tr>
+<tr><td>IQ           </td><td>Iraq                                                      </td></tr>
+<tr><td>IR           </td><td>Iran (Islamic Republic of)                                </td></tr>
+<tr><td>IS           </td><td>Iceland                                                   </td></tr>
+<tr><td>IT           </td><td>Italy                                                     </td></tr>
+<tr><td>JE           </td><td>Jersey                                                    </td></tr>
+<tr><td>JM           </td><td>Jamaica                                                   </td></tr>
+<tr><td>JO           </td><td>Jordan                                                    </td></tr>
+<tr><td>JP           </td><td>Japan                                                     </td></tr>
+<tr><td>KE           </td><td>Kenya                                                     </td></tr>
+<tr><td>KG           </td><td>Kyrgyzstan                                                </td></tr>
+<tr><td>KH           </td><td>Cambodia                                                  </td></tr>
+<tr><td>KI           </td><td>Kiribati                                                  </td></tr>
+<tr><td>KM           </td><td>Comoros (the)                                             </td></tr>
+<tr><td>KN           </td><td>Saint Kitts and Nevis                                     </td></tr>
+<tr><td>KP           </td><td>Korea (the Democratic People&#x27;s Republic of)               </td></tr>
+<tr><td>KR           </td><td>Korea (the Republic of)                                   </td></tr>
+<tr><td>KW           </td><td>Kuwait                                                    </td></tr>
+<tr><td>KY           </td><td>Cayman Islands (the)                                      </td></tr>
+<tr><td>KZ           </td><td>Kazakhstan                                                </td></tr>
+<tr><td>LA           </td><td>Lao People&#x27;s Democratic Republic (the)                    </td></tr>
+<tr><td>LB           </td><td>Lebanon                                                   </td></tr>
+<tr><td>LC           </td><td>Saint Lucia                                               </td></tr>
+<tr><td>LI           </td><td>Liechtenstein                                             </td></tr>
+<tr><td>LK           </td><td>Sri Lanka                                                 </td></tr>
+<tr><td>LR           </td><td>Liberia                                                   </td></tr>
+<tr><td>LS           </td><td>Lesotho                                                   </td></tr>
+<tr><td>LT           </td><td>Lithuania                                                 </td></tr>
+<tr><td>LU           </td><td>Luxembourg                                                </td></tr>
+<tr><td>LV           </td><td>Latvia                                                    </td></tr>
+<tr><td>LY           </td><td>Libya                                                     </td></tr>
+<tr><td>MA           </td><td>Morocco                                                   </td></tr>
+<tr><td>MC           </td><td>Monaco                                                    </td></tr>
+<tr><td>MD           </td><td>Moldova (the Republic of)                                 </td></tr>
+<tr><td>ME           </td><td>Montenegro                                                </td></tr>
+<tr><td>MF           </td><td>Saint Martin (French part)                                </td></tr>
+<tr><td>MG           </td><td>Madagascar                                                </td></tr>
+<tr><td>MH           </td><td>Marshall Islands (the)                                    </td></tr>
+<tr><td>MK           </td><td>North Macedonia                                           </td></tr>
+<tr><td>ML           </td><td>Mali                                                      </td></tr>
+<tr><td>MM           </td><td>Myanmar                                                   </td></tr>
+<tr><td>MN           </td><td>Mongolia                                                  </td></tr>
+<tr><td>MO           </td><td>Macao                                                     </td></tr>
+<tr><td>MP           </td><td>Northern Mariana Islands (the)                            </td></tr>
+<tr><td>MQ           </td><td>Martinique                                                </td></tr>
+<tr><td>MR           </td><td>Mauritania                                                </td></tr>
+<tr><td>MS           </td><td>Montserrat                                                </td></tr>
+<tr><td>MT           </td><td>Malta                                                     </td></tr>
+<tr><td>MU           </td><td>Mauritius                                                 </td></tr>
+<tr><td>MV           </td><td>Maldives                                                  </td></tr>
+<tr><td>MW           </td><td>Malawi                                                    </td></tr>
+<tr><td>MX           </td><td>Mexico                                                    </td></tr>
+<tr><td>MY           </td><td>Malaysia                                                  </td></tr>
+<tr><td>MZ           </td><td>Mozambique                                                </td></tr>
+<tr><td>nan          </td><td>Namibia                                                   </td></tr>
+<tr><td>NC           </td><td>New Caledonia                                             </td></tr>
+<tr><td>NE           </td><td>Niger (the)                                               </td></tr>
+<tr><td>NF           </td><td>Norfolk Island                                            </td></tr>
+<tr><td>NG           </td><td>Nigeria                                                   </td></tr>
+<tr><td>NI           </td><td>Nicaragua                                                 </td></tr>
+<tr><td>NL           </td><td>Netherlands (Kingdom of the)                              </td></tr>
+<tr><td>NO           </td><td>Norway                                                    </td></tr>
+<tr><td>NP           </td><td>Nepal                                                     </td></tr>
+<tr><td>NR           </td><td>Nauru                                                     </td></tr>
+<tr><td>NU           </td><td>Niue                                                      </td></tr>
+<tr><td>NZ           </td><td>New Zealand                                               </td></tr>
+<tr><td>OM           </td><td>Oman                                                      </td></tr>
+<tr><td>PA           </td><td>Panama                                                    </td></tr>
+<tr><td>PE           </td><td>Peru                                                      </td></tr>
+<tr><td>PF           </td><td>French Polynesia                                          </td></tr>
+<tr><td>PG           </td><td>Papua New Guinea                                          </td></tr>
+<tr><td>PH           </td><td>Philippines (the)                                         </td></tr>
+<tr><td>PK           </td><td>Pakistan                                                  </td></tr>
+<tr><td>PL           </td><td>Poland                                                    </td></tr>
+<tr><td>PM           </td><td>Saint Pierre and Miquelon                                 </td></tr>
+<tr><td>PN           </td><td>Pitcairn                                                  </td></tr>
+<tr><td>PR           </td><td>Puerto Rico                                               </td></tr>
+<tr><td>PS           </td><td>Palestine, State of                                       </td></tr>
+<tr><td>PT           </td><td>Portugal                                                  </td></tr>
+<tr><td>PW           </td><td>Palau                                                     </td></tr>
+<tr><td>PY           </td><td>Paraguay                                                  </td></tr>
+<tr><td>QA           </td><td>Qatar                                                     </td></tr>
+<tr><td>RE           </td><td>Réunion                                                   </td></tr>
+<tr><td>RO           </td><td>Romania                                                   </td></tr>
+<tr><td>RS           </td><td>Serbia                                                    </td></tr>
+<tr><td>RU           </td><td>Russian Federation (the)                                  </td></tr>
+<tr><td>RW           </td><td>Rwanda                                                    </td></tr>
+<tr><td>SA           </td><td>Saudi Arabia                                              </td></tr>
+<tr><td>SB           </td><td>Solomon Islands                                           </td></tr>
+<tr><td>SC           </td><td>Seychelles                                                </td></tr>
+<tr><td>SD           </td><td>Sudan (the)                                               </td></tr>
+<tr><td>SE           </td><td>Sweden                                                    </td></tr>
+<tr><td>SG           </td><td>Singapore                                                 </td></tr>
+<tr><td>SH           </td><td>Saint Helena, Ascension and Tristan da Cunha              </td></tr>
+<tr><td>SI           </td><td>Slovenia                                                  </td></tr>
+<tr><td>SJ           </td><td>Svalbard and Jan Mayen                                    </td></tr>
+<tr><td>SK           </td><td>Slovakia                                                  </td></tr>
+<tr><td>SL           </td><td>Sierra Leone                                              </td></tr>
+<tr><td>SM           </td><td>San Marino                                                </td></tr>
+<tr><td>SN           </td><td>Senegal                                                   </td></tr>
+<tr><td>SO           </td><td>Somalia                                                   </td></tr>
+<tr><td>SR           </td><td>Suriname                                                  </td></tr>
+<tr><td>SS           </td><td>South Sudan                                               </td></tr>
+<tr><td>ST           </td><td>Sao Tome and Principe                                     </td></tr>
+<tr><td>SV           </td><td>El Salvador                                               </td></tr>
+<tr><td>SX           </td><td>Sint Maarten (Dutch part)                                 </td></tr>
+<tr><td>SY           </td><td>Syrian Arab Republic (the)                                </td></tr>
+<tr><td>SZ           </td><td>Eswatini                                                  </td></tr>
+<tr><td>TC           </td><td>Turks and Caicos Islands (the)                            </td></tr>
+<tr><td>TD           </td><td>Chad                                                      </td></tr>
+<tr><td>TF           </td><td>French Southern Territories (the)                         </td></tr>
+<tr><td>TG           </td><td>Togo                                                      </td></tr>
+<tr><td>TH           </td><td>Thailand                                                  </td></tr>
+<tr><td>TJ           </td><td>Tajikistan                                                </td></tr>
+<tr><td>TK           </td><td>Tokelau                                                   </td></tr>
+<tr><td>TL           </td><td>Timor-Leste                                               </td></tr>
+<tr><td>TM           </td><td>Turkmenistan                                              </td></tr>
+<tr><td>TN           </td><td>Tunisia                                                   </td></tr>
+<tr><td>TO           </td><td>Tonga                                                     </td></tr>
+<tr><td>TR           </td><td>Türkiye                                                   </td></tr>
+<tr><td>TT           </td><td>Trinidad and Tobago                                       </td></tr>
+<tr><td>TV           </td><td>Tuvalu                                                    </td></tr>
+<tr><td>TW           </td><td>Taiwan (Province of China)                                </td></tr>
+<tr><td>TZ           </td><td>Tanzania, the United Republic of                          </td></tr>
+<tr><td>UA           </td><td>Ukraine                                                   </td></tr>
+<tr><td>UG           </td><td>Uganda                                                    </td></tr>
+<tr><td>UM           </td><td>United States Minor Outlying Islands (the)                </td></tr>
+<tr><td>US           </td><td>United States of America (the)                            </td></tr>
+<tr><td>UY           </td><td>Uruguay                                                   </td></tr>
+<tr><td>UZ           </td><td>Uzbekistan                                                </td></tr>
+<tr><td>VA           </td><td>Holy See (the)                                            </td></tr>
+<tr><td>VC           </td><td>Saint Vincent and the Grenadines                          </td></tr>
+<tr><td>VE           </td><td>Venezuela (Bolivarian Republic of)                        </td></tr>
+<tr><td>VG           </td><td>Virgin Islands (British)                                  </td></tr>
+<tr><td>VI           </td><td>Virgin Islands (U.S.)                                     </td></tr>
+<tr><td>VN           </td><td>Viet Nam                                                  </td></tr>
+<tr><td>VU           </td><td>Vanuatu                                                   </td></tr>
+<tr><td>WF           </td><td>Wallis and Futuna                                         </td></tr>
+<tr><td>WS           </td><td>Samoa                                                     </td></tr>
+<tr><td>YE           </td><td>Yemen                                                     </td></tr>
+<tr><td>YT           </td><td>Mayotte                                                   </td></tr>
+<tr><td>ZA           </td><td>South Africa                                              </td></tr>
+<tr><td>ZM           </td><td>Zambia                                                    </td></tr>
+<tr><td>ZW           </td><td>Zimbabwe                                                  </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-data-permission">Attribute: <code>Study Data Permission</code><a class="headerlink" href="#attribute-study-data-permission" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Agreement    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Attestation  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Award        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other        </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-study-data-tier">Attribute: <code>Study Data Tier</code><a class="headerlink" href="#attribute-study-data-tier" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                                                      </th></tr>
+</thead>
+<tbody>
+<tr><td>Anonymous    </td><td>Data can be viewed and downloaded anonymously by anyone on the internet.         </td></tr>
+<tr><td>Open         </td><td>Users must have a Synapse account to download data.                              </td></tr>
+<tr><td>Controlled   </td><td>Users must have a Synapse account and satisfy access conditions to download data.</td></tr>
+<tr><td>Private      </td><td>Users must be provided access to data in Synapse by a project administrator.     </td></tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
