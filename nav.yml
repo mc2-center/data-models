@@ -1,6 +1,5 @@
 Home: 
   - index.md
-  - home/tutorial.md
 Data Models:
   - Dataset Data Model: model/dataset.md
   - Dataset Sharing Plan: model/DataDSP.md
