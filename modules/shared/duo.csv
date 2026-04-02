@@ -1,26 +1,33 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-IRB,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.,,,,,,,,,,DUO:0000021,,,ethics approval required
-HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,,,,,,,,,,DUO:0000006,,,health or medical or biomedical research
-PUB,This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.,,,,,,,,,,DUO:0000019,,,publication required
-US,This data use modifier indicates that use is limited to use by approved users.,,,,,,,,,,DUO:0000026,,,user specific restriction
-NPOA,"This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",,,,,,,,,,DUO:0000044,,,population origins or ancestry research prohibited
-COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,,,,,,,,,,DUO:0000020,,,collaboration required
-NCU,This data use modifier indicates that use of the data is limited to not-for-profit use.,,,,,,,,,,DUO:0000046,,,non-commercial use only
-NPUNCU,"This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",,,,,,,,,,DUO:0000018,,,"not for profit, non commercial use only"
-RS,This data use modifier indicates that use is limited to studies of a certain research type.,,,,,,,,,,DUO:0000012,,,research specific restrictions
-TS,This data use modifier indicates that use is approved for a specific number of months.,,,,,,,,,,DUO:0000025,,,time limit on use
-NRES,This data use permission indicates there is no restriction on use.,,,,,,,,,,DUO:0000004,,,no restriction
-NPU,This data use modifier indicates that use of the data is limited to not-for-profit organizations.,,,,,,,,,,DUO:0000045,,,not for profit organisation use only
-DUM,Data use modifiers indicate additional conditions for use.,,,,,,,,,,DUO:0000017,,,data use modifier
-POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,,,,,,,,,,DUO:0000011,,,population origins or ancestry research only
-MOR,This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.,,,,,,,,,,DUO:0000024,,,publication moratorium
-GSO,"This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)",,,,,,,,,,DUO:0000016,,,genetic studies only
-RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,,,,,,,,,,DUO:0000029,,,return to database or resource
-CC,This data use modifier indicates that use is allowed for clinical use and care.,,,,,,,,,,DUO:0000043,,,clinical care use
-NMDS,"This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).",,,,,,,,,,DUO:0000015,,,no general methods research
-IS,This data use modifier indicates that use is limited to use within an approved institution.,,,,,,,,,,DUO:0000028,,,institution specific restriction
-GS,This data use modifier indicates that use is limited to within a specific geographic region.,,,,,,,,,,DUO:0000022,,,geographical restriction
-DS,This data use permission indicates that use is allowed provided it is related to the specified disease.,,,,,,,,,,DUO:0000007,,,disease specific research
-GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,,,,,,,,,DUO:0000042,,,general research use
-PS,This data use modifier indicates that use is limited to use within an approved project.,,,,,,,,,,DUO:0000027,,,project specific restriction
-Pending Annotation,Data Use Codes have not yet been provided or documented for this resource.,,,,,,,,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Pending Annotation,Data Use Codes have not yet been provided or documented for this resource.,,,FALSE,,dataUseModifiers,,,,,,,,,
+GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,,FALSE,DUO:0000042,dataUseModifiers,,,,,,,,,
+PS,This data use modifier indicates that use is limited to use within an approved project.,,,FALSE,DUO:0000027,dataUseModifiers,,,,,,,,,
+GSO,"This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)",,,FALSE,DUO:0000016,dataUseModifiers,,,,,,,,,
+RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,,,FALSE,DUO:0000029,dataUseModifiers,,,,,,,,,
+CC,This data use modifier indicates that use is allowed for clinical use and care.,,,FALSE,DUO:0000043,dataUseModifiers,,,,,,,,,
+NMDS,"This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).",,,FALSE,DUO:0000015,dataUseModifiers,,,,,,,,,
+NRES,This data use permission indicates there is no restriction on use.,,,FALSE,DUO:0000004,dataUseModifiers,,,,,,,,,
+NPU,This data use modifier indicates that use of the data is limited to not-for-profit organizations.,,,FALSE,DUO:0000045,dataUseModifiers,,,,,,,,,
+DUM,Data use modifiers indicate additional conditions for use.,,,FALSE,DUO:0000017,dataUseModifiers,,,,,,,,,
+POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,,,FALSE,DUO:0000011,dataUseModifiers,,,,,,,,,
+NCU,This data use modifier indicates that use of the data is limited to not-for-profit use.,,,FALSE,DUO:0000046,dataUseModifiers,,,,,,,,,
+NPUNCU,"This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",,,FALSE,DUO:0000018,dataUseModifiers,,,,,,,,,
+NPOA,"This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",,,FALSE,DUO:0000044,dataUseModifiers,,,,,,,,,
+IRB,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.,,,FALSE,DUO:0000021,dataUseModifiers,,,,,,,,,
+HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,,,FALSE,DUO:0000006,dataUseModifiers,,,,,,,,,
+PUB,This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.,,,FALSE,DUO:0000019,dataUseModifiers,,,,,,,,,
+USE,"This data use modifier indicates that use is limited to use by approved users. If providing this term, please describe the restrictions in column userSpecificRestriction.",,userSpecificRestriction,FALSE,DUO:0000026,dataUseModifiers,,,str,string,,,,,
+COL,"This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s). If providing this term, please note the contact email in column collaborationRequired.",,collaborationRequired,FALSE,DUO:0000020,dataUseModifiers,,,str,string,,,,,
+RST,"This data use modifier indicates that use is limited to studies of a certain research type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.",,researchSpecificRestrictions,FALSE,DUO:0000012,dataUseModifiers,,,str,string,,,,,
+TSM,"This data use modifier indicates that use is approved for a specific number of months. If providing this term, please provide the number of months in column timeLimitOnUse.",,timeLimitOnUse,FALSE,DUO:0000025,dataUseModifiers,,,str,string,,,,,
+MOR,"This data use modifier indicates that requestor agrees not to publish results of studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.",,publicationMoratorium,FALSE,DUO:0000024,dataUseModifiers,,,str,string,,,,,
+IST,"This data use modifier indicates that use is limited to use within an approved institution. If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.",,institutionSpecificRestriction,FALSE,DUO:0000028,dataUseModifiers,,,str,string,,,,,
+GSR,"This data use modifier indicates that use is limited to within a specific geographic region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.",,geographicalRestriction,FALSE,DUO:0000022,dataUseModifiers,,,str,string,,,,,
+DSR,"This data use permission indicates that use is allowed provided it is related to the specified disease. If providing this term, please provide the disease MONDO ID(s) in column diseaseSpecificResearch.",,diseaseSpecificResearch,FALSE,DUO:0000007,dataUseModifiers,,,str,string,,,,,
+DUOPlus1,"Source geography is relevant to governance decisions. If providing this term, please provide the applicable country code(s) in column sourceGeography",,sourceGeography,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus2,"Study population is relevant to governance decisions. If providing this term, please provide the applicable population type(s) in column populationType.",,populationType,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus3,"Data deidentification is relevant to governance decisions. If providing this term, please provide the applicable deidentification type(s) in column deidentificationType.",,deidentificationType,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus4,"A data permission designation is associated with the Study. If providing this term, please provide the applicable permission type(s) in column dataPermission.",,dataPermission,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus5,"A data tier designation is associated with the Study. If providing this term, please provide the applicable data tier designation(s) in column dataTier.",,dataTier,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus6,"A license is associated with the Study. If providing this term, please provide the applicable license in column license.",,license,FALSE,,dataUseModifiers,,,str,string,,,,,
+DUOPlus7,"Attribution conditions are associated with this Study. If providing this term, please provide the attribution statement in column attribution.",,attribution,FALSE,,dataUseModifiers,,,str,string,,,,,
