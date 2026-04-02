@@ -11,7 +11,7 @@ File View,The denormalized manifest for file submission.,,"Component, FileView_i
 FileView_id,A unique primary key that enables record updates using schematic.,,,TRUE,CDE:14528010,File View,,,unique,string
 File Longitudinal Group,A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment,,,FALSE,,File View,,,str,string
 File Longitudinal Event Type,The type of event to which File Longitudinal Total Time Elapsed is related,"Enrollment, Baseline",,FALSE,,File View,,,str,string
-File Longitudinal Sequence Identifier,"The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",,,FALSE,,File View,,,int,number
+File Longitudinal Sequence Identifier,"The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",,,FALSE,,File View,,,num,number
 File Longitudinal Time Elapsed Unit,The unit of time associated with Sequential and Total Time Elapsed attributes.,,,FALSE,,File View,,,str,string
 File Longitudinal Sequential Time Elapsed,The time elapsed between collecting the current and previous files in this longitudinal group. ,,,FALSE,,File View,,,num,number
 File Longitudinal Total Time Elapsed,The total time elapsed between the first and current files contained this longitudinal group. ,,,FALSE,,File View,,,num,number
