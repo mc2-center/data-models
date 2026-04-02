@@ -1,0 +1,15 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
+Study,Studies associated with a grant,,"Component, Study_id, studyProjectIdentifier, grantNumber, studyName, AccessRequirementKey, studyDescription, studyInvestigator, studyParticipantNumber, studySampleNumber, studyDeidentificationType, studyDeidentificationMethodDescription, studyDeidentificationMethodSoftware, studyDbgapAccessionId, studyIndexDate, dataUseModifiers",FALSE,,,,,,
+grantNumber,The identifier associated with the award funding this study.,,,FALSE,,Study,,,list like,
+studyName,Name of the study,,,TRUE,CDE:11459810,Study,,,str,string
+studyDescription,"Description of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. Maps to DUOplus2.",,,TRUE,CDE:03444002,Study,,,str,string
+studyInvestigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,,,TRUE,,Study,,,str,string
+Study_id,A unique primary key that enables record updates using schematic.,,,TRUE,"CDE:12960571, primary_key",Study,,,unique,string
+studyParticipantNumber,The number of participant instances associated with systematic investigation into a subject.,,,TRUE,CDE:11555662,Study,,CDS/collection,int,integer
+studyDeidentificationType,General description of the de-identification method. Maps to DUOplus3.,"HIPPA_LDS, SafeHarbor, ExpertDetermination, Pseudonymized, Anonymized, Other",,FALSE,CDE:14576319,Study,,CDS/collection,list like,
+studyDeidentificationMethodDescription,Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.,,,FALSE,,Study,,CDS/collection,str,string
+studyDeidentificationMethodSoftware,Software that was used to de-identify the data (if used),,,FALSE,,Study,,CDS/collection,str,string
+studyDbgapAccessionId,A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.,,,FALSE,CDE:11524544,Study,,CDS/collection,str,string
+studyIndexDate,"The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.","Diagnosis Date , Enrollment Date, Collection Date, Birth Date",,FALSE,,Study,,CDS v5.0.4/Study,list like,
+studySampleNumber,The number of specimens associated with systematic investigation into a subject.,,,TRUE,CDE:11555663,Study,,GC v6.0.2/study.number_of_samples,int,integer
+studyProjectIdentifier,The Synapse Project identifier (synID) with which this Study is related.,,,FALSE,,Study,,,list like::regex search syn[0-9]+,
