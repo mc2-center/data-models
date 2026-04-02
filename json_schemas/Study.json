@@ -1,0 +1,1125 @@
+{
+  "$id": "http://example.com/Study",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "COL"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "CollaborationRequired": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "CollaborationRequired"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DSR"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "DiseaseSpecificResearch": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DiseaseSpecificResearch"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus1"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "SourceGeography": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "SourceGeography"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus2"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "PopulationType": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "PopulationType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus3"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "DeidentificationType": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DeidentificationType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus4"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "DataPermission": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DataPermission"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus5"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "DataTier": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DataTier"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus6"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "License": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "License"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "DUOPlus7"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "Attribution": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "Attribution"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "GSR"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "GeographicalRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "GeographicalRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "IST"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "InstitutionSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "InstitutionSpecificRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "MOR"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "PublicationMoratorium": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "PublicationMoratorium"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "RST"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "ResearchSpecificRestrictions": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "ResearchSpecificRestrictions"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "TSM"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "TimeLimitOnUse": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "TimeLimitOnUse"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataUseModifiers": {
+            "enum": [
+              "USE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "UserSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "UserSpecificRestriction"
+        ]
+      }
+    }
+  ],
+  "description": "Studies associated with a grant",
+  "properties": {
+    "Attribution": {
+      "description": "The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.",
+      "title": "attribution",
+      "type": "string"
+    },
+    "CollaborationRequired": {
+      "description": "If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",
+      "title": "collaborationRequired",
+      "type": "string"
+    },
+    "Component": {
+      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "DataPermission": {
+      "description": "The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.",
+      "items": {
+        "enum": [
+          "Agreement",
+          "Attestation",
+          "Award",
+          "Other"
+        ],
+        "type": "string"
+      },
+      "title": "dataPermission",
+      "type": "array"
+    },
+    "DataTier": {
+      "description": "The tier of data access associated with the access requirement. Equivalent to DUOPlus5.",
+      "items": {
+        "enum": [
+          "Anonymous",
+          "Controlled",
+          "Open",
+          "Private"
+        ],
+        "type": "string"
+      },
+      "title": "dataTier",
+      "type": "array"
+    },
+    "DataUseModifiers": {
+      "description": "A list of data use modifiers that apply to the access requirement. Examples include GRU, IRB, etc.",
+      "items": {
+        "enum": [
+          "CC",
+          "COL",
+          "DSR",
+          "DUM",
+          "DUOPlus1",
+          "DUOPlus2",
+          "DUOPlus3",
+          "DUOPlus4",
+          "DUOPlus5",
+          "DUOPlus6",
+          "DUOPlus7",
+          "GRU",
+          "GSO",
+          "GSR",
+          "HMB",
+          "IRB",
+          "IST",
+          "MOR",
+          "NCU",
+          "NMDS",
+          "NPOA",
+          "NPU",
+          "NPUNCU",
+          "NRES",
+          "POA",
+          "PS",
+          "PUB",
+          "Pending Annotation",
+          "RST",
+          "RTN",
+          "TSM",
+          "USE"
+        ],
+        "type": "string"
+      },
+      "title": "dataUseModifiers",
+      "type": "array"
+    },
+    "DeidentificationType": {
+      "description": "The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.",
+      "items": {
+        "enum": [
+          "Automatic",
+          "Manual",
+          "Not Applicable",
+          "Semiautomatic"
+        ],
+        "type": "string"
+      },
+      "title": "deidentificationType",
+      "type": "array"
+    },
+    "DiseaseSpecificResearch": {
+      "description": "id. Provide multiple values as a comma-separated list. MONDO terms can be found here",
+      "pattern": "MONDO:\\d{7}",
+      "title": "diseaseSpecificResearch",
+      "type": "array"
+    },
+    "GeographicalRestriction": {
+      "description": "The specific geographic region(s) to which use is limited by the access requirement.",
+      "items": {
+        "enum": [
+          "AD",
+          "AE",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AR",
+          "AS",
+          "AT",
+          "AU",
+          "AW",
+          "AX",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BF",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BO",
+          "BQ",
+          "BR",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BY",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CH",
+          "CI",
+          "CK",
+          "CL",
+          "CM",
+          "CN",
+          "CO",
+          "CR",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "EH",
+          "ER",
+          "ES",
+          "ET",
+          "FI",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GM",
+          "GN",
+          "GP",
+          "GQ",
+          "GR",
+          "GS",
+          "GT",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HM",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IQ",
+          "IR",
+          "IS",
+          "IT",
+          "JE",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KP",
+          "KR",
+          "KW",
+          "KY",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "LY",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MR",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NP",
+          "NR",
+          "NU",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PF",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PM",
+          "PN",
+          "PR",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RE",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SD",
+          "SE",
+          "SG",
+          "SH",
+          "SI",
+          "SJ",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SO",
+          "SR",
+          "SS",
+          "ST",
+          "SV",
+          "SX",
+          "SY",
+          "SZ",
+          "TC",
+          "TD",
+          "TF",
+          "TG",
+          "TH",
+          "TJ",
+          "TK",
+          "TL",
+          "TM",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "UM",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VC",
+          "VE",
+          "VG",
+          "VI",
+          "VN",
+          "VU",
+          "WF",
+          "WS",
+          "YE",
+          "YT",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "type": "string"
+      },
+      "title": "geographicalRestriction",
+      "type": "array"
+    },
+    "GrantViewKey": {
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "title": "GrantView Key",
+      "type": "string"
+    },
+    "InstitutionSpecificRestriction": {
+      "description": "id. Provide multiple entries as a comma-separated list. ROR IDs can be found here",
+      "pattern": "ROR:[a-z0-9]{9}",
+      "title": "institutionSpecificRestriction",
+      "type": "array"
+    },
+    "License": {
+      "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
+      "items": {
+        "enum": [
+          "Apache_2",
+          "BSD_3_Clause",
+          "CC0",
+          "CC_BY",
+          "CC_BY_NC",
+          "CC_BY_NC_ND",
+          "CC_BY_NC_SA",
+          "CC_BY_ND",
+          "CC_BY_SA",
+          "GPL_3",
+          "MIT"
+        ],
+        "type": "string"
+      },
+      "title": "license",
+      "type": "array"
+    },
+    "PersonViewKey": {
+      "description": "Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",
+      "title": "PersonView Key",
+      "type": "string"
+    },
+    "PopulationType": {
+      "description": "The population studied in the research associated with the access requirement. Equivalent to DUOPlus2",
+      "title": "populationType",
+      "type": "string"
+    },
+    "ProjectViewKey": {
+      "description": "Unique ProjectView_id foreign key(s) that group the resource with other components, as part of the same grant-associated studies. Please provide multiple values as a comma-separated list.",
+      "title": "ProjectView Key",
+      "type": "string"
+    },
+    "PublicationMoratorium": {
+      "description": "End date of the publication moratorium associated with the access requirement.",
+      "format": "date",
+      "title": "publicationMoratorium"
+    },
+    "ResearchSpecificRestrictions": {
+      "description": "Research-specific restrictions associated with the access requirement.",
+      "title": "researchSpecificRestrictions",
+      "type": "string"
+    },
+    "SourceGeography": {
+      "description": "The geographical source of the data associated with the access requirement. Equivalent to DUOPlus1.",
+      "items": {
+        "enum": [
+          "AD",
+          "AE",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AR",
+          "AS",
+          "AT",
+          "AU",
+          "AW",
+          "AX",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BF",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BO",
+          "BQ",
+          "BR",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BY",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CH",
+          "CI",
+          "CK",
+          "CL",
+          "CM",
+          "CN",
+          "CO",
+          "CR",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "EH",
+          "ER",
+          "ES",
+          "ET",
+          "FI",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GM",
+          "GN",
+          "GP",
+          "GQ",
+          "GR",
+          "GS",
+          "GT",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HM",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IQ",
+          "IR",
+          "IS",
+          "IT",
+          "JE",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KP",
+          "KR",
+          "KW",
+          "KY",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "LY",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MR",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NP",
+          "NR",
+          "NU",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PF",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PM",
+          "PN",
+          "PR",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RE",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SD",
+          "SE",
+          "SG",
+          "SH",
+          "SI",
+          "SJ",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SO",
+          "SR",
+          "SS",
+          "ST",
+          "SV",
+          "SX",
+          "SY",
+          "SZ",
+          "TC",
+          "TD",
+          "TF",
+          "TG",
+          "TH",
+          "TJ",
+          "TK",
+          "TL",
+          "TM",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "UM",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VC",
+          "VE",
+          "VG",
+          "VI",
+          "VN",
+          "VU",
+          "WF",
+          "WS",
+          "YE",
+          "YT",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "type": "string"
+      },
+      "title": "sourceGeography",
+      "type": "array"
+    },
+    "StudyDe-identificationMethodDescription": {
+      "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
+      "title": "Study De-identification Method Description",
+      "type": "string"
+    },
+    "StudyDe-identificationMethodSoftware": {
+      "description": "Software that was used to de-identify the data (if used)",
+      "title": "Study De-identification Method Software",
+      "type": "string"
+    },
+    "StudyDe-identificationMethodType": {
+      "description": "General description of the de-identification method. Maps to DUOplus3.",
+      "enum": [
+        "Automatic",
+        "Manual",
+        "Not Applicable",
+        "Semiautomatic"
+      ],
+      "title": "Study De-identification Method Type"
+    },
+    "StudyDescription": {
+      "description": "Description of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. Maps to DUOplus2.",
+      "title": "Study Description",
+      "type": "string"
+    },
+    "StudyId": {
+      "description": "A unique primary key that enables record updates using schematic.",
+      "title": "Study_id",
+      "type": "string"
+    },
+    "StudyIndexDate": {
+      "description": "The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.",
+      "enum": [
+        "Birth Date",
+        "Collection Date",
+        "Diagnosis Date",
+        "Enrollment Date"
+      ],
+      "title": "Study Index Date"
+    },
+    "StudyInvestigator": {
+      "description": "Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.",
+      "title": "Study Investigator",
+      "type": "array"
+    },
+    "StudyName": {
+      "description": "Name of the study",
+      "title": "Study Name",
+      "type": "string"
+    },
+    "StudyNumberofParticipants": {
+      "description": "The number of participant instances associated with systematic investigation into a subject.",
+      "title": "Study Number of Participants",
+      "type": "number"
+    },
+    "StudyNumberofSamples": {
+      "description": "TBD",
+      "title": "Study Number of Samples"
+    },
+    "StudyProjectIdentifier": {
+      "description": "The Synapse Project identifier (synID) with which this Study is related.",
+      "pattern": "syn[0-9]+",
+      "title": "Study Project Identifier",
+      "type": "array"
+    },
+    "StudydbGaPAccessionId": {
+      "description": "A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.",
+      "title": "Study dbGaP Accession Id",
+      "type": "string"
+    },
+    "TimeLimitOnUse": {
+      "description": "Time limit on the use of the data associated with the access requirement.",
+      "title": "timeLimitOnUse",
+      "type": "number"
+    },
+    "UserSpecificRestriction": {
+      "description": "The user-specific restrictions associated with the access requirement.",
+      "title": "userSpecificRestriction",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Component",
+    "StudyDe-identificationMethodType",
+    "StudyDescription",
+    "StudyId",
+    "StudyInvestigator",
+    "StudyName",
+    "StudyNumberofParticipants"
+  ],
+  "title": "Study",
+  "type": "object"
+}

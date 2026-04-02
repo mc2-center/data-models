@@ -30,4 +30,3 @@ qc_convert:
 
 generate-json:
 	python create_json_from_model.py
-	rm *.schema.json
