@@ -2,7 +2,7 @@ CSV := mc2.model.csv
 QC := ./qc_model/mc2_qc.model.csv
 DATA := DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView DataCatalog
 
-all: collate fix generate-json convert
+all: collate fix convert generate-json
 
 qc: collate fix qc_fix qc_convert
 
@@ -29,5 +29,5 @@ qc_convert:
 	schematic schema convert ${QC}
 
 generate-json:
-	$(foreach d,$(DATA), schematic schema generate-jsonschema -dms ${CSV} -od . -dt $(d);)
+	python create_json_from_model.py
 	rm *.schema.json
