@@ -10,7 +10,10 @@
               "COL"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -33,7 +36,10 @@
               "DSR"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -56,7 +62,10 @@
               "DUOPlus1"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -79,7 +88,10 @@
               "DUOPlus2"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -102,7 +114,10 @@
               "DUOPlus3"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -125,7 +140,10 @@
               "DUOPlus4"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -148,7 +166,10 @@
               "DUOPlus5"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -171,7 +192,10 @@
               "DUOPlus6"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -194,7 +218,10 @@
               "DUOPlus7"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -217,7 +244,10 @@
               "GSR"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -240,7 +270,10 @@
               "IST"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -263,7 +296,10 @@
               "MOR"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -286,7 +322,10 @@
               "RST"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -309,7 +348,10 @@
               "TSM"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -332,7 +374,10 @@
               "USE"
             ]
           }
-        }
+        },
+        "required": [
+          "DataUseModifiers"
+        ]
       },
       "then": {
         "properties": {
@@ -424,7 +469,7 @@
           "POA",
           "PS",
           "PUB",
-          "Pending Annotation",
+          "PendingAnnotation",
           "RST",
           "RTN",
           "TSM",
@@ -441,7 +486,7 @@
         "enum": [
           "Automatic",
           "Manual",
-          "Not Applicable",
+          "NotApplicable",
           "Semiautomatic"
         ],
         "type": "string"
@@ -729,16 +774,16 @@
       "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
       "items": {
         "enum": [
-          "Apache_2",
-          "BSD_3_Clause",
+          "Apache2",
+          "BSD3Clause",
           "CC0",
-          "CC_BY",
-          "CC_BY_NC",
-          "CC_BY_NC_ND",
-          "CC_BY_NC_SA",
-          "CC_BY_ND",
-          "CC_BY_SA",
-          "GPL_3",
+          "CCBY",
+          "CCBYNC",
+          "CCBYNCND",
+          "CCBYNCSA",
+          "CCBYND",
+          "CCBYSA",
+          "GPL3",
           "MIT"
         ],
         "type": "string"
@@ -1045,7 +1090,7 @@
       "enum": [
         "Automatic",
         "Manual",
-        "Not Applicable",
+        "NotApplicable",
         "Semiautomatic"
       ],
       "title": "Study De-identification Method Type"
@@ -1063,10 +1108,10 @@
     "StudyIndexDate": {
       "description": "The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.",
       "enum": [
-        "Birth Date",
-        "Collection Date",
-        "Diagnosis Date",
-        "Enrollment Date"
+        "BirthDate",
+        "CollectionDate",
+        "DiagnosisDate",
+        "EnrollmentDate"
       ],
       "title": "Study Index Date"
     },
