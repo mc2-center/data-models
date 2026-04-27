@@ -19,4 +19,4 @@ qc_convert:
 	schematic schema convert ${QC}
 
 generate-json:
-	python create_json_from_model.py
+	python create_json_from_model.py ${DATA}
