@@ -1,8 +1,9 @@
 from synapseclient import Synapse
 from synapseclient.extensions.curator import generate_jsonschema
+import sys
 
 DATA_MODEL_SOURCE = "mc2.model.csv"
-DATA_TYPE = ["DataDSP", "Study", "FileView", "PublicationView", "GrantView", "ToolView", "EducationalResource", "DatasetView", "DataCatalog", "Biospecimen", "Individual", "Model"]
+DATA_TYPE = sys.argv[1:] if len(sys.argv) > 1 else None
 OUTPUT_DIRECTORY = "./json_schemas"
 
 syn = Synapse()
