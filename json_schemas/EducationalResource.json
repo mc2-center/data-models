@@ -81,11 +81,17 @@
     },
     "ResourceContributors": {
       "description": "The name(s) of the contributor(s) to the item. Multiple contributor names should be provided as a comma-separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Contributors",
       "type": "array"
     },
     "ResourceDatasetAlias": {
       "description": "URL or persistent identifier (DOI, Synapse ID) for any dataset(s) that is intended to be used with the item. Multiple values should be provided as a comma separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Dataset Alias",
       "type": "array"
     },
@@ -136,6 +142,9 @@
     },
     "ResourceInternalIdentifier": {
       "description": "The institution-specific ID for the item, if applicable. May be non-unique. Multiple values should be provided as a comma separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Internal Identifier",
       "type": "array"
     },
@@ -706,6 +715,9 @@
     },
     "ResourceOriginInstitution": {
       "description": "Institution(s) of origin for this item. Multiple values should be provided as a comma separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Origin Institution",
       "type": "array"
     },
@@ -748,6 +760,9 @@
     },
     "ResourceSecondaryTopic": {
       "description": "Additional topics or keywords to describe the content of the item, in addition to the primary topic. Multiple values should be provided as a comma-separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Secondary Topic",
       "type": "array"
     },
@@ -758,6 +773,9 @@
     },
     "ResourceToolLink": {
       "description": "URL or persistent identifier (DOI, Synapse ID) for any software or tool that is intended to be used with the item. Multiple values should be provided as a comma separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Resource Tool Link",
       "type": "array"
     },

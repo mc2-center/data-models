@@ -419,16 +419,22 @@
     },
     "PublicationAuthors": {
       "description": "Authors of the publication. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
       "title": "Publication Authors",
       "type": "array"
     },
     "PublicationDatasetAlias": {
       "description": "A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the publication. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
       "title": "Publication Dataset Alias",
       "type": "array"
     },
     "PublicationDoi": {
-      "description": "//www.doi.org/{doi} to comply with CrossRef DOI display guidelines.",
+      "description": "The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.",
       "format": "uri",
       "title": "Publication Doi",
       "type": "string"
@@ -440,6 +446,9 @@
     },
     "PublicationKeywords": {
       "description": "Keywords associated with the publication. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
       "title": "Publication Keywords",
       "type": "array"
     },

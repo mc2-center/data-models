@@ -5,14 +5,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "COL"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -31,14 +31,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DSR"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -57,14 +57,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus1"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -83,14 +83,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus2"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -109,14 +109,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus3"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -135,14 +135,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus4"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -161,14 +161,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus5"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -187,14 +187,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus6"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -213,14 +213,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "DUOPlus7"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -239,14 +239,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "GSR"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -265,14 +265,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "IST"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -291,14 +291,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "MOR"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -317,14 +317,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "RST"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -343,14 +343,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "TSM"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -369,14 +369,14 @@
     {
       "if": {
         "properties": {
-          "DataUseModifiers": {
+          "StudyDataUseCodes": {
             "enum": [
               "USE"
             ]
           }
         },
         "required": [
-          "DataUseModifiers"
+          "StudyDataUseCodes"
         ]
       },
       "then": {
@@ -438,48 +438,6 @@
       "title": "dataTier",
       "type": "array"
     },
-    "DataUseModifiers": {
-      "description": "A list of data use modifiers that apply to the access requirement. Examples include GRU, IRB, etc.",
-      "items": {
-        "enum": [
-          "CC",
-          "COL",
-          "DSR",
-          "DUM",
-          "DUOPlus1",
-          "DUOPlus2",
-          "DUOPlus3",
-          "DUOPlus4",
-          "DUOPlus5",
-          "DUOPlus6",
-          "DUOPlus7",
-          "GRU",
-          "GSO",
-          "GSR",
-          "HMB",
-          "IRB",
-          "IST",
-          "MOR",
-          "NCU",
-          "NMDS",
-          "NPOA",
-          "NPU",
-          "NPUNCU",
-          "NRES",
-          "POA",
-          "PS",
-          "PUB",
-          "PendingAnnotation",
-          "RST",
-          "RTN",
-          "TSM",
-          "USE"
-        ],
-        "type": "string"
-      },
-      "title": "dataUseModifiers",
-      "type": "array"
-    },
     "DeidentificationType": {
       "description": "The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.",
       "items": {
@@ -495,7 +453,7 @@
       "type": "array"
     },
     "DiseaseSpecificResearch": {
-      "description": "id. Provide multiple values as a comma-separated list. MONDO terms can be found here",
+      "description": "The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list. MONDO terms can be found here: https://ols.monarchinitiative.org/ontologies/mondo",
       "pattern": "MONDO:\\d{7}",
       "title": "diseaseSpecificResearch",
       "type": "array"
@@ -765,7 +723,7 @@
       "type": "string"
     },
     "InstitutionSpecificRestriction": {
-      "description": "id. Provide multiple entries as a comma-separated list. ROR IDs can be found here",
+      "description": "Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list. ROR IDs can be found here: https://ror.org/search",
       "pattern": "ROR:[a-z0-9]{9}",
       "title": "institutionSpecificRestriction",
       "type": "array"
@@ -1075,6 +1033,48 @@
       "title": "sourceGeography",
       "type": "array"
     },
+    "StudyDataUseCodes": {
+      "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
+      "items": {
+        "enum": [
+          "CC",
+          "COL",
+          "DSR",
+          "DUM",
+          "DUOPlus1",
+          "DUOPlus2",
+          "DUOPlus3",
+          "DUOPlus4",
+          "DUOPlus5",
+          "DUOPlus6",
+          "DUOPlus7",
+          "GRU",
+          "GSO",
+          "GSR",
+          "HMB",
+          "IRB",
+          "IST",
+          "MOR",
+          "NCU",
+          "NMDS",
+          "NPOA",
+          "NPU",
+          "NPUNCU",
+          "NRES",
+          "POA",
+          "PS",
+          "PUB",
+          "PendingAnnotation",
+          "RST",
+          "RTN",
+          "TSM",
+          "USE"
+        ],
+        "type": "string"
+      },
+      "title": "Study Data Use Codes",
+      "type": "array"
+    },
     "StudyDe-identificationMethodDescription": {
       "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
       "title": "Study De-identification Method Description",
@@ -1117,6 +1117,9 @@
     },
     "StudyInvestigator": {
       "description": "Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.",
+      "items": {
+        "type": "string"
+      },
       "title": "Study Investigator",
       "type": "array"
     },
@@ -1136,6 +1139,10 @@
     },
     "StudyProjectIdentifier": {
       "description": "The Synapse Project identifier (synID) with which this Study is related.",
+      "items": {
+        "pattern": "syn[0-9]+",
+        "type": "string"
+      },
       "pattern": "syn[0-9]+",
       "title": "Study Project Identifier",
       "type": "array"

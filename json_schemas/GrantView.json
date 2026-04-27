@@ -251,6 +251,9 @@
     },
     "GrantInvestigator": {
       "description": "Investigator(s) associated witht the grant. 1...*",
+      "items": {
+        "type": "string"
+      },
       "title": "Grant Investigator",
       "type": "array"
     },
