@@ -89,8 +89,6 @@ dataCatalog:
     src: shared/dataTier.csv
   - name: countryOfOrigin
     src: shared/sourceGeography.csv
-  - name: dataUseModifiers
-    src: shared/duo.csv
   - name: funder
     src: consortium/consortium_funding_agency.csv
   - name: license
@@ -333,6 +331,8 @@ study:
     src: shared/studyLicense.csv
   - name: Study Index Date
     src: study/indexDate.csv
+  - name: Study Data Use Codes
+    src: shared/duo.csv
   
 tool:
   - name: Tool Grant Number
