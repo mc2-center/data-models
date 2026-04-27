@@ -81,8 +81,6 @@ sharingPlans:
     src: shared/tumorType.csv
   - name: DSP Dataset Level
     src: file/processLevel.csv
-  - name: DSP Data Use Codes
-    src: shared/duo.csv
 
 dataCatalog:
   - name: accessType
