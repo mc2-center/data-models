@@ -557,7 +557,7 @@
       "type": "number"
     },
     "FileSpecies": {
-      "description": "The species the data was collected on. Multiple values permitted, comma separated.",
+      "description": "The species the data was collected on.",
       "enum": [
         "AfricanBushElephant",
         "Armadillo",
