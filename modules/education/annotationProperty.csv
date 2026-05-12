@@ -23,4 +23,4 @@ Resource Media Accessibility,"Accessibility features (Alternative Text, Audio De
 Resource Access Hazard,"Sensory hazards (Flashing, Motion, etc.) applicable to the item. Multiple values should be provided as a comma separated list.","Flashing, Motion, Simulation, Sound",,FALSE,,Educational Resource,,OER,list like,string_list
 Resource Dataset Alias,"URL or persistent identifier (DOI, Synapse ID) for any dataset(s) that is intended to be used with the item. Multiple values should be provided as a comma separated list.",,,FALSE,,Educational Resource,,MC2/dataset,list like,string_list
 Resource Tool Link,"URL or persistent identifier (DOI, Synapse ID) for any software or tool that is intended to be used with the item. Multiple values should be provided as a comma separated list.",,,FALSE,,Educational Resource,,MC2/tool,list like,string_list
-EducationalResource_id,A unique primary key that enables record updates using schematic.,,,TRUE,,Educational Resource,,MC2,unique,string
+EducationalResource_id,"Unique ID associated with a Educational Resource entry, used as a key for record linking and updates.",,,TRUE,,Educational Resource,,MC2,unique,string

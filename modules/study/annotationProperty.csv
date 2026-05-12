@@ -3,7 +3,7 @@ Study,Studies associated with a grant,,"Component, Study_id, GrantView Key, Proj
 Study Name,Name of the study,,,TRUE,CDE:11459810,Study,,,str,string
 Study Description,"Description of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. Maps to DUOplus2.",,,TRUE,CDE:03444002,Study,,,str,string
 Study Investigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,,,TRUE,,Study,,,list like,string_list
-Study_id,A unique primary key that enables record updates using schematic.,,,TRUE,CDE:12960571,Study,,,unique,string
+Study_id,"Unique row identifier, used as a primary key for record updates.",,,TRUE,CDE:12960571,Study,,,unique,string
 Study Number of Participants,The number of participant instances associated with systematic investigation into a subject.,,,TRUE,CDE:11555662,Study,,CDS/collection,int,number
 Study De-identification Method Type,General description of the de-identification method. Maps to DUOplus3.,"Manual, Semiautomatic, Automatic, Not Applicable",,TRUE,CDE:14576319,Study,,CDS/collection,str,string
 Study De-identification Method Description,Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.,,,FALSE,,Study,,CDS/collection,str,string

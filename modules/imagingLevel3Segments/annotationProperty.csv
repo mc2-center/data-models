@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 Imaging Level 3 Segments,Image segmentation mask information,,"Component, ImagingLevel3Segments_id, Filename, ImagingLevel2 Key, ImagingLevel3Image Key, Image Segmentation Data Type, Image Parameter file, Software and Version, Image Object Class, Image Object Class Description, Image Number of Objects",FALSE,,,File View,HTAN,,
-ImagingLevel3Segments_id,A unique identifier used by schematic for record updates and as a reference key in other schemas.,,,TRUE,,Imaging Level 3 Segments,,MC2,unique,string
+ImagingLevel3Segments_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,TRUE,,Imaging Level 3 Segments,,MC2,unique,string
 Image Segmentation Data Type,Specifies how the segmentation is stored,"Mask, Outline, Polygon, Probability Map, Point",,TRUE,,Imaging Level 3 Segments,,HTAN,str,string
 Image Parameter file,Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis,,,FALSE,,Imaging Level 3 Segments,,HTAN,str,string
 Image Object Class,Defines the structure that the mask delineates,"Nucleus, Cytoplasm, Plasma Membrane, Whole Cell, Spot, Other",,FALSE,,Imaging Level 3 Segments,,HTAN,str,string

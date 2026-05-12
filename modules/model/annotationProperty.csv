@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
 Model,Information about a non-human organism or any cell line from which experimental data is derived.,,"Component, Model_id, Study Key, Individual Key, Model Age, Model Age Unit, Model Sex, Model Disease Type, Model Primary Diagnosis, Model Primary Site, Model Site of Origin, Model Tumor Subtype, Model Species, Model Type, Model Method, Model Source, Model Acquisition Type, Model Graft Source, Model Genotype, Model Treatment Type, Model Therapeutic Agent, Model Days to Treatment, Model Treatment Response",FALSE,,,Study,,,
-Model_id,A unique identifier used by schematic for record updates and as a reference key in other schemas.,,,TRUE,CDE:12220014,Model,,,unique,string
+Model_id,"Unique row identifier, used as a primary key for record updates. This should use the M-xxx format unless directed otherwise.",,,TRUE,CDE:12220014,Model,,,unique,string
 Model Age,"The age of the model when used for an experiment (mice, zebrafish, etc.) or model source (cell lines, organoids, etc.)",,,FALSE,,Model,,,num,number
 Model Age Unit,The unit corresponding to the age provided for this model.,,,FALSE,,Model,,,str,string
 Model Sex,The biological sex of the model or model source.,"Decline to answer, Don't know, Female, Intersex, Male, None of these describe me, Prefer not to answer, Unknown, X",,TRUE,CDE:7572817,Model,,,str,string

@@ -6,4 +6,4 @@ Consortium Full Name,Full name of research consortium. (e.g. Cancer Systems Biol
 Consortium Description,Description of research consortium,,,TRUE,,Consortium,,,str,string
 Consortium Funding Agency,Funding agency of research consortium ,NIH,,TRUE,,Consortium,,,str,string
 Website,Website of research consortium,,,TRUE,,Consortium,,,url,string
-Consortium_id,A unique primary key that enables record updates using schematic.,,,TRUE,,Consortium,,,unique,string
+Consortium_id,"Unique ID associated with a consortium, used as a key for record linking and updates.",,,TRUE,,Consortium,,,unique,string
