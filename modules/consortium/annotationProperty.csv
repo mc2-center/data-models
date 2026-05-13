@@ -5,5 +5,5 @@ Consortium Display Name,"Human readable display name of research consortium (e.g
 Consortium Full Name,Full name of research consortium. (e.g. Cancer Systems Biology Consortium).,,,True,,,string,,,,,
 Consortium Description,Description of research consortium,,,True,,,string,,,,,
 Consortium Funding Agency,Funding agency of research consortium ,NIH,,True,,,string,,,,,
-Website,Website of research consortium,,,True,,,string,url,,,,
+Website,Website of research consortium,,,True,,,string,uri,,,,
 Consortium_id,"Unique ID associated with a consortium, used as a key for record linking and updates.",,,True,primary_key,,string,,,,,
