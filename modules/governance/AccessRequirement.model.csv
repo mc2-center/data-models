@@ -1,6 +1,6 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
-AccessRequirement,"Representation of a Synapse Access Requirement and its relationships to entities, grants, and projects.",,"Component, AccessRequirement_id, contributorName, contributionDate, StudyKey, entityIdList, dataUseModifiers",FALSE,,,,,,
-AccessRequirement_id,A unique identifier for the access requirement. This should be the numeric identifier of the access requirement.,,,TRUE,primary_key,AccessRequirement,,,unique,string
-contributorName,The name of the person who added this access requirement.,,,TRUE,,AccessRequirement,,,str,string
-contributionDate,The date on which the access requirement was added.,,,TRUE,,AccessRequirement,,,date,
-entityIdList,"Synapse ID(s) for Synapse container(s) (e.g. Project, Dataset, Folder, Table, etc.) with which the Access Requirement is expected to be associated. Provide multiple values as a comma-separated list.",,,FALSE,,AccessRequirement,,,str,string
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
+AccessRequirement,"Representation of a Synapse Access Requirement and its relationships to entities, grants, and projects.",,"Component, AccessRequirement_id, contributorName, contributionDate, StudyKey, entityIdList, dataUseModifiers",,,,,,,,,True,
+AccessRequirement_id,A unique identifier for the access requirement. This should be the numeric identifier of the access requirement.,,,True,primary_key,AccessRequirement,string,,,,,,
+contributorName,The name of the person who added this access requirement.,,,True,,AccessRequirement,string,,,,,,
+contributionDate,The date on which the access requirement was added.,,,True,,AccessRequirement,string,date,,,,,
+entityIdList,"Synapse ID(s) for Synapse container(s) (e.g. Project, Dataset, Folder, Table, etc.) with which the Access Requirement is expected to be associated. Provide multiple values as a comma-separated list.",,,,,AccessRequirement,string,,,,,,
