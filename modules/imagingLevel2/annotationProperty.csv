@@ -1,34 +1,34 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
-Imaging Level 2,Raw and pre-processed image data,,"Component, ImagingLevel2_id, Filename, ImagingLevel1 Key, ImagingChannel Key, Image Assay Type, Image Protocol Link, Image Platform Model, Image Platform Manufacturer, Image Software, Image Objective, Image Nominal Magnification, Image Lense Aperture, Image Working Distance, Image Working Distance Unit, Image Immersion Type, Image Pyramidal, Image Z stack, Image Timeseries, Image FOV Index, Image FOV Size X, Image FOV Size X Unit, Image FOV Size Y, Image FOV Size Y Unit, Image Frame Averaging, Image Identifier, Image Dimension Order, Image Physical Size X, Image Physical Size X Unit, Image Physical Size Y, Image Physical Size Y Unit, Image Physical Size Z, Image Physical Size Z Unit, Image Pixels BigEndian, Image Plane Count, Image Channel Size, Image Number of Timepoints, Image X Pixels, Image Y Pixels, Image Z Pixels, Image Pixel Type",FALSE,,,File View,HTAN,,
-ImagingLevel2_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,TRUE,,Imaging Level 2,,MC2,unique,string
-Image Objective,Objective lens identifier,,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Nominal Magnification,The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units),,,FALSE,CDE:7788940,Imaging Level 2,,HTAN,num,number
-Image Lense Aperture,The numerical aperture of the lens. Floating point value > 0.,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image Working Distance,"The working distance of the lens, expressed as a floating point number. Floating point > 0.",,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image Working Distance Unit,The units of the working distance. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),"cm, mm, µm, nm, Å",,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Immersion Type,Immersion medium,"Air, Oil, Water, Other, Multi, Glycerol",,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Pyramidal,Does data file contain pyramid of images,"True, False",,FALSE,,Imaging Level 2,,HTAN,bool,boolean
-Image Z stack,Does data file contain a Z-stack of images,,,FALSE,,Imaging Level 2,,HTAN,bool,boolean
-Image Timeseries,Does data file contain a time-series of images,,,FALSE,,Imaging Level 2,,HTAN,bool,boolean
-Image FOV Index,Index of FOV (as it pertains to its sequence order). Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image FOV Size X,Field of view X dimension. Floating point,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image FOV Size X Unit,Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image FOV Size Y,Field  of view Y dimension. Floating point value,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image FOV Size Y Unit,Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Frame Averaging,"Number of frames averaged together (if no averaging, set to 1). Integer >= 1",,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Identifier,"Unique internal image identifier. eg ""Image:0"". (To be extracted from OME-XML)",,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Dimension Order,The order in which the individual planes of data are interleaved.,,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Physical Size X,Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0.,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image Physical Size X Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Physical Size Y,Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0.,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image Physical Size Y Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Physical Size Z,Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0.,,,FALSE,,Imaging Level 2,,HTAN,num,number
-Image Physical Size Z Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,FALSE,,Imaging Level 2,,HTAN,str,string
-Image Pixels BigEndian,Boolean (True/False),"True, False",,FALSE,,Imaging Level 2,,HTAN,bool,boolean
-Image Plane Count,"Number of Z-planes (not to be confused with downsampled ""pyramid""). Integer >=1",,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Channel Size,Number of channels. Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Number of Timepoints,Number of time points. Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image X Pixels,Size of image: X dimension (in pixels). Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Y Pixels,Size of image: Y dimension (in pixels). Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Z Pixels,Size of image: Z dimension (in pixels). Integer >= 1,,,FALSE,,Imaging Level 2,,HTAN,int,number
-Image Pixel Type,"Data type for each pixel value. E.g. ""uint16""",,,FALSE,,Imaging Level 2,,HTAN,str,string
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
+Imaging Level 2,Raw and pre-processed image data,,"ImagingLevel2_id, Filename, ImagingLevel1 Key, ImagingChannel Key, Image Assay Type, Image Protocol Link, Image Platform Model, Image Platform Manufacturer, Image Software, Image Objective, Image Nominal Magnification, Image Lense Aperture, Image Working Distance, Image Working Distance Unit, Image Immersion Type, Image Pyramidal, Image Z stack, Image Timeseries, Image FOV Index, Image FOV Size X, Image FOV Size X Unit, Image FOV Size Y, Image FOV Size Y Unit, Image Frame Averaging, Image Identifier, Image Dimension Order, Image Physical Size X, Image Physical Size X Unit, Image Physical Size Y, Image Physical Size Y Unit, Image Physical Size Z, Image Physical Size Z Unit, Image Pixels BigEndian, Image Plane Count, Image Channel Size, Image Number of Timepoints, Image X Pixels, Image Y Pixels, Image Z Pixels, Image Pixel Type",,,,,,,,,True,
+ImagingLevel2_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,,,string,,,,,,
+Image Objective,Objective lens identifier,,,,,,string,,,,,,
+Image Nominal Magnification,The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units),,,,CDE:7788940,,number,,,,,,
+Image Lense Aperture,The numerical aperture of the lens. Floating point value > 0.,,,,,,number,,,,,,
+Image Working Distance,"The working distance of the lens, expressed as a floating point number. Floating point > 0.",,,,,,number,,,,,,
+Image Working Distance Unit,The units of the working distance. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),"cm, mm, µm, nm, Å",,,,,string,,,,,,
+Image Immersion Type,Immersion medium,"Air, Oil, Water, Other, Multi, Glycerol",,,,,string,,,,,,
+Image Pyramidal,Does data file contain pyramid of images,"True, False",,,,,boolean,,,,,,
+Image Z stack,Does data file contain a Z-stack of images,,,,,,boolean,,,,,,
+Image Timeseries,Does data file contain a time-series of images,,,,,,boolean,,,,,,
+Image FOV Index,Index of FOV (as it pertains to its sequence order). Integer >= 1,,,,,,number,,,,,,
+Image FOV Size X,Field of view X dimension. Floating point,,,,,,number,,,,,,
+Image FOV Size X Unit,Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,,,,string,,,,,,
+Image FOV Size Y,Field  of view Y dimension. Floating point value,,,,,,number,,,,,,
+Image FOV Size Y Unit,Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,,,,string,,,,,,
+Image Frame Averaging,"Number of frames averaged together (if no averaging, set to 1). Integer >= 1",,,,,,number,,,,,,
+Image Identifier,"Unique internal image identifier. eg ""Image:0"". (To be extracted from OME-XML)",,,,,,string,,,,,,
+Image Dimension Order,The order in which the individual planes of data are interleaved.,,,,,,string,,,,,,
+Image Physical Size X,Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0.,,,,,,number,,,,,,
+Image Physical Size X Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,,,,string,,,,,,
+Image Physical Size Y,Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0.,,,,,,number,,,,,,
+Image Physical Size Y Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,,,,string,,,,,,
+Image Physical Size Z,Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0.,,,,,,number,,,,,,
+Image Physical Size Z Unit,The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um),,,,,,string,,,,,,
+Image Pixels BigEndian,Boolean (True/False),"True, False",,,,,boolean,,,,,,
+Image Plane Count,"Number of Z-planes (not to be confused with downsampled ""pyramid""). Integer >=1",,,,,,number,,,,,,
+Image Channel Size,Number of channels. Integer >= 1,,,,,,number,,,,,,
+Image Number of Timepoints,Number of time points. Integer >= 1,,,,,,number,,,,,,
+Image X Pixels,Size of image: X dimension (in pixels). Integer >= 1,,,,,,number,,,,,,
+Image Y Pixels,Size of image: Y dimension (in pixels). Integer >= 1,,,,,,number,,,,,,
+Image Z Pixels,Size of image: Z dimension (in pixels). Integer >= 1,,,,,,number,,,,,,
+Image Pixel Type,"Data type for each pixel value. E.g. ""uint16""",,,,,,string,,,,,,
