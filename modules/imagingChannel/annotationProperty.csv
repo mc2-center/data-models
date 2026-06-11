@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 Imaging Channel,Channel-level Metadata Attributes,,"ImagingChannel_id, Study Key, Channel Identifier, Channel Name, Channel Passed QC, Channel Cycle Number, Channel Sub-cycle Number, Channel Antibody Role, Channel Target Name, Channel Antibody Name, Channel Resource ID, Channel Fluorophore, Channel Antibody Clone, Channel Antibody Lot, Channel Antibody Vendor, Channel Antibody Catalog Number, Channel Excitation Wavelength, Channel Emission Wavelength, Channel Excitation Bandwidth, Channel Emission Bandwidth, Channel Metal Symbol, Channel Metal Isotope, Channel Oligo Barcode Upper Strand, Channel Oligo Barcode Lower Strand, Channel Probe Dilution Ratio, Channel Probe Concentration",,,,,,,,,True,
-ImagingChannel_id,"Unique row identifier, used as a primary key for record updates.",,,True,,,string,,,,,,
+ImagingChannel_id,"Unique row identifier, used as a primary key for record updates.",,,True,primary_key,,string,,,,,,
 Channel Identifier,This must match the corresponding field in the OME-XML / TIFF header. (eg 'Channel:0:1'),,,True,,,string,,,,,,
 Channel Name,This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin'),,,True,,,string,,,,,,
 Channel Passed QC,Identify stains that did not pass QC but are included in the dataset.,"Yes, No - Channel Failed QC",,,,,string,,,,,,

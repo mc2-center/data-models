@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 10x Visium RNA Level 4,Processed data files based on Spatial Transcriptomics RNA-seq Level 3.,,"10xVisiumRNALevel4_id, Filename, 10xVisiumRNALevel3 Key, Visium Run ID, Workflow Version, Workflow Link, Visium Workflow Type, Visium Workflow Parameters Description",,,,,,,,,True,HTAN
-10xVisiumRNALevel4_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,,,string,,,,,,
+10xVisiumRNALevel4_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,primary_key,,string,,"^syn\d{7,8}$",,,,
 Visium Workflow Type,Generic name for the workflow used to analyze the visium data set.,,,True,,,string,,,,,,HTAN
 Visium Workflow Parameters Description,Parameters used to run the workflow.,,,True,,,string,,,,,,HTAN

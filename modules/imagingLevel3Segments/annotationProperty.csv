@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 Imaging Level 3 Segments,Image segmentation mask information,,"ImagingLevel3Segments_id, Filename, ImagingLevel2 Key, ImagingLevel3Image Key, Image Segmentation Data Type, Image Parameter file, Software and Version, Image Object Class, Image Object Class Description, Image Number of Objects",,,,,,,,,True,
-ImagingLevel3Segments_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,,,string,,,,,,
+ImagingLevel3Segments_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,primary_key,,string,,"^syn\d{7,8}$",,,,
 Image Segmentation Data Type,Specifies how the segmentation is stored,"Mask, Outline, Polygon, Probability Map, Point",,True,,,string,,,,,,
 Image Parameter file,Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis,,,,,,string,,,,,,
 Image Object Class,Defines the structure that the mask delineates,"Nucleus, Cytoplasm, Plasma Membrane, Whole Cell, Spot, Other",,,,,string,,,,,,

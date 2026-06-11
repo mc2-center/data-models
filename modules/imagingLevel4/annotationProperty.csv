@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 Imaging Level 4,Derived imaging data or object by feature array,,"ImagingLevel4_id, Filename, ImagingLevel2 Key, ImagingLevel3Image Key, ImagingLevel3Segments Key, Image Parameter file, Image Software, Image Number of Objects, Image Number of Features, Image Object Class, Image Summary Statistic",,,,,,,,,True,
-ImagingLevel4_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,,,string,,,,,,
+ImagingLevel4_id,"Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",,,True,primary_key,,string,,"^syn\d{7,8}$",,,,
 Image Number of Features,The number of features (eg channels) described,,,True,,,number,,,,,,
 Image Summary Statistic,Function used to summarize object/feature intensity,"Mean, Median, Not Specified",,True,,,string,,,,,,
