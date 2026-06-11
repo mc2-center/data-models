@@ -7,7 +7,7 @@ individuals,The number of participants or samples associated with the files in t
 link,"The url where the dataset is displayed, typically on a public-facing data portal. Can be identical to Dataset Url.",,,,,,string,uri,,,,,
 croissant_s3_file_object,A Synapse url where the croissant file associated with this dataset is stored.,,,,,,string,uri,,,,,
 DataCatalog,The manifest used to describe datasets for the Synapse Data Catalog.,,"DataCatalog_id, GrantView Key, Study Key, DatasetView Key, community, description, contributors, keywords, individuals, link, croissant_s3_file_object, accessType, alternateName, conditionsOfAccess, countryOfOrigin, creator, dataUseModifiersCatalog, datePublished, funder, includedInDataCatalog, license, measurementTechnique, species, subject, title, citation, doi, visualizeDataOn, yearProcessed, specimenCount, series",,,,,,,,,True,
-DataCatalog_id,"Unique ID associated with a Data Catalog entry, used as a key for record linking and updates.",,,True,primary_key,,string,"^syn\d{7,8}$",,,,,
+DataCatalog_id,"Unique ID associated with a Data Catalog entry, used as a key for record linking and updates.",,,True,primary_key,,string,,"^syn\d{7,8}$",,,,
 accessType,Access type for the dataset.,"Anonymous, Open, Controlled, Private",,,,,string,,,,,,
 alternateName,An altername name that can be used for search and discovery improvement.,,,,,,string,,,,,,
 conditionsOfAccess,"Additional requirements a user may need outside of Data Use Modifiers. This could include additional registration, updating profile information, joining a Synapse Team, or using specific authentication methods like 2FA or RAS. Omit property if not applicable/unknown.",,,,,,string,,,,,,
