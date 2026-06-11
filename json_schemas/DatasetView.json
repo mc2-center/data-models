@@ -3,11 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "The denormalized manifest for dataset submission.",
   "properties": {
-    "Component": {
-      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "DatasetAlias": {
       "description": "Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters.",
       "title": "Dataset Alias",
@@ -890,7 +885,7 @@
       "type": "string"
     },
     "DatasetViewId": {
-      "description": "A unique primary key that enables record updates using schematic.",
+      "description": "Unique ID associated with this Dataset View entry, used as a key for record linking and updates. Unless otherwise directed, this value should be equivalent to Dataset Alias. For externally hosted datasets with a corresponding Synapse Dataset containing indexed data, this should be the Synapse Id of the Dataset.",
       "title": "DatasetView_id",
       "type": "string"
     },
@@ -911,7 +906,6 @@
     }
   },
   "required": [
-    "Component",
     "DatasetAlias",
     "DatasetAssay",
     "DatasetDoi",

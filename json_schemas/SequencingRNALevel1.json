@@ -1,7 +1,7 @@
 {
-  "$id": "http://example.com/FileView",
+  "$id": "http://example.com/SequencingRNALevel1",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "The denormalized manifest for file submission.",
+  "description": "Unaligned/unprocessed RNA sequencing data",
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
@@ -592,15 +592,301 @@
       "title": "File Url",
       "type": "string"
     },
-    "FileViewId": {
-      "description": "Unique ID associated with a File entry, used as a key for record linking and updates. This should be equivalent to File Alias unless otherwise directed.",
-      "pattern": "^syn\\d{7,8}$",
-      "title": "FileView_id",
-      "type": "string"
-    },
     "Filename": {
       "description": "The path of a file in Synapse, relative to the project. The file associated with the path will be annotated with attributes contained in this sheet.",
       "title": "Filename",
+      "type": "string"
+    },
+    "NGSLibraryLayout": {
+      "description": "Text description of the library layout, one of Paired-end or Single.",
+      "enum": [
+        "Paired-end",
+        "Single-indexed"
+      ],
+      "title": "NGS Library Layout"
+    },
+    "NGSLibraryPreparationDaysfromIndex": {
+      "description": "Number of days between sample for assay was received in lab and the libraries were prepared for sequencing [number]. If not applicable please enter 'Not Applicable'",
+      "pattern": "\\d+$|Not\\sApplicable$|unknown$",
+      "title": "NGS Library Preparation Days from Index",
+      "type": "string"
+    },
+    "NGSLibraryPreparationKitName": {
+      "description": "Name of Library Preparation Kit. String",
+      "title": "NGS Library Preparation Kit Name",
+      "type": "string"
+    },
+    "NGSLibraryPreparationKitVendor": {
+      "description": "Vendor of Library Preparation Kit. String",
+      "title": "NGS Library Preparation Kit Vendor",
+      "type": "string"
+    },
+    "NGSLibraryPreparationKitVersion": {
+      "description": "Version of Library Preparation Kit. String",
+      "title": "NGS Library Preparation Kit Version",
+      "type": "string"
+    },
+    "NGSLibrarySelectionMethod": {
+      "description": "How nucleic acid molecules are isolated.",
+      "enum": [
+        "5-methylcytidineantibody",
+        "AffinityEnrichment",
+        "CAGE",
+        "CDNA",
+        "CDNAoligoDT",
+        "CDNArandompriming",
+        "CF-H",
+        "CF-M",
+        "CF-S",
+        "CF-T",
+        "ChIP",
+        "DNAse",
+        "HMPR",
+        "HybridSelection",
+        "InverserRNA",
+        "MBD2proteinmethyl-CpGbindingdomain",
+        "MDA",
+        "MF",
+        "MNase",
+        "MSLL",
+        "MiRNASizeFractionation",
+        "Notapplicable",
+        "Oligo-dT",
+        "Other",
+        "PCR",
+        "Padlockprobescapturemethod",
+        "Poly-TEnrichment",
+        "PolyA",
+        "RACE",
+        "RRNADepletion",
+        "RT-PCR",
+        "Random",
+        "RandomPCR",
+        "ReducedRepresentation",
+        "Repeatfractionation",
+        "RestrictionDigest",
+        "Sizefractionation",
+        "Unspecified"
+      ],
+      "title": "NGS Library Selection Method"
+    },
+    "NGSLibrarySourceMaterial": {
+      "description": "The type of source material being sequenced.",
+      "enum": [
+        "BulkCells",
+        "BulkNuclei",
+        "BulkTissue",
+        "NotReported",
+        "Single-cells",
+        "Single-nuclei"
+      ],
+      "title": "NGS Library Source Material"
+    },
+    "NGSLibrarySourceMolecule": {
+      "description": "The source of nucleic acids represented in the sequencing library.",
+      "enum": [
+        "GenomicDNA",
+        "Metagenomic",
+        "Metatranscriptomic",
+        "NotReported",
+        "Transcriptome",
+        "ViralRNA"
+      ],
+      "title": "NGS Library Source Molecule"
+    },
+    "NGSLibraryStrategy": {
+      "description": "The assay associated with the nucleic acid library (e.g., RNA-Seq, ChIP-Seq)",
+      "enum": [
+        "AMPLICON",
+        "ATAC-seq",
+        "Bisulfite-Seq",
+        "CLONE",
+        "CLONEEND",
+        "CTS",
+        "ChIA-PET",
+        "ChIP-Seq",
+        "DNA-Seq",
+        "DNase-Hypersensitivity",
+        "EST",
+        "FAIRE-seq",
+        "FINISHING",
+        "FL-cDNA",
+        "Hi-C",
+        "MBD-Seq",
+        "MNase-Seq",
+        "MRE-Seq",
+        "MeDIP-Seq",
+        "MiRNA-Seq",
+        "NcRNA-Seq",
+        "Other",
+        "POOLCLONE",
+        "RAD-Seq",
+        "RIP-Seq",
+        "RNA-Seq",
+        "SELEX",
+        "ScMultiome",
+        "SnATAC-Seq",
+        "Spatial-tx",
+        "SsRNA-seq",
+        "Synthetic-Long-Read",
+        "Targeted-Capture",
+        "TetheredChromatinConformationCapture",
+        "Tn-Seq",
+        "WCS",
+        "WGA",
+        "WGS",
+        "WXS"
+      ],
+      "title": "NGS Library Strategy"
+    },
+    "NGSRNADV200": {
+      "description": "Represents the percentage of RNA fragments that are >200 nucleotides in size. Number",
+      "title": "NGS RNA DV200",
+      "type": "number"
+    },
+    "NGSRNAEndBias": {
+      "description": "The end of the cDNA molecule that is preferentially sequenced, e.g. 3/5 prime tag/end or the full length transcript",
+      "enum": [
+        "3Prime",
+        "5Prime",
+        "FullLengthTranscript"
+      ],
+      "title": "NGS RNA End Bias"
+    },
+    "NGSRNARIN": {
+      "description": "A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products. Number",
+      "title": "NGS RNA RIN",
+      "type": "number"
+    },
+    "NGSRNAReverseTranscriptionPrimer": {
+      "description": "An oligo to which new deoxyribonucleotides can be added by DNA polymerase [SO_0000112]. The type of primer used for reverse transcription, e.g. oligo-dT or random primer. This allows users to identify content of the cDNA library input e.g. enriched for mRNA",
+      "enum": [
+        "Featurebarcoding",
+        "Oligo-dT",
+        "Poly-dT",
+        "Random"
+      ],
+      "title": "NGS RNA Reverse Transcription Primer"
+    },
+    "NGSRawReads": {
+      "description": "Reads not yet analyzed in any way to be used for data analysis. The number of reads that pass filter from the flow cell represented in the FASTQ file.",
+      "title": "NGS Raw Reads",
+      "type": "number"
+    },
+    "NGSReadIndicator": {
+      "description": "Indicate if this is Read 1 (R1), Read 2 (R2), Index Reads (I1), or Other",
+      "enum": [
+        "I1",
+        "Other",
+        "R1",
+        "R1&R2",
+        "R2"
+      ],
+      "title": "NGS Read Indicator"
+    },
+    "NGSReadLength": {
+      "description": "The average length of the sequencing reads. Can be integer, null",
+      "title": "NGS Read Length",
+      "type": "number"
+    },
+    "NGSSequencingCoverage": {
+      "description": "Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length)",
+      "title": "NGS Sequencing Coverage",
+      "type": "number"
+    },
+    "NGSSequencingDesignDescription": {
+      "description": "Free-form description of the methods used to create the sequencing library; a brief 'materials and methods' section.",
+      "title": "NGS Sequencing Design Description",
+      "type": "string"
+    },
+    "NGSSequencingLibraryConstructionDaysfromIndex": {
+      "description": "Number of days between sample for assay was received in lab and day of sequencing library construction [number]. If not applicable please enter 'Not Applicable'",
+      "pattern": "\\d+$|Not\\sApplicable$|unknown$",
+      "title": "NGS Sequencing Library Construction Days from Index",
+      "type": "string"
+    },
+    "NGSSequencingPlatform": {
+      "description": "A platform is an object aggregate that is the set of instruments and software needed to perform a process [OBI_0000050]. Specific model of the sequencing instrument.",
+      "enum": [
+        "454GS",
+        "454GS20",
+        "454GSFLX",
+        "454GSFLX+",
+        "454GSFLXTitanium",
+        "454GSJunior",
+        "AB310GeneticAnalyzer",
+        "AB3130GeneticAnalyzer",
+        "AB3130xLGeneticAnalyzer",
+        "AB3500GeneticAnalyzer",
+        "AB3500xLGeneticAnalyzer",
+        "AB3730GeneticAnalyzer",
+        "AB3730xLGeneticAnalyzer",
+        "AB5500GeneticAnalyzer",
+        "AB5500x-WlGeneticAnalyzer",
+        "AB5500xlGeneticAnalyzer",
+        "ABSOLiD2",
+        "ABSOLiD3",
+        "ABSOLiD3PlusSystem",
+        "ABSOLiD4",
+        "ABSOLiD4hqSystem",
+        "ABSOLiDPISystem",
+        "ABSOLiDSystem",
+        "BGISEQ-500",
+        "CompleteGenomics",
+        "DNBSEQ-G400",
+        "DNBSEQ-G50",
+        "DNBSEQ-T7",
+        "GridION",
+        "HelicosHeliScope",
+        "IlluminaGenomeAnalyzer",
+        "IlluminaGenomeAnalyzerII",
+        "IlluminaGenomeAnalyzerIIx",
+        "IlluminaHiScanSQ",
+        "IlluminaHiSeq1000",
+        "IlluminaHiSeq1500",
+        "IlluminaHiSeq2000",
+        "IlluminaHiSeq2500",
+        "IlluminaHiSeq3000",
+        "IlluminaHiSeq4000",
+        "IlluminaHiSeqXFive",
+        "IlluminaHiSeqXTen",
+        "IlluminaMiSeq",
+        "IlluminaMiniSeq",
+        "IlluminaNextSeq",
+        "IlluminaNextSeq2500",
+        "IlluminaNextSeq500",
+        "IlluminaNextSeq550",
+        "IlluminaNovaSeq",
+        "IlluminaNovaSeq6000",
+        "IlluminaNovaSeqXPlus",
+        "IlluminaiSeq100",
+        "IonTorrentPGM",
+        "IonTorrentProton",
+        "IonTorrentS5",
+        "IonTorrentS5XL",
+        "MGISEQ-2000RS",
+        "MinION",
+        "NotReported",
+        "Other",
+        "PacBioRS",
+        "PacBioRSII",
+        "PacBioSequel",
+        "PacBioSequelII",
+        "PromethION",
+        "UltimaGenomicsUG100",
+        "Unknown"
+      ],
+      "title": "NGS Sequencing Platform"
+    },
+    "NGSUniqueBases": {
+      "description": "Count of unique basecalls present in the data.",
+      "title": "NGS Unique Bases",
+      "type": "number"
+    },
+    "SequencingRNALevel1Id": {
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+      "pattern": "^syn\\d{7,8}$",
+      "title": "SequencingRNALevel1_id",
       "type": "string"
     },
     "StudyKey": {
@@ -616,8 +902,19 @@
     "FileLevel",
     "FileSpecies",
     "FileUrl",
-    "FileViewId"
+    "NGSLibraryLayout",
+    "NGSLibrarySourceMaterial",
+    "NGSLibrarySourceMolecule",
+    "NGSLibraryStrategy",
+    "NGSRNAEndBias",
+    "NGSRNAReverseTranscriptionPrimer",
+    "NGSReadIndicator",
+    "NGSReadLength",
+    "NGSSequencingDesignDescription",
+    "NGSSequencingLibraryConstructionDaysfromIndex",
+    "NGSSequencingPlatform",
+    "SequencingRNALevel1Id"
   ],
-  "title": "FileView",
+  "title": "SequencingRNALevel1",
   "type": "object"
 }

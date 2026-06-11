@@ -405,11 +405,6 @@
       "title": "collaborationRequired",
       "type": "string"
     },
-    "Component": {
-      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "DataPermission": {
       "description": "The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.",
       "items": {
@@ -456,7 +451,7 @@
       "description": "The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list. MONDO terms can be found here: https://ols.monarchinitiative.org/ontologies/mondo",
       "pattern": "MONDO:\\d{7}",
       "title": "diseaseSpecificResearch",
-      "type": "array"
+      "type": "string"
     },
     "GeographicalRestriction": {
       "description": "The specific geographic region(s) to which use is limited by the access requirement.",
@@ -726,7 +721,7 @@
       "description": "Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list. ROR IDs can be found here: https://ror.org/search",
       "pattern": "ROR:[a-z0-9]{9}",
       "title": "institutionSpecificRestriction",
-      "type": "array"
+      "type": "string"
     },
     "License": {
       "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
@@ -767,7 +762,8 @@
     "PublicationMoratorium": {
       "description": "End date of the publication moratorium associated with the access requirement.",
       "format": "date",
-      "title": "publicationMoratorium"
+      "title": "publicationMoratorium",
+      "type": "string"
     },
     "ResearchSpecificRestrictions": {
       "description": "Research-specific restrictions associated with the access requirement.",
@@ -1101,7 +1097,7 @@
       "type": "string"
     },
     "StudyId": {
-      "description": "A unique primary key that enables record updates using schematic.",
+      "description": "Unique row identifier, used as a primary key for record updates.",
       "title": "Study_id",
       "type": "string"
     },
@@ -1164,7 +1160,6 @@
     }
   },
   "required": [
-    "Component",
     "StudyDe-identificationMethodType",
     "StudyDescription",
     "StudyId",
