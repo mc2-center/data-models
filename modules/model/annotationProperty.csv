@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 Model,Information about a non-human organism or any cell line from which experimental data is derived.,,"Model_id, Study Key, Individual Key, Model Age, Model Age Unit, Model Sex, Model Disease Type, Model Primary Diagnosis, Model Primary Site, Model Site of Origin, Model Tumor Subtype, Model Species, Model Type, Model Method, Model Source, Model Acquisition Type, Model Graft Source, Model Genotype, Model Treatment Type, Model Therapeutic Agent, Model Days to Treatment, Model Treatment Response",,,,,,,,,True,
-Model_id,"Unique row identifier, used as a primary key for record updates. This should use the M-xxx format unless directed otherwise.",,,True,"CDE:12220014, primary_key",,string,,"^M-\d{2,9}$",,,,
+Model_id,"Unique row identifier, used as a primary key for record updates. This should use the GrantNumber-Mxxx format unless directed otherwise.",,,True,"CDE:12220014, primary_key",,string,,"^CA\d{6}-M\d{1,9}$",,,,
 Model Age,"The age of the model when used for an experiment (mice, zebrafish, etc.) or model source (cell lines, organoids, etc.)",,,,,,number,,,,,,
 Model Age Unit,The unit corresponding to the age provided for this model.,,,,,,string,,,,,,
 Model Sex,The biological sex of the model or model source.,"Decline to answer, Don't know, Female, Intersex, Male, None of these describe me, Prefer not to answer, Unknown, X",,True,CDE:7572817,,string,,,,,,
