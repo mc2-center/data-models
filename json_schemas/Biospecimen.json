@@ -543,8 +543,8 @@
       "type": "array"
     },
     "BiospecimenId": {
-      "description": "Unique row identifier, used as a primary key for record updates. This should use the B-xxx format, unless directed otherwise.",
-      "pattern": "^B-\\d{2,9}$",
+      "description": "Unique row identifier, used as a primary key for record updates. This should terminate in ModelKey-Bxxx or IndividualKey-Bxxx format, unless directed otherwise.",
+      "pattern": "B\\d{1,9}$",
       "title": "Biospecimen_id",
       "type": "string"
     },
@@ -9137,11 +9137,13 @@
     },
     "IndividualKey": {
       "description": "Unique Individual_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "CA\\d{6}-IND\\d{1,9}",
       "title": "Individual Key",
       "type": "string"
     },
     "ModelKey": {
       "description": "Unique Model_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separate list.",
+      "pattern": "CA\\d{6}-M\\d{1,9}",
       "title": "Model Key",
       "type": "string"
     },
