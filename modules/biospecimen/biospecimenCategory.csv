@@ -1,12 +1,12 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Analyte,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Ascites,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Blood,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Bone Marrow,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Cells,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Fluids,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Mouth Rinse,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Sputum,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Stool,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Tissue,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
-Urine,,,,FALSE,,Biospecimen Type Category,,CDS v5.0.4/Sample-sample_type,,,,,,
+"﻿Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Analyte","The sample or material being subjected to analysis.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C128639","http://purl.obolibrary.org/obo/NCIT_C128639","C128639",""
+"Ascites","A biospecimen of ascitic fluid.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C159203","http://purl.obolibrary.org/obo/NCIT_C159203","C159203",""
+"Blood","A small volume of blood removed for testing or storage.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C17610","http://purl.obolibrary.org/obo/NCIT_C17610","C17610",""
+"Bone Marrow","A biological sample containing components collected from bone marrow of an experimental subject.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C164009","http://purl.obolibrary.org/obo/NCIT_C164009","C164009",""
+"Cells","A biospecimen comprised of purified or partially-purified cells.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C192998","http://purl.obolibrary.org/obo/NCIT_C192998","C192998",""
+"Fluids","A biospecimen that consists of a body fluid.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C204466","http://purl.obolibrary.org/obo/NCIT_C204466","C204466",""
+"Mouth Rinse","A sample consisting of biological material from the buccal cavity, collected by introducing a solution into the mouth, swishing, and collecting the rinse.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C198712","http://purl.obolibrary.org/obo/NCIT_C198712","C198712",""
+"Sputum","A respiratory biospecimen obtained via expectoration.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C189124","http://purl.obolibrary.org/obo/NCIT_C189124","C189124",""
+"Stool","Portion of semisolid bodily waste discharged through the anus.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","UBERON:0001988","http://purl.obolibrary.org/obo/UBERON_0001988","",""
+"Tissue","A piece of tissue removed from an organism for examination, analysis, or propagation.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C19697","http://purl.obolibrary.org/obo/NCIT_C19697","C19697",""
+"Urine","A biospecimen obtained from urine.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C189126","http://purl.obolibrary.org/obo/NCIT_C189126","C189126",""

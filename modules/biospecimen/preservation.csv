@@ -1,21 +1,21 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Cryopreserved,,,,FALSE,,Preservation Method,,,,,,,,
-Cryopreservation in liquid nitrogen - dead tissue,,,,FALSE,,Preservation Method,,,,,,,,
-Cryopreservation in dry ice - dead tissue,,,,FALSE,,Preservation Method,,,,,,,,
-Cryopreservation in liquid nitrogen - live cells,,,,FALSE,,Preservation Method,,,,,,,,
-Formalin fixed paraffin embedded - FFPE,,,,FALSE,,Preservation Method,,,,,,,,
-Formalin fixed-unbuffered,,,,FALSE,,Preservation Method,,,,,,,,
-Formalin fixed-buffered,,,,FALSE,,Preservation Method,,,,,,,,
-Fresh,,,,FALSE,,Preservation Method,,,,,,,,
-Fresh dissociated and single cell sorted into plates in NP40 buffer,,,,FALSE,,Preservation Method,,,,,,,,
-OCT,,,,FALSE,,Preservation Method,,,,,,,,
-Snap Frozen,,,,FALSE,,Preservation Method,,,,,,,,
-Frozen,,,,FALSE,,Preservation Method,,,,,,,,
-Negative 80 Deg C,,,,FALSE,,Preservation Method,,,,,,,,
-Liquid Nitrogen,,,,FALSE,,Preservation Method,,,,,,,,
-Fresh dissociated,,,,FALSE,,Preservation Method,,,,,,,,
-Fresh dissociated and single cell sorted,,,,FALSE,,Preservation Method,,,,,,,,
-Fresh dissociated and single cell sorted into plates,,,,FALSE,,Preservation Method,,,,,,,,
-Methacarn fixed paraffin embedded - MFPE,,,,FALSE,,Preservation Method,,,,,,,,
-unknown,,,,FALSE,,Preservation Method,,,,,,,,
-Not Reported,,,,FALSE,,Preservation Method,,,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Cryopreserved","Preservation of cells, tissues, organs, or embryos by storage at low temperatures.","","","FALSE","","Preservation Method","","","","","NCIT:C16475","http://purl.obolibrary.org/obo/NCIT_C16475","C16475",""
+"Cryopreservation in liquid nitrogen - dead tissue","Preservation of cells, tissues, organs, or embryos by storage at low temperatures.","","","FALSE","","Preservation Method","","","","","NCIT:C16475","http://purl.obolibrary.org/obo/NCIT_C16475","C16475",""
+"Cryopreservation in dry ice - dead tissue","Preservation of cells, tissues, organs, or embryos by storage at low temperatures.","","","FALSE","","Preservation Method","","","","","NCIT:C16475","http://purl.obolibrary.org/obo/NCIT_C16475","C16475",""
+"Cryopreservation in liquid nitrogen - live cells","Preservation of cells, tissues, organs, or embryos by storage at low temperatures.","","","FALSE","","Preservation Method","","","","","NCIT:C16475","http://purl.obolibrary.org/obo/NCIT_C16475","C16475",""
+"Formalin fixed paraffin embedded - FFPE","A tissue sample that has been fixed with formalin and embedded in paraffin for long-term preservation and histological analysis.","","","FALSE","","Preservation Method","","","","","NCIT:C172265","http://purl.obolibrary.org/obo/NCIT_C172265","C172265",""
+"Formalin fixed-unbuffered","The use of unbuffered formalin for preservation of tissue samples.","","","FALSE","","Preservation Method","","","","","NCIT:C185402","http://purl.obolibrary.org/obo/NCIT_C185402","C185402",""
+"Formalin fixed-buffered","The use of buffered formalin for preservation of tissue samples.","","","FALSE","","Preservation Method","","","","","NCIT:C185403","http://purl.obolibrary.org/obo/NCIT_C185403","C185403",""
+"Fresh","Tissue which has not been exposed to a fixative solution.","","","FALSE","","Preservation Method","","","","","NCIT:C84517","http://purl.obolibrary.org/obo/NCIT_C84517","C84517",""
+"Fresh dissociated and single cell sorted into plates in NP40 buffer","A tissue preparation process that takes dissociated, sorted cells and distributes them into cell propagation plates.","","","FALSE","","Preservation Method","","","","","NCIT:C185406","http://purl.obolibrary.org/obo/NCIT_C185406","C185406",""
+"OCT","A solution of water soluble glycols and resins that provide a specimen support matrix for cryostat sectioning at temperatures of -10 degrees C and below.","","","FALSE","","Preservation Method","","","","","NCIT:C63523","http://purl.obolibrary.org/obo/NCIT_C63523","C63523",""
+"Snap Frozen","To freeze rapidly so as to preserve structure and prevent ice crystal formation.","","","FALSE","","Preservation Method","","","","","NCIT:C63521","http://purl.obolibrary.org/obo/NCIT_C63521","C63521",""
+"Frozen","A tissue sample that has been frozen prior to analysis.","","","FALSE","","Preservation Method","","","","","NCIT:C158417","http://purl.obolibrary.org/obo/NCIT_C158417","C158417",""
+"Negative 80 Deg C","","","","FALSE","","Preservation Method","","","","","","","",""
+"Liquid Nitrogen","An indication that a material has been stored in liquid nitrogen.","","","FALSE","","Preservation Method","","","","","NCIT:C185338","http://purl.obolibrary.org/obo/NCIT_C185338","C185338",""
+"Fresh dissociated","A tissue preparation process that takes fresh tissue and dissociates it into single cell suspensions.","","","FALSE","","Preservation Method","","","","","NCIT:C185404","http://purl.obolibrary.org/obo/NCIT_C185404","C185404",""
+"Fresh dissociated and single cell sorted","A tissue preparation process that separates fresh dissociated tissue cells into cell populations by single cell sorting.","","","FALSE","","Preservation Method","","","","","NCIT:C185405","http://purl.obolibrary.org/obo/NCIT_C185405","C185405",""
+"Fresh dissociated and single cell sorted into plates","A tissue preparation process that takes dissociated, sorted cells and distributes them into cell propagation plates.","","","FALSE","","Preservation Method","","","","","NCIT:C185406","http://purl.obolibrary.org/obo/NCIT_C185406","C185406",""
+"Methacarn fixed paraffin embedded - MFPE","","","","FALSE","","Preservation Method","","","","","","","",""
+"unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Preservation Method","","","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"Not Reported","An indication that the required information was not provided.","","","FALSE","","Preservation Method","","","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""

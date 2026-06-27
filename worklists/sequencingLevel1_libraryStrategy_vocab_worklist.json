@@ -1,0 +1,673 @@
+[
+  {
+    "row_index": 0,
+    "term": "AMPLICON",
+    "existing_description": "Sequencing of overlapping or distinct PCR or RT-PCR products",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "ATAC-seq",
+    "existing_description": "Assay for Transposase-Accessible Chromatin (ATAC) strategy is used to study genome-wide chromatin accessibility. alternative method to DNase-seq that uses an engineered Tn5 transposase to cleave DNA and to integrate primer DNA sequences into the cleaved genomic DNA",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "Bisulfite-Seq",
+    "existing_description": "Sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil depending on methylation status",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "ChIA-PET",
+    "existing_description": "Direct sequencing of proximity-ligated chromatin immunoprecipitates.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "ChIP-Seq",
+    "existing_description": "Direct sequencing of chromatin immunoprecipitates",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "CLONE",
+    "existing_description": "Genomic clone based (hierarchical) sequencing",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "CLONEEND",
+    "existing_description": "Clone end (5', 3', or both) sequencing",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "CTS",
+    "existing_description": "Concatenated Tag Sequencing",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Spatial-tx",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "snATAC-Seq",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "DNase-Hypersensitivity",
+    "existing_description": "Sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "scMultiome",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 12,
+    "term": "EST",
+    "existing_description": "Single pass sequencing of cDNA templates",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "FAIRE-seq",
+    "existing_description": "Formaldehyde Assisted Isolation of Regulatory Elements. reveals regions of open chromatin",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "FINISHING",
+    "existing_description": "Sequencing intended to finish (close) gaps in existing coverage",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "FL-cDNA",
+    "existing_description": "Full-length sequencing of cDNA templates",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 16,
+    "term": "Hi-C",
+    "existing_description": "Chromosome Conformation Capture technique where a biotin-labeled nucleotide is incorporated at the ligation junction, enabling selective purification of chimeric DNA ligation junctions followed by deep sequencing",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 17,
+    "term": "MBD-Seq",
+    "existing_description": "Direct sequencing of methylated fractions sequencing strategy",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 18,
+    "term": "MeDIP-Seq",
+    "existing_description": "Methylated DNA Immunoprecipitation Sequencing strategy",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "miRNA-Seq",
+    "existing_description": "Random sequencing of small miRNAs",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 20,
+    "term": "MNase-Seq",
+    "existing_description": "Direct sequencing following MNase digestion",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 21,
+    "term": "MRE-Seq",
+    "existing_description": "Methylation-Sensitive Restriction Enzyme Sequencing strategy",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 22,
+    "term": "ncRNA-Seq",
+    "existing_description": "Capture of other non-coding RNA types, including post-translation modification types such as snRNA (small nuclear RNA) or snoRNA (small nucleolar RNA), or expression regulation types such as siRNA (small interfering RNA) or piRNA/piwi/RNA (piwi-interacting RNA).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 23,
+    "term": "Other",
+    "existing_description": "Library strategy not listed (please include additional info in the \u201cdesign description\u201d)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 24,
+    "term": "POOLCLONE",
+    "existing_description": "Shotgun of pooled clones (usually BACs and Fosmids)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 25,
+    "term": "RAD-Seq",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 26,
+    "term": "RIP-Seq",
+    "existing_description": "Direct sequencing of RNA immunoprecipitates (includes CLIP-Seq, HITS-CLIP and PAR-CLIP).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 27,
+    "term": "RNA-Seq",
+    "existing_description": "Random sequencing of whole transcriptome",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 28,
+    "term": "SELEX",
+    "existing_description": "Systematic Evolution of Ligands by EXponential enrichment",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 29,
+    "term": "DNA-Seq",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 30,
+    "term": "ssRNA-seq",
+    "existing_description": "strand-specific RNA sequencing",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 31,
+    "term": "Synthetic-Long-Read",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 32,
+    "term": "Targeted-Capture",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 33,
+    "term": "Tethered Chromatin Conformation Capture",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 34,
+    "term": "Tn-Seq",
+    "existing_description": "Sequencing from transposon insertion sites",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 35,
+    "term": "WCS",
+    "existing_description": "Random sequencing of a whole chromosome or other replicon isolated from a genome",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 36,
+    "term": "WGA",
+    "existing_description": "Random sequencing of the whole genome following non-pcr amplification",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 37,
+    "term": "WGS",
+    "existing_description": "Random sequencing of the whole genome",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 38,
+    "term": "WXS",
+    "existing_description": "Random sequencing of exonic regions selected from the genome",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

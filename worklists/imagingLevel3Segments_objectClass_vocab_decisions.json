@@ -1,0 +1,47 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Nucleus",
+    "ontology_identifier": "NCIT:C13197",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13197",
+    "label": "Nucleus",
+    "description": "A body within the cell, surrounded by a membrane, within which lie the chromosomes, one or more nucleoli, combined with proteins, and exhibits mitosis.",
+    "verification": {"verdict": "match", "note": "NCIT:C13197 Nucleus; exact label match for the cell nucleus as an imaging segment object class."}
+  },
+  {
+    "row_index": 1,
+    "term": "Cytoplasm",
+    "ontology_identifier": "NCIT:C13226",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13226",
+    "label": "Cytoplasm",
+    "description": "The protoplasm of a cell outside the nucleus, bounded by the plasma membrane and containing all of the cell's organelles except the nucleus.",
+    "verification": {"verdict": "match", "note": "NCIT:C13226 Cytoplasm; exact label match for the cytoplasm as an imaging segment object class."}
+  },
+  {
+    "row_index": 2,
+    "term": "Plasma Membrane",
+    "ontology_identifier": "NCIT:C13735",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13735",
+    "label": "Plasma Membrane",
+    "description": "The semipermeable membrane that encloses the cytoplasm of a cell.",
+    "verification": {"verdict": "match", "note": "NCIT:C13735 Plasma Membrane; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Whole Cell",
+    "ontology_identifier": "NCIT:C12508",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12508",
+    "label": "Cell",
+    "description": "The smallest units of living structure capable of independent existence, composed of a membrane-enclosed mass of protoplasm and containing a nucleus or nucleoid.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12508 Cell; 'Whole Cell' as an imaging object class means the entire cell is the segmentation target. NCIT:C12508 'Cell' is the correct concept; label adds 'Whole' qualifier not reflected in the NCIT term."}
+  },
+  {
+    "row_index": 5,
+    "term": "Other",
+    "ontology_identifier": "NCIT:C17649",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17649",
+    "label": "Other",
+    "description": "Different than the one(s) previously specified or mentioned.",
+    "verification": {"verdict": "match", "note": "NCIT:C17649 Other; standard NCIT general qualifier, exact label match."}
+  }
+]}

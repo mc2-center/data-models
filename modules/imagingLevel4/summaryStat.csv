@@ -1,4 +1,4 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Mean,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
-Median,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
-Not Specified,,,,FALSE,,Image Summary Statistic,,HTAN,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Mean","The sum of a set of values divided by the number of values in the set.","","","FALSE","","Image Summary Statistic","","HTAN","","","NCIT:C53319","http://purl.obolibrary.org/obo/NCIT_C53319","C53319",""
+"Median","The value which has an equal number of values greater and less than it.","","","FALSE","","Image Summary Statistic","","HTAN","","","NCIT:C28007","http://purl.obolibrary.org/obo/NCIT_C28007","C28007",""
+"Not Specified","","","","FALSE","","Image Summary Statistic","","HTAN","","","","","",""

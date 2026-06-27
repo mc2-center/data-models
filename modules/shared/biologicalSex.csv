@@ -1,10 +1,10 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Decline to answer,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Don't know,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Female,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Intersex,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Male,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-None of these describe me,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Prefer not to answer,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Unknown,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-X,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Decline to answer","Used to indicate when a respondent makes a decision to not answer a question.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C51024","http://purl.obolibrary.org/obo/NCIT_C51024","C51024",""
+"Don't know","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"Female","An individual who belongs to the sex that normally produces ova.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C16576","http://purl.obolibrary.org/obo/NCIT_C16576","C16576",""
+"Intersex","Refers to an individual who was born with genitalia and/or secondary sexual characteristics of indeterminate sex, or which combine features of both sexes.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C45908","http://purl.obolibrary.org/obo/NCIT_C45908","C45908",""
+"Male","An individual who belongs to the sex that normally produces sperm.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C20197","http://purl.obolibrary.org/obo/NCIT_C20197","C20197",""
+"None of these describe me","","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","","","",""
+"Prefer not to answer","A response indicating that an individual prefers or preferred not to answer.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C132222","http://purl.obolibrary.org/obo/NCIT_C132222","C132222",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"X","","","","FALSE","","Biological Sex","","CDS v5.0.4/Participant-sex","","","","","",""

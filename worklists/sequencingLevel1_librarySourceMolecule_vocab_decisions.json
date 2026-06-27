@@ -1,0 +1,56 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Genomic DNA",
+    "ontology_identifier": "NCIT:C95940",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95940",
+    "label": "Genomic DNA",
+    "description": "The DNA that is part of the normal chromosomal complement of an organism.",
+    "verification": {"verdict": "match", "note": "NCIT:C95940 Genomic DNA; exact label match."}
+  },
+  {
+    "row_index": 1,
+    "term": "Metagenomic",
+    "ontology_identifier": "NCIT:C201925",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201925",
+    "label": "Metagenomic",
+    "description": "Derived from or associated with material collected from an environmental sample.",
+    "verification": {"verdict": "match", "note": "NCIT:C201925 Metagenomic; exact label match. General qualifier describing material from an environmental sample."}
+  },
+  {
+    "row_index": 2,
+    "term": "Metatranscriptomic",
+    "ontology_identifier": "NCIT:C201926",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201926",
+    "label": "Metatranscriptomic",
+    "description": "Derived from or associated with transcripts from an environmental sample.",
+    "verification": {"verdict": "match", "note": "NCIT:C201926 Metatranscriptomic; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 4,
+    "term": "Transcriptome",
+    "ontology_identifier": "NCIT:C153194",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C153194",
+    "label": "Transcriptome",
+    "description": "The complete set of RNA transcripts that are produced by the genome, under specific circumstances or in a specific cell.",
+    "verification": {"verdict": "match", "note": "NCIT:C153194 Transcriptome; exact label match."}
+  },
+  {
+    "row_index": 5,
+    "term": "Viral RNA",
+    "ontology_identifier": "NCIT:C204811",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204811",
+    "label": "Viral RNA",
+    "description": "The RNA that originates from a virus.",
+    "verification": {"verdict": "match", "note": "NCIT:C204811 Viral RNA; exact label match."}
+  }
+]}

@@ -1,0 +1,92 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Complete Response",
+    "ontology_identifier": "NCIT:C4870",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4870",
+    "label": "Complete Remission",
+    "description": "The disappearance of all signs of cancer in response to treatment.",
+    "verification": {"verdict": "partial", "note": "NCIT:C4870 Complete Remission; NCIT uses 'Remission' rather than 'Response' as the label, but the definition explicitly describes disappearance of all signs in response to treatment — the correct concept for Complete Response treatment outcome."}
+  },
+  {
+    "row_index": 1,
+    "term": "No Evidence of Disease",
+    "ontology_identifier": "NCIT:C40413",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C40413",
+    "label": "No Evidence of Disease",
+    "description": "Diagnostic tests fail to detect presence of disease.",
+    "verification": {"verdict": "match", "note": "NCIT:C40413 No Evidence of Disease; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 4,
+    "term": "Not Evaluable",
+    "ontology_identifier": "NCIT:C139527",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C139527",
+    "label": "Not Assessed",
+    "description": "Indicates that an assessment was not performed.",
+    "verification": {"verdict": "partial", "note": "NCIT:C139527 Not Assessed; label differs ('Not Assessed' vs 'Not Evaluable') but both indicate the response was not measured or cannot be determined. Best available NCIT qualifier."}
+  },
+  {
+    "row_index": 5,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 6,
+    "term": "Partial Response",
+    "ontology_identifier": "NCIT:C18058",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18058",
+    "label": "Partial Remission",
+    "description": "A finding indicating that there is a decrease in the size and the extent of tissue involvement by a malignant tumor in a patient.",
+    "verification": {"verdict": "partial", "note": "NCIT:C18058 Partial Remission; NCIT uses 'Remission' rather than 'Response' but the definition describes tumor decrease in response to treatment — the correct concept for Partial Response."}
+  },
+  {
+    "row_index": 7,
+    "term": "Persistent Disease",
+    "ontology_identifier": "NCIT:C4809",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4809",
+    "label": "Residual Disease",
+    "description": "The persistence of tumor cells in the body following cancer treatment.",
+    "verification": {"verdict": "partial", "note": "NCIT:C4809 Residual Disease; label differs ('Residual' vs 'Persistent') but the definition explicitly describes persistence of tumor cells after treatment — the correct concept. No generic 'Persistent Disease' term exists in NCIT."}
+  },
+  {
+    "row_index": 8,
+    "term": "Progressive Disease",
+    "ontology_identifier": "NCIT:C35571",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C35571",
+    "label": "Progressive Disease",
+    "description": "A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening.",
+    "verification": {"verdict": "match", "note": "NCIT:C35571 Progressive Disease; exact label match."}
+  },
+  {
+    "row_index": 9,
+    "term": "Stable Disease",
+    "ontology_identifier": "NCIT:C18213",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18213",
+    "label": "Stable Disease",
+    "description": "A disease that is neither decreasing nor increasing in extent or severity.",
+    "verification": {"verdict": "match", "note": "NCIT:C18213 Stable Disease; exact label match."}
+  },
+  {
+    "row_index": 10,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  }
+]}

@@ -1,7 +1,7 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Nucleus,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
-Cytoplasm,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
-Plasma Membrane,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
-Whole Cell,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
-Spot,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
-Other,,,,FALSE,,Imaging Object Class,,HTAN,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Nucleus","A body within the cell, surrounded by a membrane, within which lie the chromosomes, one or more nucleoli, combined with proteins, and exhibits mitosis.","","","FALSE","","Imaging Object Class","","HTAN","","","NCIT:C13197","http://purl.obolibrary.org/obo/NCIT_C13197","C13197",""
+"Cytoplasm","The protoplasm of a cell outside the nucleus, bounded by the plasma membrane and containing all of the cell's organelles except the nucleus.","","","FALSE","","Imaging Object Class","","HTAN","","","NCIT:C13226","http://purl.obolibrary.org/obo/NCIT_C13226","C13226",""
+"Plasma Membrane","The semipermeable membrane that encloses the cytoplasm of a cell.","","","FALSE","","Imaging Object Class","","HTAN","","","NCIT:C13735","http://purl.obolibrary.org/obo/NCIT_C13735","C13735",""
+"Whole Cell","The smallest units of living structure capable of independent existence, composed of a membrane-enclosed mass of protoplasm and containing a nucleus or nucleoid.","","","FALSE","","Imaging Object Class","","HTAN","","","NCIT:C12508","http://purl.obolibrary.org/obo/NCIT_C12508","C12508",""
+"Spot","","","","FALSE","","Imaging Object Class","","HTAN","","","","","",""
+"Other","Different than the one(s) previously specified or mentioned.","","","FALSE","","Imaging Object Class","","HTAN","","","NCIT:C17649","http://purl.obolibrary.org/obo/NCIT_C17649","C17649",""

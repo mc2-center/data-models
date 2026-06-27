@@ -1,0 +1,56 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Primary",
+    "ontology_identifier": "NCIT:C25251",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25251",
+    "label": "Primary",
+    "description": "Occurring first in time or sequence; original; of greatest rank or importance or value.",
+    "verification": {"verdict": "partial", "note": "NCIT:C25251 Primary; exact label match but the NCIT term is a general qualifier. In context of Biospecimen Incidence Type, 'Primary' denotes a specimen from the initial/primary tumor occurrence. General qualifier is the best available NCIT match; no specific specimen-incidence-type qualifier exists."}
+  },
+  {
+    "row_index": 1,
+    "term": "Progression",
+    "ontology_identifier": "NCIT:C35571",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C35571",
+    "label": "Progressive Disease",
+    "description": "A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.",
+    "verification": {"verdict": "partial", "note": "NCIT:C35571 Progressive Disease; label is Progressive Disease not Progression, but the disease-worsening sense fits this incidence type context."}
+  },
+  {
+    "row_index": 2,
+    "term": "Recurrence",
+    "ontology_identifier": "NCIT:C38155",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38155",
+    "label": "Recurrent Disease",
+    "description": "The return of a disease after a period of remission.",
+    "verification": {"verdict": "partial", "note": "NCIT:C38155 Recurrent Disease; label is Recurrent Disease not Recurrence, but the sense (disease returning after remission) matches this incidence type."}
+  },
+  {
+    "row_index": 3,
+    "term": "Metastasis",
+    "ontology_identifier": "NCIT:C19151",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19151",
+    "label": "Neoplasm Metastasis",
+    "description": "The spread of a neoplasm from the original site of growth to another site.",
+    "verification": {"verdict": "partial", "note": "NCIT:C19151 Neoplasm Metastasis; exact ontology concept for metastasis; used here as incidence type for specimens collected at metastatic phase."}
+  },
+  {
+    "row_index": 4,
+    "term": "Remission",
+    "ontology_identifier": "NCIT:C18246",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18246",
+    "label": "Remission",
+    "description": "A state in which the signs and symptoms of a disease are reduced or absent.",
+    "verification": {"verdict": "match", "note": "NCIT:C18246 Remission; exact label match."}
+  },
+  {
+    "row_index": 5,
+    "term": "No Disease",
+    "ontology_identifier": "NCIT:C40413",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C40413",
+    "label": "No Evidence of Disease",
+    "description": "Diagnostic tests fail to detect presence of disease.",
+    "verification": {"verdict": "partial", "note": "NCIT:C40413 No Evidence of Disease; label differs (No Disease vs No Evidence of Disease) but the clinical sense matches — absence of detectable disease."}
+  }
+]}

@@ -1,0 +1,191 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "N0",
+    "ontology_identifier": "NCIT:C48705",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48705",
+    "label": "N0 TNM Finding",
+    "description": "A regional lymph node TNM finding indicating that there is no evidence of regional lymph node metastasis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48705 N0 TNM Finding; generic N-category TNM finding for absence of lymph node metastasis. Label differs (N0 vs N0 TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 5,
+    "term": "N1",
+    "ontology_identifier": "NCIT:C48706",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48706",
+    "label": "N1 TNM Finding",
+    "description": "A regional lymph node TNM finding indicating cancer metastasis in a limited number of regional lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48706 N1 TNM Finding; generic N1 category. Label differs (N1 vs N1 TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 6,
+    "term": "N1a",
+    "ontology_identifier": "NCIT:C48707",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48707",
+    "label": "N1a TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in a limited number of lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48707 N1a TNM Finding; generic N1a subcategory. Label differs (N1a vs N1a TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 7,
+    "term": "N1b",
+    "ontology_identifier": "NCIT:C48708",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48708",
+    "label": "N1b TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48708 N1b TNM Finding; generic N1b subcategory."}
+  },
+  {
+    "row_index": 8,
+    "term": "N1bI",
+    "ontology_identifier": "NCIT:C95929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95929",
+    "label": "N1bI Stage Finding",
+    "description": "A regional lymph node TNM finding indicating metastasis to 1-3 nodes, each greater than 2 mm and less than 20 mm.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95929 N1bI Stage Finding; label uses 'Stage Finding' suffix vs the plain N1bI notation, but is the correct NCIT concept for this subcategory."}
+  },
+  {
+    "row_index": 9,
+    "term": "N1bII",
+    "ontology_identifier": "NCIT:C95935",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95935",
+    "label": "N1bII Stage Finding",
+    "description": "A regional lymph node TNM finding indicating metastasis to four or more nodes, each greater than 2 mm and less than 20 mm.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95935 N1bII Stage Finding; correct NCIT concept for this subcategory."}
+  },
+  {
+    "row_index": 10,
+    "term": "N1bIII",
+    "ontology_identifier": "NCIT:C95936",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95936",
+    "label": "N1bIII Stage Finding",
+    "description": "A regional lymph node TNM finding indicating tumor extension beyond the lymph node capsule, with metastasis less than 20 mm.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95936 N1bIII Stage Finding; correct NCIT concept for this subcategory."}
+  },
+  {
+    "row_index": 11,
+    "term": "N1bIV",
+    "ontology_identifier": "NCIT:C95937",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95937",
+    "label": "N1bIV Stage Finding",
+    "description": "A regional lymph node TNM finding indicating lymph node metastases greater than 20 mm.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95937 N1bIV Stage Finding; correct NCIT concept for this subcategory."}
+  },
+  {
+    "row_index": 12,
+    "term": "N1c",
+    "ontology_identifier": "NCIT:C48709",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48709",
+    "label": "N1c TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48709 N1c TNM Finding; generic N1c subcategory."}
+  },
+  {
+    "row_index": 14,
+    "term": "N2",
+    "ontology_identifier": "NCIT:C48786",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48786",
+    "label": "N2 TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in several regional lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48786 N2 TNM Finding; generic N2 category."}
+  },
+  {
+    "row_index": 15,
+    "term": "N2a",
+    "ontology_identifier": "NCIT:C48711",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48711",
+    "label": "N2a TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in several lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48711 N2a TNM Finding; generic N2a subcategory."}
+  },
+  {
+    "row_index": 16,
+    "term": "N2b",
+    "ontology_identifier": "NCIT:C48712",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48712",
+    "label": "N2b TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in several lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48712 N2b TNM Finding; generic N2b subcategory."}
+  },
+  {
+    "row_index": 17,
+    "term": "N2c",
+    "ontology_identifier": "NCIT:C48713",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48713",
+    "label": "N2c TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in several lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48713 N2c TNM Finding; generic N2c subcategory."}
+  },
+  {
+    "row_index": 18,
+    "term": "N3",
+    "ontology_identifier": "NCIT:C48714",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48714",
+    "label": "N3 TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in multiple lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48714 N3 TNM Finding; generic N3 category."}
+  },
+  {
+    "row_index": 19,
+    "term": "N3a",
+    "ontology_identifier": "NCIT:C48715",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48715",
+    "label": "N3a TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in multiple lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48715 N3a TNM Finding; generic N3a subcategory."}
+  },
+  {
+    "row_index": 20,
+    "term": "N3b",
+    "ontology_identifier": "NCIT:C48716",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48716",
+    "label": "N3b TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in multiple lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48716 N3b TNM Finding; generic N3b subcategory."}
+  },
+  {
+    "row_index": 21,
+    "term": "N3c",
+    "ontology_identifier": "NCIT:C48717",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48717",
+    "label": "N3c TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in multiple lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48717 N3c TNM Finding; generic N3c subcategory."}
+  },
+  {
+    "row_index": 22,
+    "term": "N4",
+    "ontology_identifier": "NCIT:C96026",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C96026",
+    "label": "N4 TNM Finding",
+    "description": "A regional lymph node TNM finding of cancer metastasis in multiple lymph nodes; the specific meaning depends on cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C96026 N4 TNM Finding; generic N4 category used by some cancer types (e.g., ocular adnexal lymphoma)."}
+  },
+  {
+    "row_index": 23,
+    "term": "NX",
+    "ontology_identifier": "NCIT:C48718",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48718",
+    "label": "NX TNM Finding",
+    "description": "A regional lymph node TNM finding indicating that the status of regional lymph nodes cannot be assessed.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48718 NX TNM Finding; correct concept for unassessable lymph node status."}
+  },
+  {
+    "row_index": 24,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 25,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "An indication that the required information was not provided.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  }
+]}

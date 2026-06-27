@@ -1,7 +1,7 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Female,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
-Male,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
-Intersex,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
-Unknown,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
-Unspecified,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
-Not Reported,,,,FALSE,,gender,,CDS v5.0.4/Participant-gender,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Female","An individual who belongs to the sex that normally produces ova.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C16576","http://purl.obolibrary.org/obo/NCIT_C16576","C16576",""
+"Male","An individual who belongs to the sex that normally produces sperm.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C20197","http://purl.obolibrary.org/obo/NCIT_C20197","C20197",""
+"Intersex","Refers to an individual who was born with genitalia, chromosomes, or reproductive organs that do not fit typical definitions for either male or female.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C45908","http://purl.obolibrary.org/obo/NCIT_C45908","C45908",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"Unspecified","Not stated explicitly or in detail.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C38046","http://purl.obolibrary.org/obo/NCIT_C38046","C38046",""
+"Not Reported","Not provided or available.","","","FALSE","","gender","","CDS v5.0.4/Participant-gender","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""

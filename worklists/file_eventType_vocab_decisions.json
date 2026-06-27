@@ -1,0 +1,11 @@
+{"decisions": [
+  {
+    "row_index": 1,
+    "term": "Baseline",
+    "ontology_identifier": "NCIT:C25213",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25213",
+    "label": "Baseline",
+    "description": "A starting point to which things may be compared.",
+    "verification": {"verdict": "match", "note": "NCIT:C25213 Baseline; exact label match, appropriate for a longitudinal event type."}
+  }
+]}

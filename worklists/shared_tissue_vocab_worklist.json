@@ -1,0 +1,1871 @@
+[
+  {
+    "row_index": 0,
+    "term": "Gonad",
+    "existing_description": "The part of the reproductive system that produces and releases eggs (ovaries) or sperm (testicles/testes).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Abdominal Esophagus",
+    "existing_description": "Clinical esophageal segment composed of smooth muscle. It corresponds to the inferior part of the lower third topographic segment of the esophagus. (NCI)",
+    "existing_ontology_identifier": "C15.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "Adipose Tissue",
+    "existing_description": "Connective tissue consisting primarily of adipocytes (fat cells) and supporting structural matrix.",
+    "existing_ontology_identifier": "C49.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "Adrenal Gland",
+    "existing_description": "The endocrine glands adjacent to the kidneys that consist of the outer adrenal cortex and the inner adrenal medulla in mammals.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "Alveolus",
+    "existing_description": "Tiny air sacs at the end of the bronchioles (tiny branches of air tubes) in the lungs. The alveoli are where the lungs and the bloodstream exchange carbon dioxide and oxygen. Carbon dioxide in the blood passes into the lungs through the alveoli. Oxygen in the lungs passes through the alveoli into the blood.",
+    "existing_ontology_identifier": "C03.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "Aorta",
+    "existing_description": "The major artery of the body; it arises from the left ventricle of the heart and terminally bifurcates into the common iliac arteries.",
+    "existing_ontology_identifier": "C49.3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "Artery",
+    "existing_description": "A blood vessel that carries blood from the heart to tissues and organs in the body.",
+    "existing_ontology_identifier": "C49.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "Ascending Colon",
+    "existing_description": "The first part of the colon (large intestine) that starts in the right lower quadrant of the abdomen and ends at the transverse colon in the right upper quadrant of the abdomen. (NCI)",
+    "existing_ontology_identifier": "C18.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Bile Duct",
+    "existing_description": "Any of the ducts conveying bile between the liver and the intestine, including hepatic, cystic, and common bile duct.",
+    "existing_ontology_identifier": "C24.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Bladder",
+    "existing_description": "The organ that stores urine.",
+    "existing_ontology_identifier": "C67.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "Blood",
+    "existing_description": "A tissue with red blood cells, white blood cells, platelets, and other substances suspended in fluid called plasma. Blood takes oxygen and nutrients to the tissues, and carries away wastes.",
+    "existing_ontology_identifier": "C42.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "Blood Vessel",
+    "existing_description": "A tubular structure through which the blood circulates in the body. Blood vessels constitute a network composed of arteries, arterioles, capillaries, venules, and veins. (NCI)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 12,
+    "term": "Bone",
+    "existing_description": "The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.",
+    "existing_ontology_identifier": "C41.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "Bone Marrow",
+    "existing_description": "The tissue occupying the spaces of some bones. It consists of blood vessel sinuses and a network of hematopoietic cells.",
+    "existing_ontology_identifier": "C42.1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "Brain",
+    "existing_description": "An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.",
+    "existing_ontology_identifier": "C71.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "Breast",
+    "existing_description": "One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest. (NCI)",
+    "existing_ontology_identifier": "C50.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 16,
+    "term": "Caecum",
+    "existing_description": "",
+    "existing_ontology_identifier": "UBERON:0001153",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/UBERON_0001153",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 17,
+    "term": "Cancer-Associated Fibroblast",
+    "existing_description": "A fibroblast found proximal to or within cancerous tissue.",
+    "existing_ontology_identifier": "NCIT:C168534",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C168534",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 18,
+    "term": "Cardia",
+    "existing_description": "",
+    "existing_ontology_identifier": "C16.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "Cartilage",
+    "existing_description": "A type of connective tissue composed of chondrocytes and an extracellular matrix, composed of collagen, elastin, and ground substance. There are three types of cartilage; namely elastic, hyaline, and fibrocartilage.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 20,
+    "term": "Cervix Uteri",
+    "existing_description": "The portion of the uterus (or uterine horns) that empties into the vagina.",
+    "existing_ontology_identifier": "C53.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 21,
+    "term": "Choroid",
+    "existing_description": "A thin layer of tissue that is part of the middle layer of the wall of the eye, between the sclera (white outer layer of the eye) and the retina (the inner layer of nerve tissue at the back of the eye). The choriod is filled with blood vessels that bring oxygen and nutrients to the eye.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 22,
+    "term": "Colon",
+    "existing_description": "The portion of the large intestine which extends from the cecum (or small intestine in animals that don't have a cecum) to the rectum.",
+    "existing_ontology_identifier": "C18.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 23,
+    "term": "Connective and Soft Tissue",
+    "existing_description": "The supporting connective tissue of an organ.",
+    "existing_ontology_identifier": "C49.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 24,
+    "term": "Cornea",
+    "existing_description": "The transparent, avascular tissue covering the front of the eye and is continuous with the sclera.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 25,
+    "term": "Duodenum",
+    "existing_description": "The portion of the small intestine between the stomach and jejunum.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 26,
+    "term": "Ear",
+    "existing_description": "A sensory organ that contains auditory and vestibular apparatuses.",
+    "existing_ontology_identifier": "C44.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 27,
+    "term": "Embryo",
+    "existing_description": "Early stage in the prenatal development of an animal. This stage occurs from implantation until closure of the hard palate.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 28,
+    "term": "Embryonic Heart",
+    "existing_description": "The rudimentary heart found in the human embryo that begins development during the third week of gestation, and which is formed by paired endocardial heart tubes derived from splanchnic mesenchyme, which subsequently fuse to form the primitive heart.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 29,
+    "term": "Endocervix",
+    "existing_description": "The portion of the cervix which is lined by single columnar epithelium (mucosa). (NCI)",
+    "existing_ontology_identifier": "C53.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 30,
+    "term": "Endometrium",
+    "existing_description": "The mucous membrane comprising the inner layer of the uterine wall; it consists of a simple columnar epithelium and a lamina propria that contains simple tubular uterine glands. The structure, thickness, and state of the endometrium undergo marked change with the menstrual cycle.",
+    "existing_ontology_identifier": "C54.1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 31,
+    "term": "Endothelium",
+    "existing_description": "The layer of cells that lines the cavities of the heart and of the blood vessels (Endothelium, Vascular) and lymph vessels (Endothelium, Lymphatic), and the serous cavities of the body, originating from the mesoderm.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 32,
+    "term": "Epithelium",
+    "existing_description": "The avascular cellular layers that cover body surfaces and cavities and may form glands.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 33,
+    "term": "Esophagus",
+    "existing_description": "The portion of the digestive tract between the pharynx and stomach.",
+    "existing_ontology_identifier": "C15.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 34,
+    "term": "Eye",
+    "existing_description": "The sensory organ of vision.",
+    "existing_ontology_identifier": "C69.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 35,
+    "term": "Fallopian Tube",
+    "existing_description": "The tube through which eggs pass from an ovary.",
+    "existing_ontology_identifier": "C57.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 36,
+    "term": "Foreskin",
+    "existing_description": "The loose skin that covers the head of the penis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 37,
+    "term": "Frontal Lobe",
+    "existing_description": "The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere. (NCI)",
+    "existing_ontology_identifier": "C71.1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 38,
+    "term": "Gastroesophageal Junction",
+    "existing_description": "The place where the esophagus is connected to the stomach.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 39,
+    "term": "Gastrointestinal Tract",
+    "existing_description": "The upper gastrointestinal (GI) tract is comprised of mouth, pharynx, esophagus and stomach while the lower GI tract consists of intestines and anus. The primary function of the GI tract is to ingest, digest, absorb and ultimately excrete food stuff. (NCI)",
+    "existing_ontology_identifier": "C26.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 40,
+    "term": "Genitourinary",
+    "existing_description": "Of or related to the genital and urinary organs or their functions.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 41,
+    "term": "Hair Follicle",
+    "existing_description": "A tube-like invagination of the epidermis from which the hair shaft develops and into which the sebaceous glands open; the follicle is lined by a cellular inner and outer root sheath of epidermal origin and is invested with a fibrous sheath derived from the dermis. (NCI)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 42,
+    "term": "Head and Neck",
+    "existing_description": "The area of the body comprising the skull, facial bones and the cervical vertebrae, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature, soft tissue and lymph nodes draining these areas.",
+    "existing_ontology_identifier": "C76.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 43,
+    "term": "Heart",
+    "existing_description": "A hollow organ located slightly to the left of the middle portion of the chest. It is composed of muscle and it is divided by a septum into two sides: the right side which receives de-oxygenated blood from the body and the left side which sends newly oxygenated blood to the body. Each side is composed of two chambers: the atrium (receiving blood) and ventricle (ejecting blood).",
+    "existing_ontology_identifier": "C38.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 44,
+    "term": "Heart Muscle",
+    "existing_description": "The muscle tissue of the HEART composed of striated, involuntary muscle known as cardiac muscle.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 45,
+    "term": "Hematopoietic System",
+    "existing_description": "The bodily system of organs and tissues, primarily the bone marrow, spleen, tonsils, and lymph nodes, involved in the production of blood.",
+    "existing_ontology_identifier": "C42.4",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 46,
+    "term": "Hippocampus",
+    "existing_description": "A curved gray matter structure of the temporal lobe lying on the floor of the lateral ventricle of the brain.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 47,
+    "term": "Intestine",
+    "existing_description": "The portion of the gastrointestinal tract that includes the small and large intestines.",
+    "existing_ontology_identifier": "C26.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 48,
+    "term": "Intra-Abdominal Lymph Nodes",
+    "existing_description": "Any lymph node within the abdomen.",
+    "existing_ontology_identifier": "C77.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 49,
+    "term": "Intrathoracic Lymph Nodes",
+    "existing_description": "Any lymph node within the thoracic cavity.",
+    "existing_ontology_identifier": "C77.1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 50,
+    "term": "Joint",
+    "existing_description": "is an organ that constitutes an anatomical junction; it consists of two or more adjacent bones, parts of which are interconnected by organ parts that consist of various types of connective tissue. Together with other joints and bones, a joint constitutes the skeletal system. Example(s): pubic symphysis, knee joint, temporomandibular joint.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 51,
+    "term": "Kidney",
+    "existing_description": "The organs of the urinary tract located in the retroperitoneal cavity adjacent to the spine and composed of the renal cortex and the renal medulla.",
+    "existing_ontology_identifier": "C64.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 52,
+    "term": "Larynx",
+    "existing_description": "The cartilaginous structure of the respiratory tract between the pharynx and the trachea. It contains elastic vocal cords required for sound production.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 53,
+    "term": "Ligament",
+    "existing_description": "Band of fibrous tissue connecting bone to bone or cartilage to bone thereby supporting or strengthening a joint. (NCI)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 54,
+    "term": "Liver",
+    "existing_description": "An abdominal organ that has variable lobation which are composed mainly of hepatic lobules.",
+    "existing_ontology_identifier": "C22.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 55,
+    "term": "Lung",
+    "existing_description": "One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border.",
+    "existing_ontology_identifier": "C34.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 56,
+    "term": "Lymph",
+    "existing_description": "The clear fluid that travels through the lymphatic system and carries cells that help fight infections and other diseases.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 57,
+    "term": "Lymph Node",
+    "existing_description": "Secondary lymphoid organ associated with lymphatic vessels and consisting of an outer cortex, inner medulla and sinuses.",
+    "existing_ontology_identifier": "C77.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 58,
+    "term": "Lymph Nodes of Axilla or Arm",
+    "existing_description": "One of approximately 20-30 lymph nodes in chain formation that traverse the concavity of the underarm to the clavicle.",
+    "existing_ontology_identifier": "C77.3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 59,
+    "term": "Lymph Nodes of Inguinal Region or Leg",
+    "existing_description": "Any lymph node that is located in the inguinal region or in either leg.",
+    "existing_ontology_identifier": "C77.4",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 60,
+    "term": "Lymphatic System",
+    "existing_description": "The tissues and organs that produce, store, and carry white blood cells that fight infections and other diseases. This system includes the bone marrow, spleen, thymus, lymph nodes, and lymphatic vessels (a network of thin tubes that carry lymph and white blood cells). Lymphatic vessels branch, like blood vessels, into all the tissues of the body.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 61,
+    "term": "Lymphoid Tissue",
+    "existing_description": "Tissue characterized by the presence of large numbers of lymphocytes in different stages of transformation. Connective tissue cells including fibroblasts and macrophages may be present. Lymphoid tissue is framed by a network of reticular fibers and may be diffuse, or densely aggregated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 62,
+    "term": "Main Bronchus",
+    "existing_description": "The left and right main bronchi considered as a group.",
+    "existing_ontology_identifier": "C34.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 63,
+    "term": "Mammary Gland",
+    "existing_description": "The exocrine glands of the mammae that produce milk in females, and are composed of lobules, alveolar ducts and alveoli.",
+    "existing_ontology_identifier": "C50.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 64,
+    "term": "Meninges",
+    "existing_description": "The three thin layers of tissue that cover and protect the brain and spinal cord.",
+    "existing_ontology_identifier": "C70.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 65,
+    "term": "Mesenchyme",
+    "existing_description": "Embryonic tissue of mesodermal origin.  Develops into connective tissue, blood vessels, and lymphatic tissue.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 66,
+    "term": "Mucosa",
+    "existing_description": "Mucous membrane.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 67,
+    "term": "Muscle",
+    "existing_description": "One of the contractile organs of the body.",
+    "existing_ontology_identifier": "C49.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 68,
+    "term": "Nasal Cavity",
+    "existing_description": "The upper respiratory tract extending from the nares to the pharynx.",
+    "existing_ontology_identifier": "C30.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 69,
+    "term": "Nervous System",
+    "existing_description": "The organized network of nerve tissue in the body. It includes the central nervous system (the brain and spinal cord), the peripheral nervous system (nerves that extend from the spinal cord to the rest of the body), and other nerve tissue.",
+    "existing_ontology_identifier": "C72.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 70,
+    "term": "Not Applicable",
+    "existing_description": "Determination of a value is not relevant in the current context. (NCI)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 71,
+    "term": "Olfactory Mucosa",
+    "existing_description": "The part of the nasal mucosa composed of neuroepithelial tissue and mucus-producing Bowman's glands. The mucus moistens the epithelium and helps dissolve odor-containing gases.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 72,
+    "term": "Omentum",
+    "existing_description": "A fold of the peritoneum (the thin tissue that lines the abdomen) that surrounds the stomach and other organs in the abdomen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 73,
+    "term": "Oral Cavity",
+    "existing_description": "The cavity of the mouth.",
+    "existing_ontology_identifier": "C06.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 74,
+    "term": "Oral Mucosa",
+    "existing_description": "The mucosal membranes that line the oral cavity.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 75,
+    "term": "Ovary",
+    "existing_description": "The pair of female reproductive glands in which the ova, or eggs, are formed. The ovaries are located in the pelvis, one on each side of the uterus.",
+    "existing_ontology_identifier": "C56.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 76,
+    "term": "Pancreas",
+    "existing_description": "An organ behind the lower part of the stomach that is the shape of a fish and about the size of a hand. It is a compound gland composed of both exocrine and endocrine tissues. The endocrine pancreas makes insulin so that the body can use glucose (sugar) for energy. The exocrine pancreas makes enzymes that help the body digest food. Spread all over the pancreas are areas called the Islets of Langerhans. The cells in these areas each have a special purpose. The alpha cells make glucagon, which raises the level of glucose in the blood; the beta cells make insulin; the delta cells make somatostatin. There are also PP cells and D1 cells, about which little is known.",
+    "existing_ontology_identifier": "C25.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 77,
+    "term": "Pelvic Lymph Nodes",
+    "existing_description": "Any lymph node within the pelvic region. (NCI)",
+    "existing_ontology_identifier": "C77.5",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 78,
+    "term": "Pending Annotation",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 79,
+    "term": "Periodontal Ligament",
+    "existing_description": "The fibrous connective tissue surrounding the root of a tooth that separates it from and attaches it to the alveolar bone.",
+    "existing_ontology_identifier": "BTO:0001020",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/BTO_0001020",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 80,
+    "term": "Peripheral Nerves",
+    "existing_description": "The nerves outside of the brain and spinal cord, including the autonomic, cranial, and spinal nerves. Peripheral nerves contain non-neuronal cells and connective tissue as well as axons. The connective tissue layers include, from the outside to the inside, the epineurium, the perineurium, and the endoneurium.",
+    "existing_ontology_identifier": "C47.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 81,
+    "term": "Peritoneum",
+    "existing_description": "The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 82,
+    "term": "Pharynx",
+    "existing_description": "The hollow tube inside the neck that starts behind the nose and ends at the top of the trachea (windpipe) and esophagus (the tube that goes to the stomach). The pharynx is about 5 inches long, depending on body size.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 83,
+    "term": "Pituitary Gland",
+    "existing_description": "The main endocrine gland. It produces hormones that control other glands and many body functions, especially growth.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 84,
+    "term": "Placenta",
+    "existing_description": "The organ that nourishes the developing fetus in the uterus.",
+    "existing_ontology_identifier": "C58.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 85,
+    "term": "Pleura",
+    "existing_description": "The tissue that lines the wall of the thoracic cavity and the surface of the lungs.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 86,
+    "term": "Prostate Gland",
+    "existing_description": "The walnut shaped accessory sex gland of the male reproductive system. It is located in the pelvis just below the bladder, surrounding the prostatic part of the urethra. The prostate gland secretes a fluid which is part of the semen.",
+    "existing_ontology_identifier": "C61.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 87,
+    "term": "Rectum",
+    "existing_description": "The terminal portion of the large intestine extending from the terminus of the colon to the anus or anal canal.",
+    "existing_ontology_identifier": "C18.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 88,
+    "term": "Reproductive System",
+    "existing_description": "The organs and tissues involved in the production and maturation of gametes and in their union and subsequent development as offspring.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 89,
+    "term": "Respiratory System",
+    "existing_description": "The organs that are involved in breathing. These include the nose, throat, larynx, trachea, bronchi, and lungs.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 90,
+    "term": "Salivary Gland",
+    "existing_description": "Any number of exocrine glands that secrete saliva into the oral cavity.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 91,
+    "term": "Sclera",
+    "existing_description": "The white, opaque, fibrous, outer tunic of the eyeball, covering it entirely excepting the segment covered anteriorly by the cornea. It is essentially avascular but contains apertures for vessels, lymphatics, and nerves. It receives the tendons of insertion of the extraocular muscles and at the corneoscleral junction contains the canal of Schlemm. (From Cline et al., Dictionary of Visual Science, 4th ed)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 92,
+    "term": "Sinonasal Tract",
+    "existing_description": "The area of the head comprised of the nasal cavity and paranasal sinuses.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 93,
+    "term": "Skin",
+    "existing_description": "An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages. (NCI)",
+    "existing_ontology_identifier": "C44.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 94,
+    "term": "Small Intestine",
+    "existing_description": "The villous section of the intestine extending from the pylorus to the proximal large intestine.",
+    "existing_ontology_identifier": "C17.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 95,
+    "term": "Spinal Cord",
+    "existing_description": "The portion of the central nervous system that lies within the vertebral canal and from which the spinal nerves emerge.",
+    "existing_ontology_identifier": "C72.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 96,
+    "term": "Spleen",
+    "existing_description": "An organ that is part of the lymphatic system. The spleen produces lymphocytes, filters the blood, stores blood cells, and destroys old blood cells. It is located on the left side of the abdomen near the stomach.",
+    "existing_ontology_identifier": "C42.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 97,
+    "term": "Stomach",
+    "existing_description": "The portion of the gastrointestinal tract located between the esophagus and the proximal duodenum.",
+    "existing_ontology_identifier": "C16.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 98,
+    "term": "Synovial Membrane",
+    "existing_description": "The inner layer of the connective tissue that seals the joint.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 99,
+    "term": "Tendon",
+    "existing_description": "Tough, fibrous, cord-like tissue that connects muscle to bone or another structure, such as an eyeball. Tendons help the bone or structure to move.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 100,
+    "term": "Testis",
+    "existing_description": "The male gonad.",
+    "existing_ontology_identifier": "C62.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 101,
+    "term": "Thymus",
+    "existing_description": "An organ that is part of the lymphatic system, in which T lymphocytes grow and multiply. The thymus is in the chest behind the breastbone.",
+    "existing_ontology_identifier": "C37.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 102,
+    "term": "Thyroid Gland",
+    "existing_description": "Endocrine gland(s) adjacent to the trachea in mammals that produce thyroxine and other hormones.",
+    "existing_ontology_identifier": "C73.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 103,
+    "term": "Tongue",
+    "existing_description": "The muscular organ located in the floor of the mouth and serving as the principal organ of taste and modification of the voice in speech.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 104,
+    "term": "Tonsil",
+    "existing_description": "excludes lingual tonsil C02.4 and pharyngeal tonsil C11.1",
+    "existing_ontology_identifier": "C09.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 105,
+    "term": "Trachea",
+    "existing_description": "The fibrocartilaginous, mucous-lined tube passing from the larynx to the bronchi.",
+    "existing_ontology_identifier": "C33.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 106,
+    "term": "Umbilical Cord",
+    "existing_description": "Extraembryonic structure that connects the fetus to the placenta. It contains two arteries and one vein.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 107,
+    "term": "Unspecified",
+    "existing_description": "Not stated explicitly or in detail.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 108,
+    "term": "Uterus",
+    "existing_description": "The small, hollow, pear-shaped organ in a woman's pelvis. This is the organ in which a fetus develops.",
+    "existing_ontology_identifier": "C55.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 109,
+    "term": "Vagina",
+    "existing_description": "The muscular canal extending from the uterus to the exterior of the body.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 110,
+    "term": "Vascular Endothelium",
+    "existing_description": "The layer of simple squamous epithelial tissue that lines the luminal surface of the entire circulatory system.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 111,
+    "term": "Vein",
+    "existing_description": "A blood vessel that carries blood towards the heart.",
+    "existing_ontology_identifier": "C49.9",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 112,
+    "term": "Vertebra",
+    "existing_description": "Any of the ring-shaped bony structures that constitute the spinal column and surround the spinal cord.",
+    "existing_ontology_identifier": "C41.2",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 113,
+    "term": "Peripheral Blood Mononuclear Cell",
+    "existing_description": "A peripheral blood cell with a single nucleus. This category includes lymphocytes and monocytes.",
+    "existing_ontology_identifier": "NCIT:C12954",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12954",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  }
+]

@@ -1,0 +1,272 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Acinar Cell Neoplasms",
+    "ontology_identifier": "NCIT:C4197",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4197",
+    "label": "Acinar Cell Neoplasm",
+    "description": "A neoplasm with acinar cell differentiation, arising from the secretory cells of exocrine glands such as the pancreas, salivary glands, or lungs.",
+    "verification": {"verdict": "match", "note": "NCIT:C4197 Acinar Cell Neoplasm; confirmed as direct ancestor of Acinar Cell Carcinoma; matches ICD-O morphology category 8550-8559."}
+  },
+  {
+    "row_index": 1,
+    "term": "Adenomas and Adenocarcinomas",
+    "ontology_identifier": "NCIT:C7132",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C7132",
+    "label": "Glandular Cell Neoplasm",
+    "description": "A neoplasm arising from or exhibiting the features of glandular epithelium; encompasses a broad morphological category including adenomas, adenocarcinomas, and related glandular tumors.",
+    "verification": {"verdict": "partial", "note": "NCIT:C7132 Glandular Cell Neoplasm; the ICD-O category 'Adenomas and Adenocarcinomas' (8140-8389) covers glandular tumors broadly. NCIT:C7132 is the umbrella morphology class but does not restrict to adenoma/adenocarcinoma subtypes only."}
+  },
+  {
+    "row_index": 2,
+    "term": "Adnexal and Skin Appendage Neoplasms",
+    "ontology_identifier": "NCIT:C212119",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C212119",
+    "label": "Adnexal Neoplasm",
+    "description": "A neoplasm arising from skin appendage structures, including hair follicles, sebaceous glands, and eccrine or apocrine sweat glands.",
+    "verification": {"verdict": "match", "note": "NCIT:C212119 Adnexal Neoplasm; confirmed as direct ancestor of multiple skin appendage tumors; semantically equivalent to ICD-O category 'Adnexal and Skin Appendage Neoplasms' (8390-8429)."}
+  },
+  {
+    "row_index": 8,
+    "term": "Epithelial Neoplasms, NOS",
+    "ontology_identifier": "NCIT:C3709",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3709",
+    "label": "Epithelial Neoplasm",
+    "description": "A neoplasm derived from epithelial cells, the cells lining the surfaces and cavities of the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C3709 Epithelial Neoplasm; confirmed as ancestor of numerous carcinomas and epithelial tumors; matches ICD-O category 'Epithelial Neoplasms, NOS' (8000-8009)."}
+  },
+  {
+    "row_index": 9,
+    "term": "Fibroepithelial Neoplasms",
+    "ontology_identifier": "NCIT:C3743",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3743",
+    "label": "Fibroepithelial Neoplasm",
+    "description": "A benign, borderline, or malignant neoplasm characterized by the presence of an epithelial and a fibrous component. Representative examples are fibroadenoma and phyllodes tumor.",
+    "verification": {"verdict": "match", "note": "NCIT:C3743 Fibroepithelial Neoplasm; exact label match; definition confirmed from OLS. Matches ICD-O category 9010-9016."}
+  },
+  {
+    "row_index": 10,
+    "term": "Fibromatous Neoplasms",
+    "ontology_identifier": "NCIT:C3042",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3042",
+    "label": "Fibromatosis",
+    "description": "A poorly circumscribed neoplasm arising from the soft tissues, characterized by the presence of spindle-shaped fibroblasts and an infiltrative growth pattern.",
+    "verification": {"verdict": "partial", "note": "NCIT:C3042 Fibromatosis; ICD-O 'Fibromatous Neoplasms' (8810-8829) includes fibromas and fibromatosis. NCIT:C3042 specifically describes fibromatosis; a broader 'Fibromatous Neoplasm' parent class is not a distinct NCIT term."}
+  },
+  {
+    "row_index": 11,
+    "term": "Germ Cell Neoplasms",
+    "ontology_identifier": "NCIT:C3708",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3708",
+    "label": "Germ Cell Tumor",
+    "description": "A neoplasm arising from germ cells, the primordial cells that give rise to eggs and sperm.",
+    "verification": {"verdict": "match", "note": "NCIT:C3708 Germ Cell Tumor; confirmed as ancestor of multiple germ cell tumors; semantically equivalent to ICD-O category 9060-9091."}
+  },
+  {
+    "row_index": 12,
+    "term": "Giant Cell Tumors",
+    "ontology_identifier": "NCIT:C3055",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3055",
+    "label": "Giant Cell Tumor",
+    "description": "A neoplasm characterized by the presence of multinucleated giant cells intermixed with mononuclear stromal cells.",
+    "verification": {"verdict": "match", "note": "NCIT:C3055 Giant Cell Tumor; confirmed as ancestor of Malignant Tenosynovial Giant Cell Tumor and related tumors; matches ICD-O category 9250-9252."}
+  },
+  {
+    "row_index": 13,
+    "term": "Gliomas",
+    "ontology_identifier": "NCIT:C3059",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3059",
+    "label": "Glioma",
+    "description": "A neoplasm arising from glial cells of the central nervous system, including astrocytes, oligodendrocytes, and ependymal cells.",
+    "verification": {"verdict": "match", "note": "NCIT:C3059 Glioma; standard NCIT term for ICD-O category 9380-9460."}
+  },
+  {
+    "row_index": 16,
+    "term": "Leukemias",
+    "ontology_identifier": "NCIT:C3161",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3161",
+    "label": "Leukemia",
+    "description": "A malignant clonal hematologic disorder involving hematopoietic stem cells, characterized by the presence of primitive or atypical myeloid or lymphoid cells in the bone marrow and blood.",
+    "verification": {"verdict": "match", "note": "NCIT:C3161 Leukemia; confirmed as direct match via OLS search; semantically equivalent to ICD-O category 9800-9948."}
+  },
+  {
+    "row_index": 17,
+    "term": "Lipomatous Neoplasms",
+    "ontology_identifier": "NCIT:C4248",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4248",
+    "label": "Lipomatous Neoplasm",
+    "description": "A neoplasm arising from adipose (fat) tissue, ranging from benign lipomas to malignant liposarcomas.",
+    "verification": {"verdict": "match", "note": "NCIT:C4248 Lipomatous Neoplasm; confirmed as direct parent of Liposarcoma in OLS search; matches ICD-O category 8850-8881."}
+  },
+  {
+    "row_index": 20,
+    "term": "Meningiomas",
+    "ontology_identifier": "NCIT:C3230",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3230",
+    "label": "Meningioma",
+    "description": "A usually benign neoplasm arising from the meninges, the membranes that cover and protect the brain and spinal cord.",
+    "verification": {"verdict": "match", "note": "NCIT:C3230 Meningioma; standard NCIT term confirmed as ancestor in prior session searches; matches ICD-O category 9530-9539."}
+  },
+  {
+    "row_index": 21,
+    "term": "Mesothelial Neoplasms",
+    "ontology_identifier": "NCIT:C3786",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3786",
+    "label": "Mesothelial Neoplasm",
+    "description": "A neoplasm arising from mesothelial cells, which line the body cavities including the pleura, peritoneum, and pericardium.",
+    "verification": {"verdict": "match", "note": "NCIT:C3786 Mesothelial Neoplasm; confirmed as parent of mesothelial tumor types in prior session; matches ICD-O category 9050-9055."}
+  },
+  {
+    "row_index": 25,
+    "term": "Myelodysplastic Syndromes",
+    "ontology_identifier": "NCIT:C3247",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3247",
+    "label": "Myelodysplastic Syndrome",
+    "description": "A heterogeneous group of clonal hematopoietic stem cell disorders characterized by ineffective blood cell production, peripheral blood cytopenias, and risk of progression to acute myeloid leukemia.",
+    "verification": {"verdict": "match", "note": "NCIT:C3247 Myelodysplastic Syndrome; exact label match; matches ICD-O category 9980-9989."}
+  },
+  {
+    "row_index": 26,
+    "term": "Myomatous Neoplasms",
+    "ontology_identifier": "NCIT:C214799",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C214799",
+    "label": "Myomatous Neoplasm",
+    "description": "A neoplasm arising from or exhibiting differentiation toward muscle tissue, encompassing tumors of smooth, skeletal, or cardiac muscle.",
+    "verification": {"verdict": "match", "note": "NCIT:C214799 Myomatous Neoplasm; confirmed as direct parent of Myoma (NCIT:C4882) in OLS search; exact label match for ICD-O category 8890-8899."}
+  },
+  {
+    "row_index": 28,
+    "term": "Neoplasms, NOS",
+    "ontology_identifier": "NCIT:C3262",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3262",
+    "label": "Neoplasm",
+    "description": "An abnormal tissue growth resulting from uncontrolled and progressive cell proliferation; may be benign or malignant.",
+    "verification": {"verdict": "match", "note": "NCIT:C3262 Neoplasm; root morphology class; matches ICD-O category 'Neoplasms, NOS' (8000-8009 basis). Appropriate for the generic NOS category."}
+  },
+  {
+    "row_index": 29,
+    "term": "Nerve Sheath Tumors",
+    "ontology_identifier": "NCIT:C4972",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4972",
+    "label": "Nerve Sheath Neoplasm",
+    "description": "A benign or malignant neoplasm arising from the perineural cells in the sheaths surrounding the nerves. Representative examples include neurofibroma, schwannoma, and malignant peripheral nerve sheath tumor.",
+    "verification": {"verdict": "match", "note": "NCIT:C4972 Nerve Sheath Neoplasm; confirmed as direct ancestor in OLS search; semantically equivalent to ICD-O category 9540-9571."}
+  },
+  {
+    "row_index": 31,
+    "term": "Nevi and Melanomas",
+    "ontology_identifier": "NCIT:C7058",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C7058",
+    "label": "Melanocytic Neoplasm",
+    "description": "A neoplasm arising from melanocytes, the pigment-producing cells found primarily in the skin and eye; includes both benign lesions (nevi) and malignant melanomas.",
+    "verification": {"verdict": "match", "note": "NCIT:C7058 Melanocytic Neoplasm; confirmed as ancestor of Benign Conjunctival Melanocytic Neoplasm in OLS search; the class covers both nevi and melanomas as intended by the vocab term."}
+  },
+  {
+    "row_index": 32,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 33,
+    "term": "Not Otherwise Specified",
+    "ontology_identifier": "NCIT:C19594",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19594",
+    "label": "Not Otherwise Specified",
+    "description": "A term used to indicate that a specific type or category is not more precisely described or classified.",
+    "verification": {"verdict": "match", "note": "NCIT:C19594 Not Otherwise Specified; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 34,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available at the time of data submission.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 35,
+    "term": "Odontogenic Tumors",
+    "ontology_identifier": "NCIT:C3286",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3286",
+    "label": "Odontogenic Neoplasm",
+    "description": "A neoplasm arising from tissues involved in tooth formation, including enamel organ, dental papilla, and dental follicle, most commonly arising in the jaw.",
+    "verification": {"verdict": "match", "note": "NCIT:C3286 Odontogenic Neoplasm; confirmed as direct ancestor of Dentinogenic Ghost Cell Tumor in OLS search; semantically equivalent to ICD-O category 9270-9342."}
+  },
+  {
+    "row_index": 37,
+    "term": "Paragangliomas and Glomus Tumors",
+    "ontology_identifier": "NCIT:C3308",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3308",
+    "label": "Paraganglioma",
+    "description": "A neoplasm arising from paraganglia, specialized clusters of neuroendocrine cells that are part of the autonomic nervous system, located at various sites outside the adrenal medulla.",
+    "verification": {"verdict": "partial", "note": "NCIT:C3308 Paraganglioma; confirmed as ancestor of Jugulotympanic Paraganglioma in OLS search; the vocab term also includes glomus tumors (ICD-O 8711), which are glomangiomas/glomus tumors of soft tissue — a distinct NCIT lineage not captured by C3308."}
+  },
+  {
+    "row_index": 38,
+    "term": "Plasma Cell Neoplasm",
+    "ontology_identifier": "NCIT:C4665",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4665",
+    "label": "Plasma Cell Neoplasm",
+    "description": "A neoplasm characterized by the clonal proliferation of plasma cells, the antibody-secreting terminally differentiated B-cells.",
+    "verification": {"verdict": "match", "note": "NCIT:C4665 Plasma Cell Neoplasm; confirmed as ancestor of Multiple Myeloma in prior session; matches ICD-O category 9731-9759."}
+  },
+  {
+    "row_index": 39,
+    "term": "Soft Tissue Tumors and Sarcomas, NOS",
+    "ontology_identifier": "NCIT:C3377",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3377",
+    "label": "Soft Tissue Neoplasm",
+    "description": "A neoplasm arising from the non-epithelial, non-osseous supporting tissues of the body, including fat, fibrous tissue, muscle, peripheral nerves, and blood and lymph vessels.",
+    "verification": {"verdict": "partial", "note": "NCIT:C3377 Soft Tissue Neoplasm; confirmed as ancestor of multiple soft tissue tumors in OLS search. The vocab term implies a broader category including sarcomas specifically; NCIT:C3377 covers both benign and malignant soft tissue tumors."}
+  },
+  {
+    "row_index": 40,
+    "term": "Squamous Cell Neoplasms",
+    "ontology_identifier": "NCIT:C3792",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3792",
+    "label": "Squamous Cell Neoplasm",
+    "description": "A neoplasm arising from or exhibiting the features of squamous epithelium, ranging from benign squamous papillomas to squamous cell carcinomas.",
+    "verification": {"verdict": "match", "note": "NCIT:C3792 Squamous Cell Neoplasm; confirmed in prior session searches; matches ICD-O category 8050-8089."}
+  },
+  {
+    "row_index": 41,
+    "term": "Synovial-like Neoplasms",
+    "ontology_identifier": "NCIT:C8964",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C8964",
+    "label": "Synovial Neoplasm",
+    "description": "A neoplasm arising from the synovial tissue lining joint cavities, tendon sheaths, and bursae.",
+    "verification": {"verdict": "match", "note": "NCIT:C8964 Synovial Neoplasm; confirmed as ancestor of Malignant Tenosynovial Giant Cell Tumor and Malignant Synovial Neoplasm in OLS search; semantically equivalent to ICD-O category 9040-9044."}
+  },
+  {
+    "row_index": 42,
+    "term": "Thymic Epithelial Neoplasms",
+    "ontology_identifier": "NCIT:C6450",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C6450",
+    "label": "Thymus Epithelial Neoplasm",
+    "description": "A neoplasm arising from the epithelial cells of the thymus gland, spanning a spectrum from thymoma to thymic carcinoma.",
+    "verification": {"verdict": "match", "note": "NCIT:C6450 Thymus Epithelial Neoplasm; confirmed as ancestor of Combined Thymus Epithelial Neoplasm and Thymoma A in OLS search; matches ICD-O category 8580-8589."}
+  },
+  {
+    "row_index": 44,
+    "term": "Trophoblastic neoplasms",
+    "ontology_identifier": "NCIT:C180633",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C180633",
+    "label": "Gestational Trophoblastic Disorder",
+    "description": "A group of pregnancy-related proliferative disorders including non-neoplastic conditions and trophoblastic neoplasms such as invasive hydatidiform mole, gestational choriocarcinoma, and epithelioid trophoblastic tumor.",
+    "verification": {"verdict": "partial", "note": "NCIT:C180633 Gestational Trophoblastic Disorder; the ICD-O 'Trophoblastic neoplasms' category (9100-9105) specifically covers neoplasms, while C180633 includes both non-neoplastic and neoplastic trophoblastic conditions. No dedicated 'Trophoblastic Neoplasm' class without the gestational qualifier found in NCIT."}
+  },
+  {
+    "row_index": 45,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT general qualifier."}
+  }
+]}

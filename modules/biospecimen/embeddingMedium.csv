@@ -1,11 +1,11 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Paraffin wax,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Carbowax,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Methacrylate,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Epoxy Resin (Araldite),,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Agar embedding,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Celloidin media,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Gelatin,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Other,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-None,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
-Unknown,,,,FALSE,,Embedding Medium,,CDS Imaging V1.0,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Paraffin wax","A common name for a group of high molecular weight alkane hydrocarbons; a white, odorless, tasteless, waxy solid widely used as an embedding medium for tissue processing in histology.","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","NCIT:C727","http://purl.obolibrary.org/obo/NCIT_C727","C727",""
+"Carbowax","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Methacrylate","A methyl ester of methacrylic acid; a reactive resin used as cement in dentistry, orthopaedic surgery, and ophthalmology, and as a hard plastic embedding medium for electron microscopy.","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","NCIT:C47615","http://purl.obolibrary.org/obo/NCIT_C47615","C47615",""
+"Epoxy Resin (Araldite)","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Agar embedding","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Celloidin media","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Gelatin","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Other","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"None","","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","","","",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Embedding Medium","","CDS Imaging V1.0","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""

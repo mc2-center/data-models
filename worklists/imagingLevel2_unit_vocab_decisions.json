@@ -1,0 +1,47 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "cm",
+    "ontology_identifier": "UO:0000015",
+    "ontology_url": "http://purl.obolibrary.org/obo/UO_0000015",
+    "label": "centimeter",
+    "description": "A length unit which is equal to one hundredth of a meter or 10^[-2] m.",
+    "verification": {"verdict": "match", "note": "UO:0000015 is centimeter, exact match."}
+  },
+  {
+    "row_index": 1,
+    "term": "mm",
+    "ontology_identifier": "UO:0000016",
+    "ontology_url": "http://purl.obolibrary.org/obo/UO_0000016",
+    "label": "millimeter",
+    "description": "A length unit which is equal to one thousandth of a meter or 10^[-3] m.",
+    "verification": {"verdict": "match", "note": "UO:0000016 is millimeter, exact match."}
+  },
+  {
+    "row_index": 2,
+    "term": "µm",
+    "ontology_identifier": "UO:0000017",
+    "ontology_url": "http://purl.obolibrary.org/obo/UO_0000017",
+    "label": "micrometer",
+    "description": "A length unit which is equal to one millionth of a meter or 10^[-6] m.",
+    "verification": {"verdict": "match", "note": "UO:0000017 is micrometer (µm), exact match."}
+  },
+  {
+    "row_index": 3,
+    "term": "nm",
+    "ontology_identifier": "UO:0000018",
+    "ontology_url": "http://purl.obolibrary.org/obo/UO_0000018",
+    "label": "nanometer",
+    "description": "A length unit which is equal to one billionth of a meter or 10^[-9] m.",
+    "verification": {"verdict": "match", "note": "UO:0000018 is nanometer, exact match."}
+  },
+  {
+    "row_index": 4,
+    "term": "Å",
+    "ontology_identifier": "UO:0000019",
+    "ontology_url": "http://purl.obolibrary.org/obo/UO_0000019",
+    "label": "angstrom",
+    "description": "A length unit which is equal to 10^[-10] m.",
+    "verification": {"verdict": "match", "note": "UO:0000019 is angstrom (Å), exact match."}
+  }
+]}

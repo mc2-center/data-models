@@ -1,0 +1,254 @@
+[
+  {
+    "row_index": 0,
+    "term": "CODEX",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "CyCIF",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "ExSeq",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "GeoMX-DSP",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "H&E",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "IHC",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "IMC",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "MERFISH",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "MIBI",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "mIHC",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "MxIF",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "Not Applicable",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 12,
+    "term": "SABER",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "t-CyCIF",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

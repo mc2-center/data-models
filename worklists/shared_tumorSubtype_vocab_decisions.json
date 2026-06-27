@@ -1,0 +1,47 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "TNBC",
+    "ontology_identifier": "NCIT:C71732",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C71732",
+    "label": "Triple-Negative Breast Carcinoma",
+    "description": "An invasive breast carcinoma that is negative for expression of estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2).",
+    "verification": {"verdict": "match", "note": "NCIT:C71732 Triple-Negative Breast Carcinoma; label abbreviation TNBC matches this exact term."}
+  },
+  {
+    "row_index": 1,
+    "term": "LumA",
+    "ontology_identifier": "NCIT:C53554",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C53554",
+    "label": "Luminal A Breast Carcinoma",
+    "description": "A biologic subset of breast carcinoma defined by high expression of genes characteristic of luminal epithelial cells, including estrogen receptor (ER). This subtype is associated with a good prognosis.",
+    "verification": {"verdict": "match", "note": "NCIT:C53554 Luminal A Breast Carcinoma; LumA is the standard abbreviation for this subtype."}
+  },
+  {
+    "row_index": 2,
+    "term": "LumB",
+    "ontology_identifier": "NCIT:C53555",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C53555",
+    "label": "Luminal B Breast Carcinoma",
+    "description": "A biologic subset of breast carcinoma defined by low to moderate expression of genes characteristic of luminal epithelial cells including estrogen receptor (ER), and high expression of GGH, LAPTM4B, and CCNE1.",
+    "verification": {"verdict": "match", "note": "NCIT:C53555 Luminal B Breast Carcinoma; LumB is the standard abbreviation."}
+  },
+  {
+    "row_index": 3,
+    "term": "HER2",
+    "ontology_identifier": "NCIT:C53556",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C53556",
+    "label": "HER2-Positive Breast Carcinoma",
+    "description": "A biologic subset of breast carcinoma defined by high expression of HER2, GRB7, and TRAP100, and by lack of expression of estrogen receptor (ER).",
+    "verification": {"verdict": "match", "note": "NCIT:C53556 HER2-Positive Breast Carcinoma; HER2 abbreviation maps directly to this subtype."}
+  },
+  {
+    "row_index": 4,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  }
+]}

@@ -1,0 +1,50 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 4",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node representing derived imaging data or object by feature array. Best NCIT match is Imaging Procedure as the general class. OBI:0003355 (image data set analysis) is a closer OBI alternative for derived data."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel4_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "Image Number of Features",
+    "ontology_identifier": "NCIT:C25337",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25337",
+    "label": "Number",
+    "description": "A numeral or string of numerals expressing value, quantity, or identification.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for number of image features/channels. NCIT:C25337 Number is the best available parent concept representing a count of features. Partial match."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Image Summary Statistic",
+    "ontology_identifier": "NCIT:C19044",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19044",
+    "label": "Statistical Technique",
+    "description": "A method of analyzing or representing statistical data; a procedure for calculating a statistic.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for image summary statistic function. NCIT:C19044 Statistical Technique is the closest available concept for a function used to summarize object/feature intensity. Partial match."
+    }
+  }
+]

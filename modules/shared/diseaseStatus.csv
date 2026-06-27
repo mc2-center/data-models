@@ -1,12 +1,12 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Biochemical evidence of disease without structural correlate,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Tumor Free,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Unknown,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-With Tumor,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Not Reported,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Not Applicable,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Not Allowed To Collect,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Distant Metastasis,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Localized Disease,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-Regional Disease,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
-New Tumor Event,,,,FALSE,,Last Known Disease Status,,CDS v5.0.4/Diagnosis-last_known_disease_status,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Biochemical evidence of disease without structural correlate","","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","","","",""
+"Tumor Free","There is no evidence of a tumor in the individual.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C156848","http://purl.obolibrary.org/obo/NCIT_C156848","C156848",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"With Tumor","","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","","","",""
+"Not Reported","Not provided or available.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Not Applicable","Determination of a value is not relevant in the current context.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C48660","http://purl.obolibrary.org/obo/NCIT_C48660","C48660",""
+"Not Allowed To Collect","","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","","","",""
+"Distant Metastasis","","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","","","",""
+"Localized Disease","A disease that is confined to a specific organ or tissue and has not spread to other anatomic sites.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C36162","http://purl.obolibrary.org/obo/NCIT_C36162","C36162",""
+"Regional Disease","","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","","","",""
+"New Tumor Event","The presence of a primary, recurrent or metastatic neoplasm which has not been previously noted.","","","FALSE","","Last Known Disease Status","","CDS v5.0.4/Diagnosis-last_known_disease_status","","","NCIT:C200667","http://purl.obolibrary.org/obo/NCIT_C200667","C200667",""

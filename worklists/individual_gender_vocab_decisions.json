@@ -1,0 +1,56 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Female",
+    "ontology_identifier": "NCIT:C16576",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16576",
+    "label": "Female",
+    "description": "An individual who belongs to the sex that normally produces ova.",
+    "verification": {"verdict": "match", "note": "NCIT:C16576 Female; exact label match. Note this is the biological sex qualifier in NCIT; gender and biological sex are distinct concepts but NCIT does not maintain separate gender vs. sex qualifier hierarchies. This is the standard NCIT term used for this purpose."}
+  },
+  {
+    "row_index": 1,
+    "term": "Male",
+    "ontology_identifier": "NCIT:C20197",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C20197",
+    "label": "Male",
+    "description": "An individual who belongs to the sex that normally produces sperm.",
+    "verification": {"verdict": "match", "note": "NCIT:C20197 Male; exact label match. Same note as Female: used as a sex-aligned gender qualifier."}
+  },
+  {
+    "row_index": 2,
+    "term": "Intersex",
+    "ontology_identifier": "NCIT:C45908",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C45908",
+    "label": "Intersex",
+    "description": "Refers to an individual who was born with genitalia, chromosomes, or reproductive organs that do not fit typical definitions for either male or female.",
+    "verification": {"verdict": "match", "note": "NCIT:C45908 Intersex; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 4,
+    "term": "Unspecified",
+    "ontology_identifier": "NCIT:C38046",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38046",
+    "label": "Unspecified",
+    "description": "Not stated explicitly or in detail.",
+    "verification": {"verdict": "match", "note": "NCIT:C38046 Unspecified; standard NCIT missing-value qualifier."}
+  },
+  {
+    "row_index": 5,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  }
+]}

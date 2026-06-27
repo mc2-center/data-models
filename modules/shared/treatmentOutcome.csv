@@ -1,12 +1,12 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Complete Response,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-No Evidence of Disease,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-No Response,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Not Applicable,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Not Evaluable,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Not Reported,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Partial Response,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Persistent Disease,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Progressive Disease,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Stable Disease,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
-Unknown,,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Complete Response","The disappearance of all signs of cancer in response to treatment.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C4870","http://purl.obolibrary.org/obo/NCIT_C4870","C4870",""
+"No Evidence of Disease","Diagnostic tests fail to detect presence of disease.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C40413","http://purl.obolibrary.org/obo/NCIT_C40413","C40413",""
+"No Response","","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","","","",""
+"Not Applicable","Determination of a value is not relevant in the current context.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C48660","http://purl.obolibrary.org/obo/NCIT_C48660","C48660",""
+"Not Evaluable","Indicates that an assessment was not performed.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C139527","http://purl.obolibrary.org/obo/NCIT_C139527","C139527",""
+"Not Reported","Not provided or available.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Partial Response","A finding indicating that there is a decrease in the size and the extent of tissue involvement by a malignant tumor in a patient.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C18058","http://purl.obolibrary.org/obo/NCIT_C18058","C18058",""
+"Persistent Disease","The persistence of tumor cells in the body following cancer treatment.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C4809","http://purl.obolibrary.org/obo/NCIT_C4809","C4809",""
+"Progressive Disease","A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C35571","http://purl.obolibrary.org/obo/NCIT_C35571","C35571",""
+"Stable Disease","A disease that is neither decreasing nor increasing in extent or severity.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C18213","http://purl.obolibrary.org/obo/NCIT_C18213","C18213",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Treatment Response","","CDS v5.0.4/Treatment-response","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""

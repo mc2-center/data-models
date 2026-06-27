@@ -1,0 +1,484 @@
+[
+  {
+    "row_index": 0,
+    "term": "African Bush Elephant",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Armadillo",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "Asian Elephant",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "Boar",
+    "existing_description": "",
+    "existing_ontology_identifier": "9823.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9823",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "Cat",
+    "existing_description": "",
+    "existing_ontology_identifier": "9685.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "Chicken",
+    "existing_description": "",
+    "existing_ontology_identifier": "9031.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9031",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "Cow",
+    "existing_description": "",
+    "existing_ontology_identifier": "9913.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9913",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "Dog",
+    "existing_description": "",
+    "existing_ontology_identifier": "9615.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9615",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Escherichia coli",
+    "existing_description": "",
+    "existing_ontology_identifier": "562.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&name=Escherichia+coli&lvl=0&srchmode=1&keep=1&unlock",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Guinea Pig",
+    "existing_description": "",
+    "existing_ontology_identifier": "10141.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10141",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "Horse",
+    "existing_description": "",
+    "existing_ontology_identifier": "9796.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "Human",
+    "existing_description": "",
+    "existing_ontology_identifier": "9606.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9606",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 12,
+    "term": "Human Patient",
+    "existing_description": "",
+    "existing_ontology_identifier": "9606.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "Human Cell Line",
+    "existing_description": "",
+    "existing_ontology_identifier": "9606.0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "Mouse",
+    "existing_description": "",
+    "existing_ontology_identifier": "10090.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=10090",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "Multispecies",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 16,
+    "term": "Not Applicable",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 17,
+    "term": "Opossum",
+    "existing_description": "",
+    "existing_ontology_identifier": "13616.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=13616",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 18,
+    "term": "Rabbit",
+    "existing_description": "",
+    "existing_ontology_identifier": "9986.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=9986&lvl=3&lin=f&keep=1&srchmode=1&unlock",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "Rat",
+    "existing_description": "",
+    "existing_ontology_identifier": "10116.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=10116",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 20,
+    "term": "Rhesus monkey",
+    "existing_description": "",
+    "existing_ontology_identifier": "9544.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9544",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 21,
+    "term": "Sheep",
+    "existing_description": "",
+    "existing_ontology_identifier": "9940.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=9940&lvl=3&lin=f&keep=1&srchmode=1&unlock",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 22,
+    "term": "Trichoplax adhaerens",
+    "existing_description": "",
+    "existing_ontology_identifier": "10228.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 23,
+    "term": "Unknown",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 24,
+    "term": "Unspecified",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 25,
+    "term": "Worm",
+    "existing_description": "",
+    "existing_ontology_identifier": "6239.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=6239",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 26,
+    "term": "Yeast",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 27,
+    "term": "Fruit Fly",
+    "existing_description": "",
+    "existing_ontology_identifier": "7277.0",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=7227",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 28,
+    "term": "Zebrafish",
+    "existing_description": "",
+    "existing_ontology_identifier": "7955",
+    "existing_ontology_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=7955",
+    "needs": [
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

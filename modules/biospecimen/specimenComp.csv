@@ -1,22 +1,22 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Additional Primary,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Atypia or hyperplasia,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Local recurrence,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Metastatic,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Normal,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Normal adjacent,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Normal distant,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-NOS,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Not applicable,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Not reported,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Premalignant,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Premalignant - in situ,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Primary,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Recurrent,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Tissue,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Tumor post-adjuvant therapy,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Tumor post-neoadjuvant therapy,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Tumor post-therapy,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Tumor specimen from de novo untreated malignancy of the bladder,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Unknown,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
-Xenograft,,,,FALSE,,Biospecimen Composition,,CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Additional Primary","A primary malignant neoplasm in a patient who has been already diagnosed with a primary malignant neoplasm in another anatomic site.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C95606","http://purl.obolibrary.org/obo/NCIT_C95606","C95606",""
+"Atypia or hyperplasia","A pathological process that precedes and often leads to the development of cancer.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C36032","http://purl.obolibrary.org/obo/NCIT_C36032","C36032",""
+"Local recurrence","The return of a disease after a period of remission.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C38155","http://purl.obolibrary.org/obo/NCIT_C38155","C38155",""
+"Metastatic","A tumor that has spread from its original site of growth to another anatomic site.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C3261","http://purl.obolibrary.org/obo/NCIT_C3261","C3261",""
+"Normal","Tissue sample with cellular composition and architectural patterns expected for the particular anatomic site in which it belongs; no evidence of abnormal cellular infiltrates or tumor mass formation.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C162623","http://purl.obolibrary.org/obo/NCIT_C162623","C162623",""
+"Normal adjacent","A specimen comprised of morphologically normal tissue collected from the area immediately surrounding a tumor in an experimental subject.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C164032","http://purl.obolibrary.org/obo/NCIT_C164032","C164032",""
+"Normal distant","","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","","","",""
+"NOS","Not more specifically or particularly described than the stated category.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C19594","http://purl.obolibrary.org/obo/NCIT_C19594","C19594",""
+"Not applicable","Determination of a value is not relevant in the current context.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C48660","http://purl.obolibrary.org/obo/NCIT_C48660","C48660",""
+"Not reported","An indication that the required information was not provided.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Premalignant","A pathological process that precedes and often leads to the development of cancer.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C36032","http://purl.obolibrary.org/obo/NCIT_C36032","C36032",""
+"Premalignant - in situ","A neoplasm in which the malignant cells are confined to the epithelium of origin, without invasion of the basement membrane.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C2917","http://purl.obolibrary.org/obo/NCIT_C2917","C2917",""
+"Primary","A tumor at the original site at which it arose.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C8509","http://purl.obolibrary.org/obo/NCIT_C8509","C8509",""
+"Recurrent","The return of a disease after a period of remission.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C38155","http://purl.obolibrary.org/obo/NCIT_C38155","C38155",""
+"Tissue","A piece of tissue removed from an organism for examination, analysis, or propagation.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C19697","http://purl.obolibrary.org/obo/NCIT_C19697","C19697",""
+"Tumor post-adjuvant therapy","A specimen derived from a subject after treatment with a neoadjuvant therapeutic.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C156444","http://purl.obolibrary.org/obo/NCIT_C156444","C156444",""
+"Tumor post-neoadjuvant therapy","A specimen derived from a subject after treatment with a neoadjuvant therapeutic.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C156444","http://purl.obolibrary.org/obo/NCIT_C156444","C156444",""
+"Tumor post-therapy","A specimen derived from a subject after treatment with a neoadjuvant therapeutic.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C156444","http://purl.obolibrary.org/obo/NCIT_C156444","C156444",""
+"Tumor specimen from de novo untreated malignancy of the bladder","","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","","","",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"Xenograft","A transplantation of cancer cells derived from an established cancer cell line into an immunodeficient mouse.","","","FALSE","","Biospecimen Composition","","CDS v5.0.4/Multiplexedmicroscopy-tumor_tissue_type","","","NCIT:C156443","http://purl.obolibrary.org/obo/NCIT_C156443","C156443",""

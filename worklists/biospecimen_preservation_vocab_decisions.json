@@ -1,0 +1,164 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Cryopreserved",
+    "ontology_identifier": "NCIT:C16475",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16475",
+    "label": "Cryopreservation",
+    "description": "Preservation of cells, tissues, organs, or embryos by storage at low temperatures.",
+    "verification": {"verdict": "partial", "note": "NCIT:C16475 Cryopreservation; the NCIT term is the process, while the vocab term is the past-participial state (cryopreserved). Best available NCIT match for the general cryopreservation method."}
+  },
+  {
+    "row_index": 1,
+    "term": "Cryopreservation in liquid nitrogen - dead tissue",
+    "ontology_identifier": "NCIT:C16475",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16475",
+    "label": "Cryopreservation",
+    "description": "Preservation of cells, tissues, organs, or embryos by storage at low temperatures.",
+    "verification": {"verdict": "partial", "note": "NCIT:C16475 Cryopreservation; the vocab term specifies liquid nitrogen as the cryogen and dead tissue as the material, which are not captured in the generic NCIT term. Best available match."}
+  },
+  {
+    "row_index": 2,
+    "term": "Cryopreservation in dry ice - dead tissue",
+    "ontology_identifier": "NCIT:C16475",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16475",
+    "label": "Cryopreservation",
+    "description": "Preservation of cells, tissues, organs, or embryos by storage at low temperatures.",
+    "verification": {"verdict": "partial", "note": "NCIT:C16475 Cryopreservation; the vocab term specifies dry ice as the cryogen, which is not captured in the generic NCIT term. Best available match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Cryopreservation in liquid nitrogen - live cells",
+    "ontology_identifier": "NCIT:C16475",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16475",
+    "label": "Cryopreservation",
+    "description": "Preservation of cells, tissues, organs, or embryos by storage at low temperatures.",
+    "verification": {"verdict": "partial", "note": "NCIT:C16475 Cryopreservation; the vocab term specifies liquid nitrogen as the cryogen and live cells as the material. Best available match."}
+  },
+  {
+    "row_index": 4,
+    "term": "Formalin fixed paraffin embedded - FFPE",
+    "ontology_identifier": "NCIT:C172265",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172265",
+    "label": "Formalin-Fixed Paraffin-Embedded Tissue Sample",
+    "description": "A tissue sample that has been fixed with formalin and embedded in paraffin for long-term preservation and histological analysis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C172265 Formalin-Fixed Paraffin-Embedded Tissue Sample; the NCIT term describes the resulting specimen type, while the vocab term is the preservation method name (FFPE). No separate FFPE process term found in NCIT. Best available match."}
+  },
+  {
+    "row_index": 5,
+    "term": "Formalin fixed-unbuffered",
+    "ontology_identifier": "NCIT:C185402",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185402",
+    "label": "Unbuffered Formalin Fixation",
+    "description": "The use of unbuffered formalin for preservation of tissue samples.",
+    "verification": {"verdict": "match", "note": "NCIT:C185402 Unbuffered Formalin Fixation; exact concept match — the vocab term 'Formalin fixed-unbuffered' describes the same fixation method. Minor label inversion."}
+  },
+  {
+    "row_index": 6,
+    "term": "Formalin fixed-buffered",
+    "ontology_identifier": "NCIT:C185403",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185403",
+    "label": "Buffered Formalin Fixation",
+    "description": "The use of buffered formalin for preservation of tissue samples.",
+    "verification": {"verdict": "match", "note": "NCIT:C185403 Buffered Formalin Fixation; exact concept match — the vocab term 'Formalin fixed-buffered' describes the same fixation method. Minor label inversion."}
+  },
+  {
+    "row_index": 7,
+    "term": "Fresh",
+    "ontology_identifier": "NCIT:C84517",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C84517",
+    "label": "Fresh Specimen",
+    "description": "Tissue which has not been exposed to a fixative solution.",
+    "verification": {"verdict": "partial", "note": "NCIT:C84517 Fresh Specimen; NCIT term describes the resulting specimen state (not exposed to fixative), while the vocab term is the preservation method label. Best available match for fresh/unfixed tissue."}
+  },
+  {
+    "row_index": 8,
+    "term": "Fresh dissociated and single cell sorted into plates in NP40 buffer",
+    "ontology_identifier": "NCIT:C185406",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185406",
+    "label": "Fresh Dissociated Tissue Preparation, Single Cell Sorted into Plates",
+    "description": "A tissue preparation process that takes dissociated, sorted cells and distributes them into cell propagation plates.",
+    "verification": {"verdict": "partial", "note": "NCIT:C185406 covers the core process (fresh dissociation + single cell sorting into plates). The NP40 buffer specification is not captured in the NCIT term. Best available match."}
+  },
+  {
+    "row_index": 9,
+    "term": "OCT",
+    "ontology_identifier": "NCIT:C63523",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C63523",
+    "label": "Optimal Cutting Temperature Compound",
+    "description": "A solution of water soluble glycols and resins that provide a specimen support matrix for cryostat sectioning at temperatures of -10 degrees C and below.",
+    "verification": {"verdict": "partial", "note": "NCIT:C63523 Optimal Cutting Temperature Compound; OCT is the standard abbreviation for this compound. The NCIT term describes the reagent, while OCT in the preservation context means the specimen was embedded in OCT for cryosection."}
+  },
+  {
+    "row_index": 10,
+    "term": "Snap Frozen",
+    "ontology_identifier": "NCIT:C63521",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C63521",
+    "label": "Quick Freeze",
+    "description": "To freeze rapidly so as to preserve structure and prevent ice crystal formation.",
+    "verification": {"verdict": "partial", "note": "NCIT:C63521 Quick Freeze; snap freezing and quick freezing are synonymous — rapid freezing to preserve tissue morphology and prevent ice crystal formation. Label uses 'Quick Freeze' vs 'Snap Frozen' but is the same concept."}
+  },
+  {
+    "row_index": 11,
+    "term": "Frozen",
+    "ontology_identifier": "NCIT:C158417",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C158417",
+    "label": "Frozen Tissue",
+    "description": "A tissue sample that has been frozen prior to analysis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C158417 Frozen Tissue; the NCIT term adds 'Tissue' specificity and describes the specimen state, while the vocab term is the generic preservation method. Best available match."}
+  },
+  {
+    "row_index": 13,
+    "term": "Liquid Nitrogen",
+    "ontology_identifier": "NCIT:C185338",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185338",
+    "label": "Liquid Nitrogen Storage",
+    "description": "An indication that a material has been stored in liquid nitrogen.",
+    "verification": {"verdict": "match", "note": "NCIT:C185338 Liquid Nitrogen Storage; exact concept — biospecimen stored in liquid nitrogen as a preservation method. Label adds 'Storage' but describes the same preservation approach."}
+  },
+  {
+    "row_index": 14,
+    "term": "Fresh dissociated",
+    "ontology_identifier": "NCIT:C185404",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185404",
+    "label": "Fresh Dissociated Tissue Preparation",
+    "description": "A tissue preparation process that takes fresh tissue and dissociates it into single cell suspensions.",
+    "verification": {"verdict": "match", "note": "NCIT:C185404 Fresh Dissociated Tissue Preparation; exact concept for fresh tissue dissociation into single cell suspension."}
+  },
+  {
+    "row_index": 15,
+    "term": "Fresh dissociated and single cell sorted",
+    "ontology_identifier": "NCIT:C185405",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185405",
+    "label": "Fresh Dissociated Tissue Preparation, Single Cell Sorted",
+    "description": "A tissue preparation process that separates fresh dissociated tissue cells into cell populations by single cell sorting.",
+    "verification": {"verdict": "match", "note": "NCIT:C185405 Fresh Dissociated Tissue Preparation, Single Cell Sorted; exact concept match."}
+  },
+  {
+    "row_index": 16,
+    "term": "Fresh dissociated and single cell sorted into plates",
+    "ontology_identifier": "NCIT:C185406",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185406",
+    "label": "Fresh Dissociated Tissue Preparation, Single Cell Sorted into Plates",
+    "description": "A tissue preparation process that takes dissociated, sorted cells and distributes them into cell propagation plates.",
+    "verification": {"verdict": "match", "note": "NCIT:C185406 Fresh Dissociated Tissue Preparation, Single Cell Sorted into Plates; exact concept match."}
+  },
+  {
+    "row_index": 18,
+    "term": "unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 19,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "An indication that the required information was not provided.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  }
+]}

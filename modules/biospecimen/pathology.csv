@@ -1,10 +1,10 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Metastatic Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Not Applicable,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Not Otherwise Specified,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Not Reported,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Premalignant Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Primary Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Recurrent Neoplasm,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Unknown,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
-Xenograft,,,,FALSE,,Biospecimen Pathology,,CDS Imaging V1.0,,,,,,Not in use as of MC2 data model v8.x.x
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Metastatic Neoplasm","A malignant tumor that has spread from its original site of growth to another anatomic location.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C3261","http://purl.obolibrary.org/obo/NCIT_C3261","C3261","Not in use as of MC2 data model v8.x.x"
+"Not Applicable","Determination of a value is not relevant in the current context.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C48660","http://purl.obolibrary.org/obo/NCIT_C48660","C48660","Not in use as of MC2 data model v8.x.x"
+"Not Otherwise Specified","Not characterized in any other way.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C19594","http://purl.obolibrary.org/obo/NCIT_C19594","C19594","Not in use as of MC2 data model v8.x.x"
+"Not Reported","Not provided or available.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234","Not in use as of MC2 data model v8.x.x"
+"Premalignant Neoplasm","A lesion or cellular condition with the potential to develop into cancer.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C36032","http://purl.obolibrary.org/obo/NCIT_C36032","C36032","Not in use as of MC2 data model v8.x.x"
+"Primary Neoplasm","A neoplasm at the original site of growth.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C8509","http://purl.obolibrary.org/obo/NCIT_C8509","C8509","Not in use as of MC2 data model v8.x.x"
+"Recurrent Neoplasm","A lesion that has reappeared at the original site of a neoplasm after a period of remission.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C4798","http://purl.obolibrary.org/obo/NCIT_C4798","C4798","Not in use as of MC2 data model v8.x.x"
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998","Not in use as of MC2 data model v8.x.x"
+"Xenograft","A biospecimen derived from the culturing of a derived cell line in a non-human organism.","","","FALSE","","Biospecimen Pathology","","CDS Imaging V1.0","","","NCIT:C156443","http://purl.obolibrary.org/obo/NCIT_C156443","C156443","Not in use as of MC2 data model v8.x.x"

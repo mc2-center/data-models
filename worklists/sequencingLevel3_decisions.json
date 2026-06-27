@@ -1,0 +1,26 @@
+[
+  {
+    "row_index": 0,
+    "term": "Sequencing Level 3",
+    "ontology_identifier": "OBI:0600047",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0600047",
+    "label": "sequencing assay",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "OBI:0600047 'sequencing assay' is the best parent class for this schema node. Level 3 represents processed/aggregated sequencing data (e.g. count matrices); no specific ontology term exists for this data processing level."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "SequencingLevel3_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C49189 'Primary Key' directly matches the use as a unique row identifier / primary key."
+    }
+  }
+]

@@ -1,6 +1,6 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Unspecified,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
-Unknown,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
-Dead,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
-Alive,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
-Not reported,,,,FALSE,,Individual Recurrence Status,,CDS v5.0.4/Diagnosis-vital_status,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Unspecified","Not stated explicitly or in detail.","","","FALSE","","Individual Recurrence Status","","CDS v5.0.4/Diagnosis-vital_status","","","NCIT:C38046","http://purl.obolibrary.org/obo/NCIT_C38046","C38046",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Individual Recurrence Status","","CDS v5.0.4/Diagnosis-vital_status","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""
+"Dead","The cessation of life.","","","FALSE","","Individual Recurrence Status","","CDS v5.0.4/Diagnosis-vital_status","","","NCIT:C28554","http://purl.obolibrary.org/obo/NCIT_C28554","C28554",""
+"Alive","Showing characteristics of life; displaying signs of life.","","","FALSE","","Individual Recurrence Status","","CDS v5.0.4/Diagnosis-vital_status","","","NCIT:C37987","http://purl.obolibrary.org/obo/NCIT_C37987","C37987",""
+"Not reported","Not provided or available.","","","FALSE","","Individual Recurrence Status","","CDS v5.0.4/Diagnosis-vital_status","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""

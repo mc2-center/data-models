@@ -1,0 +1,218 @@
+[
+  {
+    "row_index": 0,
+    "term": "G1",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "G2",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "G3",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "G4",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "GX",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "GB",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "High Grade",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "Intermediate Grade",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Low Grade",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Unknown",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "Not Reported",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "Not Applicable",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]
