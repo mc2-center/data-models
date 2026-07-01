@@ -3,11 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "The denormalized manifest for grant submission.",
   "properties": {
-    "Component": {
-      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "DurationofFunding": {
       "description": "Duration of the funding period, in years",
       "title": "Duration of Funding",
@@ -327,7 +322,7 @@
       "title": "Grant Type"
     },
     "GrantViewId": {
-      "description": "A unique primary key that enables record updates using schematic.",
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the grant number in CAxxxxxx format unless otherwise indicated.",
       "title": "GrantView_id",
       "type": "string"
     },
@@ -339,7 +334,6 @@
     }
   },
   "required": [
-    "Component",
     "GrantAbstract",
     "GrantConsortiumName",
     "GrantEndDate",

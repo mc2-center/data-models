@@ -3,11 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Dataset sharing plan information. Used to indicate planned usage of MC2 Center supported Synapse projects.",
   "properties": {
-    "Component": {
-      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "DSPDataUseCodes": {
       "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
       "items": {
@@ -827,7 +822,7 @@
     },
     "DSPIRBForm": {
       "description": "The Synapse Id for the executed IRB protocol or exemption document that was uploaded to Synapse. Required if human-derived data was generated for this study and will be uploaded as part of this dataset",
-      "pattern": "^syn\\d+",
+      "pattern": "syn\\d+",
       "title": "DSP IRB Form",
       "type": "string"
     },
@@ -864,7 +859,8 @@
       "type": "number"
     },
     "DataDSPId": {
-      "description": "A unique primary key that enables record updates using schematic.",
+      "description": "Unique row identifier, used as a primary key for record updates. This should be in CAxxxxxx-DSPxxx format unless otherwise directed.",
+      "pattern": "^CA\\d{6}-DSP-\\d{2,9}$",
       "title": "DataDSP_id",
       "type": "string"
     },
@@ -885,7 +881,6 @@
     }
   },
   "required": [
-    "Component",
     "DSPDatasetAssay",
     "DSPDatasetName",
     "DSPDatasetSpecies",

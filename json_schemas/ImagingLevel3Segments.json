@@ -1,7 +1,7 @@
 {
-  "$id": "http://example.com/FileView",
+  "$id": "http://example.com/ImagingLevel3Segments",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "The denormalized manifest for file submission.",
+  "description": "Image segmentation mask information",
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
@@ -592,15 +592,68 @@
       "title": "File Url",
       "type": "string"
     },
-    "FileViewId": {
-      "description": "Unique ID associated with a File entry, used as a key for record linking and updates. This should be equivalent to File Alias unless otherwise directed.",
-      "pattern": "^syn\\d{7,8}$",
-      "title": "FileView_id",
-      "type": "string"
-    },
     "Filename": {
       "description": "The path of a file in Synapse, relative to the project. The file associated with the path will be annotated with attributes contained in this sheet.",
       "title": "Filename",
+      "type": "string"
+    },
+    "ImageNumberofObjects": {
+      "description": "The number of objects (eg cells) described",
+      "title": "Image Number of Objects",
+      "type": "number"
+    },
+    "ImageObjectClass": {
+      "description": "Defines the structure that the mask delineates",
+      "enum": [
+        "Cytoplasm",
+        "Nucleus",
+        "Other",
+        "PlasmaMembrane",
+        "Spot",
+        "WholeCell"
+      ],
+      "title": "Image Object Class"
+    },
+    "ImageObjectClassDescription": {
+      "description": "If Imaging Object Class is \"Other\", please use this field to provide a text description of the imaging object class associated with the segmentation data",
+      "title": "Image Object Class Description",
+      "type": "string"
+    },
+    "ImageParameterfile": {
+      "description": "Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis",
+      "title": "Image Parameter file",
+      "type": "string"
+    },
+    "ImageSegmentationDataType": {
+      "description": "Specifies how the segmentation is stored",
+      "enum": [
+        "Mask",
+        "Outline",
+        "Point",
+        "Polygon",
+        "ProbabilityMap"
+      ],
+      "title": "Image Segmentation Data Type"
+    },
+    "ImagingLevel2Key": {
+      "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "ImagingLevel2 Key",
+      "type": "string"
+    },
+    "ImagingLevel3ImageKey": {
+      "description": "Unique ImagingLevel3Image_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "ImagingLevel3Image Key",
+      "type": "string"
+    },
+    "ImagingLevel3SegmentsId": {
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+      "pattern": "^syn\\d{7,8}$",
+      "title": "ImagingLevel3Segments_id",
+      "type": "string"
+    },
+    "SoftwareandVersion": {
+      "description": "Name of software used to generate the information contained in the file. String",
+      "title": "Software and Version",
       "type": "string"
     },
     "StudyKey": {
@@ -616,8 +669,9 @@
     "FileLevel",
     "FileSpecies",
     "FileUrl",
-    "FileViewId"
+    "ImageSegmentationDataType",
+    "ImagingLevel3SegmentsId"
   ],
-  "title": "FileView",
+  "title": "ImagingLevel3Segments",
   "type": "object"
 }

@@ -5,12 +5,8 @@
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "-B\\d{1,9}",
       "title": "Biospecimen Key",
-      "type": "string"
-    },
-    "Component": {
-      "description": "Category of metadata (e.g. Tools, Publications, etc.); provide the same one for all items/rows.",
-      "title": "Component",
       "type": "string"
     },
     "DatasetViewKey": {
@@ -612,7 +608,7 @@
     },
     "NGSLibraryPreparationDaysfromIndex": {
       "description": "Number of days between sample for assay was received in lab and the libraries were prepared for sequencing [number]. If not applicable please enter 'Not Applicable'",
-      "pattern": "^\\d+$|Not\\sApplicable$|unknown$",
+      "pattern": "\\d+$|Not\\sApplicable$|unknown$",
       "title": "NGS Library Preparation Days from Index",
       "type": "string"
     },
@@ -806,7 +802,7 @@
     },
     "NGSSequencingLibraryConstructionDaysfromIndex": {
       "description": "Number of days between sample for assay was received in lab and day of sequencing library construction [number]. If not applicable please enter 'Not Applicable'",
-      "pattern": "^\\d+$|Not\\sApplicable$|unknown$",
+      "pattern": "\\d+$|Not\\sApplicable$|unknown$",
       "title": "NGS Sequencing Library Construction Days from Index",
       "type": "string"
     },
@@ -889,7 +885,8 @@
       "type": "number"
     },
     "SequencingRNALevel1Id": {
-      "description": "A unique identifier used by schematic for record updates and as a reference key in other schemas",
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+      "pattern": "^syn\\d{7,8}$",
       "title": "SequencingRNALevel1_id",
       "type": "string"
     },
@@ -900,14 +897,12 @@
     }
   },
   "required": [
-    "Component",
     "FileAlias",
     "FileAssay",
     "FileFormat",
     "FileLevel",
     "FileSpecies",
     "FileUrl",
-    "Filename",
     "NGSLibraryLayout",
     "NGSLibrarySourceMaterial",
     "NGSLibrarySourceMolecule",
