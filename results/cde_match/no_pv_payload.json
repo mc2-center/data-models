@@ -1,0 +1,1002 @@
+[
+  {
+    "entity": "Biospecimen Age at Collection Unit",
+    "entityUserTip": "Unit associated with age at the time the biospecimen was collected."
+  },
+  {
+    "entity": "Biospecimen Tumor Subtype",
+    "entityUserTip": "The subtype related to the scientific determination and investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms of tissue growth resulting from uncontrolled cell proliferation."
+  },
+  {
+    "entity": "Biospecimen Timepoint Type",
+    "entityUserTip": "Label to identify an event associated with the collection of the biospecimen (e.g. Baseline, End of Treatment, Overall survival, Final). Use Biospecimen Timepoint Offset to indicate the number of post-event days that elapsed before the biospecimen was collected. NO PHI/PII INFORMATION IS ALLOWED."
+  },
+  {
+    "entity": "Biospecimen Collection Site",
+    "entityUserTip": "The health care site at which the biospecimen sample was collected."
+  },
+  {
+    "entity": "Biospecimen Timepoint Offset",
+    "entityUserTip": "The number of days that elapsed before the biospecimen was collected, relative to the event described by Biospecimen Timepoint Type. Floating point values are allowed."
+  },
+  {
+    "entity": "Consortium Name",
+    "entityUserTip": "Machine readable name of the research consortium. (e.g. sage_bionetworks, csbc_pson, etc.)"
+  },
+  {
+    "entity": "Consortium Display Name",
+    "entityUserTip": "Human readable display name of research consortium (e.g. Sage Bionetworks, CSBC, PS-ON, etc.)"
+  },
+  {
+    "entity": "Consortium Full Name",
+    "entityUserTip": "Full name of research consortium. (e.g. Cancer Systems Biology Consortium)."
+  },
+  {
+    "entity": "Consortium Description",
+    "entityUserTip": "Description of research consortium"
+  },
+  {
+    "entity": "Website",
+    "entityUserTip": "Website of research consortium"
+  },
+  {
+    "entity": "community",
+    "entityUserTip": "The Sage Bionetworks project or initiative with which the dataset is associated."
+  },
+  {
+    "entity": "description",
+    "entityUserTip": "A text description of the dataset. Can be identifical to Dataset Description."
+  },
+  {
+    "entity": "individuals",
+    "entityUserTip": "The number of participants or samples associated with the files in the dataset. Can be identical to Study Number of Participants or DSP Number of Participants"
+  },
+  {
+    "entity": "link",
+    "entityUserTip": "The url where the dataset is displayed, typically on a public-facing data portal. Can be identical to Dataset Url."
+  },
+  {
+    "entity": "croissant_s3_file_object",
+    "entityUserTip": "A Synapse url where the croissant file associated with this dataset is stored."
+  },
+  {
+    "entity": "alternateName",
+    "entityUserTip": "An altername name that can be used for search and discovery improvement."
+  },
+  {
+    "entity": "conditionsOfAccess",
+    "entityUserTip": "Additional requirements a user may need outside of Data Use Modifiers. This could include additional registration, updating profile information, joining a Synapse Team, or using specific authentication methods like 2FA or RAS. Omit property if not applicable/unknown."
+  },
+  {
+    "entity": "creator",
+    "entityUserTip": "Organization or person that is creator of the dataset. Default is the PI of the project and/or the user who created all files in the dataset."
+  },
+  {
+    "entity": "datePublished",
+    "entityUserTip": "Date data were published/available on Synapse."
+  },
+  {
+    "entity": "includedInDataCatalog",
+    "entityUserTip": "Link(s) to known data catalog(s) the dataset is included in."
+  },
+  {
+    "entity": "title",
+    "entityUserTip": "The name of the dataset."
+  },
+  {
+    "entity": "citation",
+    "entityUserTip": "Academic articles that are recommended by the data provider to be cited in addition to the dataset doi itself. Can be identical to DatasetView.PublicationView Key."
+  },
+  {
+    "entity": "doi",
+    "entityUserTip": "Digital Object Identifier (DOI) for citation and identification. Can be identical to Dataset Doi"
+  },
+  {
+    "entity": "visualizeDataOn",
+    "entityUserTip": "Links to external visualization platforms."
+  },
+  {
+    "entity": "yearProcessed",
+    "entityUserTip": "Year the data were processed (used with specific series only)."
+  },
+  {
+    "entity": "specimenCount",
+    "entityUserTip": "Number of unique specimens in the dataset. Can be identical to DSP Number of Samples."
+  },
+  {
+    "entity": "series",
+    "entityUserTip": "Data series designation (e.g., NF-OSI Processed Data)."
+  },
+  {
+    "entity": "Dataset Name",
+    "entityUserTip": "Name of the dataset"
+  },
+  {
+    "entity": "Dataset Alias",
+    "entityUserTip": "Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters."
+  },
+  {
+    "entity": "Dataset Description",
+    "entityUserTip": "Description of the dataset."
+  },
+  {
+    "entity": "Dataset Design",
+    "entityUserTip": "The overall design of the dataset."
+  },
+  {
+    "entity": "Dataset Url",
+    "entityUserTip": "The url of where the dataset is stored."
+  },
+  {
+    "entity": "Dataset Doi",
+    "entityUserTip": "The Digital Object Identifier (DOI) associated with the dataset."
+  },
+  {
+    "entity": "Resource Title",
+    "entityUserTip": "Title of the item."
+  },
+  {
+    "entity": "Resource Link",
+    "entityUserTip": "The URL that links to the item."
+  },
+  {
+    "entity": "Resource Doi",
+    "entityUserTip": "The Digital Object Identifier (DOI) associated with the educational resource."
+  },
+  {
+    "entity": "Resource Description",
+    "entityUserTip": "Abstract or summary of the item."
+  },
+  {
+    "entity": "Resource Use Requirements",
+    "entityUserTip": "A list of materials, hardware, software, computing power, and network requirements that the end user would need to satisfy before using the resource, if applicable. Multiple values should be provided as a comma separated list."
+  },
+  {
+    "entity": "Resource Alias",
+    "entityUserTip": "A unique identifier (DOI, Synapse ID) for the item, if it exists."
+  },
+  {
+    "entity": "File Design",
+    "entityUserTip": "The overall design of the dataset or file."
+  },
+  {
+    "entity": "File Longitudinal Group",
+    "entityUserTip": "A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment"
+  },
+  {
+    "entity": "File Longitudinal Time Elapsed Unit",
+    "entityUserTip": "The unit of time associated with Sequential and Total Time Elapsed attributes."
+  },
+  {
+    "entity": "File Longitudinal Sequential Time Elapsed",
+    "entityUserTip": "The time elapsed between collecting the current and previous files in this longitudinal group."
+  },
+  {
+    "entity": "File Longitudinal Total Time Elapsed",
+    "entityUserTip": "The total time elapsed between the first and current files contained this longitudinal group."
+  },
+  {
+    "entity": "File Alias",
+    "entityUserTip": "A string identifier associated with the file. Must be unique. Can be the repository accesssion number (e.g., Synapse ID, GEO identifier such as GSE12345). No Greek Letters or DOIs."
+  },
+  {
+    "entity": "GeoMx Scan name",
+    "entityUserTip": "GeoMx Scan name (as appears in Segment Summary)"
+  },
+  {
+    "entity": "GeoMx ROI X Coordinate",
+    "entityUserTip": "Region of Interest X location within the image"
+  },
+  {
+    "entity": "GeoMx ROI Y Coordinate",
+    "entityUserTip": "Region of Interest Y location within the image"
+  },
+  {
+    "entity": "GeoMx AOI X Coordinate",
+    "entityUserTip": "Area of Illumination X location within the image"
+  },
+  {
+    "entity": "GeoMx AOI Y Coordinate",
+    "entityUserTip": "Area of Illumination Y location within the image"
+  },
+  {
+    "entity": "GeoMx Scan Height",
+    "entityUserTip": "Height of the scan for GeoMx Analysis"
+  },
+  {
+    "entity": "GeoMx Scan Width",
+    "entityUserTip": "Width of the scan for GeoMx Analysis"
+  },
+  {
+    "entity": "GeoMx Scan Offset X",
+    "entityUserTip": "Offset X of the scan for GeoMx Analysis"
+  },
+  {
+    "entity": "GeoMx Scan Offset Y",
+    "entityUserTip": "Offset Y of the scan for GeoMx Analysis"
+  },
+  {
+    "entity": "GeoMx Binding Density",
+    "entityUserTip": "The binding density as reported by the application"
+  },
+  {
+    "entity": "GeoMx Positive norm factor",
+    "entityUserTip": "The Positive Control Normalization factor calculated using pos-hyb controls"
+  },
+  {
+    "entity": "GeoMx Surface area",
+    "entityUserTip": "Surface area of the ROI in square microns (\u00b5m2)"
+  },
+  {
+    "entity": "GeoMx Nuclei count",
+    "entityUserTip": "Number of nuclei detected in the segment (if applicable)"
+  },
+  {
+    "entity": "GeoMx Slide name",
+    "entityUserTip": "Similar to a Run ID, the slide name indicates the slide a given ROI is linked to (as reported in Segment Summary)."
+  },
+  {
+    "entity": "GeoMx In Situ Negative median",
+    "entityUserTip": "Is the median of all negative control probes for a given segment. A measure of signal to background for each segment."
+  },
+  {
+    "entity": "GeoMx Biological probe median",
+    "entityUserTip": "Is the median count from all probes except the negative control probes. A measure of signal to background for each segment"
+  },
+  {
+    "entity": "GeoMx Negative count mean",
+    "entityUserTip": "The geometric mean of the unique negative probes in a GeoMx panel that do not target mRNA and establish the background count level per segment"
+  },
+  {
+    "entity": "GeoMx No Template Control count",
+    "entityUserTip": "The number of reads detected by the GeoMx probe panel in the control associated with this ROI."
+  },
+  {
+    "entity": "GeoMx Excluded Outlier Probes",
+    "entityUserTip": "The list of probes excluded from analysis."
+  },
+  {
+    "entity": "GeoMx Limit of Quantification",
+    "entityUserTip": "The calculated limit of quantification associated with the segment."
+  },
+  {
+    "entity": "GeoMx Sequencing Saturation",
+    "entityUserTip": "The fraction of reads originating from an already-observed UMI. This is a function of library complexity and sequencing depth. More specifically, this is the fraction of confidently mapped, valid spot-barcode, valid UMI reads that had a non-unique (spot-barcode, UMI, gene)."
+  },
+  {
+    "entity": "GeoMx Tags",
+    "entityUserTip": "The basename(s) or unique identifier(s) for FASTQ, RCC, or DCC file(s) associated with this ROI."
+  },
+  {
+    "entity": "GeoMx Tissue Stain",
+    "entityUserTip": "Text description of the stain, fluorescent reporter, or channel used to select the boundaries of the ROI."
+  },
+  {
+    "entity": "Grant Name",
+    "entityUserTip": "Name of the grant"
+  },
+  {
+    "entity": "Grant Number",
+    "entityUserTip": "Number of the grant (i.e. \"CA------\" format)"
+  },
+  {
+    "entity": "Grant Abstract",
+    "entityUserTip": "Abstract for the grant"
+  },
+  {
+    "entity": "Grant Synapse Team",
+    "entityUserTip": "The Synapse team associated with the grant, created by the MC2 Center"
+  },
+  {
+    "entity": "Grant Synapse Project",
+    "entityUserTip": "The Synapse project associated with the grant, created by the MC2 Center"
+  },
+  {
+    "entity": "Grant Start Date",
+    "entityUserTip": "The start date of the grant YYYY-MM-DD format"
+  },
+  {
+    "entity": "NIH RePORTER Link",
+    "entityUserTip": "Link to the search results for this grant number on the NIH Reporter website"
+  },
+  {
+    "entity": "Duration of Funding",
+    "entityUserTip": "Duration of the funding period, in years"
+  },
+  {
+    "entity": "Embargo End Date",
+    "entityUserTip": "Date at which an embargo on related resources had lifted"
+  },
+  {
+    "entity": "Grant End Date",
+    "entityUserTip": "The end date of the grant YYYY-MM-DD format"
+  },
+  {
+    "entity": "Channel Name",
+    "entityUserTip": "This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin')"
+  },
+  {
+    "entity": "Channel Cycle Number",
+    "entityUserTip": "The cycle # in which the co-listed reagent(s) was(were) used. Integer >= 1 (up to number of cycles)"
+  },
+  {
+    "entity": "Channel Sub-cycle Number",
+    "entityUserTip": "Sub cycle number"
+  },
+  {
+    "entity": "Channel Target Name",
+    "entityUserTip": "Short descriptive name (abbreviation) for this target (antigen)"
+  },
+  {
+    "entity": "Channel Antibody Name",
+    "entityUserTip": "Antibody Name (free text (eg \u201cKeratin\u201d, \u201cCD163\u201d, \u201cDNA\u201d))"
+  },
+  {
+    "entity": "Channel Fluorophore",
+    "entityUserTip": "Fluorescent dye label (eg Alexa Fluor 488)"
+  },
+  {
+    "entity": "Channel Antibody Clone",
+    "entityUserTip": "Clone"
+  },
+  {
+    "entity": "Channel Antibody Lot",
+    "entityUserTip": "Lot number from vendor"
+  },
+  {
+    "entity": "Channel Antibody Vendor",
+    "entityUserTip": "Vendor"
+  },
+  {
+    "entity": "Channel Antibody Catalog Number",
+    "entityUserTip": "Catalog Number"
+  },
+  {
+    "entity": "Channel Excitation Wavelength",
+    "entityUserTip": "Center/peak of the excitation spectrum (nm)"
+  },
+  {
+    "entity": "Channel Emission Wavelength",
+    "entityUserTip": "Center/peak of the emission spectrum (nm)"
+  },
+  {
+    "entity": "Channel Excitation Bandwidth",
+    "entityUserTip": "Nominal width of excitation spectrum (nm)"
+  },
+  {
+    "entity": "Channel Emission Bandwidth",
+    "entityUserTip": "Nominal width of emission spectrum (nm)"
+  },
+  {
+    "entity": "Channel Metal Isotope",
+    "entityUserTip": "Element mass number"
+  },
+  {
+    "entity": "Channel Oligo Barcode Upper Strand",
+    "entityUserTip": "Oligo Barcode - Upper Strand"
+  },
+  {
+    "entity": "Channel Oligo Barcode Lower Strand",
+    "entityUserTip": "Oligo Barcode - Lower Strand"
+  },
+  {
+    "entity": "Channel Probe Dilution Ratio",
+    "entityUserTip": "Dilution (eg 1:1000)"
+  },
+  {
+    "entity": "Channel Probe Concentration",
+    "entityUserTip": "Concentration (eg 10ug/mL)"
+  },
+  {
+    "entity": "Image Protocol Link",
+    "entityUserTip": "Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration,  lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the sample was obtained or generated."
+  },
+  {
+    "entity": "Image Platform Model",
+    "entityUserTip": "The specific model of the instrument used to carry out an imaging experiment."
+  },
+  {
+    "entity": "Image Platform Manufacturer",
+    "entityUserTip": "Producer of the imaging equipment that was used to generate the digital image"
+  },
+  {
+    "entity": "Image Software",
+    "entityUserTip": "The name of the software package that was used to capture, generate, and process the image."
+  },
+  {
+    "entity": "Image Objective",
+    "entityUserTip": "Objective lens identifier"
+  },
+  {
+    "entity": "Image Lense Aperture",
+    "entityUserTip": "The numerical aperture of the lens. Floating point value > 0."
+  },
+  {
+    "entity": "Image Working Distance",
+    "entityUserTip": "The working distance of the lens, expressed as a floating point number. Floating point > 0."
+  },
+  {
+    "entity": "Image FOV Index",
+    "entityUserTip": "Index of FOV (as it pertains to its sequence order). Integer >= 1"
+  },
+  {
+    "entity": "Image FOV Size X",
+    "entityUserTip": "Field of view X dimension. Floating point"
+  },
+  {
+    "entity": "Image FOV Size X Unit",
+    "entityUserTip": "Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)"
+  },
+  {
+    "entity": "Image FOV Size Y",
+    "entityUserTip": "Field  of view Y dimension. Floating point value"
+  },
+  {
+    "entity": "Image FOV Size Y Unit",
+    "entityUserTip": "Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)"
+  },
+  {
+    "entity": "Image Frame Averaging",
+    "entityUserTip": "Number of frames averaged together (if no averaging, set to 1). Integer >= 1"
+  },
+  {
+    "entity": "Image Dimension Order",
+    "entityUserTip": "The order in which the individual planes of data are interleaved."
+  },
+  {
+    "entity": "Image Physical Size X",
+    "entityUserTip": "Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0."
+  },
+  {
+    "entity": "Image Physical Size X Unit",
+    "entityUserTip": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)"
+  },
+  {
+    "entity": "Image Physical Size Y",
+    "entityUserTip": "Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0."
+  },
+  {
+    "entity": "Image Physical Size Y Unit",
+    "entityUserTip": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)"
+  },
+  {
+    "entity": "Image Physical Size Z",
+    "entityUserTip": "Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0."
+  },
+  {
+    "entity": "Image Physical Size Z Unit",
+    "entityUserTip": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)"
+  },
+  {
+    "entity": "Image Plane Count",
+    "entityUserTip": "Number of Z-planes (not to be confused with downsampled \"pyramid\"). Integer >=1"
+  },
+  {
+    "entity": "Image Channel Size",
+    "entityUserTip": "Number of channels. Integer >= 1"
+  },
+  {
+    "entity": "Image Number of Timepoints",
+    "entityUserTip": "Number of time points. Integer >= 1"
+  },
+  {
+    "entity": "Image X Pixels",
+    "entityUserTip": "Size of image: X dimension (in pixels). Integer >= 1"
+  },
+  {
+    "entity": "Image Y Pixels",
+    "entityUserTip": "Size of image: Y dimension (in pixels). Integer >= 1"
+  },
+  {
+    "entity": "Image Z Pixels",
+    "entityUserTip": "Size of image: Z dimension (in pixels). Integer >= 1"
+  },
+  {
+    "entity": "Image Pixel Type",
+    "entityUserTip": "Data type for each pixel value. E.g. \"uint16\""
+  },
+  {
+    "entity": "Image Parameter file",
+    "entityUserTip": "Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis"
+  },
+  {
+    "entity": "Image Number of Objects",
+    "entityUserTip": "The number of objects (eg cells) described"
+  },
+  {
+    "entity": "Image Object Class Description",
+    "entityUserTip": "If Imaging Object Class is \"Other\", please use this field to provide a text description of the imaging object class associated with the segmentation data"
+  },
+  {
+    "entity": "Image Number of Features",
+    "entityUserTip": "The number of features (eg channels) described"
+  },
+  {
+    "entity": "Individual Tumor Subtype",
+    "entityUserTip": "The subtype related to the scientific determination and investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms of tissue growth resulting from uncontrolled cell proliferation."
+  },
+  {
+    "entity": "Individual Days to Last Followup",
+    "entityUserTip": "Number of days between the dates used for index and last follow-up"
+  },
+  {
+    "entity": "Individual Days To Recurrence",
+    "entityUserTip": "Number of days between the date used for index and the date the patient's disease recurred"
+  },
+  {
+    "entity": "Individual Days to Last Known Disease Status",
+    "entityUserTip": "Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days."
+  },
+  {
+    "entity": "Individual Days to Treatment",
+    "entityUserTip": "Number of days between the date used for index and the date the treatment started."
+  },
+  {
+    "entity": "Institution Name",
+    "entityUserTip": "Machine readable name of the institution. (e.g. ArizonaStatUniversity, BostonUniversity, etc.)"
+  },
+  {
+    "entity": "Institution Full Name",
+    "entityUserTip": "Human readable, full name of the institution. (e.g. Arizona State University, Boston University, etc.)"
+  },
+  {
+    "entity": "Institution Alias",
+    "entityUserTip": "Alias of the institution (e.g. ASU, BU, etc.)"
+  },
+  {
+    "entity": "Institution Location City",
+    "entityUserTip": "The City the institution is located in."
+  },
+  {
+    "entity": "Rorid",
+    "entityUserTip": "Unique identifier (ROR ID) of an the institution"
+  },
+  {
+    "entity": "Model Age",
+    "entityUserTip": "The age of the model when used for an experiment (mice, zebrafish, etc.) or model source (cell lines, organoids, etc.)"
+  },
+  {
+    "entity": "Model Age Unit",
+    "entityUserTip": "The unit corresponding to the age provided for this model."
+  },
+  {
+    "entity": "Model Type",
+    "entityUserTip": "The general label used to identify the model type."
+  },
+  {
+    "entity": "Model Method",
+    "entityUserTip": "The term that describes the general method used to create the model."
+  },
+  {
+    "entity": "Model Source",
+    "entityUserTip": "The reference organism from which the model was derived, if applicable. This could be a specific Biospecimen Key, Model Key, mouse type, cell line, or other reference. Provide RRID if available, to link to existing cell line information. Do not use this field to designate an Individual as the source of the model."
+  },
+  {
+    "entity": "Model Acquisition Type",
+    "entityUserTip": "The method by which the model was obtained. If applicable, please provide a link to the supplier of the model source."
+  },
+  {
+    "entity": "Model Graft Source",
+    "entityUserTip": "If the model is an allograft or xenograft, as indicated by Model Type, please provide a unique identifier associated with the source of the graft material (e.g., RRID, Individual Key, Model Key, Biospecimen Key)"
+  },
+  {
+    "entity": "Model Genotype",
+    "entityUserTip": "The relevant genotype information associated with the model, including markers, background, etc."
+  },
+  {
+    "entity": "Model Days to Treatment",
+    "entityUserTip": "Number of days between the date used for index and the date the treatment started."
+  },
+  {
+    "entity": "Name",
+    "entityUserTip": "Name of the individual"
+  },
+  {
+    "entity": "Email",
+    "entityUserTip": "Email address of the individual"
+  },
+  {
+    "entity": "Url",
+    "entityUserTip": "URL, e.g., individual's home page address"
+  },
+  {
+    "entity": "Last Known Institution",
+    "entityUserTip": "Last known institutional affiliation of the individual."
+  },
+  {
+    "entity": "Project Name",
+    "entityUserTip": "Name of the project"
+  },
+  {
+    "entity": "Project Description",
+    "entityUserTip": "Description of the project"
+  },
+  {
+    "entity": "Publication Doi",
+    "entityUserTip": "The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines."
+  },
+  {
+    "entity": "Publication Journal",
+    "entityUserTip": "The name of the periodical publication in which the publication was published."
+  },
+  {
+    "entity": "Pubmed Url",
+    "entityUserTip": "Pubmed URL for the publication"
+  },
+  {
+    "entity": "Publication Title",
+    "entityUserTip": "Title of the publication"
+  },
+  {
+    "entity": "Publication Year",
+    "entityUserTip": "Year of the publication"
+  },
+  {
+    "entity": "Publication Abstract",
+    "entityUserTip": "The abstract of the publication."
+  },
+  {
+    "entity": "NGS Library Preparation Kit Name",
+    "entityUserTip": "Name of Library Preparation Kit. String"
+  },
+  {
+    "entity": "NGS Library Preparation Kit Vendor",
+    "entityUserTip": "Vendor of Library Preparation Kit. String"
+  },
+  {
+    "entity": "NGS Library Preparation Kit Version",
+    "entityUserTip": "Version of Library Preparation Kit. String"
+  },
+  {
+    "entity": "NGS Library Preparation Days from Index",
+    "entityUserTip": "Number of days between sample for assay was received in lab and the libraries were prepared for sequencing [number]. If not applicable please enter 'Not Applicable'"
+  },
+  {
+    "entity": "NGS Sequencing Library Construction Days from Index",
+    "entityUserTip": "Number of days between sample for assay was received in lab and day of sequencing library construction [number]. If not applicable please enter 'Not Applicable'"
+  },
+  {
+    "entity": "NGS Unique Bases",
+    "entityUserTip": "Count of unique basecalls present in the data."
+  },
+  {
+    "entity": "NGS Stitched Reads",
+    "entityUserTip": "Represents consensus from the overlapping sequence of read 1 and 2. This is a % of the aligned reads that were overlapped and consensus confirmed, usually upward of 80% but less in terms of number of reads than aligned reads"
+  },
+  {
+    "entity": "NGS Aligned Reads",
+    "entityUserTip": "Is a sequence that has been aligned to a gene/probe. Typically these reads can number from the hundreds of thousands to tens of millions. In GeoMx alignment is via mapping the RTS ID to a white list of sequences that represent targets."
+  },
+  {
+    "entity": "NGS Deduplicated Reads",
+    "entityUserTip": "Is the replacement of blocks of duplicate data with a Virtual Index Pointer linking the new sub-block to the existing block of data in a duplicate repository. This is used to reduce the amount of space need to store the data."
+  },
+  {
+    "entity": "NGS Trimmed Reads",
+    "entityUserTip": "Number of the reads remaining after trimming has been applied."
+  },
+  {
+    "entity": "NGS MapQ30",
+    "entityUserTip": "Number of reads with Quality >= 30."
+  },
+  {
+    "entity": "NGS Unique Probe Count",
+    "entityUserTip": "Total number of unique probes reported."
+  },
+  {
+    "entity": "NGS Unique Target Count",
+    "entityUserTip": "Total number of unique genes reported."
+  },
+  {
+    "entity": "NGS RNA RIN",
+    "entityUserTip": "A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products. Number"
+  },
+  {
+    "entity": "NGS RNA DV200",
+    "entityUserTip": "Represents the percentage of RNA fragments that are >200 nucleotides in size. Number"
+  },
+  {
+    "entity": "Workflow Type",
+    "entityUserTip": "Type of computational workflow used to generate the file."
+  },
+  {
+    "entity": "Workflow Link",
+    "entityUserTip": "Link to documentation or webpage associated with the computational workflow used to generate the file."
+  },
+  {
+    "entity": "Workflow Parameter Description",
+    "entityUserTip": "Link or text description of flags or options provided to the workflow used to generate the file."
+  },
+  {
+    "entity": "Workflow Version",
+    "entityUserTip": "Major version of the workflow (e.g. Cell Ranger v3.1)"
+  },
+  {
+    "entity": "Genomic Reference URL",
+    "entityUserTip": "Link to human genome sequence; ftp or reference URL will be accepted."
+  },
+  {
+    "entity": "Genome Annotation URL",
+    "entityUserTip": "Link to the human genome annotation (GTF) file; ftp or reference URL will be accepted."
+  },
+  {
+    "entity": "collaborationRequired",
+    "entityUserTip": "If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list."
+  },
+  {
+    "entity": "diseaseSpecificResearch",
+    "entityUserTip": "The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list. MONDO terms can be found here: https://ols.monarchinitiative.org/ontologies/mondo"
+  },
+  {
+    "entity": "institutionSpecificRestriction",
+    "entityUserTip": "Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list. ROR IDs can be found here: https://ror.org/search"
+  },
+  {
+    "entity": "publicationMoratorium",
+    "entityUserTip": "End date of the publication moratorium associated with the access requirement."
+  },
+  {
+    "entity": "researchSpecificRestrictions",
+    "entityUserTip": "Research-specific restrictions associated with the access requirement."
+  },
+  {
+    "entity": "timeLimitOnUse",
+    "entityUserTip": "Time limit on the use of the data associated with the access requirement."
+  },
+  {
+    "entity": "userSpecificRestriction",
+    "entityUserTip": "The user-specific restrictions associated with the access requirement."
+  },
+  {
+    "entity": "populationType",
+    "entityUserTip": "The population studied in the research associated with the access requirement. Equivalent to DUOPlus2"
+  },
+  {
+    "entity": "attribution",
+    "entityUserTip": "The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7."
+  },
+  {
+    "entity": "USE",
+    "entityUserTip": "This data use modifier indicates that use is limited to use by approved users."
+  },
+  {
+    "entity": "COL",
+    "entityUserTip": "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s)."
+  },
+  {
+    "entity": "RST",
+    "entityUserTip": "This data use modifier indicates that use is limited to studies of a certain research type."
+  },
+  {
+    "entity": "TSM",
+    "entityUserTip": "This data use modifier indicates that use is approved for a specific number of months."
+  },
+  {
+    "entity": "MOR",
+    "entityUserTip": "This data use modifier indicates that requestor agrees not to publish results of studies until a specific date."
+  },
+  {
+    "entity": "IST",
+    "entityUserTip": "This data use modifier indicates that use is limited to use within an approved institution."
+  },
+  {
+    "entity": "GSR",
+    "entityUserTip": "This data use modifier indicates that use is limited to within a specific geographic region."
+  },
+  {
+    "entity": "DSR",
+    "entityUserTip": "This data use permission indicates that use is allowed provided it is related to the specified disease."
+  },
+  {
+    "entity": "DUOPlus1",
+    "entityUserTip": "Source geography is relevant to governance decisions."
+  },
+  {
+    "entity": "DUOPlus2",
+    "entityUserTip": "Study population is relevant to governance decisions."
+  },
+  {
+    "entity": "DUOPlus3",
+    "entityUserTip": "Data deidentification is relevant to governance decisions."
+  },
+  {
+    "entity": "DUOPlus4",
+    "entityUserTip": "A data permission designation is associated with the Study."
+  },
+  {
+    "entity": "DUOPlus5",
+    "entityUserTip": "A data tier designation is associated with the Study."
+  },
+  {
+    "entity": "DUOPlus6",
+    "entityUserTip": "A license is associated with the Study."
+  },
+  {
+    "entity": "DUOPlus7",
+    "entityUserTip": "Attribution conditions are associated with this Study."
+  },
+  {
+    "entity": "DSP Dataset Name",
+    "entityUserTip": "Name of the dataset"
+  },
+  {
+    "entity": "DSP Dataset Alias",
+    "entityUserTip": "Alias of the dataset. For Synapse storage, the Synapse id associated with the storage folder should be used. Must be unique."
+  },
+  {
+    "entity": "DSP Number of Files",
+    "entityUserTip": "The number of files that will be uploaded as part of this dataset."
+  },
+  {
+    "entity": "DSP Number of Samples",
+    "entityUserTip": "The number of biospecimens associated with the files included in the dataset"
+  },
+  {
+    "entity": "DSP Number of Participants",
+    "entityUserTip": "The number of individuals or model organisms from which samples were collected to generate the dataset."
+  },
+  {
+    "entity": "DSP Storage Size",
+    "entityUserTip": "The expected total storage space required for the dataset in gigabytes (GB)"
+  },
+  {
+    "entity": "DSP Planned Upload Date",
+    "entityUserTip": "A non-binding, estimated date by which the files are expected to be uploaded to a repository."
+  },
+  {
+    "entity": "DSP Planned Release Date",
+    "entityUserTip": "The projected date that marks the end of any requested or required sharing embargo for the dataset."
+  },
+  {
+    "entity": "DSP Dataset Url",
+    "entityUserTip": "The url where the dataset is or will be stored. For Synapse storage, the Synapse url or doi associated with the dataset storage folder should be used."
+  },
+  {
+    "entity": "DSP IRB Form",
+    "entityUserTip": "The Synapse Id for the executed IRB protocol or exemption document that was uploaded to Synapse. Required if human-derived data was generated for this study and will be uploaded as part of this dataset"
+  },
+  {
+    "entity": "DSP Dataset Description",
+    "entityUserTip": "A text description of the files contained in this dataset."
+  },
+  {
+    "entity": "DSP Dataset Destination",
+    "entityUserTip": "An identifier representing the repository in which this dataset is intended to be held for long term preservation."
+  },
+  {
+    "entity": "Study De-identification Method Description",
+    "entityUserTip": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place."
+  },
+  {
+    "entity": "Study De-identification Method Software",
+    "entityUserTip": "Software that was used to de-identify the data (if used)"
+  },
+  {
+    "entity": "Theme Name",
+    "entityUserTip": "Machine readable name of the research theme. (e.g. compuational_resource, drug_resistance_sensitivity)."
+  },
+  {
+    "entity": "Theme Display Name",
+    "entityUserTip": "Human readable display name of the research theme. (e.g. Computational Resource, Drug Resistance/Sensitivity)"
+  },
+  {
+    "entity": "Theme Description",
+    "entityUserTip": "Description of the research theme."
+  },
+  {
+    "entity": "Tool Cmd",
+    "entityUserTip": "Relevant command, command-line fragment, or option for executing this function/running the tool in this mode."
+  },
+  {
+    "entity": "Tool Date Last Modified",
+    "entityUserTip": "The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information."
+  },
+  {
+    "entity": "Tool Description",
+    "entityUserTip": "Textual description of the tool."
+  },
+  {
+    "entity": "Tool Documentation Note",
+    "entityUserTip": "Comment about the documentation."
+  },
+  {
+    "entity": "Tool Documentation Url",
+    "entityUserTip": "Link to documentation on the web for the tool."
+  },
+  {
+    "entity": "Tool Download Note",
+    "entityUserTip": "Comment about the download."
+  },
+  {
+    "entity": "Tool Download Url",
+    "entityUserTip": "Link to download (or repo providing a download) for the software."
+  },
+  {
+    "entity": "Tool Download Version",
+    "entityUserTip": "Version information (typically a version number) of the software applicable to this download."
+  },
+  {
+    "entity": "Tool Function Note",
+    "entityUserTip": "Concise comment about this function, if not apparent from the software description and EDAM annotations."
+  },
+  {
+    "entity": "Tool Homepage",
+    "entityUserTip": "Homepage of the software, or some URL that best serves this purpose."
+  },
+  {
+    "entity": "Tool Link Note",
+    "entityUserTip": "Comment about the link."
+  },
+  {
+    "entity": "Tool Link Url",
+    "entityUserTip": "A link of some relevance to the software (URL)."
+  },
+  {
+    "entity": "Tool Name",
+    "entityUserTip": "Canonical tool name provided by the tool developer or service provider."
+  },
+  {
+    "entity": "Tool Release Date",
+    "entityUserTip": "The release date of a product or product model. This can be used to distinguish the exact variant of a product."
+  },
+  {
+    "entity": "Tool Version",
+    "entityUserTip": "Version information (typically a version number) of the software applicable to this entry."
+  },
+  {
+    "entity": "Tool Doi",
+    "entityUserTip": "The Digital Object Identifier (DOI) associated with the computational tool."
+  },
+  {
+    "entity": "10x Visium RNA Level 1",
+    "entityUserTip": "Files contain raw RNA-seq data associated with spot/slide data."
+  },
+  {
+    "entity": "Visium Permeabilization Time",
+    "entityUserTip": "Fixed and stained tissue sections are permeabilized for different times. Each Capture Area captures polyadenylated mRNA from the attached tissue section. Measure is provided in minutes."
+  },
+  {
+    "entity": "Visium UMI Tag",
+    "entityUserTip": "SAM tag for the UMI field; please provide a valid tag-type pair, consisting of a tag (e.g. UB or UR) and type (e.g. Z) separated by a colon."
+  },
+  {
+    "entity": "Visium Whitelist Spatial Barcode File Link",
+    "entityUserTip": "Link to file listing all possible spatial barcodes. URL"
+  },
+  {
+    "entity": "Visium Spatial Barcode Tag",
+    "entityUserTip": "SAM tag for spot barcode field; please provide a valid tag-type pair, consisting of a tag (e.g. CB or CR) and type (e.g. Z) separated by a colon."
+  },
+  {
+    "entity": "Visium Spots under tissue",
+    "entityUserTip": "The number of barcodes associated with a spot under tissue."
+  },
+  {
+    "entity": "Visium Mean Reads per Spatial Spot",
+    "entityUserTip": "The number of reads, both under and outside of tissue, divided by the number of barcodes associated with a spot under tissue."
+  },
+  {
+    "entity": "Visium Median Number Genes per Spatial Spot",
+    "entityUserTip": "The median number of genes detected per spot under tissue-associated barcode. Detection is defined as the presence of at least 1 UMI count."
+  },
+  {
+    "entity": "Visium Proportion Reads Mapped",
+    "entityUserTip": "Proportion of mapped reads collected from samtools. Number"
+  },
+  {
+    "entity": "Visium Proportion Reads Mapped to Transcriptome",
+    "entityUserTip": "Fraction of reads that mapped to a unique gene in the transcriptome. The read must be consistent with annotated splice junctions. These reads are considered for UMI counting."
+  },
+  {
+    "entity": "Visium Median UMI Counts per Spot",
+    "entityUserTip": "The median number of UMI counts per tissue covered spot."
+  },
+  {
+    "entity": "Visium Workflow Type",
+    "entityUserTip": "Generic name for the workflow used to analyze the visium data set."
+  },
+  {
+    "entity": "Visium Workflow Parameters Description",
+    "entityUserTip": "Parameters used to run the workflow."
+  }
+]
