@@ -1,7 +1,7 @@
 {
-  "$id": "http://example.com/ImagingLevel3Image",
+  "$id": "http://example.com/ImagingLevel4",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Quality controlled or co-registered image data",
+  "description": "Derived imaging data or object by feature array",
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
@@ -598,235 +598,66 @@
       "title": "Filename",
       "type": "string"
     },
-    "ImageAssayType": {
-      "description": "Type of imaging assay",
+    "ImageNumberofFeatures": {
+      "description": "The number of features (eg channels) described",
+      "title": "Image Number of Features",
+      "type": "number"
+    },
+    "ImageNumberofObjects": {
+      "description": "The number of objects (eg cells) described",
+      "title": "Image Number of Objects",
+      "type": "number"
+    },
+    "ImageObjectClass": {
+      "description": "Defines the structure that the mask delineates",
       "enum": [
-        "CODEX",
-        "CyCIF",
-        "ExSeq",
-        "GeoMX-DSP",
-        "H&E",
-        "IHC",
-        "IMC",
-        "MERFISH",
-        "MIBI",
-        "MIHC",
-        "MxIF",
-        "NotApplicable",
-        "SABER",
-        "T-CyCIF"
-      ],
-      "title": "Image Assay Type"
-    },
-    "ImageChannelSize": {
-      "description": "Number of channels. Integer >= 1",
-      "title": "Image Channel Size",
-      "type": "number"
-    },
-    "ImageDimensionOrder": {
-      "description": "The order in which the individual planes of data are interleaved.",
-      "title": "Image Dimension Order",
-      "type": "string"
-    },
-    "ImageFOVIndex": {
-      "description": "Index of FOV (as it pertains to its sequence order). Integer >= 1",
-      "title": "Image FOV Index",
-      "type": "number"
-    },
-    "ImageFOVSizeX": {
-      "description": "Field of view X dimension. Floating point",
-      "title": "Image FOV Size X",
-      "type": "number"
-    },
-    "ImageFOVSizeXUnit": {
-      "description": "Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image FOV Size X Unit",
-      "type": "string"
-    },
-    "ImageFOVSizeY": {
-      "description": "Field  of view Y dimension. Floating point value",
-      "title": "Image FOV Size Y",
-      "type": "number"
-    },
-    "ImageFOVSizeYUnit": {
-      "description": "Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image FOV Size Y Unit",
-      "type": "string"
-    },
-    "ImageFrameAveraging": {
-      "description": "Number of frames averaged together (if no averaging, set to 1). Integer >= 1",
-      "title": "Image Frame Averaging",
-      "type": "number"
-    },
-    "ImageIdentifier": {
-      "description": "Unique internal image identifier. eg \"Image:0\". (To be extracted from OME-XML)",
-      "title": "Image Identifier",
-      "type": "string"
-    },
-    "ImageImmersionType": {
-      "description": "Immersion medium",
-      "enum": [
-        "Air",
-        "Glycerol",
-        "Multi",
-        "Oil",
+        "Cytoplasm",
+        "Nucleus",
         "Other",
-        "Water"
+        "PlasmaMembrane",
+        "Spot",
+        "WholeCell"
       ],
-      "title": "Image Immersion Type"
+      "title": "Image Object Class"
     },
-    "ImageLenseAperture": {
-      "description": "The numerical aperture of the lens. Floating point value > 0.",
-      "title": "Image Lense Aperture",
-      "type": "number"
-    },
-    "ImageNominalMagnification": {
-      "description": "The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)",
-      "title": "Image Nominal Magnification",
-      "type": "number"
-    },
-    "ImageNumberofTimepoints": {
-      "description": "Number of time points. Integer >= 1",
-      "title": "Image Number of Timepoints",
-      "type": "number"
-    },
-    "ImageObjective": {
-      "description": "Objective lens identifier",
-      "title": "Image Objective",
+    "ImageParameterfile": {
+      "description": "Path in Synapse to a text file listing algorithm version numbers and relevant parameters needed to reproduce the analysis",
+      "title": "Image Parameter file",
       "type": "string"
-    },
-    "ImagePhysicalSizeX": {
-      "description": "Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0.",
-      "title": "Image Physical Size X",
-      "type": "number"
-    },
-    "ImagePhysicalSizeXUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size X Unit",
-      "type": "string"
-    },
-    "ImagePhysicalSizeY": {
-      "description": "Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0.",
-      "title": "Image Physical Size Y",
-      "type": "number"
-    },
-    "ImagePhysicalSizeYUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size Y Unit",
-      "type": "string"
-    },
-    "ImagePhysicalSizeZ": {
-      "description": "Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0.",
-      "title": "Image Physical Size Z",
-      "type": "number"
-    },
-    "ImagePhysicalSizeZUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size Z Unit",
-      "type": "string"
-    },
-    "ImagePixelType": {
-      "description": "Data type for each pixel value. E.g. \"uint16\"",
-      "title": "Image Pixel Type",
-      "type": "string"
-    },
-    "ImagePixelsBigEndian": {
-      "description": "Boolean (True/False)",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Image Pixels BigEndian"
-    },
-    "ImagePlaneCount": {
-      "description": "Number of Z-planes (not to be confused with downsampled \"pyramid\"). Integer >=1",
-      "title": "Image Plane Count",
-      "type": "number"
-    },
-    "ImagePlatformManufacturer": {
-      "description": "Producer of the imaging equipment that was used to generate the digital image",
-      "title": "Image Platform Manufacturer",
-      "type": "string"
-    },
-    "ImagePlatformModel": {
-      "description": "The specific model of the instrument used to carry out an imaging experiment.",
-      "title": "Image Platform Model",
-      "type": "string"
-    },
-    "ImageProtocolLink": {
-      "description": "Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration,  lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the sample was obtained or generated.",
-      "format": "uri",
-      "title": "Image Protocol Link",
-      "type": "string"
-    },
-    "ImagePyramidal": {
-      "description": "Does data file contain pyramid of images",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Image Pyramidal"
     },
     "ImageSoftware": {
       "description": "The name of the software package that was used to capture, generate, and process the image.",
       "title": "Image Software",
       "type": "string"
     },
-    "ImageTimeseries": {
-      "description": "Does data file contain a time-series of images",
-      "title": "Image Timeseries",
-      "type": "boolean"
-    },
-    "ImageWorkingDistance": {
-      "description": "The working distance of the lens, expressed as a floating point number. Floating point > 0.",
-      "title": "Image Working Distance",
-      "type": "number"
-    },
-    "ImageWorkingDistanceUnit": {
-      "description": "The units of the working distance. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+    "ImageSummaryStatistic": {
+      "description": "Function used to summarize object/feature intensity",
       "enum": [
-        "Cm",
-        "Mm",
-        "Nm",
-        "Å",
-        "Μm"
+        "Mean",
+        "Median",
+        "NotSpecified"
       ],
-      "title": "Image Working Distance Unit"
-    },
-    "ImageXPixels": {
-      "description": "Size of image: X dimension (in pixels). Integer >= 1",
-      "title": "Image X Pixels",
-      "type": "number"
-    },
-    "ImageYPixels": {
-      "description": "Size of image: Y dimension (in pixels). Integer >= 1",
-      "title": "Image Y Pixels",
-      "type": "number"
-    },
-    "ImageZPixels": {
-      "description": "Size of image: Z dimension (in pixels). Integer >= 1",
-      "title": "Image Z Pixels",
-      "type": "number"
-    },
-    "ImageZstack": {
-      "description": "Does data file contain a Z-stack of images",
-      "title": "Image Z stack",
-      "type": "boolean"
-    },
-    "ImagingChannelKey": {
-      "description": "Unique ImagingChannel_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
-      "title": "ImagingChannel Key",
-      "type": "string"
+      "title": "Image Summary Statistic"
     },
     "ImagingLevel2Key": {
       "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
       "title": "ImagingLevel2 Key",
       "type": "string"
     },
-    "ImagingLevel3ImageId": {
+    "ImagingLevel3ImageKey": {
+      "description": "Unique ImagingLevel3Image_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "ImagingLevel3Image Key",
+      "type": "string"
+    },
+    "ImagingLevel3SegmentsKey": {
+      "description": "Unique ImagingLevel3Segments_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "ImagingLevel3Segments Key",
+      "type": "string"
+    },
+    "ImagingLevel4Id": {
       "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
       "pattern": "^syn\\d{7,8}$",
-      "title": "ImagingLevel3Image_id",
+      "title": "ImagingLevel4_id",
       "type": "string"
     },
     "StudyKey": {
@@ -842,9 +673,10 @@
     "FileLevel",
     "FileSpecies",
     "FileUrl",
-    "ImageAssayType",
-    "ImagingLevel3ImageId"
+    "ImageNumberofFeatures",
+    "ImageSummaryStatistic",
+    "ImagingLevel4Id"
   ],
-  "title": "ImagingLevel3Image",
+  "title": "ImagingLevel4",
   "type": "object"
 }

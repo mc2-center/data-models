@@ -1,7 +1,7 @@
 {
-  "$id": "http://example.com/ImagingLevel3Image",
+  "$id": "http://example.com/NanoStringGeoMxDSPImaging",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Quality controlled or co-registered image data",
+  "description": "Images acquired by the GeoMx instrument",
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
@@ -598,6 +598,22 @@
       "title": "Filename",
       "type": "string"
     },
+    "GeoMxImagingAOICoordinates": {
+      "description": "Synapse Id(s) of tabular file(s) containing coordinate points for AOIs found in the image; multiple values should be provided as a comma-separated list.",
+      "items": {
+        "type": "string"
+      },
+      "title": "GeoMx Imaging AOI Coordinates",
+      "type": "array"
+    },
+    "GeoMxImagingChannelNames": {
+      "description": "Name(s) of imaging channel(s) associated with the image; multiple values should be provided as a comma-separated list.",
+      "items": {
+        "type": "string"
+      },
+      "title": "GeoMx Imaging Channel Names",
+      "type": "array"
+    },
     "ImageAssayType": {
       "description": "Type of imaging assay",
       "enum": [
@@ -818,15 +834,30 @@
       "title": "ImagingChannel Key",
       "type": "string"
     },
-    "ImagingLevel2Key": {
-      "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
-      "title": "ImagingLevel2 Key",
+    "NanoStringGeoMXROISegmentAnnotationKey": {
+      "description": "Unique NanoStringGeoMXROISegmentAnnotation_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMXROISegmentAnnotation Key",
       "type": "string"
     },
-    "ImagingLevel3ImageId": {
+    "NanoStringGeoMxAuxiliaryFilesKey": {
+      "description": "Unique NanoStringGeoMxAuxiliaryFiles_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMxAuxiliaryFiles Key",
+      "type": "string"
+    },
+    "NanoStringGeoMxDSPImagingId": {
       "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
       "pattern": "^syn\\d{7,8}$",
-      "title": "ImagingLevel3Image_id",
+      "title": "NanoStringGeoMxDSPImaging_id",
+      "type": "string"
+    },
+    "NanoStringGeoMxDSPLevel1Key": {
+      "description": "Unique NanoStringGeoMxDSPLevel1_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMxDSPLevel1 Key",
+      "type": "string"
+    },
+    "NanoStringGeoMxDSPLevel2Key": {
+      "description": "Unique NanoStringGeoMxDSPLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMxDSPLevel2 Key",
       "type": "string"
     },
     "StudyKey": {
@@ -843,8 +874,8 @@
     "FileSpecies",
     "FileUrl",
     "ImageAssayType",
-    "ImagingLevel3ImageId"
+    "NanoStringGeoMxDSPImagingId"
   ],
-  "title": "ImagingLevel3Image",
+  "title": "NanoStringGeoMxDSPImaging",
   "type": "object"
 }
