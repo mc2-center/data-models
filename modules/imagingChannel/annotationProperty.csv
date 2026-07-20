@@ -1,27 +1,27 @@
-"Attribute","Description","Valid Values","DependsOn","Required","Properties","Validation Rules","columnType","Format","Pattern","Minimum","Maximum","IsTemplate","Source","Ontology Identifier","Ontology Url"
-"Imaging Channel","Channel-level Metadata Attributes","","ImagingChannel_id, Study Key, Channel Identifier, Channel Name, Channel Passed QC, Channel Cycle Number, Channel Sub-cycle Number, Channel Antibody Role, Channel Target Name, Channel Antibody Name, Channel Resource ID, Channel Fluorophore, Channel Antibody Clone, Channel Antibody Lot, Channel Antibody Vendor, Channel Antibody Catalog Number, Channel Excitation Wavelength, Channel Emission Wavelength, Channel Excitation Bandwidth, Channel Emission Bandwidth, Channel Metal Symbol, Channel Metal Isotope, Channel Oligo Barcode Upper Strand, Channel Oligo Barcode Lower Strand, Channel Probe Dilution Ratio, Channel Probe Concentration","","","","","","","","","True","","NCIT:C17369","http://purl.obolibrary.org/obo/NCIT_C17369"
-"ImagingChannel_id","Unique row identifier, used as a primary key for record updates.","","","True","primary_key","","string","","","","","","","NCIT:C49189","http://purl.obolibrary.org/obo/NCIT_C49189"
-"Channel Identifier","This must match the corresponding field in the OME-XML / TIFF header. (eg 'Channel:0:1')","","","True","","","string","","","","","","","NCIT:C25364","http://purl.obolibrary.org/obo/NCIT_C25364"
-"Channel Name","This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin')","","","True","","","string","","","","","","","NCIT:C42614","http://purl.obolibrary.org/obo/NCIT_C42614"
-"Channel Passed QC","Identify stains that did not pass QC but are included in the dataset.","Yes, No - Channel Failed QC","","","","","string","","","","","","","",""
-"Channel Cycle Number","The cycle # in which the co-listed reagent(s) was(were) used. Integer >= 1 (up to number of cycles)","","","","","","number","","","","","","","",""
-"Channel Sub-cycle Number","Sub cycle number","","","","","","number","","","","","","","",""
-"Channel Antibody Role","Is this antibody acting as a primary or secondary antibody?","Primary, Secondary","","","","","string","","","","","","","",""
-"Channel Target Name","Short descriptive name (abbreviation) for this target (antigen)","","","True","","","string","","","","","","","",""
-"Channel Antibody Name","Antibody Name (free text (eg “Keratin”, “CD163”, “DNA”))","","","","CDE:2004006","","string","","","","","","","NCIT:C178970","http://purl.obolibrary.org/obo/NCIT_C178970"
-"Channel Resource ID","Research Resource Identifier (eg “RRID: AB_394606”)","","","","","","string","","","","","","","NCIT:C224810","http://purl.obolibrary.org/obo/NCIT_C224810"
-"Channel Fluorophore","Fluorescent dye label (eg Alexa Fluor 488)","","","","","","string","","","","","","","NCIT:C503","http://purl.obolibrary.org/obo/NCIT_C503"
-"Channel Antibody Clone","Clone","","","","CDE:14767258","","string","","","","","","","",""
-"Channel Antibody Lot","Lot number from vendor","","","","CDE:6390920","","string","","","","","","","NCIT:C112406","http://purl.obolibrary.org/obo/NCIT_C112406"
-"Channel Antibody Vendor","Vendor","","","","CDE:2866141","","string","","","","","","","NCIT:C25392","http://purl.obolibrary.org/obo/NCIT_C25392"
-"Channel Antibody Catalog Number","Catalog Number","","","","CDE:2192897","","string","","","","","","","NCIT:C99286","http://purl.obolibrary.org/obo/NCIT_C99286"
-"Channel Excitation Wavelength","Center/peak of the excitation spectrum (nm)","","","","","","number","","","","","","","NCIT:C204095","http://purl.obolibrary.org/obo/NCIT_C204095"
-"Channel Emission Wavelength","Center/peak of the emission spectrum (nm)","","","","","","number","","","","","","","NCIT:C204101","http://purl.obolibrary.org/obo/NCIT_C204101"
-"Channel Excitation Bandwidth","Nominal width of excitation spectrum (nm)","","","","","","number","","","","","","","",""
-"Channel Emission Bandwidth","Nominal width of emission spectrum (nm)","","","","","","number","","","","","","","",""
-"Channel Metal Symbol","Element abbreviation. eg “La” or “Nd”","H, He, Li, Be, B, C, N, O, F, Ne, Na, Mg, Al, Si, P, S, Cl, Ar, K, Ca, Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn, Ga, Ge, As, Se, Br, Kr, Rb, Sr, Y, Zr, Nb, Mo, Tc, Ru, Rh, Pd, Ag, Cd, In, Sn, Sb, Te, I, Xe, Cs, Ba, La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu, Hf, Ta, W, Re, Os, Ir, Pt, Au, Hg, Tl, Pb, Bi, Po, At, Rn, Fr, Ra, Ac, Th, Pa, U, Np, Pu, Am, Bk, Cf, Es, Fm, Md, No, Lr, Rf, Db, Sg, Bh, Hs, Mt, Ds, Rg, Cn, Nh, Fl, Mc, Lv, Ts, Og","","","","","string","","","","","","","NCIT:C1940","http://purl.obolibrary.org/obo/NCIT_C1940"
-"Channel Metal Isotope","Element mass number","","","","","","number","","","","","","","NCIT:C47933","http://purl.obolibrary.org/obo/NCIT_C47933"
-"Channel Oligo Barcode Upper Strand","Oligo Barcode - Upper Strand","","","","","","string","","","","","","","",""
-"Channel Oligo Barcode Lower Strand","Oligo Barcode - Lower Strand","","","","","","string","","","","","","","",""
-"Channel Probe Dilution Ratio","Dilution (eg 1:1000)","","","","","","string","","","","","","","",""
-"Channel Probe Concentration","Concentration (eg 10ug/mL)","","","","","","string","","","","","","","",""
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
+Imaging Channel,Channel-level Metadata Attributes,,"ImagingChannel_id, Study Key, Channel Identifier, Channel Name, Channel Passed QC, Channel Cycle Number, Channel Sub-cycle Number, Channel Antibody Role, Channel Target Name, Channel Antibody Name, Channel Resource ID, Channel Fluorophore, Channel Antibody Clone, Channel Antibody Lot, Channel Antibody Vendor, Channel Antibody Catalog Number, Channel Excitation Wavelength, Channel Emission Wavelength, Channel Excitation Bandwidth, Channel Emission Bandwidth, Channel Metal Symbol, Channel Metal Isotope, Channel Oligo Barcode Upper Strand, Channel Oligo Barcode Lower Strand, Channel Probe Dilution Ratio, Channel Probe Concentration",,,,,,,,,True,
+ImagingChannel_id,"Unique row identifier, used as a primary key for record updates.",,,True,primary_key,,string,,,,,,
+Channel Identifier,This must match the corresponding field in the OME-XML / TIFF header. (eg 'Channel:0:1'),,,True,,,string,,,,,,
+Channel Name,This must match the corresponding field in the OME-XML / TIFF header. (eg 'Blue' or 'CD45' or 'E-cadherin'),,,True,,,string,,,,,,
+Channel Passed QC,Identify stains that did not pass QC but are included in the dataset.,"Yes, No - Channel Failed QC",,,,,string,,,,,,
+Channel Cycle Number,The cycle # in which the co-listed reagent(s) was(were) used. Integer >= 1 (up to number of cycles),,,,,,number,,,,,,
+Channel Sub-cycle Number,Sub cycle number,,,,,,number,,,,,,
+Channel Antibody Role,Is this antibody acting as a primary or secondary antibody?,"Primary, Secondary",,,,,string,,,,,,
+Channel Target Name,Short descriptive name (abbreviation) for this target (antigen),,,True,,,string,,,,,,
+Channel Antibody Name,"Antibody Name (free text (eg “Keratin”, “CD163”, “DNA”))",,,,,,string,,,,,,
+Channel Resource ID,Research Resource Identifier (eg “RRID: AB_394606”),,,,,,string,,,,,,
+Channel Fluorophore,Fluorescent dye label (eg Alexa Fluor 488),,,,,,string,,,,,,
+Channel Antibody Clone,Clone,,,,,,string,,,,,,
+Channel Antibody Lot,Lot number from vendor,,,,,,string,,,,,,
+Channel Antibody Vendor,Vendor,,,,,,string,,,,,,
+Channel Antibody Catalog Number,Catalog Number,,,,,,string,,,,,,
+Channel Excitation Wavelength,Center/peak of the excitation spectrum (nm),,,,,,number,,,,,,
+Channel Emission Wavelength,Center/peak of the emission spectrum (nm),,,,,,number,,,,,,
+Channel Excitation Bandwidth,Nominal width of excitation spectrum (nm),,,,,,number,,,,,,
+Channel Emission Bandwidth,Nominal width of emission spectrum (nm),,,,,,number,,,,,,
+Channel Metal Symbol,Element abbreviation. eg “La” or “Nd”,"H, He, Li, Be, B, C, N, O, F, Ne, Na, Mg, Al, Si, P, S, Cl, Ar, K, Ca, Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn, Ga, Ge, As, Se, Br, Kr, Rb, Sr, Y, Zr, Nb, Mo, Tc, Ru, Rh, Pd, Ag, Cd, In, Sn, Sb, Te, I, Xe, Cs, Ba, La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu, Hf, Ta, W, Re, Os, Ir, Pt, Au, Hg, Tl, Pb, Bi, Po, At, Rn, Fr, Ra, Ac, Th, Pa, U, Np, Pu, Am, Bk, Cf, Es, Fm, Md, No, Lr, Rf, Db, Sg, Bh, Hs, Mt, Ds, Rg, Cn, Nh, Fl, Mc, Lv, Ts, Og",,,,,string,,,,,,
+Channel Metal Isotope,Element mass number,,,,,,number,,,,,,
+Channel Oligo Barcode Upper Strand,Oligo Barcode - Upper Strand,,,,,,string,,,,,,
+Channel Oligo Barcode Lower Strand,Oligo Barcode - Lower Strand,,,,,,string,,,,,,
+Channel Probe Dilution Ratio,Dilution (eg 1:1000),,,,,,string,,,,,,
+Channel Probe Concentration,Concentration (eg 10ug/mL),,,,,,string,,,,,,

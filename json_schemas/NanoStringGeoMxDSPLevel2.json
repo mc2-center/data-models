@@ -1,7 +1,7 @@
 {
-  "$id": "http://example.com/ImagingLevel3Image",
+  "$id": "http://example.com/NanoStringGeoMxDSPLevel2",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Quality controlled or co-registered image data",
+  "description": "Processed count conversion (DCC/RCC) files from GeoMX experiments",
   "properties": {
     "BiospecimenKey": {
       "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
@@ -598,235 +598,289 @@
       "title": "Filename",
       "type": "string"
     },
-    "ImageAssayType": {
-      "description": "Type of imaging assay",
+    "GenomicReference": {
+      "description": "Exact version of the human genome reference used in the alignment of reads (e.g. GCF_000001405.39)",
+      "title": "Genomic Reference",
+      "type": "string"
+    },
+    "GeoMxDSPAssayType": {
+      "description": "The assay type which was used for the GeoMx DSP pipeline.",
       "enum": [
-        "CODEX",
-        "CyCIF",
-        "ExSeq",
-        "GeoMX-DSP",
-        "H&E",
-        "IHC",
-        "IMC",
-        "MERFISH",
-        "MIBI",
-        "MIHC",
-        "MxIF",
-        "NotApplicable",
-        "SABER",
-        "T-CyCIF"
+        "ProteinNGS",
+        "ProteinnCounter",
+        "RNANGS",
+        "RNAnCounter"
       ],
-      "title": "Image Assay Type"
+      "title": "GeoMx DSP Assay Type"
     },
-    "ImageChannelSize": {
-      "description": "Number of channels. Integer >= 1",
-      "title": "Image Channel Size",
+    "NGSAlignedReads": {
+      "description": "Is a sequence that has been aligned to a gene/probe. Typically these reads can number from the hundreds of thousands to tens of millions. In GeoMx alignment is via mapping the RTS ID to a white list of sequences that represent targets.",
+      "title": "NGS Aligned Reads",
       "type": "number"
     },
-    "ImageDimensionOrder": {
-      "description": "The order in which the individual planes of data are interleaved.",
-      "title": "Image Dimension Order",
-      "type": "string"
-    },
-    "ImageFOVIndex": {
-      "description": "Index of FOV (as it pertains to its sequence order). Integer >= 1",
-      "title": "Image FOV Index",
+    "NGSDeduplicatedReads": {
+      "description": "Is the replacement of blocks of duplicate data with a Virtual Index Pointer linking the new sub-block to the existing block of data in a duplicate repository. This is used to reduce the amount of space need to store the data.",
+      "title": "NGS Deduplicated Reads",
       "type": "number"
     },
-    "ImageFOVSizeX": {
-      "description": "Field of view X dimension. Floating point",
-      "title": "Image FOV Size X",
-      "type": "number"
-    },
-    "ImageFOVSizeXUnit": {
-      "description": "Field of view X dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image FOV Size X Unit",
-      "type": "string"
-    },
-    "ImageFOVSizeY": {
-      "description": "Field  of view Y dimension. Floating point value",
-      "title": "Image FOV Size Y",
-      "type": "number"
-    },
-    "ImageFOVSizeYUnit": {
-      "description": "Field of view Y dimension units. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image FOV Size Y Unit",
-      "type": "string"
-    },
-    "ImageFrameAveraging": {
-      "description": "Number of frames averaged together (if no averaging, set to 1). Integer >= 1",
-      "title": "Image Frame Averaging",
-      "type": "number"
-    },
-    "ImageIdentifier": {
-      "description": "Unique internal image identifier. eg \"Image:0\". (To be extracted from OME-XML)",
-      "title": "Image Identifier",
-      "type": "string"
-    },
-    "ImageImmersionType": {
-      "description": "Immersion medium",
+    "NGSLibraryLayout": {
+      "description": "Text description of the library layout, one of Paired-end or Single.",
       "enum": [
-        "Air",
-        "Glycerol",
-        "Multi",
-        "Oil",
+        "Paired-end",
+        "Single-indexed"
+      ],
+      "title": "NGS Library Layout"
+    },
+    "NGSLibrarySelectionMethod": {
+      "description": "How nucleic acid molecules are isolated.",
+      "enum": [
+        "5-methylcytidineantibody",
+        "AffinityEnrichment",
+        "CAGE",
+        "CDNA",
+        "CDNAoligoDT",
+        "CDNArandompriming",
+        "CF-H",
+        "CF-M",
+        "CF-S",
+        "CF-T",
+        "ChIP",
+        "DNAse",
+        "HMPR",
+        "HybridSelection",
+        "InverserRNA",
+        "MBD2proteinmethyl-CpGbindingdomain",
+        "MDA",
+        "MF",
+        "MNase",
+        "MSLL",
+        "MiRNASizeFractionation",
+        "Notapplicable",
+        "Oligo-dT",
         "Other",
-        "Water"
+        "PCR",
+        "Padlockprobescapturemethod",
+        "Poly-TEnrichment",
+        "PolyA",
+        "RACE",
+        "RRNADepletion",
+        "RT-PCR",
+        "Random",
+        "RandomPCR",
+        "ReducedRepresentation",
+        "Repeatfractionation",
+        "RestrictionDigest",
+        "Sizefractionation",
+        "Unspecified"
       ],
-      "title": "Image Immersion Type"
+      "title": "NGS Library Selection Method"
     },
-    "ImageLenseAperture": {
-      "description": "The numerical aperture of the lens. Floating point value > 0.",
-      "title": "Image Lense Aperture",
-      "type": "number"
-    },
-    "ImageNominalMagnification": {
-      "description": "The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)",
-      "title": "Image Nominal Magnification",
-      "type": "number"
-    },
-    "ImageNumberofTimepoints": {
-      "description": "Number of time points. Integer >= 1",
-      "title": "Image Number of Timepoints",
-      "type": "number"
-    },
-    "ImageObjective": {
-      "description": "Objective lens identifier",
-      "title": "Image Objective",
-      "type": "string"
-    },
-    "ImagePhysicalSizeX": {
-      "description": "Physical size (X-dimension) of a pixel. Units are set by PhysicalSizeXUnit. Floating point value > 0.",
-      "title": "Image Physical Size X",
-      "type": "number"
-    },
-    "ImagePhysicalSizeXUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size X Unit",
-      "type": "string"
-    },
-    "ImagePhysicalSizeY": {
-      "description": "Physical size (Y-dimension) of a pixel. Units are set by PhysicalSizeYUnit. Floating point value > 0.",
-      "title": "Image Physical Size Y",
-      "type": "number"
-    },
-    "ImagePhysicalSizeYUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size Y Unit",
-      "type": "string"
-    },
-    "ImagePhysicalSizeZ": {
-      "description": "Physical size (Z-dimension) of a pixel. Units are set by PhysicalSizeZUnit. Floating point value > 0.",
-      "title": "Image Physical Size Z",
-      "type": "number"
-    },
-    "ImagePhysicalSizeZUnit": {
-      "description": "The units of the physical size of a pixel. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
-      "title": "Image Physical Size Z Unit",
-      "type": "string"
-    },
-    "ImagePixelType": {
-      "description": "Data type for each pixel value. E.g. \"uint16\"",
-      "title": "Image Pixel Type",
-      "type": "string"
-    },
-    "ImagePixelsBigEndian": {
-      "description": "Boolean (True/False)",
+    "NGSLibrarySourceMaterial": {
+      "description": "The type of source material being sequenced.",
       "enum": [
-        "False",
-        "True"
+        "BulkCells",
+        "BulkNuclei",
+        "BulkTissue",
+        "NotReported",
+        "Single-cells",
+        "Single-nuclei"
       ],
-      "title": "Image Pixels BigEndian"
+      "title": "NGS Library Source Material"
     },
-    "ImagePlaneCount": {
-      "description": "Number of Z-planes (not to be confused with downsampled \"pyramid\"). Integer >=1",
-      "title": "Image Plane Count",
-      "type": "number"
-    },
-    "ImagePlatformManufacturer": {
-      "description": "Producer of the imaging equipment that was used to generate the digital image",
-      "title": "Image Platform Manufacturer",
-      "type": "string"
-    },
-    "ImagePlatformModel": {
-      "description": "The specific model of the instrument used to carry out an imaging experiment.",
-      "title": "Image Platform Model",
-      "type": "string"
-    },
-    "ImageProtocolLink": {
-      "description": "Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration,  lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the sample was obtained or generated.",
-      "format": "uri",
-      "title": "Image Protocol Link",
-      "type": "string"
-    },
-    "ImagePyramidal": {
-      "description": "Does data file contain pyramid of images",
+    "NGSLibrarySourceMolecule": {
+      "description": "The source of nucleic acids represented in the sequencing library.",
       "enum": [
-        "False",
-        "True"
+        "GenomicDNA",
+        "Metagenomic",
+        "Metatranscriptomic",
+        "NotReported",
+        "Transcriptome",
+        "ViralRNA"
       ],
-      "title": "Image Pyramidal"
+      "title": "NGS Library Source Molecule"
     },
-    "ImageSoftware": {
-      "description": "The name of the software package that was used to capture, generate, and process the image.",
-      "title": "Image Software",
-      "type": "string"
-    },
-    "ImageTimeseries": {
-      "description": "Does data file contain a time-series of images",
-      "title": "Image Timeseries",
-      "type": "boolean"
-    },
-    "ImageWorkingDistance": {
-      "description": "The working distance of the lens, expressed as a floating point number. Floating point > 0.",
-      "title": "Image Working Distance",
-      "type": "number"
-    },
-    "ImageWorkingDistanceUnit": {
-      "description": "The units of the working distance. See OME enumeration of allowed values for the UnitsLength attribute -- default: microns (um)",
+    "NGSLibraryStrategy": {
+      "description": "The assay associated with the nucleic acid library (e.g., RNA-Seq, ChIP-Seq)",
       "enum": [
-        "Cm",
-        "Mm",
-        "Nm",
-        "Å",
-        "Μm"
+        "AMPLICON",
+        "ATAC-seq",
+        "Bisulfite-Seq",
+        "CLONE",
+        "CLONEEND",
+        "CTS",
+        "ChIA-PET",
+        "ChIP-Seq",
+        "DNA-Seq",
+        "DNase-Hypersensitivity",
+        "EST",
+        "FAIRE-seq",
+        "FINISHING",
+        "FL-cDNA",
+        "Hi-C",
+        "MBD-Seq",
+        "MNase-Seq",
+        "MRE-Seq",
+        "MeDIP-Seq",
+        "MiRNA-Seq",
+        "NcRNA-Seq",
+        "Other",
+        "POOLCLONE",
+        "RAD-Seq",
+        "RIP-Seq",
+        "RNA-Seq",
+        "SELEX",
+        "ScMultiome",
+        "SnATAC-Seq",
+        "Spatial-tx",
+        "SsRNA-seq",
+        "Synthetic-Long-Read",
+        "Targeted-Capture",
+        "TetheredChromatinConformationCapture",
+        "Tn-Seq",
+        "WCS",
+        "WGA",
+        "WGS",
+        "WXS"
       ],
-      "title": "Image Working Distance Unit"
+      "title": "NGS Library Strategy"
     },
-    "ImageXPixels": {
-      "description": "Size of image: X dimension (in pixels). Integer >= 1",
-      "title": "Image X Pixels",
+    "NGSMapQ30": {
+      "description": "Number of reads with Quality >= 30.",
+      "title": "NGS MapQ30",
       "type": "number"
     },
-    "ImageYPixels": {
-      "description": "Size of image: Y dimension (in pixels). Integer >= 1",
-      "title": "Image Y Pixels",
+    "NGSRawReads": {
+      "description": "Reads not yet analyzed in any way to be used for data analysis. The number of reads that pass filter from the flow cell represented in the FASTQ file.",
+      "title": "NGS Raw Reads",
       "type": "number"
     },
-    "ImageZPixels": {
-      "description": "Size of image: Z dimension (in pixels). Integer >= 1",
-      "title": "Image Z Pixels",
+    "NGSReadLength": {
+      "description": "The average length of the sequencing reads. Can be integer, null",
+      "title": "NGS Read Length",
       "type": "number"
     },
-    "ImageZstack": {
-      "description": "Does data file contain a Z-stack of images",
-      "title": "Image Z stack",
-      "type": "boolean"
+    "NGSSequencingCoverage": {
+      "description": "Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length)",
+      "title": "NGS Sequencing Coverage",
+      "type": "number"
     },
-    "ImagingChannelKey": {
-      "description": "Unique ImagingChannel_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
-      "title": "ImagingChannel Key",
+    "NGSSequencingDesignDescription": {
+      "description": "Free-form description of the methods used to create the sequencing library; a brief 'materials and methods' section.",
+      "title": "NGS Sequencing Design Description",
       "type": "string"
     },
-    "ImagingLevel2Key": {
-      "description": "Unique ImagingLevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
-      "title": "ImagingLevel2 Key",
+    "NGSSequencingPlatform": {
+      "description": "A platform is an object aggregate that is the set of instruments and software needed to perform a process [OBI_0000050]. Specific model of the sequencing instrument.",
+      "enum": [
+        "454GS",
+        "454GS20",
+        "454GSFLX",
+        "454GSFLX+",
+        "454GSFLXTitanium",
+        "454GSJunior",
+        "AB310GeneticAnalyzer",
+        "AB3130GeneticAnalyzer",
+        "AB3130xLGeneticAnalyzer",
+        "AB3500GeneticAnalyzer",
+        "AB3500xLGeneticAnalyzer",
+        "AB3730GeneticAnalyzer",
+        "AB3730xLGeneticAnalyzer",
+        "AB5500GeneticAnalyzer",
+        "AB5500x-WlGeneticAnalyzer",
+        "AB5500xlGeneticAnalyzer",
+        "ABSOLiD2",
+        "ABSOLiD3",
+        "ABSOLiD3PlusSystem",
+        "ABSOLiD4",
+        "ABSOLiD4hqSystem",
+        "ABSOLiDPISystem",
+        "ABSOLiDSystem",
+        "BGISEQ-500",
+        "CompleteGenomics",
+        "DNBSEQ-G400",
+        "DNBSEQ-G50",
+        "DNBSEQ-T7",
+        "GridION",
+        "HelicosHeliScope",
+        "IlluminaGenomeAnalyzer",
+        "IlluminaGenomeAnalyzerII",
+        "IlluminaGenomeAnalyzerIIx",
+        "IlluminaHiScanSQ",
+        "IlluminaHiSeq1000",
+        "IlluminaHiSeq1500",
+        "IlluminaHiSeq2000",
+        "IlluminaHiSeq2500",
+        "IlluminaHiSeq3000",
+        "IlluminaHiSeq4000",
+        "IlluminaHiSeqXFive",
+        "IlluminaHiSeqXTen",
+        "IlluminaMiSeq",
+        "IlluminaMiniSeq",
+        "IlluminaNextSeq",
+        "IlluminaNextSeq2500",
+        "IlluminaNextSeq500",
+        "IlluminaNextSeq550",
+        "IlluminaNovaSeq",
+        "IlluminaNovaSeq6000",
+        "IlluminaNovaSeqXPlus",
+        "IlluminaiSeq100",
+        "IonTorrentPGM",
+        "IonTorrentProton",
+        "IonTorrentS5",
+        "IonTorrentS5XL",
+        "MGISEQ-2000RS",
+        "MinION",
+        "NotReported",
+        "Other",
+        "PacBioRS",
+        "PacBioRSII",
+        "PacBioSequel",
+        "PacBioSequelII",
+        "PromethION",
+        "UltimaGenomicsUG100",
+        "Unknown"
+      ],
+      "title": "NGS Sequencing Platform"
+    },
+    "NGSStitchedReads": {
+      "description": "Represents consensus from the overlapping sequence of read 1 and 2. This is a % of the aligned reads that were overlapped and consensus confirmed, usually upward of 80% but less in terms of number of reads than aligned reads",
+      "title": "NGS Stitched Reads",
+      "type": "number"
+    },
+    "NGSTrimmedReads": {
+      "description": "Number of the reads remaining after trimming has been applied.",
+      "title": "NGS Trimmed Reads",
+      "type": "number"
+    },
+    "NGSUniqueBases": {
+      "description": "Count of unique basecalls present in the data.",
+      "title": "NGS Unique Bases",
+      "type": "number"
+    },
+    "NanoStringGeoMXROISegmentAnnotationKey": {
+      "description": "Unique NanoStringGeoMXROISegmentAnnotation_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMXROISegmentAnnotation Key",
       "type": "string"
     },
-    "ImagingLevel3ImageId": {
+    "NanoStringGeoMxAuxiliaryFilesKey": {
+      "description": "Unique NanoStringGeoMxAuxiliaryFiles_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMxAuxiliaryFiles Key",
+      "type": "string"
+    },
+    "NanoStringGeoMxDSPLevel1Key": {
+      "description": "Unique NanoStringGeoMxDSPLevel1_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "NanoStringGeoMxDSPLevel1 Key",
+      "type": "string"
+    },
+    "NanoStringGeoMxDSPLevel2Id": {
       "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
       "pattern": "^syn\\d{7,8}$",
-      "title": "ImagingLevel3Image_id",
+      "title": "NanoStringGeoMxDSPLevel2_id",
+      "type": "string"
+    },
+    "SoftwareandVersion": {
+      "description": "Name of software used to generate the information contained in the file. String",
+      "title": "Software and Version",
       "type": "string"
     },
     "StudyKey": {
@@ -842,9 +896,15 @@
     "FileLevel",
     "FileSpecies",
     "FileUrl",
-    "ImageAssayType",
-    "ImagingLevel3ImageId"
+    "NGSLibraryLayout",
+    "NGSLibrarySourceMaterial",
+    "NGSLibrarySourceMolecule",
+    "NGSLibraryStrategy",
+    "NGSReadLength",
+    "NGSSequencingDesignDescription",
+    "NGSSequencingPlatform",
+    "NanoStringGeoMxDSPLevel2Id"
   ],
-  "title": "ImagingLevel3Image",
+  "title": "NanoStringGeoMxDSPLevel2",
   "type": "object"
 }

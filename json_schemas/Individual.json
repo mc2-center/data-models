@@ -97,8 +97,8 @@
       "title": "Individual Gender"
     },
     "IndividualId": {
-      "description": "Unique row identifier, used as a primary key for record updates. This should follow the IND-xxx convention unless otherwise indicated.",
-      "pattern": "^IND-\\d{2,9}$",
+      "description": "Unique row identifier, used as a primary key for record updates. This should follow the GrantNumber-INDxxx convention unless otherwise indicated.",
+      "pattern": "^CA\\d{6}-IND\\d{1,9}$",
       "title": "Individual_id",
       "type": "string"
     },
