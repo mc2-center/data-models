@@ -1,0 +1,12 @@
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+CC0,"Creative Commons Zero license, allowing for the free use of the data.",,,FALSE,,license,,,,,,,,
+CC_BY,"Creative Commons Attribution license, requiring attribution to the original source.",,,FALSE,,license,,,,,,,,
+CC_BY_NC,"Creative Commons Attribution-NonCommercial license, allowing for non-commercial use with attribution.",,,FALSE,,license,,,,,,,,
+CC_BY_ND,"Creative Commons Attribution-NoDerivatives license, allowing for redistribution with attribution but no modifications.",,,FALSE,,license,,,,,,,,
+CC_BY_SA,"Creative Commons Attribution-ShareAlike license, allowing for modifications with attribution and sharing under the same license.",,,FALSE,,license,,,,,,,,
+CC_BY_NC_ND,"Creative Commons Attribution-NonCommercial-NoDerivatives license, allowing for non-commercial use with attribution but no modifications.",,,FALSE,,license,,,,,,,,
+CC_BY_NC_SA,"Creative Commons Attribution-NonCommercial-ShareAlike license, allowing for non-commercial modifications with attribution and sharing under the same license.",,,FALSE,,license,,,,,,,,
+Apache_2,"Apache License 2.0, a permissive license allowing for use, modification, and distribution.",,,FALSE,,license,,,,,,,,
+MIT,"MIT License, a permissive license allowing for use, modification, and distribution.",,,FALSE,,license,,,,,,,,
+GPL_3,"GNU General Public License v3.0, a copyleft license requiring derivative works to be licensed under the same terms.",,,FALSE,,license,,,,,,,,
+BSD_3_Clause,"BSD 3-Clause License, a permissive license allowing for use, modification, and distribution with attribution.",,,FALSE,,license,,,,,,,,

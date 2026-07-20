@@ -1,0 +1,185 @@
+{
+  "$id": "http://example.com/NanoStringGeoMXROISegmentAnnotation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "GeoMx ROI and Segment Metadata Attributes. The assayed biospecimen should be reported one per row with the associated ROI and AOI coordinates.",
+  "properties": {
+    "BiospecimenKey": {
+      "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "-B\\d{1,9}",
+      "title": "Biospecimen Key",
+      "type": "string"
+    },
+    "GeoMxAOIName": {
+      "description": "Name of Area of Illumination corresponding to file. Multiple names should be comma-separated",
+      "items": {
+        "type": "string"
+      },
+      "title": "GeoMx AOI Name",
+      "type": "array"
+    },
+    "GeoMxAOIXCoordinate": {
+      "description": "Area of Illumination X location within the image",
+      "title": "GeoMx AOI X Coordinate",
+      "type": "number"
+    },
+    "GeoMxAOIYCoordinate": {
+      "description": "Area of Illumination Y location within the image",
+      "title": "GeoMx AOI Y Coordinate",
+      "type": "number"
+    },
+    "GeoMxBindingDensity": {
+      "description": "The binding density as reported by the application",
+      "title": "GeoMx Binding Density",
+      "type": "number"
+    },
+    "GeoMxExcludedOutlierProbes": {
+      "description": "The list of probes excluded from analysis.",
+      "title": "GeoMx Excluded Outlier Probes",
+      "type": "number"
+    },
+    "GeoMxLimitofQuantification": {
+      "description": "The calculated limit of quantification associated with the segment.",
+      "title": "GeoMx Limit of Quantification",
+      "type": "number"
+    },
+    "GeoMxNegativecountmean": {
+      "description": "The geometric mean of the unique negative probes in a GeoMx panel that do not target mRNA and establish the background count level per segment",
+      "title": "GeoMx Negative count mean",
+      "type": "number"
+    },
+    "GeoMxNoTemplateControlcount": {
+      "description": "The number of reads detected by the GeoMx probe panel in the control associated with this ROI.",
+      "title": "GeoMx No Template Control count",
+      "type": "number"
+    },
+    "GeoMxNucleicount": {
+      "description": "Number of nuclei detected in the segment (if applicable)",
+      "title": "GeoMx Nuclei count",
+      "type": "number"
+    },
+    "GeoMxPositivenormfactor": {
+      "description": "The Positive Control Normalization factor calculated using pos-hyb controls",
+      "title": "GeoMx Positive norm factor",
+      "type": "number"
+    },
+    "GeoMxQCstatus": {
+      "description": "ROI quality control flag as reported by the application",
+      "items": {
+        "type": "string"
+      },
+      "title": "GeoMx QC status",
+      "type": "array"
+    },
+    "GeoMxROIName": {
+      "description": "Name of Region of Interest corresponding to file. Multiple names should be comma-separated",
+      "items": {
+        "type": "string"
+      },
+      "title": "GeoMx ROI Name",
+      "type": "array"
+    },
+    "GeoMxROIXCoordinate": {
+      "description": "Region of Interest X location within the image",
+      "title": "GeoMx ROI X Coordinate",
+      "type": "number"
+    },
+    "GeoMxROIYCoordinate": {
+      "description": "Region of Interest Y location within the image",
+      "title": "GeoMx ROI Y Coordinate",
+      "type": "number"
+    },
+    "GeoMxScanHeight": {
+      "description": "Height of the scan for GeoMx Analysis",
+      "title": "GeoMx Scan Height",
+      "type": "number"
+    },
+    "GeoMxScanOffsetX": {
+      "description": "Offset X of the scan for GeoMx Analysis",
+      "title": "GeoMx Scan Offset X",
+      "type": "number"
+    },
+    "GeoMxScanOffsetY": {
+      "description": "Offset Y of the scan for GeoMx Analysis",
+      "title": "GeoMx Scan Offset Y",
+      "type": "number"
+    },
+    "GeoMxScanWidth": {
+      "description": "Width of the scan for GeoMx Analysis",
+      "title": "GeoMx Scan Width",
+      "type": "number"
+    },
+    "GeoMxScanname": {
+      "description": "GeoMx Scan name (as appears in Segment Summary)",
+      "title": "GeoMx Scan name",
+      "type": "string"
+    },
+    "GeoMxSlidename": {
+      "description": "Similar to a Run ID, the slide name indicates the slide a given ROI is linked to (as reported in Segment Summary).",
+      "title": "GeoMx Slide name",
+      "type": "string"
+    },
+    "GeoMxSurfacearea": {
+      "description": "Surface area of the ROI in square microns (µm2)",
+      "title": "GeoMx Surface area",
+      "type": "number"
+    },
+    "GeoMxTags": {
+      "description": "The basename(s) or unique identifier(s) for FASTQ, RCC, or DCC file(s) associated with this ROI.",
+      "title": "GeoMx Tags",
+      "type": "string"
+    },
+    "GeoMxTissueStain": {
+      "description": "Text description of the stain, fluorescent reporter, or channel used to select the boundaries of the ROI.",
+      "title": "GeoMx Tissue Stain",
+      "type": "string"
+    },
+    "NGSAlignedReads": {
+      "description": "Is a sequence that has been aligned to a gene/probe. Typically these reads can number from the hundreds of thousands to tens of millions. In GeoMx alignment is via mapping the RTS ID to a white list of sequences that represent targets.",
+      "title": "NGS Aligned Reads",
+      "type": "number"
+    },
+    "NGSDeduplicatedReads": {
+      "description": "Is the replacement of blocks of duplicate data with a Virtual Index Pointer linking the new sub-block to the existing block of data in a duplicate repository. This is used to reduce the amount of space need to store the data.",
+      "title": "NGS Deduplicated Reads",
+      "type": "number"
+    },
+    "NGSMapQ30": {
+      "description": "Number of reads with Quality >= 30.",
+      "title": "NGS MapQ30",
+      "type": "number"
+    },
+    "NGSRawReads": {
+      "description": "Reads not yet analyzed in any way to be used for data analysis. The number of reads that pass filter from the flow cell represented in the FASTQ file.",
+      "title": "NGS Raw Reads",
+      "type": "number"
+    },
+    "NGSSequencingCoverage": {
+      "description": "Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length)",
+      "title": "NGS Sequencing Coverage",
+      "type": "number"
+    },
+    "NGSStitchedReads": {
+      "description": "Represents consensus from the overlapping sequence of read 1 and 2. This is a % of the aligned reads that were overlapped and consensus confirmed, usually upward of 80% but less in terms of number of reads than aligned reads",
+      "title": "NGS Stitched Reads",
+      "type": "number"
+    },
+    "NGSTrimmedReads": {
+      "description": "Number of the reads remaining after trimming has been applied.",
+      "title": "NGS Trimmed Reads",
+      "type": "number"
+    },
+    "NanoStringGeoMXROISegmentAnnotationId": {
+      "description": "Unique row identifier, used as a primary key for record updates",
+      "title": "NanoStringGeoMXROISegmentAnnotation_id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "GeoMxAOIName",
+    "GeoMxROIName",
+    "GeoMxScanname",
+    "NanoStringGeoMXROISegmentAnnotationId"
+  ],
+  "title": "NanoStringGeoMXROISegmentAnnotation",
+  "type": "object"
+}

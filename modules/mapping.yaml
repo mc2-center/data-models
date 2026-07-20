@@ -81,20 +81,16 @@ sharingPlans:
     src: shared/tumorType.csv
   - name: DSP Dataset Level
     src: file/processLevel.csv
-  - name: DSP Data Use Codes
-    src: shared/duo.csv
 
 dataCatalog:
   - name: accessType
     src: shared/dataTier.csv
   - name: countryOfOrigin
     src: shared/sourceGeography.csv
-  - name: dataUseModifiers
-    src: shared/duo.csv
   - name: funder
     src: consortium/consortium_funding_agency.csv
   - name: license
-    src: study/studyLicense.csv
+    src: shared/studyLicense.csv
   - name: measurementTechnique
     src: shared/assay.csv
   - name: species
@@ -311,25 +307,31 @@ sequencingRNALevel1:
     src: sequencingRNALevel1/rtPrimer.csv
 
 shared:
-  - name: Data Use Codes
+  - name: dataUseModifiers
     src: shared/duo.csv
+  - name: geographicalRestriction
+    src: shared/sourceGeography.csv
+  - name: sourceGeography
+    src: shared/sourceGeography.csv
+  - name: deidentificationType
+    src: shared/deIdMethod.csv
+  - name: license
+    src: shared/studyLicense.csv
+  - name: dataPermission
+    src: shared/dataPermission.csv
+  - name: dataTier
+    src: shared/dataTier.csv
 
 study:
-  - name: Study Data Use Codes
-    src: shared/duo.csv
   - name: Study De-identification Method Type
-    src: study/deIdMethod.csv
+    src: shared/deIdMethod.csv
   - name: Study License
-    src: study/studyLicense.csv
+    src: shared/studyLicense.csv
   - name: Study Index Date
     src: study/indexDate.csv
-  - name: Study Source Geography
-    src: shared/sourceGeography.csv
-  - name: Study Data Permission
-    src: study/dataPermission.csv
-  - name: Study Data Tier
-    src: shared/dataTier.csv
-    
+  - name: Study Data Use Codes
+    src: shared/duo.csv
+  
 tool:
   - name: Tool Grant Number
     src: grant/grant_number.csv

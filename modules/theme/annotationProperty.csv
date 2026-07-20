@@ -1,5 +1,5 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,columnType
-Theme,Themes associated with resources derived from consortia activities,,"Component, Theme Name, Theme Display Name, Theme Description",FALSE,,,,,,
-Theme Name,"Machine readable name of the research theme. (e.g. compuational_resource, drug_resistance_sensitivity).",,,TRUE,,Theme,,,str,string
-Theme Display Name,"Human readable display name of the research theme. (e.g. Computational Resource, Drug Resistance/Sensitivity)",,,TRUE,,Theme,,,str,string
-Theme Description,Description of the research theme.,,,TRUE,,Theme,,,str,string
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
+Theme,Themes associated with resources derived from consortia activities,,"Theme Name, Theme Display Name, Theme Description",,,,,,,,,True,
+Theme Name,"Machine readable name of the research theme. (e.g. compuational_resource, drug_resistance_sensitivity).",,,True,,,string,,,,,,
+Theme Display Name,"Human readable display name of the research theme. (e.g. Computational Resource, Drug Resistance/Sensitivity)",,,True,,,string,,,,,,
+Theme Description,Description of the research theme.,,,True,,,string,,,,,,
