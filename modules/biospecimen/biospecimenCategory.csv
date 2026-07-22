@@ -1,4 +1,4 @@
-"﻿Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
 "Analyte","The sample or material being subjected to analysis.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C128639","http://purl.obolibrary.org/obo/NCIT_C128639","C128639",""
 "Ascites","A biospecimen of ascitic fluid.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C159203","http://purl.obolibrary.org/obo/NCIT_C159203","C159203",""
 "Blood","A small volume of blood removed for testing or storage.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C17610","http://purl.obolibrary.org/obo/NCIT_C17610","C17610",""

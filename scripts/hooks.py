@@ -1,4 +1,5 @@
 import json
+import re
 from os.path import getsize, isfile, join
 
 import pandas as pd
@@ -70,12 +71,17 @@ COLS_TO_RENDER = [
     "Attribute",
     "Description",
     "Required",
+    "Key",
+    "CDE",
     "Column Type",
     "Format",
     "Pattern",
     "Standard Terms",
     "Examples",
 ]
+
+# Columns to render for the standard-terms (valid values) tables.
+TERMS_COLS_TO_RENDER = ["Valid Value", "Description", "Nonpreferred Terms", "Ontology Term"]
 
 MAPPING_FILENAME = "mapping.yaml"
 NAVIGATION_FILENAME = "nav.yml"
@@ -84,6 +90,7 @@ SCHEMA_DIR = "json_schemas"
 ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
+TERMS_SUFFIX = ".rendered.csv"
 
 
 # --- Helper Functions ---
@@ -99,6 +106,66 @@ def _format_technical_column(col: pd.Series, escape_backslashes: bool = False) -
     if escape_backslashes:
         col = col.str.replace(r"\\", r"\\\\", regex=True)
     return col.replace("", "_None_")
+
+
+def _extract_key(properties: str) -> str:
+    """Extract the primary/foreign key designation from a Properties cell
+    (e.g. "CDE:12220014, primary_key" -> "Primary Key")."""
+    if "primary_key" in properties:
+        return "Primary Key"
+    if "foreign_key" in properties:
+        return "Foreign Key"
+    return "_None_"
+
+
+def _extract_cde(properties: str) -> str:
+    """Extract the CDE reference from a Properties cell, if any."""
+    match = re.search(r"CDE:\d+", properties)
+    return match.group(0) if match else "_None_"
+
+
+def _ontology_link(identifier: str, url: str) -> str:
+    """Render an ontology term as an HTML link, if a URL is available.
+
+    This table is rendered as raw HTML (tablefmt='html') inside a raw <div>
+    block for the scrollable Standard Terms tables, so markdown link syntax
+    would never get post-processed - it needs to be a real <a> tag already.
+    """
+    identifier = identifier.strip()
+    url = url.strip()
+    if identifier and url:
+        return f'<a href="{url}">{identifier}</a>'
+    return identifier or "None"
+
+
+def _render_terms_csv(src: str) -> str:
+    """Generate a rendered version of a standard-terms CSV with a computed
+    Ontology Term link column, and return its path (relative to the
+    table-reader plugin's data_path, i.e. under modules/).
+
+    Source CV files (e.g. biospecimen/acquisitionMethod.csv) are hand-curated
+    content and are never overwritten; the rendering is written alongside
+    them with a distinct suffix, mirroring the reference.csv convention.
+    """
+    dest = src[: -len(".csv")] + TERMS_SUFFIX if src.endswith(".csv") else src + TERMS_SUFFIX
+    dest_path = join("modules", dest)
+    src_path = join("modules", src)
+
+    terms_df = pd.read_csv(
+        src_path, quoting=1, dtype=str, keep_default_na=False, encoding="utf-8-sig"
+    )
+    terms_df["Ontology Term"] = terms_df.apply(
+        lambda row: _ontology_link(
+            row.get("Ontology Identifier", ""), row.get("Ontology Url", "")
+        ),
+        axis=1,
+    )
+    terms_df["Nonpreferred Terms"] = terms_df.get(
+        "Nonpreferred Terms", pd.Series([""] * len(terms_df))
+    ).replace("", "None")
+    terms_df = terms_df.rename(columns={"Attribute": "Valid Value"})
+    terms_df[TERMS_COLS_TO_RENDER].to_csv(dest_path, index=False)
+    return dest
 
 
 def _get_model_attributes(model: str) -> list:
@@ -181,7 +248,10 @@ def generate_linked_table(model: str):
 
     table = pd.DataFrame({"Attribute": _get_model_attributes(model)})
     table = table.merge(
-        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern"]],
+        model_df[[
+            "Description", "Required", "Valid Values", "Properties",
+            "columnType", "Format", "Pattern",
+        ]],
         left_on="Attribute",
         right_index=True,
         how="left",
@@ -191,6 +261,12 @@ def generate_linked_table(model: str):
     table["Required"] = table["Required"].apply(
         lambda v: "True" if str(v).strip() == "True" else "False"
     )
+
+    # Surface primary/foreign key designations and CDE mappings, both
+    # encoded together in the Properties column (e.g. "CDE:12220014,
+    # primary_key").
+    table["Key"] = table["Properties"].apply(_extract_key)
+    table["CDE"] = table["Properties"].apply(_extract_cde)
 
     # Add the Example column and rename it to Examples, if example data
     # exists for this model. Some newer modules don't yet have curated
@@ -248,6 +324,7 @@ def generate_valid_values_markdown(model: str):
         for attribute in mapping.get(model, {}):
             name = attribute.get("name")
             valid_values_src = attribute.get("src")
+            rendered_src = _render_terms_csv(valid_values_src)
 
             md.write(f"## Attribute: `{name}`\n\n")
             md.write(
@@ -255,8 +332,8 @@ def generate_valid_values_markdown(model: str):
             )
             md.write(
                 "{{ read_csv('"
-                + valid_values_src
-                + "', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}\n\n"
+                + rendered_src
+                + "', keep_default_na=False, tablefmt='unsafehtml') }}\n\n"
             )
             md.write("</div>\n\n\n")
 
