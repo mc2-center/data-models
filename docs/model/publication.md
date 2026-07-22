@@ -48,4 +48,4 @@ The table below includes sample values to demonstrate proper attribute usage.
 
 Below is the full field reference table with attributes and their descriptions.
 
-{{ read_csv('publication/reference.csv') }}
+{{ read_csv('publication/reference.csv', keep_default_na=False) }}

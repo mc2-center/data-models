@@ -1,3 +1,4 @@
+import json
 from os.path import getsize, isfile, join
 
 import pandas as pd
@@ -16,6 +17,52 @@ DATA_MODELS = {
     "publication": "Publication",
     "study": "Study",
     "tool": "Tool",
+    "biospecimen": "Biospecimen",
+    "individual": "Individual",
+    "model": "Model",
+    "imagingChannel": "Imaging Channel",
+    "imagingLevel1": "Imaging Level 1",
+    "imagingLevel2": "Imaging Level 2",
+    "imagingLevel3Image": "Imaging Level 3 (Image)",
+    "imagingLevel3Segments": "Imaging Level 3 (Segments)",
+    "imagingLevel4": "Imaging Level 4",
+    "geomxAux": "NanoString GeoMx Auxiliary Files",
+    "geomxImaging": "NanoString GeoMx Imaging",
+    "geomxLevel1": "NanoString GeoMx Level 1",
+    "geomxLevel2": "NanoString GeoMx Level 2",
+    "geomxLevel3": "NanoString GeoMx Level 3",
+    "geomxRoi": "NanoString GeoMx ROI Segment Annotation",
+    "sequencingLevel1": "Sequencing Level 1",
+    "sequencingLevel2": "Sequencing Level 2",
+    "sequencingLevel3": "Sequencing Level 3",
+    "sequencingRNALevel1": "Sequencing RNA Level 1",
+    "visiumRNAAux": "10x Visium Auxiliary Files",
+    "visiumRNALevel1": "10x Visium RNA Level 1",
+    "visiumRNALevel2": "10x Visium RNA Level 2",
+    "visiumRNALevel3": "10x Visium RNA Level 3",
+    "visiumRNALevel4": "10x Visium RNA Level 4",
+}
+
+# Each model's exported JSON Schema is the authoritative list of which
+# attributes actually belong to its manifest (resolved from DependsOn when
+# the schema was generated) - map module folder -> json_schemas/<name>.json.
+# Only listed where it differs from the module folder name itself.
+SCHEMA_COMPONENT = {
+    "dataset": "DatasetView",
+    "sharingPlans": "DataDSP",
+    "education": "EducationalResource",
+    "file": "FileView",
+    "grant": "GrantView",
+    "person": "PersonView",
+    "publication": "PublicationView",
+    "tool": "ToolView",
+    "geomxAux": "NanoStringGeoMxAuxiliaryFiles",
+    "geomxImaging": "NanoStringGeoMxDSPImaging",
+    "geomxLevel1": "NanoStringGeoMxDSPLevel1",
+    "geomxLevel2": "NanoStringGeoMxDSPLevel2",
+    "geomxLevel3": "NanoStringGeoMxDSPLevel3",
+    "geomxRoi": "NanoStringGeoMXROISegmentAnnotation",
+    "visiumRNAAux": "VisiumAuxiliaryFiles",
 }
 
 # Columns to render for the full field reference tables.
@@ -23,28 +70,89 @@ COLS_TO_RENDER = [
     "Attribute",
     "Description",
     "Required",
-    "Validation Rules",
+    "Column Type",
+    "Format",
+    "Pattern",
+    "Standard Terms",
     "Examples",
 ]
 
 MAPPING_FILENAME = "mapping.yaml"
 NAVIGATION_FILENAME = "nav.yml"
+MODEL_CSV_FILENAME = "mc2.model.csv"
+SCHEMA_DIR = "json_schemas"
 ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
 
 
 # --- Helper Functions ---
-def _create_markdown_link(attribute: str, model: str) -> str:
+def _create_markdown_link(attribute: str, model: str, text: str = None) -> str:
     """Create markdown link to list of valid values for the given attribute."""
     link_prefix = f"../valid_values/{model}.md#attribute"
     slug = attribute.lower().replace(" ", "-")
-    return f"[{attribute}]({link_prefix}-{slug})"
+    return f"[{text or attribute}]({link_prefix}-{slug})"
 
 
-def _format_validation_rules(col: pd.Series) -> pd.Series:
-    """Format validation rules, replacing empty strings with '_None_'."""
-    return col.str.replace(r"\\", r"\\\\", regex=True).replace("", "_None_")
+def _format_technical_column(col: pd.Series, escape_backslashes: bool = False) -> pd.Series:
+    """Format a technical metadata column, replacing empty strings with '_None_'."""
+    if escape_backslashes:
+        col = col.str.replace(r"\\", r"\\\\", regex=True)
+    return col.replace("", "_None_")
+
+
+def _get_model_attributes(model: str) -> list:
+    """Get the ordered list of attribute display names that make up a
+    model's manifest.
+
+    DependsOn (in the module's own annotationProperty.csv) is the live,
+    hand-edited source of truth, but the exported JSON Schema is used to
+    cross-check it, since either can drift independently: DependsOn can
+    gain attributes a schema hasn't been regenerated for yet, while an
+    un-regenerated schema can still list attributes since removed from
+    DependsOn (e.g. Study.json still has ~15 access-requirement fields that
+    were moved out to the governance model but never regenerated away).
+    Attributes must appear in DependsOn; the schema, when available, is
+    used to filter out anything no longer current.
+    """
+    annotations_file = join("modules", model, ANNOTATIONS_FILENAME)
+    annotation_df = pd.read_csv(
+        annotations_file, quoting=1, dtype=str, keep_default_na=False
+    )
+    # The manifest/root row is the one with a non-empty DependsOn - the
+    # only reliable signal (it isn't always the first row, e.g. person's
+    # "Person View" row, and IsTemplate isn't consistently set either,
+    # e.g. visiumRNALevel1's root row).
+    root = annotation_df[annotation_df["DependsOn"].str.strip() != ""].iloc[0]
+    depends_on = [a.strip() for a in root["DependsOn"].split(",") if a.strip()]
+
+    component = SCHEMA_COMPONENT.get(model, model[0].upper() + model[1:])
+    schema_file = join(SCHEMA_DIR, f"{component}.json")
+    if not isfile(schema_file):
+        return depends_on
+
+    with open(schema_file) as f:
+        schema = json.load(f)
+    schema_titles = {prop.get("title", key) for key, prop in schema["properties"].items()}
+    return [a for a in depends_on if a in schema_titles]
+
+
+def _load_attribute_owners() -> dict:
+    """Reverse-lookup: which model's valid-values page a given attribute's
+    standard-terms anchor actually lives on.
+
+    Attributes are often shared across models via DependsOn (e.g. "File
+    Assay" is used by several imaging/sequencing/spatial modules), but its
+    anchor is only ever generated on the one model mapping.yaml lists it
+    under.
+    """
+    with open(join("modules", MAPPING_FILENAME)) as f:
+        mapping = yaml.safe_load(f)
+    return {
+        attribute["name"]: owning_model
+        for owning_model, attributes in mapping.items()
+        for attribute in attributes
+    }
 
 
 # --- Core logic functions ---
@@ -54,55 +162,87 @@ def generate_linked_table(model: str):
     Desired markdown look: render model reference table so that
         - it is known which attributes require valid values
         - clicking on attribute will direct to valid values table
+
+    The attribute list comes from the model's JSON Schema (its DependsOn-
+    resolved manifest), and every attribute's metadata is looked up from the
+    fully collated mc2.model.csv, since attributes referenced via DependsOn
+    (e.g. "Study Key") are often defined in a different module's file than
+    the one requesting them.
     """
     parent = join("modules", model)
-    annotations_file = join(parent, ANNOTATIONS_FILENAME)
     example_file = join(parent, EXAMPLE_FILENAME)
     reference_file = join(parent, REFERENCE_FILENAME)
 
-    # Read both annotation properties and examples
-    annotation_df = pd.read_csv(annotations_file, quoting=1).fillna("")
-    examples_df = pd.read_csv(example_file, quoting=1).fillna("")
+    model_df = (
+        pd.read_csv(MODEL_CSV_FILENAME, quoting=1, dtype=str, keep_default_na=False)
+        .drop_duplicates(subset="Attribute", keep="first")
+        .set_index("Attribute")
+    )
 
-    # First select only the columns we want from annotation_df
-    table = annotation_df[[
-        "Attribute",
-        "Description",
-        "Required",
-        "Validation Rules",
-        "Valid Values",
-    ]]
-
-    # Then add the Example column and rename it to Examples
+    table = pd.DataFrame({"Attribute": _get_model_attributes(model)})
     table = table.merge(
-        examples_df[["Attribute", "Example"]],
-        on="Attribute",
+        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern"]],
+        left_on="Attribute",
+        right_index=True,
         how="left",
-    ).rename(columns={"Example": "Examples"})
+    ).fillna("").rename(columns={"columnType": "Column Type"})
 
-    # If attribute has a list of valid values, create a link.
-    table["Attribute"] = table.apply(
+    # Normalize Required to explicit True/False (rather than blank/NaN).
+    table["Required"] = table["Required"].apply(
+        lambda v: "True" if str(v).strip() == "True" else "False"
+    )
+
+    # Add the Example column and rename it to Examples, if example data
+    # exists for this model. Some newer modules don't yet have curated
+    # examples, in which case the column is left blank.
+    if isfile(example_file):
+        examples_df = pd.read_csv(example_file, quoting=1).fillna("")
+        table = table.merge(
+            examples_df[["Attribute", "Example"]],
+            on="Attribute",
+            how="left",
+        ).rename(columns={"Example": "Examples"})
+    else:
+        table["Examples"] = ""
+    table["Examples"] = table["Examples"].fillna("")
+
+    # If an attribute has a list of standard terms, link to its anchor on
+    # whichever model's valid-values page actually owns it.
+    attribute_owners = _load_attribute_owners()
+    table["Standard Terms"] = table.apply(
         lambda row: (
-            _create_markdown_link(row["Attribute"], model)
+            _create_markdown_link(
+                row["Attribute"], attribute_owners.get(row["Attribute"], model), text="View"
+            )
             if row["Valid Values"]
-            else row["Attribute"]
+            else "None"
         ),
         axis=1,
     )
 
     # Fix any remaining rendering issues, then output table as CSV.
-    table["Validation Rules"] = _format_validation_rules(table["Validation Rules"])
+    table["Column Type"] = _format_technical_column(table["Column Type"])
+    table["Format"] = _format_technical_column(table["Format"])
+    table["Pattern"] = _format_technical_column(table["Pattern"], escape_backslashes=True)
     table[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
 def generate_valid_values_markdown(model: str):
-    """Generate docs page for standard terms of the given data model."""
+    """Generate docs page for standard terms of the given data model.
+
+    Some models have no attributes with a controlled list of standard terms
+    (i.e. no entry in mapping.yaml). Skip writing a page for those, so they
+    don't show up as an empty, un-linked orphan page in the built site.
+    """
     dest_parent_dir = join("docs", "valid_values")
 
-    with open(join("modules", MAPPING_FILENAME)) as f, \
-         open(join(dest_parent_dir, f"{model}.md"), "w") as md:
+    with open(join("modules", MAPPING_FILENAME)) as f:
         mapping = yaml.safe_load(f)
 
+    if not mapping.get(model):
+        return
+
+    with open(join(dest_parent_dir, f"{model}.md"), "w") as md:
         # Create a section in the docs page for each attribute that has a list
         # of standard terms.
         for attribute in mapping.get(model, {}):
