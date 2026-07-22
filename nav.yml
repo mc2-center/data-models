@@ -1,14 +1,45 @@
-Home: 
+Home:
   - index.md
 Data Models:
-  - Dataset Data Model: model/dataset.md
-  - Dataset Sharing Plan: model/DataDSP.md
-  - Education Resource Data Model: model/education.md
-  - File Data Model: model/file.md
-  - Grant Data Model: model/grant.md
-  - Person Data Model: model/person.md
-  - Publication Data Model: model/publication.md
-  - Study Data Model: model/study.md
-  - Tool Data Model: model/tool.md
+  - Sample Data Model:
+      - Biospecimen: model/biospecimen.md
+      - Individual: model/individual.md
+      - Model: model/model.md
+  - Administrative Data Model:
+      - Grant: model/grant.md
+      - Study: model/study.md
+      - Person: model/person.md
+  - Resource Sharing Data Model:
+      - Dataset: model/dataset.md
+      - Dataset Sharing Plan: model/DataDSP.md
+      - Education Resource: model/education.md
+      - File: model/file.md
+      - Publication: model/publication.md
+      - Tool: model/tool.md
+  - Imaging Data Model:
+      - Imaging Channel: model/imagingChannel.md
+      - Imaging Level 1: model/imagingLevel1.md
+      - Imaging Level 2: model/imagingLevel2.md
+      - Imaging Level 3 (Image): model/imagingLevel3Image.md
+      - Imaging Level 3 (Segments): model/imagingLevel3Segments.md
+      - Imaging Level 4: model/imagingLevel4.md
+  - NanoString GeoMx Data Model:
+      - GeoMx Auxiliary Files: model/geomxAux.md
+      - GeoMx Imaging: model/geomxImaging.md
+      - GeoMx Level 1: model/geomxLevel1.md
+      - GeoMx Level 2: model/geomxLevel2.md
+      - GeoMx Level 3: model/geomxLevel3.md
+      - GeoMx ROI Segment Annotation: model/geomxRoi.md
+  - Sequencing Data Model:
+      - Sequencing Level 1: model/sequencingLevel1.md
+      - Sequencing Level 2: model/sequencingLevel2.md
+      - Sequencing Level 3: model/sequencingLevel3.md
+      - Sequencing RNA Level 1: model/sequencingRNALevel1.md
+  - 10x Visium Data Model:
+      - Visium Auxiliary Files: model/visiumRNAAux.md
+      - Visium RNA Level 1: model/visiumRNALevel1.md
+      - Visium RNA Level 2: model/visiumRNALevel2.md
+      - Visium RNA Level 3: model/visiumRNALevel3.md
+      - Visium RNA Level 4: model/visiumRNALevel4.md
 Standard Terms: {}
 Contributing to the Data Model: contributing.md

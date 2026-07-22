@@ -44,14 +44,14 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Study De-identification Method Software | Safe Harbor Privacy Software |
 | Study dbGaP Accession Id | phs000424.v7.p2 |
 | Study License | CC BY-NC 4.0 |
-| Study Data Use Codes | IRB, PUB, HMB |
+| Study Data Use Codes | DUO:0000021, DUO:0000019, DUO:0000006 |
 
 
 ## Full Field Reference
 
 Below is the full field reference table with attributes and their descriptions.
 
-{{ read_csv('study/reference.csv') }}
+{{ read_csv('study/reference.csv', keep_default_na=False) }}
 
 
 ## Test
