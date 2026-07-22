@@ -84,3 +84,12 @@ below for the authoritative per-file list).
 | biospecimen/fixative.csv | Diimidoester | OLS: NCIT "Diimidoester" (exact match) | NCIT:C185112 | High |
 | biospecimen/fixative.csv | Methacarn | Inferred from known histology/chemistry domain knowledge, analogous to sibling "Carnoy's Solution" entry; no OLS match found | None | Medium |
 | biospecimen/fixative.csv | Poloxamer | Inferred from known chemistry domain knowledge; no OLS match found | None | Low |
+
+### Batch 1b - shared/duo.csv (24 terms)
+
+Not an OLS-matching task: the `Attribute` value for each row already *is* a
+DUO ontology ID (e.g. `DUO:0000042`), so Ontology Identifier/Url were filled
+in mechanically (`http://purl.obolibrary.org/obo/DUO_<number>`). All 24
+`DUO:xxxx` rows — High confidence (the ID is definitionally correct, not a
+similarity match). The 7 `DUOPlus1`-`DUOPlus7` rows are MC2-specific
+governance extensions with no real DUO backing and remain unmapped (None).
