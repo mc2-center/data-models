@@ -1,5 +1,5 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-V1,,,,FALSE,,visium,,HTAN,,,,,,
-V2,,,,FALSE,,visium,,HTAN,,,,,,
-V3,,,,FALSE,,visium,,HTAN,,,,,,
-V4,,,,FALSE,,visium,,HTAN,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+V1,"10x Genomics Visium Spatial Gene Expression slide, version 1 (the original, manually placed Visium slide format), with capture areas measuring 6.5mm x 6.5mm containing 4,992 spatially barcoded spots each.",,,FALSE,,visium,,HTAN,,,EFO:0022857,http://www.ebi.ac.uk/efo/EFO_0022857,,
+V2,"10x Genomics Visium slide, version 2, compatible with the Visium CytAssist instrument for automated tissue transfer from a standard glass slide; available with capture areas of 6.5mm x 6.5mm or 11mm x 11mm.",,,FALSE,,visium,,HTAN,,,EFO:0022858,http://www.ebi.ac.uk/efo/EFO_0022858,,
+V3,"A later generation of the 10x Genomics Visium slide, succeeding versions 1 and 2 in this model's slide-version series. 10x Genomics has not published a distinct 'V3' Visium slide specification in public ontology sources, so exact design differences from earlier versions are not documented here.",,,FALSE,,visium,,HTAN,,,,,,
+V4,"The most recent generation of the 10x Genomics Visium slide referenced in this model, succeeding versions 1 through 3. 10x Genomics has not published a distinct 'V4' Visium slide specification in public ontology sources, so exact design differences from earlier versions are not documented here.",,,FALSE,,visium,,HTAN,,,,,,

@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-RNA nCounter,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
-Protein nCounter,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
-Protein NGS,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
-RNA NGS,,,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
+RNA nCounter,"GeoMx Digital Spatial Profiler (DSP) readout method in which oligonucleotide barcodes released from RNA probes hybridized within selected regions of interest are quantified using the NanoString nCounter digital barcode counting platform, without amplification or sequencing.",,,FALSE,,GeoMx DSP Assay Type,,,,,NCIT:C198498,http://purl.obolibrary.org/obo/NCIT_C198498,C198498,
+Protein nCounter,GeoMx Digital Spatial Profiler (DSP) readout method in which oligonucleotide barcodes released from antibody-conjugated protein probes bound within selected regions of interest are quantified using the NanoString nCounter digital barcode counting platform.,,,FALSE,,GeoMx DSP Assay Type,,,,,NCIT:C198498,http://purl.obolibrary.org/obo/NCIT_C198498,C198498,
+Protein NGS,"GeoMx Digital Spatial Profiler (DSP) readout method in which oligonucleotide barcodes released from antibody-conjugated protein probes bound within selected regions of interest are quantified by next-generation sequencing rather than the nCounter platform, enabling higher-plex protein readouts.",,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
+RNA NGS,"GeoMx Digital Spatial Profiler (DSP) readout method in which oligonucleotide barcodes released from RNA probes hybridized within selected regions of interest are quantified by next-generation sequencing rather than the nCounter platform, enabling whole-transcriptome or higher-plex RNA readouts.",,,FALSE,,GeoMx DSP Assay Type,,,,,,,,
