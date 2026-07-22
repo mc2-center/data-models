@@ -1,3 +1,3 @@
-"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
-"Enrollment","","","","FALSE","","File Longitudinal Event Type","","CDS v5.0.4/Image-longitudinal_temporal_event_type","","","","","",""
-"Baseline","A starting point to which things may be compared.","","","FALSE","","File Longitudinal Event Type","","CDS v5.0.4/Image-longitudinal_temporal_event_type","","","NCIT:C25213","http://purl.obolibrary.org/obo/NCIT_C25213","C25213",""
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Enrollment,"The act of registration, entering in a list, catalog, group, study; also, the number of subjects enrolled.",,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image-longitudinal_temporal_event_type,,,NCIT:C37948,http://purl.obolibrary.org/obo/NCIT_C37948,C37948,
+Baseline,A starting point to which things may be compared.,,,FALSE,,File Longitudinal Event Type,,CDS v5.0.4/Image-longitudinal_temporal_event_type,,,NCIT:C25213,http://purl.obolibrary.org/obo/NCIT_C25213,C25213,

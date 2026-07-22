@@ -1,3 +1,3 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-cDNA,,,,FALSE,,Spatial Read,,HTAN,,,,,,
-Spatial Barcode and UMI,,,,FALSE,,Spatial Read,,HTAN,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+cDNA,Single-stranded DNA that is complementary to messenger RNA or DNA that has been synthesized from messenger RNA by reverse transcriptase.,,,FALSE,,Spatial Read,,HTAN,,,NCIT:C324,http://purl.obolibrary.org/obo/NCIT_C324,C324,
+Spatial Barcode and UMI,A sequencing read that contains the spatial barcode and unique molecular identifier (UMI) sequences used to assign reads to their spatial location and de-duplicate transcript counts.,,,FALSE,,Spatial Read,,HTAN,,,,,,
