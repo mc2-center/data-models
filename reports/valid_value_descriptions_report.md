@@ -38,6 +38,19 @@ processed across multiple turns.
 **In scope:** 65 files, ~4,850 missing descriptions (see per-batch tables
 below for the authoritative per-file list).
 
+## Ontology selection
+
+NCIT is the default first choice (it's the most comprehensive single
+ontology for cancer/clinical vocabulary and is what's already used
+throughout this model), but it is not the only valid source. Other
+ontologies are used when they fit better, e.g.: BAO (BioAssay Ontology) for
+antibody roles/assay methods, OBI (Ontology for Biomedical Investigations)
+and FBBI (biological imaging methods) for assay/imaging techniques, EDAM
+for bioinformatics data/format/operation/topic concepts, DUO (Data Use
+Ontology) for data-use codes. `Ontology Identifier` records whichever
+ontology's CURIE actually matched (e.g. `BAO:0002643`, not just NCIT); `NCIt
+Code` is only populated when the match is specifically from NCIT.
+
 ## Confidence rubric
 
 - **High** — Direct OLS match: the term's label (or an unambiguous synonym)
@@ -93,3 +106,19 @@ in mechanically (`http://purl.obolibrary.org/obo/DUO_<number>`). All 24
 `DUO:xxxx` rows — High confidence (the ID is definitionally correct, not a
 similarity match). The 7 `DUOPlus1`-`DUOPlus7` rows are MC2-specific
 governance extensions with no real DUO backing and remain unmapped (None).
+
+### Wave 1 — Agent: sequencing small files (3 files)
+
+| File | Term | Description | Ontology | Confidence | Justification |
+|---|---|---|---|---|---|
+| sequencingLevel3/matrixType.csv | Raw Counts | The unprocessed matrix of read or fragment counts per feature (e.g., gene or transcript) per cell or sample, prior to any normalization, scaling, or batch correction. | EDAM:data_3917 | Medium | OLS found EDAM "Count matrix"; definition adapted. |
+| sequencingLevel3/matrixType.csv | Normalized Counts | A matrix of feature counts adjusted (e.g. for sequencing depth or library size) to enable comparison across cells/samples. | None | Medium | No unambiguous OLS match; inferred from standard genomics domain knowledge. |
+| sequencingLevel3/matrixType.csv | Scaled Counts | A matrix of counts further transformed (e.g. centered/scaled to unit variance) after normalization, typically used as input for dimensionality reduction or clustering. | None | Medium | No OLS match; inferred from standard scRNA-seq analysis conventions. |
+| sequencingLevel3/matrixType.csv | Batch Corrected Counts | A matrix of counts adjusted to remove technical variation between sequencing batches/runs while preserving biological signal. | None | Medium | No OLS match; inferred from standard batch-effect-correction domain knowledge. |
+| sequencingLevel1/readIndicator.csv | R1 | The read direction identified as number 1 in a paired-end nucleotide sequencing reaction. | NCIT:C172301 | High | Exact NCIT "Read Pair 1" match. |
+| sequencingLevel1/readIndicator.csv | R2 | The read direction identified as number 2 in a paired-end nucleotide sequencing reaction. | NCIT:C172302 | High | Exact NCIT "Read Pair 2" match. |
+| sequencingLevel1/readIndicator.csv | R1&R2 | Indicates that both Read 1 and Read 2, the forward and reverse reads of a paired-end sequencing reaction, are represented or applicable. | None | Medium | No OLS class for combined value; analogized from R1/R2 sibling rows. |
+| sequencingLevel1/readIndicator.csv | I1 | The first index read in a sequencing run, used to identify the sample-specific barcode (e.g. i7 index) for demultiplexing pooled libraries. | None | Medium | No direct OLS match; standard Illumina/NGS domain knowledge. |
+| sequencingLevel1/librarySourceMaterial.csv | Bulk Cells | A biospecimen consisting of multiple cells intended to be analyzed as a pool. | NCIT:C178223 | High | Exact NCIT "Bulk Cell Specimen" match (sibling of already-mapped Single-cells/Single-nuclei). |
+| sequencingLevel1/librarySourceMaterial.csv | Bulk Tissue | A biospecimen either derived from a whole tissue specimen or tissue section, which may consist of heterogeneous cells or tissues. | NCIT:C178225 | High | Exact NCIT "Bulk Tissue Specimen" match. |
+| sequencingLevel1/librarySourceMaterial.csv | Bulk Nuclei | A biospecimen consisting of multiple nuclei intended to be analyzed as a pool. | NCIT:C178224 | High | Exact NCIT "Bulk Nucleus Specimen" match. |
