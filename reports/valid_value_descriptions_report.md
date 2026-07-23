@@ -330,3 +330,56 @@ factors" and "probe dataset csv" each appear twice) — both occurrences were fi
 | visiumRNALevel3/visiumFileType.csv | detected image png / detected jpg | PNG/JPEG image output by Space Ranger showing the tissue area and spots detected during the tissue-detection step, overlaid on the slide image. | None | Medium | No OLS match found; domain knowledge of Space Ranger pipeline. |
 | visiumRNALevel3/visiumFileType.csv | high res image | High-resolution tissue microscopy image (tissue_hires_image.png) bundled in Space Ranger spatial output, used for detailed visualization of the tissue section with the overlaid spot grid. | None | Medium | No specific OLS match; domain knowledge of Space Ranger output naming. |
 | visiumRNALevel3/visiumFileType.csv | low res image | Low-resolution, downsampled tissue microscopy image (tissue_lowres_image.png) bundled in Space Ranger spatial output, used for lightweight visualization of the tissue section with the overlaid spot grid. | None | Medium | Same reasoning as high res image. |
+
+### Wave 2 — Agent: shared dataset_species / treatmentType / diseaseType (75 rows)
+
+| File | Term | Description source | Ontology | Confidence |
+|---|---|---|---|---|
+| shared/dataset_species.csv | 29 species terms (African Bush Elephant, Armadillo, Asian Elephant, Boar, Cat, Chicken, Cow, Dog, E. coli, Guinea Pig, Horse, Human, Human Patient, Human Cell Line, Mouse, Multispecies, Not Applicable, Opossum, Rabbit, Rat, Rhesus monkey, Sheep, Trichoplax adhaerens, Unknown, Unspecified, Worm, Fruit Fly, Zebrafish) | Mostly direct NCIT label matches; a few via NCBITaxon (taxon ID only, no OLS definition), FOODON, FBcv, MeSH | NCIT/NCBITaxon/FOODON/MeSH/FBcv | Mostly High, several Medium |
+| shared/treatmentType.csv | 30 cancer treatment modality terms (radiation/chemo/surgical/cellular therapy types) | Direct NCIT label matches throughout | NCIT | Mostly High, a few Medium |
+| shared/diseaseType.csv | 16 ICD-O-3 morphology category terms (Basal Cell Neoplasms, Blood Vessel Tumors, etc.) | Mix of direct/related NCIT and SNOMED matches; 5 rows (Ductal and Lobular Neoplasms, Granular Cell Tumors and Alveolar Soft Part Sarcomas, Miscellaneous Bone Tumors, Miscellaneous Tumors, Transitional Cell Papillomas and Carcinomas) had no usable OLS match — described from ICD-O-3 domain knowledge | NCIT/SNOMED/None | Mix of High/Medium/Low |
+
+Full per-term detail available in the agent transcripts; summarized here per project convention of table-per-batch. All applied per "apply all, flag confidence" decision.
+
+### Wave 2 — Agent: tumorType.csv (8 rows)
+
+| File | Term | Description | Ontology | Confidence | Justification |
+|---|---|---|---|---|---|
+| shared/tumorType.csv | Acute Promyelocytic Leukemia | An acute myeloid leukemia characterized by the predominance of abnormal promyelocytes, most often driven by translocations involving the retinoic acid receptor-alpha (RARA) gene. Over 95% of cases show t(15;17)(q24.1;q21.2), fusing PML and RARA. | NCIT (NCIt Code=C208352 only; pre-existing ICD-O-3 code in Ontology Identifier preserved) | High | Exact OLS label match; existing ICD-O-3 code preserved, only blank NCIt Code cell filled. |
+| shared/tumorType.csv | Gastroesophageal Adenocarcinoma | A malignant epithelial neoplasm composed of glandular cells arising at or near the esophagus/stomach junction; encompasses distal esophageal, GEJ, and gastric cardia adenocarcinomas. | DOID:0080375 | Medium | Exact DOID label match; NCIT only has narrower "GEJ Adenocarcinoma". |
+| shared/tumorType.csv | Myoepithelioma | A tumor composed predominantly of myoepithelial cells; usually benign, though malignant myoepithelial carcinoma also occurs. | None (pre-existing ICD-O-3 code in Ontology Identifier preserved) | High | MeSH exact match used for description; NCIT only has site/behavior-specific subtypes, so not recorded as NCIt Code. |
+| shared/tumorType.csv | Pan-cancer | A term describing analyses/datasets/studies spanning multiple cancer types together rather than a single cancer type, to identify shared or distinguishing features across cancers. | None | Low | No usable OLS match; written from domain knowledge (e.g. TCGA Pan-Cancer Atlas). |
+| shared/tumorType.csv | Pending Annotation | An administrative placeholder indicating a tumor/cancer type has not yet been curated or assigned; awaiting manual annotation review. | None | Low | Internal curation-status term, not an ontology concept. |
+| shared/tumorType.csv | Uterine Adenosarcoma | A primary malignant neoplasm of the uterine corpus with a sarcomatous mesenchymal component combined with a benign glandular epithelial component; generally low-grade, can recur locally. | NCIT:C6336 | High | Direct match to NCIT "Uterine Corpus Adenosarcoma". |
+| shared/tumorType.csv | Not-Applicable | Determination of a value is not relevant in the current context. | NCIT:C48660 (NCIt Code only) | High | Mirrors sibling "Not Applicable" row using same code/description. |
+| shared/tumorType.csv | Plexiform Neurofibroma | An elongated, multinodular neurofibroma involving multiple trunks of a nerve plexus or multiple fascicles of a large nerve; some resemble a "bag of worms". | NCIT:C3797 | High | Exact label match; row already had NCIt Code=C3797 pre-populated, confirming the match. |
+
+Note: this file has an internal convention where `Ontology Url` is never populated and `Ontology Identifier` holds bare ICD-O-3 codes (paired with Source=ICD-O-3) rather than CURIEs — pre-existing curated values were left untouched, only blank cells filled.
+
+### Wave 2 — Agent: education/sequencing small files (ed_topic.csv 37 rows, librarySelection.csv 3 rows, libraryStrategy.csv 2 rows)
+
+37 `education/ed_topic.csv` rows filled — mostly direct NCIT matches (Biology, Genetics, Chemistry, Physics, Metastasis, Immunotherapy, etc.), several MeSH/EDAM/schema.org matches (Diversity/Equity/Inclusion, Epigenetics, Statistics and Probability, Patient Advocacy), and about a dozen Low-confidence domain-knowledge descriptions with no ontology match (Computational Model Development, Mechano-genetics, Mechano-resistance, Outreach, Platform Development, etc.). Two rows (Training Material, Systems Biology) already had ontology mappings pre-populated — only Description was added to match.
+
+`sequencingLevel1/librarySelection.csv`: rRNA Depletion (GENEPIO:0101020, High), miRNA Size Fractionation (NCIT:C163991, Medium), Affinity Enrichment (NCIT:C163987, Medium).
+
+`sequencingLevel1/libraryStrategy.csv`: scMultiome (NCIT:C205123, High), Synthetic-Long-Read (NCIT:C204827, High).
+
+### Wave 2 — Agent: seqPlatform.csv (52 rows)
+
+All 52 blank rows filled — sequencing instrument/platform names, overwhelmingly matched via GENEPIO (genomic epidemiology platform ontology) and EFO with High confidence (Illumina HiSeq/NextSeq/NovaSeq/MiSeq series, PacBio, Ion Torrent, Oxford Nanopore MinION/GridION/PromethION, AB Genetic Analyzer/SOLiD series, 454 GS series). Three Low-confidence rows had no ontology match: `454 GS FLX+`, `Illumina NextSeq 2500` (flagged by the agent as likely a data-entry conflation of NextSeq 500/550 with HiSeq 2500 — not a real commercial platform name), and `Other`.
+
+### Wave 2 — Agent: biospecimen specimenType.csv (61 rows) + shared/tissue.csv (3 rows)
+
+61 `specimenType.csv` rows filled — mostly direct NCIT matches from the GDC/TCGA biospecimen-type series (Blood Derived Cancer variants, FFPE Scrolls, Xenograft Tissue variants, Cell Line, DNA/RNA/Total RNA, Whole Blood, etc.), several UBERON/BTO/MONDO/EMAPA/SIO matches, and about a dozen Low-confidence rows with no usable OLS match (Additional - New Primary, Blood Derived Normal, Bone Marrow Normal, Lymphoid Normal, Primary/Recurrent Blood Derived Cancer variants, Primary Tumor, Recurrent Tumor, Repli-G X DNA, Solid Tissue Normal).
+
+`shared/tissue.csv`: Caecum and Cardia already had pre-existing Ontology Identifier values (UBERON and ICD-O-3 topography code respectively) — only Description was added to match, existing mappings left untouched. Pending Annotation — administrative placeholder, no ontology match (Low).
+
+### Wave 2 — Agent: tool_language.csv (67 rows)
+
+All 67 blank rows filled — programming/software language names. High/Medium-confidence matches mostly via SWO (Software Ontology, e.g. Python, MATLAB, Java, C/C++/C#, Perl, Ruby, Fortran, PostScript, Racket) plus a few NCIT (HTML, SQL) and EDAM (CWL, Nextflow) matches. About half the rows (AWK, Bash, Go, R, Julia, Lisp, Lua, Scala, Scheme, Shell, TeX, VHDL, Verilog, WDL, XAML, and others) had no usable OLS match and were described from general software-engineering domain knowledge (Low confidence).
+
+### Wave 2 — Agent: dataset_file_format.csv (81 rows)
+
+All 81 blank rows filled — file/data format names. High/Medium-confidence matches mostly via NCIT and EDAM (FASTA, FASTQ, BAM, VCF, JSON, TIFF, HDF5, GTF/GFF3, maf, TSV, XML, ZIP, etc.). About 20 rows (COOL, DCC, DS_Store, FCS, FIG, FREQ, GCG, GCTx, LIF, MAP, ROUT, RPROJ, SGI, STAT, TDF, cloupe, SF, BPM, CLS, SCN, SVS, and administrative placeholders Unspecified/Pending Annotation) had no usable OLS match and were described from bioinformatics/software domain knowledge (Low confidence).
+
+**Note:** the agent assigned to `tool_language.csv` observed that CRLF, not bare `\n`, is this repo's actual native line-ending convention for individual CV term CSVs (verified separately against pre-session git history) — the earlier "normalize to `\n`" instruction given to every agent this session was based on a mistaken premise. Per user decision, the whole repo was subsequently standardized to bare `\n` in a dedicated cleanup commit (see `8c5a746`) with a new `.gitattributes` rule to enforce it going forward, so this file (and all others) now consistently use `\n`.
