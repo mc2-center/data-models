@@ -1,123 +1,123 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Alignment Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Alignment Format (Pair Only),,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Alignment Format (Text),,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Annotated Text Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Antimony,,,,FALSE,,Tool Format,,,,,,https://antimony.sourceforge.net/antimony-technical-spec.html,,Added by Brynn on 11/29/2022 for the tool: Tellurium
-BAM,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-BCF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-BED,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-BLAST Results,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-BNGL,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Binary Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Model Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Pathway Or Network Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-CSV,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chemical Data Format,,,,FALSE,,Tool Format,,EDAM,,,,,,
-Cytoband Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytoscape Input File Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-DCC,,,,FALSE,,Tool Format,,Nanostring,,,,,,"OB 1/11/2024, to be used in GeoMX metadata "
-DCD,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-DSV,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-"Database Hits (Sequence) Format ",,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Docker Image Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Document Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Dot-Bracket Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-FASTA,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-FASTQ,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-FASTQ-Illumina,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-FCS,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GCT/Res Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GFF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GFF3,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GIF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-GTF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Annotation Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Cluster Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression Report Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotype And Phenotype Annotation Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Graph Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-H5AD,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-HDF,,,,FALSE,,Tool Format,,EDAM,,,,,,
-HDF5,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-HTML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Hidden Markov Model Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Image Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Individual Genetic Data Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-JPG,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-JSON,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-LSM,,,,FALSE,,Tool Format,,EDAM,,,,,,
-MAF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-MAGE-ML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-MAGE-TAB,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-MAT,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-MATLAB Script,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-MSF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Map Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mass Spectrometry Data Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Matrix Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-NIFTI Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nexus Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Not Applicable,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-NumPy Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-OME-TIFF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-PDF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-PNG,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-PS,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-PSF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylip Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylip Format Variant,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetic Tree Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetic Tree Format (Text),,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Interaction Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Python Script,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-R File Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-R Script,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-RDS,,,,FALSE,,Tool Format,,,,,,,,
-RNA Annotation Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA Secondary Structure Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-RPKM,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Raw Sequence Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-SAM,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-SBML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-SQLite Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-SVG,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Scores Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Annotation Track Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Cluster Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Cluster Format (Protein),,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Feature Annotation Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Feature Table Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Feature Table Format (Text),,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Profile Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Range Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Record Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Trace Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Variation Annotation Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-TIFF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-TSV,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-TXT,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Tertiary Structure Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Textual Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Topology Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Trajectory Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-VCF,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-Workflow Format,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-XML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-YAML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-bedgraph,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-bigWig,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-cel,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-imzML Metadata File,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-mzML,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-nii,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-pkl,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-sif,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-xls,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-xlsx,,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
-PDB,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
-HED,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
-MRC,,,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
-Unspecified,,,,FALSE,,Tool Format,,,,,,,,OB 6/21/23
+Alignment Format,Data format for molecular sequence alignment information.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1921,http://edamontology.org/format_1921,,Added by Brynn 06/30/2022
+Alignment Format (Pair Only),Data format for molecular sequence alignment information that can hold the alignment of only two sequences.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2920,http://edamontology.org/format_2920,,Added by Brynn 06/30/2022
+Alignment Format (Text),Text-based format for molecular sequence alignment information.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2554,http://edamontology.org/format_2554,,Added by Brynn 06/30/2022
+Annotated Text Format,"Data format of an annotated text, e.g. with recognised entities, concepts, and relations.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3780,http://edamontology.org/format_3780,,Added by Brynn 06/30/2022
+Antimony,"A human-readable, text-based modeling language for specifying systems biology models (reaction networks, rate laws, and initial conditions) that can be compiled to SBML; used by tools such as Tellurium/libAntimony.",,,FALSE,,Tool Format,,,,,,https://antimony.sourceforge.net/antimony-technical-spec.html,,Added by Brynn on 11/29/2022 for the tool: Tellurium
+BAM,"BAM format, the binary, BGZF-compressed version of SAM format for alignment of nucleotide sequences (e.g. sequencing reads) to a reference sequence; may contain base-call and alignment qualities and other data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2572,http://edamontology.org/format_2572,,Added by Brynn 06/30/2022
+BCF,"The binary version of Variant Call Format (VCF) used to store sequence variation data such as indels, polymorphisms, and structural variants.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3020,http://edamontology.org/format_3020,,Added by Brynn 06/30/2022
+BED,"Browser Extensible Data (BED) format for sequence annotation tracks, typically displayed in a genome browser.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3003,http://edamontology.org/format_3003,,Added by Brynn 06/30/2022
+BLAST Results,"Format of results from a sequence database search using some variant of BLAST, including score data, alignment data, and summary tables.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1333,http://edamontology.org/format_1333,,Added by Brynn 06/30/2022
+BNGL,"BioNetGen Language (BNGL), a format for specifying and simulating rule-based models of biochemical systems such as signal transduction, metabolic, and genetic regulatory networks.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3972,http://edamontology.org/format_3972,,Added by Brynn 06/30/2022
+Binary Format,"A generic format in which data is encoded as binary, machine-readable content rather than plain text.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2333,http://edamontology.org/format_2333,,Added by Brynn 06/30/2022
+Biological Model Format,"A category of formats used to encode computational or mathematical models of biological systems and processes, such as reaction networks or systems biology models.",,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+Biological Pathway Or Network Format,Data format for representing a biological pathway or network.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2013,http://edamontology.org/format_2013,,Added by Brynn 06/30/2022
+CSV,Tabular data represented as comma-separated values in a text file.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3752,http://edamontology.org/format_3752,,Added by Brynn 06/30/2022
+Chemical Data Format,Format of a report on a chemical compound or other chemical data.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2030,http://edamontology.org/format_2030,,
+Cytoband Format,"Format for chromosome cytoband data, reflecting a UCSC Genome Browser database table.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3235,http://edamontology.org/format_3235,,Added by Brynn 06/30/2022
+Cytoscape Input File Format,Format of the Cytoscape input file in which gene expression ratios or values are specified over one or more experiments.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3477,http://edamontology.org/format_3477,,Added by Brynn 06/30/2022
+DCC,"A tab-delimited count file produced by the NanoString GeoMx Digital Spatial Profiler, containing per-probe digital count data for a given region of interest.",,,FALSE,,Tool Format,,Nanostring,,,,,,"OB 1/11/2024, to be used in GeoMX metadata "
+DCD,A binary trajectory file format used by molecular dynamics simulation packages such as CHARMM and NAMD to store atomic coordinates (and optionally velocities) over the course of a simulation.,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+DSV,"Tabular data represented as values delimited by some (non-comma, non-tab) character in a text file.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3751,http://edamontology.org/format_3751,,Added by Brynn 06/30/2022
+"Database Hits (Sequence) Format ",Format of a report on sequence hits and associated data from searching a sequence database.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2066,http://edamontology.org/format_2066,,Added by Brynn 06/30/2022
+Docker Image Format,"A Docker image is a file, comprised of multiple layers, used to execute code in a Docker container; it packages an application together with its dependencies for a complete, executable environment.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3973,http://edamontology.org/format_3973,,Added by Brynn 06/30/2022
+Document Format,"Format of documents, including word processor, spreadsheet, and presentation files.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3507,http://edamontology.org/format_3507,,Added by Brynn 06/30/2022
+Dot-Bracket Format,"Format for RNA secondary structure using dot-bracket notation, originally generated by the Vienna RNA package/server.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1457,http://edamontology.org/format_1457,,Added by Brynn 06/30/2022
+FASTA,"Text-based format for representing nucleotide or peptide sequences, in which each sequence is preceded by a single-line description starting with a '>' character.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1929,http://edamontology.org/format_1929,,Added by Brynn 06/30/2022
+FASTQ,"Text-based format for storing both a biological sequence (usually nucleotide) and its corresponding quality scores, most commonly used for raw sequencing reads.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1930,http://edamontology.org/format_1930,,Added by Brynn 06/30/2022
+FASTQ-Illumina,FASTQ short read format variant using the Illumina 1.3+ quality-score encoding scheme.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1931,http://edamontology.org/format_1931,,Added by Brynn 06/30/2022
+FCS,"Flow Cytometry Standard (FCS), the standard binary file format for storing multiparameter flow or mass cytometry data produced by cytometry instruments.",,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+GCT/Res Format,"Tab-delimited text file format (used by GenePattern) containing a column for each sample, a row for each gene, and an expression value for each gene in each sample.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3709,http://edamontology.org/format_3709,,Added by Brynn 06/30/2022
+GFF,"General/Generic Feature Format (GFF) for describing genes and other sequence features, of indeterminate version.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2305,http://edamontology.org/format_2305,,Added by Brynn 06/30/2022
+GFF3,"Generic Feature Format version 3 (GFF3), a tab-delimited format for describing genomic features with a well-defined hierarchy of parent-child relationships.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1975,http://edamontology.org/format_1975,,Added by Brynn 06/30/2022
+GIF,"Graphics Interchange Format, a bitmap image format supporting compression and animation.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3467,http://edamontology.org/format_3467,,Added by Brynn 06/30/2022
+GML,"Graph Modeling Language (GML), a plain-text format for describing graph/network data, used by tools such as Cytoscape, Pajek, yEd, and NetworkX.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3822,http://edamontology.org/format_3822,,Added by Brynn 06/30/2022
+GTF,"Gene Transfer Format (GTF), a restricted, more strictly-defined version of GFF used to describe gene structure annotations.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2306,http://edamontology.org/format_2306,,Added by Brynn 06/30/2022
+Gene Annotation Format,"Format of a report on a particular locus, gene, gene system, or group of genes.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2031,http://edamontology.org/format_2031,,Added by Brynn 06/30/2022
+Gene Cluster Format,"A tab-delimited matrix file format that describes a gene expression dataset, where columns correspond to samples/profiles, rows correspond to genes, and cell values correspond to expression measurements.",,,FALSE,,Tool Format,,EDAM,,,NCIT:C123891,http://purl.obolibrary.org/obo/NCIT_C123891,C123891,Added by Brynn 06/30/2022
+Gene Expression Report Format,"Format of a file of gene expression data, such as a gene expression matrix or profile.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2058,http://edamontology.org/format_2058,,Added by Brynn 06/30/2022
+Genotype And Phenotype Annotation Format,"A category of formats used to represent annotations linking genotype data to associated phenotype information, e.g. from studies or databases such as dbGaP.",,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+Graph Format,"Data format for representing graph data, i.e. a set of nodes and the edges connecting them.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3617,http://edamontology.org/format_3617,,Added by Brynn 06/30/2022
+H5AD,"HDF5-based binary file format used by the AnnData Python library to store annotated data matrices (e.g. gene expression matrices with associated cell/feature metadata), widely used in single-cell genomics tools such as Scanpy.",,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+HDF,"Hierarchical Data Format (HDF), a set of file formats and libraries for storing and organizing large amounts of numerical data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3873,http://edamontology.org/format_3873,,
+HDF5,"HDF5, the current version of the Hierarchical Data Format; a data model, library, and file format for storing and managing large, complex, heterogeneous data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3590,http://edamontology.org/format_3590,,Added by Brynn 06/30/2022
+HTML,"HyperText Markup Language (HTML) format, used for structuring and rendering documents on the web.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2331,http://edamontology.org/format_2331,,Added by Brynn 06/30/2022
+Hidden Markov Model Format,"Format for representing a hidden Markov model, e.g. as used for sequence profile searching.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2072,http://edamontology.org/format_2072,,Added by Brynn 06/30/2022
+Image Format,A generic category of formats used for images and associated image metadata.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3547,http://edamontology.org/format_3547,,Added by Brynn 06/30/2022
+Individual Genetic Data Format,Format for metadata describing an individual along with their associated genetic data.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3287,http://edamontology.org/format_3287,,Added by Brynn 06/30/2022
+JPG,"Joint Photographic Experts Group (JPEG) format, a common lossy compressed image format.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3579,http://edamontology.org/format_3579,,Added by Brynn 06/30/2022
+JSON,"JavaScript Object Notation (JSON), a lightweight, text-based format for representing tree-structured data using key-value pairs.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3464,http://edamontology.org/format_3464,,Added by Brynn 06/30/2022
+LSM,"Zeiss' proprietary microscopy image format (based on TIFF), the default data export format for Zeiss LSM-series confocal microscopes, containing image data plus imaging acquisition settings.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3988,http://edamontology.org/format_3988,,
+MAF,"Mutation Annotation Format (MAF), a tab-delimited text file that aggregates mutation/variant information across a set of samples from one or more VCF files, commonly used in cancer genomics.",,,FALSE,,Tool Format,,EDAM,,,NCIT:C172215,http://purl.obolibrary.org/obo/NCIT_C172215,C172215,Added by Brynn 06/30/2022
+MAGE-ML,"MAGE-ML, an XML-based format standardized by MGED (now FGED) for representing microarray gene expression data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3161,http://edamontology.org/format_3161,,Added by Brynn 06/30/2022
+MAGE-TAB,"MAGE-TAB, a tab-delimited textual format standardized by MGED (now FGED) for representing microarray gene expression data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3162,http://edamontology.org/format_3162,,Added by Brynn 06/30/2022
+MAT,"A proprietary, binary data container format used by MATLAB software to store workspace variables.",,,FALSE,,Tool Format,,EDAM,,,NCIT:C190178,http://purl.obolibrary.org/obo/NCIT_C190178,C190178,Added by Brynn 06/30/2022
+MATLAB Script,File format for scripts or functions written in the MATLAB programming language.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_4007,http://edamontology.org/format_4007,,Added by Brynn 06/30/2022
+MSF,A structured (SQLite-based) mass spectrometry result file format used by Thermo Scientific's Proteome Discoverer software.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3702,http://edamontology.org/format_3702,,Added by Brynn 06/30/2022
+Map Format,"A format used to encode a genetic or physical map, specifying the positions and/or order of markers such as SNPs or genes along a chromosome (e.g. PLINK MAP files).",,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+Mass Spectrometry Data Format,"Format for mass spectra and derived data, including peptide sequences and related metadata.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3245,http://edamontology.org/format_3245,,Added by Brynn 06/30/2022
+Matrix Format,Format of a matrix (array) of numerical values.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3033,http://edamontology.org/format_3033,,Added by Brynn 06/30/2022
+NIFTI Format,"An open file format from the Neuroimaging Informatics Technology Initiative (NIfTI), commonly used to store brain imaging data obtained via Magnetic Resonance Imaging (MRI).",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3549,http://edamontology.org/format_3549,,Added by Brynn 06/30/2022
+Nexus Format,"Phylogenetic tree Nexus (text) format, used to store aligned sequences and/or tree data along with associated metadata blocks.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1912,http://edamontology.org/format_1912,,Added by Brynn 06/30/2022
+Not Applicable,Placeholder value used when specifying a tool input/output format is not applicable to the entry being described.,,,FALSE,,Tool Format,,EDAM,,,,,,Added by Brynn 06/30/2022
+NumPy Format,"The standard binary file format used by NumPy - a fundamental Python package for scientific computing - for persisting a single arbitrary NumPy array on disk, including its shape and dtype information.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_4003,http://edamontology.org/format_4003,,Added by Brynn 06/30/2022
+OME-TIFF,"Open Microscopy Environment TIFF (OME-TIFF), an image file format consisting of standard TIFF/BigTIFF data with OME-XML metadata embedded in the image description, used to store microscopy image data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3727,http://edamontology.org/format_3727,,Added by Brynn 06/30/2022
+Ontology Format,A generic category of formats used for representing ontologies.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2195,http://edamontology.org/format_2195,,Added by Brynn 06/30/2022
+PDF,"Portable Document Format (PDF), a fixed-layout document format for reliably presenting text, images, and formatting independent of application, hardware, or operating system.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3508,http://edamontology.org/format_3508,,Added by Brynn 06/30/2022
+PNG,"Portable Network Graphics (PNG), a lossless bitmap image compression format intended to replace GIF.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3603,http://edamontology.org/format_3603,,Added by Brynn 06/30/2022
+PS,"PostScript format, a page description language used for representing formatted printable or displayable documents and vector graphics.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3696,http://edamontology.org/format_3696,,Added by Brynn 06/30/2022
+PSF,"Protein Structure File (PSF), a structure topology file format used by NAMD and CHARMM molecular simulation programs, containing atoms, bonds, angles, dihedrals, and related force-field terms.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3882,http://edamontology.org/format_3882,,Added by Brynn 06/30/2022
+Phylip Format,"PHYLIP format for (aligned) molecular sequences, used by the PHYLIP phylogenetics software package.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1997,http://edamontology.org/format_1997,,Added by Brynn 06/30/2022
+Phylip Format Variant,Some non-standard variant of PHYLIP format for (aligned) sequences.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2924,http://edamontology.org/format_2924,,Added by Brynn 06/30/2022
+Phylogenetic Tree Format,Data format for representing a phylogenetic tree.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2006,http://edamontology.org/format_2006,,Added by Brynn 06/30/2022
+Phylogenetic Tree Format (Text),Text-based format for representing a phylogenetic tree.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2556,http://edamontology.org/format_2556,,Added by Brynn 06/30/2022
+Protein Interaction Format,Format for molecular (protein-protein) interaction data.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2054,http://edamontology.org/format_2054,,Added by Brynn 06/30/2022
+Python Script,"File format for scripts written in Python, a widely used high-level, general-purpose programming language.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3996,http://edamontology.org/format_3996,,Added by Brynn 06/30/2022
+R File Format,"File format used for scripts written in the R programming language, executed within the R software environment for statistical computation and graphics.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3554,http://edamontology.org/format_3554,,Added by Brynn 06/30/2022
+R Script,"Format for scripts written in the R language, an open-source programming language and environment for statistical computing and graphics.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3999,http://edamontology.org/format_3999,,Added by Brynn 06/30/2022
+RDS,A native binary file format used by R to save and load a single serialized R object to and from a file.,,,FALSE,,Tool Format,,,,,NCIT:C209895,http://purl.obolibrary.org/obo/NCIT_C209895,C209895,
+RNA Annotation Format,"A general category of formats for annotated RNA data, including e.g. microRNA and RNA-Seq data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3865,http://edamontology.org/format_3865,,Added by Brynn 06/30/2022
+RNA Secondary Structure Format,Format for the (predicted or experimentally determined) secondary structure of an RNA molecule.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2076,http://edamontology.org/format_2076,,Added by Brynn 06/30/2022
+RPKM,"Tab-delimited format for a gene expression levels table, with values calculated as Reads Per Kilobase of transcript per Million mapped reads (RPKM).",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3980,http://edamontology.org/format_3980,,Added by Brynn 06/30/2022
+Raw Sequence Format,"Format of a raw molecular sequence, i.e. specifying only the alphabet/characters used with no additional annotation.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2571,http://edamontology.org/format_2571,,Added by Brynn 06/30/2022
+SAM,"Sequence Alignment/Map (SAM) format, a text-based format for storing alignments of nucleotide sequences (e.g. sequencing reads) to a reference sequence, including base-call and alignment qualities.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2573,http://edamontology.org/format_2573,,Added by Brynn 06/30/2022
+SBML,"Systems Biology Markup Language (SBML), the standard XML format for encoding models of biological processes such as metabolism, cell signaling, and gene regulation.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2585,http://edamontology.org/format_2585,,Added by Brynn 06/30/2022
+SQLite Format,Data format used by the SQLite embedded relational database engine.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3621,http://edamontology.org/format_3621,,Added by Brynn 06/30/2022
+SVG,"Scalable Vector Graphics (SVG), an XML-based vector image format for two-dimensional graphics supporting interactivity and animation.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3604,http://edamontology.org/format_3604,,Added by Brynn 06/30/2022
+Scores Format,Alignment format for score values associated with pairs of sequences.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1999,http://edamontology.org/format_1999,,Added by Brynn 06/30/2022
+Sequence Annotation Track Format,"Format of a sequence annotation track, typically displayed as a row of features in a genome browser.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2919,http://edamontology.org/format_2919,,Added by Brynn 06/30/2022
+Sequence Cluster Format,Format used to represent clusters of molecular sequences.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2170,http://edamontology.org/format_2170,,Added by Brynn 06/30/2022
+Sequence Cluster Format (Protein),Format used to represent clusters of protein sequences.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2171,http://edamontology.org/format_2171,,Added by Brynn 06/30/2022
+Sequence Feature Annotation Format,Data format for molecular sequence feature information.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1920,http://edamontology.org/format_1920,,Added by Brynn 06/30/2022
+Sequence Feature Table Format,Format for a table of sequence features.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2548,http://edamontology.org/format_2548,,Added by Brynn 06/30/2022
+Sequence Feature Table Format (Text),Text-based format for a table of sequence features.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2206,http://edamontology.org/format_2206,,Added by Brynn 06/30/2022
+Sequence Profile Format,"Format of a sequence profile, e.g. summarizing conserved positions across a family of aligned sequences.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2069,http://edamontology.org/format_2069,,Added by Brynn 06/30/2022
+Sequence Range Format,Format used to specify one or more ranges of sequence positions.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2078,http://edamontology.org/format_2078,,Added by Brynn 06/30/2022
+Sequence Record Format,Data format for a molecular sequence record.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1919,http://edamontology.org/format_1919,,Added by Brynn 06/30/2022
+Sequence Trace Format,"Format for sequence trace data, including base-call information from a sequencing instrument.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2057,http://edamontology.org/format_2057,,Added by Brynn 06/30/2022
+Sequence Variation Annotation Format,"Format of sequence variation annotation, e.g. describing indels, polymorphisms, or structural variants.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2921,http://edamontology.org/format_2921,,Added by Brynn 06/30/2022
+TIFF,"Tagged Image File Format (TIFF), a versatile and extensible bitmap image format supporting numerous compression schemes.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3591,http://edamontology.org/format_3591,,Added by Brynn 06/30/2022
+TSV,Tabular data represented as tab-separated values in a text file.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3475,http://edamontology.org/format_3475,,Added by Brynn 06/30/2022
+TXT,"Generic plain-text file format, in which data is represented as unstructured or loosely structured human-readable text.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2330,http://edamontology.org/format_2330,,Added by Brynn 06/30/2022
+Tertiary Structure Format,Data format for a molecular tertiary (3D) structure.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2033,http://edamontology.org/format_2033,,Added by Brynn 06/30/2022
+Textual Format,A generic category of formats in which data is represented as plain text.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2330,http://edamontology.org/format_2330,,Added by Brynn 06/30/2022
+Topology Format,"Format of topology files containing the static structural information of a molecular system needed for a molecular simulation (e.g. GROMACS TOP, CHARMM PSF, AMBER PRMTOP).",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3879,http://edamontology.org/format_3879,,Added by Brynn 06/30/2022
+Trajectory Format,"File format used to store trajectory information (e.g. atomic coordinates over time) for a 3D structure, such as from a molecular dynamics simulation.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3866,http://edamontology.org/format_3866,,Added by Brynn 06/30/2022
+VCF,"Variant Call Format (VCF), a tabular text format for storing genomic sequence variations such as SNPs, indels, and structural variants.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3016,http://edamontology.org/format_3016,,Added by Brynn 06/30/2022
+Workflow Format,Format used to represent a computational workflow.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2032,http://edamontology.org/format_2032,,Added by Brynn 06/30/2022
+XML,"eXtensible Markup Language (XML), a markup format for representing structured, hierarchical data.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_2332,http://edamontology.org/format_2332,,Added by Brynn 06/30/2022
+YAML,"YAML (YAML Ain't Markup Language), a human-readable, tree-structured data serialization format.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3750,http://edamontology.org/format_3750,,Added by Brynn 06/30/2022
+bedgraph,"BedGraph format, a tab-delimited text format for displaying continuous-valued genomic data (e.g. probability scores) as a track.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3583,http://edamontology.org/format_3583,,Added by Brynn 06/30/2022
+bigWig,"bigWig format, an indexed binary format for large sequence annotation tracks consisting of a value for each sequence position; similar to the textual WIG format.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3006,http://edamontology.org/format_3006,,Added by Brynn 06/30/2022
+cel,Format of an Affymetrix CEL data file containing (raw) expression intensity information for individual probes on a microarray.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_1638,http://edamontology.org/format_1638,,Added by Brynn 06/30/2022
+imzML Metadata File,"The metadata XML file (.imzML) component of the imzML mass spectrometry imaging data format, based on mzML, that stores acquisition and instrument metadata; paired with a binary .ibd file containing the mass spectra.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3682,http://edamontology.org/format_3682,,Added by Brynn 06/30/2022
+mzML,"mzML, an XML-based format standardized by HUPO PSI for raw mass spectrometer output data; the successor and unifier of the earlier mzData and mzXML formats.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3244,http://edamontology.org/format_3244,,Added by Brynn 06/30/2022
+nii,"An open file format from the Neuroimaging Informatics Technology Initiative (NIfTI), commonly used to store brain imaging data obtained via Magnetic Resonance Imaging (MRI).",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3549,http://edamontology.org/format_3549,,Added by Brynn 06/30/2022
+pkl,Format used by Python's pickle module for serializing and de-serializing a Python object structure to and from a binary file.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_4002,http://edamontology.org/format_4002,,Added by Brynn 06/30/2022
+sif,"Simple Interaction Format (SIF), a plain-text network/pathway format used by tools such as Cytoscape to represent nodes and their interactions.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3619,http://edamontology.org/format_3619,,Added by Brynn 06/30/2022
+xls,"Microsoft Excel spreadsheet binary file format (.xls), used prior to the introduction of the XML-based .xlsx format.",,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3468,http://edamontology.org/format_3468,,Added by Brynn 06/30/2022
+xlsx,Microsoft Excel spreadsheet format (.xlsx) consisting of a set of XML documents packaged in a ZIP-compressed container.,,,FALSE,,Tool Format,,EDAM,,,EDAM:format_3620,http://edamontology.org/format_3620,,Added by Brynn 06/30/2022
+PDB,"Protein Data Bank (PDB) format, a text-based format for representing macromolecular tertiary structure (atomic coordinates) and associated metadata, as used by PDB database entries.",,,FALSE,,Tool Format,,,,,EDAM:format_1476,http://edamontology.org/format_1476,,OB 6/20/23
+HED,"Hierarchical Event Descriptor (HED), a structured vocabulary and format for annotating events in time-series data (e.g. EEG/behavioral data), used within BIDS-formatted neuroimaging datasets.",,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
+MRC,"MRC/MRC2014, a binary file format for storing 3D volumetric density map data, widely used in cryo-electron microscopy (cryo-EM) for representing reconstructed density maps.",,,FALSE,,Tool Format,,,,,,,,OB 6/20/23
+Unspecified,Placeholder value used when the specific input/output format for a tool was not specified or is not known.,,,FALSE,,Tool Format,,,,,,,,OB 6/21/23
