@@ -81,7 +81,7 @@ COLS_TO_RENDER = [
 ]
 
 # Columns to render for the standard-terms (valid values) tables.
-TERMS_COLS_TO_RENDER = ["Valid Value", "Description", "Nonpreferred Terms", "Ontology Term"]
+TERMS_COLS_TO_RENDER = ["Valid Value", "Description", "Ontology Term"]
 
 MAPPING_FILENAME = "mapping.yaml"
 NAVIGATION_FILENAME = "nav.yml"
@@ -160,9 +160,6 @@ def _render_terms_csv(src: str) -> str:
         ),
         axis=1,
     )
-    terms_df["Nonpreferred Terms"] = terms_df.get(
-        "Nonpreferred Terms", pd.Series([""] * len(terms_df))
-    ).replace("", "None")
     terms_df = terms_df.rename(columns={"Attribute": "Valid Value"})
     terms_df[TERMS_COLS_TO_RENDER].to_csv(dest_path, index=False)
     return dest
