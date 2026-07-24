@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
 Raw Counts,"The unprocessed matrix of read or fragment counts per feature (e.g., gene or transcript) per cell or sample, prior to any normalization, scaling, or batch correction.",,,FALSE,,Matrix Type,,,,,EDAM:data_3917,http://edamontology.org/data_3917,,
-Normalized Counts,"A matrix of feature counts that has been adjusted (e.g., for sequencing depth or library size) to enable comparison across cells or samples.",,,FALSE,,Matrix Type,,,,,,,,
+Normalized Counts,"A matrix of feature counts that has been adjusted (e.g., for sequencing depth or library size) to enable comparison across cells or samples.",,,FALSE,,Matrix Type,,,,,EDAM:data_3112,http://edamontology.org/data_3112,,
 Scaled Counts,"A matrix of counts that has been further transformed (e.g., centered and/or scaled to unit variance) after normalization, typically used as input for downstream analyses such as dimensionality reduction or clustering.",,,FALSE,,Matrix Type,,,,,,,,
 Batch Corrected Counts,"A matrix of counts that has been adjusted to remove technical variation introduced by differences between sequencing batches or experimental runs, while preserving true biological signal.",,,FALSE,,Matrix Type,,,,,,,,
