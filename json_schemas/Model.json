@@ -6351,6 +6351,7 @@
         "CellularTherapy",
         "Chemotherapy",
         "ConcurrentChemoradiation",
+        "Control",
         "ConventionalRadiotherapy",
         "ElectronBeamRadiationTherapy",
         "ExternalBeamRadiationTherapy",
