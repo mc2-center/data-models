@@ -1,3 +1,3 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-True,,,,FALSE,,shared,,,,,,,,
-False,,,,FALSE,,shared,,,,,,,,
+True,"Conforming to facts, reality, or definitive criteria.",,,FALSE,,shared,,,,,NCIT:C68850,http://purl.obolibrary.org/obo/NCIT_C68850,C68850,
+False,"Not in accordance with facts, reality, or definitive criteria.",,,FALSE,,shared,,,,,NCIT:C68851,http://purl.obolibrary.org/obo/NCIT_C68851,C68851,
