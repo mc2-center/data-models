@@ -87,4 +87,4 @@ You can also read our [contribution guidelines] if you'd like to submit updates 
 
 <!-- LINKS -->
 [contribution guidelines]: https://mc2-center.github.io/data-models/contributing/
-[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
+[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=data-ingress-team&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
