@@ -1,0 +1,2 @@
+pubMedId,publicationTitle,doi,tumorType,assay,grantNumber,dataset
+12345678,Test Publication One,10.1000/test,Cutaneous Melanoma,16S Ribosomal Gene Sequencing Assay,CA999999,ds-alias-1

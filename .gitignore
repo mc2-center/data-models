@@ -52,3 +52,17 @@ scripts/__pycache__
 
 # Release workflow outputs
 release_output.txt
+
+# KG pipeline generated data (raw/harmonized extracts + RDF instance graphs;
+# schema/*.ttl and mappings/sssom/*.tsv ARE committed, these row-level
+# extracts are not)
+kg-pipeline/data/raw/*
+kg-pipeline/data/harmonized/*
+kg-pipeline/data/rdf/*
+!kg-pipeline/data/raw/.gitkeep
+!kg-pipeline/data/harmonized/.gitkeep
+!kg-pipeline/data/rdf/.gitkeep
+kg-pipeline/__pycache__/
+kg-pipeline/**/__pycache__/
+kg-pipeline/.venv/
+.pytest_cache/

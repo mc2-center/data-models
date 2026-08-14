@@ -1,0 +1,81 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_input_format.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Annotated Text Format	Annotated Text Format	skos:exactMatch	http://edamontology.org/format_3780	semapv:ManualMappingCuration
+BAM	BAM	skos:exactMatch	http://edamontology.org/format_2572	semapv:ManualMappingCuration
+BCF	BCF	skos:exactMatch	http://edamontology.org/format_3020	semapv:ManualMappingCuration
+BED	BED	skos:exactMatch	http://edamontology.org/format_3003	semapv:ManualMappingCuration
+BNGL	BNGL	skos:exactMatch	http://edamontology.org/format_3972	semapv:ManualMappingCuration
+Biological Pathway Or Network Format	Biological Pathway Or Network Format	skos:exactMatch	http://edamontology.org/format_2013	semapv:ManualMappingCuration
+CSV	CSV	skos:exactMatch	http://edamontology.org/format_3752	semapv:ManualMappingCuration
+Chemical Data Format	Chemical Data Format	skos:exactMatch	http://edamontology.org/format_2030	semapv:ManualMappingCuration
+Cytoband Format	Cytoband Format	skos:exactMatch	http://edamontology.org/format_3235	semapv:ManualMappingCuration
+Cytoscape Input File Format	Cytoscape Input File Format	skos:exactMatch	http://edamontology.org/format_3477	semapv:ManualMappingCuration
+Document Format	Document Format	skos:exactMatch	http://edamontology.org/format_3507	semapv:ManualMappingCuration
+FASTA	FASTA	skos:exactMatch	http://edamontology.org/format_1929	semapv:ManualMappingCuration
+FASTQ	FASTQ	skos:exactMatch	http://edamontology.org/format_1930	semapv:ManualMappingCuration
+FASTQ-Illumina	FASTQ-Illumina	skos:exactMatch	http://edamontology.org/format_1931	semapv:ManualMappingCuration
+GCT/Res Format	GCT/Res Format	skos:exactMatch	http://edamontology.org/format_3709	semapv:ManualMappingCuration
+GTF	GTF	skos:exactMatch	http://edamontology.org/format_2306	semapv:ManualMappingCuration
+Gene Annotation Format	Gene Annotation Format	skos:exactMatch	http://edamontology.org/format_2031	semapv:ManualMappingCuration
+Gene Cluster Format	Gene Cluster Format	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C123891	semapv:ManualMappingCuration
+Gene Expression Report Format	Gene Expression Report Format	skos:exactMatch	http://edamontology.org/format_2058	semapv:ManualMappingCuration
+Graph Format	Graph Format	skos:exactMatch	http://edamontology.org/format_3617	semapv:ManualMappingCuration
+HDF	HDF	skos:exactMatch	http://edamontology.org/format_3873	semapv:ManualMappingCuration
+HDF5	HDF5	skos:exactMatch	http://edamontology.org/format_3590	semapv:ManualMappingCuration
+HTML	HTML	skos:exactMatch	http://edamontology.org/format_2331	semapv:ManualMappingCuration
+Hidden Markov Model Format	Hidden Markov Model Format	skos:exactMatch	http://edamontology.org/format_2072	semapv:ManualMappingCuration
+Image Format	Image Format	skos:exactMatch	http://edamontology.org/format_3547	semapv:ManualMappingCuration
+Individual Genetic Data Format	Individual Genetic Data Format	skos:exactMatch	http://edamontology.org/format_3287	semapv:ManualMappingCuration
+JPG	JPG	skos:exactMatch	http://edamontology.org/format_3579	semapv:ManualMappingCuration
+JSON	JSON	skos:exactMatch	http://edamontology.org/format_3464	semapv:ManualMappingCuration
+LSM	LSM	skos:exactMatch	http://edamontology.org/format_3988	semapv:ManualMappingCuration
+MAF	MAF	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C172215	semapv:ManualMappingCuration
+MAGE-ML	MAGE-ML	skos:exactMatch	http://edamontology.org/format_3161	semapv:ManualMappingCuration
+MAGE-TAB	MAGE-TAB	skos:exactMatch	http://edamontology.org/format_3162	semapv:ManualMappingCuration
+MAT	MAT	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190178	semapv:ManualMappingCuration
+MATLAB Script	MATLAB Script	skos:exactMatch	http://edamontology.org/format_4007	semapv:ManualMappingCuration
+MSF	MSF	skos:exactMatch	http://edamontology.org/format_3702	semapv:ManualMappingCuration
+Mass Spectrometry Data Format	Mass Spectrometry Data Format	skos:exactMatch	http://edamontology.org/format_3245	semapv:ManualMappingCuration
+Matrix Format	Matrix Format	skos:exactMatch	http://edamontology.org/format_3033	semapv:ManualMappingCuration
+NIFTI Format	NIFTI Format	skos:exactMatch	http://edamontology.org/format_3549	semapv:ManualMappingCuration
+Nexus Format	Nexus Format	skos:exactMatch	http://edamontology.org/format_1912	semapv:ManualMappingCuration
+NumPy Format	NumPy Format	skos:exactMatch	http://edamontology.org/format_4003	semapv:ManualMappingCuration
+OME-TIFF	OME-TIFF	skos:exactMatch	http://edamontology.org/format_3727	semapv:ManualMappingCuration
+Ontology Format	Ontology Format	skos:exactMatch	http://edamontology.org/format_2195	semapv:ManualMappingCuration
+PDB	PDB	skos:exactMatch	http://edamontology.org/format_1476	semapv:ManualMappingCuration
+PNG	PNG	skos:exactMatch	http://edamontology.org/format_3603	semapv:ManualMappingCuration
+PSF	PSF	skos:exactMatch	http://edamontology.org/format_3882	semapv:ManualMappingCuration
+Phylip Format	Phylip Format	skos:exactMatch	http://edamontology.org/format_1997	semapv:ManualMappingCuration
+Phylogenetic Tree Format	Phylogenetic Tree Format	skos:exactMatch	http://edamontology.org/format_2006	semapv:ManualMappingCuration
+Protein Interaction Format	Protein Interaction Format	skos:exactMatch	http://edamontology.org/format_2054	semapv:ManualMappingCuration
+Python Script	Python Script	skos:exactMatch	http://edamontology.org/format_3996	semapv:ManualMappingCuration
+R File Format	R File Format	skos:exactMatch	http://edamontology.org/format_3554	semapv:ManualMappingCuration
+R Script	R Script	skos:exactMatch	http://edamontology.org/format_3999	semapv:ManualMappingCuration
+RDS	RDS	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C209895	semapv:ManualMappingCuration
+RNA Annotation Format	RNA Annotation Format	skos:exactMatch	http://edamontology.org/format_3865	semapv:ManualMappingCuration
+RPKM	RPKM	skos:exactMatch	http://edamontology.org/format_3980	semapv:ManualMappingCuration
+Raw Sequence Format	Raw Sequence Format	skos:exactMatch	http://edamontology.org/format_2571	semapv:ManualMappingCuration
+SAM	SAM	skos:exactMatch	http://edamontology.org/format_2573	semapv:ManualMappingCuration
+SBML	SBML	skos:exactMatch	http://edamontology.org/format_2585	semapv:ManualMappingCuration
+Sequence Cluster Format	Sequence Cluster Format	skos:exactMatch	http://edamontology.org/format_2170	semapv:ManualMappingCuration
+Sequence Profile Format	Sequence Profile Format	skos:exactMatch	http://edamontology.org/format_2069	semapv:ManualMappingCuration
+Sequence Record Format	Sequence Record Format	skos:exactMatch	http://edamontology.org/format_1919	semapv:ManualMappingCuration
+Sequence Variation Annotation Format	Sequence Variation Annotation Format	skos:exactMatch	http://edamontology.org/format_2921	semapv:ManualMappingCuration
+TIFF	TIFF	skos:exactMatch	http://edamontology.org/format_3591	semapv:ManualMappingCuration
+TSV	TSV	skos:exactMatch	http://edamontology.org/format_3475	semapv:ManualMappingCuration
+TXT	TXT	skos:exactMatch	http://edamontology.org/format_2330	semapv:ManualMappingCuration
+Textual Format	Textual Format	skos:exactMatch	http://edamontology.org/format_2330	semapv:ManualMappingCuration
+Trajectory Format	Trajectory Format	skos:exactMatch	http://edamontology.org/format_3866	semapv:ManualMappingCuration
+VCF	VCF	skos:exactMatch	http://edamontology.org/format_3016	semapv:ManualMappingCuration
+XML	XML	skos:exactMatch	http://edamontology.org/format_2332	semapv:ManualMappingCuration
+YAML	YAML	skos:exactMatch	http://edamontology.org/format_3750	semapv:ManualMappingCuration
+bigWig	bigWig	skos:exactMatch	http://edamontology.org/format_3006	semapv:ManualMappingCuration
+cel	cel	skos:exactMatch	http://edamontology.org/format_1638	semapv:ManualMappingCuration
+nii	nii	skos:exactMatch	http://edamontology.org/format_3549	semapv:ManualMappingCuration
+pkl	pkl	skos:exactMatch	http://edamontology.org/format_4002	semapv:ManualMappingCuration
+xls	xls	skos:exactMatch	http://edamontology.org/format_3468	semapv:ManualMappingCuration
+xlsx	xlsx	skos:exactMatch	http://edamontology.org/format_3620	semapv:ManualMappingCuration

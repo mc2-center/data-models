@@ -1,0 +1,27 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/dataset_tissue.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Caecum	Caecum	skos:exactMatch	http://purl.obolibrary.org/obo/UBERON_0001153	semapv:ManualMappingCuration
+Cancer-Associated Fibroblast	Cancer-Associated Fibroblast	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C168534	semapv:ManualMappingCuration
+Embryo	Embryo	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C28147	semapv:ManualMappingCuration
+Endothelium	Endothelium	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12481	semapv:ManualMappingCuration
+Epithelium	Epithelium	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12710	semapv:ManualMappingCuration
+Eye	Eye	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12342	semapv:ManualMappingCuration
+Foreskin	Foreskin	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C33049	semapv:ManualMappingCuration
+Head and Neck	Head and Neck	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12426	semapv:ManualMappingCuration
+Hippocampus	Hippocampus	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12444	semapv:ManualMappingCuration
+Lymph	Lymph	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13252	semapv:ManualMappingCuration
+Lymphatic System	Lymphatic System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12746	semapv:ManualMappingCuration
+Lymphoid Tissue	Lymphoid Tissue	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13049	semapv:ManualMappingCuration
+Mesenchyme	Mesenchyme	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13301	semapv:ManualMappingCuration
+Mucosa	Mucosa	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13166	semapv:ManualMappingCuration
+Nervous System	Nervous System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12399	semapv:ManualMappingCuration
+Not Applicable	Not Applicable	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C48660	semapv:ManualMappingCuration
+Oral Mucosa	Oral Mucosa	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C77637	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Pleura	Pleura	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12469	semapv:ManualMappingCuration
+Synovial Membrane	Synovial Membrane	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12473	semapv:ManualMappingCuration
+Unspecified	Unspecified	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C38046	semapv:ManualMappingCuration

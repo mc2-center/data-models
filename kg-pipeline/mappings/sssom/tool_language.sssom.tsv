@@ -1,0 +1,18 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_language.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+C	C	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000095	semapv:ManualMappingCuration
+HTML	HTML	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C142380	semapv:ManualMappingCuration
+Java	Java	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000012	semapv:ManualMappingCuration
+JavaScript	JavaScript	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000108	semapv:ManualMappingCuration
+MATLAB	MATLAB	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000005	semapv:ManualMappingCuration
+Mathematica	Mathematica	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000113	semapv:ManualMappingCuration
+Nextflow	Nextflow	skos:exactMatch	http://edamontology.org/format_4048	semapv:ManualMappingCuration
+PHP	PHP	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000116	semapv:ManualMappingCuration
+Perl	Perl	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000115	semapv:ManualMappingCuration
+PostScript	PostScript	skos:exactMatch	http://www.ebi.ac.uk/swo/data/SWO_3000024	semapv:ManualMappingCuration
+Python	Python	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000118	semapv:ManualMappingCuration
+SQL	SQL	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C54108	semapv:ManualMappingCuration

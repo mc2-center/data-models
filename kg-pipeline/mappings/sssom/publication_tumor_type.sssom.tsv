@@ -1,0 +1,132 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/publication_tumor_type.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Adenocarcinoma	Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3512	semapv:ManualMappingCuration
+Atypical Teratoid/Rhabdoid Tumor	Atypical Teratoid/Rhabdoid Tumor	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C6906	semapv:ManualMappingCuration
+B-Cell Non-Hodgkin Lymphoma	B-Cell Non-Hodgkin Lymphoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3457	semapv:ManualMappingCuration
+Barrett Esophagus	Barrett Esophagus	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2891	semapv:ManualMappingCuration
+Basal-Like Breast Carcinoma	Basal-Like Breast Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53558	semapv:ManualMappingCuration
+Biliary Tract Carcinoma	Biliary Tract Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156781	semapv:ManualMappingCuration
+Bladder Carcinoma	Bladder Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4912	semapv:ManualMappingCuration
+Bladder Neoplasm	Bladder Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2901	semapv:ManualMappingCuration
+Bone Neoplasm	Bone Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9343	semapv:ManualMappingCuration
+Brain Neoplasm	Brain Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2907	semapv:ManualMappingCuration
+Breast Adenocarcinoma	Breast Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C5214	semapv:ManualMappingCuration
+Breast Carcinoma	Breast Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4872	semapv:ManualMappingCuration
+Breast Neoplasm	Breast Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2910	semapv:ManualMappingCuration
+Carcinoma In Situ	Carcinoma In Situ	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2917	semapv:ManualMappingCuration
+Castration-Resistant Prostate Carcinoma	Castration-Resistant Prostate Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C130234	semapv:ManualMappingCuration
+Cellular Schwannoma	Cellular Schwannoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4724	semapv:ManualMappingCuration
+Central Nervous System Cavernous Hemangioma	Central Nervous System Cavernous Hemangioma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C84621	semapv:ManualMappingCuration
+Central Nervous System Neoplasm	Central Nervous System Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9293	semapv:ManualMappingCuration
+Cerebellar Neoplasm	Cerebellar Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2935	semapv:ManualMappingCuration
+Cervical Carcinoma	Cervical Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9039	semapv:ManualMappingCuration
+Cervical Neoplasm	Cervical Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2940	semapv:ManualMappingCuration
+Clear Cell Renal Cell Carcinoma	Clear Cell Renal Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4033	semapv:ManualMappingCuration
+Colon Adenocarcinoma	Colon Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4349	semapv:ManualMappingCuration
+Colon Carcinoma	Colon Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4910	semapv:ManualMappingCuration
+Colorectal Adenocarcinoma	Colorectal Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C5105	semapv:ManualMappingCuration
+Colorectal Adenoma	Colorectal Adenoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C5673	semapv:ManualMappingCuration
+Colorectal Carcinoma	Colorectal Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2955	semapv:ManualMappingCuration
+Colorectal Neoplasm	Colorectal Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2956	semapv:ManualMappingCuration
+Cutaneous Melanoma	Cutaneous Melanoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3510	semapv:ManualMappingCuration
+Ductal Breast Carcinoma In Situ	Ductal Breast Carcinoma In Situ	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2924	semapv:ManualMappingCuration
+Dysembryoplastic Neuroepithelial Neoplasm	Dysembryoplastic Neuroepithelial Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9505	semapv:ManualMappingCuration
+Endometrial Carcinoma	Endometrial Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7558	semapv:ManualMappingCuration
+Endometrial Neoplasm	Endometrial Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3012	semapv:ManualMappingCuration
+Ependymoma	Ependymoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3017	semapv:ManualMappingCuration
+Esophageal Adenocarcinoma	Esophageal Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4025	semapv:ManualMappingCuration
+Esophageal Carcinoma	Esophageal Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3513	semapv:ManualMappingCuration
+Esophageal Squamous Cell Carcinoma	Esophageal Squamous Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4024	semapv:ManualMappingCuration
+Extraventricular Neurocytoma	Extraventricular Neurocytoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C92555	semapv:ManualMappingCuration
+Fibroepithelial Polyp	Fibroepithelial Polyp	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3337	semapv:ManualMappingCuration
+Gallbladder Carcinoma	Gallbladder Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3844	semapv:ManualMappingCuration
+Gastric Adenocarcinoma	Gastric Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4004	semapv:ManualMappingCuration
+Gastric Carcinoma	Gastric Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4911	semapv:ManualMappingCuration
+Gastric Neoplasm	Gastric Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3387	semapv:ManualMappingCuration
+Gastroesophageal Adenocarcinoma	Gastroesophageal Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/DOID_0080375	semapv:ManualMappingCuration
+Gastroesophageal Junction Adenocarcinoma	Gastroesophageal Junction Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9296	semapv:ManualMappingCuration
+Gastrointestinal Stromal Neoplasm	Gastrointestinal Stromal Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3868	semapv:ManualMappingCuration
+Giant Cell Tumor	Giant Cell Tumor	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3055	semapv:ManualMappingCuration
+Head and Neck Carcinoma	Head and Neck Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3077	semapv:ManualMappingCuration
+Head and Neck Neoplasm	Head and Neck Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3077	semapv:ManualMappingCuration
+Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C34447	semapv:ManualMappingCuration
+High Grade Ovarian Serous Adenocarcinoma	High Grade Ovarian Serous Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C105555	semapv:ManualMappingCuration
+Intestinal Neoplasm	Intestinal Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3141	semapv:ManualMappingCuration
+Intrahepatic Cholangiocarcinoma	Intrahepatic Cholangiocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C35417	semapv:ManualMappingCuration
+Invasive Ductal Breast Carcinoma	Invasive Ductal Breast Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4194	semapv:ManualMappingCuration
+Liver and Intrahepatic Bile Duct Carcinoma	Liver and Intrahepatic Bile Duct Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7927	semapv:ManualMappingCuration
+Liver and Intrahepatic Bile Duct Neoplasm	Liver and Intrahepatic Bile Duct Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7103	semapv:ManualMappingCuration
+Low Grade Glioma	Low Grade Glioma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C132067	semapv:ManualMappingCuration
+Luminal A Breast Carcinoma	Luminal A Breast Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53554	semapv:ManualMappingCuration
+Lung Adenocarcinoma	Lung Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3512	semapv:ManualMappingCuration
+Lung Carcinoma	Lung Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4878	semapv:ManualMappingCuration
+Lung Neoplasm	Lung Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3200	semapv:ManualMappingCuration
+Lung Non-Small Cell Carcinoma	Lung Non-Small Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2926	semapv:ManualMappingCuration
+Lung Small Cell Carcinoma	Lung Small Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4917	semapv:ManualMappingCuration
+Lung Squamous Cell Carcinoma	Lung Squamous Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3493	semapv:ManualMappingCuration
+Malignant Brain Neoplasm	Malignant Brain Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3568	semapv:ManualMappingCuration
+Malignant Digestive System Neoplasm	Malignant Digestive System Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4890	semapv:ManualMappingCuration
+Malignant Genitourinary System Neoplasm	Malignant Genitourinary System Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156484	semapv:ManualMappingCuration
+Malignant Glioma	Malignant Glioma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4822	semapv:ManualMappingCuration
+Malignant Neoplasm	Malignant Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9305	semapv:ManualMappingCuration
+Malignant Ovarian Neoplasm	Malignant Ovarian Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7431	semapv:ManualMappingCuration
+Malignant Pancreatic Neoplasm	Malignant Pancreatic Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9005	semapv:ManualMappingCuration
+Malignant Peripheral Nerve Sheath Tumor	Malignant Peripheral Nerve Sheath Tumor	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3798	semapv:ManualMappingCuration
+Malignant Skin Neoplasm	Malignant Skin Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2920	semapv:ManualMappingCuration
+Melanoma	Melanoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3510	semapv:ManualMappingCuration
+Myeloid Leukemia	Myeloid Leukemia	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3172	semapv:ManualMappingCuration
+Myeloid Neoplasm	Myeloid Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9290	semapv:ManualMappingCuration
+Myeloproliferative Neoplasm	Myeloproliferative Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4345	semapv:ManualMappingCuration
+Nasopharyngeal Carcinoma	Nasopharyngeal Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3871	semapv:ManualMappingCuration
+Neuroendocrine Neoplasm	Neuroendocrine Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3809	semapv:ManualMappingCuration
+Neuroepithelial Neoplasm	Neuroepithelial Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3787	semapv:ManualMappingCuration
+Neurofibroma	Neurofibroma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3272	semapv:ManualMappingCuration
+Non-Functioning Pituitary Gland Adenoma	Non-Functioning Pituitary Gland Adenoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4348	semapv:ManualMappingCuration
+Not Applicable	Not Applicable	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C48660	semapv:ManualMappingCuration
+Oral Cavity Neoplasm	Oral Cavity Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7606	semapv:ManualMappingCuration
+Oral Cavity Squamous Cell Carcinoma	Oral Cavity Squamous Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4833	semapv:ManualMappingCuration
+Oropharyngeal Neoplasm	Oropharyngeal Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3291	semapv:ManualMappingCuration
+Ovarian Adenosarcoma	Ovarian Adenosarcoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7317	semapv:ManualMappingCuration
+Ovarian Carcinoma	Ovarian Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4908	semapv:ManualMappingCuration
+Ovarian Neoplasm	Ovarian Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4984	semapv:ManualMappingCuration
+Ovarian Serous Adenocarcinoma	Ovarian Serous Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7550	semapv:ManualMappingCuration
+Pancreatic Adenocarcinoma	Pancreatic Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C8294	semapv:ManualMappingCuration
+Pancreatic Carcinoma	Pancreatic Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C207229	semapv:ManualMappingCuration
+Pancreatic Ductal Adenocarcinoma	Pancreatic Ductal Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9120	semapv:ManualMappingCuration
+Pancreatic Neoplasm	Pancreatic Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3305	semapv:ManualMappingCuration
+Pancreatic Neuroendocrine Carcinoma	Pancreatic Neuroendocrine Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3770	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Penile Carcinoma	Penile Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9061	semapv:ManualMappingCuration
+Pituitary Gland Adenoma	Pituitary Gland Adenoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3329	semapv:ManualMappingCuration
+Plasmacytoma	Plasmacytoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9349	semapv:ManualMappingCuration
+Plexiform Schwannoma	Plexiform Schwannoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C6969	semapv:ManualMappingCuration
+Primary Central Nervous System Lymphoma	Primary Central Nervous System Lymphoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9301	semapv:ManualMappingCuration
+Primary Myelofibrosis	Primary Myelofibrosis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2862	semapv:ManualMappingCuration
+Prostate Adenocarcinoma	Prostate Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2919	semapv:ManualMappingCuration
+Prostate Carcinoma	Prostate Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4863	semapv:ManualMappingCuration
+Prostate Neoplasm	Prostate Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3343	semapv:ManualMappingCuration
+Rectal Adenocarcinoma	Rectal Adenocarcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C9383	semapv:ManualMappingCuration
+Renal Cell Carcinoma	Renal Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4033	semapv:ManualMappingCuration
+Retinoblastoma	Retinoblastoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7541	semapv:ManualMappingCuration
+Rosette-Forming Glioneuronal Tumor	Rosette-Forming Glioneuronal Tumor	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C129431	semapv:ManualMappingCuration
+Salivary Gland Adenoid Cystic Carcinoma	Salivary Gland Adenoid Cystic Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C8026	semapv:ManualMappingCuration
+Schwannoma	Schwannoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3269	semapv:ManualMappingCuration
+Serous Tubal Intraepithelial Carcinoma	Serous Tubal Intraepithelial Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C126449	semapv:ManualMappingCuration
+Sinonasal Squamous Cell Carcinoma	Sinonasal Squamous Cell Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C68611	semapv:ManualMappingCuration
+Skin Carcinoma	Skin Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4914	semapv:ManualMappingCuration
+Skin Neoplasm	Skin Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3372	semapv:ManualMappingCuration
+Synovial Sarcoma	Synovial Sarcoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3400	semapv:ManualMappingCuration
+T Acute Lymphoblastic Leukemia	T Acute Lymphoblastic Leukemia	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3183	semapv:ManualMappingCuration
+Testicular Embryonal Carcinoma	Testicular Embryonal Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C6341	semapv:ManualMappingCuration
+Thyroid Gland Anaplastic Carcinoma	Thyroid Gland Anaplastic Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3878	semapv:ManualMappingCuration
+Thyroid Gland Carcinoma	Thyroid Gland Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C4815	semapv:ManualMappingCuration
+Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features	Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C126598	semapv:ManualMappingCuration
+Triple-Negative Breast Carcinoma	Triple-Negative Breast Carcinoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C71732	semapv:ManualMappingCuration
+Uterine Adenosarcoma	Uterine Adenosarcoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C6336	semapv:ManualMappingCuration
+Uveal Melanoma	Uveal Melanoma	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7712	semapv:ManualMappingCuration
+Uveal Neoplasm	Uveal Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C3436	semapv:ManualMappingCuration
+Vascular Neoplasm	Vascular Neoplasm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C7388	semapv:ManualMappingCuration

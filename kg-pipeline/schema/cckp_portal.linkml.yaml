@@ -1,0 +1,541 @@
+# Hand-authored LinkML schema for the Cancer Complexity Knowledge Portal
+# (CCKP) discovery-layer tables. Sources:
+#   - column names + EXACT Synapse column types (STRING vs STRING_LIST vs
+#     INTEGER vs BOOLEAN, which drives `multivalued`/`range` below): live
+#     introspection via `synapseclient.Synapse.getTableColumns(synId)`
+#     against the 5 confirmed View tables. Cardinality here is ground truth,
+#     not inferred - and several columns are surprising: e.g. Dataset's
+#     grantNumber/grantName/pubMedId/publicationTitle/consortium/dataType
+#     are all STRING_LIST (multivalued) despite having no MC2-model array
+#     analog, while Publication's authors/keywords/dataset and Tool's
+#     license/linkType/toolEntityName/toolEntityType/toolEntityRole are
+#     scalar STRING despite superficially looking list-like. Don't
+#     "correct" these against intuition without re-checking the live table.
+#   - column descriptions: ~/.claude/skills/cckp-search/references/field_reference.md
+#   - controlled-vocabulary reuse: slots with an `mc2_enum` annotation reuse
+#     the enum of the same name generated into mc2_model.linkml.yaml (which
+#     already carries `meaning:` ontology CURIEs from the MC2 CV CSVs) —
+#     see modules/mapping.yaml for the attribute -> CV-file crosswalk this
+#     was derived from. This is intentionally NOT a hard `range:` constraint
+#     because real portal values can drift from the curated MC2 term list;
+#     matching happens at harmonization time (scripts/harmonize.py).
+#   - `cckp_join` annotation marks a slot as a foreign-key-style join to
+#     another in-scope class, used by scripts/build_triples.py to emit
+#     object-property edges instead of (or in addition to) literal triples.
+#     Note the cardinality mismatch this implies in a couple of places -
+#     e.g. Dataset.pubMedId is a STRING_LIST but Publication.pubMedId is a
+#     scalar INTEGER - so a join has to iterate the list side and
+#     string-coerce the scalar side; documented again at point of use in
+#     build_triples.py.
+#
+# v1 scope: Dataset, Publication, Tool, Grant, EducationalResource.
+# Person/PersonView is deliberately out of scope (unconfirmed table ID +
+# consent-gating logic per cckp-search's own docs) - a documented follow-up.
+# StudyKey/PersonViewKey-style relationships from the MC2 model are not
+# represented here since Study/Person aren't extracted in v1.
+id: https://w3id.org/mc2-center/cckp-portal
+name: cckp_portal
+description: >-
+  LinkML schema for the public discovery-layer entities of the Cancer
+  Complexity Knowledge Portal (CCKP), as queried from their backing Synapse
+  View tables. Reuses controlled-vocabulary enums from the MC2 Center data
+  model (mc2_model.linkml.yaml) wherever a CCKP column corresponds to an
+  MC2-governed attribute, so ontology IRI mappings are inherited rather than
+  redefined.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cckp: https://w3id.org/mc2-center/cckp-portal/
+  mc2: https://w3id.org/mc2-center/mc2-model/
+default_prefix: cckp
+default_range: string
+imports:
+  - linkml:types
+  - mc2_model.linkml
+
+classes:
+  Dataset:
+    description: A CCKP Dataset record (DatasetView, syn21897968).
+    tree_root: true
+    attributes:
+      datasetId:
+        identifier: true
+        description: Internal Synapse entity identifier for the dataset row (Synapse type ENTITYID).
+      datasetName:
+        required: true
+        description: Display name of the dataset.
+      datasetAlias:
+        description: Short alias used elsewhere in the portal (e.g. as a join key from Publication/Tool).
+      description:
+        description: Free-text summary of the dataset.
+      overallDesign:
+        description: Free-text description of the dataset's experimental design.
+      fileFormats:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset File Formats Enum"
+        description: File format(s) included in the dataset.
+      assay:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Assay Enum"
+        description: Assay type(s) used to generate the dataset. Best filter column.
+      species:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Species Enum"
+        description: Species the dataset's specimens were derived from. Best filter column.
+      tissue:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Tissue Enum"
+        description: Tissue type(s) represented in the dataset. Best filter column.
+      theme:
+        multivalued: true
+        description: Research theme(s) associated via the funding grant.
+      tumorType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Tumor Type Enum"
+        description: Tumor type(s) represented in the dataset. Best filter column.
+      consortium:
+        multivalued: true
+        description: Consortium/consortia the dataset was produced under.
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the dataset.
+      grantName:
+        multivalued: true
+        description: Display name(s) of the funding grant(s) (denormalized from Grant).
+      pubMedId:
+        multivalued: true
+        annotations:
+          cckp_join: "Publication.pubMedId"
+        description: PubMed ID(s) of associated publication(s), if any.
+      publicationTitle:
+        multivalued: true
+        description: Title(s) of associated publication(s) (denormalized from Publication).
+      externalLink:
+        description: External URL to the dataset.
+      doi:
+        description: DOI of the dataset.
+      dataType:
+        multivalued: true
+        description: Broad data-type category label(s).
+      version:
+        range: integer
+        description: Dataset version number.
+      accessInformation:
+        multivalued: true
+        description: Free-text access information/instructions.
+      sourceRepository:
+        description: Name of the repository the dataset is hosted in.
+      downloadType:
+        description: Type of download offered (e.g. direct file, request-access).
+      downloadSynId:
+        description: Synapse ID of the downloadable entity.
+
+  Publication:
+    description: A CCKP Publication record (PublicationView, syn21868591).
+    tree_root: true
+    attributes:
+      pubMedId:
+        range: integer
+        description: >-
+          PubMed ID (scalar - note Dataset/Tool/EducationalResource's
+          pubMedId/publicationId columns are list- or single-valued joins
+          *to* this, not always a matching type; build_triples.py
+          string-coerces both sides when joining). Used as the practical
+          identifying key for v1 since no confirmed-live unique row-ID
+          column is documented for this table; not declared as a LinkML
+          `identifier` because it can be blank for preprints/non-indexed
+          works - scripts/build_triples.py falls back to a synthesized ID
+          (hash of title+doi) when absent.
+      publicationTitle:
+        required: true
+        description: Title of the publication.
+      authors:
+        description: Author list, as a single free-text field (not a Synapse list column).
+      journal:
+        description: Journal name.
+      publicationYear:
+        range: integer
+        description: Year of publication.
+      pubMedUrl:
+        description: Resolvable PubMed URL.
+      pubMedLink:
+        description: Alternate PubMed link field.
+      doi:
+        description: DOI of the publication.
+      keywords:
+        description: Free-text/author-supplied keywords, as a single free-text field.
+      abstract:
+        description: Publication abstract.
+      assay:
+        multivalued: true
+        annotations:
+          mc2_enum: "Publication Assay Enum"
+        description: Assay type(s) studied in the publication. Best filter column.
+      tumorType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Publication Tumor Type Enum"
+        description: Tumor type(s) studied in the publication. Best filter column.
+      tissue:
+        multivalued: true
+        annotations:
+          mc2_enum: "Publication Tissue Enum"
+        description: Tissue type(s) studied in the publication.
+      theme:
+        multivalued: true
+        description: Research theme(s) associated via the funding grant.
+      consortium:
+        multivalued: true
+        description: Consortium/consortia the publication was produced under.
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Publication Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the underlying work.
+      grantName:
+        multivalued: true
+        description: Display name(s) of the funding grant(s) (denormalized from Grant).
+      dataset:
+        annotations:
+          cckp_join: "Dataset.datasetAlias"
+        description: Dataset alias associated with this publication (scalar).
+      accessibility:
+        annotations:
+          mc2_enum: "Publication Accessibility Enum"
+        description: Accessibility status of the publication (e.g. open access).
+      dataType:
+        multivalued: true
+        description: Broad data-type category label(s).
+
+  Tool:
+    description: A CCKP Tool record (ToolView, syn26127427).
+    tree_root: true
+    attributes:
+      toolName:
+        required: true
+        description: >-
+          Name of the tool. Used as the practical identifying key for v1 -
+          see Publication.pubMedId note re: no confirmed unique row-ID
+          column; build_triples.py falls back to a synthesized ID on
+          collision.
+      description:
+        description: Free-text description of the tool.
+      homepage:
+        description: Tool homepage URL.
+      version:
+        description: Tool version string.
+      operation:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Operation Enum"
+        description: Bioinformatics operation(s) the tool performs. Best filter column.
+      inputData:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Input Data Enum"
+        description: Input data type(s) accepted.
+      outputData:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Output Data Enum"
+        description: Output data type(s) produced.
+      inputFormat:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Input Format Enum"
+        description: Input file format(s) accepted.
+      outputFormat:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Output Format Enum"
+        description: Output file format(s) produced.
+      functionNote:
+        description: Free-text note on tool function.
+      cmd:
+        description: Example invocation command.
+      toolType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Type Enum"
+        description: Type(s) of tool (e.g. command-line, web service).
+      topic:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Topic Enum"
+        description: Scientific topic(s) the tool addresses. Best filter column.
+      operatingSystem:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Operating System Enum"
+        description: Supported operating system(s).
+      language:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Language Enum"
+        description: Programming language(s) the tool is written in. Best filter column.
+      license:
+        annotations:
+          mc2_enum: "Tool License Enum"
+        description: Software license the tool is released under (scalar - one license per tool row).
+      cost:
+        annotations:
+          mc2_enum: "Tool Cost Enum"
+        description: Cost category of the tool.
+      accessibility:
+        annotations:
+          mc2_enum: "Tool Accessibility Enum"
+        description: Accessibility status of the tool.
+      downloadUrl:
+        description: Direct download URL.
+      downloadLink:
+        description: Alternate download link field.
+      downloadType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Download Type Enum"
+        description: Type(s) of download offered.
+      downloadNote:
+        description: Free-text note on download/installation.
+      downloadVersion:
+        description: Version string of the downloadable artifact.
+      documentationUrl:
+        description: URL to tool documentation.
+      documentationType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Documentation Type Enum"
+        description: Type(s) of documentation available.
+      documentationNote:
+        description: Free-text documentation note.
+      linkUrl:
+        description: Generic related-link URL.
+      linkType:
+        annotations:
+          mc2_enum: "Tool Link Type Enum"
+        description: Type of the related link (scalar).
+      linkNote:
+        description: Free-text note on the related link.
+      portalDisplay:
+        range: boolean
+        description: Whether the tool is flagged for display on the portal.
+      doi:
+        description: DOI of the tool, if any.
+      synapseLink:
+        description: Link to the tool's Synapse entity.
+      toolDateLastModified:
+        description: Date the tool was last modified.
+      toolReleaseDate:
+        description: Date of the tool's release.
+      toolPackageDependencies:
+        description: Free-text package dependencies (no controlled vocabulary, scalar).
+      toolPackageDependenciesPresent:
+        range: boolean
+        annotations:
+          mc2_enum: "Tool Package Dependencies Present Enum"
+        description: Whether package dependency information is present.
+      toolComputeRequirements:
+        description: Free-text compute requirements (no controlled vocabulary, scalar).
+      toolEntityName:
+        description: Name of a related Synapse entity (no controlled vocabulary, scalar).
+      toolEntityType:
+        annotations:
+          mc2_enum: "Tool Entity Type Enum"
+        description: Type of the related Synapse entity (scalar).
+      toolEntityRole:
+        annotations:
+          mc2_enum: "Tool Entity Role Enum"
+        description: Role of the related Synapse entity relative to the tool (scalar).
+      dataType:
+        multivalued: true
+        description: Broad data-type category label(s).
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the tool's development.
+      consortium:
+        multivalued: true
+        description: Consortium/consortia the tool was produced under.
+      theme:
+        multivalued: true
+        description: Research theme(s) associated via the funding grant.
+      pubMedId:
+        multivalued: true
+        annotations:
+          cckp_join: "Publication.pubMedId"
+        description: PubMed ID(s) of associated publication(s) describing the tool.
+      datasets:
+        multivalued: true
+        annotations:
+          cckp_join: "Dataset.datasetAlias"
+        description: Dataset alias(es) the tool operates on or was demonstrated with.
+
+  Grant:
+    description: A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes.
+    tree_root: true
+    attributes:
+      grantId:
+        identifier: true
+        description: Internal Synapse entity identifier for the grant row (Synapse type ENTITYID).
+      grantViewId:
+        description: Secondary internal identifier field, if distinct from grantId.
+      grantName:
+        required: true
+        description: Display name of the grant.
+      grantNumber:
+        description: Grant number (scalar here) - the natural join key used by Dataset/Publication/Tool/EducationalResource's (list-valued) grantNumber columns.
+      abstract:
+        description: Grant abstract.
+      grantType:
+        annotations:
+          mc2_enum: "Grant Type Enum"
+        description: Type of grant mechanism.
+      theme:
+        multivalued: true
+        annotations:
+          mc2_enum: "Grant Theme Name Enum"
+        description: Research theme(s) the grant is associated with. Best filter column.
+      institutionAlias:
+        multivalued: true
+        annotations:
+          mc2_enum: "Grant Institution Alias Enum"
+        description: Alias(es) of the awardee institution.
+      grantInstitution:
+        multivalued: true
+        annotations:
+          mc2_enum: "Grant Institution Name Enum"
+        description: Full name(s) of the awardee institution.
+      investigator:
+        description: Principal investigator name(s), as a single free-text field (no controlled vocabulary - personal names).
+      consortium:
+        multivalued: true
+        annotations:
+          mc2_enum: "Grant Consortium Name Enum"
+        description: Consortium/consortia the grant belongs to. Best filter column.
+      grantStartDate:
+        description: Grant start date (free-text date string, not a fixed format).
+      nihReporterLink:
+        description: Link to the grant's NIH RePORTER record.
+      durationOfFunding:
+        range: integer
+        description: Duration of funding, in years.
+      embargoEndDate:
+        description: Data embargo end date, if any.
+      grantSynapseTeam:
+        description: Synapse Team ID associated with the grant.
+      grantSynapseProject:
+        description: Synapse Project ID associated with the grant.
+
+  EducationalResource:
+    description: A CCKP Educational Resource record (EducationalResource, syn51497305).
+    tree_root: true
+    attributes:
+      internalIdentifier:
+        description: >-
+          Internal identifier for the educational resource. NOT declared a
+          LinkML `identifier` - verified against live data that this column
+          is blank in 100% of current rows, despite its name. Practical
+          identifying key for v1 is `alias` (a Synapse ID), falling back to
+          `title`, then a content hash - see build_triples.py's
+          FALLBACK_ID_FIELD, same pattern as Publication.pubMedId/Tool.toolName.
+      component:
+        description: Schematic component/manifest label the record was submitted under.
+      title:
+        required: true
+        description: Title of the educational resource. (Column is `title`, not `resourceTitle`.)
+      link:
+        description: URL to the resource.
+      topic:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Topic Enum"
+        description: Primary topic(s) of the resource. Best filter column.
+      activityType:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Activity Type Enum"
+        description: Type(s) of learning activity.
+      primaryFormat:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Primary Format Enum"
+        description: Primary format of the resource.
+      intendedUse:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Intended Use Enum"
+        description: Intended use(s) of the resource.
+      primaryAudience:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Primary Audience Enum"
+        description: Intended audience(s). Best filter column.
+      educationalLevel:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Educational Level Enum"
+        description: Educational level(s) targeted. Best filter column.
+      description:
+        description: Free-text description of the resource.
+      originInstitution:
+        multivalued: true
+        description: Institution(s) of origin (no controlled vocabulary).
+      language:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Language Enum"
+        description: Language(s) the resource is presented in.
+      contributors:
+        multivalued: true
+        description: Contributor name(s) (no controlled vocabulary - personal names).
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the resource.
+      secondaryTopic:
+        multivalued: true
+        description: Secondary topic label(s) (no controlled vocabulary in the current MC2 model).
+      license:
+        annotations:
+          mc2_enum: "Resource License Enum"
+        description: License the resource is released under (scalar).
+      useRequirements:
+        description: Free-text use requirements/restrictions.
+      alias:
+        description: Short alias for the resource.
+      mediaAccessibility:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Media Accessibility Enum"
+        description: Media accessibility feature(s) provided.
+      accessHazard:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Access Hazard Enum"
+        description: Access hazard warning(s), if any.
+      datasetLink:
+        description: URL to a related dataset (a link, not a join key; scalar).
+      toolLink:
+        description: URL to a related tool (a link, not a join key; scalar).
+      doi:
+        description: DOI of the resource, if any.
+      synapseLink:
+        description: Link to the resource's Synapse entity.
+      publicationId:
+        annotations:
+          cckp_join: "Publication.pubMedId"
+        description: PubMed ID of an associated publication (scalar).
+      dataType:
+        multivalued: true
+        description: Broad data-type category label(s).

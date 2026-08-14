@@ -1,0 +1,60 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/publication_tissue.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Adrenal Gland	Adrenal Gland	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12666	semapv:ManualMappingCuration
+Blood Vessel	Blood Vessel	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12679	semapv:ManualMappingCuration
+Caecum	Caecum	skos:exactMatch	http://purl.obolibrary.org/obo/UBERON_0001153	semapv:ManualMappingCuration
+Cancer-Associated Fibroblast	Cancer-Associated Fibroblast	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C168534	semapv:ManualMappingCuration
+Cartilage	Cartilage	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12373	semapv:ManualMappingCuration
+Choroid	Choroid	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12344	semapv:ManualMappingCuration
+Cornea	Cornea	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12342	semapv:ManualMappingCuration
+Duodenum	Duodenum	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12263	semapv:ManualMappingCuration
+Embryo	Embryo	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C28147	semapv:ManualMappingCuration
+Embryonic Heart	Embryonic Heart	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C34153	semapv:ManualMappingCuration
+Endothelium	Endothelium	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12481	semapv:ManualMappingCuration
+Epithelium	Epithelium	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12710	semapv:ManualMappingCuration
+Eye	Eye	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12342	semapv:ManualMappingCuration
+Foreskin	Foreskin	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C33049	semapv:ManualMappingCuration
+Gastroesophageal Junction	Gastroesophageal Junction	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C32668	semapv:ManualMappingCuration
+Genitourinary	Genitourinary	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C25350	semapv:ManualMappingCuration
+Gonad	Gonad	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12725	semapv:ManualMappingCuration
+Hair Follicle	Hair Follicle	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13317	semapv:ManualMappingCuration
+Head and Neck	Head and Neck	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12426	semapv:ManualMappingCuration
+Heart Muscle	Heart Muscle	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12371	semapv:ManualMappingCuration
+Hippocampus	Hippocampus	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12444	semapv:ManualMappingCuration
+Joint	Joint	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13044	semapv:ManualMappingCuration
+Larynx	Larynx	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12420	semapv:ManualMappingCuration
+Ligament	Ligament	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13046	semapv:ManualMappingCuration
+Lymph	Lymph	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13252	semapv:ManualMappingCuration
+Lymphatic System	Lymphatic System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12746	semapv:ManualMappingCuration
+Lymphoid Tissue	Lymphoid Tissue	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13049	semapv:ManualMappingCuration
+Mesenchyme	Mesenchyme	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13301	semapv:ManualMappingCuration
+Mucosa	Mucosa	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13166	semapv:ManualMappingCuration
+Nervous System	Nervous System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12399	semapv:ManualMappingCuration
+Not Applicable	Not Applicable	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C48660	semapv:ManualMappingCuration
+Olfactory Mucosa	Olfactory Mucosa	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C33205	semapv:ManualMappingCuration
+Omentum	Omentum	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C33209	semapv:ManualMappingCuration
+Oral Mucosa	Oral Mucosa	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C77637	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Periodontal Ligament	Periodontal Ligament	skos:exactMatch	http://purl.obolibrary.org/obo/BTO_0001020	semapv:ManualMappingCuration
+Peripheral Blood Mononuclear Cell	Peripheral Blood Mononuclear Cell	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12954	semapv:ManualMappingCuration
+Peritoneum	Peritoneum	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12770	semapv:ManualMappingCuration
+Pharynx	Pharynx	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12425	semapv:ManualMappingCuration
+Pituitary Gland	Pituitary Gland	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12399	semapv:ManualMappingCuration
+Pleura	Pleura	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12469	semapv:ManualMappingCuration
+Reproductive System	Reproductive System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12841	semapv:ManualMappingCuration
+Respiratory System	Respiratory System	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12779	semapv:ManualMappingCuration
+Salivary Gland	Salivary Gland	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12426	semapv:ManualMappingCuration
+Sclera	Sclera	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12784	semapv:ManualMappingCuration
+Sinonasal Tract	Sinonasal Tract	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C54292	semapv:ManualMappingCuration
+Small Intestine	Small Intestine	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12263	semapv:ManualMappingCuration
+Synovial Membrane	Synovial Membrane	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12473	semapv:ManualMappingCuration
+Tendon	Tendon	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13045	semapv:ManualMappingCuration
+Tongue	Tongue	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12422	semapv:ManualMappingCuration
+Umbilical Cord	Umbilical Cord	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C34320	semapv:ManualMappingCuration
+Unspecified	Unspecified	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C38046	semapv:ManualMappingCuration
+Vagina	Vagina	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12407	semapv:ManualMappingCuration
+Vascular Endothelium	Vascular Endothelium	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C13053	semapv:ManualMappingCuration

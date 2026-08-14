@@ -1,0 +1,33 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/dataset_species.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+African Bush Elephant	African Bush Elephant	skos:exactMatch	http://purl.obolibrary.org/obo/NCBITaxon_9785	semapv:ManualMappingCuration
+Armadillo	Armadillo	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14185	semapv:ManualMappingCuration
+Asian Elephant	Asian Elephant	skos:exactMatch	http://purl.obolibrary.org/obo/NCBITaxon_9783	semapv:ManualMappingCuration
+Boar	Boar	skos:exactMatch	http://purl.obolibrary.org/obo/FOODON_00004286	semapv:ManualMappingCuration
+Cat	Cat	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14191	semapv:ManualMappingCuration
+Chicken	Chicken	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14193	semapv:ManualMappingCuration
+Cow	Cow	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14192	semapv:ManualMappingCuration
+Dog	Dog	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14201	semapv:ManualMappingCuration
+Escherichia coli	Escherichia coli	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14206	semapv:ManualMappingCuration
+Fruit Fly	Fruit Fly	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14202	semapv:ManualMappingCuration
+Guinea Pig	Guinea Pig	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14211	semapv:ManualMappingCuration
+Horse	Horse	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14222	semapv:ManualMappingCuration
+Human	Human	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14225	semapv:ManualMappingCuration
+Human Patient	Human Patient	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16960	semapv:ManualMappingCuration
+Mouse	Mouse	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14238	semapv:ManualMappingCuration
+Multispecies	Multispecies	skos:exactMatch	http://purl.obolibrary.org/obo/FBcv_0003142	semapv:ManualMappingCuration
+Not Applicable	Not Applicable	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C48660	semapv:ManualMappingCuration
+Opossum	Opossum	skos:exactMatch	http://id.nlm.nih.gov/mesh/D009893	semapv:ManualMappingCuration
+Rabbit	Rabbit	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14264	semapv:ManualMappingCuration
+Rat	Rat	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C160998	semapv:ManualMappingCuration
+Rhesus monkey	Rhesus monkey	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14233	semapv:ManualMappingCuration
+Sheep	Sheep	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14273	semapv:ManualMappingCuration
+Trichoplax adhaerens	Trichoplax adhaerens	skos:exactMatch	http://purl.obolibrary.org/obo/NCBITaxon_10228	semapv:ManualMappingCuration
+Unspecified	Unspecified	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C38046	semapv:ManualMappingCuration
+Worm	Worm	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14303	semapv:ManualMappingCuration
+Yeast	Yeast	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14286	semapv:ManualMappingCuration
+Zebrafish	Zebrafish	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C14287	semapv:ManualMappingCuration

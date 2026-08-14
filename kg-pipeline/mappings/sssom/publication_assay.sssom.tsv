@@ -1,0 +1,368 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/publication_assay.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+10-cell RNA Sequencing	10-cell RNA Sequencing	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/30894605/	semapv:ManualMappingCuration
+10x Multiome	10x Multiome	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0030059	semapv:ManualMappingCuration
+16S Ribosomal Gene Sequencing Assay	16S Ribosomal Gene Sequencing Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002763	semapv:ManualMappingCuration
+3' RNA-seq	3' RNA-seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0010188	semapv:ManualMappingCuration
+3C	3C	skos:exactMatch	https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0007689	semapv:ManualMappingCuration
+3C-qPCR	3C-qPCR	skos:exactMatch	http://purl.obolibrary.org/obo/ECO_0000237	semapv:ManualMappingCuration
+3D Bioprinting	3D Bioprinting	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/26724184/	semapv:ManualMappingCuration
+3D Cell Culture	3D Cell Culture	skos:exactMatch	http://purl.obolibrary.org/obo/MSIO_0000159	semapv:ManualMappingCuration
+4C	4C	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007690	semapv:ManualMappingCuration
+5C	5C	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007692	semapv:ManualMappingCuration
+ATAC-Seq	ATAC-Seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C156056&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+ATAC-seq	ATAC-seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C156056&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+ATP Bioluminescence Assay	ATP Bioluminescence Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002175	semapv:ManualMappingCuration
+Affinity Purification Mass Spectrometry	Affinity Purification Mass Spectrometry	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/22611051/	semapv:ManualMappingCuration
+Alcian Blue Staining Method	Alcian Blue Staining Method	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C92299&key=1182540900&b=1&n=null	semapv:ManualMappingCuration
+Allograft	Allograft	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C60701	semapv:ManualMappingCuration
+Amplicon Sequencing	Amplicon Sequencing	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0003747	semapv:ManualMappingCuration
+Antitumor Drug Screening Assay	Antitumor Drug Screening Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C15229	semapv:ManualMappingCuration
+Apoptosis Assay	Apoptosis Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001182	semapv:ManualMappingCuration
+Artificial Intelligence	Artificial Intelligence	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C16309&key=n1483307350&b=1&n=null	semapv:ManualMappingCuration
+Atomic Absorption Spectrophotometry	Atomic Absorption Spectrophotometry	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002529	semapv:ManualMappingCuration
+Atomic Absorption Spectroscopy	Atomic Absorption Spectroscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf	semapv:ManualMappingCuration
+Atomic Force Microscopy	Atomic Force Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf	semapv:ManualMappingCuration
+Autoradiography	Autoradiography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16314	semapv:ManualMappingCuration
+Barcode-Seq	Barcode-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008655	semapv:ManualMappingCuration
+Bicinchoninic Acid Assay	Bicinchoninic Acid Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002467	semapv:ManualMappingCuration
+Binding Assay	Binding Assay	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2993736/	semapv:ManualMappingCuration
+Bio-Layer Interferometry	Bio-Layer Interferometry	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002107	semapv:ManualMappingCuration
+Bioelectrochemical Analysis	Bioelectrochemical Analysis	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0002504	semapv:ManualMappingCuration
+Bioluminescence Imaging	Bioluminescence Imaging	skos:exactMatch	https://en.wikipedia.org/wiki/Bioluminescence_imaging	semapv:ManualMappingCuration
+Bisulfite Sequencing	Bisulfite Sequencing	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C106054	semapv:ManualMappingCuration
+Brightfield Microscopy	Brightfield Microscopy	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19827	semapv:ManualMappingCuration
+Brillouin Microscopy	Brillouin Microscopy	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/29771749/#:~:text=Recent%20findings%3A%20Brillouin%20microscopy%20uses,analyzing%20the%20return%20signal%20spectrum.&text=The%20technique%20enables%20physicians%20to%20characterize%20the%20biomechanical%20properties%20of%20ocular%20tissues.	semapv:ManualMappingCuration
+CASFISH	CASFISH	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/26324940/	semapv:ManualMappingCuration
+CITE-seq	CITE-seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009294	semapv:ManualMappingCuration
+CLIP-qPCR	CLIP-qPCR	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5140280/	semapv:ManualMappingCuration
+CODEX	CODEX	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C181931	semapv:ManualMappingCuration
+CUT&RUN	CUT&RUN	skos:exactMatch	https://en.wikipedia.org/wiki/CUT%26RUN_sequencing	semapv:ManualMappingCuration
+CUT&Tag-Sequencing	CUT&Tag-Sequencing	skos:exactMatch	https://en.wikipedia.org/wiki/CUT%26Tag_sequencing	semapv:ManualMappingCuration
+Cell Adhesion Assay	Cell Adhesion Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001512	semapv:ManualMappingCuration
+Cell Culture	Cell Culture	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C16396&key=n1965245771&b=1&n=null	semapv:ManualMappingCuration
+Cell Cycle Assay	Cell Cycle Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002041	semapv:ManualMappingCuration
+Cell Fractionation	Cell Fractionation	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000679	semapv:ManualMappingCuration
+Cell Proliferation Assay	Cell Proliferation Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.03e&ns=ncit&code=C116553&key=128143824&b=1&n=null	semapv:ManualMappingCuration
+Cell Viability Assay	Cell Viability Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001352	semapv:ManualMappingCuration
+Cell-free Circulating Tumor DNA Assay	Cell-free Circulating Tumor DNA Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C182622&key=n1866747733&b=1&n=null	semapv:ManualMappingCuration
+Cell-spreading Assay	Cell-spreading Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/15576905/	semapv:ManualMappingCuration
+CellTiter-Glo Luminescent Cell Viability Assay	CellTiter-Glo Luminescent Cell Viability Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0000682	semapv:ManualMappingCuration
+Cerenkov Luminescence Imaging	Cerenkov Luminescence Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C151895	semapv:ManualMappingCuration
+ChIA-PET	ChIA-PET	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C172845&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+ChIP-PCR	ChIP-PCR	skos:exactMatch	https://www.cellsignal.com/applications/chip-and-chip-seq/regulation-expression-in-cell-and-tissue	semapv:ManualMappingCuration
+ChIP-Seq	ChIP-Seq	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.03e&ns=ncit&code=C106048&key=1636610306&b=1&n=null	semapv:ManualMappingCuration
+ChIP-qPCR assay	ChIP-qPCR assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002169	semapv:ManualMappingCuration
+ChIP-seq	ChIP-seq	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.03e&ns=ncit&code=C106048&key=1636610306&b=1&n=null	semapv:ManualMappingCuration
+Chemiluminescent Assay	Chemiluminescent Assay	skos:exactMatch	https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5483212/	semapv:ManualMappingCuration
+Chemotaxis Assay	Chemotaxis Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0010269	semapv:ManualMappingCuration
+Chimeric Antigen Receptor T-Cell Therapy	Chimeric Antigen Receptor T-Cell Therapy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C126102	semapv:ManualMappingCuration
+Circular Dichroism Spectroscopy	Circular Dichroism Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000323	semapv:ManualMappingCuration
+Clinical Study	Clinical Study	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C71104&key=n620723826&b=1&n=null	semapv:ManualMappingCuration
+Clonality Analysis	Clonality Analysis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C63327	semapv:ManualMappingCuration
+Co-Immunoprecipitation	Co-Immunoprecipitation	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/message.jsf	semapv:ManualMappingCuration
+Co-culture Assay	Co-culture Assay	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4032528/	semapv:ManualMappingCuration
+Collision-Induced Dissociation	Collision-Induced Dissociation	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48061	semapv:ManualMappingCuration
+Colorimetric Cell Viability Assay	Colorimetric Cell Viability Assay	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95027	semapv:ManualMappingCuration
+Comet Assay	Comet Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C96515&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Comparative Genomic Hybridization	Comparative Genomic Hybridization	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18084	semapv:ManualMappingCuration
+Computational Modeling	Computational Modeling	skos:exactMatch	http://id.nlm.nih.gov/mesh/D012984	semapv:ManualMappingCuration
+Computational Tool	Computational Tool	skos:exactMatch	http://id.nlm.nih.gov/mesh/D012984	semapv:ManualMappingCuration
+Computed Tomography	Computed Tomography	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.03e&ns=ncit&code=C17204&key=370655652&b=1&n=null	semapv:ManualMappingCuration
+Confocal Microscopy	Confocal Microscopy	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf	semapv:ManualMappingCuration
+Confocal Reflectance Quantitative Phase Microscopy	Confocal Reflectance Quantitative Phase Microscopy	skos:exactMatch	http://id.nlm.nih.gov/mesh/D000097913	semapv:ManualMappingCuration
+Cross-Linking Immunoprecipitation High-throughput Sequencing	Cross-Linking Immunoprecipitation High-throughput Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C116152&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Cross-Linking Mass Spectrometry	Cross-Linking Mass Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/PRIDE_0000430	semapv:ManualMappingCuration
+Cryo-Electron Microscopy	Cryo-Electron Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18113	semapv:ManualMappingCuration
+Cryo-Electron Tomography	Cryo-Electron Tomography	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/33020915/	semapv:ManualMappingCuration
+Cyclic Immunofluorescence	Cyclic Immunofluorescence	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/27925668/	semapv:ManualMappingCuration
+Cytochemical Stain	Cytochemical Stain	skos:exactMatch	https://uts.nlm.nih.gov/uts/umls/concept/C4511272	semapv:ManualMappingCuration
+Cytokine Expression Profile	Cytokine Expression Profile	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.03e&ns=ncit&code=C129886&key=n2078435665&b=1&n=null	semapv:ManualMappingCuration
+Cytometric Bead Array Assay	Cytometric Bead Array Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000920	semapv:ManualMappingCuration
+Cytotoxicity Assay	Cytotoxicity Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002993	semapv:ManualMappingCuration
+DBiT-Seq	DBiT-Seq	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/33188776/	semapv:ManualMappingCuration
+DNA Gene-Expression Microarray	DNA Gene-Expression Microarray	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93207	semapv:ManualMappingCuration
+DNA Methylation Array	DNA Methylation Array	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/message.jsf	semapv:ManualMappingCuration
+DNA Sequencing	DNA Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.04d&code=C153598&ns=ncit&type=properties&key=n1129370290&b=1&n=0&vse=null	semapv:ManualMappingCuration
+DNase-Seq	DNase-Seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C106052	semapv:ManualMappingCuration
+Dark Field Microscopy	Dark Field Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C85837	semapv:ManualMappingCuration
+Data Integration	Data Integration	skos:exactMatch	http://purl.obolibrary.org/obo/T4FS_0000487	semapv:ManualMappingCuration
+Deep Learning	Deep Learning	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/message.jsf	semapv:ManualMappingCuration
+Desorption Electrospray Ionization	Desorption Electrospray Ionization	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001660	semapv:ManualMappingCuration
+Dideoxy Chain Termination DNA Sequencing	Dideoxy Chain Termination DNA Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19641	semapv:ManualMappingCuration
+Differential Interference Contrast Microscopy	Differential Interference Contrast Microscopy	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002511	semapv:ManualMappingCuration
+Differential Scanning Fluorimetry	Differential Scanning Fluorimetry	skos:exactMatch	https://www.nature.com/articles/nprot.2007.321	semapv:ManualMappingCuration
+Diffusion Weighted Imaging	Diffusion Weighted Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111116	semapv:ManualMappingCuration
+Direct Long-Read RNA Sequencing	Direct Long-Read RNA Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002629	semapv:ManualMappingCuration
+Drop-Seq	Drop-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008722	semapv:ManualMappingCuration
+Droplet Digital PCR	Droplet Digital PCR	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C166064	semapv:ManualMappingCuration
+Dual-Luciferase Reporter Assay	Dual-Luciferase Reporter Assay	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1214206/	semapv:ManualMappingCuration
+Dynamic Contrast-Enhanced Magnetic Resonance Imaging	Dynamic Contrast-Enhanced Magnetic Resonance Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62665	semapv:ManualMappingCuration
+Dynamic Force Spectroscopy	Dynamic Force Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001122	semapv:ManualMappingCuration
+Dynamic Light Scattering	Dynamic Light Scattering	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62329	semapv:ManualMappingCuration
+Dynamic Susceptibility Contrast-Enhanced Magnetic Resonance Imaging	Dynamic Susceptibility Contrast-Enhanced Magnetic Resonance Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116453	semapv:ManualMappingCuration
+ELISA	ELISA	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16553	semapv:ManualMappingCuration
+Efferocytosis Assay	Efferocytosis Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/27815871/	semapv:ManualMappingCuration
+Electron Diffraction	Electron Diffraction	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000142	semapv:ManualMappingCuration
+Electron Microscopy	Electron Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16854	semapv:ManualMappingCuration
+Electron Paramagnetic Resonance Spectroscopy	Electron Paramagnetic Resonance Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001093	semapv:ManualMappingCuration
+Electrophoretic Mobility Shift Assay	Electrophoretic Mobility Shift Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19362	semapv:ManualMappingCuration
+Electrospray Ionization Time-of-Flight Mass Spectrometry	Electrospray Ionization Time-of-Flight Mass Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000736	semapv:ManualMappingCuration
+Endotoxin Assay	Endotoxin Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C223372	semapv:ManualMappingCuration
+Energy-Dispersive X-Ray Spectroscopy	Energy-Dispersive X-Ray Spectroscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78869	semapv:ManualMappingCuration
+Enzyme Activity Assay	Enzyme Activity Assay	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000444	semapv:ManualMappingCuration
+Enzyme-Linked Immunospot Assay	Enzyme-Linked Immunospot Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0600031	semapv:ManualMappingCuration
+Epidemiological Method	Epidemiological Method	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16555	semapv:ManualMappingCuration
+Exome Sequencing	Exome Sequencing	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101295	semapv:ManualMappingCuration
+FAIRE-Seq	FAIRE-Seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C106051	semapv:ManualMappingCuration
+FISH	FISH	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17563	semapv:ManualMappingCuration
+Field-Emission Scanning Electron Microscopy	Field-Emission Scanning Electron Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000074	semapv:ManualMappingCuration
+Flow Cytometry	Flow Cytometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16585	semapv:ManualMappingCuration
+Fluorescence Activated Cell Sorting	Fluorescence Activated Cell Sorting	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C17353&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Fluorescence Correlation Spectroscopy	Fluorescence Correlation Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000288	semapv:ManualMappingCuration
+Fluorescence Imaging	Fluorescence Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C116489&ns=ncit&type=properties&key=n615214545&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Fluorescence Lifetime Imaging Microscopy	Fluorescence Lifetime Imaging Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154786	semapv:ManualMappingCuration
+Fluorescence Microscopy	Fluorescence Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16856	semapv:ManualMappingCuration
+Fluorescence Recovery After Photo-Bleaching	Fluorescence Recovery After Photo-Bleaching	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000065	semapv:ManualMappingCuration
+Fluorescent Antibody Procedure	Fluorescent Antibody Procedure	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17370	semapv:ManualMappingCuration
+Fluorescent Cell Barcoding	Fluorescent Cell Barcoding	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/33960644/	semapv:ManualMappingCuration
+Fluorescent In Situ Sequencing	Fluorescent In Situ Sequencing	skos:exactMatch	https://en.wikipedia.org/wiki/Fluorescent_in_situ_sequencing	semapv:ManualMappingCuration
+Focused Ion Beam Scanning Electron Microscopy	Focused Ion Beam Scanning Electron Microscopy	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/24707797/	semapv:ManualMappingCuration
+Forster Resonance Energy Transfer	Forster Resonance Energy Transfer	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000062	semapv:ManualMappingCuration
+Fourier Transform Ion Cyclotron Resonance Mass Spectrometry	Fourier Transform Ion Cyclotron Resonance Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116571	semapv:ManualMappingCuration
+Fourier-Transform Infrared Spectroscopy	Fourier-Transform Infrared Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000636	semapv:ManualMappingCuration
+Gas Chromatography Mass Spectrometry	Gas Chromatography Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111203	semapv:ManualMappingCuration
+Gelatin Zymography	Gelatin Zymography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19835	semapv:ManualMappingCuration
+Gene Ontology Enrichment Analysis	Gene Ontology Enrichment Analysis	skos:exactMatch	https://geneontology.org/docs/go-enrichment-analysis/	semapv:ManualMappingCuration
+Gene Set Enrichment Analysis	Gene Set Enrichment Analysis	skos:exactMatch	https://www.gsea-msigdb.org/gsea/index.jsp	semapv:ManualMappingCuration
+Gene Silencing	Gene Silencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C39200&key=n1874356328&b=1&n=null	semapv:ManualMappingCuration
+Genotyping	Genotyping	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C45447	semapv:ManualMappingCuration
+Global Chromatin Profiling	Global Chromatin Profiling	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002961	semapv:ManualMappingCuration
+Global Run-On Sequencing	Global Run-On Sequencing	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0005227	semapv:ManualMappingCuration
+Graphite Furnace Atomic Absorption Spectrometry	Graphite Furnace Atomic Absorption Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000239	semapv:ManualMappingCuration
+HL-Chip	HL-Chip	skos:exactMatch	https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7583657/	semapv:ManualMappingCuration
+HPLC-MSMS	HPLC-MSMS	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C120691	semapv:ManualMappingCuration
+Hematoxylin and Eosin Staining Method	Hematoxylin and Eosin Staining Method	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C23011	semapv:ManualMappingCuration
+Hi-C	Hi-C	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007693	semapv:ManualMappingCuration
+HiChIP	HiChIP	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C179435	semapv:ManualMappingCuration
+High Throughput Screening	High Throughput Screening	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18472	semapv:ManualMappingCuration
+High-Content Screen	High-Content Screen	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007550	semapv:ManualMappingCuration
+Hydrogels	Hydrogels	skos:exactMatch	https://en.wikipedia.org/wiki/Hydrogel	semapv:ManualMappingCuration
+Hydrophilic Interaction Chromatography	Hydrophilic Interaction Chromatography	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0002262	semapv:ManualMappingCuration
+Image Cytometry	Image Cytometry	skos:exactMatch	http://id.nlm.nih.gov/mesh/D019044	semapv:ManualMappingCuration
+Imaging	Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17369	semapv:ManualMappingCuration
+Imaging Mass Cytometry	Imaging Mass Cytometry	skos:exactMatch	https://www.nature.com/articles/s43018-021-00301-w	semapv:ManualMappingCuration
+Immobilized Metal Affinity Chromatography	Immobilized Metal Affinity Chromatography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C161789	semapv:ManualMappingCuration
+ImmunoFISH	ImmunoFISH	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0011016	semapv:ManualMappingCuration
+Immunoassay	Immunoassay	skos:exactMatch	https://www.ebi.ac.uk/ols/ontologies/mmo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMMO_0000098	semapv:ManualMappingCuration
+Immunoblotting	Immunoblotting	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16357	semapv:ManualMappingCuration
+Immunocytochemistry	Immunocytochemistry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17731	semapv:ManualMappingCuration
+Immunofluorescence	Immunofluorescence	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17370	semapv:ManualMappingCuration
+Immunofluorescent Staining Method	Immunofluorescent Staining Method	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C142337&key=1090177504&b=1&n=null	semapv:ManualMappingCuration
+Immunohistochemistry	Immunohistochemistry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C23020	semapv:ManualMappingCuration
+Immunohistochemistry Staining Method	Immunohistochemistry Staining Method	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C23020	semapv:ManualMappingCuration
+Immunoprecipitation	Immunoprecipitation	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C16724&ns=ncit&type=properties&key=853920638&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Immunotherapy	Immunotherapy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C15262&key=1335721185&b=1&n=null	semapv:ManualMappingCuration
+In Situ Hybridization	In Situ Hybridization	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17562	semapv:ManualMappingCuration
+In Vitro Cell Killing Assay	In Vitro Cell Killing Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000903	semapv:ManualMappingCuration
+In Vitro Model	In Vitro Model	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C19146&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+In Vitro Selection	In Vitro Selection	skos:exactMatch	http://edamontology.org/operation_3795	semapv:ManualMappingCuration
+In Vitro Translation	In Vitro Translation	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0000906	semapv:ManualMappingCuration
+In Vivo Bioluminescence	In Vivo Bioluminescence	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0000651	semapv:ManualMappingCuration
+In-Cell Western Assay	In-Cell Western Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002423	semapv:ManualMappingCuration
+Inductively-Coupled Plasma Mass Spectrometry	Inductively-Coupled Plasma Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62328	semapv:ManualMappingCuration
+Interference Reflection Microscopy	Interference Reflection Microscopy	skos:exactMatch	https://en.wikipedia.org/wiki/Interference_reflection_microscopy	semapv:ManualMappingCuration
+Intravital Microscopy	Intravital Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001638	semapv:ManualMappingCuration
+Invasion Assay	Invasion Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16216	semapv:ManualMappingCuration
+Isothermal Titration Calorimetry	Isothermal Titration Calorimetry	skos:exactMatch	https://www.ebi.ac.uk/ols/ontologies/chmo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHMO_0000683	semapv:ManualMappingCuration
+Karyotyping	Karyotyping	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16768	semapv:ManualMappingCuration
+Knife-Edge Scanning Microscopy	Knife-Edge Scanning Microscopy	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/18638197/	semapv:ManualMappingCuration
+Label-free Protein Quantification by LC/MS	Label-free Protein Quantification by LC/MS	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C161825	semapv:ManualMappingCuration
+Lattice Light Sheet Microscopy	Lattice Light Sheet Microscopy	skos:exactMatch	https://en.wikipedia.org/wiki/Lattice_light-sheet_microscopy	semapv:ManualMappingCuration
+Light Sheet Microscopy	Light Sheet Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0003098	semapv:ManualMappingCuration
+Liquid Chromatography Mass Spectrometry	Liquid Chromatography Mass Spectrometry	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C18475&ns=ncit	semapv:ManualMappingCuration
+Liquid Chromatography/Tandem Mass Spectrometry	Liquid Chromatography/Tandem Mass Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000701	semapv:ManualMappingCuration
+Low-Vacuum Scanning Electron Microscopy	Low-Vacuum Scanning Electron Microscopy	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/29546719/	semapv:ManualMappingCuration
+Luciferase Reporter Assay	Luciferase Reporter Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0002661	semapv:ManualMappingCuration
+Luminescent Cell Viability Assay	Luminescent Cell Viability Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0000682	semapv:ManualMappingCuration
+MALDI-TOF Mass Spectrometry	MALDI-TOF Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19935	semapv:ManualMappingCuration
+MEMA Cell Growth Assay	MEMA Cell Growth Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0010060	semapv:ManualMappingCuration
+MNase-Seq	MNase-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0003751	semapv:ManualMappingCuration
+MULTI-Seq	MULTI-Seq	skos:exactMatch	https://www.nature.com/articles/s41592-019-0433-8	semapv:ManualMappingCuration
+Magnetic Resonance Imaging	Magnetic Resonance Imaging	skos:exactMatch	ps://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16809	semapv:ManualMappingCuration
+Magnetic Tweezers	Magnetic Tweezers	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0002474	semapv:ManualMappingCuration
+Magnetic Twisting Cytometry	Magnetic Twisting Cytometry	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/11509510/#:~:text=Magnetic%20twisting%20cytometry%20(MTC)%20(,bead%20rotation%20with%20a%20magnetometer.	semapv:ManualMappingCuration
+Magnetically Activated Cell Sorting	Magnetically Activated Cell Sorting	skos:exactMatch	https://en.wikipedia.org/wiki/Magnetic-activated_cell_sorting	semapv:ManualMappingCuration
+Mammosphere Formation Assay	Mammosphere Formation Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/25867607/	semapv:ManualMappingCuration
+Mass Cytometry	Mass Cytometry	skos:exactMatch	https://en.wikipedia.org/wiki/Mass_cytometry	semapv:ManualMappingCuration
+Mass Spectrometry	Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17156	semapv:ManualMappingCuration
+Mathematical Modeling	Mathematical Modeling	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16870	semapv:ManualMappingCuration
+MeDIP	MeDIP	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000693	semapv:ManualMappingCuration
+MeRIP-Seq	MeRIP-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008803	semapv:ManualMappingCuration
+Metabolite Profiling Assay	Metabolite Profiling Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000366	semapv:ManualMappingCuration
+Methyl Binding Domain Sequencing	Methyl Binding Domain Sequencing	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0003750	semapv:ManualMappingCuration
+Methylation-Specific PCR	Methylation-Specific PCR	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/21913069/	semapv:ManualMappingCuration
+Micro-CT	Micro-CT	skos:exactMatch	https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5449646/	semapv:ManualMappingCuration
+Micro-computed Tomography	Micro-computed Tomography	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000570	semapv:ManualMappingCuration
+MicroRNA Expression Array	MicroRNA Expression Array	skos:exactMatch	An assay that analyses the microRNA component of the transcriptome using a microRNA array.	semapv:ManualMappingCuration
+MicroRNA Sequencing	MicroRNA Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16853	semapv:ManualMappingCuration
+Microcontact Printing	Microcontact Printing	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001440	semapv:ManualMappingCuration
+Microfluidics	Microfluidics	skos:exactMatch	http://id.nlm.nih.gov/mesh/D046210	semapv:ManualMappingCuration
+Micropipette Adhesion Assay	Micropipette Adhesion Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/22083316/	semapv:ManualMappingCuration
+Microscopy	Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18216	semapv:ManualMappingCuration
+Migration Assay	Migration Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/message.jsf	semapv:ManualMappingCuration
+Mint-ChIP	Mint-ChIP	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008813	semapv:ManualMappingCuration
+Modeling	Modeling	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16063	semapv:ManualMappingCuration
+Molecular Simulations	Molecular Simulations	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18097	semapv:ManualMappingCuration
+Multi-Angle Light Scattering	Multi-Angle Light Scattering	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000168	semapv:ManualMappingCuration
+Multi-Isotope Mass Spectrometry	Multi-Isotope Mass Spectrometry	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/22246326/	semapv:ManualMappingCuration
+Multiparametric Magnetic Resonance Imaging	Multiparametric Magnetic Resonance Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116458	semapv:ManualMappingCuration
+Multiphoton Microscopy	Multiphoton Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94604	semapv:ManualMappingCuration
+Multiplexed Error-Robust Fluorescence In Situ Hybridization	Multiplexed Error-Robust Fluorescence In Situ Hybridization	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008992	semapv:ManualMappingCuration
+Multiplexed Immunofluorescence	Multiplexed Immunofluorescence	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.08e&code=C181928&ns=ncit&type=properties&key=621675532&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Multiplexed Immunohistochemistry	Multiplexed Immunohistochemistry	skos:exactMatch	ttps://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181927	semapv:ManualMappingCuration
+Multiplexed Ion Beam Imaging	Multiplexed Ion Beam Imaging	skos:exactMatch	https://www.nature.com/articles/s41374-020-0417-4	semapv:ManualMappingCuration
+Murine Model	Murine Model	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94604	semapv:ManualMappingCuration
+Murine Models	Murine Models	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94604	semapv:ManualMappingCuration
+NanoString Digital Spatial Profiling	NanoString Digital Spatial Profiling	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0030029	semapv:ManualMappingCuration
+Nanopore Sequencing	Nanopore Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C146818	semapv:ManualMappingCuration
+Nanowire	Nanowire	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62376	semapv:ManualMappingCuration
+Next Generation Sequencing	Next Generation Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101293	semapv:ManualMappingCuration
+Nm-seq	Nm-seq	skos:exactMatch	http://purl.obolibrary.org/obo/EFO_0008828	semapv:ManualMappingCuration
+Not Applicable	Not Applicable	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48660	semapv:ManualMappingCuration
+Nuclear Magnetic Resonance	Nuclear Magnetic Resonance	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16921	semapv:ManualMappingCuration
+Optical Coherence Tomography	Optical Coherence Tomography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C20828	semapv:ManualMappingCuration
+Optical Emission Spectroscopy	Optical Emission Spectroscopy	skos:exactMatch	https://nyaspubs.onlinelibrary.wiley.com/doi/abs/10.1111/j.1749-6632.1966.tb49756.x?sid=nlm%3Apubmed	semapv:ManualMappingCuration
+Optical Stretcher	Optical Stretcher	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6189960/	semapv:ManualMappingCuration
+Optical Tweezers	Optical Tweezers	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62320	semapv:ManualMappingCuration
+Optogenetic Assay	Optogenetic Assay	skos:exactMatch	https://en.wikipedia.org/wiki/Optogenetics	semapv:ManualMappingCuration
+Organoid	Organoid	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C172259	semapv:ManualMappingCuration
+PCR	PCR	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17003	semapv:ManualMappingCuration
+PET-CT	PET-CT	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103512	semapv:ManualMappingCuration
+Patient Derived Xenograft	Patient Derived Xenograft	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C122936	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Permeability Assay	Permeability Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0010083	semapv:ManualMappingCuration
+Phagocytosis Assay	Phagocytosis Assay	skos:exactMatch	http://snomed.info/id/45101000	semapv:ManualMappingCuration
+Photoacoustic Imaging	Photoacoustic Imaging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116749	semapv:ManualMappingCuration
+Photolithography	Photolithography	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001410	semapv:ManualMappingCuration
+Phylogenetic Analysis	Phylogenetic Analysis	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=23.08d&code=C18940&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Picrosirius Staining	Picrosirius Staining	skos:exactMatch	https://link.springer.com/article/10.1007/BF01002772	semapv:ManualMappingCuration
+Plasmid Construction	Plasmid Construction	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001308	semapv:ManualMappingCuration
+PlateSeq	PlateSeq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008863	semapv:ManualMappingCuration
+Point Accumulation for Imaging in Nanoscale Topography	Point Accumulation for Imaging in Nanoscale Topography	skos:exactMatch	http://purl.obolibrary.org/obo/FBbi_00000339	semapv:ManualMappingCuration
+Positron Emission Tomography	Positron Emission Tomography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17007	semapv:ManualMappingCuration
+Precision Run-On Sequencing	Precision Run-On Sequencing	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008869	semapv:ManualMappingCuration
+Proteomics Assay	Proteomics Assay	skos:exactMatch	https://www.nature.com/articles/sdata201791	semapv:ManualMappingCuration
+Proximity Ligation Assay	Proximity Ligation Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C156754	semapv:ManualMappingCuration
+Pull-Down Assay	Pull-Down Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/28667618/	semapv:ManualMappingCuration
+QFISH	QFISH	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/18228343/	semapv:ManualMappingCuration
+Quantitative Multiplex Immunofluorescence	Quantitative Multiplex Immunofluorescence	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7170662/	semapv:ManualMappingCuration
+Quantitative Point Accumulation for Imaging in Nanoscale Topography	Quantitative Point Accumulation for Imaging in Nanoscale Topography	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/27018580/	semapv:ManualMappingCuration
+Questionnaire	Questionnaire	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17048	semapv:ManualMappingCuration
+RAS Protein Family Activation Assay	RAS Protein Family Activation Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C139305	semapv:ManualMappingCuration
+RIP	RIP	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0005033	semapv:ManualMappingCuration
+RIP-Seq	RIP-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0005310	semapv:ManualMappingCuration
+RNA Sequencing	RNA Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124261	semapv:ManualMappingCuration
+RNA-Seq	RNA-Seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124261	semapv:ManualMappingCuration
+RNAi Screen	RNAi Screen	skos:exactMatch	http://purl.obolibrary.org/obo/FBcv_0003077	semapv:ManualMappingCuration
+RT-PCR	RT-PCR	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18136	semapv:ManualMappingCuration
+RT-qPCR	RT-qPCR	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000462	semapv:ManualMappingCuration
+Raman Spectroscopy	Raman Spectroscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17157	semapv:ManualMappingCuration
+Reduced Representation Bisulfite Sequencing	Reduced Representation Bisulfite Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C167284&ns=ncit	semapv:ManualMappingCuration
+Reporter Gene Assay	Reporter Gene Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0003006	semapv:ManualMappingCuration
+Reverse Phase Protein Array	Reverse Phase Protein Array	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002957	semapv:ManualMappingCuration
+Reverse-Phase High-Performance liquid Chromatography	Reverse-Phase High-Performance liquid Chromatography	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001259	semapv:ManualMappingCuration
+Rheometry	Rheometry	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000915	semapv:ManualMappingCuration
+Ribo-Seq	Ribo-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008891	semapv:ManualMappingCuration
+Ribosomal P Protein Antibody Measurement	Ribosomal P Protein Antibody Measurement	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C120659	semapv:ManualMappingCuration
+SDS-PAGE	SDS-PAGE	skos:exactMatch	http://purl.obolibrary.org/obo/EFO_0010936	semapv:ManualMappingCuration
+SNP Array	SNP Array	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116151	semapv:ManualMappingCuration
+Scanning Electron Microscopy	Scanning Electron Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16855	semapv:ManualMappingCuration
+Scratch Assay	Scratch Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/21748666/#:~:text=The%20scratch%2Dwound%20assay%20is,migrate%20into%20the%20wound%20space.	semapv:ManualMappingCuration
+Second-Harmonic Imaging Microscopy	Second-Harmonic Imaging Microscopy	skos:exactMatch	https://www.nature.com/articles/nbt894	semapv:ManualMappingCuration
+Shotgun Mass Spectrometry	Shotgun Mass Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/PRIDE_0000429	semapv:ManualMappingCuration
+Single Cell ATAC-Seq	Single Cell ATAC-Seq	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C179458	semapv:ManualMappingCuration
+Single Cell Cytokine Detection Chip Assay	Single Cell Cytokine Detection Chip Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0010005	semapv:ManualMappingCuration
+Single Cell DNA Sequencing	Single Cell DNA Sequencing	skos:exactMatch	https://en.wikipedia.org/wiki/Single_cell_sequencing	semapv:ManualMappingCuration
+Single Cell Gel Electrophoresis	Single Cell Gel Electrophoresis	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.03e&code=C96515&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Single Cell RNA-Sequencing	Single Cell RNA-Sequencing	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C171152&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Single Molecule Forster Resonance Energy Transfer	Single Molecule Forster Resonance Energy Transfer	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5145784/	semapv:ManualMappingCuration
+Single Nucleotide Polymorphism Array	Single Nucleotide Polymorphism Array	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116151	semapv:ManualMappingCuration
+Single Nucleus RNA-Sequencing	Single Nucleus RNA-Sequencing	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009809	semapv:ManualMappingCuration
+Single-Cell BCR Sequencing	Single-Cell BCR Sequencing	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/31428692/	semapv:ManualMappingCuration
+Single-Cell TCR Sequencing	Single-Cell TCR Sequencing	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/30072991/	semapv:ManualMappingCuration
+Single-Molecule Tracking	Single-Molecule Tracking	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5028128/	semapv:ManualMappingCuration
+Sirius Red Staining	Sirius Red Staining	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/25023614/	semapv:ManualMappingCuration
+Size Exclusion Chromatography	Size Exclusion Chromatography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16433	semapv:ManualMappingCuration
+Small-Angle X-ray Scattering	Small-Angle X-ray Scattering	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000204	semapv:ManualMappingCuration
+Soft Agar Assay	Soft Agar Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=21.02d&code=C16215&ns=ncit&type=properties&key=null&b=1&n=0&vse=null	semapv:ManualMappingCuration
+Southern Blotting	Southern Blotting	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16356	semapv:ManualMappingCuration
+Spectroscopy	Spectroscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17155	semapv:ManualMappingCuration
+Statistical Modeling	Statistical Modeling	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16869	semapv:ManualMappingCuration
+Stimulated Emission Depletion Microscopy	Stimulated Emission Depletion Microscopy	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3635273/	semapv:ManualMappingCuration
+Stimulated Raman Scattering	Stimulated Raman Scattering	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000675	semapv:ManualMappingCuration
+Stochastic Optical Reconstruction Microscopy	Stochastic Optical Reconstruction Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/FBbi_00000336	semapv:ManualMappingCuration
+Super-Resolution Microscopy	Super-Resolution Microscopy	skos:exactMatch	https://en.wikipedia.org/wiki/Super-resolution_microscopy	semapv:ManualMappingCuration
+Surface Plasmon Resonance	Surface Plasmon Resonance	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18117	semapv:ManualMappingCuration
+Survival Analysis	Survival Analysis	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C53372&key=732684547&b=1&n=null://en.wikipedia.org/wiki/Survival_analysis	semapv:ManualMappingCuration
+Suspended Microchannel Resonator	Suspended Microchannel Resonator	skos:exactMatch	https://www.nature.com/articles/nature05741	semapv:ManualMappingCuration
+Synthesis	Synthesis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C61408	semapv:ManualMappingCuration
+TAB-Seq	TAB-Seq	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/23196972/	semapv:ManualMappingCuration
+TCR Sequencing	TCR Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C189102	semapv:ManualMappingCuration
+TIRF Microscopy	TIRF Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000094	semapv:ManualMappingCuration
+TRAP Staining	TRAP Staining	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C118401	semapv:ManualMappingCuration
+TUNEL Assay	TUNEL Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19815	semapv:ManualMappingCuration
+TUNEL assay	TUNEL assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19815	semapv:ManualMappingCuration
+Tandem Mass Spectrometry	Tandem Mass Spectrometry	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18142	semapv:ManualMappingCuration
+Tandem Mass Tagging	Tandem Mass Tagging	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18142	semapv:ManualMappingCuration
+Target Engagement Assay	Target Engagement Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181182	semapv:ManualMappingCuration
+Targeted Genome Sequencing	Targeted Genome Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158253	semapv:ManualMappingCuration
+Targeted Therapy Agent	Targeted Therapy Agent	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C163758	semapv:ManualMappingCuration
+Targeted Transcriptome Sequencing	Targeted Transcriptome Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158252	semapv:ManualMappingCuration
+Thermal Shift Assay	Thermal Shift Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0010261	semapv:ManualMappingCuration
+Thin-Layer Chromatography	Thin-Layer Chromatography	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001007	semapv:ManualMappingCuration
+Tiling Array	Tiling Array	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0002704	semapv:ManualMappingCuration
+Time Lapse Microscopy	Time Lapse Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001074	semapv:ManualMappingCuration
+Time-Correlated Single Photon Counting	Time-Correlated Single Photon Counting	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001963	semapv:ManualMappingCuration
+Tissue Engineering	Tissue Engineering	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18075	semapv:ManualMappingCuration
+Tissue Microarray	Tissue Microarray	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19922	semapv:ManualMappingCuration
+Transcription profiling by NanoString	Transcription profiling by NanoString	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0030058	semapv:ManualMappingCuration
+Transmission Electron Microscopy	Transmission Electron Microscopy	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18216	semapv:ManualMappingCuration
+Transwell Assay	Transwell Assay	skos:exactMatch	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4186330/	semapv:ManualMappingCuration
+Trichrome Staining Method	Trichrome Staining Method	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C23012	semapv:ManualMappingCuration
+Tuba-Seq	Tuba-Seq	skos:exactMatch	https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0008979	semapv:ManualMappingCuration
+UV Photocrosslinking	UV Photocrosslinking	skos:exactMatch	http://purl.obolibrary.org/obo/MI_0430	semapv:ManualMappingCuration
+Ultrasound Imaging	Ultrasound Imaging	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17230	semapv:ManualMappingCuration
+Unspecified	Unspecified	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38046	semapv:ManualMappingCuration
+Vibrational Spectroscopy	Vibrational Spectroscopy	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000628	semapv:ManualMappingCuration
+Viral Transduction	Viral Transduction	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.08d&ns=ncit&code=C142787&key=1177194019&b=1&n=null	semapv:ManualMappingCuration
+Virus Plaque Assay	Virus Plaque Assay	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C174336	semapv:ManualMappingCuration
+Visium Spatial Gene Expression	Visium Spatial Gene Expression	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0010961	semapv:ManualMappingCuration
+Von Kossa Staining	Von Kossa Staining	skos:exactMatch	https://en.wikipedia.org/wiki/Von_Kossa_stain	semapv:ManualMappingCuration
+Western Blot	Western Blot	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16357	semapv:ManualMappingCuration
+Western Blotting	Western Blotting	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16357	semapv:ManualMappingCuration
+Whole Exome Sequencing	Whole Exome Sequencing	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101295	semapv:ManualMappingCuration
+Whole Genome Bisulfite Sequencing	Whole Genome Bisulfite Sequencing	skos:exactMatch	https://en.wikipedia.org/wiki/Whole_genome_bisulfite_sequencing	semapv:ManualMappingCuration
+Whole Genome Sequencing	Whole Genome Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101294	semapv:ManualMappingCuration
+Widefield Fluorescence Microscopy	Widefield Fluorescence Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002437	semapv:ManualMappingCuration
+Wound-Healing Assay	Wound-Healing Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ECO_0001099	semapv:ManualMappingCuration
+X-Ray Crystallography	X-Ray Crystallography	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17672	semapv:ManualMappingCuration
+X-Ray Diffraction	X-Ray Diffraction	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000156	semapv:ManualMappingCuration
+X-Ray Micro-Computed Tomography	X-Ray Micro-Computed Tomography	skos:exactMatch	https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5449646/	semapv:ManualMappingCuration
+Xenograft	Xenograft	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12932	semapv:ManualMappingCuration
+cDNA Array	cDNA Array	skos:exactMatch	https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19819	semapv:ManualMappingCuration
+eCLIP-Seq	eCLIP-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009998	semapv:ManualMappingCuration
+mRNA Sequencing	mRNA Sequencing	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C129432	semapv:ManualMappingCuration
+qPCR	qPCR	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51962	semapv:ManualMappingCuration
+scNT-Seq	scNT-Seq	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/32868927/	semapv:ManualMappingCuration
+scSLAM-seq	scSLAM-seq	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/31292545/	semapv:ManualMappingCuration
+seqFISH	seqFISH	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008991	semapv:ManualMappingCuration
+shRNA	shRNA	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123893	semapv:ManualMappingCuration
+siRNA	siRNA	skos:exactMatch	https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2191	semapv:ManualMappingCuration
+smFISH	smFISH	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009918	semapv:ManualMappingCuration
+smRNA-seq	smRNA-seq	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0002112	semapv:ManualMappingCuration
+snRNA-seq	snRNA-seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009809	semapv:ManualMappingCuration

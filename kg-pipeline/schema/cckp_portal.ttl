@@ -1,0 +1,1102 @@
+@prefix cckp: <https://w3id.org/mc2-center/cckp-portal/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/mc2-center/cckp-portal.owl.ttl> a owl:Ontology ;
+    rdfs:label "cckp_portal" ;
+    owl:imports cckp:mc2_model.linkml ;
+    skos:definition "LinkML schema for the public discovery-layer entities of the Cancer Complexity Knowledge Portal (CCKP), as queried from their backing Synapse View tables. Reuses controlled-vocabulary enums from the MC2 Center data model (mc2_model.linkml.yaml) wherever a CCKP column corresponds to an MC2-governed attribute, so ontology IRI mappings are inherited rather than redefined." .
+
+cckp:Dataset a owl:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:datasetName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadSynId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:sourceRepository ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:fileFormats ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:overallDesign ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tissue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:externalLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tumorType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:overallDesign ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:datasetAlias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:sourceRepository ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessInformation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:species ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetAlias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:assay ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationTitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:externalLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadSynId ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:datasetId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ] ;
+    skos:definition "A CCKP Dataset record (DatasetView, syn21897968)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:EducationalResource a owl:Class ;
+    rdfs:label "EducationalResource" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:component ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:educationalLevel ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:alias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:alias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:component ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:useRequirements ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:mediaAccessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:primaryAudience ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:intendedUse ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessHazard ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:topic ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:language ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:activityType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:useRequirements ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:secondaryTopic ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:datasetLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:license ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:publicationId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:link ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:internalIdentifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:internalIdentifier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:primaryFormat ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:originInstitution ] ;
+    skos:definition "A CCKP Educational Resource record (EducationalResource, syn51497305)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:Grant a owl:Class ;
+    rdfs:label "Grant" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:institutionAlias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantStartDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:nihReporterLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantInstitution ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantViewId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantSynapseTeam ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:embargoEndDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantSynapseProject ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:grantId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:nihReporterLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:investigator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:grantName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:embargoEndDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantStartDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:durationOfFunding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:abstract ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:durationOfFunding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantViewId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantSynapseTeam ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:investigator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:abstract ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantSynapseProject ] ;
+    skos:definition "A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:Publication a owl:Class ;
+    rdfs:label "Publication" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:abstract ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:pubMedUrl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:dataset ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:authors ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationTitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:authors ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataset ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:journal ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:assay ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:publicationTitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:abstract ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cckp:keywords ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:journal ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:pubMedLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tumorType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tissue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:publicationYear ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:publicationYear ] ;
+    skos:definition "A CCKP Publication record (PublicationView, syn21868591)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:Tool a owl:Class ;
+    rdfs:label "Tool" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolComputeRequirements ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:functionNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolEntityRole ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:operatingSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty cckp:toolPackageDependenciesPresent ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:cmd ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadVersion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolReleaseDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolPackageDependencies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:linkNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolReleaseDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolDateLastModified ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty cckp:portalDisplay ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:cmd ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:operation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolDateLastModified ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:cost ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:homepage ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityRole ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolComputeRequirements ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:cost ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:outputFormat ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasets ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:inputFormat ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolEntityName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:documentationNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:portalDisplay ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:linkType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationNote ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:outputData ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:license ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:toolName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:functionNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:linkNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:linkType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:topic ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolPackageDependenciesPresent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:homepage ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolPackageDependencies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:inputData ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolEntityType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:linkUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationUrl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:documentationUrl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:linkUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:language ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:synapseLink ] ;
+    skos:definition "A CCKP Tool record (ToolView, syn26127427)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:contributors a owl:DatatypeProperty ;
+    rdfs:label "contributors" ;
+    skos:definition "Contributor name(s) (no controlled vocabulary - personal names)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:accessHazard a owl:DatatypeProperty ;
+    rdfs:label "accessHazard" ;
+    skos:definition "Access hazard warning(s), if any." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Access Hazard Enum" .
+
+cckp:accessInformation a owl:DatatypeProperty ;
+    rdfs:label "accessInformation" ;
+    skos:definition "Free-text access information/instructions." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:activityType a owl:DatatypeProperty ;
+    rdfs:label "activityType" ;
+    skos:definition "Type(s) of learning activity." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Activity Type Enum" .
+
+cckp:datasets a owl:DatatypeProperty ;
+    rdfs:label "datasets" ;
+    skos:definition "Dataset alias(es) the tool operates on or was demonstrated with." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:cckp_join "Dataset.datasetAlias" .
+
+cckp:documentationType a owl:DatatypeProperty ;
+    rdfs:label "documentationType" ;
+    skos:definition "Type(s) of documentation available." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Documentation Type Enum" .
+
+cckp:educationalLevel a owl:DatatypeProperty ;
+    rdfs:label "educationalLevel" ;
+    skos:definition "Educational level(s) targeted. Best filter column." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Educational Level Enum" .
+
+cckp:fileFormats a owl:DatatypeProperty ;
+    rdfs:label "fileFormats" ;
+    skos:definition "File format(s) included in the dataset." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Dataset File Formats Enum" .
+
+cckp:grantInstitution a owl:DatatypeProperty ;
+    rdfs:label "grantInstitution" ;
+    skos:definition "Full name(s) of the awardee institution." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Grant Institution Name Enum" .
+
+cckp:inputData a owl:DatatypeProperty ;
+    rdfs:label "inputData" ;
+    skos:definition "Input data type(s) accepted." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Input Data Enum" .
+
+cckp:inputFormat a owl:DatatypeProperty ;
+    rdfs:label "inputFormat" ;
+    skos:definition "Input file format(s) accepted." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Input Format Enum" .
+
+cckp:institutionAlias a owl:DatatypeProperty ;
+    rdfs:label "institutionAlias" ;
+    skos:definition "Alias(es) of the awardee institution." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Grant Institution Alias Enum" .
+
+cckp:intendedUse a owl:DatatypeProperty ;
+    rdfs:label "intendedUse" ;
+    skos:definition "Intended use(s) of the resource." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Intended Use Enum" .
+
+cckp:keywords a owl:DatatypeProperty ;
+    rdfs:label "keywords" ;
+    skos:definition "Free-text/author-supplied keywords, as a single free-text field." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:link a owl:DatatypeProperty ;
+    rdfs:label "link" ;
+    skos:definition "URL to the resource." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:mediaAccessibility a owl:DatatypeProperty ;
+    rdfs:label "mediaAccessibility" ;
+    skos:definition "Media accessibility feature(s) provided." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Media Accessibility Enum" .
+
+cckp:operatingSystem a owl:DatatypeProperty ;
+    rdfs:label "operatingSystem" ;
+    skos:definition "Supported operating system(s)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Operating System Enum" .
+
+cckp:operation a owl:DatatypeProperty ;
+    rdfs:label "operation" ;
+    skos:definition "Bioinformatics operation(s) the tool performs. Best filter column." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Operation Enum" .
+
+cckp:originInstitution a owl:DatatypeProperty ;
+    rdfs:label "originInstitution" ;
+    skos:definition "Institution(s) of origin (no controlled vocabulary)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:outputData a owl:DatatypeProperty ;
+    rdfs:label "outputData" ;
+    skos:definition "Output data type(s) produced." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Output Data Enum" .
+
+cckp:outputFormat a owl:DatatypeProperty ;
+    rdfs:label "outputFormat" ;
+    skos:definition "Output file format(s) produced." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Output Format Enum" .
+
+cckp:primaryAudience a owl:DatatypeProperty ;
+    rdfs:label "primaryAudience" ;
+    skos:definition "Intended audience(s). Best filter column." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Primary Audience Enum" .
+
+cckp:primaryFormat a owl:DatatypeProperty ;
+    rdfs:label "primaryFormat" ;
+    skos:definition "Primary format of the resource." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Resource Primary Format Enum" .
+
+cckp:secondaryTopic a owl:DatatypeProperty ;
+    rdfs:label "secondaryTopic" ;
+    skos:definition "Secondary topic label(s) (no controlled vocabulary in the current MC2 model)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:species a owl:DatatypeProperty ;
+    rdfs:label "species" ;
+    skos:definition "Species the dataset's specimens were derived from. Best filter column." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Dataset Species Enum" .
+
+cckp:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    skos:definition "Title of the educational resource. (Column is `title`, not `resourceTitle`.)" ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolType a owl:DatatypeProperty ;
+    rdfs:label "toolType" ;
+    skos:definition "Type(s) of tool (e.g. command-line, web service)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Type Enum" .
+
+cckp:alias a owl:DatatypeProperty ;
+    rdfs:label "alias" ;
+    skos:definition "Short alias for the resource." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:assay a owl:DatatypeProperty .
+
+cckp:authors a owl:DatatypeProperty ;
+    rdfs:label "authors" ;
+    skos:definition "Author list, as a single free-text field (not a Synapse list column)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:cmd a owl:DatatypeProperty ;
+    rdfs:label "cmd" ;
+    skos:definition "Example invocation command." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:component a owl:DatatypeProperty ;
+    rdfs:label "component" ;
+    skos:definition "Schematic component/manifest label the record was submitted under." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:cost a owl:DatatypeProperty ;
+    rdfs:label "cost" ;
+    skos:definition "Cost category of the tool." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Cost Enum" .
+
+cckp:dataset a owl:DatatypeProperty ;
+    rdfs:label "dataset" ;
+    skos:definition "Dataset alias associated with this publication (scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:cckp_join "Dataset.datasetAlias" .
+
+cckp:datasetAlias a owl:DatatypeProperty ;
+    rdfs:label "datasetAlias" ;
+    skos:definition "Short alias used elsewhere in the portal (e.g. as a join key from Publication/Tool)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:datasetId a owl:DatatypeProperty ;
+    rdfs:label "datasetId" ;
+    skos:definition "Internal Synapse entity identifier for the dataset row (Synapse type ENTITYID)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:datasetLink a owl:DatatypeProperty ;
+    rdfs:label "datasetLink" ;
+    skos:definition "URL to a related dataset (a link, not a join key; scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:datasetName a owl:DatatypeProperty ;
+    rdfs:label "datasetName" ;
+    skos:definition "Display name of the dataset." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:documentationNote a owl:DatatypeProperty ;
+    rdfs:label "documentationNote" ;
+    skos:definition "Free-text documentation note." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:documentationUrl a owl:DatatypeProperty ;
+    rdfs:label "documentationUrl" ;
+    skos:definition "URL to tool documentation." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:downloadLink a owl:DatatypeProperty ;
+    rdfs:label "downloadLink" ;
+    skos:definition "Alternate download link field." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:downloadNote a owl:DatatypeProperty ;
+    rdfs:label "downloadNote" ;
+    skos:definition "Free-text note on download/installation." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:downloadSynId a owl:DatatypeProperty ;
+    rdfs:label "downloadSynId" ;
+    skos:definition "Synapse ID of the downloadable entity." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:downloadUrl a owl:DatatypeProperty ;
+    rdfs:label "downloadUrl" ;
+    skos:definition "Direct download URL." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:downloadVersion a owl:DatatypeProperty ;
+    rdfs:label "downloadVersion" ;
+    skos:definition "Version string of the downloadable artifact." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:durationOfFunding a owl:DatatypeProperty ;
+    rdfs:label "durationOfFunding" ;
+    skos:definition "Duration of funding, in years." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:embargoEndDate a owl:DatatypeProperty ;
+    rdfs:label "embargoEndDate" ;
+    skos:definition "Data embargo end date, if any." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:externalLink a owl:DatatypeProperty ;
+    rdfs:label "externalLink" ;
+    skos:definition "External URL to the dataset." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:functionNote a owl:DatatypeProperty ;
+    rdfs:label "functionNote" ;
+    skos:definition "Free-text note on tool function." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:grantId a owl:DatatypeProperty ;
+    rdfs:label "grantId" ;
+    skos:definition "Internal Synapse entity identifier for the grant row (Synapse type ENTITYID)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:grantStartDate a owl:DatatypeProperty ;
+    rdfs:label "grantStartDate" ;
+    skos:definition "Grant start date (free-text date string, not a fixed format)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:grantSynapseProject a owl:DatatypeProperty ;
+    rdfs:label "grantSynapseProject" ;
+    skos:definition "Synapse Project ID associated with the grant." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:grantSynapseTeam a owl:DatatypeProperty ;
+    rdfs:label "grantSynapseTeam" ;
+    skos:definition "Synapse Team ID associated with the grant." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:grantType a owl:DatatypeProperty ;
+    rdfs:label "grantType" ;
+    skos:definition "Type of grant mechanism." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Grant Type Enum" .
+
+cckp:grantViewId a owl:DatatypeProperty ;
+    rdfs:label "grantViewId" ;
+    skos:definition "Secondary internal identifier field, if distinct from grantId." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:homepage a owl:DatatypeProperty ;
+    rdfs:label "homepage" ;
+    skos:definition "Tool homepage URL." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:internalIdentifier a owl:DatatypeProperty ;
+    rdfs:label "internalIdentifier" ;
+    skos:definition "Internal identifier for the educational resource. NOT declared a LinkML `identifier` - verified against live data that this column is blank in 100% of current rows, despite its name. Practical identifying key for v1 is `alias` (a Synapse ID), falling back to `title`, then a content hash - see build_triples.py's FALLBACK_ID_FIELD, same pattern as Publication.pubMedId/Tool.toolName." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:investigator a owl:DatatypeProperty ;
+    rdfs:label "investigator" ;
+    skos:definition "Principal investigator name(s), as a single free-text field (no controlled vocabulary - personal names)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:journal a owl:DatatypeProperty ;
+    rdfs:label "journal" ;
+    skos:definition "Journal name." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:language a owl:DatatypeProperty .
+
+cckp:license a owl:DatatypeProperty .
+
+cckp:linkNote a owl:DatatypeProperty ;
+    rdfs:label "linkNote" ;
+    skos:definition "Free-text note on the related link." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:linkType a owl:DatatypeProperty ;
+    rdfs:label "linkType" ;
+    skos:definition "Type of the related link (scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Link Type Enum" .
+
+cckp:linkUrl a owl:DatatypeProperty ;
+    rdfs:label "linkUrl" ;
+    skos:definition "Generic related-link URL." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:nihReporterLink a owl:DatatypeProperty ;
+    rdfs:label "nihReporterLink" ;
+    skos:definition "Link to the grant's NIH RePORTER record." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:overallDesign a owl:DatatypeProperty ;
+    rdfs:label "overallDesign" ;
+    skos:definition "Free-text description of the dataset's experimental design." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:portalDisplay a owl:DatatypeProperty ;
+    rdfs:label "portalDisplay" ;
+    skos:definition "Whether the tool is flagged for display on the portal." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:pubMedLink a owl:DatatypeProperty ;
+    rdfs:label "pubMedLink" ;
+    skos:definition "Alternate PubMed link field." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:pubMedUrl a owl:DatatypeProperty ;
+    rdfs:label "pubMedUrl" ;
+    skos:definition "Resolvable PubMed URL." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:publicationId a owl:DatatypeProperty ;
+    rdfs:label "publicationId" ;
+    skos:definition "PubMed ID of an associated publication (scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:cckp_join "Publication.pubMedId" .
+
+cckp:publicationYear a owl:DatatypeProperty ;
+    rdfs:label "publicationYear" ;
+    skos:definition "Year of publication." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:sourceRepository a owl:DatatypeProperty ;
+    rdfs:label "sourceRepository" ;
+    skos:definition "Name of the repository the dataset is hosted in." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:tissue a owl:DatatypeProperty .
+
+cckp:toolComputeRequirements a owl:DatatypeProperty ;
+    rdfs:label "toolComputeRequirements" ;
+    skos:definition "Free-text compute requirements (no controlled vocabulary, scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolDateLastModified a owl:DatatypeProperty ;
+    rdfs:label "toolDateLastModified" ;
+    skos:definition "Date the tool was last modified." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolEntityName a owl:DatatypeProperty ;
+    rdfs:label "toolEntityName" ;
+    skos:definition "Name of a related Synapse entity (no controlled vocabulary, scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolEntityRole a owl:DatatypeProperty ;
+    rdfs:label "toolEntityRole" ;
+    skos:definition "Role of the related Synapse entity relative to the tool (scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Entity Role Enum" .
+
+cckp:toolEntityType a owl:DatatypeProperty ;
+    rdfs:label "toolEntityType" ;
+    skos:definition "Type of the related Synapse entity (scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Entity Type Enum" .
+
+cckp:toolLink a owl:DatatypeProperty ;
+    rdfs:label "toolLink" ;
+    skos:definition "URL to a related tool (a link, not a join key; scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolName a owl:DatatypeProperty ;
+    rdfs:label "toolName" ;
+    skos:definition "Name of the tool. Used as the practical identifying key for v1 - see Publication.pubMedId note re: no confirmed unique row-ID column; build_triples.py falls back to a synthesized ID on collision." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolPackageDependencies a owl:DatatypeProperty ;
+    rdfs:label "toolPackageDependencies" ;
+    skos:definition "Free-text package dependencies (no controlled vocabulary, scalar)." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:toolPackageDependenciesPresent a owl:DatatypeProperty ;
+    rdfs:label "toolPackageDependenciesPresent" ;
+    skos:definition "Whether package dependency information is present." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
+    cckp:mc2_enum "Tool Package Dependencies Present Enum" .
+
+cckp:toolReleaseDate a owl:DatatypeProperty ;
+    rdfs:label "toolReleaseDate" ;
+    skos:definition "Date of the tool's release." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:topic a owl:DatatypeProperty .
+
+cckp:tumorType a owl:DatatypeProperty .
+
+cckp:useRequirements a owl:DatatypeProperty ;
+    rdfs:label "useRequirements" ;
+    skos:definition "Free-text use requirements/restrictions." ;
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
+
+cckp:description a owl:DatatypeProperty .
+
+cckp:downloadType a owl:DatatypeProperty .
+
+cckp:publicationTitle a owl:DatatypeProperty .
+
+cckp:abstract a owl:DatatypeProperty .
+
+cckp:accessibility a owl:DatatypeProperty .
+
+cckp:consortium a owl:DatatypeProperty .
+
+cckp:dataType a owl:DatatypeProperty .
+
+cckp:doi a owl:DatatypeProperty .
+
+cckp:grantName a owl:DatatypeProperty .
+
+cckp:pubMedId a owl:DatatypeProperty .
+
+cckp:synapseLink a owl:DatatypeProperty .
+
+cckp:theme a owl:DatatypeProperty .
+
+cckp:version a owl:DatatypeProperty .
+
+cckp:grantNumber a owl:DatatypeProperty .
+
+
