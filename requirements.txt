@@ -1,3 +1,13 @@
+synapseclient>=4.8.0
+schematicpy>=25.8.1
+pandas
+PyYAML
+google-api-python-client
+google-auth
+PyGithub
+mkdocs
+mkdocs-material
+mkdocs-table-reader-plugin
 cryptography>=48.0.1
 click>=8.3.3
 httplib2>=0.32.0
