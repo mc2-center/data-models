@@ -1,7 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Person,,,,FALSE,,Tool Entity Type,,,,,,,,
-Project,,,,FALSE,,Tool Entity Type,,,,,,,,
-Division,,,,FALSE,,Tool Entity Type,,,,,,,,
-Institute,,,,FALSE,,Tool Entity Type,,,,,,,,
-Research Consortium,,,,FALSE,,Tool Entity Type,,,,,,,,
-Funding Agency,,,,FALSE,,Tool Entity Type,,,,,,,,
+Person,,,,FALSE,,Tool Entity Type,,,,,NCIT:C25190,http://purl.obolibrary.org/obo/NCIT_C25190,C25190,
+Project,,,,FALSE,,Tool Entity Type,,,,,NCIT:C47885,http://purl.obolibrary.org/obo/NCIT_C47885,C47885,
+Division,,,,FALSE,,Tool Entity Type,,,,,NCIT:C85531,http://purl.obolibrary.org/obo/NCIT_C85531,C85531,
+Institute,,,,FALSE,,Tool Entity Type,,,,,SIO:000688,http://semanticscience.org/resource/SIO_000688,,
+Research Consortium,,,,FALSE,,Tool Entity Type,,,,,NCIT:C19975,http://purl.obolibrary.org/obo/NCIT_C19975,C19975,
+Funding Agency,,,,FALSE,,Tool Entity Type,,,,,NCIT:C39409,http://purl.obolibrary.org/obo/NCIT_C39409,C39409,

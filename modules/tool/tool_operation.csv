@@ -1,119 +1,119 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Aggregation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Allele Frequency Distribution Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Annotation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Box-Whisker Plot Plotting,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Calculation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Migration Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
+Aggregation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3436,http://edamontology.org/operation_3436,,Added by Brynn 06/30/2022
+Allele Frequency Distribution Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0554,http://edamontology.org/operation_0554,,Added by Brynn 06/30/2022
+Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2945,http://edamontology.org/operation_2945,,Added by Brynn 06/30/2022
+Annotation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0226,http://edamontology.org/operation_0226,,Added by Brynn 06/30/2022
+Box-Whisker Plot Plotting,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2943,http://edamontology.org/operation_2943,,Added by Brynn 06/30/2022
+Calculation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3438,http://edamontology.org/operation_3438,,Added by Brynn 06/30/2022
+Cell Migration Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3446,http://edamontology.org/operation_3446,,Added by Brynn 06/30/2022
 Cell Modelling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
 Cell Number Quantification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
 Cell Type Enrichment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Classification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Clustering,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Clustering Profile Plotting,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Conversion,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Copy Number Variation Detection,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Correlation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Barcoding,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Handling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Database Search,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-De Novo Sequencing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 09/23/2022
-Demultiplexing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Differential Gene Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Differential Protein Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Dimensionality Reduction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Editing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Enrichment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Correlation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Data Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Profile Clustering,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Expression Profile Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Clustering,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Methylation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Regulatory Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Regulatory Network Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene-Set Enrichment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Generation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Mapping,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Variation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genome Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genome Annotation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genome Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotyping,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Heat Map Generation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Image Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Imputation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Incident Curve Plotting,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Information Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Linkage Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mapping,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Metabolic Pathway Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Methylation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Microscope Image Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Modelling and Simulation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Dynamics,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Network Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Feature Detection,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Sequence Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleosome Position Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathway Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathway Modelling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Peak Calling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetic Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Prediction and Recognition,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Principal Component Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Function Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Function Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Identification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Interaction Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Quantification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein-Protein Interaction Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Quantification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Query and Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA Secondary Structure Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA-Seq Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA-Seq Quantification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Regression Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-SNP Annotation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-SNP Detection,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Scatter Plot Plotting,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Alignment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Alignment Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Annotation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Classification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Cluster Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Clustering,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Comparison,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Composition Calculation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 11/11/2022
-Sequence Editing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence File Editing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Read Processing,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequencing Quality Control,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Simulated Gene Expression Data Generation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sorting,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Spectral Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Standardisation and Normalisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistical Calculation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistical Inference,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistical Modelling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Variation Detection,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structure Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Text Mining,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Tissue Modelling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Validation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Variant Calling,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Variant Classification,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Variant Effect Prediction,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-scRNA-Seq Analysis,,,,FALSE,,Tool Operation,,EDAM,,,,,,Added by Brynn 06/30/2022
-Agent-Based Cell Modelling,,,,FALSE,,Tool Operation,,,,,,,,OB 2024-02-07
+Classification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2990,http://edamontology.org/operation_2990,,Added by Brynn 06/30/2022
+Clustering,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3432,http://edamontology.org/operation_3432,,Added by Brynn 06/30/2022
+Clustering Profile Plotting,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2935,http://edamontology.org/operation_2935,,Added by Brynn 06/30/2022
+Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2424,http://edamontology.org/operation_2424,,Added by Brynn 06/30/2022
+Conversion,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3434,http://edamontology.org/operation_3434,,Added by Brynn 06/30/2022
+Copy Number Variation Detection,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3961,http://edamontology.org/operation_3961,,Added by Brynn 06/30/2022
+Correlation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3465,http://edamontology.org/operation_3465,,Added by Brynn 06/30/2022
+DNA Barcoding,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3200,http://edamontology.org/operation_3200,,Added by Brynn 06/30/2022
+Data Handling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2409,http://edamontology.org/operation_2409,,Added by Brynn 06/30/2022
+Data Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2422,http://edamontology.org/operation_2422,,Added by Brynn 06/30/2022
+Database Search,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2421,http://edamontology.org/operation_2421,,Added by Brynn 06/30/2022
+De Novo Sequencing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3644,http://edamontology.org/operation_3644,,Added by Brynn 09/23/2022
+Demultiplexing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3933,http://edamontology.org/operation_3933,,Added by Brynn 06/30/2022
+Differential Gene Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3223,http://edamontology.org/operation_3223,,Added by Brynn 06/30/2022
+Differential Protein Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3741,http://edamontology.org/operation_3741,,Added by Brynn 06/30/2022
+Dimensionality Reduction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3935,http://edamontology.org/operation_3935,,Added by Brynn 06/30/2022
+Editing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3096,http://edamontology.org/operation_3096,,Added by Brynn 06/30/2022
+Enrichment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3501,http://edamontology.org/operation_3501,,Added by Brynn 06/30/2022
+Expression Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2495,http://edamontology.org/operation_2495,,Added by Brynn 06/30/2022
+Expression Correlation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3463,http://edamontology.org/operation_3463,,Added by Brynn 06/30/2022
+Expression Data Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0571,http://edamontology.org/operation_0571,,Added by Brynn 06/30/2022
+Expression Profile Clustering,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0313,http://edamontology.org/operation_0313,,Added by Brynn 06/30/2022
+Expression Profile Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0315,http://edamontology.org/operation_0315,,Added by Brynn 06/30/2022
+Functional Clustering,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3459,http://edamontology.org/operation_3459,,Added by Brynn 06/30/2022
+Gene Expression Profiling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0314,http://edamontology.org/operation_0314,,Added by Brynn 06/30/2022
+Gene Methylation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3207,http://edamontology.org/operation_3207,,Added by Brynn 06/30/2022
+Gene Regulatory Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_1781,http://edamontology.org/operation_1781,,Added by Brynn 06/30/2022
+Gene Regulatory Network Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2437,http://edamontology.org/operation_2437,,Added by Brynn 06/30/2022
+Gene-Set Enrichment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2436,http://edamontology.org/operation_2436,,Added by Brynn 06/30/2022
+Generation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3429,http://edamontology.org/operation_3429,,Added by Brynn 06/30/2022
+Genetic Mapping,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0282,http://edamontology.org/operation_0282,,Added by Brynn 06/30/2022
+Genetic Variation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3197,http://edamontology.org/operation_3197,,Added by Brynn 06/30/2022
+Genome Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3918,http://edamontology.org/operation_3918,,Added by Brynn 06/30/2022
+Genome Annotation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0362,http://edamontology.org/operation_0362,,Added by Brynn 06/30/2022
+Genome Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3208,http://edamontology.org/operation_3208,,Added by Brynn 06/30/2022
+Genotyping,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3196,http://edamontology.org/operation_3196,,Added by Brynn 06/30/2022
+Heat Map Generation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0531,http://edamontology.org/operation_0531,,Added by Brynn 06/30/2022
+Image Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3443,http://edamontology.org/operation_3443,,Added by Brynn 06/30/2022
+Imputation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3557,http://edamontology.org/operation_3557,,Added by Brynn 06/30/2022
+Incident Curve Plotting,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3503,http://edamontology.org/operation_3503,,Added by Brynn 06/30/2022
+Information Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3908,http://edamontology.org/operation_3908,,Added by Brynn 06/30/2022
+Linkage Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0283,http://edamontology.org/operation_0283,,Added by Brynn 06/30/2022
+Mapping,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2429,http://edamontology.org/operation_2429,,Added by Brynn 06/30/2022
+Metabolic Pathway Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3929,http://edamontology.org/operation_3929,,Added by Brynn 06/30/2022
+Methylation Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3204,http://edamontology.org/operation_3204,,Added by Brynn 06/30/2022
+Microscope Image Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3552,http://edamontology.org/operation_3552,,Added by Brynn 06/30/2022
+Modelling and Simulation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2426,http://edamontology.org/operation_2426,,Added by Brynn 06/30/2022
+Molecular Dynamics,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2476,http://edamontology.org/operation_2476,,Added by Brynn 06/30/2022
+Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3927,http://edamontology.org/operation_3927,,Added by Brynn 06/30/2022
+Network Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3925,http://edamontology.org/operation_3925,,Added by Brynn 06/30/2022
+Nucleic Acid Feature Detection,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0415,http://edamontology.org/operation_0415,,Added by Brynn 06/30/2022
+Nucleic Acid Sequence Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2478,http://edamontology.org/operation_2478,,Added by Brynn 06/30/2022
+Nucleosome Position Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0432,http://edamontology.org/operation_0432,,Added by Brynn 06/30/2022
+Ontology Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3559,http://edamontology.org/operation_3559,,Added by Brynn 06/30/2022
+Pathway Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3928,http://edamontology.org/operation_3928,,Added by Brynn 06/30/2022
+Pathway Modelling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3660,http://edamontology.org/operation_3660,,Added by Brynn 06/30/2022
+Peak Calling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3222,http://edamontology.org/operation_3222,,Added by Brynn 06/30/2022
+Phylogenetic Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0324,http://edamontology.org/operation_0324,,Added by Brynn 06/30/2022
+Prediction and Recognition,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2423,http://edamontology.org/operation_2423,,Added by Brynn 06/30/2022
+Principal Component Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3960,http://edamontology.org/operation_3960,,Added by Brynn 06/30/2022
+Protein Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2997,http://edamontology.org/operation_2997,,Added by Brynn 06/30/2022
+Protein Function Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_1778,http://edamontology.org/operation_1778,,Added by Brynn 06/30/2022
+Protein Function Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_1777,http://edamontology.org/operation_1777,,Added by Brynn 06/30/2022
+Protein Identification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3767,http://edamontology.org/operation_3767,,Added by Brynn 06/30/2022
+Protein Interaction Network Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0276,http://edamontology.org/operation_0276,,Added by Brynn 06/30/2022
+Protein Quantification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3630,http://edamontology.org/operation_3630,,Added by Brynn 06/30/2022
+Protein-Protein Interaction Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2949,http://edamontology.org/operation_2949,,Added by Brynn 06/30/2022
+Quantification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3799,http://edamontology.org/operation_3799,,Added by Brynn 06/30/2022
+Query and Retrieval,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0224,http://edamontology.org/operation_0224,,Added by Brynn 06/30/2022
+RNA Secondary Structure Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0278,http://edamontology.org/operation_0278,,Added by Brynn 06/30/2022
+RNA-Seq Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3680,http://edamontology.org/operation_3680,,Added by Brynn 06/30/2022
+RNA-Seq Quantification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3800,http://edamontology.org/operation_3800,,Added by Brynn 06/30/2022
+Regression Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3659,http://edamontology.org/operation_3659,,Added by Brynn 06/30/2022
+SNP Annotation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3661,http://edamontology.org/operation_3661,,Added by Brynn 06/30/2022
+SNP Detection,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0484,http://edamontology.org/operation_0484,,Added by Brynn 06/30/2022
+Scatter Plot Plotting,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2940,http://edamontology.org/operation_2940,,Added by Brynn 06/30/2022
+Sequence Alignment Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0258,http://edamontology.org/operation_0258,,Added by Brynn 06/30/2022
+Sequence Alignment Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0259,http://edamontology.org/operation_0259,,Added by Brynn 06/30/2022
+Sequence Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2403,http://edamontology.org/operation_2403,,Added by Brynn 06/30/2022
+Sequence Annotation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0361,http://edamontology.org/operation_0361,,Added by Brynn 06/30/2022
+Sequence Classification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2995,http://edamontology.org/operation_2995,,Added by Brynn 06/30/2022
+Sequence Cluster Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0566,http://edamontology.org/operation_0566,,Added by Brynn 06/30/2022
+Sequence Clustering,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0291,http://edamontology.org/operation_0291,,Added by Brynn 06/30/2022
+Sequence Comparison,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2451,http://edamontology.org/operation_2451,,Added by Brynn 06/30/2022
+Sequence Composition Calculation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0236,http://edamontology.org/operation_0236,,Added by Brynn 11/11/2022
+Sequence Editing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0231,http://edamontology.org/operation_0231,,Added by Brynn 06/30/2022
+Sequence File Editing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2121,http://edamontology.org/operation_2121,,Added by Brynn 06/30/2022
+Sequence Read Processing,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3921,http://edamontology.org/operation_3921,,Added by Brynn 06/30/2022
+Sequencing Quality Control,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3218,http://edamontology.org/operation_3218,,Added by Brynn 06/30/2022
+Simulated Gene Expression Data Generation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3566,http://edamontology.org/operation_3566,,Added by Brynn 06/30/2022
+Sorting,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3802,http://edamontology.org/operation_3802,,Added by Brynn 06/30/2022
+Spectral Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3214,http://edamontology.org/operation_3214,,Added by Brynn 06/30/2022
+Standardisation and Normalisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3435,http://edamontology.org/operation_3435,,Added by Brynn 06/30/2022
+Statistical Calculation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2238,http://edamontology.org/operation_2238,,Added by Brynn 06/30/2022
+Statistical Inference,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3658,http://edamontology.org/operation_3658,,Added by Brynn 06/30/2022
+Statistical Modelling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3664,http://edamontology.org/operation_3664,,Added by Brynn 06/30/2022
+Structural Variation Detection,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3228,http://edamontology.org/operation_3228,,Added by Brynn 06/30/2022
+Structure Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2480,http://edamontology.org/operation_2480,,Added by Brynn 06/30/2022
+Text Mining,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0306,http://edamontology.org/operation_0306,,Added by Brynn 06/30/2022
+Tissue Modelling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2426,http://edamontology.org/operation_2426,,Added by Brynn 06/30/2022
+Validation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_2428,http://edamontology.org/operation_2428,,Added by Brynn 06/30/2022
+Variant Calling,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3227,http://edamontology.org/operation_3227,,Added by Brynn 06/30/2022
+Variant Classification,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3225,http://edamontology.org/operation_3225,,Added by Brynn 06/30/2022
+Variant Effect Prediction,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0331,http://edamontology.org/operation_0331,,Added by Brynn 06/30/2022
+Visualisation,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_0337,http://edamontology.org/operation_0337,,Added by Brynn 06/30/2022
+scRNA-Seq Analysis,,,,FALSE,,Tool Operation,,EDAM,,,EDAM:operation_3680,http://edamontology.org/operation_3680,,Added by Brynn 06/30/2022
+Agent-Based Cell Modelling,,,,FALSE,,Tool Operation,,,,,MAMO:0000024,http://purl.obolibrary.org/obo/MAMO_0000024,,OB 2024-02-07
 Not Applicable,,,,FALSE,,Tool Operation,,,,,,,,OB 2024-02-07

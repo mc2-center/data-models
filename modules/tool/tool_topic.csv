@@ -1,116 +1,116 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Allergy Clinical Immunology and Immunotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biochemistry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioimaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioinformatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Databases,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomedical Science,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomolecular Simulation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biophysics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotechnology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Culture Collection,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chemistry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chip-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chromosome Conformation Capture,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Comparative Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,
-Compound Libraries and Screening,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computational Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computer Science,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytogenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytometry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Mutation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Packaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Polymorphism,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Architecture Analysis and Design,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Identity and Mapping,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Mining,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Submission Annotation and Curation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Visualisation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Developmental Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Development,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Discovery,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Metabolism,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Electron Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Epigenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Evolutionary Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Exome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Experimental Design and Studies,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Function Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Regulatory and Non-Coding RNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-GWAS Study,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Regulation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Structure,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Transcripts,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene and Protein Families,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Engineering,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Variation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotype and Phenotype,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Imaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoinformatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoprecipitation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoproteins and Antigens,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Infectious Disease,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Informatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Allergy Clinical Immunology and Immunotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3400,http://edamontology.org/topic_3400,,Added by Brynn 06/30/2022
+Biochemistry,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3292,http://edamontology.org/topic_3292,,Added by Brynn 06/30/2022
+Bioimaging,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3383,http://edamontology.org/topic_3383,,Added by Brynn 06/30/2022
+Bioinformatics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0091,http://edamontology.org/topic_0091,,Added by Brynn 06/30/2022
+Biological Databases,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3489,http://edamontology.org/topic_3489,,Added by Brynn 06/30/2022
+Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3070,http://edamontology.org/topic_3070,,Added by Brynn 06/30/2022
+Biomedical Science,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3344,http://edamontology.org/topic_3344,,Added by Brynn 06/30/2022
+Biomolecular Simulation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3892,http://edamontology.org/topic_3892,,Added by Brynn 06/30/2022
+Biophysics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3306,http://edamontology.org/topic_3306,,Added by Brynn 06/30/2022
+Biotechnology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3297,http://edamontology.org/topic_3297,,Added by Brynn 06/30/2022
+Biotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3374,http://edamontology.org/topic_3374,,Added by Brynn 06/30/2022
+Cell Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2229,http://edamontology.org/topic_2229,,Added by Brynn 06/30/2022
+Cell Culture Collection,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3340,http://edamontology.org/topic_3340,,Added by Brynn 06/30/2022
+Chemistry,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3314,http://edamontology.org/topic_3314,,Added by Brynn 06/30/2022
+Chip-Seq,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3169,http://edamontology.org/topic_3169,,Added by Brynn 06/30/2022
+Chromosome Conformation Capture,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3940,http://edamontology.org/topic_3940,,Added by Brynn 06/30/2022
+Comparative Genomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0797,http://edamontology.org/topic_0797,,
+Compound Libraries and Screening,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3343,http://edamontology.org/topic_3343,,Added by Brynn 06/30/2022
+Computational Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3307,http://edamontology.org/topic_3307,,Added by Brynn 06/30/2022
+Computer Science,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3316,http://edamontology.org/topic_3316,,Added by Brynn 06/30/2022
+Cytogenetics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3959,http://edamontology.org/topic_3959,,Added by Brynn 06/30/2022
+Cytometry,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3934,http://edamontology.org/topic_3934,,Added by Brynn 06/30/2022
+DNA,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0654,http://edamontology.org/topic_0654,,Added by Brynn 06/30/2022
+DNA Mutation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2533,http://edamontology.org/topic_2533,,Added by Brynn 06/30/2022
+DNA Packaging,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3176,http://edamontology.org/topic_3176,,Added by Brynn 06/30/2022
+DNA Polymorphism,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2885,http://edamontology.org/topic_2885,,Added by Brynn 06/30/2022
+Data Architecture Analysis and Design,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3365,http://edamontology.org/topic_3365,,Added by Brynn 06/30/2022
+Data Identity and Mapping,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3345,http://edamontology.org/topic_3345,,Added by Brynn 06/30/2022
+Data Mining,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3473,http://edamontology.org/topic_3473,,Added by Brynn 06/30/2022
+Data Submission Annotation and Curation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0219,http://edamontology.org/topic_0219,,Added by Brynn 06/30/2022
+Data Visualisation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0092,http://edamontology.org/topic_0092,,Added by Brynn 06/30/2022
+Developmental Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3064,http://edamontology.org/topic_3064,,Added by Brynn 06/30/2022
+Drug Development,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3373,http://edamontology.org/topic_3373,,Added by Brynn 06/30/2022
+Drug Discovery,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3336,http://edamontology.org/topic_3336,,Added by Brynn 06/30/2022
+Drug Metabolism,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3375,http://edamontology.org/topic_3375,,Added by Brynn 06/30/2022
+Electron Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0611,http://edamontology.org/topic_0611,,Added by Brynn 06/30/2022
+Epigenetics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3295,http://edamontology.org/topic_3295,,Added by Brynn 06/30/2022
+Evolutionary Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3299,http://edamontology.org/topic_3299,,Added by Brynn 06/30/2022
+Exome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3676,http://edamontology.org/topic_3676,,Added by Brynn 06/30/2022
+Experimental Design and Studies,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3678,http://edamontology.org/topic_3678,,Added by Brynn 06/30/2022
+Function Analysis,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_1775,http://edamontology.org/topic_1775,,Added by Brynn 06/30/2022
+Functional Genomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0085,http://edamontology.org/topic_0085,,Added by Brynn 06/30/2022
+Functional Regulatory and Non-Coding RNA,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0659,http://edamontology.org/topic_0659,,Added by Brynn 06/30/2022
+GWAS Study,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3517,http://edamontology.org/topic_3517,,Added by Brynn 06/30/2022
+Gene Expression,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0203,http://edamontology.org/topic_0203,,Added by Brynn 06/30/2022
+Gene Regulation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0204,http://edamontology.org/topic_0204,,Added by Brynn 06/30/2022
+Gene Structure,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0114,http://edamontology.org/topic_0114,,Added by Brynn 06/30/2022
+Gene Transcripts,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3512,http://edamontology.org/topic_3512,,Added by Brynn 06/30/2022
+Gene and Protein Families,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0623,http://edamontology.org/topic_0623,,Added by Brynn 06/30/2022
+Genetic Engineering,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3912,http://edamontology.org/topic_3912,,Added by Brynn 06/30/2022
+Genetic Variation,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0199,http://edamontology.org/topic_0199,,Added by Brynn 06/30/2022
+Genetics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3053,http://edamontology.org/topic_3053,,Added by Brynn 06/30/2022
+Genomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0622,http://edamontology.org/topic_0622,,Added by Brynn 06/30/2022
+Genotype and Phenotype,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0625,http://edamontology.org/topic_0625,,Added by Brynn 06/30/2022
+Imaging,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3382,http://edamontology.org/topic_3382,,Added by Brynn 06/30/2022
+Immunoinformatics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3948,http://edamontology.org/topic_3948,,Added by Brynn 06/30/2022
+Immunology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0804,http://edamontology.org/topic_0804,,Added by Brynn 06/30/2022
+Immunomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3967,http://edamontology.org/topic_3967,,Added by Brynn 06/30/2022
+Immunoprecipitation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3656,http://edamontology.org/topic_3656,,Added by Brynn 06/30/2022
+Immunoproteins and Antigens,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2830,http://edamontology.org/topic_2830,,Added by Brynn 06/30/2022
+Infectious Disease,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3324,http://edamontology.org/topic_3324,,Added by Brynn 06/30/2022
+Informatics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0605,http://edamontology.org/topic_0605,,Added by Brynn 06/30/2022
 Laboratory Techniques,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Light Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Lipids,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Machine Learning,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mapping,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mathematics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Imaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Informatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicine,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicines Research and Development,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Membrane and Lipoproteins,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Metagenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 11/11/2022
-Molecular Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Genetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Interactions Pathways and Networks,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Structure Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acids,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Omics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Oncology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology and Terminology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacogenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacovigilance,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogeny,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Preclinical and Clinical Studies,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Probes and Primers,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Expression,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Modifications,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Properties,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteins,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Safety Sciences,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sample Collections,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Simulation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Software Engineering,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistics and Probability,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Systems Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcription Factors and Regulatory Sites,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcriptomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Virology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Whole Genome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Workflows,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-scRNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Light Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3385,http://edamontology.org/topic_3385,,Added by Brynn 06/30/2022
+Lipids,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0153,http://edamontology.org/topic_0153,,Added by Brynn 06/30/2022
+Machine Learning,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3474,http://edamontology.org/topic_3474,,Added by Brynn 06/30/2022
+Mapping,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0102,http://edamontology.org/topic_0102,,Added by Brynn 06/30/2022
+Mathematics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3315,http://edamontology.org/topic_3315,,Added by Brynn 06/30/2022
+Medical Imaging,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3384,http://edamontology.org/topic_3384,,Added by Brynn 06/30/2022
+Medical Informatics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3063,http://edamontology.org/topic_3063,,Added by Brynn 06/30/2022
+Medicine,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3303,http://edamontology.org/topic_3303,,Added by Brynn 06/30/2022
+Medicines Research and Development,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3376,http://edamontology.org/topic_3376,,Added by Brynn 06/30/2022
+Membrane and Lipoproteins,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0820,http://edamontology.org/topic_0820,,Added by Brynn 06/30/2022
+Metagenomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3174,http://edamontology.org/topic_3174,,Added by Brynn 11/11/2022
+Molecular Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3047,http://edamontology.org/topic_3047,,Added by Brynn 06/30/2022
+Molecular Genetics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3321,http://edamontology.org/topic_3321,,Added by Brynn 06/30/2022
+Molecular Interactions Pathways and Networks,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0602,http://edamontology.org/topic_0602,,Added by Brynn 06/30/2022
+Nucleic Acid Structure Analysis,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0097,http://edamontology.org/topic_0097,,Added by Brynn 06/30/2022
+Nucleic Acids,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0077,http://edamontology.org/topic_0077,,Added by Brynn 06/30/2022
+Omics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3391,http://edamontology.org/topic_3391,,Added by Brynn 06/30/2022
+Oncology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2640,http://edamontology.org/topic_2640,,Added by Brynn 06/30/2022
+Ontology and Terminology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0089,http://edamontology.org/topic_0089,,Added by Brynn 06/30/2022
+Pathology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0634,http://edamontology.org/topic_0634,,Added by Brynn 06/30/2022
+Pharmacogenomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0208,http://edamontology.org/topic_0208,,Added by Brynn 06/30/2022
+Pharmacology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0202,http://edamontology.org/topic_0202,,Added by Brynn 06/30/2022
+Pharmacovigilance,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3378,http://edamontology.org/topic_3378,,Added by Brynn 06/30/2022
+Phylogenetics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3293,http://edamontology.org/topic_3293,,Added by Brynn 06/30/2022
+Phylogenomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0194,http://edamontology.org/topic_0194,,Added by Brynn 06/30/2022
+Phylogeny,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0084,http://edamontology.org/topic_0084,,Added by Brynn 06/30/2022
+Preclinical and Clinical Studies,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3379,http://edamontology.org/topic_3379,,Added by Brynn 06/30/2022
+Probes and Primers,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0632,http://edamontology.org/topic_0632,,Added by Brynn 06/30/2022
+Protein Expression,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0108,http://edamontology.org/topic_0108,,Added by Brynn 06/30/2022
+Protein Modifications,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0601,http://edamontology.org/topic_0601,,Added by Brynn 06/30/2022
+Protein Properties,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0123,http://edamontology.org/topic_0123,,Added by Brynn 06/30/2022
+Proteins,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0078,http://edamontology.org/topic_0078,,Added by Brynn 06/30/2022
+Proteomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0121,http://edamontology.org/topic_0121,,Added by Brynn 06/30/2022
+Proteomics Experiment,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3520,http://edamontology.org/topic_3520,,Added by Brynn 06/30/2022
+RNA,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0099,http://edamontology.org/topic_0099,,Added by Brynn 06/30/2022
+RNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3170,http://edamontology.org/topic_3170,,Added by Brynn 06/30/2022
+Safety Sciences,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3377,http://edamontology.org/topic_3377,,Added by Brynn 06/30/2022
+Sample Collections,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3277,http://edamontology.org/topic_3277,,Added by Brynn 06/30/2022
+Sequence Analysis,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0080,http://edamontology.org/topic_0080,,Added by Brynn 06/30/2022
+Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3168,http://edamontology.org/topic_3168,,Added by Brynn 06/30/2022
+Simulation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3524,http://edamontology.org/topic_3524,,Added by Brynn 06/30/2022
+Software Engineering,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3372,http://edamontology.org/topic_3372,,Added by Brynn 06/30/2022
+Statistics and Probability,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2269,http://edamontology.org/topic_2269,,Added by Brynn 06/30/2022
+Structural Analysis,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0081,http://edamontology.org/topic_0081,,Added by Brynn 06/30/2022
+Structural Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_1317,http://edamontology.org/topic_1317,,Added by Brynn 06/30/2022
+Systems Biology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2259,http://edamontology.org/topic_2259,,Added by Brynn 06/30/2022
+Transcription Factors and Regulatory Sites,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0749,http://edamontology.org/topic_0749,,Added by Brynn 06/30/2022
+Transcriptomics,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3308,http://edamontology.org/topic_3308,,Added by Brynn 06/30/2022
+Virology,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0781,http://edamontology.org/topic_0781,,Added by Brynn 06/30/2022
+Whole Genome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3673,http://edamontology.org/topic_3673,,Added by Brynn 06/30/2022
+Workflows,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0769,http://edamontology.org/topic_0769,,Added by Brynn 06/30/2022
+scRNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_4028,http://edamontology.org/topic_4028,,Added by Brynn 06/30/2022
