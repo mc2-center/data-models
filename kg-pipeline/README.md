@@ -33,14 +33,19 @@ Stage 2: Extract              Stage 3: Harmonize                 Stage 4: Map to
 Synapse tables                data/raw/*.csv                     data/harmonized/*.csv
 (synapseclient,                 │ look up each vocab value          │ rdflib: mint IRIs,
  5 View tables)   ──────────►   │ against MC2 CV CSV (via           │ emit literal + ontology-
-      │                         │ mapping.yaml), emit               │ IRI edge per row,
-      ▼                         │ <field>_ontology_iri + reports    │ FK columns → object props
-data/raw/<table>.csv  ────────► data/harmonized/<table>.csv ─────►  data/rdf/<table>.ttl
-                                 + mappings/sssom/<field>.sssom.tsv        │
-                                                                            ▼
-                                                        data/rdf/cckp_kg.ttl (merged:
-                                                        mc2_model.ttl + cckp_portal.ttl
-                                                        + all per-table instance triples)
+      │                         │ mapping.yaml), emit               │ IRI edge per row + a
+      ▼                         │ <field>_ontology_iri + reports    │ resolvable external IRI
+data/raw/<table>.csv  ────────► data/harmonized/<table>.csv ─────►  for any doi/pubMedId value,
+                                 + mappings/sssom/<field>.sssom.tsv  FK columns → object props
+                                        │                                    │
+                                        ▼                                    ▼
+                          Stage 3.5: Suggest mappings          data/rdf/<table>.ttl
+                          (human-review only, never auto-              │
+                          applied - see below)                         ▼
+                          data/harmonized/unmapped_terms.csv  data/rdf/cckp_kg.ttl (merged:
+                                  │                            mc2_model.ttl + cckp_portal.ttl
+                                  ▼                             + all per-table instance triples)
+                          data/harmonized/mapping_suggestions.csv
 ```
 
 ## Setup
@@ -57,13 +62,15 @@ have a cached `synapseclient` login (`~/.synapseConfig` /
 ## Running
 
 ```bash
-make schema      # regenerate schema/*.ttl from schema/*.linkml.yaml
-make extract      # pull the 5 CCKP tables from Synapse -> data/raw/
-make harmonize    # resolve controlled-vocabulary values -> data/harmonized/
-make triples      # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
-make validate     # parse-check the schema turtle + report harmonization coverage
-make all          # schema + extract + harmonize + triples + validate
-make test         # pytest test/ (fixture-based, no live Synapse access needed)
+make schema              # regenerate schema/*.ttl from schema/*.linkml.yaml
+make extract              # pull the 5 CCKP tables from Synapse -> data/raw/
+make harmonize            # resolve controlled-vocabulary values -> data/harmonized/
+make suggest-mappings     # propose candidate mappings for unmapped_terms.csv -> mapping_suggestions.csv
+make triples              # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
+make validate             # parse-check the schema turtle + coverage report + regression gate
+make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
+make all                  # schema + extract + harmonize + triples + validate
+make test                 # pytest test/ (fixture-based, no live Synapse access needed)
 ```
 
 To regenerate `schema/mc2_model.linkml.yaml` after `modules/` changes
@@ -82,13 +89,19 @@ installation required.
 
 Last run against the real portal pulled **1141 Datasets, 4773
 Publications, 331 Tools, 160 Grants, 10 EducationalResources** and produced
-a merged graph of **402,092 triples** in `data/rdf/cckp_kg.ttl` (not
+a merged graph of **424,723 triples** in `data/rdf/cckp_kg.ttl` (not
 committed - see `data/` in `.gitignore`). Example resolved queries:
 
 - `Dataset -[tumorTypeTerm]-> NCIT:C3510` (Cutaneous Melanoma) for a real
   dataset row.
 - `Dataset -[grantNumberRef]-> Grant` cross-entity joins resolve correctly
   for all 1141 datasets that have a grant number matching a real Grant row.
+- `Grant -[themeTerm]-> NCIT:C19151` (Metastasis) and `Grant
+  -[grantInstitutionTerm]-> ROR:02jzgtq86` (Dana-Farber Cancer Institute),
+  from the institution/theme curation described below.
+- `Publication -[doiIri]-> https://doi.org/10.1038/...` and `Publication
+  -[pubMedIdIri]-> https://pubmed.ncbi.nlm.nih.gov/...` - templated directly
+  from the value, no CV curation involved.
 
 ## v1 scope and known limitations
 
@@ -115,14 +128,8 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
 - **Real, pre-existing gaps in the MC2 model's own ontology curation are
   surfaced, not hidden.** `make harmonize` produces two distinct reports:
   - `data/harmonized/unmapped_terms.csv` - a CCKP value didn't match any
-    term in its mapped MC2 controlled-vocabulary CSV. Some of these CVs
-    (`grant_number.csv`, `publication_accessibility.csv`,
-    `theme_name.csv`, `consortium_name.csv`, `tool_operation.csv`,
-    `tool_license.csv`, and others) currently have **zero** populated
-    `Ontology Identifier` values at all - every value against them will be
-    "unresolved" until that curation work happens (candidate follow-up for
-    the `ols-term-annotator`/`cadsr-cde-match` skills already in this repo's
-    toolkit).
+    term in its mapped MC2 controlled-vocabulary CSV. Splits into three
+    situations, not one - see `make suggest-mappings` below.
   - `data/harmonized/malformed_cv_terms.csv` - a CV row's own `Ontology
     Identifier` isn't a valid CURIE and its `Ontology Url` isn't a valid
     URL (e.g. `modules/shared/tissue.csv` stores bare ICD-O-3 topography
@@ -130,6 +137,78 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
     bare ICD-O-3 morphology code `9835/3`). These are treated as "no
     ontology mapping" rather than emitted as a fake IRI. Worth a follow-up
     similar to this repo's prior CDE/ontology mismatch reviews.
+- **`make suggest-mappings` (Stage 3.5) turns `unmapped_terms.csv` into a
+  reviewable worklist**, `data/harmonized/mapping_suggestions.csv`. It never
+  edits a CV file itself - it only classifies and proposes:
+  - `curation_gap` - the raw value already exists as a CV `Attribute` (or
+    `Nonpreferred Terms` alias), but that CV row's own `Ontology Identifier`
+    is blank. `harmonize.py`'s `load_cv_lookup` skips such rows entirely, so
+    a perfectly valid picklist term can never match. This was the single
+    largest category before curation - e.g. `publication_accessibility.csv`
+    had exactly 2 valid values (`Open Access`, `Restricted Access`), both
+    with a blank `Ontology Identifier`, accounting for thousands of
+    "unresolved" rows on its own.
+  - `possible_typo` - the raw value doesn't exist in the CV, but is a close
+    fuzzy match to one that does (e.g. `Mathemtical Modeling` →
+    `Mathematical Modeling`, `Genera` → `General`) - raw-data noise, not a
+    new concept.
+  - `novel_term` - doesn't match anything in the CV. For `curation_gap` and
+    `novel_term`, the script queries the EBI OLS4 REST API (biased toward
+    whatever ontology prefix(es) that CV already uses) or, for
+    institution-name CVs, the ROR affiliation-matching API, and writes every
+    candidate CURIE/label/URL to the suggestions file for a human to accept
+    or reject by hand-editing the CV's `Ontology Identifier`/`Ontology Url`
+    columns.
+  - A small set of pure accession-number fields (`grantNumber` on every
+    class - see `EXCLUDED_FIELDS` in `scripts/suggest_mappings.py`) is
+    skipped without any network call: their backing CV
+    (`grant/grant_number.csv`) is a real, curated allowlist of ~155 valid
+    grant numbers, but grant numbers have no ontology equivalent to look up
+    - these are documented as intentionally unmapped, not a coverage gap.
+  - **Curation pass results (2026-08-18):** acting on `suggest-mappings`'
+    output plus targeted OLS4/ROR API queries -
+    `modules/institution/institution_name.csv` and `institution_alias.csv`
+    are now 90/91 populated with ROR identifiers (one bare abbreviation,
+    `Lurie`, and one merged/renamed institution, `Indiana University -
+    Purdue University Indianapolis`, were left unmapped rather than guessed
+    - see each CSV's `Notes` column), and `modules/theme/theme_name.csv` is
+    10/18 populated with NCIT/EDAM identifiers for its single-concept values
+    (`Metastasis`, `Immunotherapy`, `Evolution`, etc.).
+  - **Confirmed, not just assumed, genuinely non-ontology-mappable fields**
+    (live NCIT/EDAM/OBI/DUO/ROR queries returned no defensible match, so no
+    identifier was invented): `Publication`/`Tool.accessibility` (`Open
+    Access`/`Restricted Access` describe a publication/software access
+    *policy*, not a biomedical concept), `Tool.cost` (`Free of
+    Charge`/`Commercial`), `Tool.license`'s `Not licensed` value (SPDX only
+    lists real license identifiers, not an "unlicensed" placeholder),
+    `Grant.consortium` and the remaining 8 `Grant.theme` values (NCI-internal
+    program/initiative names and multi-concept research themes with no
+    single-term equivalent), `Grant.grantType` (NIH activity codes like
+    `R01`/`U01` - NCIT only has category-level "R-Series"/"U-Series" terms,
+    too coarse to stand in for a specific code), and `Publication`/
+    `Dataset.tumorType`'s `Pan-Cancer` value (a multi-tumor-type *study
+    scope* descriptor, not itself a tumor type). These are legitimately
+    different from a "curation gap" - the CV term is real, but no matching
+    external vocabulary term exists to point it at.
+- **A coverage regression gate, not a fixed threshold.** `make validate`
+  compares each non-excluded field's unmapped-value count against a
+  checked-in ratchet baseline (`mappings/coverage_baseline.json`) and fails
+  if any field's count *grew* - a brand-new CV with unmapped values isn't a
+  failure the day it's added, but letting an already-tracked field quietly
+  get worse is. Run `make update-coverage-baseline` after intentionally
+  curating a CV (to record the improvement) or after knowingly accepting a
+  new gap (to move the ratchet forward deliberately, not by accident).
+- **DOI and PubMed IDs get a resolvable external IRI with zero CV curation
+  needed.** `doi` and `pubMedId`/`publicationId` fields aren't backed by any
+  MC2 controlled vocabulary - they're free identifiers - so
+  `build_triples.py` templates `cckp:doiIri` → `https://doi.org/...` and
+  `cckp:pubMedIdIri` → `https://pubmed.ncbi.nlm.nih.gov/...` directly from
+  the value's own shape (a numeric string vs. a `10.xxxx/...` DOI),
+  regardless of which field it came from - live data has at least one
+  PubMed-typed field holding a DOI instead of a numeric ID, so shape-based
+  detection is more correct than trusting the field name. Sentinel
+  placeholder values (`Pending Annotation`, `DOI Not Available`, `Under
+  Review`) are recognized and skipped rather than templated into a fake IRI.
 - **`linkml generate owl` logs "Ambiguous attribute" warnings** for field
   names reused verbatim across multiple CCKP classes (e.g. `grantNumber` on
   Dataset/Publication/Tool/EducationalResource). Each is a `class`-scoped
@@ -179,15 +258,18 @@ kg-pipeline/
     cckp_portal.linkml.yaml  - hand-authored; imports mc2_model.linkml.yaml
     cckp_portal.ttl           - generated via `make schema`
   mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
+  mappings/coverage_baseline.json - coverage-gate ratchet (generated, committed -
+                                unlike data/harmonized/*, which is gitignored)
   scripts/
     vendor/csv_to_linkml.py   - vendored csv-to-linkml skill converter (Stage 0)
     resolve_prefixes.py       - Stage 0 fixup (see script docstring)
     extract_cckp_tables.py    - Stage 2
     harmonize.py               - Stage 3
+    suggest_mappings.py         - Stage 3.5 (human-review candidate mappings)
     build_triples.py           - Stage 4
     validate_graph.py          - Stage 5
   data/                        - gitignored: raw/, harmonized/, rdf/
   test/
     fixtures/*.csv             - small hand-made sample rows, one per in-scope table
-    conftest.py, test_*.py     - pytest suite (24 tests, no live Synapse access needed)
+    conftest.py, test_*.py     - pytest suite (no live Synapse access needed)
 ```

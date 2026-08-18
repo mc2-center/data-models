@@ -1,0 +1,24 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_license.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Apache-2.0	Apache-2.0	skos:exactMatch	https://spdx.org/licenses/Apache-2.0.html	semapv:ManualMappingCuration
+BSD-2-Clause	BSD-2-Clause	skos:exactMatch	https://spdx.org/licenses/BSD-2-Clause.html	semapv:ManualMappingCuration
+BSD-2-Clause-FreeBSD	BSD-2-Clause-FreeBSD	skos:exactMatch	https://spdx.org/licenses/BSD-2-Clause-FreeBSD.html	semapv:ManualMappingCuration
+BSD-3-Clause	BSD-3-Clause	skos:exactMatch	https://spdx.org/licenses/BSD-3-Clause.html	semapv:ManualMappingCuration
+BSD-style	BSD-style	skos:exactMatch	https://spdx.org/licenses/BSD-style.html	semapv:ManualMappingCuration
+CC-BY-4.0	CC-BY-4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-4.0.html	semapv:ManualMappingCuration
+CC-BY-NC-ND-4.0	CC-BY-NC-ND-4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-NC-ND-4.0.html	semapv:ManualMappingCuration
+CC-BY-NC-SA-4.0	CC-BY-NC-SA-4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-NC-SA-4.0.html	semapv:ManualMappingCuration
+CC-BY-SA-4.0	CC-BY-SA-4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-SA-4.0.html	semapv:ManualMappingCuration
+GPL-2.0	GPL-2.0	skos:exactMatch	https://spdx.org/licenses/GPL-2.0.html	semapv:ManualMappingCuration
+GPL-3.0	GPL-3.0	skos:exactMatch	https://spdx.org/licenses/GPL-3.0.html	semapv:ManualMappingCuration
+LGPL-2.0	LGPL-2.0	skos:exactMatch	https://spdx.org/licenses/LGPL-2.0.html	semapv:ManualMappingCuration
+LGPL-2.1	LGPL-2.1	skos:exactMatch	https://spdx.org/licenses/LGPL-2.1.html	semapv:ManualMappingCuration
+LGPL-3.0	LGPL-3.0	skos:exactMatch	https://spdx.org/licenses/LGPL-3.0.html	semapv:ManualMappingCuration
+MIT	MIT	skos:exactMatch	https://spdx.org/licenses/MIT.html	semapv:ManualMappingCuration
+Other	Other	skos:exactMatch	https://spdx.org/licenses/Other.html	semapv:ManualMappingCuration
+Proprietary	Proprietary	skos:exactMatch	https://spdx.org/licenses/Proprietary.html	semapv:ManualMappingCuration
+Python-2.0	Python-2.0	skos:exactMatch	https://spdx.org/licenses/Python-2.0.html	semapv:ManualMappingCuration

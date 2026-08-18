@@ -1,0 +1,107 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_topic.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Allergy Clinical Immunology and Immunotherapeutics	Allergy Clinical Immunology and Immunotherapeutics	skos:exactMatch	http://edamontology.org/topic_3400	semapv:ManualMappingCuration
+Biochemistry	Biochemistry	skos:exactMatch	http://edamontology.org/topic_3292	semapv:ManualMappingCuration
+Bioimaging	Bioimaging	skos:exactMatch	http://edamontology.org/topic_3383	semapv:ManualMappingCuration
+Bioinformatics	Bioinformatics	skos:exactMatch	http://edamontology.org/topic_0091	semapv:ManualMappingCuration
+Biological Databases	Biological Databases	skos:exactMatch	http://edamontology.org/topic_3489	semapv:ManualMappingCuration
+Biomedical Science	Biomedical Science	skos:exactMatch	http://edamontology.org/topic_3344	semapv:ManualMappingCuration
+Biomolecular Simulation	Biomolecular Simulation	skos:exactMatch	http://edamontology.org/topic_3892	semapv:ManualMappingCuration
+Biophysics	Biophysics	skos:exactMatch	http://edamontology.org/topic_3306	semapv:ManualMappingCuration
+Biotherapeutics	Biotherapeutics	skos:exactMatch	http://edamontology.org/topic_3374	semapv:ManualMappingCuration
+Cell Biology	Cell Biology	skos:exactMatch	http://edamontology.org/topic_2229	semapv:ManualMappingCuration
+Cell Culture Collection	Cell Culture Collection	skos:exactMatch	http://edamontology.org/topic_3340	semapv:ManualMappingCuration
+Chip-Seq	Chip-Seq	skos:exactMatch	http://edamontology.org/topic_3169	semapv:ManualMappingCuration
+Chromosome Conformation Capture	Chromosome Conformation Capture	skos:exactMatch	http://edamontology.org/topic_3940	semapv:ManualMappingCuration
+Comparative Genomics	Comparative Genomics	skos:exactMatch	http://edamontology.org/topic_0797	semapv:ManualMappingCuration
+Compound Libraries and Screening	Compound Libraries and Screening	skos:exactMatch	http://edamontology.org/topic_3343	semapv:ManualMappingCuration
+Computational Biology	Computational Biology	skos:exactMatch	http://edamontology.org/topic_3307	semapv:ManualMappingCuration
+Cytogenetics	Cytogenetics	skos:exactMatch	http://edamontology.org/topic_3959	semapv:ManualMappingCuration
+Cytometry	Cytometry	skos:exactMatch	http://edamontology.org/topic_3934	semapv:ManualMappingCuration
+DNA	DNA	skos:exactMatch	http://edamontology.org/topic_0654	semapv:ManualMappingCuration
+DNA Mutation	DNA Mutation	skos:exactMatch	http://edamontology.org/topic_2533	semapv:ManualMappingCuration
+DNA Packaging	DNA Packaging	skos:exactMatch	http://edamontology.org/topic_3176	semapv:ManualMappingCuration
+DNA Polymorphism	DNA Polymorphism	skos:exactMatch	http://edamontology.org/topic_2885	semapv:ManualMappingCuration
+Data Architecture Analysis and Design	Data Architecture Analysis and Design	skos:exactMatch	http://edamontology.org/topic_3365	semapv:ManualMappingCuration
+Data Identity and Mapping	Data Identity and Mapping	skos:exactMatch	http://edamontology.org/topic_3345	semapv:ManualMappingCuration
+Data Mining	Data Mining	skos:exactMatch	http://edamontology.org/topic_3473	semapv:ManualMappingCuration
+Data Submission Annotation and Curation	Data Submission Annotation and Curation	skos:exactMatch	http://edamontology.org/topic_0219	semapv:ManualMappingCuration
+Data Visualisation	Data Visualisation	skos:exactMatch	http://edamontology.org/topic_0092	semapv:ManualMappingCuration
+Developmental Biology	Developmental Biology	skos:exactMatch	http://edamontology.org/topic_3064	semapv:ManualMappingCuration
+Drug Development	Drug Development	skos:exactMatch	http://edamontology.org/topic_3373	semapv:ManualMappingCuration
+Drug Discovery	Drug Discovery	skos:exactMatch	http://edamontology.org/topic_3336	semapv:ManualMappingCuration
+Drug Metabolism	Drug Metabolism	skos:exactMatch	http://edamontology.org/topic_3375	semapv:ManualMappingCuration
+Electron Microscopy	Electron Microscopy	skos:exactMatch	http://edamontology.org/topic_0611	semapv:ManualMappingCuration
+Epigenetics	Epigenetics	skos:exactMatch	http://edamontology.org/topic_3295	semapv:ManualMappingCuration
+Evolutionary Biology	Evolutionary Biology	skos:exactMatch	http://edamontology.org/topic_3299	semapv:ManualMappingCuration
+Exome Sequencing	Exome Sequencing	skos:exactMatch	http://edamontology.org/topic_3676	semapv:ManualMappingCuration
+Function Analysis	Function Analysis	skos:exactMatch	http://edamontology.org/topic_1775	semapv:ManualMappingCuration
+Functional Genomics	Functional Genomics	skos:exactMatch	http://edamontology.org/topic_0085	semapv:ManualMappingCuration
+Functional Regulatory and Non-Coding RNA	Functional Regulatory and Non-Coding RNA	skos:exactMatch	http://edamontology.org/topic_0659	semapv:ManualMappingCuration
+GWAS Study	GWAS Study	skos:exactMatch	http://edamontology.org/topic_3517	semapv:ManualMappingCuration
+Gene Expression	Gene Expression	skos:exactMatch	http://edamontology.org/topic_0203	semapv:ManualMappingCuration
+Gene Regulation	Gene Regulation	skos:exactMatch	http://edamontology.org/topic_0204	semapv:ManualMappingCuration
+Gene Transcripts	Gene Transcripts	skos:exactMatch	http://edamontology.org/topic_3512	semapv:ManualMappingCuration
+Gene and Protein Families	Gene and Protein Families	skos:exactMatch	http://edamontology.org/topic_0623	semapv:ManualMappingCuration
+Genetic Engineering	Genetic Engineering	skos:exactMatch	http://edamontology.org/topic_3912	semapv:ManualMappingCuration
+Genetic Variation	Genetic Variation	skos:exactMatch	http://edamontology.org/topic_0199	semapv:ManualMappingCuration
+Genetics	Genetics	skos:exactMatch	http://edamontology.org/topic_3053	semapv:ManualMappingCuration
+Genomics	Genomics	skos:exactMatch	http://edamontology.org/topic_0622	semapv:ManualMappingCuration
+Genotype and Phenotype	Genotype and Phenotype	skos:exactMatch	http://edamontology.org/topic_0625	semapv:ManualMappingCuration
+Imaging	Imaging	skos:exactMatch	http://edamontology.org/topic_3382	semapv:ManualMappingCuration
+Immunoinformatics	Immunoinformatics	skos:exactMatch	http://edamontology.org/topic_3948	semapv:ManualMappingCuration
+Immunology	Immunology	skos:exactMatch	http://edamontology.org/topic_0804	semapv:ManualMappingCuration
+Immunomics	Immunomics	skos:exactMatch	http://edamontology.org/topic_3967	semapv:ManualMappingCuration
+Immunoproteins and Antigens	Immunoproteins and Antigens	skos:exactMatch	http://edamontology.org/topic_2830	semapv:ManualMappingCuration
+Infectious Disease	Infectious Disease	skos:exactMatch	http://edamontology.org/topic_3324	semapv:ManualMappingCuration
+Light Microscopy	Light Microscopy	skos:exactMatch	http://edamontology.org/topic_3385	semapv:ManualMappingCuration
+Lipids	Lipids	skos:exactMatch	http://edamontology.org/topic_0153	semapv:ManualMappingCuration
+Machine Learning	Machine Learning	skos:exactMatch	http://edamontology.org/topic_3474	semapv:ManualMappingCuration
+Mapping	Mapping	skos:exactMatch	http://edamontology.org/topic_0102	semapv:ManualMappingCuration
+Mathematics	Mathematics	skos:exactMatch	http://edamontology.org/topic_3315	semapv:ManualMappingCuration
+Medical Imaging	Medical Imaging	skos:exactMatch	http://edamontology.org/topic_3384	semapv:ManualMappingCuration
+Medical Informatics	Medical Informatics	skos:exactMatch	http://edamontology.org/topic_3063	semapv:ManualMappingCuration
+Medicine	Medicine	skos:exactMatch	http://edamontology.org/topic_3303	semapv:ManualMappingCuration
+Membrane and Lipoproteins	Membrane and Lipoproteins	skos:exactMatch	http://edamontology.org/topic_0820	semapv:ManualMappingCuration
+Metagenomics	Metagenomics	skos:exactMatch	http://edamontology.org/topic_3174	semapv:ManualMappingCuration
+Molecular Biology	Molecular Biology	skos:exactMatch	http://edamontology.org/topic_3047	semapv:ManualMappingCuration
+Molecular Genetics	Molecular Genetics	skos:exactMatch	http://edamontology.org/topic_3321	semapv:ManualMappingCuration
+Molecular Interactions Pathways and Networks	Molecular Interactions Pathways and Networks	skos:exactMatch	http://edamontology.org/topic_0602	semapv:ManualMappingCuration
+Nucleic Acid Structure Analysis	Nucleic Acid Structure Analysis	skos:exactMatch	http://edamontology.org/topic_0097	semapv:ManualMappingCuration
+Nucleic Acids	Nucleic Acids	skos:exactMatch	http://edamontology.org/topic_0077	semapv:ManualMappingCuration
+Omics	Omics	skos:exactMatch	http://edamontology.org/topic_3391	semapv:ManualMappingCuration
+Oncology	Oncology	skos:exactMatch	http://edamontology.org/topic_2640	semapv:ManualMappingCuration
+Ontology and Terminology	Ontology and Terminology	skos:exactMatch	http://edamontology.org/topic_0089	semapv:ManualMappingCuration
+Pathology	Pathology	skos:exactMatch	http://edamontology.org/topic_0634	semapv:ManualMappingCuration
+Pharmacogenomics	Pharmacogenomics	skos:exactMatch	http://edamontology.org/topic_0208	semapv:ManualMappingCuration
+Pharmacology	Pharmacology	skos:exactMatch	http://edamontology.org/topic_0202	semapv:ManualMappingCuration
+Pharmacovigilance	Pharmacovigilance	skos:exactMatch	http://edamontology.org/topic_3378	semapv:ManualMappingCuration
+Phylogenetics	Phylogenetics	skos:exactMatch	http://edamontology.org/topic_3293	semapv:ManualMappingCuration
+Phylogeny	Phylogeny	skos:exactMatch	http://edamontology.org/topic_0084	semapv:ManualMappingCuration
+Preclinical and Clinical Studies	Preclinical and Clinical Studies	skos:exactMatch	http://edamontology.org/topic_3379	semapv:ManualMappingCuration
+Probes and Primers	Probes and Primers	skos:exactMatch	http://edamontology.org/topic_0632	semapv:ManualMappingCuration
+Protein Expression	Protein Expression	skos:exactMatch	http://edamontology.org/topic_0108	semapv:ManualMappingCuration
+Protein Modifications	Protein Modifications	skos:exactMatch	http://edamontology.org/topic_0601	semapv:ManualMappingCuration
+Protein Properties	Protein Properties	skos:exactMatch	http://edamontology.org/topic_0123	semapv:ManualMappingCuration
+Proteomics	Proteomics	skos:exactMatch	http://edamontology.org/topic_0121	semapv:ManualMappingCuration
+Proteomics Experiment	Proteomics Experiment	skos:exactMatch	http://edamontology.org/topic_3520	semapv:ManualMappingCuration
+RNA	RNA	skos:exactMatch	http://edamontology.org/topic_0099	semapv:ManualMappingCuration
+RNA-Seq	RNA-Seq	skos:exactMatch	http://edamontology.org/topic_3170	semapv:ManualMappingCuration
+Sample Collections	Sample Collections	skos:exactMatch	http://edamontology.org/topic_3277	semapv:ManualMappingCuration
+Sequence Analysis	Sequence Analysis	skos:exactMatch	http://edamontology.org/topic_0080	semapv:ManualMappingCuration
+Sequencing	Sequencing	skos:exactMatch	http://edamontology.org/topic_3168	semapv:ManualMappingCuration
+Simulation Experiment	Simulation Experiment	skos:exactMatch	http://edamontology.org/topic_3524	semapv:ManualMappingCuration
+Software Engineering	Software Engineering	skos:exactMatch	http://edamontology.org/topic_3372	semapv:ManualMappingCuration
+Statistics and Probability	Statistics and Probability	skos:exactMatch	http://edamontology.org/topic_2269	semapv:ManualMappingCuration
+Structural Biology	Structural Biology	skos:exactMatch	http://edamontology.org/topic_1317	semapv:ManualMappingCuration
+Systems Biology	Systems Biology	skos:exactMatch	http://edamontology.org/topic_2259	semapv:ManualMappingCuration
+Transcription Factors and Regulatory Sites	Transcription Factors and Regulatory Sites	skos:exactMatch	http://edamontology.org/topic_0749	semapv:ManualMappingCuration
+Transcriptomics	Transcriptomics	skos:exactMatch	http://edamontology.org/topic_3308	semapv:ManualMappingCuration
+Virology	Virology	skos:exactMatch	http://edamontology.org/topic_0781	semapv:ManualMappingCuration
+Whole Genome Sequencing	Whole Genome Sequencing	skos:exactMatch	http://edamontology.org/topic_3673	semapv:ManualMappingCuration
+Workflows	Workflows	skos:exactMatch	http://edamontology.org/topic_0769	semapv:ManualMappingCuration
+scRNA-Seq	scRNA-Seq	skos:exactMatch	http://edamontology.org/topic_4028	semapv:ManualMappingCuration

@@ -12,41 +12,29 @@
 cckp:Dataset a owl:Class ;
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty cckp:datasetName ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetId ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:downloadSynId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty cckp:version ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:sourceRepository ],
+            owl:onProperty cckp:dataType ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:fileFormats ],
+            owl:onProperty cckp:accessInformation ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:theme ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:overallDesign ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:pubMedId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:tissue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:externalLink ],
+            owl:onProperty cckp:downloadType ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:grantNumber ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:assay ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetAlias ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:version ],
+            owl:onProperty cckp:externalLink ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:tumorType ],
@@ -55,13 +43,31 @@ cckp:Dataset a owl:Class ;
             owl:onProperty cckp:overallDesign ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadType ],
+            owl:onProperty cckp:description ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:datasetAlias ],
+            owl:cardinality 1 ;
+            owl:onProperty cckp:datasetName ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantName ],
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tissue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:species ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationTitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasetName ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:doi ],
@@ -70,96 +76,123 @@ cckp:Dataset a owl:Class ;
             owl:onProperty cckp:consortium ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:datasetName ],
+            owl:onProperty cckp:downloadSynId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:version ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:sourceRepository ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:accessInformation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:species ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:datasetAlias ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:assay ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:downloadType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:publicationTitle ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:datasetId ],
+            owl:onProperty cckp:grantName ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:externalLink ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:description ],
+            owl:onProperty cckp:sourceRepository ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadSynId ],
+            owl:onProperty cckp:version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:sourceRepository ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:fileFormats ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty cckp:datasetId ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadSynId ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:dataType ] ;
+            owl:onProperty cckp:overallDesign ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:datasetAlias ] ;
     skos:definition "A CCKP Dataset record (DatasetView, syn21897968)." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 
 cckp:EducationalResource a owl:Class ;
     rdfs:label "EducationalResource" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantNumber ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:component ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolLink ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:dataType ],
+            owl:onProperty cckp:secondaryTopic ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty cckp:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:datasetLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:primaryFormat ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationId ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:educationalLevel ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:datasetLink ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:alias ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:alias ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:component ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolLink ],
+            owl:onProperty cckp:language ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:useRequirements ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:activityType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:mediaAccessibility ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolLink ],
+            owl:onProperty cckp:datasetLink ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:primaryAudience ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:description ],
+            owl:onProperty cckp:publicationId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:alias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:topic ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:alias ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:originInstitution ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessHazard ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:internalIdentifier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolLink ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:synapseLink ],
@@ -167,201 +200,192 @@ cckp:EducationalResource a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:intendedUse ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:component ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:synapseLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:accessHazard ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:topic ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:language ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:publicationId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:activityType ],
+            owl:onProperty cckp:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:useRequirements ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:secondaryTopic ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:datasetLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:license ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:publicationId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:doi ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:link ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:internalIdentifier ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:internalIdentifier ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:primaryFormat ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:originInstitution ] ;
+            owl:onProperty cckp:link ] ;
     skos:definition "A CCKP Educational Resource record (EducationalResource, syn51497305)." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 
 cckp:Grant a owl:Class ;
     rdfs:label "Grant" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:institutionAlias ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantStartDate ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:nihReporterLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantInstitution ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantViewId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantSynapseTeam ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:embargoEndDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantNumber ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantSynapseProject ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty cckp:grantId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:nihReporterLink ],
+            owl:onProperty cckp:abstract ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:investigator ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:consortium ],
+            owl:onProperty cckp:grantId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantSynapseTeam ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty cckp:grantName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:embargoEndDate ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantNumber ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantStartDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:durationOfFunding ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:abstract ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:integer ;
             owl:onProperty cckp:durationOfFunding ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty cckp:grantId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantStartDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantInstitution ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:grantViewId ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantSynapseTeam ],
+            owl:onProperty cckp:institutionAlias ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:theme ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantId ],
+            owl:onProperty cckp:nihReporterLink ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:investigator ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantStartDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:durationOfFunding ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantSynapseProject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:embargoEndDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantViewId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:grantSynapseProject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:embargoEndDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:nihReporterLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:abstract ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantName ],
+            owl:onProperty cckp:grantSynapseTeam ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:grantSynapseProject ] ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantName ] ;
     skos:definition "A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 
 cckp:Publication a owl:Class ;
     rdfs:label "Publication" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:abstract ],
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tumorType ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:pubMedUrl ],
+            owl:onProperty cckp:publicationYear ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataset ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:assay ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:dataset ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:authors ],
+            owl:onProperty cckp:pubMedUrl ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty cckp:authors ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:accessibility ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:pubMedUrl ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:publicationTitle ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:authors ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:dataset ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:doi ],
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty cckp:publicationYear ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:journal ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:assay ],
+            owl:onProperty cckp:grantName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:tissue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:journal ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:authors ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:publicationTitle ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:pubMedLink ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:theme ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty cckp:publicationTitle ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:abstract ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cckp:pubMedId ],
@@ -370,252 +394,114 @@ cckp:Publication a owl:Class ;
             owl:onProperty cckp:keywords ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:journal ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:pubMedLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:consortium ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantNumber ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:dataType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:accessibility ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:tumorType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:pubMedLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty cckp:pubMedId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:tissue ],
+            owl:onProperty cckp:abstract ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:publicationYear ],
+            owl:onProperty cckp:doi ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty cckp:publicationYear ] ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:abstract ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedLink ] ;
     skos:definition "A CCKP Publication record (PublicationView, syn21868591)." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 
 cckp:Tool a owl:Class ;
     rdfs:label "Tool" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolComputeRequirements ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:functionNote ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadNote ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolEntityType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolEntityRole ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolEntityName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:operatingSystem ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty cckp:toolPackageDependenciesPresent ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:cmd ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:downloadVersion ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:grantNumber ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:version ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolReleaseDate ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolPackageDependencies ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:linkNote ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolPackageDependenciesPresent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:toolReleaseDate ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolDateLastModified ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty cckp:portalDisplay ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:cmd ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:operation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolDateLastModified ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:accessibility ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:cost ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:homepage ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolEntityRole ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolComputeRequirements ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:cost ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadLink ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:accessibility ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:outputFormat ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:datasets ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:inputFormat ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolEntityName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:downloadNote ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:documentationNote ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:portalDisplay ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:linkType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadVersion ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:doi ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:documentationNote ],
+            owl:onProperty cckp:linkUrl ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:outputData ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:license ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:doi ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty cckp:toolName ],
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty cckp:portalDisplay ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:functionNote ],
+            owl:onProperty cckp:version ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:linkNote ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:linkType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:downloadUrl ],
+            owl:onProperty cckp:portalDisplay ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:theme ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:pubMedId ],
+            owl:onProperty cckp:version ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:topic ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:toolPackageDependenciesPresent ],
+            owl:onProperty cckp:linkNote ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:dataType ],
+            owl:onProperty cckp:toolEntityRole ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:synapseLink ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:downloadLink ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:homepage ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty cckp:toolPackageDependencies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:outputFormat ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:inputData ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:operatingSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:dataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:homepage ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:documentationUrl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolPackageDependencies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:functionNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:linkType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:toolEntityType ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:consortium ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:documentationType ],
+            owl:cardinality 1 ;
+            owl:onProperty cckp:toolName ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:linkUrl ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:documentationUrl ],
+            owl:onProperty cckp:downloadNote ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:documentationUrl ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cckp:version ],
+            owl:onProperty cckp:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:linkUrl ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty cckp:toolType ],
+            owl:onProperty cckp:cmd ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:downloadUrl ],
@@ -623,11 +509,125 @@ cckp:Tool a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:language ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityRole ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolComputeRequirements ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolEntityName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:datasets ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolDateLastModified ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadUrl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:cmd ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:synapseLink ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:functionNote ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty cckp:toolPackageDependenciesPresent ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:linkUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:documentationNote ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:pubMedId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:downloadLink ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty cckp:downloadType ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationUrl ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:operation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:homepage ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:linkType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:accessibility ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:theme ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:consortium ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:inputFormat ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationType ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cckp:synapseLink ] ;
+            owl:onProperty cckp:toolDateLastModified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolReleaseDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:license ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:documentationNote ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolComputeRequirements ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:downloadLink ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:toolType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:cost ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cckp:toolEntityType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:grantNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty cckp:cost ] ;
     skos:definition "A CCKP Tool record (ToolView, syn26127427)." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 

@@ -1,0 +1,9 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_link_type.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Discussion Forum	Discussion Forum	skos:exactMatch	http://purl.obolibrary.org/obo/GSSO_005459	semapv:ManualMappingCuration
+Repository	Repository	skos:exactMatch	http://purl.obolibrary.org/obo/APOLLO_SV_00000522	semapv:ManualMappingCuration
+Service	Service	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C80736	semapv:ManualMappingCuration

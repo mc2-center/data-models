@@ -9,6 +9,7 @@ BAM	BAM	skos:exactMatch	http://edamontology.org/format_2572	semapv:ManualMapping
 BCF	BCF	skos:exactMatch	http://edamontology.org/format_3020	semapv:ManualMappingCuration
 BED	BED	skos:exactMatch	http://edamontology.org/format_3003	semapv:ManualMappingCuration
 BNGL	BNGL	skos:exactMatch	http://edamontology.org/format_3972	semapv:ManualMappingCuration
+Biological Model Format	Biological Model Format	skos:exactMatch	http://edamontology.org/format_2013	semapv:ManualMappingCuration
 Biological Pathway Or Network Format	Biological Pathway Or Network Format	skos:exactMatch	http://edamontology.org/format_2013	semapv:ManualMappingCuration
 CSV	CSV	skos:exactMatch	http://edamontology.org/format_3752	semapv:ManualMappingCuration
 Chemical Data Format	Chemical Data Format	skos:exactMatch	http://edamontology.org/format_2030	semapv:ManualMappingCuration
@@ -18,6 +19,7 @@ Document Format	Document Format	skos:exactMatch	http://edamontology.org/format_3
 FASTA	FASTA	skos:exactMatch	http://edamontology.org/format_1929	semapv:ManualMappingCuration
 FASTQ	FASTQ	skos:exactMatch	http://edamontology.org/format_1930	semapv:ManualMappingCuration
 FASTQ-Illumina	FASTQ-Illumina	skos:exactMatch	http://edamontology.org/format_1931	semapv:ManualMappingCuration
+FCS	FCS	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000327	semapv:ManualMappingCuration
 GCT/Res Format	GCT/Res Format	skos:exactMatch	http://edamontology.org/format_3709	semapv:ManualMappingCuration
 GTF	GTF	skos:exactMatch	http://edamontology.org/format_2306	semapv:ManualMappingCuration
 Gene Annotation Format	Gene Annotation Format	skos:exactMatch	http://edamontology.org/format_2031	semapv:ManualMappingCuration
@@ -39,6 +41,7 @@ MAGE-TAB	MAGE-TAB	skos:exactMatch	http://edamontology.org/format_3162	semapv:Man
 MAT	MAT	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190178	semapv:ManualMappingCuration
 MATLAB Script	MATLAB Script	skos:exactMatch	http://edamontology.org/format_4007	semapv:ManualMappingCuration
 MSF	MSF	skos:exactMatch	http://edamontology.org/format_3702	semapv:ManualMappingCuration
+Map Format	Map Format	skos:exactMatch	http://edamontology.org/format_2060	semapv:ManualMappingCuration
 Mass Spectrometry Data Format	Mass Spectrometry Data Format	skos:exactMatch	http://edamontology.org/format_3245	semapv:ManualMappingCuration
 Matrix Format	Matrix Format	skos:exactMatch	http://edamontology.org/format_3033	semapv:ManualMappingCuration
 NIFTI Format	NIFTI Format	skos:exactMatch	http://edamontology.org/format_3549	semapv:ManualMappingCuration

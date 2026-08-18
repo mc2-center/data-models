@@ -1,0 +1,94 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/grant_institution_alias.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+AECM	AECM	skos:exactMatch	https://ror.org/05cf8a891	semapv:ManualMappingCuration
+ASU	ASU	skos:exactMatch	https://ror.org/03efmqc40	semapv:ManualMappingCuration
+AU	AU	skos:exactMatch	https://ror.org/02v80fc35	semapv:ManualMappingCuration
+BCM	BCM	skos:exactMatch	https://ror.org/02pttbw34	semapv:ManualMappingCuration
+BIDMC	BIDMC	skos:exactMatch	https://ror.org/02cpjkp59	semapv:ManualMappingCuration
+BMC	BMC	skos:exactMatch	https://ror.org/010b9wj87	semapv:ManualMappingCuration
+BRI	BRI	skos:exactMatch	https://ror.org/05fazth07	semapv:ManualMappingCuration
+BU	BU	skos:exactMatch	https://ror.org/05qwgg493	semapv:ManualMappingCuration
+BWH	BWH	skos:exactMatch	https://ror.org/04b6nzv94	semapv:ManualMappingCuration
+Barrow	Barrow	skos:exactMatch	https://ror.org/01fwrsq33	semapv:ManualMappingCuration
+CHOP	CHOP	skos:exactMatch	https://ror.org/01z7r7q48	semapv:ManualMappingCuration
+COH	COH	skos:exactMatch	https://ror.org/00w6g5w60	semapv:ManualMappingCuration
+CSHL	CSHL	skos:exactMatch	https://ror.org/02qz8b764	semapv:ManualMappingCuration
+Caltech	Caltech	skos:exactMatch	https://ror.org/05dxps055	semapv:ManualMappingCuration
+Clemson	Clemson	skos:exactMatch	https://ror.org/037s24f05	semapv:ManualMappingCuration
+Cleveland Clinic	Cleveland Clinic	skos:exactMatch	https://ror.org/03xjacd83	semapv:ManualMappingCuration
+Columbia	Columbia	skos:exactMatch	https://ror.org/00hj8s172	semapv:ManualMappingCuration
+Cornell	Cornell	skos:exactMatch	https://ror.org/05bnh6r87	semapv:ManualMappingCuration
+DFCI	DFCI	skos:exactMatch	https://ror.org/02jzgtq86	semapv:ManualMappingCuration
+Dartmouth	Dartmouth	skos:exactMatch	https://ror.org/049s0rh22	semapv:ManualMappingCuration
+Duke	Duke	skos:exactMatch	https://ror.org/00py81415	semapv:ManualMappingCuration
+Emory	Emory	skos:exactMatch	https://ror.org/03czfpz43	semapv:ManualMappingCuration
+GTech	GTech	skos:exactMatch	https://ror.org/01zkghx44	semapv:ManualMappingCuration
+HMS	HMS	skos:exactMatch	https://ror.org/03vek6s52	semapv:ManualMappingCuration
+HUJI	HUJI	skos:exactMatch	https://ror.org/03qxff017	semapv:ManualMappingCuration
+Harvard	Harvard	skos:exactMatch	https://ror.org/03vek6s52	semapv:ManualMappingCuration
+Houston Methodist	Houston Methodist	skos:exactMatch	https://ror.org/027zt9171	semapv:ManualMappingCuration
+ISB	ISB	skos:exactMatch	https://ror.org/02tpgw303	semapv:ManualMappingCuration
+IU	IU	skos:exactMatch	https://ror.org/01kg8sb98	semapv:ManualMappingCuration
+JHU	JHU	skos:exactMatch	https://ror.org/00za53h95	semapv:ManualMappingCuration
+Jackson Laboratory	Jackson Laboratory	skos:exactMatch	https://ror.org/021sy4w91	semapv:ManualMappingCuration
+MGH	MGH	skos:exactMatch	https://ror.org/002pd6e78	semapv:ManualMappingCuration
+MIT	MIT	skos:exactMatch	https://ror.org/042nb2s44	semapv:ManualMappingCuration
+MSKCC	MSKCC	skos:exactMatch	https://ror.org/02yrq0923	semapv:ManualMappingCuration
+Mayo	Mayo	skos:exactMatch	https://ror.org/02qp3tb03	semapv:ManualMappingCuration
+Moffitt	Moffitt	skos:exactMatch	https://ror.org/01xf75524	semapv:ManualMappingCuration
+NU	NU	skos:exactMatch	https://ror.org/000e0be47	semapv:ManualMappingCuration
+NYU	NYU	skos:exactMatch	https://ror.org/0190ak572	semapv:ManualMappingCuration
+OHSU	OHSU	skos:exactMatch	https://ror.org/009avj582	semapv:ManualMappingCuration
+PNNL	PNNL	skos:exactMatch	https://ror.org/05h992307	semapv:ManualMappingCuration
+Pitt	Pitt	skos:exactMatch	https://ror.org/01an3r305	semapv:ManualMappingCuration
+Purdue	Purdue	skos:exactMatch	https://ror.org/02dqehb95	semapv:ManualMappingCuration
+Rockefeller University	Rockefeller University	skos:exactMatch	https://ror.org/0420db125	semapv:ManualMappingCuration
+SBU	SBU	skos:exactMatch	https://ror.org/05qghxh33	semapv:ManualMappingCuration
+Sage	Sage	skos:exactMatch	https://ror.org/049ncjx51	semapv:ManualMappingCuration
+Salk	Salk	skos:exactMatch	https://ror.org/03xez1567	semapv:ManualMappingCuration
+StJude	StJude	skos:exactMatch	https://ror.org/02r3e0967	semapv:ManualMappingCuration
+Stanford	Stanford	skos:exactMatch	https://ror.org/00f54p054	semapv:ManualMappingCuration
+TUM	TUM	skos:exactMatch	https://ror.org/05wvpxv85	semapv:ManualMappingCuration
+U Miami	U Miami	skos:exactMatch	https://ror.org/02dgjyy92	semapv:ManualMappingCuration
+UA	UA	skos:exactMatch	https://ror.org/03m2x1q45	semapv:ManualMappingCuration
+UAB	UAB	skos:exactMatch	https://ror.org/008s83205	semapv:ManualMappingCuration
+UARK	UARK	skos:exactMatch	https://ror.org/05jbt9m15	semapv:ManualMappingCuration
+UCBerkeley	UCBerkeley	skos:exactMatch	https://ror.org/01an7q238	semapv:ManualMappingCuration
+UCD	UCD	skos:exactMatch	https://ror.org/02hh7en24	semapv:ManualMappingCuration
+UCI	UCI	skos:exactMatch	https://ror.org/04gyf1771	semapv:ManualMappingCuration
+UCLA	UCLA	skos:exactMatch	https://ror.org/046rm7j60	semapv:ManualMappingCuration
+UCMC	UCMC	skos:exactMatch	https://ror.org/0076kfe04	semapv:ManualMappingCuration
+UCSD	UCSD	skos:exactMatch	https://ror.org/0168r3w48	semapv:ManualMappingCuration
+UCSF	UCSF	skos:exactMatch	https://ror.org/043mz5j54	semapv:ManualMappingCuration
+UChicago	UChicago	skos:exactMatch	https://ror.org/024mw5h28	semapv:ManualMappingCuration
+UD	UD	skos:exactMatch	https://ror.org/01sbq1a82	semapv:ManualMappingCuration
+UFL	UFL	skos:exactMatch	https://ror.org/02y3ad647	semapv:ManualMappingCuration
+UIC	UIC	skos:exactMatch	https://ror.org/02mpq6x41	semapv:ManualMappingCuration
+UMMS	UMMS	skos:exactMatch	https://ror.org/0464eyp60	semapv:ManualMappingCuration
+UMichigan	UMichigan	skos:exactMatch	https://ror.org/00jmfr291	semapv:ManualMappingCuration
+UMinn	UMinn	skos:exactMatch	https://ror.org/017zqws13	semapv:ManualMappingCuration
+UNC	UNC	skos:exactMatch	https://ror.org/0130frc33	semapv:ManualMappingCuration
+UNR	UNR	skos:exactMatch	https://ror.org/01keh0577	semapv:ManualMappingCuration
+UNSW	UNSW	skos:exactMatch	https://ror.org/03r8z3t63	semapv:ManualMappingCuration
+UPenn	UPenn	skos:exactMatch	https://ror.org/00b30xv10	semapv:ManualMappingCuration
+USC	USC	skos:exactMatch	https://ror.org/03taz7m60	semapv:ManualMappingCuration
+UT Austin	UT Austin	skos:exactMatch	https://ror.org/00hj54h04	semapv:ManualMappingCuration
+UT Southwestern	UT Southwestern	skos:exactMatch	https://ror.org/05byvp690	semapv:ManualMappingCuration
+UTHSCSA	UTHSCSA	skos:exactMatch	https://ror.org/02f6dcw23	semapv:ManualMappingCuration
+UUtah	UUtah	skos:exactMatch	https://ror.org/03r0ha626	semapv:ManualMappingCuration
+UVA	UVA	skos:exactMatch	https://ror.org/0153tk833	semapv:ManualMappingCuration
+UW	UW	skos:exactMatch	https://ror.org/00cvxb145	semapv:ManualMappingCuration
+UWM	UWM	skos:exactMatch	https://ror.org/01y2jtd41	semapv:ManualMappingCuration
+University of Illinois	University of Illinois	skos:exactMatch	https://ror.org/047426m28	semapv:ManualMappingCuration
+University of Texas MD Anderson Cancer Center	University of Texas MD Anderson Cancer Center	skos:exactMatch	https://ror.org/04twxam07	semapv:ManualMappingCuration
+VT	VT	skos:exactMatch	https://ror.org/02smfhw86	semapv:ManualMappingCuration
+Vanderbilt	Vanderbilt	skos:exactMatch	https://ror.org/02vm5rt34	semapv:ManualMappingCuration
+WCM	WCM	skos:exactMatch	https://ror.org/02r109517	semapv:ManualMappingCuration
+WUSTL	WUSTL	skos:exactMatch	https://ror.org/01yc7t268	semapv:ManualMappingCuration
+Wake Forest	Wake Forest	skos:exactMatch	https://ror.org/0207ad724	semapv:ManualMappingCuration
+Wistar	Wistar	skos:exactMatch	https://ror.org/04wncat98	semapv:ManualMappingCuration
+Yale	Yale	skos:exactMatch	https://ror.org/03v76x132	semapv:ManualMappingCuration

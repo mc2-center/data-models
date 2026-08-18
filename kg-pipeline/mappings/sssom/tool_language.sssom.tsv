@@ -15,4 +15,6 @@ PHP	PHP	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000116	semapv:ManualMappin
 Perl	Perl	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000115	semapv:ManualMappingCuration
 PostScript	PostScript	skos:exactMatch	http://www.ebi.ac.uk/swo/data/SWO_3000024	semapv:ManualMappingCuration
 Python	Python	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000118	semapv:ManualMappingCuration
+R	R	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000415	semapv:ManualMappingCuration
 SQL	SQL	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C54108	semapv:ManualMappingCuration
+Shell	Shell	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000124	semapv:ManualMappingCuration

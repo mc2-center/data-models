@@ -1,0 +1,7 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/resource_license.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+CC-BY-NC-4.0	CC-BY-NC-4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-NC-4.0.html	semapv:ManualMappingCuration

@@ -2,20 +2,20 @@ tables:
   Dataset:
     synapse_id: syn21897968
     row_count: 1141
-    queried_at: '2026-08-13T19:08:26+00:00'
+    queried_at: '2026-08-18T16:17:15+00:00'
   Publication:
     synapse_id: syn21868591
     row_count: 4773
-    queried_at: '2026-08-13T19:08:26+00:00'
+    queried_at: '2026-08-18T16:17:20+00:00'
   Tool:
     synapse_id: syn26127427
     row_count: 331
-    queried_at: '2026-08-13T19:08:27+00:00'
+    queried_at: '2026-08-18T16:17:23+00:00'
   Grant:
     synapse_id: syn21918972
     row_count: 160
-    queried_at: '2026-08-13T19:08:27+00:00'
+    queried_at: '2026-08-18T16:17:25+00:00'
   EducationalResource:
     synapse_id: syn51497305
     row_count: 10
-    queried_at: '2026-08-13T19:08:27+00:00'
+    queried_at: '2026-08-18T16:17:28+00:00'

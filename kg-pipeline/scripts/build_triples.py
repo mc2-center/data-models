@@ -25,6 +25,7 @@ import argparse
 import csv
 import hashlib
 import os
+import re
 from urllib.parse import quote
 
 import rdflib
@@ -35,6 +36,43 @@ from rdflib.namespace import RDF, XSD
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
 CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]
+
+# Fields that (per live data) hold a DOI or PubMed ID as a bare/URL string,
+# not backed by any MC2 CV - no SSSOM curation possible, but a resolvable
+# external IRI can be templated directly from the value with zero lookups.
+# Keyed by field name (applies across every class that declares it), value
+# names which detector in `external_iri` to try first.
+EXTERNAL_ID_FIELDS = {
+    "doi": "doi",
+    "pubMedId": "pubmed",
+    # EducationalResource's PubMed-join field; live data shows at least one
+    # row holding a DOI here instead of a numeric PMID (a source data-entry
+    # mismatch, not something to silently "fix") - external_iri's kind
+    # detection is by value shape first, so either kind of value in this
+    # field still yields a correct external IRI rather than none at all.
+    "publicationId": "pubmed",
+}
+DOI_URL_RE = re.compile(r"^https?://(dx\.)?doi\.org/(10\.\S+)$", re.IGNORECASE)
+BARE_DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$")
+PUBMED_ID_RE = re.compile(r"^\d+$")
+
+
+def external_iri(kind, value):
+    """Template a resolvable external IRI from a raw doi/pubMedId-shaped
+    value, or return None for sentinel placeholders ("Pending Annotation",
+    "DOI Not Available", "Under Review") and other non-identifier noise
+    seen in live CCKP data - never emit a fake IRI for those. Detection is
+    by the value's own shape rather than blindly trusting the field name:
+    live data has at least one PubMed-typed field holding a DOI instead."""
+    v = value.strip()
+    m = DOI_URL_RE.match(v)
+    if m:
+        return f"https://doi.org/{m.group(2)}"
+    if BARE_DOI_RE.match(v):
+        return f"https://doi.org/{v}"
+    if kind == "pubmed" and PUBMED_ID_RE.match(v):
+        return f"https://pubmed.ncbi.nlm.nih.gov/{v}"
+    return None
 
 # Per-class identifying key. Dataset/Grant have a real LinkML `identifier`
 # slot, always populated in live data. Publication/Tool/EducationalResource
@@ -182,6 +220,13 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
                         g.add((subject, predicate, rdflib.Literal(v)))
                 else:
                     g.add((subject, predicate, rdflib.Literal(v)))
+
+            if field in EXTERNAL_ID_FIELDS:
+                ext_predicate = CCKP[f"{field}Iri"]
+                for v in values:
+                    iri = external_iri(EXTERNAL_ID_FIELDS[field], v)
+                    if iri:
+                        g.add((subject, ext_predicate, rdflib.URIRef(iri)))
 
             if meta["mc2_enum"]:
                 iri_cell = (row.get(f"{field}_ontology_iri") or "").strip()

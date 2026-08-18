@@ -29,12 +29,23 @@ def test_no_rows_dropped(harmonized_dir):
         assert len(list(csv.DictReader(f))) == 2
 
 
-def test_grant_theme_and_consortium_have_no_mc2_ontology_coverage_yet(harmonized_dir):
-    # modules/theme/theme_name.csv and modules/consortium/consortium_name.csv
-    # currently have zero populated Ontology Identifier values across the
-    # board (a real, pre-existing gap in the MC2 model - see
-    # kg-pipeline/README.md) - assert this stays visible as "unresolved"
-    # rather than being silently treated as resolved.
+def test_grant_theme_now_resolves_after_curation(harmonized_dir):
+    # modules/theme/theme_name.csv was curated with real NCIT/EDAM identifiers
+    # for its more common, single-concept values (including "Metastasis") -
+    # see kg-pipeline/README.md. Confirms harmonize.py picks that curation up.
+    with open(harmonized_dir["dir"] / "Grant_harmonized.csv", newline="") as f:
+        rows = list(csv.DictReader(f))
+    row = next(r for r in rows if r["grantId"] == "syn_grant_1")
+    assert row["theme"] == "Metastasis"
+    assert row["theme_ontology_iri"] == "http://purl.obolibrary.org/obo/NCIT_C19151"
+
+
+def test_grant_consortium_still_has_no_mc2_ontology_coverage(harmonized_dir):
+    # modules/consortium/consortium_name.csv still has zero populated
+    # Ontology Identifier values - confirmed (not just assumed) via live
+    # NCIT/EDAM/ROR lookups that these NCI program acronyms have no external
+    # ontology or registry entry, see kg-pipeline/README.md - assert this
+    # stays visible as "unresolved" rather than being silently treated as
+    # resolved.
     unmapped = harmonized_dir["unmapped_rows"]
-    assert any(r["table"] == "Grant" and r["field"] == "theme" and r["value"] == "Metastasis" for r in unmapped)
     assert any(r["table"] == "Grant" and r["field"] == "consortium" and r["value"] == "CCBIR" for r in unmapped)

@@ -15,10 +15,18 @@ def test_grant_has_no_outbound_joins(rdf_graphs):
     assert ref_predicates == []
 
 
-def test_theme_and_consortium_have_no_term_edge_yet(rdf_graphs):
-    # See test_harmonize.py's matching test - theme_name.csv and
-    # consortium_name.csv currently have zero ontology-mapped rows.
+def test_theme_now_has_a_term_edge(rdf_graphs):
+    # See test_harmonize.py's matching test - theme_name.csv was curated
+    # with a real NCIT identifier for "Metastasis".
     g = rdf_graphs["Grant"]
     subject = rdflib.URIRef(DATA + "Grant/syn_grant_1")
-    assert list(g.triples((subject, CCKP["themeTerm"], None))) == []
+    ncit_metastasis = rdflib.URIRef("http://purl.obolibrary.org/obo/NCIT_C19151")
+    assert (subject, CCKP["themeTerm"], ncit_metastasis) in g
+
+
+def test_consortium_still_has_no_term_edge(rdf_graphs):
+    # consortium_name.csv still has zero ontology-mapped rows - see
+    # test_harmonize.py's matching test.
+    g = rdf_graphs["Grant"]
+    subject = rdflib.URIRef(DATA + "Grant/syn_grant_1")
     assert list(g.triples((subject, CCKP["consortiumTerm"], None))) == []
