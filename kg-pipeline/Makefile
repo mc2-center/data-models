@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema extract harmonize triples validate test clean
+.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings triples validate update-coverage-baseline test clean
 
 all: schema extract harmonize triples validate
 
@@ -53,6 +53,15 @@ harmonize:
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
 		--raw-dir data/raw --out-dir data/harmonized --sssom-dir mappings/sssom
 
+# --- Stage 3.5: Suggest candidate mappings for unresolved values (human review only) ---
+
+suggest-mappings:
+	$(PYTHON) scripts/suggest_mappings.py \
+		--schema schema/cckp_portal.linkml.yaml \
+		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
+		--unmapped-csv data/harmonized/unmapped_terms.csv \
+		--out data/harmonized/mapping_suggestions.csv
+
 # --- Stage 4: Map to RDF ---
 
 triples:
@@ -66,7 +75,15 @@ triples:
 # --- Stage 5: Validate ---
 
 validate:
-	$(PYTHON) scripts/validate_graph.py --coverage data/harmonized/unmapped_terms.csv data/rdf/*.ttl
+	$(PYTHON) scripts/validate_graph.py --coverage data/harmonized/unmapped_terms.csv data/rdf/*.ttl \
+		--baseline mappings/coverage_baseline.json --fail-on-regression
+
+# Run after intentionally curating a CV or knowingly accepting a new gap, to
+# move the mappings/coverage_baseline.json ratchet forward. Committed (unlike
+# data/harmonized/*, which is gitignored) so the ratchet persists across runs.
+update-coverage-baseline:
+	$(PYTHON) scripts/validate_graph.py --coverage data/harmonized/unmapped_terms.csv data/rdf/*.ttl \
+		--update-baseline mappings/coverage_baseline.json
 
 test:
 	pytest test/
