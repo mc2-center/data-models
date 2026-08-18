@@ -1,19 +1,19 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
 Computational Model Development,,,,FALSE,,Theme Name,,,,,,,,
 Computational Resource,,,,FALSE,,Theme Name,,,,,,,,
-Drug Resistance/Sensitivity,,,,FALSE,,Theme Name,,,,,,,,
-Epigenetics,,,,FALSE,,Theme Name,,,,,,,,
-Evolution,,,,FALSE,,Theme Name,,,,,,,,
+Drug Resistance/Sensitivity,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C16523,http://purl.obolibrary.org/obo/NCIT_C16523,,interpretive/partial: NCIT 'Drug Resistance Process' covers only the resistance half of this compound theme
+Epigenetics,,,,FALSE,,Theme Name,,EDAM,,,EDAM:topic_3295,http://edamontology.org/topic_3295,,
+Evolution,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C16565,http://purl.obolibrary.org/obo/NCIT_C16565,,
 Experimental Model Development,,,,FALSE,,Theme Name,,,,,,,,
-Heterogeneity,,,,FALSE,,Theme Name,,,,,,,,
-Immunotherapy,,,,FALSE,,Theme Name,,,,,,,,
+Heterogeneity,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C28359,http://purl.obolibrary.org/obo/NCIT_C28359,,
+Immunotherapy,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C15262,http://purl.obolibrary.org/obo/NCIT_C15262,,
 Mechano-genetics,,,,FALSE,,Theme Name,,,,,,,,
 Mechano-resistance,,,,FALSE,,Theme Name,,,,,,,,
-Metabolism,,,,FALSE,,Theme Name,,,,,,,,
-Metastasis,,,,FALSE,,Theme Name,,,,,,,,
+Metabolism,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19536,http://purl.obolibrary.org/obo/NCIT_C19536,,interpretive: no exact 'Metabolism' label in NCIT; mapped to 'Metabolic Process'
+Metastasis,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19151,http://purl.obolibrary.org/obo/NCIT_C19151,,
 Method/Assay Development,,,,FALSE,,Theme Name,,,,,,,,
-Microenvironment,,,,FALSE,,Theme Name,,,,,,,,
+Microenvironment,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C94498,http://purl.obolibrary.org/obo/NCIT_C94498,,interpretive: NCIT term is 'Tumor Microenvironment' - no bare 'Microenvironment' concept in NCIT; accepted given cancer-research grant context
 Oncogenic Stress,,,,FALSE,,Theme Name,,,,,,,,
 Platform Development,,,,FALSE,,Theme Name,,,,,,,,
-Tumor Progression,,,,FALSE,,Theme Name,,,,,,,,
-Tumor-Immune,,,,FALSE,,Theme Name,,,,,,,,
+Tumor Progression,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C17609,http://purl.obolibrary.org/obo/NCIT_C17609,,
+Tumor-Immune,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19095,http://purl.obolibrary.org/obo/NCIT_C19095,,interpretive: mapped to NCIT 'Tumor Immunology' (closest single-concept match)
