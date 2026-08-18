@@ -35,7 +35,38 @@ from rdflib.namespace import RDF, XSD
 
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
+# Tier-3 of the identifier policy documented in README.md ("registry CURIE" /
+# "w3id.org-minted portal IRI" / "provisional placeholder"): a stable, local
+# IRI for a raw CV value a human has actively checked against every relevant
+# external ontology/registry and confirmed has no real term - not a value
+# nobody has gotten to yet. Addressable and annotatable (unlike a bare
+# literal), and flagged cckp:provisional so nothing downstream mistakes it
+# for a resolved external ontology mapping.
+PROVISIONAL_NS = "https://w3id.org/mc2-center/cckp-portal/terms/"
 CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]
+
+
+def normalize(label):
+    return " ".join(label.strip().casefold().split())
+
+
+def slugify(value):
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", value.strip().casefold())).strip("-")
+
+
+def load_confirmed_unmappable(path):
+    """{(table, field): {normalized_value, ...}} from mappings/confirmed_unmappable.tsv
+    - see that file's header for the reason each entry was added. Missing
+    file (e.g. a fresh checkout before it's been curated) just means no
+    provisional terms get minted, not an error."""
+    confirmed = {}
+    if not path or not os.path.isfile(path):
+        return confirmed
+    with open(path, newline="") as f:
+        for row in csv.DictReader(f, delimiter="\t"):
+            key = (row["table"], row["field"])
+            confirmed.setdefault(key, set()).add(normalize(row["value"]))
+    return confirmed
 
 # Fields that (per live data) hold a DOI or PubMed ID as a bare/URL string,
 # not backed by any MC2 CV - no SSSOM curation possible, but a resolvable
@@ -193,7 +224,7 @@ def xsd_datatype(range_name):
     return {"integer": XSD.integer, "boolean": XSD.boolean, "float": XSD.float, "double": XSD.double}.get(range_name)
 
 
-def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_prefixes):
+def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_prefixes, confirmed_unmappable=None):
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
     g.bind("cckp", CCKP)
@@ -239,6 +270,22 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
                     if expanded:
                         g.add((subject, term_predicate, rdflib.URIRef(expanded)))
 
+                # harmonize.py's `_ontology_iri` column only ever lists the
+                # values that resolved - a raw value with no ontology match
+                # simply has no corresponding entry there (there's no
+                # positional alignment to a specific miss for a multivalued
+                # field), so provisional-term minting is checked directly
+                # against each raw value here rather than against gaps in
+                # iri_cell.
+                confirmed_values = (confirmed_unmappable or {}).get((cls_name, field))
+                if confirmed_values:
+                    for v in values:
+                        if normalize(v) not in confirmed_values:
+                            continue
+                        provisional_iri = rdflib.URIRef(PROVISIONAL_NS + quote(field, safe="") + "/" + slugify(v))
+                        g.add((subject, term_predicate, provisional_iri))
+                        g.add((provisional_iri, CCKP["provisional"], rdflib.Literal(True, datatype=XSD.boolean)))
+
             if meta["cckp_join"]:
                 target_cls, target_field = meta["cckp_join"].split(".")
                 index = join_indices.get((target_cls, target_field), {})
@@ -258,19 +305,25 @@ def main():
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--merge-with", nargs="*", default=[], help="Additional Turtle files to merge into the final graph (e.g. the two schema TBoxes)")
     parser.add_argument("--merged-out", required=True)
+    parser.add_argument("--confirmed-unmappable", default="mappings/confirmed_unmappable.tsv",
+                         help="TSV of (table, field, value) a human has confirmed has no external ontology term - "
+                              "minted as a provisional local IRI instead of a bare literal. Missing file is fine "
+                              "(no provisional terms get minted).")
     args = parser.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
     schema_meta = get_schema_metadata(args.schema)
     mc2_prefixes = load_prefixes(args.mc2_schema)
     join_indices = build_join_indices(schema_meta, args.harmonized_dir)
+    confirmed_unmappable = load_confirmed_unmappable(args.confirmed_unmappable)
 
     merged = rdflib.Graph()
     for path in args.merge_with:
         merged.parse(path, format="turtle")
 
     for cls_name in CLASS_ORDER:
-        g = build_class_graph(cls_name, schema_meta, args.harmonized_dir, join_indices, mc2_prefixes)
+        g = build_class_graph(cls_name, schema_meta, args.harmonized_dir, join_indices, mc2_prefixes,
+                               confirmed_unmappable=confirmed_unmappable)
         out_path = os.path.join(args.out_dir, f"{cls_name}.ttl")
         g.serialize(destination=out_path, format="turtle")
         print(f"{cls_name}: {len(g)} triples -> {out_path}")

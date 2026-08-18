@@ -1,0 +1,45 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/crosswalks/diseaseType_ncit_to_mondo.sssom.tsv
+# comment: supplementary NCIT->MONDO crosswalk for federation with sagebrain-model - NOT the mapping harmonize.py resolves against; review before treating any row as confirmed.
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence
+NCIT:C4197	Acinar Cell Neoplasms	skos:exactMatch	MONDO:0004972	adenoma	semapv:LexicalMatching	low
+NCIT:C7132	Adenomas and Adenocarcinomas	skos:exactMatch	MONDO:0000521	salivary gland carcinoma	semapv:LexicalMatching	low
+NCIT:C212119	Adnexal and Skin Appendage Neoplasms	skos:exactMatch	MONDO:0002297	epidermal appendage tumor	semapv:LexicalMatching	low
+NCIT:C3784	Basal Cell Neoplasms	skos:exactMatch	MONDO:0020799	basal cell neoplasm	semapv:LexicalMatching	low
+NCIT:C7388	Blood Vessel Tumors	skos:exactMatch	MONDO:0002095	vascular cancer	semapv:LexicalMatching	low
+NCIT:C6784	Cystic; Mucinous and Serous Neoplasms	skos:exactMatch	MONDO:0006720	cystic, mucinous, and serous neoplasm	semapv:LexicalMatching	low
+SNOMED:115218002	Ductal and Lobular Neoplasms	skos:exactMatch	MONDO:0004506	microscopic breast papilloma	semapv:LexicalMatching	low
+NCIT:C3709	Epithelial Neoplasms; NOS	skos:exactMatch	MONDO:0020581	benign PEComa	semapv:LexicalMatching	low
+NCIT:C3743	Fibroepithelial Neoplasms	skos:exactMatch	MONDO:0021046	breast fibroepithelial neoplasm	semapv:LexicalMatching	low
+NCIT:C3042	Fibromatous Neoplasms	skos:exactMatch	MONDO:0005164	fibrosarcoma	semapv:LexicalMatching	low
+NCIT:C3708	Germ Cell Neoplasms	skos:exactMatch	MONDO:0003750	childhood central nervous system germ cell tumor	semapv:LexicalMatching	low
+NCIT:C3055	Giant Cell Tumors	skos:exactMatch	MONDO:0024686	tenosynovial giant cell tumor, diffuse type	semapv:LexicalMatching	low
+NCIT:C3059	Gliomas	skos:exactMatch	MONDO:0003869	childhood brain stem glioma	semapv:LexicalMatching	low
+NCIT:C194803	Immunoproliferative Diseases	skos:exactMatch	MONDO:0021334	immunoproliferative disorder	semapv:LexicalMatching	low
+NCIT:C3161	Leukemias	skos:exactMatch	MONDO:0018874	acute myeloid leukemia	semapv:LexicalMatching	low
+NCIT:C4248	Lipomatous Neoplasms	skos:exactMatch	MONDO:0044983	benign lipomatous neoplasm	semapv:LexicalMatching	low
+NCIT:C3723	Lymphatic Vessel Tumors	skos:exactMatch	MONDO:0036870	lymphatic vessel neoplasm	semapv:LexicalMatching	low
+NCIT:C3230	Meningiomas	skos:exactMatch	MONDO:0004440	pineal region meningioma	semapv:LexicalMatching	low
+NCIT:C3786	Mesothelial Neoplasms	skos:exactMatch	MONDO:0006856	mesothelial neoplasm	semapv:LexicalMatching	low
+NCIT:C3772	Mucoepidermoid Neoplasms	skos:exactMatch	MONDO:0100508	salivary gland type cancer of the breast	semapv:LexicalMatching	low
+NCIT:C3247	Myelodysplastic Syndromes	skos:exactMatch	MONDO:0018881	myelodysplastic syndrome	semapv:LexicalMatching	low
+NCIT:C214799	Myomatous Neoplasms	skos:exactMatch	MONDO:0021545	myomatous neoplasm	semapv:LexicalMatching	low
+NCIT:C6577	Myxomatous Neoplasms	skos:exactMatch	MONDO:0023726	mediastinal yolk sac tumor	semapv:LexicalMatching	low
+NCIT:C3262	Neoplasms; NOS	skos:exactMatch	MONDO:0004631	tongue cancer	semapv:LexicalMatching	low
+NCIT:C4972	Nerve Sheath Tumors	skos:exactMatch	MONDO:0001990	malignant cardiac peripheral nerve sheath neoplasm	semapv:LexicalMatching	low
+NCIT:C7058	Nevi and Melanomas	skos:exactMatch	MONDO:0007964	melanoma, cutaneous malignant, susceptibility to, 2	semapv:LexicalMatching	low
+NCIT:C48660	Not Applicable	skos:exactMatch	MONDO:0019529	radiation myelitis	semapv:LexicalMatching	low
+NCIT:C19594	Not Otherwise Specified	skos:exactMatch	MONDO:0004964	peripheral T-cell lymphoma, not otherwise specified	semapv:LexicalMatching	low
+NCIT:C43234	Not Reported	skos:exactMatch	MONDO:0100062	genetic developmental and epileptic encephalopathy	semapv:LexicalMatching	low
+NCIT:C3286	Odontogenic Tumors	skos:exactMatch	MONDO:0022057	calcifying epithelial odontogenic tumor	semapv:LexicalMatching	low
+NCIT:C3308	Paragangliomas and Glomus Tumors	skos:exactMatch	MONDO:0021064	jugulotympanic paraganglioma	semapv:LexicalMatching	low
+NCIT:C4665	Plasma Cell Neoplasm	skos:exactMatch	MONDO:0004959	plasma cell neoplasm	semapv:LexicalMatching	high
+NCIT:C3792	Squamous Cell Neoplasms	skos:exactMatch	MONDO:0002532	squamous cell neoplasm	semapv:LexicalMatching	low
+NCIT:C8964	Synovial-like Neoplasms	skos:exactMatch	MONDO:0002522	tenosynovial giant cell tumor	semapv:LexicalMatching	low
+NCIT:C6450	Thymic Epithelial Neoplasms	skos:exactMatch	MONDO:0018079	thymic epithelial neoplasm	semapv:LexicalMatching	low
+UMLS:C1384509	Transitional Cell Papillomas and Carcinomas	skos:exactMatch	MONDO:0021109	inverted urothelial papilloma	semapv:LexicalMatching	low
+NCIT:C180633	Trophoblastic neoplasms	skos:exactMatch	MONDO:0002872	trophoblastic neoplasm	semapv:LexicalMatching	low
+NCIT:C17998	Unknown	skos:exactMatch	MONDO:0100580	epilepsy, unknown whether focal or generalized	semapv:LexicalMatching	low

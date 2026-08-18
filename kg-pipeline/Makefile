@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings triples validate update-coverage-baseline test clean
+.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline test clean
 
 all: schema extract harmonize triples validate
 
@@ -62,6 +62,19 @@ suggest-mappings:
 		--unmapped-csv data/harmonized/unmapped_terms.csv \
 		--out data/harmonized/mapping_suggestions.csv
 
+# --- Supplementary: ontology crosswalks for federation with sagebrain-model ---
+# (human review only, never consumed by harmonize.py/build_triples.py)
+
+crosswalk-ontology:
+	$(PYTHON) scripts/crosswalk_ontology.py --cv $(MODULES_DIR)/shared/tumorType.csv \
+		--target-ontology mondo --out mappings/crosswalks/tumorType_ncit_to_mondo.sssom.tsv
+	$(PYTHON) scripts/crosswalk_ontology.py --cv $(MODULES_DIR)/shared/diseaseType.csv \
+		--target-ontology mondo --out mappings/crosswalks/diseaseType_ncit_to_mondo.sssom.tsv
+	$(PYTHON) scripts/crosswalk_ontology.py --cv $(MODULES_DIR)/shared/diseaseStatus.csv \
+		--target-ontology mondo --out mappings/crosswalks/diseaseStatus_ncit_to_mondo.sssom.tsv
+	$(PYTHON) scripts/crosswalk_ontology.py --cv $(MODULES_DIR)/shared/tissue.csv \
+		--target-ontology uberon --out mappings/crosswalks/tissue_ncit_to_uberon.sssom.tsv
+
 # --- Stage 4: Map to RDF ---
 
 triples:
@@ -70,13 +83,15 @@ triples:
 		--mc2-schema schema/mc2_model.linkml.yaml \
 		--harmonized-dir data/harmonized --out-dir data/rdf \
 		--merge-with schema/mc2_model.ttl schema/cckp_portal.ttl \
-		--merged-out data/rdf/cckp_kg.ttl
+		--merged-out data/rdf/cckp_kg.ttl \
+		--confirmed-unmappable mappings/confirmed_unmappable.tsv
 
 # --- Stage 5: Validate ---
 
 validate:
 	$(PYTHON) scripts/validate_graph.py --coverage data/harmonized/unmapped_terms.csv data/rdf/*.ttl \
 		--baseline mappings/coverage_baseline.json --fail-on-regression
+	$(PYTHON) scripts/validate_graph.py --shacl schema/cckp_portal.shacl.ttl data/rdf/cckp_kg.ttl
 
 # Run after intentionally curating a CV or knowingly accepting a new gap, to
 # move the mappings/coverage_baseline.json ratchet forward. Committed (unlike

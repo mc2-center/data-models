@@ -1,0 +1,13 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/crosswalks/diseaseStatus_ncit_to_mondo.sssom.tsv
+# comment: supplementary NCIT->MONDO crosswalk for federation with sagebrain-model - NOT the mapping harmonize.py resolves against; review before treating any row as confirmed.
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence
+NCIT:C17998	Unknown	skos:exactMatch	MONDO:0100580	epilepsy, unknown whether focal or generalized	semapv:LexicalMatching	low
+NCIT:C156849	With Tumor	skos:exactMatch	MONDO:0003836	malignant thyroid stimulating hormone producing neoplasm of pituitary gland	semapv:LexicalMatching	low
+NCIT:C48660	Not Applicable	skos:exactMatch	MONDO:0019529	radiation myelitis	semapv:LexicalMatching	low
+NCIT:C18206	Distant Metastasis	skos:exactMatch	MONDO:0003930	non-invasive bladder urothelial carcinoma	semapv:LexicalMatching	low
+NCIT:C36162	Localized Disease	skos:exactMatch	MONDO:0019753	localized Castleman disease	semapv:LexicalMatching	low
+NCIT:C41844	Regional Disease	skos:exactMatch	MONDO:0002022	disorder of orbital region	semapv:LexicalMatching	low

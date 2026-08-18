@@ -29,6 +29,16 @@ scripts/suggest_mappings.py and README.md) are always excluded from the gate.
                                           to PATH - run after intentionally
                                           curating a field or accepting a
                                           new, legitimate gap.
+
+  --shacl SHAPES_FILE DATA_FILE...        Validate the built instance graph
+                                          against schema/cckp_portal.shacl.ttl
+                                          via pyshacl, WITHOUT RDFS/OWL
+                                          entailment (matches sagebrain-
+                                          model's own tests/validate.py
+                                          configuration - inference would
+                                          make sh:class join-target checks
+                                          vacuous by entailing the very type
+                                          being checked for).
 """
 
 import argparse
@@ -129,6 +139,26 @@ def coverage(unmapped_csv, ttl_paths, baseline_path=None, fail_on_regression=Fal
     return ok
 
 
+def shacl_validate(shapes_path, data_paths):
+    import pyshacl
+
+    data_graph = rdflib.Graph()
+    for path in data_paths:
+        data_graph.parse(path, format="turtle")
+    shapes_graph = rdflib.Graph()
+    shapes_graph.parse(shapes_path, format="turtle")
+
+    conforms, results_graph, results_text = pyshacl.validate(
+        data_graph, shacl_graph=shapes_graph, inference="none", abort_on_first=False,
+    )
+    if conforms:
+        print(f"OK    {shapes_path} conforms against {', '.join(data_paths)} "
+              f"({len(data_graph)} triple(s) checked)")
+    else:
+        print(f"FAIL  {shapes_path} violated by {', '.join(data_paths)}:\n{results_text}")
+    return conforms
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--parse-only", nargs="+", metavar="FILE", help="Turtle files to syntax-check")
@@ -141,10 +171,13 @@ def main():
     parser.add_argument("--update-baseline", metavar="PATH",
                          help="Write current per-field unmapped counts (non-excluded fields only) to PATH "
                               "instead of gating - run after intentionally curating or accepting new gaps")
+    parser.add_argument("--shacl", nargs="+", metavar="PATH",
+                         help="First path is a SHACL shapes Turtle file, rest are instance-data Turtle "
+                              "files to validate against it")
     args = parser.parse_args()
 
-    if not args.parse_only and not args.coverage:
-        parser.error("pass --parse-only and/or --coverage")
+    if not args.parse_only and not args.coverage and not args.shacl:
+        parser.error("pass --parse-only, --coverage, and/or --shacl")
 
     ok = True
     if args.parse_only:
@@ -154,6 +187,9 @@ def main():
         ok = coverage(unmapped_csv, ttl_paths, baseline_path=args.baseline,
                        fail_on_regression=args.fail_on_regression,
                        update_baseline_path=args.update_baseline) and ok
+    if args.shacl:
+        shapes_path, *data_paths = args.shacl
+        ok = shacl_validate(shapes_path, data_paths) and ok
 
     sys.exit(0 if ok else 1)
 

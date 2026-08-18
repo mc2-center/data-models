@@ -1,0 +1,16 @@
+@prefix cckp: <https://w3id.org/mc2-center/cckp-portal/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# Violates DatasetShape: a Dataset instance with no datasetId at all.
+<https://w3id.org/mc2-center/cckp-portal/data/Dataset/missing_id>
+    rdf:type cckp:Dataset .
+
+# Violates PubMedIdIriShape: not a real PubMed or DOI IRI.
+<https://w3id.org/mc2-center/cckp-portal/data/Publication/bad_pmid>
+    rdf:type cckp:Publication ;
+    cckp:pubMedIdIri <https://example.org/not-a-real-pubmed-id> .
+
+# Violates GrantNumberRefShape: points at something that is not a cckp:Grant.
+<https://w3id.org/mc2-center/cckp-portal/data/Tool/bad_join>
+    rdf:type cckp:Tool ;
+    cckp:grantNumberRef <https://w3id.org/mc2-center/cckp-portal/data/Dataset/missing_id> .

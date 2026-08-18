@@ -1,0 +1,181 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/crosswalks/tumorType_ncit_to_mondo.sssom.tsv
+# comment: supplementary NCIT->MONDO crosswalk for federation with sagebrain-model - NOT the mapping harmonize.py resolves against; review before treating any row as confirmed.
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence
+NCIT:C3510	Cutaneous Melanoma	skos:exactMatch	MONDO:0005012	cutaneous melanoma	semapv:LexicalMatching	high
+NCIT:C3768	Acinar Cell Carcinoma	skos:exactMatch	MONDO:0004965	acinar cell carcinoma	semapv:LexicalMatching	high
+NCIT:C3167	Acute Lymphoblastic Leukemia	skos:exactMatch	MONDO:0004967	acute lymphoblastic leukemia	semapv:LexicalMatching	high
+NCIT:C4861	Acute Monocytic Leukemia	skos:exactMatch	MONDO:0007896	acute monocytic leukemia	semapv:LexicalMatching	high
+NCIT:C3171	Acute Myeloid Leukemia	skos:exactMatch	MONDO:0018874	acute myeloid leukemia	semapv:LexicalMatching	high
+NCIT:C208352	Acute Promyelocytic Leukemia	skos:exactMatch	MONDO:0012883	acute promyelocytic leukemia	semapv:LexicalMatching	high
+NCIT:C2852	Adenocarcinoma	skos:exactMatch	MONDO:0004970	adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C3088	Angiosarcoma	skos:exactMatch	MONDO:0016982	angiosarcoma	semapv:LexicalMatching	high
+NCIT:C60781	Astrocytoma	skos:exactMatch	MONDO:0003842	childhood cerebellar astrocytic neoplasm	semapv:LexicalMatching	low
+NCIT:C6906	Atypical Teratoid/Rhabdoid Tumor	skos:exactMatch	MONDO:0020560	atypical teratoid rhabdoid tumor	semapv:LexicalMatching	low
+NCIT:C2891	Barrett Esophagus	skos:exactMatch	MONDO:0013662	Barrett esophagus	semapv:LexicalMatching	high
+NCIT:C3784	Basal Cell Neoplasm	skos:exactMatch	MONDO:0020799	basal cell neoplasm	semapv:LexicalMatching	high
+NCIT:C53558	Basal-Like Breast Carcinoma	skos:exactMatch	MONDO:0004984	basal-like breast carcinoma	semapv:LexicalMatching	high
+NCIT:C156781	Biliary Tract Carcinoma	skos:exactMatch	MONDO:0003707	distal biliary tract carcinoma	semapv:LexicalMatching	low
+NCIT:C4912	Bladder Carcinoma	skos:exactMatch	MONDO:0004703	bladder carcinoma in situ	semapv:LexicalMatching	low
+NCIT:C2901	Bladder Neoplasm	skos:exactMatch	MONDO:0004987	urinary bladder neoplasm	semapv:LexicalMatching	low
+NCIT:C9343	Bone Neoplasm	skos:exactMatch	MONDO:0019060	bone neoplasm	semapv:LexicalMatching	high
+NCIT:C2907	Brain Neoplasm	skos:exactMatch	MONDO:0021211	brain neoplasm	semapv:LexicalMatching	high
+NCIT:C5214	Breast Adenocarcinoma	skos:exactMatch	MONDO:0004988	breast adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C4872	Breast Carcinoma	skos:exactMatch	MONDO:0004989	breast carcinoma	semapv:LexicalMatching	high
+NCIT:C2910	Breast Neoplasm	skos:exactMatch	MONDO:0021100	breast neoplasm	semapv:LexicalMatching	high
+NCIT:C2916	Carcinoma	skos:exactMatch	MONDO:0004993	carcinoma	semapv:LexicalMatching	high
+NCIT:C2917	Carcinoma In Situ	skos:exactMatch	MONDO:0006184	ductal breast carcinoma in situ and lobular carcinoma in situ	semapv:LexicalMatching	low
+NCIT:C130234	Castration-Resistant Prostate Carcinoma	skos:exactMatch	MONDO:0850353	castration-resistant prostate carcinoma	semapv:LexicalMatching	high
+NCIT:C4724	Cellular Schwannoma	skos:exactMatch	MONDO:0002548	cellular schwannoma	semapv:LexicalMatching	high
+NCIT:C9293	Central Nervous System Neoplasm	skos:exactMatch	MONDO:0006130	central nervous system neoplasm	semapv:LexicalMatching	high
+NCIT:C2935	Cerebellar Neoplasm	skos:exactMatch	MONDO:0002913	cerebellar neoplasm	semapv:LexicalMatching	high
+NCIT:C9039	Cervical Carcinoma	skos:exactMatch	MONDO:0005131	cervical carcinoma	semapv:LexicalMatching	high
+NCIT:C2940	Cervical Neoplasm	skos:exactMatch	MONDO:0022394	cervical intraepithelial neoplasia	semapv:LexicalMatching	low
+NCIT:C7982	Cervical Small Cell Carcinoma	skos:exactMatch	MONDO:0006142	cervical small cell carcinoma	semapv:LexicalMatching	high
+NCIT:C4436	Cholangiocarcinoma	skos:exactMatch	MONDO:0019087	cholangiocarcinoma	semapv:LexicalMatching	high
+NCIT:C2945	Chondroblastoma	skos:exactMatch	MONDO:0004997	chondroblastoma	semapv:LexicalMatching	high
+NCIT:C2948	Choriocarcinoma	skos:exactMatch	MONDO:0005207	choriocarcinoma	semapv:LexicalMatching	high
+NCIT:C3163	Chronic Lymphocytic Leukemia	skos:exactMatch	MONDO:0004948	B-cell chronic lymphocytic leukemia	semapv:LexicalMatching	low
+NCIT:C3174	Chronic Myeloid Leukemia	skos:exactMatch	MONDO:0011996	chronic myeloid leukemia	semapv:LexicalMatching	high
+NCIT:C4033	Clear Cell Renal Cell Carcinoma	skos:exactMatch	MONDO:0005005	clear cell renal carcinoma	semapv:LexicalMatching	low
+NCIT:C4349	Colon Adenocarcinoma	skos:exactMatch	MONDO:0002271	colon adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C4910	Colon Carcinoma	skos:exactMatch	MONDO:0002032	colon carcinoma	semapv:LexicalMatching	high
+NCIT:C5105	Colorectal Adenocarcinoma	skos:exactMatch	MONDO:0005008	colorectal adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C5673	Colorectal Adenoma	skos:exactMatch	MONDO:0005484	colorectal adenoma	semapv:LexicalMatching	high
+NCIT:C2955	Colorectal Carcinoma	skos:exactMatch	MONDO:0024331	colorectal carcinoma	semapv:LexicalMatching	high
+NCIT:C2956	Colorectal Neoplasm	skos:exactMatch	MONDO:0005335	colorectal neoplasm	semapv:LexicalMatching	high
+NCIT:C3828	Combined Hepatocellular Carcinoma and Cholangiocarcinoma	skos:exactMatch	MONDO:0044791	combined hepatocellular carcinoma and cholangiocarcinoma	semapv:LexicalMatching	high
+NCIT:C2964	Craniopharyngioma	skos:exactMatch	MONDO:0018907	craniopharyngioma	semapv:LexicalMatching	high
+NCIT:C3467	Cutaneous T Cell Lymphoma	skos:exactMatch	MONDO:0000607	primary cutaneous T-cell non-Hodgkin lymphoma	semapv:LexicalMatching	low
+NCIT:C2924	Ductal Breast Carcinoma In Situ	skos:exactMatch	MONDO:0005023	ductal breast carcinoma in situ	semapv:LexicalMatching	high
+NCIT:C9505	Dysembryoplastic Neuroepithelial Neoplasm	skos:exactMatch	MONDO:0005505	dysembryoplastic neuroepithelial tumor	semapv:LexicalMatching	low
+NCIT:C7558	Endometrial Carcinoma	skos:exactMatch	MONDO:0002447	endometrial carcinoma	semapv:LexicalMatching	high
+NCIT:C3012	Endometrial Neoplasm	skos:exactMatch	MONDO:0021251	endometrium neoplasm	semapv:LexicalMatching	low
+NCIT:C3017	Ependymoma	skos:exactMatch	MONDO:0016698	ependymoma	semapv:LexicalMatching	high
+NCIT:C4025	Esophageal Adenocarcinoma	skos:exactMatch	MONDO:0005028	esophageal adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C3513	Esophageal Carcinoma	skos:exactMatch	MONDO:0004116	esophageal small cell neuroendocrine carcinoma	semapv:LexicalMatching	low
+NCIT:C4024	Esophageal Squamous Cell Carcinoma	skos:exactMatch	MONDO:0005580	esophageal squamous cell carcinoma	semapv:LexicalMatching	high
+NCIT:C4817	Ewing Sarcoma	skos:exactMatch	MONDO:0012817	Ewing sarcoma	semapv:LexicalMatching	high
+NCIT:C92555	Extraventricular Neurocytoma	skos:exactMatch	MONDO:0016727	extraventricular neurocytoma	semapv:LexicalMatching	high
+NCIT:C3337	Fibroepithelial Polyp	skos:exactMatch	MONDO:0060765	fibroepithelial polyp	semapv:LexicalMatching	high
+NCIT:C4131	Fibrolamellar Carcinoma	skos:exactMatch	MONDO:0006210	fibrolamellar hepatocellular carcinoma	semapv:LexicalMatching	low
+NCIT:C3043	Fibrosarcoma	skos:exactMatch	MONDO:0005164	fibrosarcoma	semapv:LexicalMatching	high
+NCIT:C3209	Follicular Lymphoma	skos:exactMatch	MONDO:0018906	follicular lymphoma	semapv:LexicalMatching	high
+NCIT:C3844	Gallbladder Carcinoma	skos:exactMatch	MONDO:0003220	gallbladder carcinoma	semapv:LexicalMatching	high
+NCIT:C4004	Gastric Adenocarcinoma	skos:exactMatch	MONDO:0005036	gastric adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C4911	Gastric Carcinoma	skos:exactMatch	MONDO:0004950	gastric carcinoma	semapv:LexicalMatching	high
+NCIT:C3387	Gastric Neoplasm	skos:exactMatch	MONDO:0021085	gastric neoplasm	semapv:LexicalMatching	high
+DOID:0080375	Gastroesophageal Adenocarcinoma	skos:exactMatch	MONDO:0850130	gastroesophageal adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C9296	Gastroesophageal Junction Adenocarcinoma	skos:exactMatch	MONDO:0003219	gastroesophageal junction adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C3868	Gastrointestinal Stromal Neoplasm	skos:exactMatch	MONDO:0011719	gastrointestinal stromal tumor	semapv:LexicalMatching	low
+NCIT:C3055	Giant Cell Tumor	skos:exactMatch	MONDO:0002171	giant cell tumor	semapv:LexicalMatching	high
+NCIT:C3058	Glioblastoma	skos:exactMatch	MONDO:0018177	glioblastoma	semapv:LexicalMatching	high
+NCIT:C3059	Glioma	skos:exactMatch	MONDO:0021042	glioma	semapv:LexicalMatching	high
+NCIT:C35850	Head and Neck Carcinoma	skos:exactMatch	MONDO:0002038	head and neck carcinoma	semapv:LexicalMatching	high
+NCIT:C3077	Head and Neck Neoplasm	skos:exactMatch	MONDO:0005586	head and neck neoplasm	semapv:LexicalMatching	high
+NCIT:C34447	Head and Neck Squamous Cell Carcinoma	skos:exactMatch	MONDO:0010150	head and neck squamous cell carcinoma	semapv:LexicalMatching	high
+NCIT:C3099	Hepatocellular Carcinoma	skos:exactMatch	MONDO:0007256	hepatocellular carcinoma	semapv:LexicalMatching	high
+NCIT:C27349	Histiocytic Sarcoma	skos:exactMatch	MONDO:0019479	histiocytic sarcoma	semapv:LexicalMatching	high
+NCIT:C9357	Hodgkin Lymphoma	skos:exactMatch	MONDO:0004952	Hodgkins lymphoma	semapv:LexicalMatching	low
+NCIT:C3141	Intestinal Neoplasm	skos:exactMatch	MONDO:0021118	intestinal neoplasm	semapv:LexicalMatching	high
+NCIT:C35417	Intrahepatic Cholangiocarcinoma	skos:exactMatch	MONDO:0003210	intrahepatic cholangiocarcinoma	semapv:LexicalMatching	high
+NCIT:C4194	Invasive Ductal Breast Carcinoma	skos:exactMatch	MONDO:0004953	invasive ductal breast carcinoma	semapv:LexicalMatching	high
+NCIT:C9087	Kaposi Sarcoma	skos:exactMatch	MONDO:0005055	Kaposi's sarcoma	semapv:LexicalMatching	low
+NCIT:C6510	Leiomyoma	skos:exactMatch	MONDO:0001572	leiomyoma	semapv:LexicalMatching	high
+NCIT:C3161	Leukemia	skos:exactMatch	MONDO:0005059	leukemia	semapv:LexicalMatching	high
+NCIT:C7927	Liver and Intrahepatic Bile Duct Carcinoma	skos:exactMatch	MONDO:0018531	carcinoma of liver and intrahepatic biliary tract	semapv:LexicalMatching	low
+NCIT:C7103	Liver and Intrahepatic Bile Duct Neoplasm	skos:exactMatch	MONDO:0024477	liver and intrahepatic bile duct neoplasm	semapv:LexicalMatching	high
+NCIT:C132067	Low Grade Glioma	skos:exactMatch	MONDO:0021637	low grade glioma	semapv:LexicalMatching	high
+NCIT:C53554	Luminal A Breast Carcinoma	skos:exactMatch	MONDO:0021116	luminal A breast carcinoma	semapv:LexicalMatching	high
+NCIT:C3512	Lung Adenocarcinoma	skos:exactMatch	MONDO:0005061	lung adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C4878	Lung Carcinoma	skos:exactMatch	MONDO:0005138	lung carcinoma	semapv:LexicalMatching	high
+NCIT:C3200	Lung Neoplasm	skos:exactMatch	MONDO:0021117	lung neoplasm	semapv:LexicalMatching	high
+NCIT:C2926	Lung Non-Small Cell Carcinoma	skos:exactMatch	MONDO:0005233	non-small cell lung carcinoma	semapv:LexicalMatching	low
+NCIT:C4917	Lung Small Cell Carcinoma	skos:exactMatch	MONDO:0003438	combined small cell lung carcinoma	semapv:LexicalMatching	low
+NCIT:C3493	Lung Squamous Cell Carcinoma	skos:exactMatch	MONDO:0005097	squamous cell lung carcinoma	semapv:LexicalMatching	low
+NCIT:C7539	Lymphoid Leukemia	skos:exactMatch	MONDO:0005402	lymphoid leukemia	semapv:LexicalMatching	high
+NCIT:C3208	Lymphoma	skos:exactMatch	MONDO:0005062	lymphoma	semapv:LexicalMatching	high
+NCIT:C3568	Malignant Brain Neoplasm	skos:exactMatch	MONDO:0001657	brain cancer	semapv:LexicalMatching	low
+NCIT:C4890	Malignant Digestive System Neoplasm	skos:exactMatch	MONDO:0002516	digestive system cancer	semapv:LexicalMatching	low
+NCIT:C4822	Malignant Glioma	skos:exactMatch	MONDO:0100342	malignant glioma	semapv:LexicalMatching	high
+NCIT:C9305	Malignant Neoplasm	skos:exactMatch	MONDO:0004631	tongue cancer	semapv:LexicalMatching	low
+NCIT:C7431	Malignant Ovarian Neoplasm	skos:exactMatch	MONDO:0003792	ovarian carcinosarcoma	semapv:LexicalMatching	low
+NCIT:C9005	Malignant Pancreatic Neoplasm	skos:exactMatch	MONDO:0009831	malignant pancreatic neoplasm	semapv:LexicalMatching	high
+NCIT:C3798	Malignant Peripheral Nerve Sheath Tumor	skos:exactMatch	MONDO:0017827	malignant peripheral nerve sheath tumor	semapv:LexicalMatching	high
+NCIT:C3538	Malignant Peritoneal Neoplasm	skos:exactMatch	MONDO:0002087	peritoneum cancer	semapv:LexicalMatching	low
+NCIT:C2920	Malignant Skin Neoplasm	skos:exactMatch	MONDO:0002898	skin cancer	semapv:LexicalMatching	low
+NCIT:C4337	Mantle Cell Lymphoma	skos:exactMatch	MONDO:0018876	mantle cell lymphoma	semapv:LexicalMatching	high
+NCIT:C4341	Marginal Zone Lymphoma	skos:exactMatch	MONDO:0017604	marginal zone lymphoma	semapv:LexicalMatching	high
+NCIT:C3222	Medulloblastoma	skos:exactMatch	MONDO:0007959	medulloblastoma	semapv:LexicalMatching	high
+NCIT:C3224	Melanoma	skos:exactMatch	MONDO:0005105	melanoma	semapv:LexicalMatching	high
+NCIT:C3230	Meningioma	skos:exactMatch	MONDO:0016642	meningioma	semapv:LexicalMatching	high
+NCIT:C4456	Mesothelioma	skos:exactMatch	MONDO:0005065	mesothelioma	semapv:LexicalMatching	high
+NCIT:C3242	Multiple Myeloma	skos:exactMatch	MONDO:0009693	plasma cell myeloma	semapv:LexicalMatching	low
+NCIT:C3246	Mycosis Fungoides	skos:exactMatch	MONDO:0009691	mycosis fungoides	semapv:LexicalMatching	high
+NCIT:C3172	Myeloid Leukemia	skos:exactMatch	MONDO:0004643	myeloid leukemia	semapv:LexicalMatching	high
+NCIT:C9290	Myeloid Neoplasm	skos:exactMatch	MONDO:0005170	myeloid neoplasm	semapv:LexicalMatching	high
+NCIT:C4345	Myeloproliferative Neoplasm	skos:exactMatch	MONDO:0020076	myeloproliferative neoplasm	semapv:LexicalMatching	high
+NCIT:C40392	Myoepithelioma	skos:exactMatch	MONDO:0003158	malignant myoepithelioma	semapv:LexicalMatching	low
+NCIT:C3871	Nasopharyngeal Carcinoma	skos:exactMatch	MONDO:0015459	nasopharyngeal carcinoma	semapv:LexicalMatching	high
+NCIT:C3270	Neuroblastoma	skos:exactMatch	MONDO:0005072	neuroblastoma	semapv:LexicalMatching	high
+NCIT:C3809	Neuroendocrine Neoplasm	skos:exactMatch	MONDO:0019496	neuroendocrine neoplasm	semapv:LexicalMatching	high
+NCIT:C3787	Neuroepithelial Neoplasm	skos:exactMatch	MONDO:0021193	neuroepithelial neoplasm	semapv:LexicalMatching	high
+NCIT:C3272	Neurofibroma	skos:exactMatch	MONDO:0016755	neurofibroma	semapv:LexicalMatching	high
+NCIT:C4348	Non-Functioning Pituitary Gland Adenoma	skos:exactMatch	MONDO:0019613	non-functioning pituitary adenoma	semapv:LexicalMatching	low
+NCIT:C3211	Non-Hodgkin Lymphoma	skos:exactMatch	MONDO:0018908	non-Hodgkin lymphoma	semapv:LexicalMatching	high
+NCIT:C48660	Not Applicable	skos:exactMatch	MONDO:0019529	radiation myelitis	semapv:LexicalMatching	low
+NCIT:C7606	Oral Cavity Neoplasm	skos:exactMatch	MONDO:0021245	oral cavity neoplasm	semapv:LexicalMatching	high
+NCIT:C4833	Oral Cavity Squamous Cell Carcinoma	skos:exactMatch	MONDO:0004958	oral cavity squamous cell carcinoma	semapv:LexicalMatching	high
+NCIT:C3291	Oropharyngeal Neoplasm	skos:exactMatch	MONDO:0021364	neoplasm of oropharynx	semapv:LexicalMatching	low
+NCIT:C9145	Osteosarcoma	skos:exactMatch	MONDO:0009807	osteosarcoma	semapv:LexicalMatching	high
+NCIT:C7317	Ovarian Adenosarcoma	skos:exactMatch	MONDO:0002880	ovarian adenosarcoma	semapv:LexicalMatching	high
+NCIT:C4908	Ovarian Carcinoma	skos:exactMatch	MONDO:0005140	ovarian carcinoma	semapv:LexicalMatching	high
+NCIT:C4984	Ovarian Neoplasm	skos:exactMatch	MONDO:0021068	ovarian neoplasm	semapv:LexicalMatching	high
+NCIT:C7550	Ovarian Serous Adenocarcinoma	skos:exactMatch	MONDO:0005211	ovarian serous adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C8294	Pancreatic Adenocarcinoma	skos:exactMatch	MONDO:0006047	pancreatic adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C207229	Pancreatic Carcinoma	skos:exactMatch	MONDO:0006478	undifferentiated pancreatic carcinoma	semapv:LexicalMatching	low
+NCIT:C9120	Pancreatic Ductal Adenocarcinoma	skos:exactMatch	MONDO:0005184	pancreatic ductal adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C3305	Pancreatic Neoplasm	skos:exactMatch	MONDO:0021040	pancreatic neoplasm	semapv:LexicalMatching	high
+NCIT:C3770	Pancreatic Neuroendocrine Carcinoma	skos:exactMatch	MONDO:0005893	pancreatic endocrine carcinoma	semapv:LexicalMatching	low
+NCIT:C9061	Penile Carcinoma	skos:exactMatch	MONDO:0006360	penile carcinoma	semapv:LexicalMatching	high
+NCIT:C3326	Pheochromocytoma	skos:exactMatch	MONDO:0008233	pheochromocytoma	semapv:LexicalMatching	high
+NCIT:C4047	Pilocytic Astrocytoma	skos:exactMatch	MONDO:0016691	pilocytic astrocytoma	semapv:LexicalMatching	high
+NCIT:C3329	Pituitary Gland Adenoma	skos:exactMatch	MONDO:0006373	pituitary gland adenoma	semapv:LexicalMatching	high
+NCIT:C7224	Plasmablastic Lymphoma	skos:exactMatch	MONDO:0017347	plasmablastic lymphoma	semapv:LexicalMatching	high
+NCIT:C9349	Plasmacytoma	skos:exactMatch	MONDO:0005615	plasmacytoma	semapv:LexicalMatching	high
+NCIT:C6969	Plexiform Schwannoma	skos:exactMatch	MONDO:0002559	plexiform schwannoma	semapv:LexicalMatching	high
+NCIT:C9301	Primary Central Nervous System Lymphoma	skos:exactMatch	MONDO:0002571	primary central nervous system lymphoma	semapv:LexicalMatching	high
+NCIT:C2862	Primary Myelofibrosis	skos:exactMatch	MONDO:0009692	primary myelofibrosis	semapv:LexicalMatching	high
+NCIT:C2919	Prostate Adenocarcinoma	skos:exactMatch	MONDO:0005082	prostate adenocarcinoma	semapv:LexicalMatching	high
+NCIT:C4863	Prostate Carcinoma	skos:exactMatch	MONDO:0005159	prostate carcinoma	semapv:LexicalMatching	high
+NCIT:C3343	Prostate Neoplasm	skos:exactMatch	MONDO:0021259	prostate neoplasm	semapv:LexicalMatching	high
+NCIT:C9383	Rectal Adenocarcinoma	skos:exactMatch	MONDO:0002748	rectum mucinous adenocarcinoma	semapv:LexicalMatching	low
+NCIT:C9385	Renal Cell Carcinoma	skos:exactMatch	MONDO:0005086	renal cell carcinoma	semapv:LexicalMatching	high
+NCIT:C7541	Retinoblastoma	skos:exactMatch	MONDO:0008380	retinoblastoma	semapv:LexicalMatching	high
+NCIT:C3359	Rhabdomyosarcoma	skos:exactMatch	MONDO:0005212	rhabdomyosarcoma	semapv:LexicalMatching	high
+NCIT:C129431	Rosette-Forming Glioneuronal Tumor	skos:exactMatch	MONDO:0016736	rosette-forming glioneuronal tumor of fourth ventricule	semapv:LexicalMatching	low
+NCIT:C8026	Salivary Gland Adenoid Cystic Carcinoma	skos:exactMatch	MONDO:0003175	salivary gland adenoid cystic carcinoma	semapv:LexicalMatching	high
+NCIT:C9118	Sarcoma	skos:exactMatch	MONDO:0005089	sarcoma	semapv:LexicalMatching	high
+NCIT:C3269	Schwannoma	skos:exactMatch	MONDO:0002546	schwannoma	semapv:LexicalMatching	high
+NCIT:C68611	Sinonasal Squamous Cell Carcinoma	skos:exactMatch	MONDO:0002831	non-keratinizing sinonasal squamous cell carcinoma	semapv:LexicalMatching	low
+NCIT:C3372	Skin Neoplasm	skos:exactMatch	MONDO:0002531	skin neoplasm	semapv:LexicalMatching	high
+NCIT:C9306	Soft Tissue Sarcoma	skos:exactMatch	MONDO:0018078	soft tissue sarcoma	semapv:LexicalMatching	high
+NCIT:C2929	Squamous Cell Carcinoma	skos:exactMatch	MONDO:0005096	squamous cell carcinoma	semapv:LexicalMatching	high
+NCIT:C3400	Synovial Sarcoma	skos:exactMatch	MONDO:0010434	synovial sarcoma	semapv:LexicalMatching	high
+NCIT:C3183	T Acute Lymphoblastic Leukemia	skos:exactMatch	MONDO:0004967	acute lymphoblastic leukemia	semapv:LexicalMatching	low
+NCIT:C3466	T-Cell Lymphoma	skos:exactMatch	MONDO:0022037	large-cell immunoblastic lymphoma	semapv:LexicalMatching	low
+NCIT:C3403	Teratoma	skos:exactMatch	MONDO:0002601	teratoma	semapv:LexicalMatching	high
+NCIT:C6341	Testicular Embryonal Carcinoma	skos:exactMatch	MONDO:0006446	testicular embryonal carcinoma	semapv:LexicalMatching	high
+NCIT:C3878	Thyroid Gland Anaplastic Carcinoma	skos:exactMatch	MONDO:0006468	thyroid gland undifferentiated (anaplastic) carcinoma	semapv:LexicalMatching	low
+NCIT:C4815	Thyroid Gland Carcinoma	skos:exactMatch	MONDO:0015075	thyroid gland carcinoma	semapv:LexicalMatching	high
+NCIT:C71732	Triple-Negative Breast Carcinoma	skos:exactMatch	MONDO:0005494	triple-negative breast carcinoma	semapv:LexicalMatching	high
+NCIT:C4030	Urothelial Carcinoma	skos:exactMatch	MONDO:0040679	urothelial carcinoma	semapv:LexicalMatching	high
+NCIT:C6336	Uterine Adenosarcoma	skos:exactMatch	MONDO:0002878	uterine corpus adenosarcoma	semapv:LexicalMatching	low
+NCIT:C7712	Uveal Melanoma	skos:exactMatch	MONDO:0006486	uveal melanoma	semapv:LexicalMatching	high
+NCIT:C3436	Uveal Neoplasm	skos:exactMatch	MONDO:0021225	uvea neoplasm	semapv:LexicalMatching	low
+NCIT:C7388	Vascular Neoplasm	skos:exactMatch	MONDO:0024296	vascular neoplasm	semapv:LexicalMatching	high
+NCIT:C48660	Not-Applicable	skos:exactMatch	MONDO:0019529	radiation myelitis	semapv:LexicalMatching	low
+NCIT:C3797	Plexiform Neurofibroma	skos:exactMatch	MONDO:0003304	plexiform neurofibroma	semapv:LexicalMatching	high

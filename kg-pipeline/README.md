@@ -66,8 +66,9 @@ make schema              # regenerate schema/*.ttl from schema/*.linkml.yaml
 make extract              # pull the 5 CCKP tables from Synapse -> data/raw/
 make harmonize            # resolve controlled-vocabulary values -> data/harmonized/
 make suggest-mappings     # propose candidate mappings for unmapped_terms.csv -> mapping_suggestions.csv
+make crosswalk-ontology   # propose NCIT/BTO -> MONDO/UBERON crosswalks for sagebrain-model federation
 make triples              # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
-make validate             # parse-check the schema turtle + coverage report + regression gate
+make validate             # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make all                  # schema + extract + harmonize + triples + validate
 make test                 # pytest test/ (fixture-based, no live Synapse access needed)
@@ -89,7 +90,7 @@ installation required.
 
 Last run against the real portal pulled **1141 Datasets, 4773
 Publications, 331 Tools, 160 Grants, 10 EducationalResources** and produced
-a merged graph of **424,723 triples** in `data/rdf/cckp_kg.ttl` (not
+a merged graph of **431,744 triples** in `data/rdf/cckp_kg.ttl` (not
 committed - see `data/` in `.gitignore`). Example resolved queries:
 
 - `Dataset -[tumorTypeTerm]-> NCIT:C3510` (Cutaneous Melanoma) for a real
@@ -181,9 +182,11 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
     *policy*, not a biomedical concept), `Tool.cost` (`Free of
     Charge`/`Commercial`), `Tool.license`'s `Not licensed` value (SPDX only
     lists real license identifiers, not an "unlicensed" placeholder),
-    `Grant.consortium` and the remaining 8 `Grant.theme` values (NCI-internal
-    program/initiative names and multi-concept research themes with no
-    single-term equivalent), `Grant.grantType` (NIH activity codes like
+    most of `Grant.consortium` (two exceptions found and curated: `HTAN` →
+    `NCIT:C181842`, `Sage Bionetworks` → `ROR:049ncjx51`) and the remaining 8
+    `Grant.theme` values (NCI-internal program/initiative names and
+    multi-concept research themes with no single-term equivalent),
+    `Grant.grantType` (NIH activity codes like
     `R01`/`U01` - NCIT only has category-level "R-Series"/"U-Series" terms,
     too coarse to stand in for a specific code), and `Publication`/
     `Dataset.tumorType`'s `Pan-Cancer` value (a multi-tumor-type *study
@@ -216,6 +219,70 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
   and non-blocking - fixable later by promoting shared-name fields to
   top-level `slots:` with `slot_usage:` overrides per class, not needed for
   correct RDF output today.
+
+## Interoperating with sagebrain-model
+
+[sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model) is a
+sibling Sage Bionetworks OWL/SHACL ontology meant to integrate biological,
+clinical, and translational data *across* Synapse portals. This pipeline has
+zero entity-type overlap with sagebrain at the CCKP-portal-metadata layer
+(sagebrain models participants/specimens/genes/diseases, not
+Dataset/Publication/Tool/Grant records), but adopts several of its
+conventions to stay interoperable and to fill real gaps of its own:
+
+- **Ontology crosswalks for federation, kept separate from harmonization.**
+  `make crosswalk-ontology` (`scripts/crosswalk_ontology.py`) produces
+  supplementary `mappings/crosswalks/*.sssom.tsv` files mapping this
+  pipeline's NCIT/BTO-anchored CVs to the ontologies sagebrain anchors the
+  same concepts in - **MONDO** for disease-shaped CVs (`tumorType.csv`,
+  `diseaseType.csv`, `diseaseStatus.csv`, matching `biolink:Disease`'s own
+  MONDO anchor) and **UBERON** for tissue/anatomy CVs (`tissue.csv`, matching
+  the UBERON convention sagebrain's own worked example uses for
+  `sagebrain:Tissue`/`Organ` instances). These are proposals for human
+  review, like `mapping_suggestions.csv` - never auto-applied to a CV's own
+  columns, and never used by `harmonize.py` itself.
+- **SHACL structural validation**, adapted from sagebrain's own
+  `ontology/shacl/sagebrain-shapes.ttl` + `tests/validate.py` pattern:
+  `schema/cckp_portal.shacl.ttl` encodes instance-level invariants an OWL/
+  LinkML T-Box can't (a *specific* join property's object must have a
+  *specific* `rdf:type`, not just any type in the union of every class that
+  ever reuses that join) and is checked via `pyshacl` in `make validate`
+  (`scripts/validate_graph.py --shacl`), run without RDFS/OWL entailment for
+  the same reason sagebrain's own validation does - inference would make
+  `sh:class` checks vacuous by entailing the very type being checked for.
+  Known-good/known-bad fixtures live at
+  `test/fixtures/shacl_conforming.ttl`/`shacl_violating.ttl`.
+- **A 3-tier identifier policy**, matching the one documented in
+  sagebrain's `examples/README.md`:
+  1. **Registry identifier** - a real external ontology/registry CURIE
+     (NCIT, EDAM, ROR, DUO, a resolvable DOI/PubMed IRI) when the concept has
+     an external home. The large majority of `{field}Term`/`{field}Iri`
+     edges in the graph.
+  2. **Locally-minted portal IRI** - `https://w3id.org/mc2-center/cckp-portal/data/{Class}/{id}`
+     for the CCKP entities this pipeline itself owns (Dataset/Publication/
+     Tool/Grant/EducationalResource instances).
+  3. **Provisional placeholder** - for a CV value a human has actively
+     checked against every relevant external vocabulary/registry and
+     confirmed has no real term (see `mappings/confirmed_unmappable.tsv` and
+     the "Confirmed, not just assumed" section above) -
+     `build_triples.py` mints `https://w3id.org/mc2-center/cckp-portal/terms/{field}/{slug}`
+     and asserts `cckp:provisional true` on it, so the concept stays an
+     addressable, annotatable graph node instead of a dead-end string
+     literal, while remaining unambiguously distinct from a real resolved
+     mapping. Adding a new confirmed-unmappable value is a one-line addition
+     to that TSV, not a code change.
+- **Governance notes** (documentation only, nothing to build):
+  - sagebrain's namespace is `w3id.org/synapse/sagebrain`; this pipeline's
+    is `w3id.org/mc2-center/cckp-portal` - an open question for whoever owns
+    Sage's w3id.org registrations, not something to silently rename.
+  - If/when this pipeline curates DUO-anchored terms (a much better fit for
+    something like a `Study Data Use Codes` field than for CCKP's own
+    `Publication.accessibility`, which was checked and found to have no
+    real DUO/NCIT match - see above), resolve those CURIEs against the same
+    pinned DUO version sagebrain already vendors
+    (`ontology/imports/duo.ttl` in the sagebrain-model repo) rather than a
+    live/independent OLS snapshot, so the two graphs don't drift onto
+    different DUO releases.
 
 ## Design decisions (departures from nf-osi/kg-pipeline)
 
@@ -257,7 +324,15 @@ kg-pipeline/
     mc2_model_prefixes_report.md
     cckp_portal.linkml.yaml  - hand-authored; imports mc2_model.linkml.yaml
     cckp_portal.ttl           - generated via `make schema`
+    cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
+                                "Interoperating with sagebrain-model")
   mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
+  mappings/crosswalks/*.sssom.tsv - supplementary MONDO/UBERON federation
+                                crosswalks (generated, committed, human-review
+                                only - never consumed by harmonize.py)
+  mappings/confirmed_unmappable.tsv - human-curated (table, field, value, reason)
+                                registry backing build_triples.py's tier-3
+                                provisional placeholder IRIs
   mappings/coverage_baseline.json - coverage-gate ratchet (generated, committed -
                                 unlike data/harmonized/*, which is gitignored)
   scripts/
@@ -266,10 +341,11 @@ kg-pipeline/
     extract_cckp_tables.py    - Stage 2
     harmonize.py               - Stage 3
     suggest_mappings.py         - Stage 3.5 (human-review candidate mappings)
+    crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
-    validate_graph.py          - Stage 5
+    validate_graph.py          - Stage 5 (+ SHACL validation)
   data/                        - gitignored: raw/, harmonized/, rdf/
   test/
-    fixtures/*.csv             - small hand-made sample rows, one per in-scope table
+    fixtures/*.csv, shacl_*.ttl - small hand-made sample rows/graphs
     conftest.py, test_*.py     - pytest suite (no live Synapse access needed)
 ```

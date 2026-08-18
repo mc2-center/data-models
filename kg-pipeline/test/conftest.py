@@ -42,10 +42,14 @@ def rdf_graphs(harmonized_dir):
     schema_meta = build_triples.get_schema_metadata(SCHEMA_PATH)
     mc2_prefixes = build_triples.load_prefixes(MC2_SCHEMA_PATH)
     join_indices = build_triples.build_join_indices(schema_meta, str(harmonized_dir["dir"]))
+    confirmed_unmappable = build_triples.load_confirmed_unmappable(
+        str(KG_PIPELINE_DIR / "mappings" / "confirmed_unmappable.tsv")
+    )
 
     graphs = {}
     for cls_name in CLASS_ORDER:
         graphs[cls_name] = build_triples.build_class_graph(
-            cls_name, schema_meta, str(harmonized_dir["dir"]), join_indices, mc2_prefixes
+            cls_name, schema_meta, str(harmonized_dir["dir"]), join_indices, mc2_prefixes,
+            confirmed_unmappable=confirmed_unmappable,
         )
     return graphs

@@ -1,0 +1,113 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/crosswalks/tissue_ncit_to_uberon.sssom.tsv
+# comment: supplementary NCIT->UBERON crosswalk for federation with sagebrain-model - NOT the mapping harmonize.py resolves against; review before treating any row as confirmed.
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence
+NCIT:C12725	Gonad	skos:exactMatch	UBERON:0000991	gonad	semapv:LexicalMatching	high
+NCIT:C12252	Abdominal Esophagus	skos:exactMatch	UBERON:0035177	abdominal part of esophagus	semapv:LexicalMatching	low
+NCIT:C12472	Adipose Tissue	skos:exactMatch	UBERON:0001013	adipose tissue	semapv:LexicalMatching	high
+NCIT:C12666	Adrenal Gland	skos:exactMatch	UBERON:0002369	adrenal gland	semapv:LexicalMatching	high
+NCIT:C12986	Alveolus	skos:exactMatch	UBERON:0003215	alveolus	semapv:LexicalMatching	high
+NCIT:C12669	Aorta	skos:exactMatch	UBERON:0000947	aorta	semapv:LexicalMatching	high
+NCIT:C12372	Artery	skos:exactMatch	UBERON:0001637	artery	semapv:LexicalMatching	high
+NCIT:C12265	Ascending Colon	skos:exactMatch	UBERON:0001156	ascending colon	semapv:LexicalMatching	high
+NCIT:C12376	Bile Duct	skos:exactMatch	UBERON:0002394	bile duct	semapv:LexicalMatching	high
+NCIT:C12414	Bladder	skos:exactMatch	UBERON:0004230	urinary bladder neck smooth muscle	semapv:LexicalMatching	low
+NCIT:C12434	Blood	skos:exactMatch	UBERON:0000178	blood	semapv:LexicalMatching	high
+NCIT:C12679	Blood Vessel	skos:exactMatch	UBERON:0001981	blood vessel	semapv:LexicalMatching	high
+NCIT:C12366	Bone	skos:exactMatch	UBERON:0004251	hindlimb zeugopod bone	semapv:LexicalMatching	low
+NCIT:C12431	Bone Marrow	skos:exactMatch	UBERON:0002371	bone marrow	semapv:LexicalMatching	high
+NCIT:C12439	Brain	skos:exactMatch	UBERON:0000955	brain	semapv:LexicalMatching	high
+NCIT:C12971	Breast	skos:exactMatch	UBERON:0000310	breast	semapv:LexicalMatching	high
+NCIT:C12381	Caecum	skos:exactMatch	UBERON:0001153	caecum	semapv:LexicalMatching	high
+NCIT:C12256	Cardia	skos:exactMatch	UBERON:0004996	mucosa of cardia of stomach	semapv:LexicalMatching	low
+NCIT:C12373	Cartilage	skos:exactMatch	UBERON:0004273	cartilaginous joint suture	semapv:LexicalMatching	low
+NCIT:C12311	Cervix Uteri	skos:exactMatch	UBERON:0000002	uterine cervix	semapv:LexicalMatching	low
+NCIT:C12344	Choroid	skos:exactMatch	UBERON:0002443	choroidal blood vessel	semapv:LexicalMatching	low
+NCIT:C12382	Colon	skos:exactMatch	UBERON:0001155	colon	semapv:LexicalMatching	high
+NCIT:C12964	Connective and Soft Tissue	skos:exactMatch	UBERON:0001734	palatine uvula	semapv:LexicalMatching	low
+NCIT:C12342	Cornea	skos:exactMatch	UBERON:0000964	cornea	semapv:LexicalMatching	high
+NCIT:C12263	Duodenum	skos:exactMatch	UBERON:0002114	duodenum	semapv:LexicalMatching	high
+NCIT:C12394	Ear	skos:exactMatch	UBERON:0001690	ear	semapv:LexicalMatching	high
+NCIT:C28147	Embryo	skos:exactMatch	UBERON:0000922	embryo	semapv:LexicalMatching	high
+NCIT:C34153	Embryonic Heart	skos:exactMatch	UBERON:0006283	future cardiac ventricle	semapv:LexicalMatching	low
+NCIT:C12309	Endocervix	skos:exactMatch	UBERON:0000458	endocervix	semapv:LexicalMatching	high
+NCIT:C12313	Endometrium	skos:exactMatch	UBERON:0001295	endometrium	semapv:LexicalMatching	high
+NCIT:C12481	Endothelium	skos:exactMatch	UBERON:0001986	endothelium	semapv:LexicalMatching	high
+NCIT:C12710	Epithelium	skos:exactMatch	UBERON:0000483	epithelium	semapv:LexicalMatching	high
+NCIT:C12389	Esophagus	skos:exactMatch	UBERON:0001043	esophagus	semapv:LexicalMatching	high
+NCIT:C12401	Eye	skos:exactMatch	UBERON:0000970	eye	semapv:LexicalMatching	high
+NCIT:C12403	Fallopian Tube	skos:exactMatch	UBERON:0003889	fallopian tube	semapv:LexicalMatching	high
+NCIT:C33049	Foreskin	skos:exactMatch	UBERON:0004812	male prepuce epithelium	semapv:LexicalMatching	low
+NCIT:C12352	Frontal Lobe	skos:exactMatch	UBERON:0016525	frontal lobe	semapv:LexicalMatching	high
+NCIT:C32668	Gastroesophageal Junction	skos:exactMatch	UBERON:0004550	gastroesophageal sphincter	semapv:LexicalMatching	low
+NCIT:C34082	Gastrointestinal Tract	skos:exactMatch	UBERON:0011565	lumen of gastrointestinal system	semapv:LexicalMatching	low
+NCIT:C12810	Genitourinary	skos:exactMatch	UBERON:0004122	genitourinary system	semapv:LexicalMatching	low
+NCIT:C13317	Hair Follicle	skos:exactMatch	UBERON:0002073	hair follicle	semapv:LexicalMatching	high
+NCIT:C12418	Head and Neck	skos:exactMatch	UBERON:0009141	craniocervical region vein	semapv:LexicalMatching	low
+NCIT:C12727	Heart	skos:exactMatch	UBERON:0000948	heart	semapv:LexicalMatching	high
+NCIT:C12371	Heart Muscle	skos:exactMatch	UBERON:0003452	trabecula carnea cardiac muscle tissue	semapv:LexicalMatching	low
+NCIT:C12909	Hematopoietic System	skos:exactMatch	UBERON:0002390	hematopoietic system	semapv:LexicalMatching	high
+NCIT:C12444	Hippocampus	skos:exactMatch	UBERON:0003881	CA1 field of hippocampus	semapv:LexicalMatching	low
+NCIT:C12736	Intestine	skos:exactMatch	UBERON:0000160	intestine	semapv:LexicalMatching	high
+NCIT:C13044	Joint	skos:exactMatch	UBERON:0003839	forelimb joint	semapv:LexicalMatching	low
+NCIT:C12415	Kidney	skos:exactMatch	UBERON:0002113	kidney	semapv:LexicalMatching	high
+NCIT:C12420	Larynx	skos:exactMatch	UBERON:0001737	larynx	semapv:LexicalMatching	high
+NCIT:C13046	Ligament	skos:exactMatch	UBERON:0000211	ligament	semapv:LexicalMatching	high
+NCIT:C12392	Liver	skos:exactMatch	UBERON:0002107	liver	semapv:LexicalMatching	high
+NCIT:C12468	Lung	skos:exactMatch	UBERON:0002048	lung	semapv:LexicalMatching	high
+NCIT:C13252	Lymph	skos:exactMatch	UBERON:0002391	lymph	semapv:LexicalMatching	high
+NCIT:C12745	Lymph Node	skos:exactMatch	UBERON:0000029	lymph node	semapv:LexicalMatching	high
+NCIT:C12746	Lymphatic System	skos:exactMatch	UBERON:0002465	lymphoid system	semapv:LexicalMatching	low
+NCIT:C13049	Lymphoid Tissue	skos:exactMatch	UBERON:0001744	lymphoid tissue	semapv:LexicalMatching	high
+NCIT:C12284	Main Bronchus	skos:exactMatch	UBERON:0002182	main bronchus	semapv:LexicalMatching	high
+NCIT:C12367	Mammary Gland	skos:exactMatch	UBERON:0001911	mammary gland	semapv:LexicalMatching	high
+NCIT:C12348	Meninges	skos:exactMatch	UBERON:0003290	meninx of diencephalon	semapv:LexicalMatching	low
+NCIT:C13301	Mesenchyme	skos:exactMatch	UBERON:0003104	mesenchyme	semapv:LexicalMatching	high
+NCIT:C13166	Mucosa	skos:exactMatch	UBERON:0000344	mucosa	semapv:LexicalMatching	high
+NCIT:C13056	Muscle	skos:exactMatch	UBERON:0004229	urinary bladder trigone smooth muscle	semapv:LexicalMatching	low
+NCIT:C12424	Nasal Cavity	skos:exactMatch	UBERON:0001707	nasal cavity	semapv:LexicalMatching	high
+NCIT:C12755	Nervous System	skos:exactMatch	UBERON:0001016	nervous system	semapv:LexicalMatching	high
+NCIT:C48660	Not Applicable	skos:exactMatch	UBERON:0002535	gill	semapv:LexicalMatching	low
+NCIT:C33205	Olfactory Mucosa	skos:exactMatch	UBERON:0005386	olfactory segment of nasal mucosa	semapv:LexicalMatching	low
+NCIT:C33209	Omentum	skos:exactMatch	UBERON:0003688	omentum	semapv:LexicalMatching	high
+NCIT:C12421	Oral Cavity	skos:exactMatch	UBERON:0000167	oral cavity	semapv:LexicalMatching	high
+NCIT:C77637	Oral Mucosa	skos:exactMatch	UBERON:0003343	mucosa of oral region	semapv:LexicalMatching	low
+NCIT:C12404	Ovary	skos:exactMatch	UBERON:0000992	ovary	semapv:LexicalMatching	high
+NCIT:C12393	Pancreas	skos:exactMatch	UBERON:0001264	pancreas	semapv:LexicalMatching	high
+NCIT:C12363	Pelvic Lymph Nodes	skos:exactMatch	UBERON:0015876	pelvic lymph node	semapv:LexicalMatching	low
+BTO:0001020	Periodontal Ligament	skos:exactMatch	UBERON:0008266	periodontal ligament	semapv:LexicalMatching	high
+NCIT:C12465	Peripheral Nerves	skos:exactMatch	UBERON:0002410	autonomic nervous system	semapv:LexicalMatching	low
+NCIT:C12770	Peritoneum	skos:exactMatch	UBERON:0002358	peritoneum	semapv:LexicalMatching	high
+NCIT:C12425	Pharynx	skos:exactMatch	UBERON:0006562	pharynx	semapv:LexicalMatching	high
+NCIT:C12399	Pituitary Gland	skos:exactMatch	UBERON:0000007	pituitary gland	semapv:LexicalMatching	high
+NCIT:C13272	Placenta	skos:exactMatch	UBERON:0001987	placenta	semapv:LexicalMatching	high
+NCIT:C12410	Prostate Gland	skos:exactMatch	UBERON:0002367	prostate gland	semapv:LexicalMatching	high
+NCIT:C12390	Rectum	skos:exactMatch	UBERON:0001052	rectum	semapv:LexicalMatching	high
+NCIT:C12841	Reproductive System	skos:exactMatch	UBERON:0000990	reproductive system	semapv:LexicalMatching	high
+NCIT:C12779	Respiratory System	skos:exactMatch	UBERON:0001004	respiratory system	semapv:LexicalMatching	high
+NCIT:C12426	Salivary Gland	skos:exactMatch	UBERON:0004809	salivary gland epithelium	semapv:LexicalMatching	low
+NCIT:C12784	Sclera	skos:exactMatch	UBERON:0001773	sclera	semapv:LexicalMatching	high
+NCIT:C12470	Skin	skos:exactMatch	UBERON:0003530	pedal digit skin	semapv:LexicalMatching	low
+NCIT:C12386	Small Intestine	skos:exactMatch	UBERON:0002108	small intestine	semapv:LexicalMatching	high
+NCIT:C12464	Spinal Cord	skos:exactMatch	UBERON:0002240	spinal cord	semapv:LexicalMatching	high
+NCIT:C12432	Spleen	skos:exactMatch	UBERON:0002106	spleen	semapv:LexicalMatching	high
+NCIT:C12391	Stomach	skos:exactMatch	UBERON:0000945	stomach	semapv:LexicalMatching	high
+NCIT:C12473	Synovial Membrane	skos:exactMatch	UBERON:0002018	synovial membrane of synovial joint	semapv:LexicalMatching	low
+NCIT:C13045	Tendon	skos:exactMatch	UBERON:0000043	tendon	semapv:LexicalMatching	high
+NCIT:C12412	Testis	skos:exactMatch	UBERON:0000473	testis	semapv:LexicalMatching	high
+NCIT:C12433	Thymus	skos:exactMatch	UBERON:0002370	thymus	semapv:LexicalMatching	high
+NCIT:C12400	Thyroid Gland	skos:exactMatch	UBERON:0002046	thyroid gland	semapv:LexicalMatching	high
+NCIT:C12422	Tongue	skos:exactMatch	UBERON:0001723	tongue	semapv:LexicalMatching	high
+NCIT:C12802	Tonsil	skos:exactMatch	UBERON:0002372	tonsil	semapv:LexicalMatching	high
+NCIT:C12428	Trachea	skos:exactMatch	UBERON:0003126	trachea	semapv:LexicalMatching	high
+NCIT:C34320	Umbilical Cord	skos:exactMatch	UBERON:0002331	umbilical cord	semapv:LexicalMatching	high
+NCIT:C38046	Unspecified	skos:exactMatch	UBERON:0005144	metanephric glomerular capillary	semapv:LexicalMatching	low
+NCIT:C12405	Uterus	skos:exactMatch	UBERON:0000995	uterus	semapv:LexicalMatching	high
+NCIT:C12407	Vagina	skos:exactMatch	UBERON:0000996	vagina	semapv:LexicalMatching	high
+NCIT:C13053	Vascular Endothelium	skos:exactMatch	UBERON:0013694	brain endothelium	semapv:LexicalMatching	low
+NCIT:C12814	Vein	skos:exactMatch	UBERON:0001638	vein	semapv:LexicalMatching	high
+NCIT:C12933	Vertebra	skos:exactMatch	UBERON:0002412	vertebra	semapv:LexicalMatching	high
+NCIT:C12954	Peripheral Blood Mononuclear Cell	skos:exactMatch	CL:2000001	peripheral blood mononuclear cell	semapv:LexicalMatching	high

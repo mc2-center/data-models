@@ -1,0 +1,148 @@
+@prefix cckp:  <https://w3id.org/mc2-center/cckp-portal/> .
+@prefix shape: <https://w3id.org/mc2-center/cckp-portal/shapes#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+#    Shapes graph
+#################################################################
+#
+# Instance-level structural checks for data/rdf/cckp_kg.ttl, kept separate
+# from schema/cckp_portal.ttl (the OWL/LinkML-generated T-Box) the same way
+# sagebrain-model keeps ontology/shacl/sagebrain-shapes.ttl separate from
+# ontology/main/sagebrain.ttl: the T-Box stays a monotonic, open-world
+# description; these shapes enforce closed-world instance constraints that
+# rdfs:range/domain alone can't (e.g. a *specific* join property's object
+# must have a specific rdf:type, not just any type in the union of that
+# property's declared ranges across every field that reuses "Ref"/"Term"
+# naming).
+#
+# Run WITHOUT RDFS/OWL entailment (matches sagebrain-shapes.ttl's own
+# configuration note) - inference would make sh:class checks vacuous by
+# entailing the type these shapes are supposed to be verifying.
+
+<https://w3id.org/mc2-center/cckp-portal/shapes>
+    a owl:Ontology ;
+    dcterms:title "CCKP portal graph -- SHACL shapes" .
+
+#################################################################
+#    1. Per-class identifying-field shapes
+#################################################################
+
+shape:DatasetShape
+    a sh:NodeShape ;
+    sh:targetClass cckp:Dataset ;
+    rdfs:label "Dataset shape" ;
+    sh:property [
+        sh:path cckp:datasetId ;
+        sh:name "datasetId" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Every Dataset instance must have exactly one datasetId - it is the field build_triples.py's mint_id() uses to mint this instance's own IRI." ;
+    ] .
+
+shape:GrantShape
+    a sh:NodeShape ;
+    sh:targetClass cckp:Grant ;
+    rdfs:label "Grant shape" ;
+    sh:property [
+        sh:path cckp:grantId ;
+        sh:name "grantId" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Every Grant instance must have exactly one grantId." ;
+    ] .
+
+#################################################################
+#    2. External-identifier IRI shapes (doi/pubMedId templating)
+#################################################################
+#
+# scripts/build_triples.py's external_iri() only ever emits a cckp:doiIri /
+# cckp:pubMedIdIri triple when the raw value's shape matched a real DOI or
+# PubMed pattern (sentinel placeholders like "Pending Annotation" are
+# skipped, never templated into a fake IRI) - these shapes assert that
+# guarantee holds in the actual built graph, not just in the code.
+
+shape:DoiIriShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:doiIri ;
+    rdfs:label "DOI external-IRI shape" ;
+    sh:property [
+        sh:path cckp:doiIri ;
+        sh:name "doiIri" ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://doi\\.org/10\\." ;
+        sh:message "cckp:doiIri must be a real https://doi.org/10.* IRI, never a placeholder." ;
+    ] .
+
+shape:PubMedIdIriShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:pubMedIdIri ;
+    rdfs:label "PubMed external-IRI shape" ;
+    sh:property [
+        sh:path cckp:pubMedIdIri ;
+        sh:name "pubMedIdIri" ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://(pubmed\\.ncbi\\.nlm\\.nih\\.gov/|doi\\.org/10\\.)" ;
+        sh:message "cckp:pubMedIdIri must be a real PubMed or DOI IRI (a pubMedId-typed field can legitimately hold either shape - see external_iri()'s shape-based, not field-name-based, detection), never a placeholder." ;
+    ] .
+
+#################################################################
+#    3. Join-property range-typing shapes
+#################################################################
+#
+# rdfs:range on a `cckp:{field}Ref` property (from the LinkML-generated
+# T-Box) can only state the union of every class that field's cckp_join
+# annotation ever targets across Dataset/Publication/Tool/Grant/
+# EducationalResource. sh:class here states the one true target per
+# specific ref property, which the union can't - mirrors sagebrain-shapes.ttl's
+# own justification for why per-pair sh:class is strictly stronger than the
+# ontology's rdfs:range union.
+
+shape:GrantNumberRefShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:grantNumberRef ;
+    rdfs:label "grantNumberRef join-target shape" ;
+    sh:property [
+        sh:path cckp:grantNumberRef ;
+        sh:name "grantNumberRef target" ;
+        sh:class cckp:Grant ;
+        sh:message "cckp:grantNumberRef must point at a cckp:Grant instance." ;
+    ] .
+
+shape:PubMedIdRefShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:pubMedIdRef ;
+    rdfs:label "pubMedIdRef join-target shape" ;
+    sh:property [
+        sh:path cckp:pubMedIdRef ;
+        sh:name "pubMedIdRef target" ;
+        sh:class cckp:Publication ;
+        sh:message "cckp:pubMedIdRef must point at a cckp:Publication instance." ;
+    ] .
+
+shape:PublicationIdRefShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:publicationIdRef ;
+    rdfs:label "publicationIdRef join-target shape" ;
+    sh:property [
+        sh:path cckp:publicationIdRef ;
+        sh:name "publicationIdRef target" ;
+        sh:class cckp:Publication ;
+        sh:message "cckp:publicationIdRef must point at a cckp:Publication instance." ;
+    ] .
+
+shape:DatasetRefShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf cckp:datasetRef ;
+    rdfs:label "datasetRef join-target shape" ;
+    sh:property [
+        sh:path cckp:datasetRef ;
+        sh:name "datasetRef target" ;
+        sh:class cckp:Dataset ;
+        sh:message "cckp:datasetRef must point at a cckp:Dataset instance." ;
+    ] .
