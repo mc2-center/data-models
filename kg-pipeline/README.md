@@ -11,16 +11,17 @@ Modeled after [nf-osi/kg-pipeline](https://github.com/nf-osi/kg-pipeline)'s
 stage structure (extract → harmonize → map-to-RDF → validate) and its
 never-silently-drop-a-value discipline, but built on LinkML instead of a
 hand-authored OWL ontology + RML/Java, since LinkML is what this task asked
-for and this repo already has LinkML tooling (`csv-to-linkml` skill) that
+for and this repo already has LinkML tooling (originally the `csv-to-linkml`
+Claude Code skill; a copy is vendored into `scripts/vendor/` - see below) that
 knows how to read its ontology mappings. See "Design decisions" below for
 the full list of deliberate departures from the nf-osi reference.
 
 ## Architecture
 
 ```
-Stage 0 (occasional, skill-driven)      Stage 1 (hand-authored once)
+Stage 0 (occasional)                    Stage 1 (hand-authored once)
 mc2.model.csv + mapping.yaml            cckp_portal.linkml.yaml
-      │ csv-to-linkml skill                   │ imports mc2_model.linkml.yaml
+      │ scripts/vendor/csv_to_linkml.py       │ imports mc2_model.linkml.yaml
       │ + scripts/resolve_prefixes.py         │ for shared enums (assay, tumorType,
       ▼                                       │ species, tissue, license, etc.)
 schema/mc2_model.linkml.yaml                  ▼
@@ -71,6 +72,11 @@ upstream (not part of `make schema` - see "Design decisions"):
 ```bash
 make mc2-model-linkml
 ```
+
+This uses `scripts/vendor/csv_to_linkml.py`, a vendored copy of the
+`csv-to-linkml` Claude Code skill's converter (stdlib-only, no extra
+dependencies) - reproducible from a clean clone, no Claude Code skill
+installation required.
 
 ## Verified against live data
 
@@ -139,8 +145,9 @@ OWL ontology, at NF-portal scale (~400K-row Files table). This pipeline
 instead uses:
 
 - **LinkML**, not a hand-authored ontology - the user's explicit ask, and
-  this repo already has `csv-to-linkml`/`ols-term-annotator` skills built
-  around it.
+  this repo already has `csv-to-linkml`/`ols-term-annotator` Claude Code
+  skills built around it (the former is vendored into `scripts/vendor/` so
+  this pipeline doesn't depend on a skill installation - see below).
 - **Plain Python + rdflib**, not RML/Java, for triple-building - CCKP is
   ~5 tables/~6.4K rows total, rdflib is already an (unused) repo
   dependency, and this avoids a JVM toolchain for a portal this size.
@@ -166,13 +173,14 @@ kg-pipeline/
                                 root env's pins.
   data_sources.yaml          - Synapse table synIds + last-pulled row count/timestamp
   schema/
-    mc2_model.linkml.yaml    - generated via the csv-to-linkml skill + resolve_prefixes.py
+    mc2_model.linkml.yaml    - generated via `make mc2-model-linkml` + resolve_prefixes.py
     mc2_model.ttl             - generated via `make schema`
     mc2_model_prefixes_report.md
     cckp_portal.linkml.yaml  - hand-authored; imports mc2_model.linkml.yaml
     cckp_portal.ttl           - generated via `make schema`
   mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
   scripts/
+    vendor/csv_to_linkml.py   - vendored csv-to-linkml skill converter (Stage 0)
     resolve_prefixes.py       - Stage 0 fixup (see script docstring)
     extract_cckp_tables.py    - Stage 2
     harmonize.py               - Stage 3

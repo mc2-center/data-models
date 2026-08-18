@@ -1,6 +1,6 @@
 PYTHON := python3
 
-CSV_TO_LINKML := $(HOME)/.claude/skills/csv-to-linkml/scripts/csv_to_linkml.py
+CSV_TO_LINKML := scripts/vendor/csv_to_linkml.py
 ROOT_MODEL := ../mc2.model.csv
 MAPPING := ../modules/mapping.yaml
 MODULES_DIR := ../modules
@@ -15,11 +15,12 @@ all: schema extract harmonize triples validate
 
 # --- Stage 0: MC2 data model as LinkML + RDF Turtle ---
 
-# Regenerate schema/mc2_model.linkml.yaml from the upstream MC2 model. Not a
-# dependency of `schema`/`all` - it shells out to a user-level Claude Code
-# skill path, so it isn't portable to CI. Run by hand when modules/ changes,
-# then commit the result like any other generated-but-checked-in artifact
-# (mirrors templates/*.csv at the repo root).
+# Regenerate schema/mc2_model.linkml.yaml from the upstream MC2 model, using
+# the vendored copy of the csv-to-linkml converter (scripts/vendor/) - no
+# Claude Code skill installation required, fully reproducible from a clean
+# clone. Not a dependency of `schema`/`all` since it only needs to run when
+# modules/ changes; commit the result afterward like any other
+# generated-but-checked-in artifact (mirrors templates/*.csv at the repo root).
 mc2-model-linkml:
 	$(PYTHON) $(CSV_TO_LINKML) convert $(ROOT_MODEL) \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
