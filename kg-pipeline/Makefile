@@ -9,7 +9,8 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline test clean
+.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline test clean \
+	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain
 
 all: schema extract harmonize triples validate
 
@@ -105,3 +106,53 @@ test:
 
 clean:
 	rm -f data/raw/*.csv data/harmonized/*.csv data/rdf/*.ttl
+
+# --- MC2 assay-metadata KG (biospecimen/individual/model/sequencing/imaging) ---
+#
+# Deliberately NOT part of `all`/`harmonize`/`triples`/`validate` above, and
+# never writes into data/raw|harmonized|rdf/ - this data may be
+# access-restricted (per-file Synapse annotations that can require login),
+# unlike the public CCKP portal tables the rest of this Makefile builds. See
+# "Interoperating with sagebrain-model" in README.md.
+#
+# Class names match schema/mc2_model.linkml.yaml exactly (including spaces) -
+# quoted individually so `make` passes each as one argv entry to --classes.
+MC2_ASSAY_CLASSES := "Biospecimen" "Individual" "Model" "Study" "Collection" \
+	"Sequencing Level 1" "Sequencing Level 2" "Sequencing Level 3" "Sequencing RNA Level 1" \
+	"Imaging Level 1" "Imaging Level 2" "Imaging Level 3 Image" "Imaging Level 3 Segments" "Imaging Level 4" \
+	"Imaging Channel" "NanoString GeoMx DSP Level 1" "NanoString GeoMx DSP Level 2" \
+	"NanoString GeoMx DSP Level 3" "NanoString GeoMX ROI Segment Annotation" \
+	"NanoString GeoMx DSP Imaging" "NanoString GeoMx Auxiliary Files"
+
+extract-mc2-assay:
+	$(PYTHON) scripts/extract_mc2_assay_metadata.py \
+		--schema schema/mc2_model.linkml.yaml \
+		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
+		--dataset-csv data/raw/Dataset.csv \
+		--out-dir data/mc2_assay/raw
+
+harmonize-mc2-assay:
+	$(PYTHON) scripts/harmonize.py \
+		--schema schema/mc2_model.linkml.yaml \
+		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
+		--raw-dir data/mc2_assay/raw --out-dir data/mc2_assay/harmonized --sssom-dir mappings/sssom \
+		--classes $(MC2_ASSAY_CLASSES)
+
+triples-mc2-assay:
+	$(PYTHON) scripts/build_triples.py \
+		--schema schema/mc2_model.linkml.yaml \
+		--mc2-schema schema/mc2_model.linkml.yaml \
+		--harmonized-dir data/mc2_assay/harmonized --out-dir data/mc2_assay/rdf \
+		--merged-out data/mc2_assay/rdf/mc2_assay_kg.ttl \
+		--classes $(MC2_ASSAY_CLASSES)
+
+# Links the File View graph above into sagebrain-model's own classes/
+# properties (biolink:MaterialSample, sagebrain:source_tissue/has_pathology)
+# - see scripts/link_sagebrain.py's docstring for what's honestly derivable
+# from file-level annotations alone vs. what would need the DCC's upstream
+# Biospecimen/Individual/Model tables.
+link-sagebrain:
+	$(PYTHON) scripts/link_sagebrain.py \
+		--file-view-harmonized "data/mc2_assay/harmonized/File View_harmonized.csv" \
+		--modules-dir $(MODULES_DIR) \
+		--out data/mc2_assay/rdf/sagebrain_links.ttl

@@ -1,0 +1,2 @@
+datasetId,fileEntityId,FileView_id,Biospecimen Key,Study Key,DatasetView Key,File Alias,File Description,File Design,File Level,File Assay,File Species,File Url,File Format,File Data Use Codes,File Tissue,File Tumor Type
+syn_ds_1,syn_file_1,syn_file_1,BSP-01,Test Study,syn_ds_1,syn_file_1,,,Auxiliary,,Human,https://www.synapse.org/Synapse:syn_file_1,TXT,,,

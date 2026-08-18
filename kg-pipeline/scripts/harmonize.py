@@ -74,20 +74,36 @@ def load_cv_lookup(modules_dir, src, malformed_rows):
     return lookup
 
 
-def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows):
-    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued)}}."""
+DEFAULT_CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]
+
+
+def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, class_order=None):
+    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued)}}.
+
+    class_order defaults to the 5 CCKP portal classes - the MC2 assay-metadata
+    pipeline (scripts/extract_mc2_assay_metadata.py + `make harmonize-mc2-assay`)
+    passes its own class list (Biospecimen, Individual, Model, ...) so this
+    same script serves both pipelines without a second hardcoded copy."""
     sv = SchemaView(schema_path)
     attr_to_src = load_attribute_to_src(mapping_path)
     field_lookups = defaultdict(dict)
     src_cache = {}
 
-    for cls_name in ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]:
+    for cls_name in (class_order or DEFAULT_CLASS_ORDER):
         cls = sv.induced_class(cls_name)
         for field, slot in cls.attributes.items():
             ann = slot.annotations
-            if "mc2_enum" not in ann:
+            if "mc2_enum" in ann:
+                # cckp_portal.linkml.yaml's convention: a plain-string slot
+                # carrying an explicit mc2_enum annotation naming its enum.
+                enum_name = ann["mc2_enum"].value
+            elif slot.range and str(slot.range).endswith(" Enum"):
+                # mc2_model.linkml.yaml's own convention (no mc2_enum
+                # annotation anywhere in that file - confirmed, not assumed):
+                # the slot's LinkML `range` IS the enum name directly.
+                enum_name = str(slot.range)
+            else:
                 continue
-            enum_name = ann["mc2_enum"].value
             attr_name = enum_name[: -len(" Enum")] if enum_name.endswith(" Enum") else enum_name
             src = attr_to_src.get(attr_name)
             if not src:
@@ -163,11 +179,15 @@ def main():
     parser.add_argument("--raw-dir", required=True)
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--sssom-dir", required=True)
+    parser.add_argument("--classes", nargs="+", default=DEFAULT_CLASS_ORDER,
+                         help=f"Schema classes to harmonize (default: {' '.join(DEFAULT_CLASS_ORDER)}) - "
+                              "the MC2 assay-metadata pipeline passes its own class list here")
     args = parser.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
     malformed_rows = []
-    field_lookups = build_field_lookups(args.schema, args.mapping, args.modules_dir, malformed_rows)
+    field_lookups = build_field_lookups(args.schema, args.mapping, args.modules_dir, malformed_rows,
+                                         class_order=args.classes)
 
     if malformed_rows:
         malformed_path = os.path.join(args.out_dir, "malformed_cv_terms.csv")
@@ -182,7 +202,7 @@ def main():
     unmapped_rows = []
     sssom_rows = defaultdict(set)
 
-    for cls_name in ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]:
+    for cls_name in args.classes:
         raw_path = os.path.join(args.raw_dir, f"{cls_name}.csv")
         if not os.path.isfile(raw_path):
             print(f"Skipping {cls_name}: no raw extract at {raw_path} (run extract_cckp_tables.py first)")

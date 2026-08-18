@@ -116,6 +116,9 @@ def external_iri(kind, value):
 IDENTIFIER_FIELD = {
     "Dataset": "datasetId",
     "Grant": "grantId",
+    # MC2 assay-metadata pipeline (see extract_mc2_assay_metadata.py) - one
+    # File View row per member file, keyed by that file's own entity id.
+    "File View": "FileView_id",
 }
 # Each entry: (candidate fields tried directly, in priority order; fields
 # hashed together as a last-resort synthetic id if none of those are
@@ -147,8 +150,30 @@ def mint_id(cls_name, row):
     raise ValueError(f"no id-minting rule for class {cls_name}")
 
 
+def class_slug(cls_name):
+    """IRI-safe class local name - the 5 CCKP portal classes are already one
+    word (no-op here); MC2 assay classes like "File View" have a space in
+    their real LinkML name, stripped rather than percent-encoded to match
+    the schema's own squashed convention for such names (e.g. "FileView_id")."""
+    return cls_name.replace(" ", "")
+
+
+def field_slug(name):
+    """IRI-safe, lowerCamelCase predicate local name. Idempotent on already-
+    camelCase field names (datasetId, grantNumber, ...) from cckp_portal.linkml.yaml,
+    so this is safe to apply universally rather than only for MC2 assay
+    classes with spaced/underscored names ("File Level" -> "fileLevel",
+    "FileView_id" -> "fileViewId")."""
+    parts = [p for p in re.split(r"[ _]+", name.strip()) if p]
+    if not parts:
+        return name
+    first, rest = parts[0], parts[1:]
+    first = first[:1].lower() + first[1:]
+    return first + "".join(p[:1].upper() + p[1:] for p in rest)
+
+
 def mint_iri(cls_name, row_id):
-    return rdflib.URIRef(DATA_NS + cls_name + "/" + quote(str(row_id), safe=""))
+    return rdflib.URIRef(DATA_NS + class_slug(cls_name) + "/" + quote(str(row_id), safe=""))
 
 
 def load_prefixes(mc2_schema_path):
@@ -173,19 +198,33 @@ def expand_curie_or_url(value, prefixes):
     return None  # unexpandable - caller skips rather than emit a broken IRI
 
 
-def get_schema_metadata(schema_path):
-    """Return {ClassName: {field: {"multivalued": bool, "range": str, "mc2_enum": str|None, "cckp_join": str|None}}}."""
+def get_schema_metadata(schema_path, class_order=None):
+    """Return {ClassName: {field: {"multivalued": bool, "range": str, "mc2_enum": str|None, "cckp_join": str|None}}}.
+
+    class_order defaults to the 5 CCKP portal classes - see harmonize.py's
+    build_field_lookups for why this is a parameter rather than always
+    reading the module-level CLASS_ORDER: the MC2 assay-metadata pipeline
+    passes its own class list."""
     sv = SchemaView(schema_path)
     meta = {}
-    for cls_name in CLASS_ORDER:
+    for cls_name in (class_order or CLASS_ORDER):
         cls = sv.induced_class(cls_name)
         meta[cls_name] = {}
         for field, slot in cls.attributes.items():
             ann = slot.annotations
+            if "mc2_enum" in ann:
+                mc2_enum = ann["mc2_enum"].value
+            elif slot.range and str(slot.range).endswith(" Enum"):
+                # mc2_model.linkml.yaml's own convention (no mc2_enum
+                # annotation anywhere in that file) - see harmonize.py's
+                # matching fallback in build_field_lookups.
+                mc2_enum = str(slot.range)
+            else:
+                mc2_enum = None
             meta[cls_name][field] = {
                 "multivalued": bool(slot.multivalued),
                 "range": slot.range,
-                "mc2_enum": ann["mc2_enum"].value if "mc2_enum" in ann else None,
+                "mc2_enum": mc2_enum,
                 "cckp_join": ann["cckp_join"].value if "cckp_join" in ann else None,
             }
     return meta
@@ -228,7 +267,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
     g.bind("cckp", CCKP)
-    class_uri = CCKP[cls_name]
+    class_uri = CCKP[class_slug(cls_name)]
     fields_meta = schema_meta[cls_name]
 
     for row in read_harmonized(harmonized_dir, cls_name):
@@ -237,11 +276,14 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
         g.add((subject, RDF.type, class_uri))
 
         for field, meta in fields_meta.items():
+            # `field` (the harmonized CSV's actual column header, e.g. "File
+            # Level") is used for every row.get(...) lookup below; only the
+            # RDF predicate local name is ever slugified via field_slug().
             raw_value = (row.get(field) or "").strip()
             values = [v.strip() for v in raw_value.split(LIST_DELIMITER)] if meta["multivalued"] else [raw_value]
             values = [v for v in values if v]
 
-            predicate = CCKP[field]
+            predicate = CCKP[field_slug(field)]
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
@@ -253,7 +295,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
                     g.add((subject, predicate, rdflib.Literal(v)))
 
             if field in EXTERNAL_ID_FIELDS:
-                ext_predicate = CCKP[f"{field}Iri"]
+                ext_predicate = CCKP[field_slug(f"{field}Iri")]
                 for v in values:
                     iri = external_iri(EXTERNAL_ID_FIELDS[field], v)
                     if iri:
@@ -261,7 +303,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
 
             if meta["mc2_enum"]:
                 iri_cell = (row.get(f"{field}_ontology_iri") or "").strip()
-                term_predicate = CCKP[f"{field}Term"]
+                term_predicate = CCKP[field_slug(f"{field}Term")]
                 for entry in iri_cell.split(LIST_DELIMITER):
                     entry = entry.strip()
                     if not entry:
@@ -289,7 +331,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             if meta["cckp_join"]:
                 target_cls, target_field = meta["cckp_join"].split(".")
                 index = join_indices.get((target_cls, target_field), {})
-                ref_predicate = CCKP[f"{field}Ref"]
+                ref_predicate = CCKP[field_slug(f"{field}Ref")]
                 for v in values:
                     target_iri = index.get(v)
                     if target_iri:
@@ -309,10 +351,13 @@ def main():
                          help="TSV of (table, field, value) a human has confirmed has no external ontology term - "
                               "minted as a provisional local IRI instead of a bare literal. Missing file is fine "
                               "(no provisional terms get minted).")
+    parser.add_argument("--classes", nargs="+", default=CLASS_ORDER,
+                         help=f"Schema classes to build (default: {' '.join(CLASS_ORDER)}) - the MC2 "
+                              "assay-metadata pipeline passes its own class list here")
     args = parser.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
-    schema_meta = get_schema_metadata(args.schema)
+    schema_meta = get_schema_metadata(args.schema, class_order=args.classes)
     mc2_prefixes = load_prefixes(args.mc2_schema)
     join_indices = build_join_indices(schema_meta, args.harmonized_dir)
     confirmed_unmappable = load_confirmed_unmappable(args.confirmed_unmappable)
@@ -321,7 +366,7 @@ def main():
     for path in args.merge_with:
         merged.parse(path, format="turtle")
 
-    for cls_name in CLASS_ORDER:
+    for cls_name in args.classes:
         g = build_class_graph(cls_name, schema_meta, args.harmonized_dir, join_indices, mc2_prefixes,
                                confirmed_unmappable=confirmed_unmappable)
         out_path = os.path.join(args.out_dir, f"{cls_name}.ttl")

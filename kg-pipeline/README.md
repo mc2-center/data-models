@@ -224,11 +224,15 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
 
 [sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model) is a
 sibling Sage Bionetworks OWL/SHACL ontology meant to integrate biological,
-clinical, and translational data *across* Synapse portals. This pipeline has
-zero entity-type overlap with sagebrain at the CCKP-portal-metadata layer
+clinical, and translational data *across* Synapse portals. This pipeline's
+own 5 CCKP portal classes have zero entity-type overlap with sagebrain
 (sagebrain models participants/specimens/genes/diseases, not
-Dataset/Publication/Tool/Grant records), but adopts several of its
-conventions to stay interoperable and to fill real gaps of its own:
+Dataset/Publication/Tool/Grant records) - the real overlap lives one layer
+down, in MC2's assay/subject-level modules (biospecimen, individual, model,
+sequencing, imaging), which the "MC2 assay-metadata KG" section below
+extracts and links into sagebrain's own classes. Both efforts adopt several
+of sagebrain's conventions to stay interoperable and to fill real gaps of
+their own:
 
 - **Ontology crosswalks for federation, kept separate from harmonization.**
   `make crosswalk-ontology` (`scripts/crosswalk_ontology.py`) produces
@@ -275,14 +279,104 @@ conventions to stay interoperable and to fill real gaps of its own:
   - sagebrain's namespace is `w3id.org/synapse/sagebrain`; this pipeline's
     is `w3id.org/mc2-center/cckp-portal` - an open question for whoever owns
     Sage's w3id.org registrations, not something to silently rename.
-  - If/when this pipeline curates DUO-anchored terms (a much better fit for
-    something like a `Study Data Use Codes` field than for CCKP's own
-    `Publication.accessibility`, which was checked and found to have no
-    real DUO/NCIT match - see above), resolve those CURIEs against the same
-    pinned DUO version sagebrain already vendors
-    (`ontology/imports/duo.ttl` in the sagebrain-model repo) rather than a
-    live/independent OLS snapshot, so the two graphs don't drift onto
-    different DUO releases.
+  - **`Study Data Use Codes`** (`modules/shared/duo.csv`, feeding the MC2
+    assay-metadata `Study` class) turns out to already be almost entirely
+    DUO-curated by the MC2 model maintainers - 24 of 32 rows carry a real
+    `DUO:00000xx` `Ontology Identifier` (e.g. `GRU` → `DUO:0000042`, `HMB` →
+    `DUO:0000006`, `IST` → `DUO:0000028`), a much better fit than CCKP's own
+    `Publication.accessibility` (checked and found to have no real DUO/NCIT
+    match - see above). Spot-checked against sagebrain's own vendored
+    version (`ontology/imports/duo.ttl` in the sagebrain-model repo, pinned
+    via its `scripts/import.sh`) - the checked CURIEs are all present there,
+    so the two graphs already agree on the same DUO release for this
+    vocabulary; if this pipeline ever re-curates or extends this CV, keep
+    resolving against that same pinned version rather than a live/
+    independent OLS snapshot to avoid future drift.
+  - That CV's remaining 8 rows (`DUOPlus1`-`DUOPlus7`, plus the
+    `Pending Annotation` sentinel) are the MC2 model's own **local
+    extension** to DUO - governance concepts (source geography, population
+    type, deidentification type, data tier, license, attribution) DUO
+    itself doesn't cover, with no `Ontology Identifier` and, by construction,
+    none available in real DUO to give them. This is the same tier-3
+    "provisional, locally-owned concept" situation as the identifier policy
+    above, just at the level of an entire local vocabulary extension rather
+    than individual unmapped values - worth being explicit about if this
+    vocabulary is ever shared with sagebrain or another consuming graph, so
+    `DUOPlus*` codes aren't mistaken for real DUO terms.
+
+### MC2 assay-metadata KG (biospecimen/individual/model/sequencing/imaging)
+
+A second, separate pipeline stage, extracting and linking the MC2 model's
+assay/subject-level modules - the layer that actually overlaps with
+sagebrain's own classes. **Access-controlled, not public like the rest of
+this README**: per-file Synapse annotations can require login, unlike
+CCKP's public portal tables, so every artifact below lives under the
+isolated `data/mc2_assay/` tree (never `data/`), is `.gitignore`d with an
+explicit access-control comment (not just "generated"), and is built via a
+separate Makefile target group never folded into `make all`. There is no
+default publish step yet - the plan is to push the built graph to a
+private/team-restricted Synapse location once the DCC team designates one.
+
+```
+make extract-mc2-assay    # walk Dataset entities -> data/mc2_assay/raw/"File View.csv"
+make harmonize-mc2-assay   # -> data/mc2_assay/harmonized/
+make triples-mc2-assay     # -> data/mc2_assay/rdf/mc2_assay_kg.ttl
+make link-sagebrain        # -> data/mc2_assay/rdf/sagebrain_links.ttl
+```
+
+**Discovery findings, established by probing live data, not assumed:**
+- A CCKP `Dataset.datasetId` is not always a real Synapse `Dataset`/
+  `DatasetCollection` entity - some are plain Folders (confirmed live: 2 of
+  the first 15 probed). `scripts/extract_mc2_assay_metadata.py` checks
+  `entity.concreteType` before treating anything as walkable, mirroring
+  `mc2-center-dcc`'s own `identify_download_type()` pattern - a Folder is
+  skipped, never walked.
+- A confirmed Dataset entity's membership comes from its own `datasetItems`
+  property, not from listing a folder's children.
+- Per `mc2-center-dcc/utils/table_to_annotations.py` (the DCC's own
+  write-side pipeline), metadata is pushed down as **native Synapse
+  annotations on each member File entity** - this pipeline only ever reads
+  those (`syn.get_annotations`), never re-derives DCC-internal joins. The
+  live annotation key set is stable across every Dataset probed and matches
+  the MC2 model's own `File View` class (`modules/file/annotationProperty.csv`),
+  **not** a full Biospecimen/Individual/Model record - `File View` carries
+  only a `Biospecimen Key` *foreign key*, not that specimen's own detail
+  fields (Type, Preservation Method, Fixative, ...). Reaching those would
+  require the DCC's upstream Biospecimen/Individual/Model *tables*, which
+  this pipeline deliberately does not query.
+- Two slots seen in every live annotation dict (`File Tissue`, `File Tumor
+  Type`) have real CV-backed enum definitions in `schema/mc2_model.linkml.yaml`
+  and are registered in `modules/mapping.yaml`, but as of this writing
+  aren't attached to any class in the schema - a real, pre-existing model
+  gap surfaced here, not silently patched.
+- `harmonize.py`/`build_triples.py` needed two small, backward-compatible
+  extensions to serve this second pipeline without duplicating either
+  script: a `--classes` flag (both scripts' class list was previously a
+  hardcoded module constant), and recognizing `mc2_model.linkml.yaml`'s own
+  enum convention (`range: X Enum` with no `mc2_enum` annotation - that
+  annotation is specific to `cckp_portal.linkml.yaml`) alongside the
+  existing one. `class_slug()`/`field_slug()` in `build_triples.py` turn
+  spaced/underscored MC2 attribute names (`"File Level"`, `"FileView_id"`)
+  into valid, lowerCamelCase IRI-safe predicate names - a no-op on the 5
+  CCKP classes' already-camelCase field names, confirmed by the full test
+  suite passing unchanged.
+- `scripts/link_sagebrain.py` mints one `biolink:MaterialSample` stub node
+  per distinct `Biospecimen Key` (not a fabricated full `Biospecimen`
+  instance we don't have the fields for), harmonizes `File Tissue`/`File
+  Tumor Type` directly against their CVs (since they're not attached to a
+  class, `harmonize.py`'s normal pass never touches them), cross-walks the
+  resolved NCIT term through the `high`-confidence rows of the MONDO/UBERON
+  crosswalks above, and emits sagebrain's own `source_tissue`/`has_pathology`
+  properties - never a new predicate. Files sharing a `Biospecimen Key` are
+  aggregated with the same "verify consistency, report disagreement" rule
+  used elsewhere in this pipeline (`biospecimen_annotation_conflicts.csv`).
+- `Model` (PDX/organoid/cell line) has no dedicated sagebrain class -
+  asserted `rdfs:subClassOf biolink:MaterialSample` as the closest fit,
+  the same reuse-by-IRI pattern sagebrain itself uses for `Biospecimen`.
+- Sequencing/Imaging/GeoMx/Visium assay classes describe *how* data was
+  generated (technical/experimental parameters), a different, complementary
+  ontology dimension from sagebrain's biological-entity focus - anchor
+  those via OBI assay classes instead, not a sagebrain property.
 
 ## Design decisions (departures from nf-osi/kg-pipeline)
 
@@ -344,8 +438,17 @@ kg-pipeline/
     crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
     validate_graph.py          - Stage 5 (+ SHACL validation)
+    extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
+                                discovery + File View extraction (live Synapse
+                                credentials required - not used by `make all`)
+    link_sagebrain.py            - MC2 assay-metadata KG: sagebrain property links
   data/                        - gitignored: raw/, harmonized/, rdf/
+  data/mc2_assay/              - gitignored (access-controlled - see
+                                "MC2 assay-metadata KG"): raw/, harmonized/, rdf/
   test/
     fixtures/*.csv, shacl_*.ttl - small hand-made sample rows/graphs
-    conftest.py, test_*.py     - pytest suite (no live Synapse access needed)
+    conftest.py, test_*.py     - pytest suite (no live Synapse access needed,
+                                except test_mc2_assay_file_view.py's fixture-only
+                                tests, which also need none - live calls are
+                                exercised only by running the scripts directly)
 ```
