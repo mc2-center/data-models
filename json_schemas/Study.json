@@ -1071,17 +1071,17 @@
       "title": "Study Data Use Codes",
       "type": "array"
     },
-    "StudyDe-identificationMethodDescription": {
+    "StudyDeidentificationMethodDescription": {
       "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
       "title": "Study De-identification Method Description",
       "type": "string"
     },
-    "StudyDe-identificationMethodSoftware": {
+    "StudyDeidentificationMethodSoftware": {
       "description": "Software that was used to de-identify the data (if used)",
       "title": "Study De-identification Method Software",
       "type": "string"
     },
-    "StudyDe-identificationMethodType": {
+    "StudyDeidentificationMethodType": {
       "description": "General description of the de-identification method. Maps to DUOplus3.",
       "enum": [
         "Automatic",
@@ -1160,7 +1160,7 @@
     }
   },
   "required": [
-    "StudyDe-identificationMethodType",
+    "StudyDeidentificationMethodType",
     "StudyDescription",
     "StudyId",
     "StudyInvestigator",
