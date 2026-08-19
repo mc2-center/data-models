@@ -223,7 +223,7 @@ def generate_linked_table(model: str):
     # Fix any remaining rendering issues, then output table as CSV.
     table["Column Type"] = _format_technical_column(table["Column Type"])
     table["Format"] = _format_technical_column(table["Format"])
-    table["Pattern"] = _format_technical_column(table["Pattern"], escape_backslashes=True)
+    table["Regex Pattern"] = _format_technical_column(table["Regex Pattern"], escape_backslashes=True)
     table[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
