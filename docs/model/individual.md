@@ -1,4 +1,4 @@
-An **Individual** entry documents a human participant (or the source patient behind a derived model) from whom biospecimens were collected for MC<sup>2</sup> Center-supported research. Individual metadata captures demographic information (sex, gender), diagnosis and staging at the individual level, and longitudinal clinical outcomes such as treatment history, recurrence, and vital status.
+An **Individual** entry documents a human participant (or the source patient behind a derived model) from whom biospecimens were collected for MC<sup>2</sup> Center-supported research. Individual metadata captures demographic information, diagnosis and staging at the individual level, and longitudinal clinical outcomes such as treatment history, recurrence, and vital status.
 
 This model outlines the key attributes needed to describe an individual independent of any single specimen or assay, so that clinical context collected once can be linked across every biospecimen, model, and dataset derived from that individual.
 
@@ -6,6 +6,12 @@ This model outlines the key attributes needed to describe an individual independ
 ## Why You Should Contribute Individual Entries
 
 Contributing individual entries ensures that clinical and demographic context is recorded once and consistently reused across every biospecimen and downstream dataset tied to that person, rather than being duplicated or left out of assay-level metadata. This supports accurate cohort analysis, reduces re-collection of the same clinical details, and helps ensure patient privacy is respected through consistent de-identified identifiers.
+
+### Sharing human-derived data responsibly
+
+If you are planning to share human-derived data, **verify that you have satisfied any institutional review policies**.
+
+Before uploading data to Synapse, be sure that the information is de-identified and anonymized. If this is not possible, you have any concerns, or are unsure if a file or type of metadata is suitable to share, ask the MC<sup>2</sup> Center!
 
 
 ### Who Should Be Contributing Individual Entries?
