@@ -52,3 +52,30 @@ scripts/__pycache__
 
 # Release workflow outputs
 release_output.txt
+
+# KG pipeline generated data (raw/harmonized extracts + RDF instance graphs;
+# schema/*.ttl and mappings/sssom/*.tsv ARE committed, these row-level
+# extracts are not)
+kg-pipeline/data/raw/*
+kg-pipeline/data/harmonized/*
+kg-pipeline/data/rdf/*
+!kg-pipeline/data/raw/.gitkeep
+!kg-pipeline/data/harmonized/.gitkeep
+!kg-pipeline/data/rdf/.gitkeep
+
+# MC2 assay-metadata KG (biospecimen/individual/model/sequencing/imaging):
+# same "generated, not committed" rule as above, PLUS this data may be
+# access-restricted (sourced from per-file Synapse annotations that can
+# require login), unlike the public CCKP portal tables above - never lift
+# this rule even if the public data/ rule above ever changes.
+kg-pipeline/data/mc2_assay/raw/*
+kg-pipeline/data/mc2_assay/harmonized/*
+kg-pipeline/data/mc2_assay/rdf/*
+!kg-pipeline/data/mc2_assay/raw/.gitkeep
+!kg-pipeline/data/mc2_assay/harmonized/.gitkeep
+!kg-pipeline/data/mc2_assay/rdf/.gitkeep
+
+kg-pipeline/__pycache__/
+kg-pipeline/**/__pycache__/
+kg-pipeline/.venv/
+.pytest_cache/

@@ -36,7 +36,15 @@ This project contains the released versions of the JSON-LD schemas for the
 [Cancer Complexity Knowledge Portal] (CCKP), and more broadly, MC2 Center.
 You can learn more about the schemas/data models and other aspects of this
 project in our portal documentation - coming soon! The MC2 Center data model
-is in both CSV and JSON-LD format.
+is in both CSV and JSON-LD format, and individual entity schemas are also
+exported as standalone JSON Schemas in `./json_schemas`.
+
+Beyond the original entity types (Dataset, Study, Publication, Grant,
+Educational Resource, File, Tool, Person), the model also covers Biospecimen,
+Individual, and Model (non-human organism/cell line) entities, as well as
+assay-level metadata for imaging (multiplexed/single-channel imaging),
+NanoString GeoMx Digital Spatial Profiler (DSP) spatial transcriptomics,
+bulk/single-cell sequencing, and 10x Genomics Visium spatial transcriptomics.
 
 ## Folder Structure
 

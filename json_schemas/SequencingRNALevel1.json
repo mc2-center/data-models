@@ -420,7 +420,7 @@
       "type": "string"
     },
     "FileDesign": {
-      "description": "The overall design of the dataset or file.",
+      "description": "The overall design of the dataset or file, including a batch identifier, if applicable.",
       "title": "File Design",
       "type": "string"
     },

@@ -26,6 +26,12 @@ The platform supports the documentation and upload of a variety of resource type
 | **Files**                 | Individual research files to organize and reference within projects.                                    |
 | **Tools**                 | Software applications used for data analysis, visualization, and workflow automation.                   |
 | **Persons**               | Profiles of key individuals involved in research projects, including investigators and contributors.     |
+| **Biospecimens**          | Tissue, tumor, fluid, and other physical samples, including acquisition, preservation, and pathology details. |
+| **Individuals & Models**  | Human participants and the non-human organisms, cell lines, or organoids used as experimental models.  |
+| **Imaging**               | Multiplexed and single-channel imaging data, from raw images through channel, segmentation, and summary statistic levels. |
+| **NanoString GeoMx**      | Digital Spatial Profiler (DSP) spatial transcriptomics data, including ROI/segment annotations and processed expression levels. |
+| **Sequencing**            | Bulk and single-cell sequencing data, including RNA-specific library metadata and processed matrices.  |
+| **10x Visium**            | 10x Genomics Visium spatial transcriptomics data, from slide/capture-area metadata through processed levels. |
 
 By documenting your resources here, you make your work more discoverable, reproducible, and impactful.
 
@@ -81,4 +87,4 @@ You can also read our [contribution guidelines] if you'd like to submit updates 
 
 <!-- LINKS -->
 [contribution guidelines]: https://mc2-center.github.io/data-models/contributing/
-[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=aditigopalan&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
+[let us know]: https://github.com/mc2-center/data-models/issues/new?assignees=data-ingress-team&labels=bug&projects=&template=bug-report.md&title=%5Bbug%5D+
