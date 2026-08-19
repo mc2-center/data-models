@@ -185,7 +185,7 @@ def generate_linked_table(model: str):
         left_on="Attribute",
         right_index=True,
         how="left",
-    ).fillna("").rename(columns={"columnType": "Column Type"})
+    ).fillna("").rename(columns={"columnType": "Column Type", "Pattern": "Regex Pattern"})
 
     # Normalize Required to explicit True/False (rather than blank/NaN).
     table["Required"] = table["Required"].apply(
