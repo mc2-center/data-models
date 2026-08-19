@@ -7,7 +7,59 @@
         "properties": {
           "StudyDataUseCodes": {
             "enum": [
-              "COL"
+              "DUO:0000007"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "DiseaseSpecificResearch": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DiseaseSpecificResearch"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000012"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "ResearchSpecificRestrictions": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "ResearchSpecificRestrictions"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000020"
             ]
           }
         },
@@ -33,7 +85,7 @@
         "properties": {
           "StudyDataUseCodes": {
             "enum": [
-              "DSR"
+              "DUO:0000022"
             ]
           }
         },
@@ -43,14 +95,118 @@
       },
       "then": {
         "properties": {
-          "DiseaseSpecificResearch": {
+          "GeographicalRestriction": {
             "not": {
               "type": "null"
             }
           }
         },
         "required": [
-          "DiseaseSpecificResearch"
+          "GeographicalRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000024"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "PublicationMoratorium": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "PublicationMoratorium"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000025"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "TimeLimitOnUse": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "TimeLimitOnUse"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000026"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "UserSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "UserSpecificRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "StudyDataUseCodes": {
+            "enum": [
+              "DUO:0000028"
+            ]
+          }
+        },
+        "required": [
+          "StudyDataUseCodes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "InstitutionSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "InstitutionSpecificRestriction"
         ]
       }
     },
@@ -233,162 +389,6 @@
         },
         "required": [
           "Attribution"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "GSR"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "GeographicalRestriction": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "GeographicalRestriction"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "IST"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "InstitutionSpecificRestriction": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "InstitutionSpecificRestriction"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "MOR"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "PublicationMoratorium": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "PublicationMoratorium"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "RST"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "ResearchSpecificRestrictions": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "ResearchSpecificRestrictions"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "TSM"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "TimeLimitOnUse": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "TimeLimitOnUse"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "USE"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "UserSpecificRestriction": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "UserSpecificRestriction"
         ]
       }
     }
@@ -714,6 +714,7 @@
     },
     "GrantViewKey": {
       "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "CA\\d{6}",
       "title": "GrantView Key",
       "type": "string"
     },
@@ -1033,10 +1034,30 @@
       "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
       "items": {
         "enum": [
-          "CC",
-          "COL",
-          "DSR",
-          "DUM",
+          "DUO:0000004",
+          "DUO:0000006",
+          "DUO:0000007",
+          "DUO:0000011",
+          "DUO:0000012",
+          "DUO:0000015",
+          "DUO:0000016",
+          "DUO:0000017",
+          "DUO:0000018",
+          "DUO:0000019",
+          "DUO:0000020",
+          "DUO:0000021",
+          "DUO:0000022",
+          "DUO:0000024",
+          "DUO:0000025",
+          "DUO:0000026",
+          "DUO:0000027",
+          "DUO:0000028",
+          "DUO:0000029",
+          "DUO:0000042",
+          "DUO:0000043",
+          "DUO:0000044",
+          "DUO:0000045",
+          "DUO:0000046",
           "DUOPlus1",
           "DUOPlus2",
           "DUOPlus3",
@@ -1044,27 +1065,7 @@
           "DUOPlus5",
           "DUOPlus6",
           "DUOPlus7",
-          "GRU",
-          "GSO",
-          "GSR",
-          "HMB",
-          "IRB",
-          "IST",
-          "MOR",
-          "NCU",
-          "NMDS",
-          "NPOA",
-          "NPU",
-          "NPUNCU",
-          "NRES",
-          "POA",
-          "PS",
-          "PUB",
-          "PendingAnnotation",
-          "RST",
-          "RTN",
-          "TSM",
-          "USE"
+          "PendingAnnotation"
         ],
         "type": "string"
       },
@@ -1073,12 +1074,12 @@
     },
     "StudyDeidentificationMethodDescription": {
       "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
-      "title": "Study De-identification Method Description",
+      "title": "Study Deidentification Method Description",
       "type": "string"
     },
     "StudyDeidentificationMethodSoftware": {
       "description": "Software that was used to de-identify the data (if used)",
-      "title": "Study De-identification Method Software",
+      "title": "Study Deidentification Method Software",
       "type": "string"
     },
     "StudyDeidentificationMethodType": {
@@ -1089,7 +1090,7 @@
         "NotApplicable",
         "Semiautomatic"
       ],
-      "title": "Study De-identification Method Type"
+      "title": "Study Deidentification Method Type"
     },
     "StudyDescription": {
       "description": "Description of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. Maps to DUOplus2.",
