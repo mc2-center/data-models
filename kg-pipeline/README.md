@@ -70,6 +70,7 @@ make crosswalk-ontology   # propose NCIT/BTO -> MONDO/UBERON crosswalks for sage
 make triples              # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
 make validate             # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
+make publish-portal-kg    # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
 make all                  # schema + extract + harmonize + triples + validate
 make test                 # pytest test/ (fixture-based, no live Synapse access needed)
 ```
@@ -313,15 +314,27 @@ this README**: per-file Synapse annotations can require login, unlike
 CCKP's public portal tables, so every artifact below lives under the
 isolated `data/mc2_assay/` tree (never `data/`), is `.gitignore`d with an
 explicit access-control comment (not just "generated"), and is built via a
-separate Makefile target group never folded into `make all`. There is no
-default publish step yet - the plan is to push the built graph to a
-private/team-restricted Synapse location once the DCC team designates one.
+separate Makefile target group never folded into `make all`. `make
+publish-mc2-assay` uploads the built `raw/harmonized/rdf` tree to a
+private/team-restricted Synapse staging location (`scripts/publish_kg.py
+--profile mc2-assay`, default target `syn76957723` - "data-ttl-builds"
+under the "CCKP Knowledge Graph - Staging" project) as new file versions on
+every run; before uploading anything it resolves the target's *effective*
+ACL (its own, or its nearest ACL-owning ancestor's, per Synapse's
+"benefactor" model - not a one-time assumption) and refuses to upload if
+PUBLIC/AUTHENTICATED_USERS has any read/download grant there. `scripts/
+publish_kg.py` is shared with the public portal pipeline's own `make
+publish-portal-kg` (`--profile portal`, target `syn76958235` -
+"portal-ttl-builds") - that profile skips the ACL check entirely, since
+`data/raw|harmonized|rdf/` is meant to be public by design, not "checked
+and found safe."
 
 ```
 make extract-mc2-assay    # walk Dataset entities -> data/mc2_assay/raw/"File View.csv"
 make harmonize-mc2-assay   # -> data/mc2_assay/harmonized/
 make triples-mc2-assay     # -> data/mc2_assay/rdf/mc2_assay_kg.ttl
 make link-sagebrain        # -> data/mc2_assay/rdf/sagebrain_links.ttl
+make publish-mc2-assay     # upload raw/harmonized/rdf -> the restricted Synapse staging location
 ```
 
 **Discovery findings, established by probing live data, not assumed:**
@@ -442,6 +455,7 @@ kg-pipeline/
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
     link_sagebrain.py            - MC2 assay-metadata KG: sagebrain property links
+    publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
   data/                        - gitignored: raw/, harmonized/, rdf/
   data/mc2_assay/              - gitignored (access-controlled - see
                                 "MC2 assay-metadata KG"): raw/, harmonized/, rdf/

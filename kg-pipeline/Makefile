@@ -9,8 +9,8 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline test clean \
-	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain
+.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline publish-portal-kg test clean \
+	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay
 
 all: schema extract harmonize triples validate
 
@@ -101,6 +101,13 @@ update-coverage-baseline:
 	$(PYTHON) scripts/validate_graph.py --coverage data/harmonized/unmapped_terms.csv data/rdf/*.ttl \
 		--update-baseline mappings/coverage_baseline.json
 
+# Uploads data/{raw,harmonized,rdf}/ (the public CCKP portal KG) to its
+# Synapse staging location (default target: syn76958235, "portal-ttl-builds")
+# as new file versions - public data, so no ACL check is performed. See
+# scripts/publish_kg.py's docstring.
+publish-portal-kg:
+	$(PYTHON) scripts/publish_kg.py --profile portal
+
 test:
 	pytest test/
 
@@ -156,3 +163,11 @@ link-sagebrain:
 		--file-view-harmonized "data/mc2_assay/harmonized/File View_harmonized.csv" \
 		--modules-dir $(MODULES_DIR) \
 		--out data/mc2_assay/rdf/sagebrain_links.ttl
+
+# Uploads data/mc2_assay/{raw,harmonized,rdf}/ to the private/team-restricted
+# Synapse staging location (default target: syn76957723, "data-ttl-builds"
+# under the "CCKP Knowledge Graph - Staging" project) as new file versions -
+# refuses to upload if that target's effective ACL isn't actually
+# restricted. See scripts/publish_kg.py's docstring.
+publish-mc2-assay:
+	$(PYTHON) scripts/publish_kg.py --profile mc2-assay
