@@ -72,7 +72,7 @@ COLS_TO_RENDER = [
     "Required",
     "Column Type",
     "Format",
-    "Pattern",
+    "Regex Pattern",
     "Standard Terms",
     "Examples",
 ]
