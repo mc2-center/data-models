@@ -323,7 +323,7 @@ shared:
     src: shared/dataTier.csv
 
 study:
-  - name: Study De-identification Method Type
+  - name: Study Deidentification Method Type
     src: shared/deIdMethod.csv
   - name: Study License
     src: shared/studyLicense.csv
