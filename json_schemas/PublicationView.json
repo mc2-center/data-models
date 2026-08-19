@@ -5,6 +5,7 @@
   "properties": {
     "GrantViewKey": {
       "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "CA\\d{6}",
       "title": "GrantView Key",
       "type": "string"
     },
