@@ -307,6 +307,8 @@ sequencingRNALevel1:
     src: sequencingRNALevel1/rtPrimer.csv
 
 shared:
+  - name: Data Use Codes
+    src: shared/duo.csv
   - name: dataUseModifiers
     src: shared/duo.csv
   - name: geographicalRestriction
