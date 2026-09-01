@@ -52,10 +52,26 @@ imports:
   - linkml:types
   - mc2_model.linkml
 
+# grantNumber is declared once here and reused (via `slots:`/`slot_usage:`)
+# by Dataset/Publication/Tool/Grant/EducationalResource below, instead of
+# each class defining its own `attributes: grantNumber` - the previous
+# per-class `attributes:` duplication is what `linkml generate owl` flagged
+# as "Ambiguous attribute: grantNumber" (see README.md's known-limitations
+# section). Cardinality/mc2_enum/cckp_join still differ per class (Grant's
+# own grantNumber is the scalar join key the other four list-valued columns
+# point at) - those stay in each class's own `slot_usage:` override, not
+# flattened into this shared definition.
+slots:
+  grantNumber:
+    title: Grant Number
+    description: Grant number(s) associated with this record.
+
 classes:
   Dataset:
     description: A CCKP Dataset record (DatasetView, syn21897968).
     tree_root: true
+    slots:
+      - grantNumber
     attributes:
       datasetId:
         identifier: true
@@ -100,12 +116,6 @@ classes:
       consortium:
         multivalued: true
         description: Consortium/consortia the dataset was produced under.
-      grantNumber:
-        multivalued: true
-        annotations:
-          mc2_enum: "Dataset Grant Number Enum"
-          cckp_join: "Grant.grantNumber"
-        description: Grant number(s) that funded the dataset.
       grantName:
         multivalued: true
         description: Display name(s) of the funding grant(s) (denormalized from Grant).
@@ -136,10 +146,19 @@ classes:
         description: Type of download offered (e.g. direct file, request-access).
       downloadSynId:
         description: Synapse ID of the downloadable entity.
+    slot_usage:
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Dataset Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the dataset.
 
   Publication:
     description: A CCKP Publication record (PublicationView, syn21868591).
     tree_root: true
+    slots:
+      - grantNumber
     attributes:
       pubMedId:
         range: integer
@@ -194,12 +213,6 @@ classes:
       consortium:
         multivalued: true
         description: Consortium/consortia the publication was produced under.
-      grantNumber:
-        multivalued: true
-        annotations:
-          mc2_enum: "Publication Grant Number Enum"
-          cckp_join: "Grant.grantNumber"
-        description: Grant number(s) that funded the underlying work.
       grantName:
         multivalued: true
         description: Display name(s) of the funding grant(s) (denormalized from Grant).
@@ -214,10 +227,19 @@ classes:
       dataType:
         multivalued: true
         description: Broad data-type category label(s).
+    slot_usage:
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Publication Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the underlying work.
 
   Tool:
     description: A CCKP Tool record (ToolView, syn26127427).
     tree_root: true
+    slots:
+      - grantNumber
     attributes:
       toolName:
         required: true
@@ -356,12 +378,6 @@ classes:
       dataType:
         multivalued: true
         description: Broad data-type category label(s).
-      grantNumber:
-        multivalued: true
-        annotations:
-          mc2_enum: "Tool Grant Number Enum"
-          cckp_join: "Grant.grantNumber"
-        description: Grant number(s) that funded the tool's development.
       consortium:
         multivalued: true
         description: Consortium/consortia the tool was produced under.
@@ -378,10 +394,19 @@ classes:
         annotations:
           cckp_join: "Dataset.datasetAlias"
         description: Dataset alias(es) the tool operates on or was demonstrated with.
+    slot_usage:
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Tool Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the tool's development.
 
   Grant:
     description: A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes.
     tree_root: true
+    slots:
+      - grantNumber
     attributes:
       grantId:
         identifier: true
@@ -391,8 +416,6 @@ classes:
       grantName:
         required: true
         description: Display name of the grant.
-      grantNumber:
-        description: Grant number (scalar here) - the natural join key used by Dataset/Publication/Tool/EducationalResource's (list-valued) grantNumber columns.
       abstract:
         description: Grant abstract.
       grantType:
@@ -434,10 +457,15 @@ classes:
         description: Synapse Team ID associated with the grant.
       grantSynapseProject:
         description: Synapse Project ID associated with the grant.
+    slot_usage:
+      grantNumber:
+        description: Grant number (scalar here) - the natural join key used by Dataset/Publication/Tool/EducationalResource's (list-valued) grantNumber columns.
 
   EducationalResource:
     description: A CCKP Educational Resource record (EducationalResource, syn51497305).
     tree_root: true
+    slots:
+      - grantNumber
     attributes:
       internalIdentifier:
         description: >-
@@ -497,12 +525,6 @@ classes:
       contributors:
         multivalued: true
         description: Contributor name(s) (no controlled vocabulary - personal names).
-      grantNumber:
-        multivalued: true
-        annotations:
-          mc2_enum: "Resource Grant Number Enum"
-          cckp_join: "Grant.grantNumber"
-        description: Grant number(s) that funded the resource.
       secondaryTopic:
         multivalued: true
         description: Secondary topic label(s) (no controlled vocabulary in the current MC2 model).
@@ -539,3 +561,10 @@ classes:
       dataType:
         multivalued: true
         description: Broad data-type category label(s).
+    slot_usage:
+      grantNumber:
+        multivalued: true
+        annotations:
+          mc2_enum: "Resource Grant Number Enum"
+          cckp_join: "Grant.grantNumber"
+        description: Grant number(s) that funded the resource.
