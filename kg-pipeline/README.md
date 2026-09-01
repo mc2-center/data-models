@@ -67,7 +67,10 @@ make extract              # pull the 5 CCKP tables from Synapse -> data/raw/
 make harmonize            # resolve controlled-vocabulary values -> data/harmonized/
 make suggest-mappings     # propose candidate mappings for unmapped_terms.csv -> mapping_suggestions.csv
 make crosswalk-ontology   # propose NCIT/BTO -> MONDO/UBERON crosswalks for sagebrain-model federation
+make sagecdm-schema       # regenerate schema/sagecdm.ttl from schema/vendor/sagecdm/*.yaml
+make crosswalk-scdm       # institution/consortium -> SCDM Organization/Program crosswalks
 make triples              # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
+make link-scdm            # link the CCKP graph to SCDM Organization/Program/Person -> data/rdf/scdm_links.ttl
 make validate             # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg    # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -394,6 +397,96 @@ make publish-mc2-assay     # upload raw/harmonized/rdf -> the restricted Synapse
   ontology dimension from sagebrain's biological-entity focus - anchor
   those via OBI assay classes instead, not a sagebrain property.
 
+## Interoperating with SageCommonDataModel
+
+[SageCommonDataModel](https://github.com/Sage-Bionetworks/SageCommonDataModel)
+(SCDM) is a sibling Sage Bionetworks LinkML schema for cross-program/cross-
+portal entities - ORGANIZATION, PERSON, PROGRAM, PROJECT, STUDY (Phase 1;
+PORTAL and a PERSON role-assignment relationship are tracked as follow-on
+work, not yet built). Unlike sagebrain-model, SCDM has zero biological-
+entity overlap with this pipeline - the real overlap is administrative:
+this pipeline's own `Grant.grantInstitution`/`institutionAlias` and
+`Dataset`/`Publication`/`Tool`/`Grant.consortium` fields describe exactly
+the kind of organization/program identities SCDM exists to model, just as
+flat CV literals rather than real cross-portal entities. Same governance
+shape as the sagebrain interop above - crosswalks, generated-but-committed,
+a dedicated linking script and Makefile target - applied to a different
+kind of entity:
+
+```
+make sagecdm-schema   # schema/vendor/sagecdm/*.yaml (pinned) -> schema/sagecdm.ttl
+make crosswalk-scdm   # institution_name.csv/consortium_name.csv -> mappings/crosswalks/*_to_scdm_*.tsv
+make link-scdm        # data/harmonized/*.csv + those crosswalks -> data/rdf/scdm_links.ttl
+```
+
+- **A pinned, vendored copy of SCDM's LinkML source**
+  (`schema/vendor/sagecdm/` - see its own `VENDORED.md` for the pinned
+  commit and re-vendoring instructions) generates `schema/sagecdm.ttl` via
+  `make sagecdm-schema`, the same "vendored, no external clone required"
+  precedent `scripts/vendor/csv_to_linkml.py` already set.
+- **`make crosswalk-scdm`** (`scripts/crosswalk_scdm.py`) produces two
+  crosswalks, at two different trust levels:
+  - `mappings/crosswalks/institution_to_scdm_organization.tsv` -
+    deterministic: every `modules/institution/institution_name.csv` row
+    with a well-formed ROR id gets a minted `org.<slug>` id (a ROR id
+    already *is* the organization's identity, so there's no judgment call
+    to review, unlike the MONDO/UBERON crosswalks above).
+  - `mappings/crosswalks/consortium_to_scdm_program.tsv` - every
+    `modules/consortium/consortium_name.csv` value gets a minted
+    `program.<slug>` id, but ships `reviewed: false` with `description`/
+    `status`/`funding_source` blank - SCDM's `Program` class requires
+    `description`/`status`, neither recoverable from the CV alone, and
+    `funding_source` isn't reliably attributable per-consortium from
+    `modules/consortium/consortium_funding_agency.csv` (a single unlinked
+    "NIH" row). A human fills these in and flips `reviewed` to `true`
+    per row before `scripts/link_scdm.py` will mint it.
+- **`make link-scdm`** (`scripts/link_scdm.py`) mints `sagecdm:Organization`
+  (always, from the crosswalk above) and `sagecdm:Program` (**reviewed**
+  rows only) instances, links `Grant.grantInstitution`/`institutionAlias`
+  values to the matching Organization (`cckp:institutionRef`) and
+  `Dataset`/`Publication`/`Tool`/`Grant.consortium` values to a reviewed
+  Program (`cckp:consortiumRef`), and mints one provisional
+  `sagecdm:Person` stub per distinct display-name string seen in
+  `Grant.investigator`/`EducationalResource.contributors` (flagged
+  `cckp:provisional true`, explicitly not claiming a resolved identity -
+  SCDM's own Person design principle is "capture, don't resolve," and this
+  pipeline has no actual Person data in scope to resolve against - see the
+  v1 scope note above). `cckp:institutionRef`/`consortiumRef`/
+  `investigatorRef`/`contributorRef` are this pipeline's own predicates
+  (the `cckp:` namespace), the same way `cckp:doiIri`/`pubMedIdIri` are -
+  neither SCDM nor this pipeline's own schema defines an inverse property
+  for "this CCKP row relates to that SCDM entity." Output stays a separate
+  file, `data/rdf/scdm_links.ttl`, not folded into `cckp_kg.ttl` - same
+  reason `sagebrain_links.ttl` stays separate from `mc2_assay_kg.ttl`
+  above. Own Makefile target, not part of `make all`, until the program
+  crosswalk's first human review pass is done (today every row ships
+  `reviewed: false`, so a real run mints 0 Program nodes/edges by design -
+  Organization nodes/edges mint every run, no review gate needed there).
+- **A fourth identifier tier.** The 3-tier identifier policy documented
+  above (registry CURIE / locally-minted portal IRI / provisional
+  placeholder) gains SCDM's `org.`/`program.`/`person.` ids as a distinct
+  kind of registry identifier - not an external ontology term, but a
+  cross-Sage-portal entity id, minted under this pipeline's own
+  `data/{Class}/{id}` IRI scheme (tier 2) rather than SCDM's own namespace,
+  since this pipeline doesn't own `sage-bionetworks.github.io` and isn't
+  claiming to be an authoritative SCDM data source.
+- **Governance notes** (documentation only, nothing to build): SCDM's
+  own `organization.yaml`/`project.yaml` comments explicitly defer
+  grant-level detail (grant number, mechanism, PI, dates) to "a future
+  GRANT entity" not yet designed - this pipeline's own `Grant` schema
+  (`grantType`, `theme`, `institutionAlias`, `consortium`, `investigator`,
+  dates, `nihReporterLink`, Synapse team/project) is real-world input SCDM
+  could draw on, worth raising via SCDM's own process (its contribution
+  guidelines are themselves a placeholder as of this writing) rather than
+  building there from this repo. A known, surfaced data-quality caveat from
+  `scripts/link_scdm.py`'s own docstring: `Grant.investigator` is a
+  genuinely scalar column whose raw value sometimes crams several PI names
+  into one comma-separated string, and `EducationalResource.contributors`
+  sometimes lists a degree suffix ("MS"/"PhD") as its own list entry
+  separate from the name it modifies - neither is silently cleaned up,
+  since guessing at a split would risk the opposite failure (a real name
+  that itself contains a comma).
+
 ## Design decisions (departures from nf-osi/kg-pipeline)
 
 nf-osi/kg-pipeline uses Dagster + RML/RMLMapper (Java) + a hand-authored
@@ -436,10 +529,20 @@ kg-pipeline/
     cckp_portal.ttl           - generated via `make schema`
     cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
                                 "Interoperating with sagebrain-model")
+    vendor/sagecdm/*.yaml    - vendored, pinned SageCommonDataModel LinkML
+                                source + VENDORED.md (see "Interoperating
+                                with SageCommonDataModel")
+    sagecdm.ttl               - generated via `make sagecdm-schema`
   mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
   mappings/crosswalks/*.sssom.tsv - supplementary MONDO/UBERON federation
                                 crosswalks (generated, committed, human-review
                                 only - never consumed by harmonize.py)
+  mappings/crosswalks/institution_to_scdm_organization.tsv - deterministic,
+                                no review needed (see "Interoperating with
+                                SageCommonDataModel")
+  mappings/crosswalks/consortium_to_scdm_program.tsv - generated, committed,
+                                human-review required before use (ships
+                                reviewed: false)
   mappings/confirmed_unmappable.tsv - human-curated (table, field, value, reason)
                                 registry backing build_triples.py's tier-3
                                 provisional placeholder IRIs
@@ -458,8 +561,11 @@ kg-pipeline/
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
     link_sagebrain.py            - MC2 assay-metadata KG: sagebrain property links
+    crosswalk_scdm.py            - institution/consortium -> SCDM crosswalks (make crosswalk-scdm)
+    link_scdm.py                  - SCDM Organization/Program/Person links (make link-scdm)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
-  data/                        - gitignored: raw/, harmonized/, rdf/
+  data/                        - gitignored: raw/, harmonized/, rdf/ (rdf/ includes
+                                scdm_links.ttl once `make link-scdm` has been run)
   data/mc2_assay/              - gitignored (access-controlled - see
                                 "MC2 assay-metadata KG"): raw/, harmonized/, rdf/
   test/
