@@ -53,6 +53,8 @@
 consortium:
   - name: Consortium Funding Agency
     src: consortium/consortium_funding_agency.csv
+  - name: Consortium_id
+    src: consortium/consortium_id.csv
 
 dataset:
   - name: Dataset File Formats
@@ -225,6 +227,8 @@ individual:
 institution:
   - name: Institution Location State
     src: institution/institution_location_state.csv
+  - name: Institution_id
+    src: institution/institution_id.csv
 
 model:
   - name: Model Sex
