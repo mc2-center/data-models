@@ -500,8 +500,11 @@ classes:
     - Grant Theme Name
     - Grant Institution Name
     - Grant Institution Alias
+    - Institution Key
     - Grant Investigator
+    - PersonView Key
     - Grant Consortium Name
+    - Consortium Key
     - Grant Start Date
     - Grant End Date
     - NIH RePORTER Link
@@ -797,6 +800,7 @@ classes:
     description: Institutions participating in consortia activities
     tree_root: true
     slots:
+    - Institution_id
     - Institution Name
     - Institution Full Name
     - Institution Alias
@@ -837,6 +841,7 @@ classes:
     - PersonView_id
     - GrantView Key
     - Person Consortium Name
+    - Consortium Key
     - Name
     - Alternative Names
     - Email
@@ -844,6 +849,7 @@ classes:
     - Orcid Id
     - Synapse Profile Id
     - Last Known Institution
+    - Institution Key
     - Working Group Participation
     - Chair Roles
     - Consent For Portal Display
@@ -862,6 +868,9 @@ classes:
     - Project Type
     - Project Description
     - Project Investigator
+    - PersonView Key
+    - Project Consortium Name
+    - Consortium Key
   Publication View:
     description: The denormalized manifest for publication submission.
     tree_root: true
@@ -1571,6 +1580,7 @@ slots:
   Consortium_id:
     description: Unique ID associated with a consortium, used as a key for record linking and updates.
     required: true
+    range: Consortium_id Enum
     identifier: true
   community:
     description: The Sage Bionetworks project or initiative with which the dataset is associated.
@@ -2568,6 +2578,13 @@ slots:
   Rorid:
     description: Unique identifier (ROR ID) of an the institution
     required: true
+  Institution_id:
+    description: Unique, stable, cross-portal identifier for the institution (see Sage Common Data Model's
+      ORGANIZATION entity), used as a key for record linking and updates. Curated only for institutions
+      with a well-formed ROR id.
+    required: true
+    range: Institution_id Enum
+    identifier: true
   Model_id:
     description: Unique row identifier, used as a primary key for record updates. This should use the
       GrantNumber-Mxxx format unless directed otherwise.
@@ -3007,6 +3024,12 @@ slots:
   Consortium Key:
     description: Unique Consortium_id foreign key(s) that group the resource with other components, as
       part of the same consortium-associated grants. Please provide multiple values as a comma-separated
+      list.
+    annotations:
+      foreign_key: true
+  Institution Key:
+    description: Unique Institution_id foreign key(s) that group the resource with other components, as
+      part of the same institution-associated grants. Please provide multiple values as a comma-separated
       list.
     annotations:
       foreign_key: true
@@ -13829,6 +13852,19 @@ enums:
   Consortium Funding Agency Enum:
     permissible_values:
       NIH: null
+  Consortium_id Enum:
+    permissible_values:
+      program.ccbir: null
+      program.csbc: null
+      program.htan: null
+      program.icbp: null
+      program.metnet: null
+      program.nci: null
+      program.nci-clinical-and-translational-exploratory-developmental-studies: null
+      program.pdmc: null
+      program.ps-on: null
+      program.sage-bionetworks: null
+      program.tec: null
   accessType Enum:
     permissible_values:
       Anonymous:
@@ -33995,6 +34031,188 @@ enums:
       West Virginia: null
       Wisconsin: null
       Wyoming: null
+  Institution_id Enum:
+    permissible_values:
+      org.albert-einstein-college-of-medicine:
+        meaning: ROR:05cf8a891
+      org.arizona-state-university:
+        meaning: ROR:03efmqc40
+      org.auburn-university:
+        meaning: ROR:02v80fc35
+      org.barrow-neurological-institute:
+        meaning: ROR:01fwrsq33
+      org.baylor-college-of-medicine:
+        meaning: ROR:02pttbw34
+      org.beckman-research-institute-of-city-of-hope:
+        meaning: ROR:05fazth07
+      org.beth-israel-deaconess-hospital:
+        meaning: ROR:02cpjkp59
+      org.boston-medical-center:
+        meaning: ROR:010b9wj87
+      org.boston-university:
+        meaning: ROR:05qwgg493
+      org.brigham-and-womens-hospital:
+        meaning: ROR:04b6nzv94
+      org.california-institute-of-technology:
+        meaning: ROR:05dxps055
+      org.childrens-hospital-of-philadelphia:
+        meaning: ROR:01z7r7q48
+      org.city-of-hope:
+        meaning: ROR:00w6g5w60
+      org.clemson-university:
+        meaning: ROR:037s24f05
+      org.cleveland-clinic:
+        meaning: ROR:03xjacd83
+      org.cold-spring-harbor-laboratory:
+        meaning: ROR:02qz8b764
+      org.columbia-university:
+        meaning: ROR:00hj8s172
+      org.cornell-university:
+        meaning: ROR:05bnh6r87
+      org.dana-farber-cancer-institute:
+        meaning: ROR:02jzgtq86
+      org.dartmouth-college:
+        meaning: ROR:049s0rh22
+      org.duke-university:
+        meaning: ROR:00py81415
+      org.emory-university:
+        meaning: ROR:03czfpz43
+      org.georgia-institute-of-technology:
+        meaning: ROR:01zkghx44
+      org.harvard-medical-school:
+        meaning: ROR:03vek6s52
+      org.harvard-university:
+        meaning: ROR:03vek6s52
+      org.hebrew-university-of-jerusalem:
+        meaning: ROR:03qxff017
+      org.houston-methodist:
+        meaning: ROR:027zt9171
+      org.indiana-university:
+        meaning: ROR:01kg8sb98
+      org.institute-for-systems-biology:
+        meaning: ROR:02tpgw303
+      org.jackson-laboratory:
+        meaning: ROR:021sy4w91
+      org.johns-hopkins-university:
+        meaning: ROR:00za53h95
+      org.lurie-children-s-hospital:
+        meaning: ROR:03a6zw892
+      org.massachusetts-general-hospital:
+        meaning: ROR:002pd6e78
+      org.massachusetts-institute-of-technology:
+        meaning: ROR:042nb2s44
+      org.mayo-clinic:
+        meaning: ROR:02qp3tb03
+      org.memorial-sloan-kettering-cancer-center:
+        meaning: ROR:02yrq0923
+      org.moffitt-cancer-center:
+        meaning: ROR:01xf75524
+      org.northeastern-university:
+        meaning: ROR:04t5xt781
+      org.new-york-university:
+        meaning: ROR:0190ak572
+      org.northwestern-university:
+        meaning: ROR:000e0be47
+      org.oregon-health-science-university:
+        meaning: ROR:009avj582
+      org.pacific-northwest-national-laboratory:
+        meaning: ROR:05h992307
+      org.purdue-university:
+        meaning: ROR:02dqehb95
+      org.rockefeller-university:
+        meaning: ROR:0420db125
+      org.sage-bionetworks:
+        meaning: ROR:049ncjx51
+      org.salk-institute-for-biological-studies:
+        meaning: ROR:03xez1567
+      org.st-jude-children-s-research-hospital:
+        meaning: ROR:02r3e0967
+      org.stanford-university:
+        meaning: ROR:00f54p054
+      org.stony-brook-university:
+        meaning: ROR:05qghxh33
+      org.the-university-of-texas-health-science-center-at-san-antonio:
+        meaning: ROR:02f6dcw23
+      org.tufts-university-medford:
+        meaning: ROR:05wvpxv85
+      org.university-of-alabama-at-birmingham:
+        meaning: ROR:008s83205
+      org.university-of-arizona:
+        meaning: ROR:03m2x1q45
+      org.university-of-arkansas-at-fayetteville:
+        meaning: ROR:05jbt9m15
+      org.university-of-california-berkeley:
+        meaning: ROR:01an7q238
+      org.university-of-california-irvine:
+        meaning: ROR:04gyf1771
+      org.university-of-california-los-angeles:
+        meaning: ROR:046rm7j60
+      org.university-of-california-san-diego:
+        meaning: ROR:0168r3w48
+      org.university-of-california-san-francisco:
+        meaning: ROR:043mz5j54
+      org.university-of-chicago:
+        meaning: ROR:024mw5h28
+      org.university-of-chicago-medical-center:
+        meaning: ROR:0076kfe04
+      org.university-of-colorado-denver:
+        meaning: ROR:02hh7en24
+      org.university-of-delaware:
+        meaning: ROR:01sbq1a82
+      org.university-of-florida:
+        meaning: ROR:02y3ad647
+      org.university-of-illinois:
+        meaning: ROR:047426m28
+      org.university-of-illinois-at-chicago:
+        meaning: ROR:02mpq6x41
+      org.university-of-massachusetts-medical-school:
+        meaning: ROR:0464eyp60
+      org.university-of-miami:
+        meaning: ROR:02dgjyy92
+      org.university-of-michigan:
+        meaning: ROR:00jmfr291
+      org.university-of-nevada-reno:
+        meaning: ROR:01keh0577
+      org.university-of-minnesota:
+        meaning: ROR:017zqws13
+      org.university-of-new-south-wales:
+        meaning: ROR:03r8z3t63
+      org.university-of-north-carolina-at-chapel-hill:
+        meaning: ROR:0130frc33
+      org.university-of-pennsylvania:
+        meaning: ROR:00b30xv10
+      org.university-of-pittsburgh:
+        meaning: ROR:01an3r305
+      org.university-of-southern-california:
+        meaning: ROR:03taz7m60
+      org.university-of-texas-md-anderson-cancer-center:
+        meaning: ROR:04twxam07
+      org.university-of-texas-southwestern-medical-center:
+        meaning: ROR:05byvp690
+      org.university-of-texas-at-austin:
+        meaning: ROR:00hj54h04
+      org.university-of-utah:
+        meaning: ROR:03r0ha626
+      org.university-of-virginia:
+        meaning: ROR:0153tk833
+      org.university-of-washington:
+        meaning: ROR:00cvxb145
+      org.university-of-wisconsin-madison:
+        meaning: ROR:01y2jtd41
+      org.vanderbilt-university:
+        meaning: ROR:02vm5rt34
+      org.virginia-polytechnic-institute:
+        meaning: ROR:02smfhw86
+      org.washington-university-in-st-louis:
+        meaning: ROR:01yc7t268
+      org.wake-forest:
+        meaning: ROR:0207ad724
+      org.weill-cornell-medicine:
+        meaning: ROR:02r109517
+      org.wistar-institute:
+        meaning: ROR:04wncat98
+      org.yale-university:
+        meaning: ROR:03v76x132
   Model Sex Enum:
     permissible_values:
       Decline to answer:

@@ -42,7 +42,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | OMIT | `http://purl.obolibrary.org/obo/OMIT_` | 1/1 |
 | PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/33 |
 | PRIDE | `http://purl.obolibrary.org/obo/PRIDE_` | 2/2 |
-| ROR | `https://ror.org/` | 181/181 |
+| ROR | `https://ror.org/` | 271/271 |
 | SIO | `http://semanticscience.org/resource/SIO_` | 3/3 |
 | SNOMED | `http://snomed.info/id/` | 10/10 |
 | SWO | `http://www.ebi.ac.uk/swo/SWO_` | 49/51 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
