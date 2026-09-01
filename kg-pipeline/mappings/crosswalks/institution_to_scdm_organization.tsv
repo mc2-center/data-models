@@ -1,0 +1,91 @@
+institution_name	scdm_organization_id	scdm_name	scdm_ror_id	scdm_acronym
+Albert Einstein College of Medicine	org.albert-einstein-college-of-medicine	Albert Einstein College of Medicine	https://ror.org/05cf8a891	AECM
+Arizona State University	org.arizona-state-university	Arizona State University	https://ror.org/03efmqc40	ASU
+Auburn University	org.auburn-university	Auburn University	https://ror.org/02v80fc35	AU
+Barrow Neurological Institute	org.barrow-neurological-institute	Barrow Neurological Institute	https://ror.org/01fwrsq33	Barrow
+Baylor College Of Medicine	org.baylor-college-of-medicine	Baylor College Of Medicine	https://ror.org/02pttbw34	BCM
+Beckman Research Institute of City of Hope	org.beckman-research-institute-of-city-of-hope	Beckman Research Institute of City of Hope	https://ror.org/05fazth07	BRI
+Beth Israel Deaconess Hospital	org.beth-israel-deaconess-hospital	Beth Israel Deaconess Hospital	https://ror.org/02cpjkp59	BIDMC
+Boston Medical Center	org.boston-medical-center	Boston Medical Center	https://ror.org/010b9wj87	BMC
+Boston University	org.boston-university	Boston University	https://ror.org/05qwgg493	BU
+Brigham and Womens Hospital	org.brigham-and-womens-hospital	Brigham and Womens Hospital	https://ror.org/04b6nzv94	BWH
+California Institute of Technology	org.california-institute-of-technology	California Institute of Technology	https://ror.org/05dxps055	Caltech
+Childrens Hospital of Philadelphia	org.childrens-hospital-of-philadelphia	Childrens Hospital of Philadelphia	https://ror.org/01z7r7q48	CHOP
+City Of Hope	org.city-of-hope	City Of Hope	https://ror.org/00w6g5w60	COH
+Clemson University	org.clemson-university	Clemson University	https://ror.org/037s24f05	Clemson
+Cleveland Clinic	org.cleveland-clinic	Cleveland Clinic	https://ror.org/03xjacd83	Cleveland Clinic
+Cold Spring Harbor Laboratory	org.cold-spring-harbor-laboratory	Cold Spring Harbor Laboratory	https://ror.org/02qz8b764	CSHL
+Columbia University	org.columbia-university	Columbia University	https://ror.org/00hj8s172	Columbia
+Cornell University	org.cornell-university	Cornell University	https://ror.org/05bnh6r87	Cornell
+Dana-Farber Cancer Institute	org.dana-farber-cancer-institute	Dana-Farber Cancer Institute	https://ror.org/02jzgtq86	DFCI
+Dartmouth College	org.dartmouth-college	Dartmouth College	https://ror.org/049s0rh22	Dartmouth
+Duke University	org.duke-university	Duke University	https://ror.org/00py81415	Duke
+Emory University	org.emory-university	Emory University	https://ror.org/03czfpz43	Emory
+Georgia Institute of Technology	org.georgia-institute-of-technology	Georgia Institute of Technology	https://ror.org/01zkghx44	GTech
+Harvard Medical School	org.harvard-medical-school	Harvard Medical School	https://ror.org/03vek6s52	HMS
+Harvard University	org.harvard-university	Harvard University	https://ror.org/03vek6s52	HMS
+Hebrew University of Jerusalem	org.hebrew-university-of-jerusalem	Hebrew University of Jerusalem	https://ror.org/03qxff017	HUJI
+Houston Methodist	org.houston-methodist	Houston Methodist	https://ror.org/027zt9171	Houston Methodist
+Indiana University	org.indiana-university	Indiana University	https://ror.org/01kg8sb98	IU
+Institute for Systems Biology	org.institute-for-systems-biology	Institute for Systems Biology	https://ror.org/02tpgw303	ISB
+Jackson Laboratory	org.jackson-laboratory	Jackson Laboratory	https://ror.org/021sy4w91	Jackson Laboratory
+Johns Hopkins University	org.johns-hopkins-university	Johns Hopkins University	https://ror.org/00za53h95	JHU
+Lurie Children's Hospital	org.lurie-children-s-hospital	Lurie Children's Hospital	https://ror.org/03a6zw892	Lurie Children's Hospital
+Massachusetts General Hospital	org.massachusetts-general-hospital	Massachusetts General Hospital	https://ror.org/002pd6e78	MGH
+Massachusetts Institute of Technology	org.massachusetts-institute-of-technology	Massachusetts Institute of Technology	https://ror.org/042nb2s44	MIT
+Mayo Clinic	org.mayo-clinic	Mayo Clinic	https://ror.org/02qp3tb03	Mayo
+Memorial Sloan Kettering Cancer Center	org.memorial-sloan-kettering-cancer-center	Memorial Sloan Kettering Cancer Center	https://ror.org/02yrq0923	MSKCC
+Moffitt Cancer Center	org.moffitt-cancer-center	Moffitt Cancer Center	https://ror.org/01xf75524	Moffitt
+Northeastern University	org.northeastern-university	Northeastern University	https://ror.org/04t5xt781	NEU
+New York University	org.new-york-university	New York University	https://ror.org/0190ak572	NYU
+Northwestern University	org.northwestern-university	Northwestern University	https://ror.org/000e0be47	NU
+Oregon Health & Science University	org.oregon-health-science-university	Oregon Health & Science University	https://ror.org/009avj582	OHSU
+Pacific Northwest National Laboratory	org.pacific-northwest-national-laboratory	Pacific Northwest National Laboratory	https://ror.org/05h992307	PNNL
+Purdue University	org.purdue-university	Purdue University	https://ror.org/02dqehb95	Purdue
+Rockefeller University	org.rockefeller-university	Rockefeller University	https://ror.org/0420db125	Rockefeller University
+Sage Bionetworks	org.sage-bionetworks	Sage Bionetworks	https://ror.org/049ncjx51	Sage
+Salk Institute for Biological Studies	org.salk-institute-for-biological-studies	Salk Institute for Biological Studies	https://ror.org/03xez1567	Salk
+St. Jude Children's Research Hospital	org.st-jude-children-s-research-hospital	St. Jude Children's Research Hospital	https://ror.org/02r3e0967	StJude
+Stanford University	org.stanford-university	Stanford University	https://ror.org/00f54p054	Stanford
+Stony Brook University	org.stony-brook-university	Stony Brook University	https://ror.org/05qghxh33	SBU
+The University of Texas Health Science Center at San Antonio	org.the-university-of-texas-health-science-center-at-san-antonio	The University of Texas Health Science Center at San Antonio	https://ror.org/02f6dcw23	UTHSCSA
+Tufts University Medford	org.tufts-university-medford	Tufts University Medford	https://ror.org/05wvpxv85	TUM
+University of Alabama at Birmingham	org.university-of-alabama-at-birmingham	University of Alabama at Birmingham	https://ror.org/008s83205	UAB
+University of Arizona	org.university-of-arizona	University of Arizona	https://ror.org/03m2x1q45	UA
+University of Arkansas at Fayetteville	org.university-of-arkansas-at-fayetteville	University of Arkansas at Fayetteville	https://ror.org/05jbt9m15	UARK
+University of California; Berkeley	org.university-of-california-berkeley	University of California; Berkeley	https://ror.org/01an7q238	UCBerkeley
+University of California; Irvine	org.university-of-california-irvine	University of California; Irvine	https://ror.org/04gyf1771	UCI
+University of California; Los Angeles	org.university-of-california-los-angeles	University of California; Los Angeles	https://ror.org/046rm7j60	UCLA
+University of California; San Diego	org.university-of-california-san-diego	University of California; San Diego	https://ror.org/0168r3w48	UCSD
+University of California; San Francisco	org.university-of-california-san-francisco	University of California; San Francisco	https://ror.org/043mz5j54	UCSF
+University of Chicago	org.university-of-chicago	University of Chicago	https://ror.org/024mw5h28	UChicago
+University of Chicago Medical Center	org.university-of-chicago-medical-center	University of Chicago Medical Center	https://ror.org/0076kfe04	UCMC
+University of Colorado Denver	org.university-of-colorado-denver	University of Colorado Denver	https://ror.org/02hh7en24	UCD
+University of Delaware	org.university-of-delaware	University of Delaware	https://ror.org/01sbq1a82	UD
+University of Florida	org.university-of-florida	University of Florida	https://ror.org/02y3ad647	UFL
+University of Illinois	org.university-of-illinois	University of Illinois	https://ror.org/047426m28	University of Illinois
+University of Illinois at Chicago	org.university-of-illinois-at-chicago	University of Illinois at Chicago	https://ror.org/02mpq6x41	UIC
+University of Massachusetts Medical School	org.university-of-massachusetts-medical-school	University of Massachusetts Medical School	https://ror.org/0464eyp60	UMMS
+University of Miami	org.university-of-miami	University of Miami	https://ror.org/02dgjyy92	U Miami
+University of Michigan	org.university-of-michigan	University of Michigan	https://ror.org/00jmfr291	UMichigan
+University of Nevada Reno	org.university-of-nevada-reno	University of Nevada Reno	https://ror.org/01keh0577	UNR
+University of Minnesota	org.university-of-minnesota	University of Minnesota	https://ror.org/017zqws13	UMinn
+University of New South Wales	org.university-of-new-south-wales	University of New South Wales	https://ror.org/03r8z3t63	UNSW
+University of North Carolina at Chapel Hill	org.university-of-north-carolina-at-chapel-hill	University of North Carolina at Chapel Hill	https://ror.org/0130frc33	UNC
+University of Pennsylvania	org.university-of-pennsylvania	University of Pennsylvania	https://ror.org/00b30xv10	UPenn
+University of Pittsburgh	org.university-of-pittsburgh	University of Pittsburgh	https://ror.org/01an3r305	Pitt
+University of Southern California	org.university-of-southern-california	University of Southern California	https://ror.org/03taz7m60	USC
+University of Texas MD Anderson Cancer Center	org.university-of-texas-md-anderson-cancer-center	University of Texas MD Anderson Cancer Center	https://ror.org/04twxam07	University of Texas MD Anderson Cancer Center
+University of Texas Southwestern Medical Center	org.university-of-texas-southwestern-medical-center	University of Texas Southwestern Medical Center	https://ror.org/05byvp690	UT Southwestern
+University of Texas at Austin	org.university-of-texas-at-austin	University of Texas at Austin	https://ror.org/00hj54h04	UT Austin
+University of Utah	org.university-of-utah	University of Utah	https://ror.org/03r0ha626	UUtah
+University of Virginia	org.university-of-virginia	University of Virginia	https://ror.org/0153tk833	UVA
+University of Washington	org.university-of-washington	University of Washington	https://ror.org/00cvxb145	UW
+University of Wisconsin-Madison	org.university-of-wisconsin-madison	University of Wisconsin-Madison	https://ror.org/01y2jtd41	UWM
+Vanderbilt University	org.vanderbilt-university	Vanderbilt University	https://ror.org/02vm5rt34	Vanderbilt
+Virginia Polytechnic Institute	org.virginia-polytechnic-institute	Virginia Polytechnic Institute	https://ror.org/02smfhw86	VT
+Washington University in St. Louis	org.washington-university-in-st-louis	Washington University in St. Louis	https://ror.org/01yc7t268	WUSTL
+Wake Forest	org.wake-forest	Wake Forest	https://ror.org/0207ad724	Wake Forest
+Weill Cornell Medicine	org.weill-cornell-medicine	Weill Cornell Medicine	https://ror.org/02r109517	WCM
+Wistar Institute	org.wistar-institute	Wistar Institute	https://ror.org/04wncat98	Wistar
+Yale University	org.yale-university	Yale University	https://ror.org/03v76x132	Yale
