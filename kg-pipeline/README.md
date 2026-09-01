@@ -134,11 +134,14 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
     situations, not one - see `make suggest-mappings` below.
   - `data/harmonized/malformed_cv_terms.csv` - a CV row's own `Ontology
     Identifier` isn't a valid CURIE and its `Ontology Url` isn't a valid
-    URL (e.g. `modules/shared/tissue.csv` stores bare ICD-O-3 topography
-    codes like `C15.2`, and one `modules/shared/tumorType.csv` row stores a
-    bare ICD-O-3 morphology code `9835/3`). These are treated as "no
-    ontology mapping" rather than emitted as a fake IRI. Worth a follow-up
-    similar to this repo's prior CDE/ontology mismatch reviews.
+    URL. These are treated as "no ontology mapping" rather than emitted as
+    a fake IRI. Previously flagged here: `modules/shared/tissue.csv` stored
+    a bare ICD-O-3 topography code (`C15.2`) and `modules/shared/tumorType.csv`
+    stored a bare ICD-O-3 morphology code (`9835/3`) - both have since been
+    curated with real NCIT CURIEs (verified 2026-09-01 via `harmonize.py`'s
+    own `build_field_lookups` against the full model: 0 malformed rows
+    across every CV registered in `modules/mapping.yaml`). Re-run this check
+    after any CV edit rather than assuming this file stays empty.
 - **`make suggest-mappings` (Stage 3.5) turns `unmapped_terms.csv` into a
   reviewable worklist**, `data/harmonized/mapping_suggestions.csv`. It never
   edits a CV file itself - it only classifies and proposes:
