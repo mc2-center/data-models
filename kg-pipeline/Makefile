@@ -124,7 +124,7 @@ clean:
 #
 # Class names match schema/mc2_model.linkml.yaml exactly (including spaces) -
 # quoted individually so `make` passes each as one argv entry to --classes.
-MC2_ASSAY_CLASSES := "Biospecimen" "Individual" "Model" "Study" "Collection" \
+MC2_ASSAY_CLASSES := "Biospecimen" "Individual" "Model" "Study" "Collection" "File View" \
 	"Sequencing Level 1" "Sequencing Level 2" "Sequencing Level 3" "Sequencing RNA Level 1" \
 	"Imaging Level 1" "Imaging Level 2" "Imaging Level 3 Image" "Imaging Level 3 Segments" "Imaging Level 4" \
 	"Imaging Channel" "NanoString GeoMx DSP Level 1" "NanoString GeoMx DSP Level 2" \
@@ -161,7 +161,6 @@ triples-mc2-assay:
 link-sagebrain:
 	$(PYTHON) scripts/link_sagebrain.py \
 		--file-view-harmonized "data/mc2_assay/harmonized/File View_harmonized.csv" \
-		--modules-dir $(MODULES_DIR) \
 		--out data/mc2_assay/rdf/sagebrain_links.ttl
 
 # Uploads data/mc2_assay/{raw,harmonized,rdf}/ to the private/team-restricted

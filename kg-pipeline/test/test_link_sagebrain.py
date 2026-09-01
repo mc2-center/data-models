@@ -1,10 +1,5 @@
-from pathlib import Path
-
 import link_sagebrain
 import rdflib
-
-KG_PIPELINE_DIR = Path(__file__).resolve().parent.parent
-MODULES_DIR = str(KG_PIPELINE_DIR.parent / "modules")
 
 SAGEBRAIN = rdflib.Namespace("https://w3id.org/synapse/sagebrain#")
 BIOLINK = rdflib.Namespace("https://w3id.org/biolink/vocab/")
@@ -22,16 +17,27 @@ def test_load_crosswalk_skips_sssom_comment_header(tmp_path):
     assert crosswalk == {"NCIT:C12971": "UBERON:0000310"}
 
 
+def test_curie_from_resolved_reverses_obo_purl():
+    assert link_sagebrain.curie_from_resolved("http://purl.obolibrary.org/obo/NCIT_C12971") == "NCIT:C12971"
+
+
+def test_curie_from_resolved_passes_through_a_bare_curie():
+    assert link_sagebrain.curie_from_resolved("NCIT:C12971") == "NCIT:C12971"
+
+
+def test_curie_from_resolved_treats_blank_as_unresolved():
+    assert link_sagebrain.curie_from_resolved("") is None
+    assert link_sagebrain.curie_from_resolved(None) is None
+
+
 def test_aggregate_flags_conflicting_values_across_files_sharing_a_key():
-    malformed = []
-    tissue_lookup = link_sagebrain.load_cv_lookup(MODULES_DIR, "shared/tissue.csv", malformed)
-    tumor_type_lookup = link_sagebrain.load_cv_lookup(MODULES_DIR, "shared/tumorType.csv", malformed)
     rows = [
-        {"Biospecimen Key": "BSP-1", "File Tissue": "Breast", "File Tumor Type": ""},
-        {"Biospecimen Key": "BSP-1", "File Tissue": "Lung", "File Tumor Type": ""},  # disagrees with row 1
+        {"Biospecimen Key": "BSP-1", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
+         "File Tumor Type_ontology_iri": ""},
+        {"Biospecimen Key": "BSP-1", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12468",
+         "File Tumor Type_ontology_iri": ""},  # disagrees with row 1
     ]
-    conflicts = []
-    resolved = link_sagebrain.aggregate_by_biospecimen_key(rows, tissue_lookup, tumor_type_lookup, conflicts)
+    resolved, conflicts = link_sagebrain.aggregate_by_biospecimen_key(rows)
     assert len(conflicts) == 1
     assert conflicts[0]["biospecimen_key"] == "BSP-1"
     assert conflicts[0]["field"] == "File Tissue"
@@ -39,20 +45,17 @@ def test_aggregate_flags_conflicting_values_across_files_sharing_a_key():
 
 
 def test_sentinel_biospecimen_keys_are_skipped():
-    malformed = []
-    tissue_lookup = link_sagebrain.load_cv_lookup(MODULES_DIR, "shared/tissue.csv", malformed)
-    tumor_type_lookup = link_sagebrain.load_cv_lookup(MODULES_DIR, "shared/tumorType.csv", malformed)
-    rows = [{"Biospecimen Key": "Not Applicable", "File Tissue": "Breast", "File Tumor Type": ""}]
-    conflicts = []
-    resolved = link_sagebrain.aggregate_by_biospecimen_key(rows, tissue_lookup, tumor_type_lookup, conflicts)
+    rows = [{"Biospecimen Key": "Not Applicable", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
+             "File Tumor Type_ontology_iri": ""}]
+    resolved, conflicts = link_sagebrain.aggregate_by_biospecimen_key(rows)
     assert resolved == {}
 
 
 def test_build_sagebrain_links_end_to_end(tmp_path):
     harmonized_csv = tmp_path / "File View_harmonized.csv"
     harmonized_csv.write_text(
-        "Biospecimen Key,File Tissue,File Tumor Type\n"
-        "BSP-1,Breast,Triple-Negative Breast Carcinoma\n"
+        "Biospecimen Key,File Tissue_ontology_iri,File Tumor Type_ontology_iri\n"
+        "BSP-1,http://purl.obolibrary.org/obo/NCIT_C12971,http://purl.obolibrary.org/obo/NCIT_C71732\n"
     )
     tissue_cw = tmp_path / "tissue.sssom.tsv"
     tissue_cw.write_text(
@@ -67,7 +70,7 @@ def test_build_sagebrain_links_end_to_end(tmp_path):
     )
 
     g, conflicts, n_source_tissue, n_has_pathology = link_sagebrain.build_sagebrain_links(
-        str(harmonized_csv), MODULES_DIR, str(tissue_cw), str(tumor_cw),
+        str(harmonized_csv), str(tissue_cw), str(tumor_cw),
     )
     assert conflicts == []
     assert n_source_tissue == 1

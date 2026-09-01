@@ -20,12 +20,16 @@ docstring). This script does the honest thing with what's actually there:
      value" discipline used elsewhere in this pipeline (unmapped_terms.csv,
      malformed_cv_terms.csv): disagreements are written to
      `biospecimen_annotation_conflicts.csv`, not silently resolved.
-  3. Harmonize File Tissue/File Tumor Type against their real MC2 CVs
-     (tissue.csv, tumorType.csv - registered in modules/mapping.yaml under
-     those exact names) directly in this script, because neither slot is
-     attached to any class in mc2_model.linkml.yaml today (a real,
-     pre-existing model gap - see extract_mc2_assay_metadata.py point 4),
-     so harmonize.py's normal class-driven pass never touches them.
+  3. Read File Tissue/File Tumor Type's already-resolved
+     `{field}_ontology_iri` columns from the harmonized File View CSV -
+     `File View` is now registered in the Makefile's `MC2_ASSAY_CLASSES`
+     list and both slots are attached to the `File View` class in
+     mc2_model.linkml.yaml, so harmonize.py's normal class-driven pass
+     resolves them the same way it resolves every other CV-backed field.
+     This script used to re-harmonize both fields itself (a second,
+     duplicate `load_cv_lookup` pass against tissue.csv/tumorType.csv)
+     because neither slot used to be attached to any class - that gap is
+     fixed now, so the duplicate pass is gone.
   4. Cross-walk the resolved NCIT/BTO term to sagebrain's own anchor
      ontology - UBERON for tissue, MONDO for tumor type - using ONLY
      `confidence: high` (exact label match) rows from
@@ -51,7 +55,7 @@ import rdflib
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_triples import mint_iri, normalize  # noqa: E402
-from harmonize import load_cv_lookup  # noqa: E402
+from harmonize import CURIE_RE, URL_RE  # noqa: E402
 
 SAGEBRAIN = rdflib.Namespace("https://w3id.org/synapse/sagebrain#")
 BIOLINK = rdflib.Namespace("https://w3id.org/biolink/vocab/")
@@ -68,6 +72,36 @@ def obo_purl(curie):
     crosswalk files this script reads only ever contain OBO-style targets)."""
     prefix, local = curie.split(":", 1)
     return f"http://purl.obolibrary.org/obo/{prefix}_{local}"
+
+
+def curie_from_resolved(value):
+    """Reverse of obo_purl(): the harmonized `{field}_ontology_iri` column
+    holds `url or ident` per harmonize.py's own convention (it prefers a CV
+    row's Ontology Url over its bare Identifier), but the crosswalk TSVs
+    below are always keyed by source CURIE, not URL. Every CV this script
+    reads (tissue.csv, tumorType.csv) uses the OBO Foundry purl form
+    exclusively for its Ontology Url - same assumption obo_purl() already
+    makes for crosswalk targets - so this just reads the last path segment
+    back into PREFIX:LOCAL. A value that's already a CURIE (no Ontology Url
+    was recorded for that CV row) passes through unchanged; anything blank
+    or not matching either shape is treated as unresolved.
+
+    Checked in URL-first order deliberately: a URL like
+    "http://purl.obolibrary.org/obo/NCIT_C12971" also satisfies CURIE_RE
+    (its "http:" scheme prefix alone matches PREFIX:REST), so CURIE_RE can't
+    be checked first without misidentifying every URL as an already-bare
+    CURIE."""
+    if not value:
+        return None
+    if URL_RE.match(value):
+        tail = value.rsplit("/", 1)[-1]
+        if "_" in tail:
+            prefix, local = tail.split("_", 1)
+            return f"{prefix}:{local}"
+        return None
+    if CURIE_RE.match(value):
+        return value
+    return None
 
 
 def load_crosswalk(path, min_confidence="high"):
@@ -87,24 +121,26 @@ def load_crosswalk(path, min_confidence="high"):
     return crosswalk
 
 
-def aggregate_by_biospecimen_key(file_view_rows, tissue_lookup, tumor_type_lookup, conflicts):
-    """{biospecimen_key: {"File Tissue": resolved_curie_or_None, "File Tumor Type": ...}}
-    - one representative (most-common) resolved value per field, with any
-    disagreement across the group's member files appended to `conflicts`."""
+def aggregate_by_biospecimen_key(file_view_rows):
+    """(resolved, conflicts). resolved: {biospecimen_key: {"File Tissue":
+    resolved_curie_or_None, "File Tumor Type": ...}} - one representative
+    (most-common) resolved value per field, reading each field's already-
+    harmonized `{field}_ontology_iri` column (see module docstring point 3)
+    rather than re-resolving the raw label here. Any disagreement across
+    the group's member files is reported in `conflicts`, not silently
+    resolved."""
     groups = defaultdict(lambda: defaultdict(Counter))
     for row in file_view_rows:
         key = (row.get("Biospecimen Key") or "").strip()
         if not key or normalize(key) in SENTINEL_KEYS:
             continue
-        for field, lookup in (("File Tissue", tissue_lookup), ("File Tumor Type", tumor_type_lookup)):
-            value = (row.get(field) or "").strip()
-            if not value:
-                continue
-            hit = lookup.get(normalize(value))
-            if hit:
-                groups[key][field][hit[0]] += 1  # hit = (ident, url)
+        for field in ("File Tissue", "File Tumor Type"):
+            curie = curie_from_resolved((row.get(f"{field}_ontology_iri") or "").strip())
+            if curie:
+                groups[key][field][curie] += 1
 
     resolved = {}
+    conflicts = []
     for key, field_counts in groups.items():
         resolved[key] = {}
         for field, counter in field_counts.items():
@@ -114,21 +150,17 @@ def aggregate_by_biospecimen_key(file_view_rows, tissue_lookup, tumor_type_looku
                     "conflicting_values": ";".join(sorted(counter)),
                 })
             resolved[key][field] = counter.most_common(1)[0][0]
-    return resolved
+    return resolved, conflicts
 
 
-def build_sagebrain_links(file_view_harmonized_csv, modules_dir, tissue_crosswalk_path, tumor_type_crosswalk_path):
+def build_sagebrain_links(file_view_harmonized_csv, tissue_crosswalk_path, tumor_type_crosswalk_path):
     with open(file_view_harmonized_csv, newline="") as f:
         rows = list(csv.DictReader(f))
 
-    malformed = []
-    tissue_lookup = load_cv_lookup(modules_dir, "shared/tissue.csv", malformed)
-    tumor_type_lookup = load_cv_lookup(modules_dir, "shared/tumorType.csv", malformed)
     tissue_crosswalk = load_crosswalk(tissue_crosswalk_path)
     tumor_type_crosswalk = load_crosswalk(tumor_type_crosswalk_path)
 
-    conflicts = []
-    resolved = aggregate_by_biospecimen_key(rows, tissue_lookup, tumor_type_lookup, conflicts)
+    resolved, conflicts = aggregate_by_biospecimen_key(rows)
 
     g = rdflib.Graph()
     g.bind("sagebrain", SAGEBRAIN)
@@ -158,7 +190,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--file-view-harmonized", required=True,
                          help='data/mc2_assay/harmonized/"File View_harmonized.csv"')
-    parser.add_argument("--modules-dir", required=True)
     parser.add_argument("--tissue-crosswalk", default="mappings/crosswalks/tissue_ncit_to_uberon.sssom.tsv")
     parser.add_argument("--tumor-type-crosswalk", default="mappings/crosswalks/tumorType_ncit_to_mondo.sssom.tsv")
     parser.add_argument("--out", required=True, help="data/mc2_assay/rdf/sagebrain_links.ttl")
@@ -167,7 +198,7 @@ def main():
     args = parser.parse_args()
 
     g, conflicts, n_source_tissue, n_has_pathology = build_sagebrain_links(
-        args.file_view_harmonized, args.modules_dir, args.tissue_crosswalk, args.tumor_type_crosswalk,
+        args.file_view_harmonized, args.tissue_crosswalk, args.tumor_type_crosswalk,
     )
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     g.serialize(destination=args.out, format="turtle")
