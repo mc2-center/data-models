@@ -1,58 +1,70 @@
 # Prefix resolution report
 
-Patched `kg-pipeline/schema/mc2_model.linkml.yaml` — added 38 prefixes derived from real `Ontology Url` data, plus 4 from a known-ontology fallback table.
+Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `Ontology Url` data, plus 0 from a known-ontology fallback table.
 
 ## Added (derived from Ontology Url in the CV CSVs)
 
 | Prefix | Base IRI | Rows matched |
 |---|---|---|
-| BAO | `http://www.bioassayontology.org/bao#BAO_` | 21/23 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
+| APOLLO_SV | `http://purl.obolibrary.org/obo/APOLLO_SV_` | 1/1 |
+| BAO | `http://www.bioassayontology.org/bao#BAO_` | 23/23 |
 | BTO | `http://purl.obolibrary.org/obo/BTO_` | 2/2 |
 | CHEBI | `http://purl.obolibrary.org/obo/CHEBI_` | 1/1 |
-| CHMO | `http://purl.obolibrary.org/obo/CHMO_` | 29/32 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
+| CHMO | `http://purl.obolibrary.org/obo/CHMO_` | 32/32 |
+| CRO | `http://purl.obolibrary.org/obo/CRO_` | 1/1 |
+| DCTERMS | `http://purl.org/dc/terms/` | 1/1 |
 | DOID | `http://purl.obolibrary.org/obo/DOID_` | 1/1 |
-| ECO | `http://purl.obolibrary.org/obo/ECO_` | 2/6 ⚠️ 4 row(s) had an unrelated Ontology Url, excluded from the vote |
-| EDAM | `http://edamontology.org/` | 135/139 ⚠️ 4 row(s) had an unrelated Ontology Url, excluded from the vote |
-| EFO | `http://www.ebi.ac.uk/efo/EFO_` | 77/85 ⚠️ 8 row(s) had an unrelated Ontology Url, excluded from the vote |
+| ECO | `http://purl.obolibrary.org/obo/ECO_` | 6/6 |
+| EDAM | `http://edamontology.org/` | 516/519 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
+| EFO | `http://www.ebi.ac.uk/efo/EFO_` | 85/85 |
 | EMAPA | `http://purl.obolibrary.org/obo/EMAPA_` | 1/1 |
-| ERO | `http://purl.obolibrary.org/obo/ERO_` | 7/8 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |
+| ENVO | `http://purl.obolibrary.org/obo/ENVO_` | 1/1 |
+| ERO | `http://purl.obolibrary.org/obo/ERO_` | 8/8 |
 | EVORAO | `https://w3id.org/evorao/` | 2/2 |
-| FBbi | `http://purl.obolibrary.org/obo/FBbi_` | 2/4 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
+| FBbi | `http://purl.obolibrary.org/obo/FBbi_` | 4/4 |
 | FBcv | `http://purl.obolibrary.org/obo/FBcv_` | 2/2 |
 | FOODON | `http://purl.obolibrary.org/obo/FOODON_` | 1/1 |
 | GENEPIO | `http://purl.obolibrary.org/obo/GENEPIO_` | 45/45 |
-| GSSO | `http://purl.obolibrary.org/obo/GSSO_` | 1/1 |
-| MESH | `http://id.nlm.nih.gov/mesh/` | 15/15 |
-| MI | `http://purl.obolibrary.org/obo/MI_` | 1/2 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |
-| MMO | `http://purl.obolibrary.org/obo/MMO_` | 4/4 |
+| GSSO | `http://purl.obolibrary.org/obo/GSSO_` | 2/2 |
+| IAO | `http://purl.obolibrary.org/obo/IAO_` | 1/1 |
+| MAMO | `http://purl.obolibrary.org/obo/MAMO_` | 1/1 |
+| MESH | `http://id.nlm.nih.gov/mesh/` | 16/16 |
+| MI | `http://purl.obolibrary.org/obo/MI_` | 2/2 |
+| MMO | `http://purl.obolibrary.org/obo/MMO_` | 5/5 |
 | MONDO | `http://purl.obolibrary.org/obo/MONDO_` | 1/1 |
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
 | NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 3/3 |
-| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 793/926 ⚠️ 133 row(s) had an unrelated Ontology Url, excluded from the vote |
-| OBI | `http://purl.obolibrary.org/obo/OBI_` | 20/24 ⚠️ 4 row(s) had an unrelated Ontology Url, excluded from the vote |
+| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1092/1092 |
+| OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
+| OBI | `http://purl.obolibrary.org/obo/OBI_` | 26/26 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
 | OMIT | `http://purl.obolibrary.org/obo/OMIT_` | 1/1 |
+| PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/33 |
 | PRIDE | `http://purl.obolibrary.org/obo/PRIDE_` | 2/2 |
-| SIO | `http://semanticscience.org/resource/SIO_` | 1/1 |
-| SNOMED | `http://snomed.info/id/` | 7/9 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
-| SWO | `http://www.ebi.ac.uk/swo/SWO_` | 28/30 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
+| ROR | `https://ror.org/` | 181/181 |
+| SIO | `http://semanticscience.org/resource/SIO_` | 3/3 |
+| SNOMED | `http://snomed.info/id/` | 10/10 |
+| SWO | `http://www.ebi.ac.uk/swo/SWO_` | 49/51 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
 | T4FS | `http://purl.obolibrary.org/obo/T4FS_` | 1/1 |
-| UBERON | `http://purl.obolibrary.org/obo/UBERON_` | 3/3 |
-| UMLS | `http://purl.obolibrary.org/obo/UMLS_` | 1/1 |
+| UBERON | `http://purl.obolibrary.org/obo/UBERON_` | 2/2 |
+| UMLS | `https://uts.nlm.nih.gov/uts/umls/concept/` | 1/2 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |
 | UO | `http://purl.obolibrary.org/obo/UO_` | 5/5 |
-| mesh | `http://id.nlm.nih.gov/mesh/` | 4/7 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
+| WIKIDATA | `https://www.wikidata.org/wiki/` | 1/1 |
+| credit | `https://credit.niso.org/contributor-roles/` | 1/1 |
+| mesh | `http://id.nlm.nih.gov/mesh/` | 7/7 |
 | operation | `http://edamontology.org/operation_` | 1/1 |
-| schema | `https://schema.org/` | 1/1 |
+| pmid | `https://pubmed.ncbi.nlm.nih.gov/` | 2/2 |
+| schema | `https://schema.org/` | 5/5 |
 
 ## Added from known-ontology fallback (zero clean matches in source data)
 
 | Prefix | Base IRI | Rows affected |
 |---|---|---|
-| ENVO | `http://purl.obolibrary.org/obo/ENVO_` | 1 |
-| OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1 |
-| PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 32 |
-| pmid | `https://pubmed.ncbi.nlm.nih.gov/` | 2 |
+
+## STILL UNRESOLVED — needs manual review
+
+- `SPDX` (325 row(s)) — no clean Ontology Url match and no fallback known.
 
 ## Already declared in the schema (left untouched)
 
