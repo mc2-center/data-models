@@ -243,3 +243,102 @@ data as crosswalks #2/#3 above so the two layers agree:
 - After implementing (in this conversation or a future one), append an
   Implementation Report below this line, documenting what was actually built,
   any deviations from the approach above, and verification results.
+
+## Implementation Report — approach steps 1-6
+
+Implemented as five commits on `database-model-kg`: vendor SCDM + Makefile
+scaffolding, the two crosswalks, `link_scdm.py`, and the README section.
+Step 7 (canonical `modules/` registries) is a separate batch, reported
+separately below once implemented.
+
+### 1. Vendored SCDM
+
+`schema/vendor/sagecdm/` pinned to SageCommonDataModel `main` @
+`210c73f18c1bbe75195e6028fc2aaf87f555fb22` (2026-09-01), with its own
+`VENDORED.md` recording the pin, the license, and re-vendoring instructions.
+`make sagecdm-schema` generates `schema/sagecdm.ttl` (802 triples,
+parse-checked) exactly as planned.
+
+### 2-3. Crosswalks
+
+`scripts/crosswalk_scdm.py` as planned: 90 institutions (of 91) get a
+deterministic `org.<slug>` id, joined against `institution_alias.csv` on
+the shared ROR id for `scdm_acronym` (the 1 skip — "Indiana University -
+Purdue University Indianapolis" — matches the pre-existing, already-known
+unmapped row). All 11 consortia get a `program.<slug>` id but ship
+`reviewed: false` with `description`/`status`/`funding_source` blank, per
+plan.
+
+### 4-5. `link_scdm.py` + Makefile target — deviations from the plan's literal wording
+
+Implemented the crosswalk-driven minting/linking as planned, reusing
+`build_triples.py`'s `mint_id`/`mint_iri`/`read_harmonized` directly rather
+than reimplementing them. Three corrections made while implementing, all
+because the plan's Context section (written before re-checking
+`cckp_portal.linkml.yaml` field-by-field) named CCKP portal classes more
+broadly than actually exist in this pipeline's v1 scope:
+
+- **Only `Grant` carries `grantInstitution`/`institutionAlias`.**
+  `Dataset`/`Publication`/`Tool`/`EducationalResource` don't have an
+  institution-shaped field at all — confirmed against the schema, not
+  assumed. `cckp:institutionRef` edges come only from `Grant`.
+- **Only `Dataset`/`Publication`/`Tool`/`Grant` carry `consortium`** —
+  `EducationalResource` doesn't have that field either.
+- **Investigator-stub minting reads `Grant.investigator` (scalar) and
+  `EducationalResource.contributors` (free-text list)**, not "Project
+  Investigator"/"Study Investigator" as the plan's Context section named —
+  those are MC2-model-internal attributes, not fields on any of the 5
+  actual CCKP portal classes this pipeline instantiates (`Project`/`Study`
+  aren't extracted in v1 at all, per `cckp_portal.linkml.yaml`'s own header
+  comment). The Project/Study investigator fields belong to step 7 (the
+  canonical `modules/` layer), not this KG-layer script.
+- **Output is a separate file, not merged into `cckp_kg.ttl`.** The plan
+  said "folded into `data/rdf/cckp_kg.ttl`"; on implementation, the
+  established precedent this repo actually uses for supplementary linking
+  output is to keep it separate (`data/mc2_assay/rdf/sagebrain_links.ttl`
+  is never merged into `mc2_assay_kg.ttl`) — followed that same convention
+  instead: `data/rdf/scdm_links.ttl` stays its own file, is not part of
+  `--merge-with`, and `link-scdm` is not a dependency of `triples`.
+- **Predicate names**: `cckp:institutionRef`, `cckp:consortiumRef`,
+  `cckp:investigatorRef`, `cckp:contributorRef` — all in this pipeline's own
+  `cckp:` namespace (matching the existing `{field}Ref` convention
+  `build_triples.py` already uses for `cckp_join`-resolved edges), since
+  neither SCDM nor sagebrain defines an inverse property for "this CCKP row
+  relates to that SCDM entity."
+
+**Discovered, not fixed**, while verifying against real data: `Grant.investigator`
+is a genuinely scalar column whose value sometimes crams several PI names
+into one comma-separated string (one real Grant row: 10 names in one
+field), and `EducationalResource.contributors` sometimes lists a degree
+suffix ("MS"/"PhD") as its own `|`-delimited entry, separate from the name
+it modifies. Both are documented in `link_scdm.py`'s own docstring rather
+than silently cleaned up — splitting on commas would risk the opposite
+failure (a real name that itself contains a comma, e.g. "Van't Veer,
+Laura"-style orderings).
+
+### 6. README section
+
+Added "## Interoperating with SageCommonDataModel" (governance shape mirrors
+the sagebrain section — crosswalks, generated-but-committed, dedicated
+script + Makefile target), a small `make` flow block (the closest
+equivalent to an "architecture diagram" this README uses for supplementary
+stages — the top-level pipeline diagram doesn't depict the sagebrain flow
+either, so this follows that same convention rather than editing the main
+diagram), the fourth-identifier-tier note, and the governance notes
+(SCDM's own deferred GRANT entity + the investigator data-quality caveat).
+Also updated "Directory layout" and the top-level `make` command list.
+
+### Verification
+
+- `make sagecdm-schema && make crosswalk-scdm && make link-scdm` run in
+  sequence from a clean state: all three succeed;
+  `scripts/validate_graph.py --parse-only` passes on `schema/sagecdm.ttl`.
+- Real end-to-end run against live-pulled CCKP data already present in
+  `data/harmonized/` (not just fixtures): `data/rdf/scdm_links.ttl` — 1,244
+  triples, 90 Organizations, 0 Programs (every crosswalk row still
+  unreviewed, correctly, by design), 169 provisional Person stubs, 206
+  `institutionRef` edges, 172 `investigatorRef`/`contributorRef` edges.
+- 11 new fixture-based tests (`test/test_crosswalk_scdm.py`,
+  `test/test_link_scdm.py`), including an id-collision case and a
+  reviewed-vs-unreviewed program-gating case. Full suite:
+  **69/69 passed**, no regressions.
