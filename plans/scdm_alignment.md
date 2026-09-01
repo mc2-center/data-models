@@ -342,3 +342,98 @@ Also updated "Directory layout" and the top-level `make` command list.
   `test/test_link_scdm.py`), including an id-collision case and a
   reviewed-vs-unreviewed program-gating case. Full suite:
   **69/69 passed**, no regressions.
+
+## Implementation Report — approach step 7
+
+Implemented as four commits, in a substantially corrected design from the
+approach text above — the plan's draft named the new attributes
+`Grant Institution Ref`/`Grant Program Ref`/`*Investigator Ref` before
+checking this repo's own existing foreign-key convention. Mid-implementation,
+the user flagged: *"In all the situations where the word 'Ref' was used in
+the attribute, I think this better aligns with the 'Key' designation
+established in the model - key implies the attribute is a foreign key. Keys
+are always derived from '_id' fields, e.g., Biospecimen Key is always
+populated from Biospecimen_id."* Checking `modules/shared/annotationProperty.csv`
+confirmed this: every cross-entity reference in this model (`Study Key`,
+`GrantView Key`, `Biospecimen Key`, `PersonView Key`, `Consortium Key`, …) is
+a single, globally-shared attribute defined once and reused via `DependsOn`
+across every class that needs it — not a separate uniquely-named attribute
+per referencing class. Two of the three "entities" I needed a Key for
+**already existed**, just unused:
+
+- **`Consortium Key`** was already fully defined in `modules/shared/
+  annotationProperty.csv`, referencing `Consortium_id` (itself already
+  defined in `modules/consortium/annotationProperty.csv`) — but **neither
+  was referenced in any class's `DependsOn` list anywhere in the model**.
+  Confirmed via repo-wide grep before touching anything.
+- **`PersonView Key`** was already defined and already used (in `Study`'s
+  own `DependsOn`) — just missing from `Grant View`/`Project View`.
+- **`Institution Key`** genuinely didn't exist — added it (mirroring
+  `Consortium Key`'s exact shape), plus a new `Institution_id` primary key
+  for the `Institution` composite class (which had no `_id` attribute at
+  all before this).
+
+Reworked plan, actually implemented (discarded and redone after the
+correction, since the original `*Ref` attribute rows were already committed
+by that point — see commit history):
+
+1. **`Institution_id`** (new) and **`Consortium_id`** (pre-existing,
+   previously uncontrolled) both gained real CV backing from
+   `modules/institution/institution_id.csv` (90 `org.<slug>` ids) and
+   `modules/consortium/consortium_id.csv` (11 `program.<slug>` ids) — same
+   seed data as the kg-pipeline crosswalks from steps 2-3, so the canonical
+   model and the KG layer agree. `Institution_id`'s generated LinkML enum
+   carries a real ROR `meaning:` per value automatically, since
+   `institution_id.csv` uses the same Ontology Identifier/Url columns every
+   other CV file does.
+2. **`Institution Key`** added to `modules/shared/annotationProperty.csv`,
+   matching `Consortium Key`'s exact shape (no CV/pattern — matching the
+   *majority* of existing `*Key` attributes, which validate only by
+   consumer convention, not an enumerated picklist. A few `*Key` attributes
+   do carry a regex `Pattern` — e.g. `Biospecimen Key`'s `-B\d{1,9}` — but
+   most don't; going patternless keeps this consistent with the plurality
+   and avoids over-constraining a still-provisional identifier scheme).
+3. **`Grant View`**: added `Institution Key`, `PersonView Key`, and
+   `Consortium Key` — additive alongside the existing `Grant Institution
+   Name`/`Institution Alias`/`Investigator`/`Consortium Name` columns.
+4. **`Project View`**: added `PersonView Key` and `Consortium Key`. Also
+   added `Project Consortium Name` itself to `Project View`'s own
+   `DependsOn` — a separate, pre-existing gap (the attribute was defined
+   but not part of the submission template) that had to be fixed here too,
+   since `Consortium Key` is meaningless without it.
+5. **`Person View`**: added `Institution Key` (alongside `Last Known
+   Institution`, previously uncontrolled free text) and `Consortium Key`
+   (alongside `Person Consortium Name`).
+6. **`Study`**: no changes — `PersonView Key` was already wired in.
+
+No new attribute rows were added to `modules/grant`, `modules/project`, or
+`modules/person`'s own `annotationProperty.csv` files at all — every
+reference is a `DependsOn` addition pointing at an attribute already (or
+now) defined once in `modules/shared`/`modules/institution`/
+`modules/consortium`.
+
+Regenerated `mc2.model.csv` (`make collate`) and kg-pipeline's
+`schema/mc2_model.linkml.yaml`/`.ttl` (`make mc2-model-linkml && make
+schema`) after these changes.
+
+### Verification
+
+- `python3 -c "..."` spot-check: `Institution_id`/`Institution Key`/
+  `Consortium_id`/`Consortium Key` all present with correct Valid Values
+  (90 `org.*` / 11 `program.*` ids respectively) after `update_valid_values.py`;
+  re-ran the same "revert unrelated pre-existing drift" step used in the
+  earlier kg-pipeline-fixes pass (7 unrelated modules + `all_valid_values.csv`
+  picked up unconnected whitespace/dedup fixes again, reverted again).
+- `schema/mc2_model.linkml.yaml`: confirmed `Grant View`/`Project View`/
+  `Person View` classes list the new `slots:` in the right position via
+  direct grep; confirmed `Institution_id Enum` carries `meaning: ROR:...`
+  per value and `Consortium_id Enum` carries none (correct — no ontology
+  grounding exists for a program identity).
+- `make schema` (kg-pipeline): both TTLs regenerate and parse-check clean
+  (`schema/mc2_model.ttl` 185,894 triples, up from 185,325;
+  `schema/cckp_portal.ttl` unchanged at 1,172 — expected, this pass never
+  touched `cckp_portal.linkml.yaml`).
+- `python3 -m pytest test/` (kg-pipeline): **69/69 passed** — this change
+  is canonical-model-only and doesn't touch any kg-pipeline script, so an
+  unchanged, fully-passing suite is the correct outcome, not just "no new
+  failures."
