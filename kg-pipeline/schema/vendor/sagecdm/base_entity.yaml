@@ -1,0 +1,44 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/base_entity
+name: sage-cdm-base-entity
+title: Sage CDM Base Entity
+description: >-
+  The abstract base class every CDM entity class extends. Defines the shared shape — a
+  stable identifier plus the provenance surface — so that adding a new entity does not
+  require touching this file.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788846642/CDM+Modeling+Principles
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - props
+  - mixins
+
+classes:
+
+  BaseEntity:
+    title: BASE_ENTITY
+    description: >-
+      Abstract supertype for every CDM entity. Contributes the identifier that all entities
+      share and, through ProvenanceMixin, the record-level provenance surface.
+    abstract: true
+    mixins:
+      - ProvenanceMixin
+    slots:
+      - id
+    comments:
+      - >-
+        Deliberately holds only id and provenance. name is NOT here: PERSON uses
+        display_name instead, because no single name string for a person is authoritative
+        across Sage source systems. Hoisting name would force PERSON to either carry a field
+        the spec rejects or override an inherited one.
+      - >-
+        Entities extend this with `is_a: BaseEntity` and narrow the id pattern via
+        slot_usage.

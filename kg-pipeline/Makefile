@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema extract harmonize suggest-mappings crosswalk-ontology triples validate update-coverage-baseline publish-portal-kg test clean \
+.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm validate update-coverage-baseline publish-portal-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay
 
 all: schema extract harmonize triples validate
@@ -40,6 +40,17 @@ schema:
 	linkml generate owl -f ttl --no-mergeimports $(OWLGEN_FLAGS) \
 		schema/cckp_portal.linkml.yaml > schema/cckp_portal.ttl
 	$(PYTHON) scripts/validate_graph.py --parse-only schema/mc2_model.ttl schema/cckp_portal.ttl
+
+# Generate schema/sagecdm.ttl from the vendored, pinned Sage Common Data
+# Model source (schema/vendor/sagecdm/ - see VENDORED.md for the pinned
+# commit and re-vendoring instructions). Not a dependency of `schema`/`all`
+# for the same reason mc2-model-linkml isn't - only needs to run when the
+# vendored SCDM source is deliberately updated; commit the result
+# afterward like any other generated-but-checked-in artifact.
+sagecdm-schema:
+	linkml generate owl -f ttl $(OWLGEN_FLAGS) \
+		schema/vendor/sagecdm/sage_cdm.yaml > schema/sagecdm.ttl
+	$(PYTHON) scripts/validate_graph.py --parse-only schema/sagecdm.ttl
 
 # --- Stage 2: Extract ---
 
@@ -76,6 +87,21 @@ crosswalk-ontology:
 	$(PYTHON) scripts/crosswalk_ontology.py --cv $(MODULES_DIR)/shared/tissue.csv \
 		--target-ontology uberon --out mappings/crosswalks/tissue_ncit_to_uberon.sssom.tsv
 
+# --- Supplementary: institution/consortium crosswalks for federation with
+# SCDM (Sage Common Data Model) --- (see plans/scdm_alignment.md). The
+# institution crosswalk is deterministic (a ROR id already is the
+# organization's identity); the consortium crosswalk ships reviewed=false
+# and needs human curation before scripts/link_scdm.py will mint from it -
+# see scripts/crosswalk_scdm.py's docstring for why.
+
+crosswalk-scdm:
+	$(PYTHON) scripts/crosswalk_scdm.py \
+		--institution-cv $(MODULES_DIR)/institution/institution_name.csv \
+		--institution-alias-cv $(MODULES_DIR)/institution/institution_alias.csv \
+		--consortium-cv $(MODULES_DIR)/consortium/consortium_name.csv \
+		--organization-out mappings/crosswalks/institution_to_scdm_organization.tsv \
+		--program-out mappings/crosswalks/consortium_to_scdm_program.tsv
+
 # --- Stage 4: Map to RDF ---
 
 triples:
@@ -86,6 +112,22 @@ triples:
 		--merge-with schema/mc2_model.ttl schema/cckp_portal.ttl \
 		--merged-out data/rdf/cckp_kg.ttl \
 		--confirmed-unmappable mappings/confirmed_unmappable.tsv
+
+# Links the public CCKP-portal graph to SCDM Organization/Program/
+# provisional-Person entities - see scripts/link_scdm.py's docstring. Own
+# target, not folded into `make all`/`triples`: consortium_to_scdm_program.tsv
+# ships reviewed=false until a human curates it, so this currently mints 0
+# Program nodes/edges by design (Organization nodes/edges mint every run -
+# no review gate needed there). Output stays a separate file
+# (data/rdf/scdm_links.ttl), not merged into cckp_kg.ttl, matching how
+# data/mc2_assay/rdf/sagebrain_links.ttl stays separate from
+# mc2_assay_kg.ttl rather than being folded in.
+link-scdm:
+	$(PYTHON) scripts/link_scdm.py \
+		--harmonized-dir data/harmonized \
+		--organization-crosswalk mappings/crosswalks/institution_to_scdm_organization.tsv \
+		--program-crosswalk mappings/crosswalks/consortium_to_scdm_program.tsv \
+		--out data/rdf/scdm_links.ttl
 
 # --- Stage 5: Validate ---
 
