@@ -10,7 +10,8 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --consolidate-cardinality-axioms
 
 .PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm validate update-coverage-baseline publish-portal-kg test clean \
-	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay
+	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
+	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog
 
 all: schema extract harmonize triples validate
 
@@ -128,6 +129,38 @@ link-scdm:
 		--organization-crosswalk mappings/crosswalks/institution_to_scdm_organization.tsv \
 		--program-crosswalk mappings/crosswalks/consortium_to_scdm_program.tsv \
 		--out data/rdf/scdm_links.ttl
+
+# --- Supplementary: Data Catalog annotations (native Synapse Dataset entity
+# annotations - measurementTechnique, license, ... - distinct from the CCKP
+# portal's own Dataset schema) --- (see plans/datacatalog_kg_integration.md).
+# Own targets, not folded into `make all`/`harmonize`/`triples`: a new,
+# not-yet-broadly-verified stage, and several fields (accessType,
+# downloadType, dataType) have large, expected, permanent unmapped counts
+# that would badly skew the main 5-class coverage-baseline ratchet if they
+# shared its harmonize run - hence the separate --out-dir below (same reason
+# harmonize-mc2-assay uses its own data/mc2_assay/harmonized/, just staying
+# in the public data/ tree here since this data is public, unlike mc2_assay).
+
+extract-datacatalog:
+	$(PYTHON) scripts/extract_datacatalog.py --out-dir data/raw --data-sources data_sources.yaml
+
+harmonize-datacatalog:
+	$(PYTHON) scripts/harmonize.py \
+		--schema schema/mc2_model.linkml.yaml \
+		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
+		--raw-dir data/raw --out-dir data/harmonized/datacatalog --sssom-dir mappings/sssom \
+		--classes "DataCatalog"
+
+triples-datacatalog:
+	$(PYTHON) scripts/build_datacatalog_triples.py \
+		--harmonized-dir data/harmonized/datacatalog --mc2-schema schema/mc2_model.linkml.yaml \
+		--out data/rdf/DataCatalog.ttl
+
+# Folds data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl - a separate,
+# explicit step (not automatic) until this stage has been run and reviewed
+# at least once. Safe to re-run; see scripts/merge_datacatalog.py's docstring.
+merge-datacatalog:
+	$(PYTHON) scripts/merge_datacatalog.py --cckp-kg data/rdf/cckp_kg.ttl --datacatalog data/rdf/DataCatalog.ttl
 
 # --- Stage 5: Validate ---
 

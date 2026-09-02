@@ -172,6 +172,7 @@ Transcription profiling by NanoString	Transcription profiling by NanoString	skos
 Transmission Electron Microscopy	Transmission Electron Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18216	semapv:ManualMappingCuration
 Transwell Assay	Transwell Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0020015	semapv:ManualMappingCuration
 Tuba-Seq	Tuba-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008979	semapv:ManualMappingCuration
+UPLC-MSMS	UPLC-MSMS	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/20061193/	semapv:ManualMappingCuration
 Ultrasound Imaging	Ultrasound Imaging	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17230	semapv:ManualMappingCuration
 Viral Transduction	Viral Transduction	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C142787	semapv:ManualMappingCuration
 Visium Spatial Gene Expression	Visium Spatial Gene Expression	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0010961	semapv:ManualMappingCuration

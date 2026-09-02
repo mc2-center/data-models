@@ -19,3 +19,7 @@ tables:
     synapse_id: syn51497305
     row_count: 10
     queried_at: '2026-08-18T16:17:28+00:00'
+  DataCatalog:
+    synapse_id: syn21897968 (native Dataset entity annotations, not the table itself)
+    row_count: 966
+    queried_at: '2026-09-01T23:25:50+00:00'
