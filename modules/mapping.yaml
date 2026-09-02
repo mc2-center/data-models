@@ -86,7 +86,7 @@ sharingPlans:
 
 dataCatalog:
   - name: accessType
-    src: shared/dataTier.csv
+    src: publication/publication_accessibility.csv
   - name: countryOfOrigin
     src: shared/sourceGeography.csv
   - name: funder
@@ -97,6 +97,14 @@ dataCatalog:
     src: shared/assay.csv
   - name: species
     src: shared/dataset_species.csv
+  - name: downloadType
+    src: dataCatalog/dataCatalog_download_type.csv
+  - name: dataType
+    src: dataCatalog/dataCatalog_data_type.csv
+  - name: manifestation
+    src: shared/tumorType.csv
+  - name: dataUseModifiers
+    src: shared/duo.csv
 
 education:
   - name: Resource Topic
