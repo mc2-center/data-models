@@ -1,7 +1,7 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
 CC0,"Creative Commons Zero license, allowing for the free use of the data.",,,FALSE,,license,,,,,,,,
-CC_BY,"Creative Commons Attribution license, requiring attribution to the original source.",,,FALSE,,license,,,,,,,,
-CC_BY_NC,"Creative Commons Attribution-NonCommercial license, allowing for non-commercial use with attribution.",,,FALSE,,license,,,,,,,,
+CC_BY,"Creative Commons Attribution license, requiring attribution to the original source.",,,FALSE,,license,,,,CC-BY 4.0,SPDX:CC-BY-4.0,https://spdx.org/licenses/CC-BY-4.0.html,,
+CC_BY_NC,"Creative Commons Attribution-NonCommercial license, allowing for non-commercial use with attribution.",,,FALSE,,license,,,,CC BY-NC 3.0,SPDX:CC-BY-NC-3.0,https://spdx.org/licenses/CC-BY-NC-3.0.html,,
 CC_BY_ND,"Creative Commons Attribution-NoDerivatives license, allowing for redistribution with attribution but no modifications.",,,FALSE,,license,,,,,,,,
 CC_BY_SA,"Creative Commons Attribution-ShareAlike license, allowing for modifications with attribution and sharing under the same license.",,,FALSE,,license,,,,,,,,
 CC_BY_NC_ND,"Creative Commons Attribution-NonCommercial-NoDerivatives license, allowing for non-commercial use with attribution but no modifications.",,,FALSE,,license,,,,,,,,

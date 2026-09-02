@@ -1,0 +1,8 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+gene expression,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv label: expressionProfiling
+chromatin activity,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv label: epigenomeProfiling
+genomic variants,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv label: genomeProfiling
+immunoassay,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Closest existing label fit is bioChemicalPhysical - the iconTag map's own Immunoassay term row has no label set
+network,,,,FALSE,,dataType,,,,,,,,No existing modules/shared/mc2_iconTag_map_3-4-25.csv label fits network-analysis data - added as a new category
+nucleic acid sequence record,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv label: genomeProfiling
+image,,,,FALSE,,dataType,,mc2_iconTag_map,,,,,,Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv label: imaging
