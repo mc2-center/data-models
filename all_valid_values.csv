@@ -61,32 +61,35 @@ specimenType,Xenograft Tissue,
 specimenType,Unknown,
 specimenType,Not Reported,
 dataset_species,African Bush Elephant,"Loxodonta africana, African bush elephant"
-dataset_species,Armadillo,
+dataset_species,Armadillo,Dasypus novemcinctus
 dataset_species,Asian Elephant,"Elephas maximus, Asian elephant"
-dataset_species,Boar,
+dataset_species,Boar,Sus scrofa
 dataset_species,Cat,Felis catus
-dataset_species,Chicken,
+dataset_species,Chicken,Gallus gallus
+dataset_species,Candida albicans,
 dataset_species,Cow,
 dataset_species,Dog,
-dataset_species,Escherichia coli,
+dataset_species,Escherichia coli,"Escherichia coli str. K-12 substr. MG1655, Escherichia coli BW25113"
 dataset_species,Guinea Pig,"Cavia porcellus, Guinea pig"
 dataset_species,Horse,Equus caballus
-dataset_species,Human,
+dataset_species,Human,Homo sapiens
 dataset_species,Human Patient,
 dataset_species,Human Cell Line,
-dataset_species,Mouse,
+dataset_species,Macaca nemestrina,
+dataset_species,Mouse,Mus musculus
 dataset_species,Multispecies,
 dataset_species,Not Applicable,
-dataset_species,Opossum,
+dataset_species,Opossum,Monodelphis domestica
 dataset_species,Rabbit,Oryctolagus cuniculus
-dataset_species,Rat,
-dataset_species,Rhesus monkey,Macaca mulatta
+dataset_species,Rat,Rattus norvegicus
+dataset_species,Rhesus monkey,"Macaca mulatta, Rhesus macaque"
+dataset_species,Schizosaccharomyces pombe,
 dataset_species,Sheep,Ovis aries
 dataset_species,Trichoplax adhaerens,
 dataset_species,Unknown,
 dataset_species,Unspecified,
-dataset_species,Worm,
-dataset_species,Yeast,
+dataset_species,Worm,Caenorhabditis elegans
+dataset_species,Yeast,"Saccharomyces cerevisiae, Saccharomyces cerevisiae W303"
 dataset_species,Fruit Fly,Drosophila melanogaster
 dataset_species,Zebrafish,Danio rerio
 diseaseType,Acinar Cell Neoplasms,
@@ -7964,6 +7967,18 @@ treatmentType,Surgical Procedure,
 treatmentType,Targeted Molecular Therapy,
 treatmentType,Unknown,
 consortium_funding_agency,NIH,
+consortium_funding_agency,NIH-NCI,
+consortium_id,program.ccbir,
+consortium_id,program.csbc,
+consortium_id,program.htan,
+consortium_id,program.icbp,
+consortium_id,program.metnet,
+consortium_id,program.nci,
+consortium_id,program.nci-clinical-and-translational-exploratory-developmental-studies,
+consortium_id,program.pdmc,
+consortium_id,program.ps-on,
+consortium_id,program.sage-bionetworks,
+consortium_id,program.tec,
 dataset_file_format,AVI,
 dataset_file_format,BAI,
 dataset_file_format,BAM,
@@ -8214,7 +8229,7 @@ assay,ATAC-Seq,"Assay for Transposase-Accessible Chromatin Using Sequencing, Ass
 assay,ATP Bioluminescence Assay,"Atp bioluminescence assay, ATP Bioluminescence assay"
 assay,Affinity Purification Mass Spectrometry,"Affinity purification mass spectrometry, AP-MS"
 assay,Allograft,
-assay,Amplicon Sequencing,Amplicon sequencing
+assay,Amplicon Sequencing,"Amplicon sequencing, AMPLICON"
 assay,Angiogenesis Assay,Angiogenesis assay
 assay,Apoptosis Assay,Apoptosis assay
 assay,Atomic Absorption Spectrophotometry,Atomic absorption spectrophotometry
@@ -8236,7 +8251,7 @@ assay,CRISPR,"CRISPER-Cas9 technique, Crispr, CRISPR-CAS9"
 assay,CUT&RUN,"Cut&run, CUT&RUN"
 assay,CUT&Tag-Sequencing,"cleavage under targets and tagmentation, Cut&tag-sequencing"
 assay,Cell Adhesion Assay,Cell adhesion assay
-assay,Cell Proliferation Assay,"EdU Cell Proliferation Assay, CELLULAR PROLIFERATION ASSAY, Cell Proliferation Assay"
+assay,Cell Proliferation Assay,"EdU Cell Proliferation Assay, CELLULAR PROLIFERATION ASSAY, Cell Proliferation Assay, cell proliferation"
 assay,Cell Viability Assay,"Cell viability assay, In Vitro Cell Survival Assay, In vitro Cell Survival Assay"
 assay,Cell-spreading Assay,Cell-spreading assay
 assay,CellTiter-Glo Luminescent Cell Viability Assay,"CellTiter-Glo Assay, Celltiter-glo luminescent cell viability assay"
@@ -8289,7 +8304,7 @@ assay,Dynamic Susceptibility Contrast-Enhanced Magnetic Resonance Imaging,"DYNAM
 assay,ELISA,"Enzyme-linked Immunosorbent Assay, enzyme-linked immunosorbent assay"
 assay,Efferocytosis Assay,Efferocytosis assay
 assay,Electron Diffraction,Electron diffraction
-assay,Electron Microscopy,Electron microscopy
+assay,Electron Microscopy,"Electron microscopy, 3D electron microscopy"
 assay,Electron Paramagnetic Resonance Spectroscopy,"Electron spin resonance (ESR) spectroscopy, EPR spectroscopy"
 assay,Electrophoretic Mobility Shift Assay,"EMSA, Electrophoretic Mobility Shift Assay, Gel Shift Assay"
 assay,Electrospray Ionization Time-of-Flight Mass Spectrometry,Electrospray ionization time-of-flight mass spectrometry
@@ -8299,17 +8314,17 @@ assay,Enzyme Activity Assay,"Lipoprotein Lipase Activity Assays, Enzyme activity
 assay,Enzyme-Linked Immunospot Assay,"ELISOPOT (enzyme-linked immunospot) assay; ELISpot, Enzyme-linked immunospot assay"
 assay,Epidemiological Method,"Epidemiology, Method, Epidemiological method, Epidemiological Technique, Epidemiological Method"
 assay,FAIRE-Seq,"Formaldehyde-Assisted Isolation of Regulatory Elements Sequencing, Faire-seq"
-assay,FISH,"RNA -FISH analysis, RNA FISH imaging"
+assay,FISH,"RNA -FISH analysis, RNA FISH imaging, Fluorescence In Situ Hybridization"
 assay,Flow Cytometry,"Flow cytometry, flow cytometry, FLOW CYTOMETRY"
 assay,Fluorescence Activated Cell Sorting,"Fluorescence Activated Cell Sorting, FACS, Fractionation, Fluorescence Activated Cell Sorting, Fluorescence activated cell sorting"
 assay,Fluorescence Correlation Spectroscopy,Fluorescence correlation spectroscopy
 assay,Fluorescence Imaging,"Fluorescence Imaging, Fluorescence imaging"
 assay,Fluorescence Lifetime Imaging Microscopy,"FLIM, Fluorescence Lifetime Imaging Microscopy, FLUORESCENT LIFETIME IMAGING MICROSCOPY"
-assay,Fluorescence Microscopy,"Fluorescence microscopy, FLUORESCENT MICROSCOPY, Microscopy, Light, Fluorescence, Fluorescence Microscopy, fluorescence microscopy, Fluorescence Light Microscopy"
+assay,Fluorescence Microscopy,"Fluorescence microscopy, FLUORESCENT MICROSCOPY, Microscopy, Light, Fluorescence, Fluorescence Microscopy, fluorescence microscopy, Fluorescence Light Microscopy, fluorescence microscopy assay"
 assay,Fluorescence Recovery After Photo-Bleaching,"Fluorescence recovery after photo-bleaching, FRAP"
 assay,Fluorescent Antibody Procedure,"Immunofluorescence, immunofluorescence, Immunologic, Immunofluorescence, FLUORESCENT IMMUNOASSAY, Fluorescent Antibody Procedure, Quantitative Immunofluorescence, Immunofluorescence Assay, Fluorescent Antibody Assay"
 assay,Fluorescent Cell Barcoding,Fluorescent cell barcoding
-assay,Fluorescent In Situ Sequencing ,"FISSEQ, Fluorescent in situ sequencing , Fluorescent In Situ Sequencing of RNA"
+assay,Fluorescent In Situ Sequencing,"FISSEQ, Fluorescent in situ sequencing, Fluorescent In Situ Sequencing of RNA"
 assay,Focused Ion Beam Scanning Electron Microscopy,Focused ion beam scanning electron microscopy
 assay,Forster Resonance Energy Transfer,
 assay,Fourier Transform Ion Cyclotron Resonance Mass Spectrometry,"Fourier transform ion cyclotron resonance mass spectrometry, Fourier Transform Ion Cyclotron Resonance Mass Spectrometry"
@@ -8375,7 +8390,7 @@ assay,MeRIP-Seq,"m6A-Methylated RNA Immunoprecipitation-Sequencing, Methylated R
 assay,Methyl Binding Domain Sequencing,"MBD-Cap Seq, MBD-seq, Methyl binding domain sequencing"
 assay,Methylation-Specific PCR,Methylation-specific pcr
 assay,Micro-computed Tomography,Micro-computed tomography
-assay,MicroRNA Expression Array,"Microrna expression array, mirnaArray"
+assay,MicroRNA Expression Array,"Microrna expression array, mirnaArray, miRNA array"
 assay,MicroRNA Sequencing,"microRNA Sequencing, miRNA-Seq, miRNA-Seq (microRNA sequencing), miRNA-seq, mirnaSeq, MicroRNA-Seq, miRNA Sequencing"
 assay,Microcontact Printing,Microcontact printing
 assay,Microfluidics,"In vitro microfluidics, In vitro Microfluidics"
@@ -8457,10 +8472,10 @@ assay,Single Cell ATAC-Seq,"Single-cell ATAC-Seq, scATAC-seq, Single Cell ATAC-S
 assay,Single Cell Cytokine Detection Chip Assay,Single cell cytokine detection chip assay
 assay,Single Cell DNA Sequencing,"Single cell dna sequencing, Single Cell Genome Sequencing"
 assay,Single Cell Gel Electrophoresis,"Neutral Comet Assay, Alkaline Comet Assay, Neutral comet assay, COMET, Comet Assay"
-assay,Single Cell RNA-Sequencing,"scRNA-seq, single-cell time course RNA-Seq of circulating tumor cells"
+assay,Single Cell RNA-Sequencing,"scRNA-seq, single-cell time course RNA-Seq of circulating tumor cells, single-cell RNA-seq"
 assay,Single Molecule Forster Resonance Energy Transfer,"Single molecule forster resonance energy transfer, smFRET, single molecule Forster Resonance Energy Transfer, single Molecule Forster Resonance Energy Transfer"
 assay,Single Nucleotide Polymorphism Array,"SNP Genotyping, Genotype Chip, SNP Probe, SNP ARRAY, snpArray"
-assay,Single Nucleus RNA-Sequencing,Single nucleus rna-sequencing
+assay,Single Nucleus RNA-Sequencing,"Single nucleus rna-sequencing, single-nucleus RNA-seq"
 assay,Single-Cell BCR Sequencing,"Single-cell bcr sequencing, Single-Cell B-Cell Receptor Sequencing, scBCR-seq"
 assay,Single-Cell Barcode Chip,Single-cell barcode chip
 assay,Single-Cell TCR Sequencing,"Single Cell T Cell Receptor Sequencing, Single-cell tcr sequencing"
@@ -8481,7 +8496,7 @@ assay,Surveyor Nuclease Assay,"Surveyor nuclease assay, Surveyor Assay"
 assay,Synaptophysin Staining Method,"SYP Staining Method, Synaptophysin staining method"
 assay,Synthetic Genetic Array,Synthetic genetic array
 assay,TAB-Seq,"Tab-seq, Tet-Assisted Bisulfite Pyrosequencing"
-assay,TCR Sequencing,"T-cell Receptor Sequencing, Tcr sequencing"
+assay,TCR Sequencing,"T-cell Receptor Sequencing, Tcr sequencing, T cell receptor repertoire sequencing"
 assay,TIRF Microscopy,"Total Internal Reflection Fluorescence Microscopy, Tirf microscopy"
 assay,TRAP Staining,"TRACP Staining, TRAcP Staining, Tartrate Resistant Acid Phosphatase Staining Method, TRAP Stain"
 assay,TUNEL assay,"TUNEL Assay, Terminal deoxynucleotidyl transferase dUTP nick end labeling, TdT-Mediated dUTP Nick End Labeling Assay"
@@ -8493,7 +8508,7 @@ assay,Targeted Transcriptome Sequencing,"nextGenerationTargetedSequencing, TARGE
 assay,Thermal Shift Assay,"Cellular Thermal Shift Assay, Thermal shift assay"
 assay,Thin-Layer Chromatography,"TLC, Thin-layer chromatography"
 assay,Tiling Array,"Tiling array, Genome Tiling Array"
-assay,Time Lapse Microscopy,"Time lapse microscopy, time-lapse fluorescence microscopy"
+assay,Time Lapse Microscopy,"Time lapse microscopy, time-lapse fluorescence microscopy, live imaging"
 assay,Time-Correlated Single Photon Counting,"TCSPC, Time-correlated single photon counting"
 assay,Tissue Engineering,tissue engineered scaffold
 assay,Tissue Microarray,"Tissue Chip,  Tissue Arrays, TMA"
@@ -8501,7 +8516,7 @@ assay,Total Internal Reflection Fluorescence Microscopy,Total internal reflectio
 assay,Traction Force Microscopy,"tractionForceMicroscopy, Traction force microscopy"
 assay,Transmission Electron Microscopy,"Transmission electron microscopy, TRANSMISSION ELECTRON MICROSCOPY, Microscopy, Electron, Transmission, TEM"
 assay,Transwell Assay,Transwell assay
-assay,UPLC-MSMS,"Ultra-performance liquid chromatography-tandem mass spectrometry, Uplc-msms"
+assay,UPLC-MSMS,"Ultra-performance liquid chromatography-tandem mass spectrometry, Uplc-msms, ultra high-performance liquid chromatography/tandem mass spectrometry"
 assay,UV Photocrosslinking,"UV photocrosslinking, Uv photocrosslinking"
 assay,Unspecified,"Not Specified, UNSPECIFIED, Not Assigned, unspecified"
 assay,Vibrational Spectroscopy,Vibrational spectroscopy
@@ -8551,16 +8566,15 @@ assay,Single-Molecule Localization Microscopy,
 assay,Synthesis,
 assay,Targeted Therapy Agent,
 assay,Trichrome Staining Method,
-assay,Ultrasound Imaging,
+assay,Ultrasound Imaging,high frequency ultrasound
 assay,Transcription profiling by NanoString,Nanostring nCounter
 assay,Alcian Blue Staining Method,
 assay,Artificial Intelligence,
 assay,Cell Culture,
-assay,Clinical Study,Clincal Trial
+assay,Clinical Study,"Clincal Trial, clinical data"
 assay,Cell-free Circulating Tumor DNA Assay,
 assay,Co-Immunoprecipitation Mass Spectrometry,
 assay,Deep Learning,
-assay,Fluorescent In Situ Sequencing,
 assay,Gene Ontology Enrichment Analysis,
 assay,Gene Set Enrichment Analysis,GSEA
 assay,Gene Silencing ,
@@ -8574,7 +8588,7 @@ assay,Phylogenetic Analysis,
 assay,Picrosirius Staining,
 assay,Scratch Assay,
 assay,Structural Variant Analysis,
-assay,Survival Analysis,
+assay,Survival Analysis,survival
 assay,Targeted Error Correction Sequencing,TEC-Seq
 assay,Tuba-Seq,
 assay,SDS-PAGE,
@@ -8582,6 +8596,16 @@ assay,Cell Fractionation,
 assay,Multiscale Light Sheet Microscopy,
 assay,Light Sheet Microscopy,
 assay,CODEX,
+assay,in vivo tumor growth,
+assay,in silico synthesis,
+assay,RNA array,
+assay,shRNA-seq,
+assay,spatial transcriptomics,
+assay,in vivo PDX viability,
+assay,histology,
+assay,proximity extension assay,
+assay,compound screen,
+assay,metabolic screening,
 tissue,Gonad,"Gonadal, Gonads"
 tissue,Abdominal Esophagus,"ESOPHAGUS, ABDOMINAL"
 tissue,Adipose Tissue,"Adipose, Body Fat, Fat Tissue, Human Adipose Tissue"
@@ -8889,10 +8913,8 @@ processLevel,Level 4,
 processLevel,Auxiliary,
 processLevel,Not Applicable,
 processLevel,Metadata,
-dataTier,Anonymous,
-dataTier,Open,
-dataTier,Controlled,
-dataTier,Private,
+publication_accessibility,Open Access,
+publication_accessibility,Restricted Access,
 sourceGeography,AD,
 sourceGeography,AE,
 sourceGeography,AF,
@@ -9143,8 +9165,8 @@ sourceGeography,ZA,
 sourceGeography,ZM,
 sourceGeography,ZW,
 studyLicense,CC0,
-studyLicense,CC_BY,
-studyLicense,CC_BY_NC,
+studyLicense,CC_BY,CC-BY 4.0
+studyLicense,CC_BY_NC,CC BY-NC 3.0
 studyLicense,CC_BY_ND,
 studyLicense,CC_BY_SA,
 studyLicense,CC_BY_NC_ND,
@@ -9153,6 +9175,47 @@ studyLicense,Apache_2,
 studyLicense,MIT,
 studyLicense,GPL_3,
 studyLicense,BSD_3_Clause,
+dataCatalog_download_type,Synapse Hosted,
+dataCatalog_download_type,Synapse Indexed,
+dataCatalog_data_type,gene expression,
+dataCatalog_data_type,chromatin activity,
+dataCatalog_data_type,genomic variants,
+dataCatalog_data_type,immunoassay,
+dataCatalog_data_type,network,
+dataCatalog_data_type,nucleic acid sequence record,
+dataCatalog_data_type,image,
+duo,Pending Annotation,
+duo,DUO:0000042,
+duo,DUO:0000027,
+duo,DUO:0000016,
+duo,DUO:0000029,
+duo,DUO:0000043,
+duo,DUO:0000015,
+duo,DUO:0000004,
+duo,DUO:0000045,
+duo,DUO:0000017,
+duo,DUO:0000011,
+duo,DUO:0000046,
+duo,DUO:0000018,
+duo,DUO:0000044,
+duo,DUO:0000021,
+duo,DUO:0000006,
+duo,DUO:0000019,
+duo,DUO:0000026,
+duo,DUO:0000020,
+duo,DUO:0000012,
+duo,DUO:0000025,
+duo,DUO:0000024,
+duo,DUO:0000028,
+duo,DUO:0000022,
+duo,DUO:0000007,
+duo,DUOPlus1,
+duo,DUOPlus2,
+duo,DUOPlus3,
+duo,DUOPlus4,
+duo,DUOPlus5,
+duo,DUOPlus6,
+duo,DUOPlus7,
 ed_topic,Computational Model Development,
 ed_topic,Computational Resource,
 ed_topic,Diversity/Equity/Inclusion,
@@ -10269,7 +10332,7 @@ institution_name,Purdue University,
 institution_name,Rockefeller University,
 institution_name,Sage Bionetworks,
 institution_name,Salk Institute for Biological Studies,
-institution_name,St. Jude Children's Research Hospital,
+institution_name,St. Jude Children's Research Hospital,St. Jude Children's Hospital
 institution_name,Stanford University,
 institution_name,Stony Brook University,
 institution_name,The University of Texas Health Science Center at San Antonio,
@@ -10641,6 +10704,96 @@ institution_location_state,Washington,
 institution_location_state,West Virginia,
 institution_location_state,Wisconsin,
 institution_location_state,Wyoming,
+institution_id,org.albert-einstein-college-of-medicine,
+institution_id,org.arizona-state-university,
+institution_id,org.auburn-university,
+institution_id,org.barrow-neurological-institute,
+institution_id,org.baylor-college-of-medicine,
+institution_id,org.beckman-research-institute-of-city-of-hope,
+institution_id,org.beth-israel-deaconess-hospital,
+institution_id,org.boston-medical-center,
+institution_id,org.boston-university,
+institution_id,org.brigham-and-womens-hospital,
+institution_id,org.california-institute-of-technology,
+institution_id,org.childrens-hospital-of-philadelphia,
+institution_id,org.city-of-hope,
+institution_id,org.clemson-university,
+institution_id,org.cleveland-clinic,
+institution_id,org.cold-spring-harbor-laboratory,
+institution_id,org.columbia-university,
+institution_id,org.cornell-university,
+institution_id,org.dana-farber-cancer-institute,
+institution_id,org.dartmouth-college,
+institution_id,org.duke-university,
+institution_id,org.emory-university,
+institution_id,org.georgia-institute-of-technology,
+institution_id,org.harvard-medical-school,
+institution_id,org.harvard-university,
+institution_id,org.hebrew-university-of-jerusalem,
+institution_id,org.houston-methodist,
+institution_id,org.indiana-university,
+institution_id,org.institute-for-systems-biology,
+institution_id,org.jackson-laboratory,
+institution_id,org.johns-hopkins-university,
+institution_id,org.lurie-children-s-hospital,
+institution_id,org.massachusetts-general-hospital,
+institution_id,org.massachusetts-institute-of-technology,
+institution_id,org.mayo-clinic,
+institution_id,org.memorial-sloan-kettering-cancer-center,
+institution_id,org.moffitt-cancer-center,
+institution_id,org.northeastern-university,
+institution_id,org.new-york-university,
+institution_id,org.northwestern-university,
+institution_id,org.oregon-health-science-university,
+institution_id,org.pacific-northwest-national-laboratory,
+institution_id,org.purdue-university,
+institution_id,org.rockefeller-university,
+institution_id,org.sage-bionetworks,
+institution_id,org.salk-institute-for-biological-studies,
+institution_id,org.st-jude-children-s-research-hospital,
+institution_id,org.stanford-university,
+institution_id,org.stony-brook-university,
+institution_id,org.the-university-of-texas-health-science-center-at-san-antonio,
+institution_id,org.tufts-university-medford,
+institution_id,org.university-of-alabama-at-birmingham,
+institution_id,org.university-of-arizona,
+institution_id,org.university-of-arkansas-at-fayetteville,
+institution_id,org.university-of-california-berkeley,
+institution_id,org.university-of-california-irvine,
+institution_id,org.university-of-california-los-angeles,
+institution_id,org.university-of-california-san-diego,
+institution_id,org.university-of-california-san-francisco,
+institution_id,org.university-of-chicago,
+institution_id,org.university-of-chicago-medical-center,
+institution_id,org.university-of-colorado-denver,
+institution_id,org.university-of-delaware,
+institution_id,org.university-of-florida,
+institution_id,org.university-of-illinois,
+institution_id,org.university-of-illinois-at-chicago,
+institution_id,org.university-of-massachusetts-medical-school,
+institution_id,org.university-of-miami,
+institution_id,org.university-of-michigan,
+institution_id,org.university-of-nevada-reno,
+institution_id,org.university-of-minnesota,
+institution_id,org.university-of-new-south-wales,
+institution_id,org.university-of-north-carolina-at-chapel-hill,
+institution_id,org.university-of-pennsylvania,
+institution_id,org.university-of-pittsburgh,
+institution_id,org.university-of-southern-california,
+institution_id,org.university-of-texas-md-anderson-cancer-center,
+institution_id,org.university-of-texas-southwestern-medical-center,
+institution_id,org.university-of-texas-at-austin,
+institution_id,org.university-of-utah,
+institution_id,org.university-of-virginia,
+institution_id,org.university-of-washington,
+institution_id,org.university-of-wisconsin-madison,
+institution_id,org.vanderbilt-university,
+institution_id,org.virginia-polytechnic-institute,
+institution_id,org.washington-university-in-st-louis,
+institution_id,org.wake-forest,
+institution_id,org.weill-cornell-medicine,
+institution_id,org.wistar-institute,
+institution_id,org.yale-university,
 chair_roles,Annual Meeting,
 chair_roles,None,
 chair_roles,Steering Committee,
@@ -10660,8 +10813,6 @@ working_group_participation,Protein-Protein Interactions,
 working_group_participation,Resource and Data Sharing,
 project_type,Core,
 project_type,Project,
-publication_accessibility,Open Access,
-publication_accessibility,Restricted Access,
 seqPlatform,454 GS,
 seqPlatform,454 GS 20,
 seqPlatform,454 GS FLX,
@@ -10836,38 +10987,6 @@ rtPrimer,Oligo-dT,
 rtPrimer,Poly-dT,
 rtPrimer,Feature barcoding,
 rtPrimer,Random,
-duo,Pending Annotation,
-duo,DUO:0000042,
-duo,DUO:0000027,
-duo,DUO:0000016,
-duo,DUO:0000029,
-duo,DUO:0000043,
-duo,DUO:0000015,
-duo,DUO:0000004,
-duo,DUO:0000045,
-duo,DUO:0000017,
-duo,DUO:0000011,
-duo,DUO:0000046,
-duo,DUO:0000018,
-duo,DUO:0000044,
-duo,DUO:0000021,
-duo,DUO:0000006,
-duo,DUO:0000019,
-duo,DUO:0000026,
-duo,DUO:0000020,
-duo,DUO:0000012,
-duo,DUO:0000025,
-duo,DUO:0000024,
-duo,DUO:0000028,
-duo,DUO:0000022,
-duo,DUO:0000007,
-duo,DUOPlus1,
-duo,DUOPlus2,
-duo,DUOPlus3,
-duo,DUOPlus4,
-duo,DUOPlus5,
-duo,DUOPlus6,
-duo,DUOPlus7,
 deIdMethod,Manual,
 deIdMethod,Semiautomatic,
 deIdMethod,Automatic,
@@ -10876,6 +10995,10 @@ dataPermission,Agreement,
 dataPermission,Attestation,
 dataPermission,Award,
 dataPermission,Other,
+dataTier,Anonymous,
+dataTier,Open,
+dataTier,Controlled,
+dataTier,Private,
 indexDate,Diagnosis Date ,
 indexDate,Enrollment Date,
 indexDate,Collection Date,

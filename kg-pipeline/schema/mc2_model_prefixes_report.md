@@ -34,13 +34,13 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | MONDO | `http://purl.obolibrary.org/obo/MONDO_` | 1/1 |
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
-| NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 3/3 |
+| NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 6/6 |
 | NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1092/1092 |
 | OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
 | OBI | `http://purl.obolibrary.org/obo/OBI_` | 26/26 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
 | OMIT | `http://purl.obolibrary.org/obo/OMIT_` | 1/1 |
-| PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/33 |
+| PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/34 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |
 | PRIDE | `http://purl.obolibrary.org/obo/PRIDE_` | 2/2 |
 | ROR | `https://ror.org/` | 271/271 |
 | SIO | `http://semanticscience.org/resource/SIO_` | 3/3 |
@@ -64,7 +64,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 
 ## STILL UNRESOLVED — needs manual review
 
-- `SPDX` (325 row(s)) — no clean Ontology Url match and no fallback known.
+- `SPDX` (327 row(s)) — no clean Ontology Url match and no fallback known.
 
 ## Already declared in the schema (left untouched)
 

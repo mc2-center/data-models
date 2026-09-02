@@ -142,11 +142,13 @@ classes:
     - GrantView Key
     - Study Key
     - DatasetView Key
+    - studyId
+    - portal
     - community
     - description
-    - contributors
+    - contributor
     - keywords
-    - individuals
+    - individualCount
     - link
     - croissant_s3_file_object
     - accessType
@@ -154,12 +156,15 @@ classes:
     - conditionsOfAccess
     - countryOfOrigin
     - creator
-    - dataUseModifiersCatalog
+    - authors
+    - dataUseModifiers
     - datePublished
     - funder
+    - grantNumber
     - includedInDataCatalog
     - license
     - measurementTechnique
+    - dataType
     - species
     - subject
     - title
@@ -169,6 +174,11 @@ classes:
     - yearProcessed
     - specimenCount
     - series
+    - downloadType
+    - externalRepositoryUri
+    - ageGroup
+    - diseaseFocus
+    - manifestation
   Dataset View:
     description: The denormalized manifest for dataset submission.
     tree_root: true
@@ -1586,7 +1596,7 @@ slots:
     description: The Sage Bionetworks project or initiative with which the dataset is associated.
   description:
     description: A text description of the dataset. Can be identifical to Dataset Description.
-  contributors:
+  contributor:
     description: Organization(s), insitution(s), or person(s) that generated and/or deposited the data
       in Synapse. Can be identical to Grant Institution Name.
     multivalued: true
@@ -1594,7 +1604,7 @@ slots:
     description: Keywords associated with the dataset. Can be identical to Publication Keywords.
     required: true
     multivalued: true
-  individuals:
+  individualCount:
     description: The number of participants or samples associated with the files in the dataset. Can be
       identical to Study Number of Participants or DSP Number of Participants
     range: float
@@ -1607,6 +1617,37 @@ slots:
     description: A Synapse url where the croissant file associated with this dataset is stored.
     comments:
     - 'schematic Format: uri'
+  studyId:
+    description: The Synapse ID of the Project associated with this dataset's grant. Populated as a native
+      Synapse annotation directly on the Dataset entity; distinct from this repo's own Study_id/Study
+      Key.
+    pattern: ^syn\d{7,8}$
+  grantNumber:
+    description: Grant number associated with the dataset, as annotated directly on the Synapse Dataset
+      entity. Can be identical to Dataset Grant Number.
+    pattern: ^CA\d{6}$
+  downloadType:
+    description: Hosting type for the dataset's files, as annotated directly on the Synapse Dataset entity
+      (distinct from the CCKP portal's own DatasetView.downloadType column).
+    range: downloadType Enum
+  externalRepositoryUri:
+    description: External repository identifier(s) for the dataset, as CURIE-shaped references (e.g. geo:GSE12345,
+      sra:SRP12345, bioproject:PRJNA12345).
+    multivalued: true
+  authors:
+    description: Author list for the dataset's associated publication. Distinct from creator, which captures
+      the person(s)/organization(s) that generated or deposited the data itself.
+    multivalued: true
+  ageGroup:
+    description: Age group of the individual(s)/subject(s) the dataset's data were generated from (e.g.
+      Adult). Free text pending a confident controlled vocabulary - too few real values observed to seed
+      one yet.
+  diseaseFocus:
+    description: Disease area the dataset focuses on, as annotated directly on the Synapse Dataset entity.
+      Not populated in current practice.
+  portal:
+    description: The Sage Bionetworks portal that curated this record (e.g. CCKP). Distinguishes provenance
+      if this vocabulary is ever shared across multiple Sage portals.
   DataCatalog_id:
     description: Unique ID associated with a Data Catalog entry, used as a key for record linking and
       updates.
@@ -1630,10 +1671,14 @@ slots:
     description: Organization or person that is creator of the dataset. Default is the PI of the project
       and/or the user who created all files in the dataset.
     required: true
-  dataUseModifiersCatalog:
-    description: List of data use ontology (DUO) terms that are true for dataset, which describes the
-      allowable scope and terms for data use. Omit property if not applicable/unknown.
     multivalued: true
+  dataUseModifiers:
+    description: A list of data use modifiers that apply to the access requirement. Examples include GRU,
+      IRB, etc.
+    multivalued: true
+    range: dataUseModifiers Enum
+    annotations:
+      cde_id: '00002002'
   datePublished:
     description: Date data were published/available on Synapse.
     range: float
@@ -1654,14 +1699,19 @@ slots:
       Dataset Assay.
     multivalued: true
     range: measurementTechnique Enum
+  dataType:
+    description: Broad data-type category for the dataset (e.g. gene expression, chromatin activity, genomic
+      variants). Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv's label taxonomy.
+    multivalued: true
+    range: dataType Enum
   species:
     description: Species of the organism(s) from which the data were generated. Omit property if not applicable,
       such as for data like compounds or other non-biological data. Can be identical to Dataset Species.
     multivalued: true
     range: species Enum
   subject:
-    description: Applicable subject term(s) for dataset cataloging; use the Library of Congress Subject
-      Headings (LCSH) scheme.
+    description: Applicable subject term(s) for dataset cataloging - in practice, a free-text model-system/specimen
+      descriptor (e.g. C57BL/6, NOD SCID), not a Library of Congress Subject Heading.
     multivalued: true
   title:
     description: The name of the dataset.
@@ -1686,6 +1736,10 @@ slots:
     range: float
   series:
     description: Data series designation (e.g., NF-OSI Processed Data).
+  manifestation:
+    description: Tumor type or other clinical manifestation associated with the dataset. Can be identical
+      to Dataset Tumor Type.
+    range: manifestation Enum
   Dataset Name:
     description: Name of the dataset
     required: true
@@ -3234,13 +3288,6 @@ slots:
   AccessRequirementKey:
     description: The Access Requirement id(s) associated with this object. Provide multiple values as
       a comma-separated list.
-  dataUseModifiers:
-    description: A list of data use modifiers that apply to the access requirement. Examples include GRU,
-      IRB, etc.
-    multivalued: true
-    range: dataUseModifiers Enum
-    annotations:
-      cde_id: '00002002'
   collaborationRequired:
     description: If collaboration is required for the access requirement, provide the PI email address.
       Provide multiple as a comma-separated list.
@@ -4266,6 +4313,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -4295,6 +4346,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -4322,6 +4377,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -13852,6 +13911,8 @@ enums:
   Consortium Funding Agency Enum:
     permissible_values:
       NIH: null
+      NIH-NCI:
+        description: National Institutes of Health - National Cancer Institute.
   Consortium_id Enum:
     permissible_values:
       program.ccbir: null
@@ -13865,16 +13926,20 @@ enums:
       program.ps-on: null
       program.sage-bionetworks: null
       program.tec: null
+  downloadType Enum:
+    permissible_values:
+      Synapse Hosted:
+        description: The dataset's files are stored directly in Synapse.
+      Synapse Indexed:
+        description: The dataset's files are indexed by a Synapse Dataset entity but stored/served elsewhere.
   accessType Enum:
     permissible_values:
-      Anonymous:
-        description: Data can be viewed and downloaded anonymously by anyone on the internet.
-      Open:
-        description: Users must have a Synapse account to download data.
-      Controlled:
-        description: Users must have a Synapse account and satisfy access conditions to download data.
-      Private:
-        description: Users must be provided access to data in Synapse by a project administrator.
+      Open Access:
+        description: Publication content that is freely available to the public without restriction or
+          subscription requirement.
+      Restricted Access:
+        description: Publication content that is limited to specific individuals or requires permission,
+          subscription, or payment to access.
   countryOfOrigin Enum:
     permissible_values:
       AD:
@@ -14375,18 +14440,142 @@ enums:
         description: Zambia
       ZW:
         description: Zimbabwe
+  dataUseModifiers Enum:
+    permissible_values:
+      Pending Annotation:
+        description: Data Use Codes have not yet been provided or documented for this resource.
+      DUO:0000042:
+        description: This data use permission indicates that use is allowed for general research use for
+          any research purpose.
+        meaning: DUO:0000042
+      DUO:0000027:
+        description: This data use modifier indicates that use is limited to use within an approved project.
+        meaning: DUO:0000027
+      DUO:0000016:
+        description: This data use modifier indicates that use is limited to genetic studies only (i.e.,
+          studies that include genotype research alone or both genotype and phenotype research, but not
+          phenotype research exclusively)
+        meaning: DUO:0000016
+      DUO:0000029:
+        description: This data use modifier indicates that the requestor must return derived/enriched
+          data to the database/resource.
+        meaning: DUO:0000029
+      DUO:0000043:
+        description: This data use modifier indicates that use is allowed for clinical use and care.
+        meaning: DUO:0000043
+      DUO:0000015:
+        description: This data use modifier indicates that use does not allow methods development research
+          (e.g., development of software or algorithms).
+        meaning: DUO:0000015
+      DUO:0000004:
+        description: This data use permission indicates there is no restriction on use.
+        meaning: DUO:0000004
+      DUO:0000045:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations.
+        meaning: DUO:0000045
+      DUO:0000017:
+        description: Data use modifiers indicate additional conditions for use.
+        meaning: DUO:0000017
+      DUO:0000011:
+        description: This data use permission indicates that use of the data is limited to the study of
+          population origins or ancestry.
+        meaning: DUO:0000011
+      DUO:0000046:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          use.
+        meaning: DUO:0000046
+      DUO:0000018:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations and not-for-profit use, non-commercial use.
+        meaning: DUO:0000018
+      DUO:0000044:
+        description: This data use modifier indicates use for purposes of population, origin, or ancestry
+          research is prohibited.
+        meaning: DUO:0000044
+      DUO:0000021:
+        description: This data use modifier indicates that the requestor must provide documentation of
+          local IRB/ERB approval.
+        meaning: DUO:0000021
+      DUO:0000006:
+        description: This data use permission indicates that use is allowed for health/medical/biomedical
+          purposes; does not include the study of population origins or ancestry.
+        meaning: DUO:0000006
+      DUO:0000019:
+        description: This data use modifier indicates that requestor agrees to make results of studies
+          using the data available to the larger scientific community.
+        meaning: DUO:0000019
+      DUO:0000026:
+        description: This data use modifier indicates that use is limited to use by approved users. If
+          providing this term, please describe the restrictions in column userSpecificRestriction.
+        meaning: DUO:0000026
+      DUO:0000020:
+        description: This data use modifier indicates that the requestor must agree to collaboration with
+          the primary study investigator(s). If providing this term, please note the contact email in
+          column collaborationRequired.
+        meaning: DUO:0000020
+      DUO:0000012:
+        description: This data use modifier indicates that use is limited to studies of a certain research
+          type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.
+        meaning: DUO:0000012
+      DUO:0000025:
+        description: This data use modifier indicates that use is approved for a specific number of months.
+          If providing this term, please provide the number of months in column timeLimitOnUse.
+        meaning: DUO:0000025
+      DUO:0000024:
+        description: This data use modifier indicates that requestor agrees not to publish results of
+          studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.
+        meaning: DUO:0000024
+      DUO:0000028:
+        description: This data use modifier indicates that use is limited to use within an approved institution.
+          If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.
+        meaning: DUO:0000028
+      DUO:0000022:
+        description: This data use modifier indicates that use is limited to within a specific geographic
+          region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.
+        meaning: DUO:0000022
+      DUO:0000007:
+        description: This data use permission indicates that use is allowed provided it is related to
+          the specified disease. If providing this term, please provide the disease MONDO ID(s) in column
+          diseaseSpecificResearch.
+        meaning: DUO:0000007
+      DUOPlus1:
+        description: Source geography is relevant to governance decisions. If providing this term, please
+          provide the applicable country code(s) in column sourceGeography
+      DUOPlus2:
+        description: Study population is relevant to governance decisions. If providing this term, please
+          provide the applicable population type(s) in column populationType.
+      DUOPlus3:
+        description: Data deidentification is relevant to governance decisions. If providing this term,
+          please provide the applicable deidentification type(s) in column deidentificationType.
+      DUOPlus4:
+        description: A data permission designation is associated with the Study. If providing this term,
+          please provide the applicable permission type(s) in column dataPermission.
+      DUOPlus5:
+        description: A data tier designation is associated with the Study. If providing this term, please
+          provide the applicable data tier designation(s) in column dataTier.
+      DUOPlus6:
+        description: A license is associated with the Study. If providing this term, please provide the
+          applicable license in column license.
+      DUOPlus7:
+        description: Attribution conditions are associated with this Study. If providing this term, please
+          provide the attribution statement in column attribution.
   funder Enum:
     permissible_values:
       NIH: null
+      NIH-NCI:
+        description: National Institutes of Health - National Cancer Institute.
   license Enum:
     permissible_values:
       CC0:
         description: Creative Commons Zero license, allowing for the free use of the data.
       CC_BY:
         description: Creative Commons Attribution license, requiring attribution to the original source.
+        meaning: SPDX:CC-BY-4.0
       CC_BY_NC:
         description: Creative Commons Attribution-NonCommercial license, allowing for non-commercial use
           with attribution.
+        meaning: SPDX:CC-BY-NC-3.0
       CC_BY_ND:
         description: Creative Commons Attribution-NoDerivatives license, allowing for redistribution with
           attribution but no modifications.
@@ -15908,6 +16097,7 @@ enums:
         description: An analytical technique combining ultra-performance liquid chromatography (UPLC)
           with tandem mass spectrometry (MS/MS) to separate, identify, and quantify compounds such as
           metabolites or proteins in complex biological samples.
+        meaning: PMID:20061193
       UV Photocrosslinking:
         description: A technique that covalently crosslinks nucleic acids to interacting proteins using
           ultraviolet light, used to capture and study protein-nucleic acid interactions.
@@ -16269,6 +16459,41 @@ enums:
         description: A highly multiplexed cytometric imaging approach that iteratively visualizes many
           protein targets in a single tissue staining reaction.
         meaning: NCIT:C181931
+      in vivo tumor growth:
+        description: Monitoring of tumor growth (e.g. volume/size over time) in a live animal model, typically
+          as a functional readout rather than a molecular assay.
+      in silico synthesis:
+        description: Computational/simulation-based synthesis of a molecule or construct rather than a
+          wet-lab technique.
+      RNA array:
+        description: A microarray platform used to measure RNA expression levels.
+      shRNA-seq:
+        description: A pooled shRNA screening assay read out by sequencing to identify short hairpin RNA
+          constructs enriched or depleted under a selection condition.
+      spatial transcriptomics:
+        description: A general term for assays that measure RNA expression while preserving spatial location
+          information within a tissue section.
+      in vivo PDX viability:
+        description: A functional viability readout from a patient-derived xenograft (PDX) model.
+      histology:
+        description: Microscopic examination of tissue structure via sectioning and staining.
+      proximity extension assay:
+        description: An antibody-based protein detection method (e.g. Olink) in which paired antibodies
+          with attached DNA oligonucleotides bind a target protein, allowing proximity-dependent DNA amplification
+          and readout.
+      compound screen:
+        description: A screening assay testing multiple chemical compounds for a biological effect.
+      metabolic screening:
+        description: A screening assay assessing metabolic activity or metabolite profiles.
+  dataType Enum:
+    permissible_values:
+      gene expression: null
+      chromatin activity: null
+      genomic variants: null
+      immunoassay: null
+      network: null
+      nucleic acid sequence record: null
+      image: null
   species Enum:
     permissible_values:
       African Bush Elephant:
@@ -16293,6 +16518,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -16322,6 +16551,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -16349,6 +16582,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -16380,6 +16617,951 @@ enums:
           embryo, making it possible to follow progeny of single cells until late stages of development;
           an important model for studies of vertebrate cell lineage and developmental biology.
         meaning: NCIT:C14287
+  manifestation Enum:
+    permissible_values:
+      Cutaneous Melanoma:
+        description: A primary melanoma arising from atypical melanocytes in the skin.  Precursor lesions
+          include acquired and congenital melanocytic nevi, and dysplastic nevi.  Several histologic variants
+          have been recognized, including superficial spreading melanoma, acral lentiginous melanoma,
+          nodular melanoma, and lentigo maligna melanoma.
+        meaning: NCIT:C3510
+      Acinar Cell Carcinoma:
+        description: A malignant glandular epithelial neoplasm consisting of secretory cells forming acinar
+          patterns. Representative examples include the acinar cell carcinoma of the pancreas and the
+          acinar adenocarcinoma of the prostate gland.
+        meaning: NCIT:C3768
+      Acute Lymphoblastic Leukemia:
+        description: Leukemia with an acute onset, characterized by the presence of lymphoblasts in the
+          bone marrow and the peripheral blood. It includes the acute B lymphoblastic leukemia and acute
+          T lymphoblastic leukemia.
+        meaning: NCIT:C3167
+      Acute Monocytic Leukemia:
+        description: An acute myeloid leukemia in which the majority of monocytic cells are promonocytes.  (WHO,
+          2001)
+        meaning: NCIT:C4861
+      Acute Myeloid Leukemia:
+        description: An aggressive (fast-growing) disease in which too many myeloblasts (immature white
+          blood cells that are not lymphoblasts) are found in the bone marrow and blood.
+        meaning: NCIT:C3171
+      Acute Promyelocytic Leukemia:
+        description: An acute myeloid leukemia characterized by the predominance of abnormal promyelocytes,
+          most often driven by translocations involving the retinoic acid receptor-alpha (RARA) gene.
+          Over 95% of cases show the reciprocal balanced translocation t(15;17)(q24.1;q21.2), which fuses
+          the PML and RARA genes.
+        meaning: NCIT:C208352
+      Adenocarcinoma:
+        description: Cancer that begins in cells that line certain internal organs and that have gland-like
+          (secretory) properties.
+        meaning: NCIT:C2852
+      Angiosarcoma:
+        description: A type of cancer that begins in the cells that line blood vessels.
+        meaning: NCIT:C3088
+      Astrocytoma:
+        description: A tumor that begins in the brain or spinal cord in small, star-shaped cells called
+          astrocytes.
+        meaning: NCIT:C60781
+      Atypical Teratoid/Rhabdoid Tumor:
+        description: An aggressive malignant embryonal neoplasm arising from the central nervous system.
+          It is composed of cells with a large eccentric nucleus, prominent nucleolus, and abundant cytoplasm.
+          Mutations of the SMARCB1 gene or very rarely SMARCA4 (BRG1) gene are present. The vast majority
+          of cases occur in childhood. Symptoms include lethargy, vomiting, cranial nerve palsy, headache,
+          and hemiplegia.
+        meaning: NCIT:C6906
+      B Acute Lymphoblastic Leukemia:
+        description: The most frequent type of acute lymphoblastic leukemia.  Approximately 75% of cases
+          occur in children under six years of age.  This is a good prognosis leukemia.  In the pediatric
+          age group the complete remission rate is approximately 95% and the disease free survival rate
+          is 70%.  Approximately 80% of children appear to be cured.  In the adult age group the complete
+          remission rate is 60-85%.  (WHO, 2001)
+        meaning: NCIT:C8644
+      B-Cell Non-Hodgkin Lymphoma:
+        description: 'The most common type of non-Hodgkin lymphoma.  It includes the most frequently seen
+          morphologic variants which are: diffuse large B-cell lymphoma, follicular lymphoma, small lymphocytic
+          lymphoma and marginal zone B-cell lymphoma.'
+        meaning: NCIT:C3457
+      Barrett Esophagus:
+        description: 'Esophageal lesion lined with columnar metaplastic epithelium which is flat or villiform.
+          Barrett epithelium is characterized by two different types of cells: goblet cells and columnar
+          cells. The symptomatology of Barrett esophagus is that of gastro-esophageal reflux. It is the
+          precursor of most esophageal adenocarcinomas.  (WHO)'
+        meaning: NCIT:C2891
+      Basal Cell Neoplasm:
+        description: A neoplastic proliferation of basal cells in the epidermis (part of the skin) or
+          other anatomic sites (most frequently the salivary glands).  The basal cell neoplastic proliferation
+          in the epidermis results in basal cell carcinomas.  The basal cell neoplastic proliferation
+          in the salivary glands can be benign, resulting in basal cell adenomas or malignant, resulting
+          in basal cell adenocarcinomas.
+        meaning: NCIT:C3784
+      Basal-Like Breast Carcinoma:
+        description: A biologic subset of breast carcinoma defined by high expression of genes characteristic
+          of basal epithelial cells, including KRT5 and KRT17, annexin 8, CX3CL1, and TRIM29, and usually
+          by lack of expression of the estrogen receptor (ER), progesterone receptor (PR), and human epidermal
+          growth factor receptor 2 (HER2). It is the most common subtype of breast cancer associated with
+          BRCA1 mutations, and is associated with a poor prognosis.
+        meaning: NCIT:C53558
+      Biliary Tract Carcinoma:
+        description: A carcinoma arising from the intrahepatic bile ducts, hepatic ducts, common bile
+          duct, cystic duct, or gallbladder.
+        meaning: NCIT:C156781
+      Bladder Carcinoma:
+        description: Cancer that forms in tissues of the bladder (the organ that stores urine). Most bladder
+          cancers are transitional cell carcinomas (cancer that begins in cells that normally make up
+          the inner lining of the bladder). Other types include squamous cell carcinoma (cancer that begins
+          in thin, flat cells) and adenocarcinoma (cancer that begins in cells that make and release mucus
+          and other fluids). The cells that form squamous cell carcinoma and adenocarcinoma develop in
+          the inner lining of the bladder as a result of chronic irritation and inflammation.
+        meaning: NCIT:C4912
+      Bladder Neoplasm:
+        description: A benign or malignant, primary or metastatic neoplasm of the bladder.
+        meaning: NCIT:C2901
+      Bone Neoplasm:
+        description: A benign, intermediate, or malignant neoplasm involving the bone or articular cartilage.
+        meaning: NCIT:C9343
+      Brain Neoplasm:
+        description: The growth of abnormal cells in the tissues of the brain. Brain tumors can be benign
+          (not cancer) or malignant (cancer).
+        meaning: NCIT:C2907
+      Breast Adenocarcinoma:
+        description: The most common histologic type of breast carcinoma.  Representative examples include
+          invasive ductal carcinoma not otherwise specified, ductal carcinoma in situ, inflammatory carcinoma,
+          secretory carcinoma, signet ring cell carcinoma, tubular carcinoma, invasive lobular carcinoma,
+          and lobular carcinoma in situ.
+        meaning: NCIT:C5214
+      Breast Carcinoma:
+        description: Cancer that forms in tissues of the breast, usually the ducts (tubes that carry milk
+          to the nipple) and lobules (glands that make milk). It occurs in both men and women, although
+          male breast cancer is rare.
+        meaning: NCIT:C4872
+      Breast Neoplasm:
+        description: A benign or malignant neoplasm of the breast parenchyma. It can originate from the
+          ducts, lobules or the breast adipose tissue. Breast neoplasms are much more common in females
+          than males.
+        meaning: NCIT:C2910
+      Carcinoma:
+        description: Cancer that begins in the skin or in tissues that line or cover internal organs.
+        meaning: NCIT:C2916
+      Carcinoma In Situ:
+        description: A malignant epithelial neoplasm which is confined to the epithelial layer without
+          evidence of further tissue invasion.
+        meaning: NCIT:C2917
+      Castration-Resistant Prostate Carcinoma:
+        description: Prostate carcinoma that grows and continues to spread despite the surgical removal
+          of the testes or medical intervention to block androgen production.
+        meaning: NCIT:C130234
+      Cellular Schwannoma:
+        description: A morphologic variant of schwannoma characterized by hypercellularity, Antoni A pattern,
+          and the absence of well-formed Verocay bodies.
+        meaning: NCIT:C4724
+      Central Nervous System Cavernous Hemangioma:
+        description: A cavernous hemangioma arising from the central nervous system.
+        meaning: NCIT:C84621
+      Central Nervous System Neoplasm:
+        description: A tumor of the central nervous system, including brain stem glioma, craniopharyngioma,
+          medulloblastoma, and meningioma.
+        meaning: NCIT:C9293
+      Cerebellar Neoplasm:
+        description: A benign or malignant (primary or metastatic) tumor involving the cerebellum.
+        meaning: NCIT:C2935
+      Cervical Carcinoma:
+        description: Cancer that forms in tissues of the cervix (the organ connecting the uterus and vagina).
+          It is usually a slow-growing cancer that may not have symptoms but can be found with regular
+          Pap tests (a procedure in which cells are scraped from the cervix and looked at under a microscope).
+          Cervical cancer is almost always caused by human papillomavirus (HPV) infection.
+        meaning: NCIT:C9039
+      Cervical Neoplasm:
+        description: A benign, malignant, or precancerous neoplasm that affects the cervix.
+        meaning: NCIT:C2940
+      Cervical Small Cell Carcinoma:
+        description: A small cell neuroendocrine carcinoma arising from the cervix.
+        meaning: NCIT:C7982
+      Cholangiocarcinoma:
+        description: A rare type of cancer that develops in cells that line the bile ducts in the liver.
+          Cancer that forms where the right and left ducts meet is called Klatskin tumor.
+        meaning: NCIT:C4436
+      Chondroblastoma:
+        description: A benign, chondroid-producing, well-circumscribed, lytic neoplasm usually arising
+          from the epiphysis of long bones.  It is characterized by the presence of chondroblasts, osteoclast-like
+          giant cells, chondroid formation, calcification, and mitotic activity. In aggressive cases,
+          there is rearrangement of the 8q21 chromosome band.  It occurs most frequently in children and
+          young adults and rarely metastasizes.
+        meaning: NCIT:C2945
+      Choriocarcinoma:
+        description: An aggressive malignant tumor arising from trophoblastic cells. The vast majority
+          of cases arise in the uterus and represent gestational choriocarcinomas that derive from placental
+          trophoblastic cells. Approximately half of the cases develop from a complete hydatidiform mole.
+          A minority of cases arise in the testis or the ovaries. There is often marked elevation of human
+          chorionic gonadotropin (hCG) in the blood. Choriocarcinomas disseminate rapidly through the
+          hematogenous route; the lungs are most frequently affected.
+        meaning: NCIT:C2948
+      Chronic Lymphocytic Leukemia:
+        description: The most common type of chronic lymphoid leukemia.  It comprises 90% of chronic lymphoid
+          leukemias in the United States.  Morphologically, the neoplastic cells are small, round B-lymphocytes.  This
+          type of leukemia is not considered to be curable with available therapy. (WHO, 2001)
+        meaning: NCIT:C3163
+      Chronic Myeloid Leukemia:
+        description: A chronic myeloproliferative neoplasm characterized by the expression of the BCR-ABL1
+          fusion gene. It presents with neutrophilic leukocytosis. It can appear at any age, but it mostly
+          affects middle aged and older individuals. Patients usually present with fatigue, weight loss,
+          anemia, night sweats, and splenomegaly.
+        meaning: NCIT:C3174
+      Clear Cell Renal Cell Carcinoma:
+        description: The most common type of kidney cancer. It begins in the lining of the renal tubules
+          in the kidney. The renal tubules filter the blood and produce urine.
+        meaning: NCIT:C4033
+      Colon Adenocarcinoma:
+        description: An adenocarcinoma arising from the colon.  It is more frequently seen in populations
+          with a Western type diet and in patients with a history of chronic inflammatory bowel disease.  Signs
+          and symptoms include intestinal bleeding, anemia, and change in bowel habits.  According to
+          the degree of cellular differentiation, colonic adenocarcinomas are divided into well, moderately,
+          and poorly differentiated.  Histologic variants include mucinous adenocarcinoma, signet ring
+          cell carcinoma, medullary carcinoma, serrated adenocarcinoma, cribriform comedo-type adenocarcinoma,
+          and micropapillary adenocarcinoma.
+        meaning: NCIT:C4349
+      Colon Carcinoma:
+        description: Cancer that forms in the tissues of the colon (the longest part of the large intestine).
+          Most colon cancers are adenocarcinomas (cancers that begin in cells that make and release mucus
+          and other fluids).
+        meaning: NCIT:C4910
+      Colorectal Adenocarcinoma:
+        description: The most common type of colorectal carcinoma.  It is characterized by the presence
+          of malignant glandular epithelial cells invading through the muscularis mucosa into the submucosa.  Histologic
+          variants include mucinous adenocarcinoma, signet ring cell carcinoma, medullary carcinoma, serrated
+          adenocarcinoma, cribriform comedo-type adenocarcinoma, and micropapillary adenocarcinoma.
+        meaning: NCIT:C5105
+      Colorectal Adenoma:
+        description: An adenoma that arises from the colon or rectum.  The group of colorectal adenomas
+          includes tubular, villous, and tubulovillous adenomas, traditional serrated adenomas, sessile
+          serrated adenomas/polyps, and familial adenomatous polyposis.
+        meaning: NCIT:C5673
+      Colorectal Carcinoma:
+        description: Cancer that develops in the colon (the longest part of the large intestine) and/or
+          the rectum (the last several inches of the large intestine before the anus).
+        meaning: NCIT:C2955
+      Colorectal Neoplasm:
+        description: A benign or malignant neoplasm that affects the colon or rectum.  Representative
+          examples of benign neoplasms include lipoma and leiomyoma.  Representative examples of malignant
+          neoplasms include carcinoma, lymphoma, and sarcoma.  Colorectal adenomas always exhibit epithelial
+          dysplasia and are considered premalignant neoplasms.
+        meaning: NCIT:C2956
+      Combined Hepatocellular Carcinoma and Cholangiocarcinoma:
+        description: A rare tumor containing unequivocal elements of both hepatocellular and cholangiocarcinoma
+          that are intimately admixed.  This tumor should be distinguished from separate hepatocellular
+          carcinoma and cholangiocarcinoma arising in the same liver.  The prognosis of this tumor is
+          poor.
+        meaning: NCIT:C3828
+      Craniopharyngioma:
+        description: A histologically benign, but locally destructive, partly cystic, epithelial tumor
+          of the sellar region, derived from Rathke pouch epithelium.
+        meaning: NCIT:C2964
+      Cutaneous T Cell Lymphoma:
+        description: Any of a group of T-cell non-Hodgkin lymphomas that begins in the skin as an itchy,
+          red rash that can thicken or form a tumor. The most common types are mycosis fungoides and Sezary
+          syndrome.
+        meaning: NCIT:C3467
+      Diffuse Large B-Cell Lymphoma:
+        description: A type of B-cell non-Hodgkin lymphoma (cancer of the immune system) that is usually
+          aggressive (fast-growing). It is the most common type of non-Hodgkin lymphoma, and is marked
+          by rapidly growing tumors in the lymph nodes, spleen, liver, bone marrow, or other organs. Other
+          symptoms include fever, night sweats, and weight loss. There are several subtypes of diffuse
+          large B-cell lymphoma.
+        meaning: NCIT:C8851
+      Ductal Breast Carcinoma In Situ:
+        description: A noninvasive condition in which abnormal cells are found in the lining of a breast
+          duct. The abnormal cells have not spread outside the duct to other tissues in the breast. In
+          some cases, ductal carcinoma in situ may become invasive cancer and spread to other tissues,
+          although it is not known at this time how to predict which lesions will become invasive.
+        meaning: NCIT:C2924
+      Dysembryoplastic Neuroepithelial Neoplasm:
+        description: A neoplasm of the nervous system that arises from the neuroepithelial tissues.  Representative
+          examples include astrocytic tumors, oligodendroglial tumors, ependymal tumors, and primitive
+          neuroectodermal tumors.
+        meaning: NCIT:C9505
+      Endometrial Carcinoma:
+        description: Cancer that forms in the tissue lining the uterus (the small, hollow, pear-shaped
+          organ in a woman's pelvis in which a fetus develops). Most endometrial cancers are adenocarcinomas
+          (cancers that begin in cells that make and release mucus and other fluids).
+        meaning: NCIT:C7558
+      Endometrial Neoplasm:
+        description: A benign, borderline, or malignant neoplasm that affects the endometrium.
+        meaning: NCIT:C3012
+      Ependymoma:
+        description: A type of brain tumor that begins in cells lining the spinal cord central canal (fluid-filled
+          space down the center) or the ventricles (fluid-filled spaces of the brain). Ependymomas may
+          also form in the choroid plexus (tissue in the ventricles that makes cerebrospinal fluid).
+        meaning: NCIT:C3017
+      Esophageal Adenocarcinoma:
+        description: A malignant tumor with glandular differentiation arising predominantly from Barrett
+          mucosa in the lower third of the esophagus.  Rare examples of esophageal adenocarcinoma deriving
+          from ectopic gastric mucosa in the upper esophagus have also been reported.  Grossly, esophageal
+          adenocarcinomas are similar to esophageal squamous cell carcinomas.  Microscopically, adenocarcinomas
+          arising in the setting of Barrett esophagus are typically papillary and/or tubular.  The prognosis
+          is poor.
+        meaning: NCIT:C4025
+      Esophageal Carcinoma:
+        description: Cancer that forms in tissues lining the esophagus (the muscular tube through which
+          food passes from the throat to the stomach). Two types of esophageal cancer are squamous cell
+          carcinoma (cancer that begins in flat cells lining the esophagus) and adenocarcinoma (cancer
+          that begins in cells that make and release mucus and other fluids).
+        meaning: NCIT:C3513
+      Esophageal Squamous Cell Carcinoma:
+        description: A squamous cell carcinoma arising from the esophagus.  It is associated with a long
+          history of tobacco and alcohol abuse and is exceedingly rare before the age of 30.  The median
+          age is around 65 in both males and females.  It is located mostly in the middle and lower third
+          of the esophagus.  Grossly, polypoid, ulcerated, plaque-like and occult lesions have been described.  The
+          microscopic features are the same as in other squamous cell carcinomas.  Any degree of differentiation
+          may occur, and variation within a single tumor is common.  The prognosis is poor.
+        meaning: NCIT:C4024
+      Ewing Sarcoma:
+        description: A type of cancer that forms in bone or soft tissue.
+        meaning: NCIT:C4817
+      Extraventricular Neurocytoma:
+        description: A WHO grade 2 neoplasm that arises from the brain parenchyma. Morphologically it
+          is characterized by the presence of neoplastic uniform, round cells with neuronal differentiation.
+          Unlike central neurocytoma, it does not involve the lateral ventricles. It usually affects young
+          adults and has a favorable prognosis.
+        meaning: NCIT:C92555
+      Fibroepithelial Polyp:
+        description: A polypoid lesion composed of fibrous tissue and epithelium. Representative examples
+          include skin tag, anal fibroepithelial polyp, and gingival fibroepithelial polyp.
+        meaning: NCIT:C3337
+      Fibrolamellar Carcinoma:
+        description: A distinctive type of liver cell carcinoma that arises in non-cirrhotic livers and
+          is seen predominantly in young patients.  The tumor cells are polygonal and deeply eosinophilic,
+          and are embedded in a fibrous stroma.  The prognosis is similar to classical hepatocellular
+          carcinoma that arises in non-cirrhotic livers, and better than hepatocellular carcinoma that
+          arises in cirrhotic livers.
+        meaning: NCIT:C4131
+      Fibrosarcoma:
+        description: A malignant mesenchymal neoplasm of the soft tissue and bone.
+        meaning: NCIT:C3043
+      Follicular Lymphoma:
+        description: A type of B-cell non-Hodgkin lymphoma (cancer of the immune system) that is usually
+          indolent (slow-growing). The tumor cells grow as groups to form nodules. There are several subtypes
+          of follicular lymphoma.
+        meaning: NCIT:C3209
+      Gallbladder Carcinoma:
+        description: Cancer that forms in tissues of the gallbladder. The gallbladder is a pear-shaped
+          organ below the liver that collects and stores bile (a fluid made by the liver to digest fat).
+          Gallbladder cancer begins in the innermost layer of tissue and spreads through the outer layers
+          as it grows.
+        meaning: NCIT:C3844
+      Gastric Adenocarcinoma:
+        description: 'An adenocarcinoma arising from the stomach glandular epithelium. Gastric adenocarcinoma
+          is primarily a disease of older individuals.  It most commonly develops after a long period
+          of atrophic gastritis and is strongly associated with Helicobacter pylori infection. The lack
+          of early symptoms often delays the diagnosis of gastric cancer. The majority of patients present
+          with advanced tumors which have poor rates of curability. Microscopically, two important histologic
+          types of gastric adenocarcinoma are recognized: the intestinal and diffuse type. The overall
+          prognosis of gastric adenocarcinomas is poor, even in patients who receive a "curative" resection
+          (adapted from Sternberg''s Surgical Pathology, 3rd ed., 1999).'
+        meaning: NCIT:C4004
+      Gastric Carcinoma:
+        description: Cancer that forms in tissues lining the stomach.
+        meaning: NCIT:C4911
+      Gastric Neoplasm:
+        description: A benign or malignant neoplasm involving the stomach.
+        meaning: NCIT:C3387
+      Gastroesophageal Adenocarcinoma:
+        description: A malignant epithelial neoplasm composed of glandular (adenocarcinoma) cells arising
+          at or near the junction of the esophagus and stomach. It encompasses tumors previously classified
+          as distal esophageal, gastroesophageal junction, or gastric cardia adenocarcinomas.
+        meaning: DOID:0080375
+      Gastroesophageal Junction Adenocarcinoma:
+        description: An adenocarcinoma that arises from and straddles the junction of the stomach and
+          esophagus.  The category of adenocarcinomas of the gastroesophageal junction also includes the
+          majority of adenocarcinomas previously called gastric cardia adenocarcinomas.  Squamous cell
+          carcinomas that affect or cross the junction of the stomach and esophagus are classified as
+          carcinomas of the distal esophagus.  Adenocarcinoma of the gastroesophageal junction occurs
+          more often in Caucasian middle aged and elderly males.  Clinical signs and symptoms include
+          dysphagia, abdominal pain, and weight loss.  The prognosis depends on the completeness of the
+          surgical resection, the number of lymph nodes involved by cancer, and the presence or absence
+          of postoperative complications.  The presence of TP53 mutations indicates worse prognosis.
+        meaning: NCIT:C9296
+      Gastrointestinal Stromal Neoplasm:
+        description: A type of tumor that usually begins in cells in the wall of the gastrointestinal
+          tract. It can be benign or malignant.
+        meaning: NCIT:C3868
+      Giant Cell Tumor:
+        description: A benign, intermediate, or malignant tumor that arises from the bone or soft tissue.
+          It is characterized by the presence of multinucleated osteoclast-like giant cells.
+        meaning: NCIT:C3055
+      Glioblastoma:
+        description: The most malignant astrocytic tumor (WHO grade 4).  It is composed of poorly differentiated
+          neoplastic astrocytes and is characterized by the presence of cellular polymorphism, nuclear
+          atypia, brisk mitotic activity, vascular thrombosis, microvascular proliferation, and necrosis.
+          It typically affects adults and is preferentially located in the cerebral hemispheres. (Adapted
+          from WHO)
+        meaning: NCIT:C3058
+      Glioma:
+        description: A general term for tumors of the central nervous system, including astrocytomas,
+          ependymal tumors, glioblastoma multiforme, and primitive neuroectodermal tumors.
+        meaning: NCIT:C3059
+      Head and Neck Carcinoma:
+        description: A carcinoma that arises from the head and neck region.  Representative examples include
+          oral cavity squamous cell carcinoma, laryngeal squamous cell carcinoma, and salivary gland carcinoma.
+        meaning: NCIT:C35850
+      Head and Neck Neoplasm:
+        description: A carcinoma that arises from the head and neck region.  Representative examples include
+          oral cavity squamous cell carcinoma, laryngeal squamous cell carcinoma, and salivary gland carcinoma.
+        meaning: NCIT:C3077
+      Head and Neck Squamous Cell Carcinoma:
+        description: Cancer of the head and neck that begins in squamous cells (thin, flat cells that
+          form the surface of the skin, eyes, various internal organs, and the lining of hollow organs
+          and ducts of some glands). Squamous cell carcinoma of the head and neck includes cancers of
+          the nasal cavity, sinuses, lips, mouth, salivary glands, throat, and larynx (voice box). Most
+          head and neck cancers are squamous cell carcinomas.
+        meaning: NCIT:C34447
+      Hepatocellular Carcinoma:
+        description: A type of adenocarcinoma and the most common type of liver tumor.
+        meaning: NCIT:C3099
+      High Grade Ovarian Serous Adenocarcinoma:
+        description: A rapidly growing serous adenocarcinoma that arises from the ovary. It is characterized
+          by the presence of high grade cytologic features and frequent mitotic figures.
+        meaning: NCIT:C105555
+      Histiocytic Sarcoma:
+        description: An aggressive malignant neoplasm with a poor response to therapy, usually presenting
+          as stage III/IV disease. It is characterized by the presence of neoplastic cells with morphologic
+          and immunophenotypic characteristics similar to those seen in mature histiocytes.
+        meaning: NCIT:C27349
+      Hodgkin Lymphoma:
+        description: A malignant neoplasm of the lymphatic system that is comprised of abnormal lymphocytes
+          and is characterized by the presence of Reed-Sternberg cells.
+        meaning: NCIT:C9357
+      Intestinal Neoplasm:
+        description: A benign or malignant neoplasm involving the small or large intestine.
+        meaning: NCIT:C3141
+      Intrahepatic Cholangiocarcinoma:
+        description: A malignant neoplasm of the liver arising from/comprising cells resembling those
+          of bile ducts.
+        meaning: NCIT:C35417
+      Invasive Ductal Breast Carcinoma:
+        description: The most common type of invasive breast cancer. It starts in the cells that line
+          the milk ducts in the breast, grows outside the ducts, and often spreads to the lymph nodes.
+        meaning: NCIT:C4194
+      Kaposi Sarcoma:
+        description: A type of cancer characterized by the abnormal growth of blood vessels that develop
+          into skin lesions or occur internally.
+        meaning: NCIT:C9087
+      Leiomyoma:
+        description: A well-circumscribed benign smooth muscle neoplasm characterized by the presence
+          of spindle cells with cigar-shaped nuclei, interlacing fascicles, and a whorled pattern.
+        meaning: NCIT:C6510
+      Leukemia:
+        description: Cancer that starts in blood-forming tissue such as the bone marrow and causes large
+          numbers of blood cells to be produced and enter the bloodstream.
+        meaning: NCIT:C3161
+      Liver and Intrahepatic Bile Duct Carcinoma:
+        description: Primary liver cancer is cancer that forms in the tissues of the liver. Secondary
+          liver cancer is cancer that spreads to the liver from another part of the body.
+        meaning: NCIT:C7927
+      Liver and Intrahepatic Bile Duct Neoplasm:
+        description: A benign or malignant neoplasm that affects the liver parenchyma or intrahepatic
+          bile ducts.  Representative examples of benign neoplasms include hepatocellular adenoma, and
+          bile duct adenoma.  Representative examples of malignant neoplasms include hepatocellular carcinoma,
+          intrahepatic cholangiocarcinoma, and lymphoma.
+        meaning: NCIT:C7103
+      Low Grade Glioma:
+        description: A grade I or grade II glioma arising from the central nervous system. This category
+          includes pilocytic astrocytoma, diffuse astrocytoma, subependymal giant cell astrocytoma, ependymoma,
+          oligodendroglioma, oligoastrocytoma, and angiocentric glioma.
+        meaning: NCIT:C132067
+      Luminal A Breast Carcinoma:
+        description: A biologic subset of breast carcinoma defined by high expression of genes characteristic
+          of luminal epithelial cells, including estrogen receptor (ER), estrogen regulated protein LIV-1,
+          and the transcription factors hepatocyte nuclear factor 3, HNF3A, XBP1, and GATA 3.  This subtype
+          of breast cancer is associated with a good prognosis.
+        meaning: NCIT:C53554
+      Lung Adenocarcinoma:
+        description: A carcinoma that arises from the lung and is characterized by the presence of malignant
+          glandular epithelial cells.  There is a male predilection with a male to female ratio of 2:1.  Usually
+          lung adenocarcinoma is asymptomatic and is identified through screening studies or as an incidental
+          radiologic finding.  If clinical symptoms are present they include shortness of breath, cough,
+          hemoptysis, chest pain, and fever.  Tobacco smoke is a known risk factor.
+        meaning: NCIT:C3512
+      Lung Carcinoma:
+        description: Cancer that forms in tissues of the lung, usually in the cells lining air passages.
+          The two main types are small cell lung cancer and non-small cell lung cancer. These types are
+          diagnosed based on how the cells look under a microscope.
+        meaning: NCIT:C4878
+      Lung Neoplasm:
+        description: A benign or malignant, primary or metastatic neoplasm involving the lungs.  Representative
+          examples of benign neoplasms include adenoma, papilloma, chondroma, and endobronchial lipoma.  Representative
+          examples of malignant neoplasms include carcinoma, carcinoid tumor, sarcoma, and lymphoma.
+        meaning: NCIT:C3200
+      Lung Non-Small Cell Carcinoma:
+        description: A group of lung cancers that are named for the kinds of cells found in the cancer
+          and how the cells look under a microscope. The three main types of non-small cell lung cancer
+          are squamous cell carcinoma, large cell carcinoma, and adenocarcinoma. Non-small cell lung cancer
+          is the most common kind of lung cancer.
+        meaning: NCIT:C2926
+      Lung Small Cell Carcinoma:
+        description: An aggressive (fast-growing) cancer that forms in tissues of the lung and can spread
+          to other parts of the body. The cancer cells look small and oval-shaped when looked at under
+          a microscope.
+        meaning: NCIT:C4917
+      Lung Squamous Cell Carcinoma:
+        description: A carcinoma arising from squamous bronchial epithelial cells. It may be keratinizing
+          or non-keratinizing. Keratinizing squamous cell carcinoma is characterized by the presence of
+          keratinization, pearl formation, and/or intercellular bridges. Non-keratinizing squamous cell
+          carcinoma is characterized by the absence of keratinization, pearl formation, and intercellular
+          bridges. Cigarette smoking and arsenic exposure are strongly associated with squamous cell lung
+          carcinoma.
+        meaning: NCIT:C3493
+      Lymphoid Leukemia:
+        description: A type of cancer in which the bone marrow makes too many lymphocytes (white blood
+          cells).
+        meaning: NCIT:C7539
+      Lymphoma:
+        description: Cancer that begins in cells of the immune system. There are two basic categories
+          of lymphomas. One kind is Hodgkin lymphoma, which is marked by the presence of a type of cell
+          called the Reed-Sternberg cell. The other category is non-Hodgkin lymphomas, which includes
+          a large, diverse group of cancers of immune system cells. Non-Hodgkin lymphomas can be further
+          divided into cancers that have an indolent (slow-growing) course and those that have an aggressive
+          (fast-growing) course. These subtypes behave and respond to treatment differently. Both Hodgkin
+          and non-Hodgkin lymphomas can occur in children and adults, and prognosis and treatment depend
+          on the stage and the type of cancer.
+        meaning: NCIT:C3208
+      Malignant Brain Neoplasm:
+        description: An abnormal solid mass arising within the brain with histologic features suggesting
+          the potential to metastasize.
+        meaning: NCIT:C3568
+      Malignant Digestive System Neoplasm:
+        description: A primary or metastatic malignant neoplasm involving any part of the digestive system.
+        meaning: NCIT:C4890
+      Malignant Genitourinary System Neoplasm:
+        description: A primary or metastatic malignant neoplasm that affects the genitourinary system.
+        meaning: NCIT:C156484
+      Malignant Glioma:
+        description: A malignant neuroglial neoplasm. The term can apply to several primary neoplasm of
+          the brain and spinal cord, including astrocytoma and oligodendroglioma in addition to others.
+        meaning: NCIT:C4822
+      Malignant Neoplasm:
+        description: Uncontrolled growth of abnormal cells with potential for metastatic spread.
+        meaning: NCIT:C9305
+      Malignant Ovarian Neoplasm:
+        description: Cancer that forms in tissues of the ovary (one of a pair of female reproductive glands
+          in which the ova, or eggs, are formed). Most ovarian cancers are either ovarian epithelial carcinomas
+          (cancer that begins in the cells on the surface of the ovary) or malignant germ cell tumors
+          (cancer that begins in egg cells).
+        meaning: NCIT:C7431
+      Malignant Pancreatic Neoplasm:
+        description: A primary or metastatic malignant tumor involving the pancreas.  Representative examples
+          include carcinoma and lymphoma.
+        meaning: NCIT:C9005
+      Malignant Peripheral Nerve Sheath Tumor:
+        description: An uncommon, highly aggressive malignant tumor, arising from the peripheral nerves
+          and affecting mostly adults in their third to sixth decades of life.  It usually occurs in medium-sized
+          and large nerves of the buttock, thigh, upper arm, or the paraspinal region.  It may be associated
+          with neurofibromatosis 1 (NF1).
+        meaning: NCIT:C3798
+      Malignant Peritoneal Neoplasm:
+        description: Cancer of the tissue that lines the abdominal wall and covers organs in the abdomen.
+        meaning: NCIT:C3538
+      Malignant Skin Neoplasm:
+        description: Cancer that forms in the tissues of the skin. There are several types of skin cancer.
+          Skin cancer that forms in melanocytes (skin cells that make pigment) is called melanoma. Skin
+          cancer that forms in the lower part of the epidermis (the outer layer of the skin) is called
+          basal cell carcinoma. Skin cancer that forms in squamous cells (flat cells that form the surface
+          of the skin) is called squamous cell carcinoma. Skin cancer that forms in neuroendocrine cells
+          (cells that release hormones in response to signals from the nervous system) is called neuroendocrine
+          carcinoma of the skin. Most skin cancers form in older people on parts of the body exposed to
+          the sun or in people who have weakened immune systems.
+        meaning: NCIT:C2920
+      Mantle Cell Lymphoma:
+        description: An aggressive, usually diffuse non-Hodgkin lymphoma composed of small to medium sized
+          B-lymphocytes (centrocytes).  Most patients present with advanced stage disease with lymphadenopathy,
+          hepatosplenomegaly, and bone marrow involvement.  The gastrointestinal tract is the most commonly
+          affected extranodal site by this type of non-Hodgkin lymphoma.  The vast majority of cases express
+          the t(11;14)(q13;q32) resulting in the rearrangement of the BCL-1 gene and the overexpression
+          of cyclin D1 mRNA.
+        meaning: NCIT:C4337
+      Marginal Zone Lymphoma:
+        description: An indolent (slow-growing) type of B-cell non-Hodgkin lymphoma that begins forming
+          in certain areas (the marginal zones) of lymph tissue. There are three types based on whether
+          it forms in the spleen, lymph nodes, or other lymphoid tissue that contains a lot of B cells
+          (a type of white blood cell).
+        meaning: NCIT:C4341
+      Medulloblastoma:
+        description: A rapidly progressive cancer of the brain that originates in the cerebellum.
+        meaning: NCIT:C3222
+      Melanoma:
+        description: 'A malignant, usually aggressive tumor composed of atypical, neoplastic melanocytes.
+          Most often, melanomas arise in the skin (cutaneous melanomas) and include the following histologic
+          subtypes: superficial spreading melanoma, nodular melanoma, acral lentiginous melanoma, and
+          lentigo maligna melanoma. Cutaneous melanomas may arise from acquired or congenital melanocytic
+          or dysplastic nevi. Melanomas may also arise in other anatomic sites including the gastrointestinal
+          system, eye, urinary tract, and reproductive system. Melanomas frequently metastasize to lymph
+          nodes, liver, lungs, and brain.'
+        meaning: NCIT:C3224
+      Meningioma:
+        description: A usually benign tumor that develops in the meninges.
+        meaning: NCIT:C3230
+      Mesothelioma:
+        description: A usually malignant and aggressive neoplasm of the mesothelium which is often associated
+          with exposure to asbestos.
+        meaning: NCIT:C4456
+      Multiple Myeloma:
+        description: A type of cancer that begins in plasma cells (white blood cells that produce antibodies).
+        meaning: NCIT:C3242
+      Mycosis Fungoides:
+        description: A type of non-Hodgkin's lymphoma that first appears on the skin and can spread to
+          the lymph nodes or other organs such as the spleen, liver, or lungs.
+        meaning: NCIT:C3246
+      Myeloid Leukemia:
+        description: A progressive, proliferative disease of blood cells, originating from immature granulocytes.
+        meaning: NCIT:C3172
+      Myeloid Neoplasm:
+        description: Proliferation of myeloid cells originating from a primitive stem cell.
+        meaning: NCIT:C9290
+      Myeloproliferative Neoplasm:
+        description: A group of slow growing blood cancers, including chronic myelogenous leukemia, in
+          which large numbers of abnormal red blood cells, white blood cells, or platelets grow and spread
+          in the bone marrow and the peripheral blood.
+        meaning: NCIT:C4345
+      Myoepithelioma:
+        description: A tumor composed predominantly of myoepithelial cells, the contractile cells that
+          normally surround the secretory acini of glandular tissue such as the salivary or breast glands.
+          It is usually benign, though malignant myoepithelial tumors (myoepithelial carcinoma) also occur.
+        meaning: NCIT:C40392
+      Nasopharyngeal Carcinoma:
+        description: Cancer that forms in tissues of the nasopharynx (upper part of the throat behind
+          the nose). Most nasopharyngeal cancers are squamous cell carcinomas (cancer that begins in flat
+          cells lining the nasopharynx).
+        meaning: NCIT:C3871
+      Neuroblastoma:
+        description: Cancer that arises in immature nerve cells and affects mostly infants and children.
+        meaning: NCIT:C3270
+      Neuroendocrine Neoplasm:
+        description: An epithelial neoplasm with neuroendocrine differentiation. This category includes
+          neuroendocrine tumors, neuroendocrine carcinomas, and paragangliomas.
+        meaning: NCIT:C3809
+      Neuroepithelial Neoplasm:
+        description: A neoplasm of the nervous system that arises from the neuroepithelial tissues.  Representative
+          examples include astrocytic tumors, oligodendroglial tumors, ependymal tumors, and primitive
+          neuroectodermal tumors.
+        meaning: NCIT:C3787
+      Neurofibroma:
+        description: An intraneural or extraneural neoplasm arising from nerve tissues and neural sheaths.
+          It is composed of perineurial-like fibroblasts and Schwann cells. It usually presents as a localized
+          cutaneous lesion and less often as a circumscribed peripheral nerve mass. Patients with neurofibromatosis
+          type 1 present with multiple masses. Neurofibromas which arise from major nerves and plexiform
+          neurofibromas are precursor lesions to malignant peripheral nerve sheath tumors.
+        meaning: NCIT:C3272
+      Non-Functioning Pituitary Gland Adenoma:
+        description: A hormone producing or non-producing pituitary neuroendocrine tumor not associated
+          with a hormonal syndrome.
+        meaning: NCIT:C4348
+      Non-Hodgkin Lymphoma:
+        description: Distinct from Hodgkin lymphoma both morphologically and biologically, non-Hodgkin
+          lymphoma (NHL) is characterized by the absence of Reed-Sternberg cells, can occur at any age,
+          and usually presents as a localized or generalized lymphadenopathy associated with fever and
+          weight loss. The clinical course varies according to the morphologic type. NHL is clinically
+          classified as indolent, aggressive, or having a variable clinical course. NHL can be of B-or
+          T-/NK-cell lineage.
+        meaning: NCIT:C3211
+      Not Applicable:
+        description: Determination of a value is not relevant in the current context. (NCI)
+        meaning: NCIT:C48660
+      Oral Cavity Neoplasm:
+        description: A benign or malignant neoplasm that affects the oral cavity.
+        meaning: NCIT:C7606
+      Oral Cavity Squamous Cell Carcinoma:
+        description: A type of mass spectrometry that uses the cyclotron frequency of ions in a fixed
+          magnetic field to determine their ionic mass-to-charge ratio.
+        meaning: NCIT:C4833
+      Oropharyngeal Neoplasm:
+        description: A benign or malignant neoplasm that affects the oropharynx.
+        meaning: NCIT:C3291
+      Osteosarcoma:
+        description: A usually aggressive malignant bone-forming mesenchymal neoplasm, predominantly affecting
+          adolescents and young adults. It usually involves bones and less frequently extraosseous sites.
+          It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus).
+          Pain with or without a palpable mass is the most frequent clinical symptom. It may spread to
+          other anatomic sites, particularly the lungs.
+        meaning: NCIT:C9145
+      Ovarian Adenosarcoma:
+        description: A biphasic neoplasm that arises from the ovary and is characterized by the presence
+          of mullerian-type epithelial tissue in a mesenchymal sarcomatous stroma.  The presence of a
+          high grade sarcomatous component is associated with recurrences and metastases.
+        meaning: NCIT:C7317
+      Ovarian Carcinoma:
+        description: Cancer that occurs in the cells lining the ovaries.
+        meaning: NCIT:C4908
+      Ovarian Neoplasm:
+        description: A benign, borderline, or malignant neoplasm involving the ovary.
+        meaning: NCIT:C4984
+      Ovarian Serous Adenocarcinoma:
+        description: An adenocarcinoma that arises from the ovary and is characterized by the presence
+          of malignant epithelial cells that, in well differentiated tumors, resemble the epithelium of
+          the fallopian tube or, in poorly differentiated tumors, show anaplastic features and marked
+          nuclear atypia.
+        meaning: NCIT:C7550
+      Pan-cancer:
+        description: A term describing analyses, datasets, or studies that span and compare multiple different
+          cancer/tumor types together, rather than being limited to a single cancer type, in order to
+          identify shared or distinguishing molecular and clinical features across cancers.
+      Pancreatic Adenocarcinoma:
+        description: An adenocarcinoma which arises from the exocrine pancreas.  Ductal adenocarcinoma
+          and its variants are the most common types of pancreatic adenocarcinoma.
+        meaning: NCIT:C8294
+      Pancreatic Carcinoma:
+        description: A disease in which malignant (cancer) cells are found in the tissues of the pancreas.
+        meaning: NCIT:C207229
+      Pancreatic Ductal Adenocarcinoma:
+        description: An infiltrating adenocarcinoma that arises from the epithelial cells of the pancreas.  It
+          affects males more often than females and the patients are usually over 50 years of age.  Microscopically
+          it is characterized by the presence of glandular (ductal) differentiation and desmoplastic stroma
+          formation.  Signs and symptoms include pain, loss of weight, and jaundice.  It grows rapidly
+          and is usually detected after it has metastasized to other anatomic sites.  The prognosis is
+          usually poor.
+        meaning: NCIT:C9120
+      Pancreatic Neoplasm:
+        description: A benign or malignant neoplasm involving the pancreas.
+        meaning: NCIT:C3305
+      Pancreatic Neuroendocrine Carcinoma:
+        description: Cancer arising from cells in the islets of Langerhans, which are found in the pancreas.
+        meaning: NCIT:C3770
+      Pending Annotation:
+        description: An administrative placeholder value indicating that a definitive tumor/cancer type
+          has not yet been curated or assigned for this record; the classification is awaiting manual
+          annotation review.
+        meaning: NCIT:C53470
+      Penile Carcinoma:
+        description: A rare cancer that forms in the penis (an external male reproductive organ). Most
+          penile cancers are squamous cell carcinomas (cancer that begins in flat cells lining the penis).
+        meaning: NCIT:C9061
+      Pheochromocytoma:
+        description: Tumor that forms in the center of the adrenal gland (gland located above the kidney)
+          that causes it to make too much adrenaline. Pheochromocytomas are usually benign (not cancer)
+          but can cause high blood pressure, pounding headaches, heart palpitations, flushing of the face,
+          nausea, and vomiting.
+        meaning: NCIT:C3326
+      Pilocytic Astrocytoma:
+        description: A WHO grade 1, relatively circumscribed, slowly growing, often cystic astrocytoma
+          occurring in children and young adults.  Histologically it is characterized by a biphasic pattern
+          with compacted bipolar cells associated with Rosenthal fibers and multipolar cells associated
+          with microcysts and eosinophilic bodies/hyaline droplets. (WHO)
+        meaning: NCIT:C4047
+      Pituitary Gland Adenoma:
+        description: A well-differentiated neuroendocrine neoplasm that arises from the adenohypophysial
+          cells of the anterior lobe of the pituitary gland. The tumor can be hormonally functioning or
+          not. It has a low frequency of metastatic spread. When metastatic, the term metastatic pituitary
+          neuroendocrine tumor is endorsed instead of pituitary carcinoma. (WHO)
+        meaning: NCIT:C3329
+      Plasmablastic Lymphoma:
+        description: An aggressive diffuse large B-cell lymphoma frequently arising in the setting of
+          HIV infection and characterized by the presence of large neoplastic cells resembling B-immunoblasts
+          which have the immunophenotypic profile of plasma cells.  Sites of involvement include the oral
+          cavity, sinonasal cavity, skin, soft tissues, gastrointestinal tract, and bone.
+        meaning: NCIT:C7224
+      Plasmacytoma:
+        description: A type of cancer that begins in plasma cells (white blood cells that produce antibodies).
+          A plasmacytoma may turn into multiple myeloma.
+        meaning: NCIT:C9349
+      Plexiform Schwannoma:
+        description: A schwannoma characterized by a plexiform or multinodular growth pattern.  It usually
+          arises from the skin or subcutaneous tissues in the extremities, trunk, and head and neck.
+        meaning: NCIT:C6969
+      Precursor B-cell lymphoblastic leukemia:
+        description: The most frequent type of acute lymphoblastic leukemia.  Approximately 75% of cases
+          occur in children under six years of age.  This is a good prognosis leukemia.  In the pediatric
+          age group the complete remission rate is approximately 95% and the disease free survival rate
+          is 70%.  Approximately 80% of children appear to be cured.  In the adult age group the complete
+          remission rate is 60-85%.  (WHO, 2001)
+        meaning: NCIT:C8936
+      Primary Central Nervous System Lymphoma:
+        description: Primary CNS lymphomas are extranodal malignant lymphomas arising in the CNS in the
+          absence of obvious lymphoma outside the nervous system at the time of diagnosis. They should
+          be differentiated from secondary involvement of the nervous system in systemic lymphomas. The
+          incidence of primary CNS lymphomas has recently increased markedly worldwide from about 1% to
+          over 6% of primary intracranial neoplasms due mainly as a consequence of the AIDS epidemic.  Primary
+          CNS lymphomas affect all ages, with a peak incidence in immunocompetent subjects during the
+          sixth and seventh decade of life and a male:female ratio of 3:2. In immunocompromised patients,
+          the age at manifestation is lowest in individuals who have an inherited immunodeficiency (10
+          years), followed by transplant recipients (37 years) and AIDS patients (39 years, 90% males).
+          About 60% of primary CNS lymphomas involve the supratentorial space, including the frontal (15%),
+          temporal (8%), parietal (7%) and occipital (3%) lobes, basal ganglia/periventricular regions
+          (10%) and corpus callosum (5%), the posterior fossa (13%), and the spinal cord (1%).  The majority
+          of primary CNS lymphomas are large B-cell lymphomas, often associated with the Epstein-Barr
+          virus.  (Adapted from WHO.)
+        meaning: NCIT:C9301
+      Primary Myelofibrosis:
+        description: A progressive, chronic disease in which the bone marrow is replaced by fibrous tissue
+          and blood is made in organs such as the liver and the spleen, instead of in the bone marrow.
+          This disease is marked by an enlarged spleen and progressive anemia.
+        meaning: NCIT:C2862
+      Prostate Adenocarcinoma:
+        description: An adenocarcinoma arising from the prostate gland.  It is one of the most common
+          malignant tumors afflicting men.  The majority of adenocarcinomas arise in the peripheral zone
+          and a minority occurs in the central or the transitional zone of the prostate gland.  Grading
+          of prostatic adenocarcinoma predicts disease progression and correlates with survival.  Several
+          grading systems have been proposed, of which the Gleason system is the most commonly used.  Gleason
+          sums of 2 to 4 represent well-differentiated disease, 5 to 7 moderately differentiated disease
+          and 8 to 10 poorly differentiated disease.  Prostatic-specific antigen (PSA) serum test is widely
+          used as a screening test for the early detection of prostatic adenocarcinoma.  Treatment options
+          include radical prostatectomy, radiation therapy, androgen ablation and cryotherapy.  Watchful
+          waiting or surveillance alone is an option for older patients with low-grade or low-stage disease.
+        meaning: NCIT:C2919
+      Prostate Carcinoma:
+        description: One of the most common malignant tumors afflicting men.  The majority of carcinomas
+          arise in the peripheral zone and a minority occur in the central or the transitional zone of
+          the prostate gland.  Grossly, prostatic carcinomas appear as ill-defined yellow areas of discoloration
+          in the prostate gland lobes.  Adenocarcinomas represent the overwhelming majority of prostatic
+          carcinomas.  Prostatic-specific antigen (PSA) serum test is widely used as a screening test
+          for the early detection of prostatic carcinoma.  Treatment options include radical prostatectomy,
+          radiation therapy, androgen ablation and cryotherapy.  Watchful waiting or surveillance alone
+          is an option for older patients with low-grade or low-stage disease.
+        meaning: NCIT:C4863
+      Prostate Neoplasm:
+        description: A benign, borderline, or malignant neoplasm that affects the prostate gland.  Representative
+          examples include benign prostate phyllodes tumor, prostatic intraepithelial neoplasia, prostate
+          carcinoma, and prostate sarcoma.
+        meaning: NCIT:C3343
+      Rectal Adenocarcinoma:
+        description: An adenocarcinoma arising from the rectum.  It is more frequently seen in populations
+          with a Western type diet and in patients with a history of chronic inflammatory bowel disease.  Signs
+          and symptoms include intestinal bleeding, anemia, and change in bowel habits.  According to
+          the degree of cellular differentiation, rectal adenocarcinomas are divided into well, moderately,
+          and poorly differentiated.  Histologic variants include mucinous adenocarcinoma, signet ring
+          cell carcinoma, medullary carcinoma, serrated adenocarcinoma, cribriform comedo-type adenocarcinoma,
+          and micropapillary adenocarcinoma.
+        meaning: NCIT:C9383
+      Renal Cell Carcinoma:
+        description: The most common type of kidney cancer. It begins in the lining of the renal tubules
+          in the kidney. The renal tubules filter the blood and produce urine.
+        meaning: NCIT:C9385
+      Retinoblastoma:
+        description: Cancer that forms in the tissues of the retina (the light-sensitive layers of nerve
+          tissue at the back of the eye). Retinoblastoma usually occurs in children younger than 5 years.
+          It may be hereditary or nonhereditary (sporadic).
+        meaning: NCIT:C7541
+      Rhabdomyosarcoma:
+        description: Cancer that forms in the soft tissues in a type of muscle called striated muscle.
+          Rhabdomyosarcoma can occur anywhere in the body.
+        meaning: NCIT:C3359
+      Rosette-Forming Glioneuronal Tumor:
+        description: A central nervous system neoplasm mostly occurring in the fourth ventricle region.
+          It is characterized by the presence of neurocytes forming pseudorosettes and astrocytes which
+          contain Rosenthal fibers. Cytologic atypia is minimal.
+        meaning: NCIT:C129431
+      Salivary Gland Adenoid Cystic Carcinoma:
+        description: An adenoid cystic carcinoma arising from the salivary gland.  It is characterized
+          by the presence of epithelial and myoepithelial cells forming tubular, cribriform, and solid
+          patterns.  It usually presents as a slow growing mass.  Patients may experience pain because
+          of the tumor propensity for perineural invasion.  The tumor may follow an aggressive clinical
+          course with recurrences and mestastases to distant sites including lungs, bones, brain, and
+          liver.
+        meaning: NCIT:C8026
+      Sarcoma:
+        description: A usually aggressive malignant neoplasm of the soft tissue or bone. It arises from
+          muscle, fat, fibrous tissue, bone, cartilage, and blood vessels. Sarcomas occur in both children
+          and adults. The prognosis depends largely on the degree of differentiation (grade) of the neoplasm.
+          Representative subtypes are liposarcoma, leiomyosarcoma, osteosarcoma, and chondrosarcoma.
+        meaning: NCIT:C9118
+      Schwannoma:
+        description: A tumor of the peripheral nervous system that arises in the nerve sheath (protective
+          covering).  It is almost always benign, but rare malignant schwannomas have been reported.
+        meaning: NCIT:C3269
+      Serous Tubal Intraepithelial Carcinoma:
+        description: A non-invasive serous carcinoma arising from the fallopian tube.
+        meaning: NCIT:C126449
+      Sinonasal Squamous Cell Carcinoma:
+        description: A rare, keratinizing or non-keratinizing squamous cell carcinoma arising from the
+          mucosal epithelium of the nasal cavity or the paranasal sinuses.  It affects most often the
+          maxillary sinus.  Less frequently, it arises from the nasal cavity, ethmoid sinus, sphenoid
+          sinus, and frontal sinus.  Symptoms include nasal fullness, epistaxis, rhinorhea, pain, and
+          paresthesia.  Patients with nasal squamous cell carcinoma usually present earlier than patients
+          with maxillary sinus carcinoma and have a better prognosis compared to the latter group.
+        meaning: NCIT:C68611
+      Skin Carcinoma:
+        description: Skin cancer that arises in basal cells or squamous cells but not in melanocytes (pigment-producing
+          cells of the skin).
+        meaning: NCIT:C4914
+      Skin Neoplasm:
+        description: A benign, intermediate, or malignant neoplasm involving the skin.
+        meaning: NCIT:C3372
+      Soft Tissue Sarcoma:
+        description: A solid, malignant neoplasm originating in muscle, tendon, fat, blood vessels, nerves,
+          connective or joint tissue.
+        meaning: NCIT:C9306
+      Squamous Cell Carcinoma:
+        description: Cancer that begins in squamous cells, which are thin, flat cells that look like fish
+          scales. Squamous cells are found in the tissue that forms the surface of the skin, the lining
+          of the hollow organs of the body, and the passages of the respiratory and digestive tracts.
+        meaning: NCIT:C2929
+      Synovial Sarcoma:
+        description: A malignant tumor that develops in the synovial membrane of the joints.
+        meaning: NCIT:C3400
+      T Acute Lymphoblastic Leukemia:
+        description: An aggressive (fast-growing) type of leukemia (blood cancer) in which too many T-cell
+          lymphoblasts (immature white blood cells) are found in the bone marrow and blood.
+        meaning: NCIT:C3183
+      T-Cell Lymphoma:
+        description: A non-Hodgkin lymphoma of T-cell lineage. It includes the T lymphoblastic lymphoma
+          and the mature T- and NK-cell lymphomas.
+        meaning: NCIT:C3466
+      Teratoma:
+        description: A type of germ cell tumor that may contain several different types of tissue, such
+          as hair, muscle, and bone.  Teratomas occur most often in the ovaries in women, the testicles
+          in men, and the tailbone in children.  Not all teratomas are malignant.
+        meaning: NCIT:C3403
+      Testicular Embryonal Carcinoma:
+        description: A malignant germ cell neoplasm arising from the testis.  It is composed of primitive
+          epithelial cells arranged in solid, papillary, and glandular configurations.  Most patients
+          present with a testicular mass, which may be associated with pain.  More than half of the patients
+          have metastatic disease at diagnosis.  The form of treatment following radical orchiectomy is
+          stage dependent.
+        meaning: NCIT:C6341
+      Thyroid Gland Anaplastic Carcinoma:
+        description: An aggressive carcinoma of the thyroid gland composed of undifferentiated cells.
+        meaning: NCIT:C3878
+      Thyroid Gland Carcinoma:
+        description: Cancer that forms in the thyroid gland (an organ at the base of the throat that makes
+          hormones that help control heart rate, blood pressure, body temperature, and weight). Four main
+          types of thyroid cancer are papillary, follicular, medullary, and anaplastic thyroid cancer.
+          The four types are based on how the cancer cells look under a microscope.
+        meaning: NCIT:C4815
+      Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features:
+        description: A non-invasive neoplasm of thyroid follicular cells with a follicular growth pattern
+          and nuclear features of papillary thyroid carcinoma that has an extremely low malignant potential.
+          These tumors were formerly classified as non-invasive encapsulated follicular variant of papillary
+          thyroid carcinoma or well-differentiated tumor of uncertain malignant potential. (WHO)
+        meaning: NCIT:C126598
+      Triple-Negative Breast Carcinoma:
+        description: An invasive breast carcinoma which is negative for expression of estrogen receptor
+          (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2).
+        meaning: NCIT:C71732
+      Urothelial Carcinoma:
+        description: A malignant neoplasm derived from the transitional epithelium of the urinary tract
+          (urinary bladder, ureter, urethra, or renal pelvis). It is frequently papillary.
+        meaning: NCIT:C4030
+      Uterine Adenosarcoma:
+        description: A primary malignant neoplasm of the uterine corpus characterized by a sarcomatous
+          (malignant) mesenchymal component combined with a benign glandular epithelial component. It
+          is generally a low-grade tumor that can recur locally following resection.
+        meaning: NCIT:C6336
+      Uveal Melanoma:
+        description: A rare cancer of melanocytes (cells that produce the pigment melanin) found in the
+          eye.
+        meaning: NCIT:C7712
+      Uveal Neoplasm:
+        description: A neoplasm that affects the uvea.  Uveal melanoma is a representative example.
+        meaning: NCIT:C3436
+      Vascular Neoplasm:
+        description: A benign, intermediate, or malignant neoplasm arising from vascular tissue including
+          arteries, veins, venous sinuses, lymphatic vessels, arterioles and capillaries. It may occur
+          in essentially any body location and is characterized by the presence of vascular channel formation
+          and endothelial cells.
+        meaning: NCIT:C7388
+      Not-Applicable:
+        description: Determination of a value is not relevant in the current context. (NCI)
+        meaning: NCIT:C48660
+      Plexiform Neurofibroma:
+        description: An elongated and multinodular neurofibroma that forms when the tumor involves either
+          multiple trunks of a nerve plexus or multiple fascicles of a large nerve. Some plexiform neurofibromas
+          resemble a 'bag of worms', while others produce a massive ropy enlargement of the nerve. (Adapted
+          from WHO)
+        meaning: NCIT:C3797
   Dataset Assay Enum:
     permissible_values:
       10-cell RNA Sequencing:
@@ -17879,6 +19061,7 @@ enums:
         description: An analytical technique combining ultra-performance liquid chromatography (UPLC)
           with tandem mass spectrometry (MS/MS) to separate, identify, and quantify compounds such as
           metabolites or proteins in complex biological samples.
+        meaning: PMID:20061193
       UV Photocrosslinking:
         description: A technique that covalently crosslinks nucleic acids to interacting proteins using
           ultraviolet light, used to capture and study protein-nucleic acid interactions.
@@ -18240,6 +19423,32 @@ enums:
         description: A highly multiplexed cytometric imaging approach that iteratively visualizes many
           protein targets in a single tissue staining reaction.
         meaning: NCIT:C181931
+      in vivo tumor growth:
+        description: Monitoring of tumor growth (e.g. volume/size over time) in a live animal model, typically
+          as a functional readout rather than a molecular assay.
+      in silico synthesis:
+        description: Computational/simulation-based synthesis of a molecule or construct rather than a
+          wet-lab technique.
+      RNA array:
+        description: A microarray platform used to measure RNA expression levels.
+      shRNA-seq:
+        description: A pooled shRNA screening assay read out by sequencing to identify short hairpin RNA
+          constructs enriched or depleted under a selection condition.
+      spatial transcriptomics:
+        description: A general term for assays that measure RNA expression while preserving spatial location
+          information within a tissue section.
+      in vivo PDX viability:
+        description: A functional viability readout from a patient-derived xenograft (PDX) model.
+      histology:
+        description: Microscopic examination of tissue structure via sectioning and staining.
+      proximity extension assay:
+        description: An antibody-based protein detection method (e.g. Olink) in which paired antibodies
+          with attached DNA oligonucleotides bind a target protein, allowing proximity-dependent DNA amplification
+          and readout.
+      compound screen:
+        description: A screening assay testing multiple chemical compounds for a biological effect.
+      metabolic screening:
+        description: A screening assay assessing metabolic activity or metabolite profiles.
   Dataset Species Enum:
     permissible_values:
       African Bush Elephant:
@@ -18264,6 +19473,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -18293,6 +19506,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -18320,6 +19537,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -23347,6 +24568,7 @@ enums:
         description: An analytical technique combining ultra-performance liquid chromatography (UPLC)
           with tandem mass spectrometry (MS/MS) to separate, identify, and quantify compounds such as
           metabolites or proteins in complex biological samples.
+        meaning: PMID:20061193
       UV Photocrosslinking:
         description: A technique that covalently crosslinks nucleic acids to interacting proteins using
           ultraviolet light, used to capture and study protein-nucleic acid interactions.
@@ -23708,6 +24930,32 @@ enums:
         description: A highly multiplexed cytometric imaging approach that iteratively visualizes many
           protein targets in a single tissue staining reaction.
         meaning: NCIT:C181931
+      in vivo tumor growth:
+        description: Monitoring of tumor growth (e.g. volume/size over time) in a live animal model, typically
+          as a functional readout rather than a molecular assay.
+      in silico synthesis:
+        description: Computational/simulation-based synthesis of a molecule or construct rather than a
+          wet-lab technique.
+      RNA array:
+        description: A microarray platform used to measure RNA expression levels.
+      shRNA-seq:
+        description: A pooled shRNA screening assay read out by sequencing to identify short hairpin RNA
+          constructs enriched or depleted under a selection condition.
+      spatial transcriptomics:
+        description: A general term for assays that measure RNA expression while preserving spatial location
+          information within a tissue section.
+      in vivo PDX viability:
+        description: A functional viability readout from a patient-derived xenograft (PDX) model.
+      histology:
+        description: Microscopic examination of tissue structure via sectioning and staining.
+      proximity extension assay:
+        description: An antibody-based protein detection method (e.g. Olink) in which paired antibodies
+          with attached DNA oligonucleotides bind a target protein, allowing proximity-dependent DNA amplification
+          and readout.
+      compound screen:
+        description: A screening assay testing multiple chemical compounds for a biological effect.
+      metabolic screening:
+        description: A screening assay assessing metabolic activity or metabolite profiles.
   File Level Enum:
     permissible_values:
       Level 1:
@@ -23755,6 +25003,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -23784,6 +25036,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -23811,6 +25067,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -34465,6 +35725,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -34494,6 +35758,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -34521,6 +35789,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -42733,6 +44005,7 @@ enums:
         description: An analytical technique combining ultra-performance liquid chromatography (UPLC)
           with tandem mass spectrometry (MS/MS) to separate, identify, and quantify compounds such as
           metabolites or proteins in complex biological samples.
+        meaning: PMID:20061193
       UV Photocrosslinking:
         description: A technique that covalently crosslinks nucleic acids to interacting proteins using
           ultraviolet light, used to capture and study protein-nucleic acid interactions.
@@ -43094,6 +44367,32 @@ enums:
         description: A highly multiplexed cytometric imaging approach that iteratively visualizes many
           protein targets in a single tissue staining reaction.
         meaning: NCIT:C181931
+      in vivo tumor growth:
+        description: Monitoring of tumor growth (e.g. volume/size over time) in a live animal model, typically
+          as a functional readout rather than a molecular assay.
+      in silico synthesis:
+        description: Computational/simulation-based synthesis of a molecule or construct rather than a
+          wet-lab technique.
+      RNA array:
+        description: A microarray platform used to measure RNA expression levels.
+      shRNA-seq:
+        description: A pooled shRNA screening assay read out by sequencing to identify short hairpin RNA
+          constructs enriched or depleted under a selection condition.
+      spatial transcriptomics:
+        description: A general term for assays that measure RNA expression while preserving spatial location
+          information within a tissue section.
+      in vivo PDX viability:
+        description: A functional viability readout from a patient-derived xenograft (PDX) model.
+      histology:
+        description: Microscopic examination of tissue structure via sectioning and staining.
+      proximity extension assay:
+        description: An antibody-based protein detection method (e.g. Olink) in which paired antibodies
+          with attached DNA oligonucleotides bind a target protein, allowing proximity-dependent DNA amplification
+          and readout.
+      compound screen:
+        description: A screening assay testing multiple chemical compounds for a biological effect.
+      metabolic screening:
+        description: A screening assay assessing metabolic activity or metabolite profiles.
   Publication Tumor Type Enum:
     permissible_values:
       Cutaneous Melanoma:
@@ -45386,126 +46685,6 @@ enums:
       DUOPlus5: null
       DUOPlus6: null
       DUOPlus7: null
-  dataUseModifiers Enum:
-    permissible_values:
-      Pending Annotation:
-        description: Data Use Codes have not yet been provided or documented for this resource.
-      DUO:0000042:
-        description: This data use permission indicates that use is allowed for general research use for
-          any research purpose.
-        meaning: DUO:0000042
-      DUO:0000027:
-        description: This data use modifier indicates that use is limited to use within an approved project.
-        meaning: DUO:0000027
-      DUO:0000016:
-        description: This data use modifier indicates that use is limited to genetic studies only (i.e.,
-          studies that include genotype research alone or both genotype and phenotype research, but not
-          phenotype research exclusively)
-        meaning: DUO:0000016
-      DUO:0000029:
-        description: This data use modifier indicates that the requestor must return derived/enriched
-          data to the database/resource.
-        meaning: DUO:0000029
-      DUO:0000043:
-        description: This data use modifier indicates that use is allowed for clinical use and care.
-        meaning: DUO:0000043
-      DUO:0000015:
-        description: This data use modifier indicates that use does not allow methods development research
-          (e.g., development of software or algorithms).
-        meaning: DUO:0000015
-      DUO:0000004:
-        description: This data use permission indicates there is no restriction on use.
-        meaning: DUO:0000004
-      DUO:0000045:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          organizations.
-        meaning: DUO:0000045
-      DUO:0000017:
-        description: Data use modifiers indicate additional conditions for use.
-        meaning: DUO:0000017
-      DUO:0000011:
-        description: This data use permission indicates that use of the data is limited to the study of
-          population origins or ancestry.
-        meaning: DUO:0000011
-      DUO:0000046:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          use.
-        meaning: DUO:0000046
-      DUO:0000018:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          organizations and not-for-profit use, non-commercial use.
-        meaning: DUO:0000018
-      DUO:0000044:
-        description: This data use modifier indicates use for purposes of population, origin, or ancestry
-          research is prohibited.
-        meaning: DUO:0000044
-      DUO:0000021:
-        description: This data use modifier indicates that the requestor must provide documentation of
-          local IRB/ERB approval.
-        meaning: DUO:0000021
-      DUO:0000006:
-        description: This data use permission indicates that use is allowed for health/medical/biomedical
-          purposes; does not include the study of population origins or ancestry.
-        meaning: DUO:0000006
-      DUO:0000019:
-        description: This data use modifier indicates that requestor agrees to make results of studies
-          using the data available to the larger scientific community.
-        meaning: DUO:0000019
-      DUO:0000026:
-        description: This data use modifier indicates that use is limited to use by approved users. If
-          providing this term, please describe the restrictions in column userSpecificRestriction.
-        meaning: DUO:0000026
-      DUO:0000020:
-        description: This data use modifier indicates that the requestor must agree to collaboration with
-          the primary study investigator(s). If providing this term, please note the contact email in
-          column collaborationRequired.
-        meaning: DUO:0000020
-      DUO:0000012:
-        description: This data use modifier indicates that use is limited to studies of a certain research
-          type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.
-        meaning: DUO:0000012
-      DUO:0000025:
-        description: This data use modifier indicates that use is approved for a specific number of months.
-          If providing this term, please provide the number of months in column timeLimitOnUse.
-        meaning: DUO:0000025
-      DUO:0000024:
-        description: This data use modifier indicates that requestor agrees not to publish results of
-          studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.
-        meaning: DUO:0000024
-      DUO:0000028:
-        description: This data use modifier indicates that use is limited to use within an approved institution.
-          If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.
-        meaning: DUO:0000028
-      DUO:0000022:
-        description: This data use modifier indicates that use is limited to within a specific geographic
-          region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.
-        meaning: DUO:0000022
-      DUO:0000007:
-        description: This data use permission indicates that use is allowed provided it is related to
-          the specified disease. If providing this term, please provide the disease MONDO ID(s) in column
-          diseaseSpecificResearch.
-        meaning: DUO:0000007
-      DUOPlus1:
-        description: Source geography is relevant to governance decisions. If providing this term, please
-          provide the applicable country code(s) in column sourceGeography
-      DUOPlus2:
-        description: Study population is relevant to governance decisions. If providing this term, please
-          provide the applicable population type(s) in column populationType.
-      DUOPlus3:
-        description: Data deidentification is relevant to governance decisions. If providing this term,
-          please provide the applicable deidentification type(s) in column deidentificationType.
-      DUOPlus4:
-        description: A data permission designation is associated with the Study. If providing this term,
-          please provide the applicable permission type(s) in column dataPermission.
-      DUOPlus5:
-        description: A data tier designation is associated with the Study. If providing this term, please
-          provide the applicable data tier designation(s) in column dataTier.
-      DUOPlus6:
-        description: A license is associated with the Study. If providing this term, please provide the
-          applicable license in column license.
-      DUOPlus7:
-        description: Attribution conditions are associated with this Study. If providing this term, please
-          provide the attribution statement in column attribution.
   geographicalRestriction Enum:
     permissible_values:
       AD:
@@ -48038,6 +49217,7 @@ enums:
         description: An analytical technique combining ultra-performance liquid chromatography (UPLC)
           with tandem mass spectrometry (MS/MS) to separate, identify, and quantify compounds such as
           metabolites or proteins in complex biological samples.
+        meaning: PMID:20061193
       UV Photocrosslinking:
         description: A technique that covalently crosslinks nucleic acids to interacting proteins using
           ultraviolet light, used to capture and study protein-nucleic acid interactions.
@@ -48399,6 +49579,32 @@ enums:
         description: A highly multiplexed cytometric imaging approach that iteratively visualizes many
           protein targets in a single tissue staining reaction.
         meaning: NCIT:C181931
+      in vivo tumor growth:
+        description: Monitoring of tumor growth (e.g. volume/size over time) in a live animal model, typically
+          as a functional readout rather than a molecular assay.
+      in silico synthesis:
+        description: Computational/simulation-based synthesis of a molecule or construct rather than a
+          wet-lab technique.
+      RNA array:
+        description: A microarray platform used to measure RNA expression levels.
+      shRNA-seq:
+        description: A pooled shRNA screening assay read out by sequencing to identify short hairpin RNA
+          constructs enriched or depleted under a selection condition.
+      spatial transcriptomics:
+        description: A general term for assays that measure RNA expression while preserving spatial location
+          information within a tissue section.
+      in vivo PDX viability:
+        description: A functional viability readout from a patient-derived xenograft (PDX) model.
+      histology:
+        description: Microscopic examination of tissue structure via sectioning and staining.
+      proximity extension assay:
+        description: An antibody-based protein detection method (e.g. Olink) in which paired antibodies
+          with attached DNA oligonucleotides bind a target protein, allowing proximity-dependent DNA amplification
+          and readout.
+      compound screen:
+        description: A screening assay testing multiple chemical compounds for a biological effect.
+      metabolic screening:
+        description: A screening assay assessing metabolic activity or metabolite profiles.
   DSP Dataset Species Enum:
     permissible_values:
       African Bush Elephant:
@@ -48423,6 +49629,10 @@ enums:
       Chicken:
         description: The common domestic fowl, Gallus gallus.
         meaning: NCIT:C14193
+      Candida albicans:
+        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
+          in fungal biology and infection research.
+        meaning: NCBITaxon:5476
       Cow:
         description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
           used for labor.
@@ -48452,6 +49662,10 @@ enums:
         description: A cell line established from human-derived cells that is maintained and propagated
           in vitro for research purposes.
         meaning: NCIT:C20218
+      Macaca nemestrina:
+        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
+          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
+        meaning: NCBITaxon:9545
       Mouse:
         description: Any of numerous species of small rodents belonging to the genus Mus and various related
           genera of the family Muridae.
@@ -48479,6 +49693,10 @@ enums:
           Asia, often used in medical research owing to its relative ease of upkeep and physiological
           similarity to humans.
         meaning: NCIT:C14233
+      Schizosaccharomyces pombe:
+        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
+          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
+        meaning: NCBITaxon:4896
       Sheep:
         description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
           of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
@@ -50122,9 +51340,11 @@ enums:
         description: Creative Commons Zero license, allowing for the free use of the data.
       CC_BY:
         description: Creative Commons Attribution license, requiring attribution to the original source.
+        meaning: SPDX:CC-BY-4.0
       CC_BY_NC:
         description: Creative Commons Attribution-NonCommercial license, allowing for non-commercial use
           with attribution.
+        meaning: SPDX:CC-BY-NC-3.0
       CC_BY_ND:
         description: Creative Commons Attribution-NoDerivatives license, allowing for redistribution with
           attribution but no modifications.

@@ -4,6 +4,6 @@ Consortium Name,"Machine readable name of the research consortium. (e.g. sage_bi
 Consortium Display Name,"Human readable display name of research consortium (e.g. Sage Bionetworks, CSBC, PS-ON, etc.)",,,True,,,string,,,,,,
 Consortium Full Name,Full name of research consortium. (e.g. Cancer Systems Biology Consortium).,,,True,,,string,,,,,,
 Consortium Description,Description of research consortium,,,True,,,string,,,,,,
-Consortium Funding Agency,Funding agency of research consortium ,NIH,,True,,,string,,,,,,
+Consortium Funding Agency,Funding agency of research consortium ,"NIH, NIH-NCI",,True,,,string,,,,,,
 Website,Website of research consortium,,,True,,,string,uri,,,,,
 Consortium_id,"Unique ID associated with a consortium, used as a key for record linking and updates.","program.ccbir, program.csbc, program.htan, program.icbp, program.metnet, program.nci, program.nci-clinical-and-translational-exploratory-developmental-studies, program.pdmc, program.ps-on, program.sage-bionetworks, program.tec",,True,primary_key,,string,,,,,,

@@ -2,10 +2,10 @@
 
 ## Summary
 - input files: 1
-- attributes read: 612
+- attributes read: 621
 - classes: 39
-- slots: 574
-- enums: 171
+- slots: 583
+- enums: 174
 - warnings: 1
 
 ## Warnings (1)
