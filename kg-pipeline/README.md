@@ -71,6 +71,10 @@ make sagecdm-schema       # regenerate schema/sagecdm.ttl from schema/vendor/sag
 make crosswalk-scdm       # institution/consortium -> SCDM Organization/Program crosswalks
 make triples              # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
 make link-scdm            # link the CCKP graph to SCDM Organization/Program/Person -> data/rdf/scdm_links.ttl
+make extract-datacatalog  # pull Data Catalog annotations from native Synapse Dataset entities -> data/raw/
+make harmonize-datacatalog # resolve Data Catalog controlled-vocabulary values -> data/harmonized/datacatalog/
+make triples-datacatalog  # build RDF -> data/rdf/DataCatalog.ttl (merges onto existing cckp:Dataset subjects)
+make merge-datacatalog    # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl
 make validate             # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg    # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -487,6 +491,120 @@ make link-scdm        # data/harmonized/*.csv + those crosswalks -> data/rdf/scd
   since guessing at a split would risk the opposite failure (a real name
   that itself contains a comma).
 
+## Data Catalog (native Synapse Dataset entity annotations)
+
+`modules/dataCatalog/` models the "Synapse Data Catalog" manifest - a
+schema.org/Bioschemas-flavored dataset-cataloging vocabulary
+(`measurementTechnique`, `license`, `includedInDataCatalog`,
+`conditionsOfAccess`, `accessType`, ...). Unlike the 5 CCKP portal classes
+above, none of this is submitted through this repo's own manifest process -
+it's populated as **native Synapse annotations directly on Dataset
+entities** (confirmed live: only 11 of 966 probed entities carry a
+`Component: Dataset` schematic-submission marker alongside the same key
+set - the other ~955 carry it natively, populated by Synapse's own Data
+Catalog UI/metadata assistant). See `plans/datacatalog_kg_integration.md`
+for the full harvest-and-alignment writeup this stage is built from.
+
+**Which CCKP Dataset rows qualify**: of `syn21897968` (the CCKP Dataset
+merged table), only rows with `downloadType` in (`Synapse Hosted`,
+`Synapse Indexed`) are backed by a real Synapse `Dataset` entity (confirmed
+via a `concreteType` sample) - for those, `downloadSynId` always equals
+`datasetId`. `Externally Hosted`/`Not Available for Download` rows have no
+backing entity to read annotations from and are skipped.
+
+```
+make extract-datacatalog    # syn21897968 (downloadType filter) -> data/raw/DataCatalog.csv
+make harmonize-datacatalog  # -> data/harmonized/datacatalog/ (own out-dir, see below)
+make triples-datacatalog    # -> data/rdf/DataCatalog.ttl
+make merge-datacatalog      # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl
+```
+
+- **Own `--out-dir`, not `data/harmonized/`.** `harmonize.py` overwrites
+  `unmapped_terms.csv` fresh on every run rather than appending - sharing
+  the main pipeline's `data/harmonized/` would silently replace its
+  coverage report with DataCatalog's own (discovered while implementing
+  this: an early manual test run did exactly that, clobbering the real
+  5-class report until `make harmonize` was re-run to restore it). Same
+  reason `harmonize-mc2-assay` already uses its own
+  `data/mc2_assay/harmonized/` - this stays in the public `data/` tree
+  (unlike `mc2_assay`, this data is public) but still gets its own
+  subdirectory, `data/harmonized/datacatalog/`.
+- **Merges onto the *existing* `cckp:Dataset` subject, not a separate
+  node.** `DataCatalog_id` always equals that row's own `datasetId`
+  (confirmed on every entity carrying a real `DataCatalog_id` annotation) -
+  these are two metadata facets of the same real-world dataset.
+  `scripts/build_datacatalog_triples.py` adds triples directly onto
+  `mint_iri("Dataset", datasetId)`, the same subject IRI
+  `scripts/build_triples.py`'s own `Dataset` class pass already uses.
+- **schema.org predicates where a real one exists.** This vocabulary was
+  deliberately modeled on schema.org Dataset/CreativeWork terms, so
+  `license`, `creator`, `contributor`, `keywords`, `citation`,
+  `measurementTechnique`, `includedInDataCatalog`, `datePublished`,
+  `alternateName`, `funder`, `description`, and `title` (-> `schema:name`)
+  are emitted under `https://schema.org/` rather than a new
+  `cckp:`-namespaced predicate - this also sidesteps any collision with
+  `cckp_portal.linkml.yaml`'s own same-named-but-differently-sourced
+  Dataset fields (`cckp:description`, `cckp:species`, ...), since the two
+  metadata layers coexist on one subject under different namespaces.
+  Everything else gets a `cckp:`-namespaced predicate; `doi` reuses
+  `build_triples.py`'s own `external_iri()`/`doiIri` templating directly,
+  matching how the CCKP-portal Dataset class already handles DOIs.
+  CV-backed fields additionally get a resolved `cckp:{field}Term` edge,
+  mirroring `build_triples.py`'s own `{field}Term` convention.
+- **Real, evidence-backed CV realignment**, not new parallel CVs. Aligning
+  this vocabulary's real values (harvested from 966 live entities) against
+  `modules/dataCatalog/annotationProperty.csv`'s prior CV mappings surfaced
+  the same "CV source doesn't match what curators actually enter" pattern
+  documented for other fields elsewhere in this README - `species` used
+  common names (`Human`) where real annotations use scientific binomials
+  (`Homo sapiens`); `license` used bare SPDX-less codes (`CC_BY`) where real
+  annotations use versioned strings (`CC-BY 4.0`); `measurementTechnique`
+  used Title Case spelled-out terms where real annotations mix
+  abbreviations (`RNA-seq`) with proper terms; `accessType` was mapped to
+  `shared/dataTier.csv`'s Anonymous/Open/Controlled/Private set where real
+  annotations use `Open Access`/`Restricted Access`, matching
+  `modules/publication/publication_accessibility.csv` instead. Per
+  explicit direction: **extend an existing CV first** (as a
+  `Nonpreferred Terms` alias or a same-file new row - e.g.
+  `shared/dataset_species.csv` already used exactly this alias mechanism
+  for `Zebrafish`/`Danio rerio` before this pass touched it), **a genuinely
+  new CV file only when nothing existing fits** (`downloadType`'s `Synapse
+  Hosted`/`Synapse Indexed` has no repo analog anywhere). `dataType`
+  formalizes `modules/shared/mc2_iconTag_map_3-4-25.csv`'s existing
+  `term`->`label` taxonomy as a real registered CV (it wasn't registered
+  anywhere before this pass) rather than inventing a disconnected one.
+- **60 of 73 `measurementTechnique` values now resolve** against
+  `shared/assay.csv` (up from 46 before this pass - some already matched,
+  most needed a new `Nonpreferred Terms` alias, a few needed a brand-new
+  row in that same file). The remaining 13 (`in vivo tumor growth`, `in
+  silico synthesis`, `RNA array`, `shRNA-seq`, `spatial transcriptomics`,
+  `in vivo PDX viability`, `histology`, `proximity extension assay`,
+  `compound screen`, `traction force microscopy`, `array`, `metabolic
+  screening`, `scCGI-seq`) either got a new `assay.csv` row with no
+  ontology identifier (not guessed) or were left as-is (`traction force
+  microscopy`/`scCGI-seq` already had a row with a populated `Ontology
+  Url` but blank `Ontology Identifier` - `harmonize.py`'s `load_cv_lookup`
+  skips a row entirely when its identifier is blank, a real,
+  pre-existing gap unrelated to this pass and not fixed here, except for
+  `UPLC-MSMS`, whose identifier was derivable from its own already-cited
+  PubMed URL using this repo's existing `PMID:` convention). All 13 show
+  up in `data/harmonized/datacatalog/unmapped_terms.csv`, not silently
+  dropped.
+- **`accessType`/`downloadType`/`dataType`/`funder` are confirmed
+  non-mappable or pre-existing gaps, not new bugs.** `accessType`
+  (`Open Access`) has no ontology equivalent, same as
+  `Publication`/`Tool.accessibility` above. `downloadType` (`Synapse
+  Hosted`/`Synapse Indexed`) is a Synapse-specific hosting concept with no
+  external analog. `dataType`'s CV rows carry no `Ontology Identifier`
+  (they're internal Sage `mc2_iconTag_map` category labels, not external
+  ontology terms). `funder`'s blank `Ontology Identifier`
+  (`consortium/consortium_funding_agency.csv`) predates this pass and
+  wasn't added to while extending that file with the `NIH-NCI` value.
+  All four show up in full in the unmapped-terms report by design - the
+  coverage-baseline mechanism doesn't apply to this stage at all (its own
+  `--out-dir` keeps it out of the main pipeline's baseline entirely, see
+  above), so there's no ratchet to move forward for them.
+
 ## Design decisions (departures from nf-osi/kg-pipeline)
 
 nf-osi/kg-pipeline uses Dagster + RML/RMLMapper (Java) + a hand-authored
@@ -563,9 +681,16 @@ kg-pipeline/
     link_sagebrain.py            - MC2 assay-metadata KG: sagebrain property links
     crosswalk_scdm.py            - institution/consortium -> SCDM crosswalks (make crosswalk-scdm)
     link_scdm.py                  - SCDM Organization/Program/Person links (make link-scdm)
+    extract_datacatalog.py        - Data Catalog: native Dataset-entity annotations (make extract-datacatalog)
+    build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
+    merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
   data/                        - gitignored: raw/, harmonized/, rdf/ (rdf/ includes
-                                scdm_links.ttl once `make link-scdm` has been run)
+                                scdm_links.ttl once `make link-scdm` has been run,
+                                DataCatalog.ttl once `make triples-datacatalog` has)
+  data/harmonized/datacatalog/ - Data Catalog's own harmonize --out-dir, kept
+                                separate from data/harmonized/'s own
+                                unmapped_terms.csv (see "Data Catalog")
   data/mc2_assay/              - gitignored (access-controlled - see
                                 "MC2 assay-metadata KG"): raw/, harmonized/, rdf/
   test/
