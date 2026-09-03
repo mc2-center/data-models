@@ -47,7 +47,7 @@ dataCatalog:
   src: shared/sourceGeography.csv
 - name: funder
   src: consortium/consortium_funding_agency.csv
-- name: license
+- name: dataCatalogLicense
   src: shared/studyLicense.csv
 - name: measurementTechnique
   src: shared/assay.csv
@@ -59,7 +59,7 @@ dataCatalog:
   src: dataCatalog/dataCatalog_data_type.csv
 - name: manifestation
   src: shared/tumorType.csv
-- name: dataUseModifiers
+- name: dataCatalogDataUseModifiers
   src: shared/duo.csv
 education:
 - name: Resource Topic
@@ -218,8 +218,6 @@ shared:
   src: shared/tissue.csv
 - name: Tumor Type
   src: shared/tumorType.csv
-- name: Consortium Affiliation
-  src: consortium/consortium_name.csv
 - name: License
   src: tool/tool_license.csv
 study:
