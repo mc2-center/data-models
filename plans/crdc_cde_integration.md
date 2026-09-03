@@ -1494,3 +1494,40 @@ role values vs. the attribute's 7 software-project roles) applies regardless of 
 under. Removed `CDE:2201713` entirely; `Tool Entity Role` now carries no caDSR CDE tag at all.
 `crdc_cde_mapping_report.csv`'s `2201713` row updated to match. Re-verified: `make collate`
 clean, 606 attributes, 0 duplicate names, 0 dangling references.
+
+### Two more same-day decisions
+
+**Institution gap (round 7's #9) — accepted, not fixed.** The user confirmed accepting the gap
+rather than sourcing a verified ROR ID for IUPUI. `Grant Institution Name`/`Alias` remain
+free-text-only for that institution; `Institution Key` is not retroactively merged. No files
+changed — this closes out round 7's Institution finding as a deliberate, informed decision
+rather than an open item.
+
+**`Biospecimen Analyte Type` removed — redundant with the re-scoped `Type Category`.** Adding
+this attribute in Phase 4 (for CDE `15063661`) made sense against the *original* OBIB-based
+`Biospecimen Type Category` design, but after today's re-scope to CDE `12445832` (whose real
+values already include `DNA`, `RNA`, `Cells`, etc. directly), a separate analyte-type field
+duplicates information `Type Category` itself can now carry. Removed the attribute entirely
+(row + `Biospecimen` template `DependsOn` reference); `crdc_cde_mapping_report.csv`'s `15063661`
+row updated to `no_fit_found`/dropped. This CDE no longer counts toward the 105 CRDC-required
+set. Re-verified: `make collate` clean, structural check unchanged apart from the row count drop.
+
+### `make qc`/schematicpy (#17) — investigated further, confirmed no quick fix exists
+
+Per the user's follow-up ("schematic is deprecated, try synapseclient/curator extension"):
+confirmed via a targeted search that **Sage Bionetworks has announced schematic will be
+deprecated by end of 2026**, with its functionality "integrated into Synapse" — but checked
+what that actually means today by inspecting the installed `synapseclient` package directly
+(`synapseclient.services.json_schema`, a real, present module). It provides **JSON Schema
+*registration and validation binding*** (create an organization, upload an already-built JSON
+Schema, bind it to a Synapse entity for metadata validation) — explicitly marked `beta, subject
+to change` in its own docstring. It does **not** generate a JSON Schema/JSON-LD *from* a
+schematic-style CSV data model (no CSV parsing, no `DependsOn`-graph traversal, no CV-to-enum
+conversion anywhere in the module) — it's a downstream consumer of an already-built schema, not
+a replacement for `schematic schema convert`/`create_json_from_model.py`'s generation step.
+**Conclusion**: there is currently no native-Synapse path that replaces the CSV→JSON-LD
+generation step this repo's `make convert`/`make generate-json` need — only a future validation/
+binding capability once such a schema already exists. The `make qc` blocker (schematicpy's
+`columnType=string_list` incompatibility, on top of the missing-columns issue) stands as
+documented; this remains a real environment/tooling gap, not a decision this session can resolve
+by switching tools.
