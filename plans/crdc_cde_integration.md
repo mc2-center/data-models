@@ -1127,3 +1127,163 @@ composite identifiers with no natural-language twin to collide with.
 Re-ran `make collate`: clean. Final attribute count: **611** (612 → 611, −1). Structural check:
 same 2 pre-existing duplicate names (`dataUseModifiers`, `license`), same 1 pre-existing
 dangling reference (`Study` → `Study Number of Samples`). Nothing new.
+
+## Round 7 — remaining recap items, structural check now fully clean
+
+Implements every open item from the round-6 recap the user responded to. All items below are
+either implemented, confirmed as no-change, or reported as still-blocked — nothing left
+unaddressed. **This is the first `make collate` this session with zero pre-existing duplicate
+names and zero dangling `DependsOn` references** — both of the issues carried since the very
+first structural check are now resolved (see #26 and #27 below).
+
+### Confirmed no-action items (verified unchanged)
+- **#2** (`DSP`/`Study Number of Participants`): a dataset can be a real subset of a study's
+  participants — genuinely different concepts, stay separate. No change made.
+- **#4** (`Dataset`/`DSP Dataset` Name/Alias/Url/Description): `sharingPlans` stays fully
+  separate per the user's decision. No change — already separate from round 4's revert.
+- **#5** (`Dataset File Formats`/`DSP Dataset File Formats`): same as #4. No change.
+- **#7** (`Workflow Type`/`Visium Workflow Type`): both kept. No change.
+- **#15**: moot — `Tool Pubmed Id` deleted per #13.
+- **#16, #23**: acknowledged, no action (23 remains blocked on live OBIB data as before).
+
+### Still blocked (reported, not retried)
+- **#18/#19/#20/#21-live-verification**: caDSR `GetJSON`/`GetXML` on `/invoke/caDSR/*` confirmed
+  still `401 Access Denied` after retrying with varied encoding/headers — a deliberate gateway
+  access change, not transient. No further API attempts made this round; #21 (below) was
+  resolved using non-live reasoning instead, as instructed.
+- **#17**: the hosted `schematic.api.sagebionetworks.org` has no usable CSV→JSON-LD endpoint for
+  this repo's setup (needs a publicly-hosted CSV URL, returns a pickle not JSON-LD regardless).
+  Locally: adding the missing `Parent`/`DependsOn Component` columns clears the header check but
+  surfaces that current `schematicpy` (25.x) no longer accepts `columnType=string_list` at all —
+  used extensively in this repo, including this session's own consolidation work. Pinning the
+  older, compatible `schematicpy==22.8.1` fails to build (legacy `numpy.distutils`/Fortran
+  toolchain issue, persists with `--no-build-isolation` and an older pinned `numpy`). This needs
+  either a real schema migration (add the 2 columns for real + migrate every `string_list`) or a
+  properly isolated legacy build environment — not attempted further per instruction.
+
+### Implemented
+
+**#1 — `File Design` description fixed.** Dropped the "of the dataset or file" hedge; now reads
+"The overall design of the file, including a batch identifier, if applicable." — a genuine
+file-level statement, no cross-reference to `Dataset Design`. Both attributes kept separate, as
+decided.
+
+**#3 + #10 — `Investigator` consolidated.** `Grant`/`Project`/`Study Investigator` → one shared
+`Investigator` (`modules/shared`), all three templates' `DependsOn` updated. Per #10, the merged
+`Description` explicitly states both accepted forms: *"Provide either the investigator's
+free-text name or a PersonView_id reference (see PersonView Key) — both forms are acceptable."*
+`Pattern`/`Format` left blank on purpose (no forced form). `Required=True` and `string_list`
+carried over unchanged (all three source attributes already agreed on both).
+
+**#6 — `Resource Dataset Alias` restored.** Re-added to `modules/education` using the exact
+`HEAD f840848` definition the user supplied verbatim, `Educational Resource`'s `DependsOn`
+restored. No `mapping.yaml` entry (never had one). `Publication View` was **not** given
+`DatasetView Key` — `Publication Dataset Alias` remains a separate open flag (round 6), not
+touched this round.
+
+**#8 — `Consortium` normalized and merged; #9 — `Institution` investigated and flagged, not
+merged.**
+- **Consortium**: checked `consortium/consortium_id.csv` (the actual primary-key CV, 11 rows)
+  against `consortium/consortium_name.csv` (used by the now-retired `Consortium Affiliation`,
+  also 11 rows) — **the canonical `program.X`-format CV already carries the bare acronym for
+  every row, in its own `Notes` column** (e.g. `program.csbc` → `Notes: CSBC`). No coverage gap,
+  no format rewrite needed — the "normalization" the task anticipated already existed as
+  metadata on the canonical record. Retired `Consortium Affiliation` from `modules/shared` and
+  from all 3 templates that had it (`Grant View`, `Person View`, `Project View` — all three
+  already carried `Consortium Key` too, confirmed before removing). Deleted the now-orphaned
+  `consortium/consortium_name.csv` (confirmed nothing else referenced it).
+- **Institution**: checked `institution/institution_id.csv` (90 rows) against
+  `institution/institution_name.csv` and `institution/institution_alias.csv` (91 rows each) by
+  cross-referencing their shared `Ontology Identifier` (ROR ID) column rather than row order.
+  **Found a real coverage gap**: `Indiana University - Purdue University Indianapolis` (alias
+  `IUPUI`) exists in both Name and Alias CVs but has **no corresponding row in
+  `institution_id.csv` at all** — not even with a blank ROR ID. `Grant View` does already have
+  `Institution Key` alongside `Grant Institution Name`/`Alias` (the template-co-occurrence
+  condition is met), but retiring the Name/Alias fields now would make it impossible to record a
+  grant's affiliation with IUPUI at all, since the FK's own picklist has no matching entry.
+  **Not implemented — flagging back rather than guessing**, per the instruction: this needs
+  either adding IUPUI as a real `Institution_id` record first (requires a verified ROR ID this
+  session can't look up live) or a decision to accept the gap. No files changed for Institution.
+
+**#11 — `FileView Key` removed** from `modules/shared` (confirmed unused by any template
+model-wide, verified again this round).
+
+**#12 — `SequencingLevel4 Key` removed** from `modules/shared` (dead reference — no
+`sequencingLevel4` module exists anywhere in the repo).
+
+**#13 — `Dataset Pubmed Id` and `Tool Pubmed Id` removed** entirely (both orphaned, neither ever
+referenced in its own template's `DependsOn`, both redundant with `PublicationView Key`, which
+both `Dataset View` and `Tool View` already carry).
+
+**#14 — `DSP Dataset Level` `columnType` fixed**: `string_list` → `string`, matching its own
+singular description ("The level of processing associated with the dataset").
+
+**#21 — Legacy CDE tags, judged individually (no live verification available, reasoning
+documented per tag):**
+- **Removed** `CDE:14714127` from `Primary Diagnosis` and `CDE:13579886` from `Therapeutic
+  Agent` — both attributes' `Description` and `Valid Values` were fully rewritten during
+  consolidation to the CRDC/NCI-Thesaurus open-reference concept (per `CRDC_CDE:14905532` /
+  `CRDC_CDE:14913015`), so the old tags no longer describe what the field actually models —
+  redundant at best, actively misleading at worst.
+- **Kept** `CDE:6626651` on `Biospecimen Acquisition Method` — unlike the two above, this
+  attribute's `Valid Values` were deliberately left untouched this session (plain-`Enumerated`,
+  no-fabrication rule), so the old tag may still validly describe the field's real, unchanged
+  content. No evidence found that it's wrong; different situation from Primary
+  Diagnosis/Therapeutic Agent, not a blanket rule.
+- **Kept all three tags** on `Treatment Response` (`CDE:13383448`, `CRDC_CDE:13383448`,
+  `CRDC_CDE:15179918`) — the `CDE:`/`CRDC_CDE:` numeric duplication is this session's
+  deliberate, repo-wide convention for *every* `exact_id_match` case, not a mistake specific to
+  this attribute; `CRDC_CDE:15179918` ("Best Overall Response") is a genuinely distinct,
+  more-specific concept per the plan's own earlier reasoning, not a redundant restatement of
+  `13383448`.
+
+**#22 — `Biospecimen Description`'s incorrect CDE removed.** Confirmed `Biospecimen Tumor
+Status` already correctly carries `CDE:14688604, CRDC_CDE:14688604` (the real target); removed
+the copy-paste `CDE:14688604` from `Biospecimen Description` entirely (now blank `Properties`).
+
+**#26 — `dataCatalog` naming collision resolved.** Renamed `dataCatalog`'s own `dataUseModifiers`
+→ `dataCatalogDataUseModifiers` and `license` → `dataCatalogLicense` (camelCase, matching the
+module's own DCAT/schema.org-style naming convention), updated the `DataCatalog` template's
+`DependsOn` and the `mapping.yaml` entries. `modules/shared`'s long-established governance
+`dataUseModifiers`/`license` (tied into the `DUOPlus1-7` chain) were **not** touched.
+
+**#27 — `Study Number of Samples` added**, resolving the dangling reference present since the
+very first structural check this session. Description adapted from `modules/governance/
+Study.model.csv`'s `studySampleNumber` line, matching the sibling `Study Number of Participants`
+attribute's phrasing style: *"The number of specimens associated with systematic investigation
+into a subject."* `Required=True`, `Properties=CDE:11555663`, `columnType=number`. (Caught and
+fixed a self-inflicted duplicate `DependsOn` entry while implementing this — `Study`'s
+`DependsOn` already listed `Study Number of Samples` once, since that unresolved reference *was*
+the dangling-reference finding; appending it again without checking would have produced two
+entries. De-duplicated before saving.)
+
+### #24 — Consolidated list of `Required`/`columnType` normalization judgment calls
+
+Every cardinality/requiredness call made across every round of consolidation this session, in
+one place for review (previously scattered across individual round sections):
+
+| Attribute | Call made | Rationale |
+|---|---|---|
+| `Sex` (round 2) | `Required=True` | Individual/Model required it, Biospecimen didn't — majority wins |
+| `Species` (round 2) | `Required=True` | Model/Biospecimen both required it |
+| `Primary Diagnosis` (round 2) | `Required=True` | Individual/Model both required it |
+| `Treatment Type`, `Therapeutic Agent`, `Disease Type`, `Tumor Subtype` (round 2) | `columnType` → `string_list` | At least one existing copy already used `string_list`; the `string` copies looked like an oversight given these concepts are routinely multi-valued in practice |
+| `File Species` (round 2 addendum) | `columnType` `string` → `string_list` | Sole outlier vs. Dataset/DSP Species, both already `string_list` |
+| `Assay` (round 2) | `columnType` → `string_list` | `File Assay` was the lone `string` outlier vs. Dataset/Publication Assay |
+| `Tissue`, `Tumor Type` (round 2) | `Required` left blank | 2 of 3 source attributes (Dataset, File) left it blank; only Publication required it — majority wins |
+| `License` (round 4, later widened round 5) | `Required` left blank, `columnType=string_list` | Resource/Tool both blank/`string_list` already; `Study License` (added round 5) is singular `string` by design (different cardinality, own CDE) — not force-matched, its `Required`/`columnType` were left as `License`'s own, not `Study License`'s |
+| `Consortium Affiliation` → `Grant Affiliation` (round 4, **since fully retired** — rounds 5 & 7) | `Required=True`, `columnType=string_list` | Superseded; no longer applicable now that both attributes are gone |
+| `Investigator` (round 7) | `Required=True`, `columnType=string_list` | All three source attributes already agreed — no divergence to resolve |
+| `DSP Dataset Level` (round 7) | `columnType` `string_list` → `string` | Corrected to match its own singular description — not a cross-attribute consolidation call, a standalone data-quality fix |
+
+**Still open, not this session's call to make**: `Visium Workflow Type`'s `Required=True` vs.
+the shared `Workflow Type`'s blank (round 3 finding, #7 — user confirmed keep both, so this
+divergence stands unresolved by design, not by oversight).
+
+### Verification
+
+Re-ran `make collate`: clean. Final attribute count: **606** (611 → 606, net −5: `Resource
+Dataset Alias` +1, `Consortium Affiliation` −1, `FileView Key` −1, `SequencingLevel4 Key` −1,
+`Dataset Pubmed Id` + `Tool Pubmed Id` −2, `Investigator` consolidation −2 (3 retired, 1 added),
+`Study Number of Samples` +1). **Structural check: 0 duplicate attribute names, 0 dangling
+`DependsOn` references** — clean for the first time this session.
