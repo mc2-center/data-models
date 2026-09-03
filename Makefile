@@ -13,7 +13,7 @@ collate:
 	tail -n +2 -q modules/*/annotationProperty.csv >> ${CSV}
 
 convert:
-	schematic schema convert ${CSV}
+	python convert_model_to_jsonld.py
 
 qc_convert:
 	schematic schema convert ${QC}
