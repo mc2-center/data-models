@@ -62,19 +62,26 @@ Of the 70 `no_fit_found` CDEs, the user's decisions resolve them as:
   replacements rather than new fields (the UBERON cluster mostly, plus
   Specimen Material Category, Project Name).
 
-**CV consistency check** (unchanged from the review pass): 39 (CDE,
-attribute) pairs across 36 unique enumerated attributes were checked live
-against caDSR's `cdeMatch` API. 7 consistent (4 perfect 1.0 PV-match
-ratio), 2 partial overlap (MC2 curates a subset of a larger CDE PV list —
-not concerning), 4 low overlap worth a manual look (Consortium Funding
-Agency 0/2, Tool Entity Role 2/7, Individual/Biospecimen Therapeutic Agent
-3/4475 each), and 26 inconclusive (the API's name-driven ranking failed to
-surface even an independently-confirmed-correct mapping in a spot check —
-not a reliable "these are wrong" signal; see the CSV's `cv_consistency`
-column for full detail). The caDSR `GetJSON`/`fetch-cde` endpoint used for
-a real permissible-value diff is currently returning `401 Access Denied`
-(worked as of the 2026-07-20 adversarial review) — re-check this in a
-future session before relying on `fetch-cde` for verification.
+**CV consistency check — superseded by Round 8's live re-verification.**
+The original pass (39 CDE/attribute pairs via the `cdeMatch` API's
+name-ranking proxy) is no longer the current state — a working caDSR
+`DataElement/{publicId}` endpoint was found and used in Round 8 to
+re-check every flagged pair against real permissible-value data. See
+Round 8 in the Implementation Report for the full resolution: most
+"inconclusive" pairs are now **confirmed consistent** with real data,
+two CVs were **corrected outright** (Consortium Funding Agency,
+Biospecimen Preservation Medium — both had severely mismatched value
+lists), two were **extended** with genuinely missing real values
+(Biospecimen Composition, Treatment Response), and a few remain flagged
+for a human call where the mismatch is real but the fix isn't
+mechanical (Tool Entity Role's CDE looks like a poor semantic match;
+Tumor Grade's real values use a different code+label serialization).
+Full per-CDE detail is in `results/cde_match/crdc_cde_mapping_report.csv`'s
+`cv_consistency` column, all updated in Round 8. The `GetJSON` endpoint
+that was down all session is confirmed **retired**, not transient —
+the working replacement (`cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/
+DataElement/{publicId}`) is now wired into
+`~/.claude/skills/cadsr-cde-match/scripts/cde_match.py`'s `fetch-cde`.
 
 ## The `CRDC_CDE:` tagging decision
 
@@ -1287,3 +1294,122 @@ Dataset Alias` +1, `Consortium Affiliation` −1, `FileView Key` −1, `Sequenci
 `Dataset Pubmed Id` + `Tool Pubmed Id` −2, `Investigator` consolidation −2 (3 retired, 1 added),
 `Study Number of Samples` +1). **Structural check: 0 duplicate attribute names, 0 dangling
 `DependsOn` references** — clean for the first time this session.
+
+## Round 8 — live caDSR data confirmed working, re-verification with real data
+
+A working replacement for the retired `GetJSON` endpoint was found and confirmed
+(`cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/DataElement/{publicId}`, `Accept:
+application/json`), along with a bulk `DataElements/getCRDCList` call returning all 105 CRDC
+CDEs with complete `Used By` text and embedded permissible values for 55 of them
+(`results/cde_match/crdc_cde_live_9-3-2026.csv`, `results/cde_match/crdc_cde_permissible_values.json`
+— both new files, `crdc_cde_9-2-2026.csv` kept as historical record). This let several rounds'
+worth of "no live data available" judgment calls be checked against the real thing.
+
+### A — Backfilled real Valid Values on 11 previously-blank plain-Enumerated attributes
+
+All 11 Phase-4 attributes left blank under the no-fabrication rule had real permissible-value
+data in the 55-CDE set: `Individual Residual Disease Status` (5 values), `Individual Age 90 or
+Older` (2), `Individual Disease Progression or Recurrence Type` (7), `Individual Treatment
+Intent Type` (7), `Individual Treatment or Therapy Indicator` (4), `File Data Category` (27),
+`File Data Compression Status` (3), `Image DICOM Modality Type` (89, real DICOM 2-letter
+modality codes), `Biospecimen Analyte Type` (12), `Biospecimen Preservation Temperature` (10),
+`Biospecimen Treatment Prior to Specimen Collection Indicator` (4). Used the `value` field (not
+`long_name`) for all 11 — every one already reads as a clean, human-usable label (including the
+DICOM codes, which are the actual industry-standard 2-letter abbreviations, not something to
+expand to prose).
+
+### B — Specimen Material Category ↔ Biospecimen Type Category (long-standing #20), resolved as NOT a match
+
+Fetched CDE `12445832`'s real 19 permissible values (`Blood`, `Ascites`, `Tissue`, etc. — plain
+English category names). Compared against `Biospecimen Type Category`'s current design: an open
+OBIB-identifier-reference field (`Pattern ^OBIB:\d+$`, blank `Valid Values`) for the *different*
+CDE `11253427`. **These are structurally incompatible** — a curator entering `Blood` would never
+match the OBIB pattern. This is a real, now-confirmed misalignment, not a crosswalk waiting to
+be built: the two CDEs describe a similar concept but at fundamentally different value
+representations (open ontology reference vs. small closed English-language list). **Not tagging
+`CRDC_CDE:12445832`** on `Biospecimen Type Category` — doing so would be actively misleading.
+Left as an open design decision (new standalone attribute, or revert the OBIB conversion) rather
+than resolved unilaterally. `results/cde_match/crdc_cde_mapping_report.csv`'s `12445832` row
+updated with the full finding.
+
+### C — By-reference CV conversions re-confirmed correct, not a gap
+
+Checked whether any of the CDEs behind this session's open/reference-validated conversions
+(`Primary Diagnosis`, `Therapeutic Agent`, `Site of Origin`, `Known Metastasis Sites`, `Site of
+Resection or Biopsy` [both CDEs], `Primary Site`, `Biospecimen Type Category`/OBIB, `Biospecimen
+Taxonomy ID`, `ICD-10-CM Disease Code`, the 3 new UBERON-identifier attributes) have real
+permissible values in the live data now that fetching is possible. **None do** — all 13 are
+absent from the 55-CDE permissible-values set entirely. This is positive confirmation, not a
+gap: `Enumerated by Reference` genuinely means caDSR itself doesn't enumerate a value list for
+these CDEs (the value comes from an external ontology/vocabulary), so the open-field design
+adopted earlier this session was correct and stays as-is.
+
+### D — Legacy CDE tags: `13383448`/`15179918` confirmed distinct with real data
+
+Fetched both CDEs' real definitions. `13383448` ("Disease Response"): "the pathologic and/or
+clinical changes... that resulted from treatment" (per-assessment-point). `15179918` ("Best
+Overall Response"): "the **best** improvement... achieved **throughout the entire course** of
+the protocol treatment" (a single best/final summary). This confirms the distinct-scope
+reasoning from the original (non-live) judgment call. Additionally: both CDEs share an
+**identical real 14-value permissible-value list** — same vocabulary, different assessment
+scope, not duplicate CDEs. `6626651` (Biospecimen Acquisition Method) was independently
+confirmed real and on-topic by the user's own testing before this round started. No changes to
+any of the 4 legacy-tag decisions from earlier rounds — all now verified rather than reasoned.
+
+### E — Full CV-consistency re-check with real data
+
+Went through every "low overlap" and "inconclusive" row from the original API-ranking-based
+pass; 30 of ~31 flagged CDEs had real data available (via the 55-CDE set or targeted `fetch-cde`
+calls). Outcomes:
+
+- **Confirmed consistent, no change**: `NGS Sequencing Platform` (66/67), `Sex` (all 3 real
+  values present, MC2's extra 6 are a deliberate inclusive superset), `Individual Recurrence
+  Status` (7/7), `Last Known Disease Status` (11/11), `NGS Library Strategy` (37/39),
+  `Primary Diagnosis`/`Therapeutic Agent`/`Primary Site`/`Biospecimen Type Category` (all
+  correctly by-reference, see Part C).
+- **Confirmed mismatch, fixed with real data** (CV source files edited, not just
+  `annotationProperty.csv` — see note below): `Consortium Funding Agency` (was 2 values `NIH`/
+  `NIH-NCI`, replaced with the real 21 full agency names), `Biospecimen Preservation Medium`
+  (only 4/17 real values were present under completely different terminology — e.g. `Formalin`
+  vs. real `Formalin Fixed - Buffered`/`Formalin Fixed - Unbuffered` — replaced with the real
+  17-value list), `Biospecimen Composition` (8/11 present, added the 3 genuinely missing real
+  values: `Prior Primary`, `Progression`, `Synchronous Primary`), `Treatment Response` (added 3
+  genuinely missing real values found via the `15179918`/`13383448` shared-vocabulary check:
+  `Less than Partial Response`, `Too Early`, `Not Assessed`).
+- **Confirmed mismatch, flagged for a human call, not changed**: `Tool Entity Role` (CDE
+  `2201713`'s real 144 values are clinical/care-team roles — "Attending Physician", "Admitting
+  Physician" — sharing almost nothing with the model's 7 software-project roles; this may be a
+  poor CDE match despite matching by name/score, but it's a pre-existing `exact_id_match` this
+  project didn't choose, so flagged rather than unilaterally retagged). `Tumor Grade` (real
+  values combine code+label as one string, e.g. `G1 Low Grade`, while the model stores `G1` and
+  `Low Grade` as separate list entries — same scale, different serialization; rewriting an
+  already-in-use CV needs a human call).
+- **Partial match, deliberately not changed**: `Biospecimen Preservation Method` (9/14 — model's
+  extra values are legitimate finer-grained variants of the CDE's broader terms, e.g.
+  `Cryopreservation in Liquid Nitrogen - Live Cells` vs. real's plain `Liquid Nitrogen`) and
+  `Biospecimen Acquisition Method` (6/10 — same pattern, e.g. `Core Needle Biopsy` vs. real's
+  plain `Needle Biopsy`). Forcing these to match the CDE's coarser terms would lose real
+  granularity, not fix anything.
+- **Granularity mismatch, not a contradiction**: `File Assay` (now consolidated `Assay`) — CDE
+  `12373576`'s 9 broad categories (`DNA Sequencing`, `Pathology`, `Radiology`, etc.) don't
+  enumerate the same items as the model's 391-value fine-grained technique list; the 2 that do
+  overlap match cleanly.
+- **Data artifact, not meaningful**: `Biospecimen Tumor Morphology` — the live fetch returned
+  only 1 permissible value for a CDE that should have ~1000+ ICD-O-3 codes, almost certainly an
+  API pagination/truncation limit for very large PV lists rather than a real single-value
+  definition. Model's existing ~1150-code CV left untouched.
+
+**Important mechanical note**: the first attempt at these CV fixes edited `Valid Values`
+directly in `modules/*/annotationProperty.csv`, which `make collate` immediately overwrote back
+to the old values — these 4 attributes are `mapping.yaml`-driven, so the real fix has to go into
+their actual CV **source** files (`consortium/consortium_funding_agency.csv`,
+`biospecimen/fixative.csv`, `biospecimen/specimenComp.csv`, `shared/treatmentOutcome.csv`), not
+the generated `annotationProperty.csv` cell. Caught by re-running `make collate` and checking the
+values survived before considering this done — a reminder that any future direct-CSV-edit
+approach to a CV-bearing attribute must check `mapping.yaml` first.
+
+### Verification
+
+Re-ran `make collate` after fixing the CV-source-file issue above: clean. Structural check: 606
+attributes (no new/removed rows this round — real permissible-value backfill and CV corrections
+only), 0 duplicate names, 0 dangling references — unchanged from the last check, nothing broken.
