@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 File Description,Description of the file.,,,,"CDE:11280338, CRDC_CDE:11280338",,string,,,,,,
-File Design,"The overall design of the dataset or file, including a batch identifier, if applicable.",,,,,,string,,,,,,
+File Design,"The overall design of the file, including a batch identifier, if applicable.",,,,,,string,,,,,,
 File Url,The url of where the file is stored.,,,True,CDE:11556141,,string,uri,,,,,
 File Level,The processing level the file can be mapped to. ,"Level 1, Level 2, Level 3, Level 4, Auxiliary, Not Applicable, Metadata",,True,,,string,,,,,,
 File View,The denormalized manifest for file submission.,,"FileView_id, Biospecimen Key, Study Key, DatasetView Key, Filename, File Alias, File Description, File Design, File Level, Assay, Species, Tissue, Tumor Type, File Url, File Format, Data Use Codes, File Longitudinal Group, File Longitudinal Event Type, File Longitudinal Sequence Identifier, File Longitudinal Time Elapsed Unit, File Longitudinal Total Time Elapsed, File Data Category, File Data Checksum Type, File Data Checksum Value, File Data Compression Status, File Data Size",,,,,,,,,True,
