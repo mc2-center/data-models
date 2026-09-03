@@ -10,3 +10,6 @@ Persistent Disease,The persistence of tumor cells in the body following cancer t
 Progressive Disease,"A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening.",,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C35571,http://purl.obolibrary.org/obo/NCIT_C35571,C35571,
 Stable Disease,A disease that is neither decreasing nor increasing in extent or severity.,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C18213,http://purl.obolibrary.org/obo/NCIT_C18213,C18213,
 Unknown,"Not known, observed, recorded, or reported as unknown by the data contributor.",,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C17998,http://purl.obolibrary.org/obo/NCIT_C17998,C17998,
+Less than Partial Response,Less than Partial Clinical Response,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C151961,http://purl.obolibrary.org/obo/NCIT_C151961,C151961,
+Too Early,Too Early to be Assessed,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C222061,http://purl.obolibrary.org/obo/NCIT_C222061,C222061,
+Not Assessed,NOT ASSESSED,,,FALSE,,Treatment Response,,CDS v5.0.4/Treatment-response,,,NCIT:C139527,http://purl.obolibrary.org/obo/NCIT_C139527,C139527,
