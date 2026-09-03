@@ -1483,3 +1483,14 @@ framing of this as a breaking change to review before merging.
 
 Re-ran `make collate`: clean. Structural check: 606 attributes (no rows added/removed — CV
 content and Properties changes only), 0 duplicate names, 0 dangling references.
+
+### Follow-up, same day: `Tool Entity Role`'s legacy `CDE:2201713` tag also removed
+
+Round 9 removed `CRDC_CDE:2201713` from `Tool Entity Role` but left the pre-existing
+`CDE:2201713` tag in place (it predated this session and wasn't explicitly in scope). On review,
+the user confirmed the plain reading of "should not be mapped to that CDE" applies to the whole
+mapping, not just the CRDC-required half — the same real-data mismatch (144 clinical/care-team
+role values vs. the attribute's 7 software-project roles) applies regardless of which tag it's
+under. Removed `CDE:2201713` entirely; `Tool Entity Role` now carries no caDSR CDE tag at all.
+`crdc_cde_mapping_report.csv`'s `2201713` row updated to match. Re-verified: `make collate`
+clean, 606 attributes, 0 duplicate names, 0 dangling references.

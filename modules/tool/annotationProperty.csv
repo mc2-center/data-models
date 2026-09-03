@@ -13,7 +13,7 @@ Tool Download Type,"The type of data, information, or system that is obtained wh
 Tool Download Url,Link to download (or repo providing a download) for the software.,,,,,,string,uri,,,,,biotoolsschema
 Tool Download Version,Version information (typically a version number) of the software applicable to this download.,,,,,,string,,,,,,biotoolsschema
 Tool Entity Name,Name of the entities that may be credited,,,,,,string_list,,,,,,
-Tool Entity Role,"Role performed by entity that is credited, e.g. “Developer”","Developer, Maintainer, Provider, Documentor, Contributor, Support, Primary Contact",,True,CDE:2201713,,string_list,,,,,,biotoolsschema
+Tool Entity Role,"Role performed by entity that is credited, e.g. “Developer”","Developer, Maintainer, Provider, Documentor, Contributor, Support, Primary Contact",,True,,,string_list,,,,,,biotoolsschema
 Tool Entity Type,"Types of entities that may be credited, e.g. ‘Person’.","Person, Project, Division, Institute, Research Consortium, Funding Agency",,True,,,string_list,,,,,,biotoolsschema
 Tool Function Note,"Concise comment about this function, if not apparent from the software description and EDAM annotations.",,,,,,string,,,,,,biotoolsschema
 Tool Homepage,"Homepage of the software, or some URL that best serves this purpose.",,,True,,,string,uri,,,,,biotoolsschema
