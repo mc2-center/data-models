@@ -1413,3 +1413,73 @@ approach to a CV-bearing attribute must check `mapping.yaml` first.
 Re-ran `make collate` after fixing the CV-source-file issue above: clean. Structural check: 606
 attributes (no new/removed rows this round — real permissible-value backfill and CV corrections
 only), 0 duplicate names, 0 dangling references — unchanged from the last check, nothing broken.
+
+## Round 9 — three user decisions on Round 8's open items
+
+### 1. `Biospecimen Type Category` re-scoped from CDE 11253427 to CDE 12445832
+
+The user independently re-verified CDE `11253427` live before deciding: its `ValueDomain.type`
+genuinely is `Enumerated by Reference` (`referenceTerminology: "Ontology for Biobanking|C191989"`),
+and its one listed "permissible value" is a link to the OBIB browser, not an example term — so
+the original open/OBIB-reference design from earlier this session was correctly grounded in real
+data, not a mistake. The decision here is a **re-scoping**, not a correction of an error: shift
+the attribute to align primarily with CDE `12445832` ("Specimen Material Category") instead,
+since *that* CDE's closed 19-value list (`Blood`, `Ascites`, `Tissue`, etc.) matches how the
+attribute is actually used, per the Round 8 finding.
+
+Implemented: `Valid Values` replaced with CDE 12445832's real 19-value list (no `mapping.yaml`
+entry exists for this attribute, so no CV-source-file lesson applied here — a direct edit was
+safe). `Pattern` (`^OBIB:\d+$`) cleared, `columnType` stays `string` (already was). Tagged
+`CRDC_CDE:12445832`.
+
+**Legacy tag decision**: dropped both `CDE:11253427` and `CRDC_CDE:11253427` entirely, rather
+than keeping the old `CDE:` tag alongside the new one — since the attribute's real value space
+is now a closed list, keeping a reference to an `Enumerated by Reference` CDE would misrepresent
+what the field actually models (same reasoning as the Round 7 legacy-tag cleanup on Primary
+Diagnosis/Therapeutic Agent). **CDE 11253427 is not lost, just currently homeless**: it's a
+real, valid, correctly by-reference OBIB CDE, and may deserve its own companion attribute
+(analogous to the UBERON-identifier companion pattern used elsewhere this session) — flagged as
+an open follow-up in `crdc_cde_mapping_report.csv`'s `11253427` row, not resolved here.
+
+`crdc_cde_mapping_report.csv` updated: `12445832` → `exact_id_match` (by construction, now that
+the CV is its real list); `11253427` → `no_fit_found`, with the full reasoning above.
+
+### 2. `Tool Entity Role` un-mapped from CDE 2201713
+
+Confirmed per the Round 8 finding (144 real values are clinical/care-team roles, not software
+roles). Removed `CRDC_CDE:2201713` — this CDE no longer counts toward the 105 CRDC-required set.
+**Checked the pre-existing tag before touching it**: it was `CDE:2201713` — the *same* CDE ID,
+not a different legacy one, meaning this attribute never had any other CDE before this whole
+project started. Left `CDE:2201713` in place exactly as instructed, but it now carries the
+identical real-data mismatch concern — flagged in the mapping report as a possible separate
+legacy-tag cleanup, not addressed here. No replacement CDE was searched for, per instruction.
+
+`crdc_cde_mapping_report.csv`'s `2201713` row updated to `no_fit_found`/dropped, with the
+real-data reasoning as the documented cause.
+
+### 3. `Tumor Grade` reformatted to match the real CDE's code+label serialization
+
+CDE `11325685`'s real permissible values combine code and label as one string per entry (e.g.
+`G1 Low Grade`, not separate `G1` and `Low Grade` list items) — and critically, the combining
+isn't a uniform pattern: `G4`'s real combined form is `G4 Anaplastic`, not `G4 Grade 4` or
+`G4 Undifferentiated`. Used the real `value` field verbatim for all 9 entries rather than
+constructing a guessed format, per instruction.
+
+**Same CV-source-file lesson as Round 8, checked proactively this time**: `Tumor Grade` is
+`mapping.yaml`-driven (`shared/tumorGrade.csv`), so the fix went into that CV source file
+directly — the old file's 12 separate rows (`G1`...`GB`, `High Grade`...`Low Grade`, plus
+`Unknown`/`Not Reported`/`Not Applicable`) were replaced with the 9 real combined-term rows,
+carrying forward each term's matching NCIt code (cross-verified: the file's existing NCIT codes
+for G1–G4/GX/GB already matched the live data's `concept_code` values exactly, a good
+consistency check) and an adapted description. Verified the fix survives `make collate` before
+considering it done.
+
+This is a **breaking change** to any existing data using the old `G1`/`G2`/etc. short-code
+values for this shared, round-2-consolidated attribute (used by `Individual`/`Biospecimen Tumor
+Grade` before consolidation, now just `Tumor Grade`) — flagging explicitly per the user's own
+framing of this as a breaking change to review before merging.
+
+### Verification
+
+Re-ran `make collate`: clean. Structural check: 606 attributes (no rows added/removed — CV
+content and Properties changes only), 0 duplicate names, 0 dangling references.
