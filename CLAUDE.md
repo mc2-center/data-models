@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-Data models and controlled vocabularies for the [Cancer Complexity Knowledge Portal](https://cancercomplexity.synapse.org/) (CCKP). The model is maintained as CSV files in domain-specific `modules/`, collated into `mc2.model.csv`, and converted to JSON-LD for use by the Sage Bionetworks [schematicpy](https://pypi.org/project/schematicpy/) framework and the [Data Curator App](https://dca.app.sagebionetworks.org/).
+Data models and controlled vocabularies for the [Cancer Complexity Knowledge Portal](https://cancercomplexity.synapse.org/) (CCKP). The model is maintained as CSV files in domain-specific `modules/`, collated into `mc2.model.csv`, and converted to JSON-LD/JSON Schema via `synapseclient.extensions.curator` (the actively-maintained successor to [schematicpy](https://pypi.org/project/schematicpy/), which Sage Bionetworks has announced will be retired by end of 2026) for use by the [Data Curator App](https://dca.app.sagebionetworks.org/).
 
 ## Commands
 
@@ -18,13 +18,16 @@ make all
 # Steps individually:
 python update_valid_values.py   # reads modules/mapping.yaml, rewrites annotationProperty.csv Valid Values columns
 make collate                    # concatenates all modules/*/annotationProperty.csv → mc2.model.csv
-make convert                    # schematic schema convert mc2.model.csv → mc2.model.jsonld
+make convert                    # python convert_model_to_jsonld.py → mc2.model.jsonld
 make generate-json              # python create_json_from_model.py <data types> → json_schemas/
 
 # Generate JSON schemas for specific data types only
 python create_json_from_model.py Biospecimen Study Dataset
 
-# QC model build
+# QC model build (NOTE: qc_convert still calls the old, non-functional
+# `schematic schema convert` against qc_model/mc2_qc.model.csv, a separately
+# hand-formatted copy of the model with schematicpy's older required columns
+# -- unlike `make convert`, this was not migrated; needs a follow-up decision)
 make qc
 
 # Docs dev server
