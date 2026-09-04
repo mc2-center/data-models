@@ -24,9 +24,13 @@ Download` rows have a blank `downloadSynId` and are skipped.
 
 Known annotation keys read (see modules/dataCatalog/annotationProperty.csv
 for what each means) - every one of these was deliberately named to match
-its live Synapse annotation key exactly, so no key-renaming table is needed
-here (unlike extract_mc2_assay_metadata.py's File-annotation PascalCase ->
-"Title Case" mapping). Keys seen on real entities but NOT in this list are
+its live Synapse annotation key exactly, except `dataUseModifiers`/`license`,
+which the schema renamed to `dataCatalogDataUseModifiers`/`dataCatalogLicense`
+to disambiguate from the model's generic attributes of the same name used
+elsewhere - SCHEMA_FIELD_RENAMES below renames just those two at CSV-write
+time, so no key-renaming table is needed for the rest (unlike
+extract_mc2_assay_metadata.py's File-annotation PascalCase -> "Title Case"
+mapping). Keys seen on real entities but NOT in this list are
 administrative/technical noise (`entityType`, `newKey`, `Component`) or this
 repo's own differently-shaped `Dataset*`/`GrantViewKey`/`duoCodes`-style
 bleed-through annotations (a handful of entities carry both key sets) - both
@@ -101,6 +105,17 @@ MULTIVALUED_ATTRIBUTES = {
     "species", "subject", "countryOfOrigin", "externalRepositoryUri",
 }
 
+# modules/dataCatalog/annotationProperty.csv renamed these two attributes
+# (to disambiguate from the model's generic dataUseModifiers/license
+# attributes used elsewhere) without renaming the underlying live Synapse
+# annotation key - so the raw key above is still what's read from Synapse,
+# but the output CSV column must use the schema's field name, since
+# harmonize.py/build_datacatalog_triples.py key off schema/mc2_model.linkml.yaml.
+SCHEMA_FIELD_RENAMES = {
+    "dataUseModifiers": "dataCatalogDataUseModifiers",
+    "license": "dataCatalogLicense",
+}
+
 
 def extract_datacatalog_rows(syn, dataset_ids, sleep_s=0.0):
     import time
@@ -116,7 +131,7 @@ def extract_datacatalog_rows(syn, dataset_ids, sleep_s=0.0):
             continue
         row = {"DataCatalog_id": did}
         for attr in KNOWN_ATTRIBUTES:
-            row[attr] = annotation_value(ann, attr, attr in MULTIVALUED_ATTRIBUTES)
+            row[SCHEMA_FIELD_RENAMES.get(attr, attr)] = annotation_value(ann, attr, attr in MULTIVALUED_ATTRIBUTES)
         rows.append(row)
         if sleep_s:
             time.sleep(sleep_s)
@@ -156,7 +171,7 @@ def main():
 
     os.makedirs(args.out_dir, exist_ok=True)
     out_path = os.path.join(args.out_dir, "DataCatalog.csv")
-    fieldnames = ["DataCatalog_id"] + KNOWN_ATTRIBUTES
+    fieldnames = ["DataCatalog_id"] + [SCHEMA_FIELD_RENAMES.get(a, a) for a in KNOWN_ATTRIBUTES]
     with open(out_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

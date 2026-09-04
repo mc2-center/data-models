@@ -48,7 +48,11 @@ SCHEMA = rdflib.Namespace("https://schema.org/")
 # Real schema.org Dataset/CreativeWork properties - attribute name -> schema.org
 # local name (identity mapping unless noted). See module docstring.
 SCHEMA_ORG_FIELDS = {
-    "license": "license",
+    # Keyed by the DataCatalog class's own field name (dataCatalogLicense,
+    # renamed from the model's generic "license" - see
+    # extract_datacatalog.py's SCHEMA_FIELD_RENAMES) - not the schema.org
+    # local name, which stays "license" on the right.
+    "dataCatalogLicense": "license",
     "creator": "creator",
     "contributor": "contributor",
     "keywords": "keywords",

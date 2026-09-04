@@ -74,6 +74,23 @@ class _FakeSynapseForAnnotations:
         return self._annotations[entity_id]
 
 
+def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names():
+    # Regression test: modules/dataCatalog/annotationProperty.csv renamed
+    # these two attributes to dataCatalogLicense/dataCatalogDataUseModifiers,
+    # but the live Synapse annotation keys are still license/dataUseModifiers.
+    # extract_datacatalog.py must write the CSV under the renamed schema
+    # field names, or harmonize.py/build_datacatalog_triples.py (which key
+    # off schema/mc2_model.linkml.yaml) silently find nothing.
+    syn = _FakeSynapseForAnnotations({
+        "syn1": {"license": ["CC-BY 4.0"], "dataUseModifiers": ["Pending Annotation"]},
+    })
+    row = extract_datacatalog.extract_datacatalog_rows(syn, ["syn1"])[0]
+    assert row["dataCatalogLicense"] == "CC-BY 4.0"
+    assert row["dataCatalogDataUseModifiers"] == "Pending Annotation"
+    assert "license" not in row
+    assert "dataUseModifiers" not in row
+
+
 def test_extract_datacatalog_rows_reads_known_keys_only():
     syn = _FakeSynapseForAnnotations({
         "syn1": {
@@ -128,3 +145,17 @@ def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_pat
     # like Publication/Tool.accessibility) - literal present, no *Term edge.
     assert (subject, CCKP.accessType, rdflib.Literal("Open Access")) in g
     assert (subject, CCKP.accessTypeTerm, None) not in g
+    # Regression coverage for the dataCatalogLicense/dataCatalogDataUseModifiers
+    # rename (see test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names):
+    # dataCatalogLicense still maps to the real schema.org "license" property
+    # (SCHEMA_ORG_FIELDS is keyed by the schema field name, not "license"),
+    # and resolves to the real SPDX term already curated in
+    # modules/shared/studyLicense.csv. dataCatalogDataUseModifiers has no
+    # schema.org equivalent, so it's cckp-namespaced; "Pending Annotation"
+    # is a real DUO CV term with no ontology mapping (by design), so it gets
+    # a literal but no *Term edge.
+    assert (subject, SCHEMA.license, rdflib.Literal("CC-BY 4.0")) in g
+    assert (subject, CCKP.dataCatalogLicenseTerm,
+            rdflib.URIRef("https://spdx.org/licenses/CC-BY-4.0.html")) in g
+    assert (subject, CCKP.dataCatalogDataUseModifiers, rdflib.Literal("Pending Annotation")) in g
+    assert (subject, CCKP.dataCatalogDataUseModifiersTerm, None) not in g
