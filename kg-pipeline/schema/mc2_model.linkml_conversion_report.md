@@ -2,16 +2,16 @@
 
 ## Summary
 - input files: 1
-- attributes read: 621
+- attributes read: 605
 - classes: 39
-- slots: 583
-- enums: 174
+- slots: 566
+- enums: 141
 - warnings: 1
 
 ## Warnings (1)
 Rows/values that need human review before the schema is trusted.
 
-- Class 'Study' DependsOn references 'Study Number of Samples', which has no row of its own in the input — check for a typo or missing module file.
+- Properties CURIE uses unregistered prefix 'CRDC_CDE:' — placeholder namespace written; fill in the real URI in `prefixes.CRDC_CDE`.
 
 ## Notes (16)
 Design decisions applied automatically — verify they're right for your case.
