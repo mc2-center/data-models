@@ -24,28 +24,28 @@ def test_theme_now_has_a_term_edge(rdf_graphs):
     assert (subject, CCKP["themeTerm"], ncit_metastasis) in g
 
 
-def test_consortium_still_has_no_real_ontology_term_edge(rdf_graphs):
-    # consortium_name.csv still has zero ontology-mapped rows - see
-    # test_harmonize.py's matching test. It may still get a *provisional*
-    # local term edge (see test_confirmed_unmappable_value_gets_provisional_term_
-    # not_bare_literal below) - this only asserts no *external* ontology IRI.
+def test_consortium_has_no_term_edge_at_all_now(rdf_graphs):
+    # Grant.consortium's mc2_enum annotation was removed entirely this
+    # session (see cckp_portal.linkml.yaml and test_harmonize.py's
+    # test_grant_consortium_has_no_mc2_enum_and_passes_through_untracked) -
+    # no surviving MC2 CV covers this field's real bare-acronym value space.
+    # build_triples.py gates its *entire* Term-edge block - including the
+    # confirmed_unmappable.tsv provisional-IRI fallback - on
+    # `meta["mc2_enum"]` being truthy, so removing the annotation also
+    # disabled the provisional mechanism for this field: "CCBIR" is a
+    # confirmed_unmappable.tsv entry, but with no mc2_enum at all the field
+    # is now untracked, not "attempted and confirmed unmappable", so it gets
+    # no consortiumTerm edge of any kind (real or provisional) - just the
+    # bare literal via the normal scalar/multivalued predicate.
+    #
+    # This is flagged, not silently patched: build_triples.py's gate could
+    # be loosened to fire the confirmed_unmappable path independent of
+    # mc2_enum (a field can be "known unmappable" without ever having had a
+    # live CV), which would restore provisional-term treatment for consortium
+    # acronyms like CCBIR. That's a real design change to core triple-
+    # generation logic, left for a deliberate human decision alongside the
+    # broader Consortium CV gap - see plans/crdc_cde_integration.md.
     g = rdf_graphs["Grant"]
     subject = rdflib.URIRef(DATA + "Grant/syn_grant_1")
-    real_ontology_edges = [
-        o for _, _, o in g.triples((subject, CCKP["consortiumTerm"], None))
-        if not str(o).startswith("https://w3id.org/mc2-center/cckp-portal/terms/")
-    ]
-    assert real_ontology_edges == []
-
-
-def test_confirmed_unmappable_value_gets_provisional_term_not_bare_literal(rdf_graphs):
-    # Grant.csv's fixture consortium value "CCBIR" is one of the confirmed-
-    # unmappable entries in mappings/confirmed_unmappable.tsv (an NCI-internal
-    # program acronym with no real ontology/registry home) - it should still
-    # get a cckp:consortiumTerm edge to an addressable, explicitly-flagged
-    # provisional local IRI, not just the plain literal.
-    g = rdf_graphs["Grant"]
-    subject = rdflib.URIRef(DATA + "Grant/syn_grant_1")
-    provisional_iri = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/terms/consortium/ccbir")
-    assert (subject, CCKP["consortiumTerm"], provisional_iri) in g
-    assert (provisional_iri, CCKP["provisional"], rdflib.Literal(True)) in g
+    assert list(g.triples((subject, CCKP["consortiumTerm"], None))) == []
+    assert (subject, CCKP["consortium"], rdflib.Literal("CCBIR")) in g

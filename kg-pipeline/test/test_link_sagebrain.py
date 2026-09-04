@@ -32,21 +32,21 @@ def test_curie_from_resolved_treats_blank_as_unresolved():
 
 def test_aggregate_flags_conflicting_values_across_files_sharing_a_key():
     rows = [
-        {"Biospecimen Key": "BSP-1", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
-         "File Tumor Type_ontology_iri": ""},
-        {"Biospecimen Key": "BSP-1", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12468",
-         "File Tumor Type_ontology_iri": ""},  # disagrees with row 1
+        {"Biospecimen Key": "BSP-1", "Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
+         "Tumor Type_ontology_iri": ""},
+        {"Biospecimen Key": "BSP-1", "Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12468",
+         "Tumor Type_ontology_iri": ""},  # disagrees with row 1
     ]
     resolved, conflicts = link_sagebrain.aggregate_by_biospecimen_key(rows)
     assert len(conflicts) == 1
     assert conflicts[0]["biospecimen_key"] == "BSP-1"
-    assert conflicts[0]["field"] == "File Tissue"
+    assert conflicts[0]["field"] == "Tissue"
     assert "BSP-1" in resolved  # still emits a best-effort value, doesn't block on the conflict
 
 
 def test_sentinel_biospecimen_keys_are_skipped():
-    rows = [{"Biospecimen Key": "Not Applicable", "File Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
-             "File Tumor Type_ontology_iri": ""}]
+    rows = [{"Biospecimen Key": "Not Applicable", "Tissue_ontology_iri": "http://purl.obolibrary.org/obo/NCIT_C12971",
+             "Tumor Type_ontology_iri": ""}]
     resolved, conflicts = link_sagebrain.aggregate_by_biospecimen_key(rows)
     assert resolved == {}
 
@@ -54,7 +54,7 @@ def test_sentinel_biospecimen_keys_are_skipped():
 def test_build_sagebrain_links_end_to_end(tmp_path):
     harmonized_csv = tmp_path / "File View_harmonized.csv"
     harmonized_csv.write_text(
-        "Biospecimen Key,File Tissue_ontology_iri,File Tumor Type_ontology_iri\n"
+        "Biospecimen Key,Tissue_ontology_iri,Tumor Type_ontology_iri\n"
         "BSP-1,http://purl.obolibrary.org/obo/NCIT_C12971,http://purl.obolibrary.org/obo/NCIT_C71732\n"
     )
     tissue_cw = tmp_path / "tissue.sssom.tsv"

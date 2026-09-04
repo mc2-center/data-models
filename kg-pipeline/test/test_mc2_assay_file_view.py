@@ -90,8 +90,8 @@ def test_extract_file_view_rows_maps_annotation_keys_to_attribute_names():
     assert row["datasetId"] == "syn_ds"
     assert row["FileView_id"] == "syn_file_1"
     assert row["Biospecimen Key"] == "BSP-01"
-    assert row["File Assay"] == "RNA-Seq"
-    assert row["File Species"] == "Human"
+    assert row["Assay"] == "RNA-Seq"
+    assert row["Species"] == "Human"
     # Component/Id are Synapse/schematic bookkeeping, not modeled MC2 attributes
     assert "Component" not in row
     assert "Id" not in row
@@ -119,7 +119,7 @@ def test_file_view_harmonizes_and_builds_triples_with_real_cv_resolution(tmp_pat
     # "Human" and "TXT" are real, already-curated NCIT mappings in the
     # committed modules/ CV CSVs (confirmed against live-data output before
     # writing this test, not guessed).
-    assert (subject, CCKP["fileSpeciesTerm"],
+    assert (subject, CCKP["speciesTerm"],
             __import__("rdflib").URIRef("http://purl.obolibrary.org/obo/NCIT_C14225")) in g
     assert (subject, CCKP["fileFormatTerm"],
             __import__("rdflib").URIRef("http://purl.obolibrary.org/obo/NCIT_C85873")) in g

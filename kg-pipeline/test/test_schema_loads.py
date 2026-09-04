@@ -17,8 +17,8 @@ def test_cckp_portal_schema_loads():
 
 def test_cckp_portal_imports_mc2_model_enums():
     sv = SchemaView(SCHEMA_PATH)
-    assert "Dataset Tumor Type Enum" in sv.all_enums()
-    enum = sv.get_enum("Dataset Tumor Type Enum")
+    assert "Tumor Type Enum" in sv.all_enums()
+    enum = sv.get_enum("Tumor Type Enum")
     pv = enum.permissible_values.get("Cutaneous Melanoma")
     assert pv is not None
     assert pv.meaning == "NCIT:C3510"

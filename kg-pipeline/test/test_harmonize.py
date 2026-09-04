@@ -40,12 +40,25 @@ def test_grant_theme_now_resolves_after_curation(harmonized_dir):
     assert row["theme_ontology_iri"] == "http://purl.obolibrary.org/obo/NCIT_C19151"
 
 
-def test_grant_consortium_still_has_no_mc2_ontology_coverage(harmonized_dir):
-    # modules/consortium/consortium_name.csv still has zero populated
-    # Ontology Identifier values - confirmed (not just assumed) via live
-    # NCIT/EDAM/ROR lookups that these NCI program acronyms have no external
-    # ontology or registry entry, see kg-pipeline/README.md - assert this
-    # stays visible as "unresolved" rather than being silently treated as
-    # resolved.
+def test_grant_consortium_has_no_mc2_enum_and_passes_through_untracked(harmonized_dir):
+    # modules/consortium/consortium_name.csv (the bare-acronym CV this field used
+    # to resolve against, e.g. CCBIR/CSBC) was deleted this session when
+    # Consortium Affiliation was retired in favor of Consortium Key, whose real
+    # value space (program.ccbir, program.csbc, ...) is a different, machine-slug
+    # format that doesn't match what live CCKP Grant.consortium data actually
+    # stores - see schema/cckp_portal.linkml.yaml's Grant.consortium comment and
+    # plans/crdc_cde_integration.md's kg-pipeline round for the full writeup.
+    # cckp_portal.linkml.yaml's Grant.consortium slot now has NO mc2_enum
+    # annotation at all (not just an unresolved one), so harmonize.py's
+    # build_field_lookups skips this field entirely - it's not "attempted and
+    # unmapped" anymore, it's untracked. Confirm the value still passes through
+    # unchanged (not dropped) and is NOT reported to unmapped_rows (a field with
+    # no mc2_enum was never eligible for that reporting in the first place).
+    with open(harmonized_dir["dir"] / "Grant_harmonized.csv", newline="") as f:
+        rows = list(csv.DictReader(f))
+    row = next(r for r in rows if r["grantId"] == "syn_grant_1")
+    assert row["consortium"] == "CCBIR"
+    assert "consortium_ontology_iri" not in row
+
     unmapped = harmonized_dir["unmapped_rows"]
-    assert any(r["table"] == "Grant" and r["field"] == "consortium" and r["value"] == "CCBIR" for r in unmapped)
+    assert not any(r["table"] == "Grant" and r["field"] == "consortium" for r in unmapped)
