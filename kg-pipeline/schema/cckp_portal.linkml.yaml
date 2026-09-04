@@ -115,6 +115,8 @@ classes:
         description: Tumor type(s) represented in the dataset. Best filter column.
       consortium:
         multivalued: true
+        # No mc2_enum - same bare-acronym-vs-program.X gap as Grant.consortium,
+        # see that slot's comment for the full verified writeup.
         description: Consortium/consortia the dataset was produced under.
       grantName:
         multivalued: true
@@ -212,6 +214,8 @@ classes:
         description: Research theme(s) associated via the funding grant.
       consortium:
         multivalued: true
+        # No mc2_enum - same bare-acronym-vs-program.X gap as Grant.consortium,
+        # see that slot's comment for the full verified writeup.
         description: Consortium/consortia the publication was produced under.
       grantName:
         multivalued: true
@@ -380,6 +384,8 @@ classes:
         description: Broad data-type category label(s).
       consortium:
         multivalued: true
+        # No mc2_enum - same bare-acronym-vs-program.X gap as Grant.consortium,
+        # see that slot's comment for the full verified writeup.
         description: Consortium/consortia the tool was produced under.
       theme:
         multivalued: true
@@ -441,15 +447,32 @@ classes:
         description: Principal investigator name(s), as a single free-text field (no controlled vocabulary - personal names).
       consortium:
         multivalued: true
-        # mc2_enum intentionally omitted (2026-09-03): the MC2 model's bare-acronym
-        # Consortium Name CV (CCBIR, CSBC, ...) that this field used to resolve
-        # against was retired this session in favor of Consortium Key, a real
+        # mc2_enum intentionally omitted (2026-09-03, re-verified 2026-09-04): the
+        # MC2 model's bare-acronym Consortium Name CV (CCBIR, CSBC, ...) this field
+        # used to resolve against was retired in favor of Consortium Key, a real
         # foreign key whose value space (program.ccbir, program.csbc, ...) is a
-        # different, machine-slug format - not what live CCKP Grant.consortium data
-        # actually stores. No MC2 attribute currently carries the bare-acronym form.
-        # harmonize.py will report every value here as unmapped until a human
-        # decides whether to restore a bare-acronym CV (even just for this CCKP
-        # need) or accept the gap - not fixed here, flagged for that decision.
+        # different, machine-slug format - confirmed against real cached
+        # data/raw/Grant.csv (and Dataset/Publication/Tool's own consortium
+        # columns): they all store bare acronyms (CCBIR, HTAN, ...), never
+        # program.X. Repointing mc2_enum to `Consortium_id Enum` was considered and
+        # rejected, not just on the format mismatch: modules/consortium/
+        # consortium_id.csv (the CV harmonize.py would load) has an entirely empty
+        # `Ontology Identifier` column for every row, so harmonize.py's
+        # load_cv_lookup would build an EMPTY lookup dict regardless of aliasing -
+        # repointing would silently resolve zero values while looking like a
+        # working CV hookup, worse than the current honest "untracked" state.
+        #
+        # The real, already-built mechanism for this exact gap is
+        # mappings/crosswalks/consortium_to_scdm_program.tsv (bare acronym ->
+        # program.X) + scripts/link_scdm.py, which mints sagecdm:Program nodes and
+        # cckp:consortiumRef edges - but ONLY for rows with reviewed=true, and
+        # every row in that crosswalk is currently reviewed=false (auto-generated
+        # by crosswalk_scdm.py, awaiting human curation of scdm_status/
+        # scdm_funding_source/etc). So this isn't a missing mechanism, it's an
+        # existing one gated on a review step that hasn't happened yet - that
+        # review, not a schema change here, is what would actually resolve
+        # consortium linkage. See plans/crdc_cde_integration.md's kg-pipeline
+        # round for the full writeup.
         description: Consortium/consortia the grant belongs to. Best filter column.
       grantStartDate:
         description: Grant start date (free-text date string, not a fixed format).

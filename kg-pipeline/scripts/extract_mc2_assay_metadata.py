@@ -44,13 +44,31 @@ than assumed:
      (confirmed via `SchemaView.induced_class("File View").attributes`,
      not assumed). The previously-documented gap (not attached to any
      class, so `make harmonize-mc2-assay`'s normal pass never touched them)
-     is resolved for `Tissue`/`Tumor Type` as of this consolidation -
-     `link_sagebrain.py`'s manual harmonization of these two fields may now
-     be redundant with `harmonize.py`'s normal per-class pass, but this
-     hasn't been verified end-to-end against live-extracted data (this
-     environment has no Synapse credentials to re-run `make
-     extract-mc2-assay`), so the manual pass was left in place rather than
-     removed on inference alone - see `link_sagebrain.py`'s own docstring.
+     is resolved for `Tissue`/`Tumor Type` as of this consolidation.
+
+     **Verified 2026-09-04** (not just inferred): the redundant piece -
+     `link_sagebrain.py` re-harmonizing these two fields itself via a second
+     `load_cv_lookup` pass - IS gone (confirmed no such call remains in that
+     script). What's left in `link_sagebrain.py` is NOT redundant: it reads
+     the already-resolved NCIT `{field}_ontology_iri` values `harmonize.py`'s
+     normal pass now produces and cross-walks them further, to UBERON/MONDO
+     (sagebrain-model's own anchor ontologies), emitting sagebrain-specific
+     `source_tissue`/`has_pathology` triples on synthetic `MaterialSample`
+     stub nodes - a real federation-specific step `harmonize.py`/
+     `build_triples.py` never do. Traced end-to-end: this environment's
+     cached `data/mc2_assay/raw/File View.csv` predates this session's
+     renames (its headers still read `File Tissue`/`File Assay`, from
+     before this fix), so re-running `make harmonize-mc2-assay` against it
+     as-is resolves nothing for these two fields - not a mechanism failure,
+     just extraction staleness (no Synapse credentials here to pull a fresh
+     `File View.csv` with current headers). Verified the actual mechanism
+     instead against a renamed copy of that same real cached data (same real
+     values, headers updated to the names this fix now produces): harmonize.py
+     resolved 3 Tissue + 4 Tumor Type terms to real NCIT IRIs, and
+     `link_sagebrain.py` emitted 10 real UBERON/MONDO triples on 4 distinct
+     `MaterialSample` nodes from them - confirming both halves work and stay
+     genuinely distinct. See `link_sagebrain.py`'s own docstring and
+     plans/crdc_cde_integration.md's kg-pipeline round for the full trace.
 
 Output: one row per member file, `data/mc2_assay/raw/File View.csv` (matches
 the class's real name, spaces included, per harmonize.py's `{cls_name}.csv`
