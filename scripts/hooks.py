@@ -1,4 +1,5 @@
 import json
+import re
 from os.path import getsize, isfile, join
 
 import pandas as pd
@@ -9,6 +10,7 @@ import yaml
 # Data models to display on the documentation site: filename -> page title
 DATA_MODELS = {
     "dataset": "Dataset",
+    "dataCatalog": "Data Catalog",
     "sharingPlans": "Dataset Sharing Plan",
     "education": "Education Resource",
     "file": "File",
@@ -74,6 +76,7 @@ COLS_TO_RENDER = [
     "Format",
     "Regex Pattern",
     "Standard Terms",
+    "CDE",
     "Examples",
 ]
 
@@ -99,6 +102,23 @@ def _format_technical_column(col: pd.Series, escape_backslashes: bool = False) -
     if escape_backslashes:
         col = col.str.replace(r"\\", r"\\\\", regex=True)
     return col.replace("", "_None_")
+
+
+CDE_TAG_RE = re.compile(r"^(CDE|CRDC_CDE):\S+$")
+
+
+def _extract_cde_tags(properties: str) -> str:
+    """Pull just the CDE:/CRDC_CDE: caDSR mappings out of a Properties cell,
+    which also carries non-CDE markers (primary_key, foreign_key, DUO: CV
+    codes) that don't belong in a "CDE" column. No hyperlink is generated -
+    plans/crdc_cde_integration.md found no working human-browsable caDSR
+    page for a bare CDE ID (the "Deep Link" URL pattern redirects to a
+    generic landing page); the registered CRDC_CDE: prefix
+    (schema/mc2_model.linkml.yaml) is a machine REST endpoint, not a page."""
+    if not properties:
+        return ""
+    tags = [t.strip() for t in properties.split(",")]
+    return ", ".join(t for t in tags if CDE_TAG_RE.match(t))
 
 
 def _get_model_attributes(model: str) -> list:
@@ -181,7 +201,7 @@ def generate_linked_table(model: str):
 
     table = pd.DataFrame({"Attribute": _get_model_attributes(model)})
     table = table.merge(
-        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern"]],
+        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern", "Properties"]],
         left_on="Attribute",
         right_index=True,
         how="left",
@@ -191,6 +211,10 @@ def generate_linked_table(model: str):
     table["Required"] = table["Required"].apply(
         lambda v: "True" if str(v).strip() == "True" else "False"
     )
+
+    # Surface each attribute's caDSR CDE mapping(s), if any (see
+    # _extract_cde_tags - Properties also carries non-CDE markers).
+    table["CDE"] = table["Properties"].apply(_extract_cde_tags)
 
     # Add the Example column and rename it to Examples, if example data
     # exists for this model. Some newer modules don't yet have curated
