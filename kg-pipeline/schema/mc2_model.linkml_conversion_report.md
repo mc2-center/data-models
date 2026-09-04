@@ -6,12 +6,12 @@
 - classes: 39
 - slots: 566
 - enums: 141
-- warnings: 1
+- warnings: 0
 
-## Warnings (1)
+## Warnings (0)
 Rows/values that need human review before the schema is trusted.
 
-- Properties CURIE uses unregistered prefix 'CRDC_CDE:' — placeholder namespace written; fill in the real URI in `prefixes.CRDC_CDE`.
+- none
 
 ## Notes (16)
 Design decisions applied automatically — verify they're right for your case.

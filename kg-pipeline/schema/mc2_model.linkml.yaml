@@ -8,7 +8,7 @@ description: LinkML schema generated from a schematic-style data model CSV (mc2_
 prefixes:
   linkml: https://w3id.org/linkml/
   mc2: https://w3id.org/mc2-center/mc2-model/
-  CRDC_CDE: https://example.org/UNKNOWN_PREFIX_CRDC_CDE/
+  CRDC_CDE: https://cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/DataElement/
   DUO: http://purl.obolibrary.org/obo/DUO_
   APOLLO_SV: http://purl.obolibrary.org/obo/APOLLO_SV_
   BAO: http://www.bioassayontology.org/bao#BAO_
