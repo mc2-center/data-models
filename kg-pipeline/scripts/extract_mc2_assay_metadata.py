@@ -28,22 +28,29 @@ than assumed:
      annotationProperty.csv`, `schema/mc2_model.linkml.yaml`'s `File View`
      class), NOT the full Biospecimen/Individual/Model record: `File View`
      only carries a `Biospecimen Key` **foreign key**, not Biospecimen's own
-     detail fields (Type, Species, Preservation Method, Fixative, ...).
-     Reaching those requires the DCC's own upstream Biospecimen/Individual/
-     Model *tables* (joined via that key) - explicitly out of scope for this
-     script per the decision to read only already-resolved per-file
-     annotations, not re-derive DCC-internal joins.
-  4. `FileTissue`/`FileTumorType` appear in every live annotation dict and do
-     have real slot definitions with CV-backed enums in `schema/
-     mc2_model.linkml.yaml` (`File Tissue`/`File Tumor Type`, both registered
-     in `modules/mapping.yaml`) - but, as of this writing, neither slot is
-     attached to any class in the schema (confirmed: not listed under any
-     class's `slots:` block). They are extracted into the `File View` CSV
-     alongside the class's own declared slots regardless, since the live
-     data carries them - but `make harmonize-mc2-assay` won't harmonize them
-     until they're attached to a class, which is a real, pre-existing model
-     gap worth flagging to the MC2 modeling team, not something to silently
-     patch here by inventing a class attachment.
+     detail fields (Type, Species, Preservation Method, Preservation Medium
+     [renamed from Fixative this session], ...). Reaching those requires the
+     DCC's own upstream Biospecimen/Individual/Model *tables* (joined via
+     that key) - explicitly out of scope for this script per the decision to
+     read only already-resolved per-file annotations, not re-derive
+     DCC-internal joins.
+  4. `FileTissue`/`FileTumorType` appear in every live annotation dict.
+     **Updated 2026-09-03**: the MC2 attributes these keys resolve to were
+     consolidated this session from per-module copies (`File Tissue`/`File
+     Tumor Type`) into shared `Tissue`/`Tumor Type` attributes now used by
+     `Dataset View`/`File View`/`Publication View` alike - and, as a
+     verified side effect, they ARE now attached to the `File View` class's
+     `slots:` list in the regenerated `schema/mc2_model.linkml.yaml`
+     (confirmed via `SchemaView.induced_class("File View").attributes`,
+     not assumed). The previously-documented gap (not attached to any
+     class, so `make harmonize-mc2-assay`'s normal pass never touched them)
+     is resolved for `Tissue`/`Tumor Type` as of this consolidation -
+     `link_sagebrain.py`'s manual harmonization of these two fields may now
+     be redundant with `harmonize.py`'s normal per-class pass, but this
+     hasn't been verified end-to-end against live-extracted data (this
+     environment has no Synapse credentials to re-run `make
+     extract-mc2-assay`), so the manual pass was left in place rather than
+     removed on inference alone - see `link_sagebrain.py`'s own docstring.
 
 Output: one row per member file, `data/mc2_assay/raw/File View.csv` (matches
 the class's real name, spaces included, per harmonize.py's `{cls_name}.csv`
@@ -73,13 +80,13 @@ ANNOTATION_KEY_TO_ATTRIBUTE = {
     "FileDescription": "File Description",
     "FileDesign": "File Design",
     "FileLevel": "File Level",
-    "FileAssay": "File Assay",
-    "FileSpecies": "File Species",
+    "FileAssay": "Assay",
+    "FileSpecies": "Species",
     "FileUrl": "File Url",
     "FileFormat": "File Format",
-    "DataUseCodes": "File Data Use Codes",
-    "FileTissue": "File Tissue",
-    "FileTumorType": "File Tumor Type",
+    "DataUseCodes": "Data Use Codes",
+    "FileTissue": "Tissue",
+    "FileTumorType": "Tumor Type",
 }
 DATASET_CONCRETE_TYPES = {
     "org.sagebionetworks.repo.model.table.Dataset",

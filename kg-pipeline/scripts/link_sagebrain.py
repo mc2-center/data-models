@@ -3,7 +3,7 @@
 The `File View` extraction (extract_mc2_assay_metadata.py, harmonize.py,
 build_triples.py) gives us one row per file with a `Biospecimen Key` foreign
 key plus a few file-level projections of that specimen's own fields (`File
-Species`, `File Tissue`, `File Tumor Type`) - not a fully-populated
+Species`, `Tissue`, `Tumor Type`) - not a fully-populated
 Biospecimen entity (that lives in a separate DCC-internal table this
 pipeline doesn't query, by design - see extract_mc2_assay_metadata.py's
 docstring). This script does the honest thing with what's actually there:
@@ -14,13 +14,13 @@ docstring). This script does the honest thing with what's actually there:
      `sagebrain:has_sample`'s range) - not a fabricated `cckp:Biospecimen`
      instance with attributes we don't actually have.
   2. Multiple files can reference the same Biospecimen Key with slightly
-     different File Tissue/File Tumor Type/File Species values (e.g. a
+     different Tissue/Tumor Type/Species values (e.g. a
      stale annotation on an older file) - aggregate with the same
      "verify consistency, report disagreement, still emit a best-effort
      value" discipline used elsewhere in this pipeline (unmapped_terms.csv,
      malformed_cv_terms.csv): disagreements are written to
      `biospecimen_annotation_conflicts.csv`, not silently resolved.
-  3. Read File Tissue/File Tumor Type's already-resolved
+  3. Read Tissue/Tumor Type's already-resolved
      `{field}_ontology_iri` columns from the harmonized File View CSV -
      `File View` is now registered in the Makefile's `MC2_ASSAY_CLASSES`
      list and both slots are attached to the `File View` class in
@@ -122,8 +122,8 @@ def load_crosswalk(path, min_confidence="high"):
 
 
 def aggregate_by_biospecimen_key(file_view_rows):
-    """(resolved, conflicts). resolved: {biospecimen_key: {"File Tissue":
-    resolved_curie_or_None, "File Tumor Type": ...}} - one representative
+    """(resolved, conflicts). resolved: {biospecimen_key: {"Tissue":
+    resolved_curie_or_None, "Tumor Type": ...}} - one representative
     (most-common) resolved value per field, reading each field's already-
     harmonized `{field}_ontology_iri` column (see module docstring point 3)
     rather than re-resolving the raw label here. Any disagreement across
@@ -134,7 +134,7 @@ def aggregate_by_biospecimen_key(file_view_rows):
         key = (row.get("Biospecimen Key") or "").strip()
         if not key or normalize(key) in SENTINEL_KEYS:
             continue
-        for field in ("File Tissue", "File Tumor Type"):
+        for field in ("Tissue", "Tumor Type"):
             curie = curie_from_resolved((row.get(f"{field}_ontology_iri") or "").strip())
             if curie:
                 groups[key][field][curie] += 1
@@ -171,13 +171,13 @@ def build_sagebrain_links(file_view_harmonized_csv, tissue_crosswalk_path, tumor
         subject = mint_iri("Biospecimen", key)
         g.add((subject, rdflib.RDF.type, BIOLINK.MaterialSample))
 
-        tissue_ncit = fields.get("File Tissue")
+        tissue_ncit = fields.get("Tissue")
         uberon = tissue_crosswalk.get(tissue_ncit) if tissue_ncit else None
         if uberon:
             g.add((subject, SAGEBRAIN.source_tissue, rdflib.URIRef(obo_purl(uberon))))
             n_source_tissue += 1
 
-        tumor_type_ncit = fields.get("File Tumor Type")
+        tumor_type_ncit = fields.get("Tumor Type")
         mondo = tumor_type_crosswalk.get(tumor_type_ncit) if tumor_type_ncit else None
         if mondo:
             g.add((subject, SAGEBRAIN.has_pathology, rdflib.URIRef(obo_purl(mondo))))
