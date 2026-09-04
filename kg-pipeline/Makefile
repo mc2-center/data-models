@@ -11,7 +11,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
 
 .PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm validate update-coverage-baseline publish-portal-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
-	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog
+	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg
 
 all: schema extract harmonize triples validate
 
@@ -157,11 +157,45 @@ triples-datacatalog:
 		--harmonized-dir data/harmonized/datacatalog --mc2-schema schema/mc2_model.linkml.yaml \
 		--out data/rdf/DataCatalog.ttl
 
-# Folds data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl - a separate,
-# explicit step (not automatic) until this stage has been run and reviewed
-# at least once. Safe to re-run; see scripts/merge_datacatalog.py's docstring.
+# Folds data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl IN PLACE - a
+# separate, explicit step (not automatic) until this stage has been run and
+# reviewed at least once. Safe to re-run; see scripts/merge_datacatalog.py's
+# docstring. CAUTION: `make triples` rebuilds data/rdf/cckp_kg.ttl from
+# scratch without DataCatalog, so re-running `triples` after this silently
+# drops the merge again - if you want a merge that survives that, use
+# `combined-kg` below instead, which writes to its own separate output file.
 merge-datacatalog:
 	$(PYTHON) scripts/merge_datacatalog.py --cckp-kg data/rdf/cckp_kg.ttl --datacatalog data/rdf/DataCatalog.ttl
+
+# Same merge as `merge-datacatalog`, but as a self-contained, dependency-safe
+# target: rebuilds both data/rdf/cckp_kg.ttl (via `triples`) and
+# data/rdf/DataCatalog.ttl (via `triples-datacatalog`) fresh, then merges
+# them into their OWN output file, data/rdf/cckp_kg_with_datacatalog.ttl,
+# rather than overwriting cckp_kg.ttl in place - so cckp_kg.ttl stays exactly
+# what `make triples` alone produces (no DataCatalog), and this file is
+# always the current, complete combined graph, never silently stale. Not a
+# dependency of `all` - DataCatalog stays opt-in for the same reason
+# `merge-datacatalog` above is (see "Supplementary: Data Catalog" comment).
+combined-kg: triples triples-datacatalog
+	$(PYTHON) scripts/merge_datacatalog.py --cckp-kg data/rdf/cckp_kg.ttl --datacatalog data/rdf/DataCatalog.ttl \
+		--out data/rdf/cckp_kg_with_datacatalog.ttl
+	$(PYTHON) scripts/validate_graph.py --shacl schema/cckp_portal.shacl.ttl data/rdf/cckp_kg_with_datacatalog.ttl
+
+# The fullest public-portal graph: combined-kg (base + DataCatalog) with
+# scdm_links.ttl's SCDM Organization/Program/Person nodes and
+# institutionRef/consortiumRef/investigatorRef/contributorRef edges folded
+# in too, via the generic scripts/merge_ttl.py (scdm_links.ttl reuses the
+# same subject IRIs as edge sources, so this is a plain triple-set union,
+# same as combined-kg's own DataCatalog merge - see "Consuming the graph" in
+# README.md). Own output file, data/rdf/cckp_kg_full.ttl - doesn't change
+# combined-kg's own output, so anyone relying on cckp_kg_with_datacatalog.ttl
+# NOT having SCDM's tier-2/derived-not-authoritative data mixed in is
+# unaffected. Not a dependency of `all` - same opt-in reasoning as
+# `link-scdm`/`combined-kg` above.
+full-kg: combined-kg link-scdm
+	$(PYTHON) scripts/merge_ttl.py --base data/rdf/cckp_kg_with_datacatalog.ttl --overlay data/rdf/scdm_links.ttl \
+		--out data/rdf/cckp_kg_full.ttl
+	$(PYTHON) scripts/validate_graph.py --shacl schema/cckp_portal.shacl.ttl data/rdf/cckp_kg_full.ttl
 
 # --- Stage 5: Validate ---
 

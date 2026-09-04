@@ -74,7 +74,9 @@ make link-scdm            # link the CCKP graph to SCDM Organization/Program/Per
 make extract-datacatalog  # pull Data Catalog annotations from native Synapse Dataset entities -> data/raw/
 make harmonize-datacatalog # resolve Data Catalog controlled-vocabulary values -> data/harmonized/datacatalog/
 make triples-datacatalog  # build RDF -> data/rdf/DataCatalog.ttl (merges onto existing cckp:Dataset subjects)
-make merge-datacatalog    # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl
+make merge-datacatalog    # fold DataCatalog.ttl into cckp_kg.ttl IN PLACE (dropped by the next `make triples`)
+make combined-kg          # triples + triples-datacatalog, merged into their own data/rdf/cckp_kg_with_datacatalog.ttl
+make full-kg              # combined-kg + link-scdm, merged into data/rdf/cckp_kg_full.ttl (the fullest graph)
 make validate             # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg    # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -93,6 +95,55 @@ This uses `scripts/vendor/csv_to_linkml.py`, a vendored copy of the
 `csv-to-linkml` Claude Code skill's converter (stdlib-only, no extra
 dependencies) - reproducible from a clean clone, no Claude Code skill
 installation required.
+
+## Consuming the graph
+
+`data/rdf/` isn't one file - it's several, some independent and some layered
+on top of each other. Which one to load depends on what you need:
+
+| I want... | Load | Built by |
+|---|---|---|
+| Just one entity type (e.g. only Datasets) | `Dataset.ttl` (or `Publication`/`Tool`/`Grant`/`EducationalResource.ttl`) | `make triples` |
+| The 5 CCKP portal tables as one graph, nothing else | `cckp_kg.ttl` | `make triples` |
+| ...plus native Synapse Dataset-entity annotations (`measurementTechnique`, `license`, `creator`, ...) | `cckp_kg_with_datacatalog.ttl` | `make combined-kg` |
+| ...plus SCDM Organization/Program federation links | `cckp_kg_full.ttl` | `make full-kg` |
+| Only the SCDM federation layer itself, to reason about separately | `scdm_links.ttl` | `make link-scdm` |
+| The schema alone (classes/properties, no instance data) | `schema/mc2_model.ttl` + `schema/cckp_portal.ttl` | `make schema` |
+
+**Why so many files instead of one.** Some of this is genuine subsetting
+(`cckp_kg.ttl` is just the 5 class files concatenated - nothing new
+asserted). Some is deliberate provenance separation: `DataCatalog.ttl` and
+`scdm_links.ttl` both reuse the *same* subject IRIs as `cckp_kg.ttl` (a
+`Dataset`/`Grant`/etc. is the same node in every file), so they combine by
+simple triple-set union - no join logic needed - but each stays its own file
+by default because it's a different trust tier (DataCatalog: same subjects,
+different upstream source, not yet broadly verified; scdm_links: this
+pipeline's own derived/provisional read of SCDM, not an authoritative SCDM
+data source - see "Design decisions"). `combined-kg`/`full-kg` exist so you
+don't have to do that union yourself if you just want everything: they
+rebuild their inputs fresh and merge them into their own separate output
+file, rather than mutating `cckp_kg.ttl` in place (that in-place mutation is
+what `merge-datacatalog` still does, for backward compatibility - but it's
+silently undone by the next plain `make triples`, which is exactly the
+staleness trap `combined-kg`/`full-kg` avoid).
+
+**Loading more than one file together** (e.g. in a triple store, or via
+`rdflib.Graph().parse(...)` called once per file) unions them automatically,
+same as the Makefile targets do internally - there's no separate "connect
+these" step required once the files are in front of you, only when you're
+deciding which ones to combine and why.
+
+```python
+import rdflib
+g = rdflib.Graph()
+g.parse("data/rdf/cckp_kg.ttl", format="turtle")
+g.parse("data/rdf/scdm_links.ttl", format="turtle")   # now one connected graph
+```
+
+`data/mc2_assay/rdf/` (biospecimen/individual/model/sequencing/imaging) is a
+separate domain entirely - different subject IRIs, access-controlled source
+data - and isn't connected to anything above; see "Interoperating with
+sagebrain-model" below for what it is and how to build it.
 
 ## Verified against live data
 
@@ -516,7 +567,13 @@ backing entity to read annotations from and are skipped.
 make extract-datacatalog    # syn21897968 (downloadType filter) -> data/raw/DataCatalog.csv
 make harmonize-datacatalog  # -> data/harmonized/datacatalog/ (own out-dir, see below)
 make triples-datacatalog    # -> data/rdf/DataCatalog.ttl
-make merge-datacatalog      # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl
+make merge-datacatalog      # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl, IN PLACE
+make combined-kg            # rebuilds triples + triples-datacatalog fresh, merges them into
+                             # their OWN file, data/rdf/cckp_kg_with_datacatalog.ttl - use this
+                             # instead of merge-datacatalog if you want the combined graph to
+                             # survive a later `make triples` (which rebuilds cckp_kg.ttl from
+                             # scratch, dropping any in-place DataCatalog merge). See "Consuming
+                             # the graph" below for which file to load for what.
 ```
 
 - **Own `--out-dir`, not `data/harmonized/`.** `harmonize.py` overwrites
