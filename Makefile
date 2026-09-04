@@ -1,10 +1,7 @@
 CSV := mc2.model.csv
-QC := ./qc_model/mc2_qc.model.csv
 DATA := DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView DataCatalog Biospecimen Model Individual SequencingLevel1 SequencingLevel2 SequencingLevel3 SequencingRNALevel1 ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 NanoStringGeoMxAuxiliaryFiles NanoStringGeoMxDSPImaging NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMXROISegmentAnnotation 10xVisiumAuxiliaryFiles 10xVisiumRNALevel1 10xVisiumRNALevel2 10xVisiumRNALevel3 10xVisiumRNALevel4
 
-all: collate generate-json
-
-qc: collate qc_convert
+all: collate convert generate-json
 
 collate:
 	@echo "Collating module components..."
@@ -14,9 +11,6 @@ collate:
 
 convert:
 	python convert_model_to_jsonld.py
-
-qc_convert:
-	schematic schema convert ${QC}
 
 generate-json:
 	python create_json_from_model.py ${DATA}
