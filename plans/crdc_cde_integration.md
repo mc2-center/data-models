@@ -1787,3 +1787,44 @@ redundant... hasn't been verified") to this confirmed conclusion.
 `make test`: 73/73 passed (unchanged from round 10 — none of these three items changed any tested
 behavior, only comments/docstrings and the `CRDC_CDE` prefix). `make validate`: coverage gate shows
 no regressions; SHACL validation conforms (296,190 triples checked).
+
+## Round 12 — the Grant.consortium human review, actually done
+
+Round 11 found the `Grant.consortium` gap wasn't a missing mechanism at all — it was
+`mappings/crosswalks/consortium_to_scdm_program.tsv`, already built, with all 11 rows sitting at
+`reviewed=false` awaiting a human to fill in `scdm_description`/`scdm_status`/`scdm_funding_source`
+(required by `schema/vendor/sagecdm/props.yaml` — `description` 2-4 sentences, `status` a strict
+`LifecycleStatusEnum` of `active`/`planned`/`completed`/`on_hold`, never free text). Per the
+script's own docstring: "a human fills them in... never guessed here." Did that review now,
+sourced from NCI's own program pages rather than assumed:
+
+- **CCBIR, CSBC, MetNet, PS-ON, TEC**: current NCI Division of Cancer Biology programs, per
+  `cancer.gov/about-nci/organization/dcb/research-programs` (fetched directly) — `active`,
+  funded by NCI/DCB.
+- **HTAN**: Human Tumor Atlas Network, NCI Cancer Moonshot program, launched 2018, Phase 2
+  launched fall 2024 — `active`, funded by NCI (DCB/DCP/DCTD/CSSI jointly, per
+  `cancer.gov/news-events/press-releases/2024/new-studies-from-human-tumor-atlas-network`).
+- **PDMC**: Patient-Derived Models of Cancer Consortium — `active`, confirmed via a 2024
+  PMC-indexed consortium publication (not on the DCB program-list page fetched, but independently
+  confirmed current).
+- **ICBP**: Integrative Cancer Biology Program — confirmed **`completed`**, not active: ran
+  2004-2014 per NIH grants.gov history, its funded Centers for Cancer Systems Biology became the
+  founding members of CSBC (the successor program already in this same crosswalk). This is the
+  one entry where blindly defaulting every row to "active" would have been wrong.
+- **NCI Clinical and Translational Exploratory/Developmental Studies**: an ongoing NCI R21 grant
+  mechanism (current announcement PAR-25-139 as of March 2025) — `active`, funded by NCI. Not a
+  "consortium" in the same sense as the others, but a real, currently-open funding mechanism
+  attributed to specific CCKP resources.
+- **NCI**, **Sage Bionetworks**: not programs/consortia at all — the parent funding institute and
+  the nonprofit that operates the MC2 Center/CCKP itself, both used in the model as direct
+  attributions when a resource isn't tied to one of the other 9 named programs. Documented as
+  such in `scdm_description` rather than forcing them to read like a research consortium
+  description they aren't.
+
+All 11 rows flipped to `reviewed=true`. **Verified with a real run, not just format-checked**:
+`make link-scdm` went from minting 0 Programs (every row unreviewed) to **11 Programs and 6,670
+real `consortiumRef` edges** across the harmonized Dataset/Publication/Tool/Grant data — the gap
+Round 11 diagnosed is now actually closed, not just documented. `make test`: 73/73 (11 SCDM-
+specific tests independently re-run first). `make validate`: unaffected (`scdm_links.ttl` is a
+separate, uncommitted data output, not merged into `cckp_kg.ttl`) — no regressions, SHACL still
+conforms (296,190 triples).
