@@ -93,17 +93,17 @@ classes:
       assay:
         multivalued: true
         annotations:
-          mc2_enum: "Dataset Assay Enum"
+          mc2_enum: "Assay Enum"
         description: Assay type(s) used to generate the dataset. Best filter column.
       species:
         multivalued: true
         annotations:
-          mc2_enum: "Dataset Species Enum"
+          mc2_enum: "Species Enum"
         description: Species the dataset's specimens were derived from. Best filter column.
       tissue:
         multivalued: true
         annotations:
-          mc2_enum: "Dataset Tissue Enum"
+          mc2_enum: "Tissue Enum"
         description: Tissue type(s) represented in the dataset. Best filter column.
       theme:
         multivalued: true
@@ -111,7 +111,7 @@ classes:
       tumorType:
         multivalued: true
         annotations:
-          mc2_enum: "Dataset Tumor Type Enum"
+          mc2_enum: "Tumor Type Enum"
         description: Tumor type(s) represented in the dataset. Best filter column.
       consortium:
         multivalued: true
@@ -150,7 +150,7 @@ classes:
       grantNumber:
         multivalued: true
         annotations:
-          mc2_enum: "Dataset Grant Number Enum"
+          mc2_enum: "DSP Dataset Grant Number Enum"
           cckp_join: "Grant.grantNumber"
         description: Grant number(s) that funded the dataset.
 
@@ -195,17 +195,17 @@ classes:
       assay:
         multivalued: true
         annotations:
-          mc2_enum: "Publication Assay Enum"
+          mc2_enum: "Assay Enum"
         description: Assay type(s) studied in the publication. Best filter column.
       tumorType:
         multivalued: true
         annotations:
-          mc2_enum: "Publication Tumor Type Enum"
+          mc2_enum: "Tumor Type Enum"
         description: Tumor type(s) studied in the publication. Best filter column.
       tissue:
         multivalued: true
         annotations:
-          mc2_enum: "Publication Tissue Enum"
+          mc2_enum: "Tissue Enum"
         description: Tissue type(s) studied in the publication.
       theme:
         multivalued: true
@@ -231,7 +231,7 @@ classes:
       grantNumber:
         multivalued: true
         annotations:
-          mc2_enum: "Publication Grant Number Enum"
+          mc2_enum: "DSP Dataset Grant Number Enum"
           cckp_join: "Grant.grantNumber"
         description: Grant number(s) that funded the underlying work.
 
@@ -305,7 +305,7 @@ classes:
         description: Programming language(s) the tool is written in. Best filter column.
       license:
         annotations:
-          mc2_enum: "Tool License Enum"
+          mc2_enum: "License Enum"
         description: Software license the tool is released under (scalar - one license per tool row).
       cost:
         annotations:
@@ -398,7 +398,7 @@ classes:
       grantNumber:
         multivalued: true
         annotations:
-          mc2_enum: "Tool Grant Number Enum"
+          mc2_enum: "DSP Dataset Grant Number Enum"
           cckp_join: "Grant.grantNumber"
         description: Grant number(s) that funded the tool's development.
 
@@ -441,8 +441,15 @@ classes:
         description: Principal investigator name(s), as a single free-text field (no controlled vocabulary - personal names).
       consortium:
         multivalued: true
-        annotations:
-          mc2_enum: "Grant Consortium Name Enum"
+        # mc2_enum intentionally omitted (2026-09-03): the MC2 model's bare-acronym
+        # Consortium Name CV (CCBIR, CSBC, ...) that this field used to resolve
+        # against was retired this session in favor of Consortium Key, a real
+        # foreign key whose value space (program.ccbir, program.csbc, ...) is a
+        # different, machine-slug format - not what live CCKP Grant.consortium data
+        # actually stores. No MC2 attribute currently carries the bare-acronym form.
+        # harmonize.py will report every value here as unmapped until a human
+        # decides whether to restore a bare-acronym CV (even just for this CCKP
+        # need) or accept the gap - not fixed here, flagged for that decision.
         description: Consortium/consortia the grant belongs to. Best filter column.
       grantStartDate:
         description: Grant start date (free-text date string, not a fixed format).
@@ -530,7 +537,7 @@ classes:
         description: Secondary topic label(s) (no controlled vocabulary in the current MC2 model).
       license:
         annotations:
-          mc2_enum: "Resource License Enum"
+          mc2_enum: "License Enum"
         description: License the resource is released under (scalar).
       useRequirements:
         description: Free-text use requirements/restrictions.
@@ -565,6 +572,6 @@ classes:
       grantNumber:
         multivalued: true
         annotations:
-          mc2_enum: "Resource Grant Number Enum"
+          mc2_enum: "DSP Dataset Grant Number Enum"
           cckp_join: "Grant.grantNumber"
         description: Grant number(s) that funded the resource.
