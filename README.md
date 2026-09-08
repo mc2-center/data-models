@@ -46,6 +46,37 @@ assay-level metadata for imaging (multiplexed/single-channel imaging),
 NanoString GeoMx Digital Spatial Profiler (DSP) spatial transcriptomics,
 bulk/single-cell sequencing, and 10x Genomics Visium spatial transcriptomics.
 
+## Usage
+
+Requires Python 3.10+.
+
+```bash
+pip install -r requirements.txt
+
+# Full build: update valid values in all modules -> collate -> generate JSON Schemas
+make all
+```
+
+Steps individually:
+
+```bash
+python update_valid_values.py   # reads modules/mapping.yaml, rewrites annotationProperty.csv Valid Values columns
+make collate                    # concatenates all modules/*/annotationProperty.csv -> mc2.model.csv
+make convert                    # converts mc2.model.csv -> mc2.model.jsonld
+make generate-json              # python create_json_from_model.py <data types> -> json_schemas/
+
+# Generate JSON schemas for specific data types only
+python create_json_from_model.py Biospecimen Study Dataset
+```
+
+To build and preview the docs site locally:
+
+```bash
+mkdocs serve   # http://localhost:8000
+```
+
+See [contributing guidelines] for the full development and release process.
+
 ## Folder Structure
 
 ```
