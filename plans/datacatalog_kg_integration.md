@@ -444,3 +444,135 @@ new-and-separate stage that a user opts into later.
   harmonize-then-build-triples fixture test with real CV resolution
   assertions (species/manifestation NCIT identifiers, doiIri templating,
   confirmed absence of a `*Term` edge for the non-mappable `accessType`).
+
+## Full design rationale (moved from kg-pipeline/README.md, 2026-09-08)
+
+The section below is the verbatim "Data Catalog (native Synapse Dataset
+entity annotations)" content that used to live in `kg-pipeline/README.md`.
+It was moved here as part of a pass separating that README into standard
+usage documentation (kept in the README) versus development/decision
+rationale (moved to `plans/`, preserved in full rather than summarized).
+The README now keeps only the `make` command list and a short pointer to
+this section.
+
+---
+
+`modules/dataCatalog/` models the "Synapse Data Catalog" manifest - a
+schema.org/Bioschemas-flavored dataset-cataloging vocabulary
+(`measurementTechnique`, `license`, `includedInDataCatalog`,
+`conditionsOfAccess`, `accessType`, ...). Unlike the 5 CCKP portal classes
+in the main pipeline, none of this is submitted through this repo's own
+manifest process - it's populated as **native Synapse annotations directly
+on Dataset entities** (confirmed live: only 11 of 966 probed entities carry
+a `Component: Dataset` schematic-submission marker alongside the same key
+set - the other ~955 carry it natively, populated by Synapse's own Data
+Catalog UI/metadata assistant). See the "Context" section above for the
+full harvest-and-alignment writeup this stage is built from.
+
+**Which CCKP Dataset rows qualify**: of `syn21897968` (the CCKP Dataset
+merged table), only rows with `downloadType` in (`Synapse Hosted`,
+`Synapse Indexed`) are backed by a real Synapse `Dataset` entity (confirmed
+via a `concreteType` sample) - for those, `downloadSynId` always equals
+`datasetId`. `Externally Hosted`/`Not Available for Download` rows have no
+backing entity to read annotations from and are skipped.
+
+```
+make extract-datacatalog    # syn21897968 (downloadType filter) -> data/raw/DataCatalog.csv
+make harmonize-datacatalog  # -> data/harmonized/datacatalog/ (own out-dir, see below)
+make triples-datacatalog    # -> data/rdf/DataCatalog.ttl
+make merge-datacatalog      # fold data/rdf/DataCatalog.ttl into data/rdf/cckp_kg.ttl, IN PLACE
+make combined-kg            # rebuilds triples + triples-datacatalog fresh, merges them into
+                             # their OWN file, data/rdf/cckp_kg_with_datacatalog.ttl - use this
+                             # instead of merge-datacatalog if you want the combined graph to
+                             # survive a later `make triples` (which rebuilds cckp_kg.ttl from
+                             # scratch, dropping any in-place DataCatalog merge). See
+                             # kg-pipeline/README.md's "Consuming the graph" section for which
+                             # file to load for what.
+```
+
+- **Own `--out-dir`, not `data/harmonized/`.** `harmonize.py` overwrites
+  `unmapped_terms.csv` fresh on every run rather than appending - sharing
+  the main pipeline's `data/harmonized/` would silently replace its
+  coverage report with DataCatalog's own (discovered while implementing
+  this: an early manual test run did exactly that, clobbering the real
+  5-class report until `make harmonize` was re-run to restore it). Same
+  reason `harmonize-mc2-assay` already uses its own
+  `data/mc2_assay/harmonized/` - this stays in the public `data/` tree
+  (unlike `mc2_assay`, this data is public) but still gets its own
+  subdirectory, `data/harmonized/datacatalog/`.
+- **Merges onto the *existing* `cckp:Dataset` subject, not a separate
+  node.** `DataCatalog_id` always equals that row's own `datasetId`
+  (confirmed on every entity carrying a real `DataCatalog_id` annotation) -
+  these are two metadata facets of the same real-world dataset.
+  `scripts/build_datacatalog_triples.py` adds triples directly onto
+  `mint_iri("Dataset", datasetId)`, the same subject IRI
+  `scripts/build_triples.py`'s own `Dataset` class pass already uses.
+- **schema.org predicates where a real one exists.** This vocabulary was
+  deliberately modeled on schema.org Dataset/CreativeWork terms, so
+  `license`, `creator`, `contributor`, `keywords`, `citation`,
+  `measurementTechnique`, `includedInDataCatalog`, `datePublished`,
+  `alternateName`, `funder`, `description`, and `title` (-> `schema:name`)
+  are emitted under `https://schema.org/` rather than a new
+  `cckp:`-namespaced predicate - this also sidesteps any collision with
+  `cckp_portal.linkml.yaml`'s own same-named-but-differently-sourced
+  Dataset fields (`cckp:description`, `cckp:species`, ...), since the two
+  metadata layers coexist on one subject under different namespaces.
+  Everything else gets a `cckp:`-namespaced predicate; `doi` reuses
+  `build_triples.py`'s own `external_iri()`/`doiIri` templating directly,
+  matching how the CCKP-portal Dataset class already handles DOIs.
+  CV-backed fields additionally get a resolved `cckp:{field}Term` edge,
+  mirroring `build_triples.py`'s own `{field}Term` convention.
+- **Real, evidence-backed CV realignment**, not new parallel CVs. Aligning
+  this vocabulary's real values (harvested from 966 live entities) against
+  `modules/dataCatalog/annotationProperty.csv`'s prior CV mappings surfaced
+  the same "CV source doesn't match what curators actually enter" pattern
+  documented for other fields elsewhere in this pipeline - `species` used
+  common names (`Human`) where real annotations use scientific binomials
+  (`Homo sapiens`); `license` used bare SPDX-less codes (`CC_BY`) where real
+  annotations use versioned strings (`CC-BY 4.0`); `measurementTechnique`
+  used Title Case spelled-out terms where real annotations mix
+  abbreviations (`RNA-seq`) with proper terms; `accessType` was mapped to
+  `shared/dataTier.csv`'s Anonymous/Open/Controlled/Private set where real
+  annotations use `Open Access`/`Restricted Access`, matching
+  `modules/publication/publication_accessibility.csv` instead. Per
+  explicit direction: **extend an existing CV first** (as a
+  `Nonpreferred Terms` alias or a same-file new row - e.g.
+  `shared/dataset_species.csv` already used exactly this alias mechanism
+  for `Zebrafish`/`Danio rerio` before this pass touched it), **a genuinely
+  new CV file only when nothing existing fits** (`downloadType`'s `Synapse
+  Hosted`/`Synapse Indexed` has no repo analog anywhere). `dataType`
+  formalizes `modules/shared/mc2_iconTag_map_3-4-25.csv`'s existing
+  `term`->`label` taxonomy as a real registered CV (it wasn't registered
+  anywhere before this pass) rather than inventing a disconnected one.
+- **60 of 73 `measurementTechnique` values now resolve** against
+  `shared/assay.csv` (up from 46 before this pass - some already matched,
+  most needed a new `Nonpreferred Terms` alias, a few needed a brand-new
+  row in that same file). The remaining 13 (`in vivo tumor growth`, `in
+  silico synthesis`, `RNA array`, `shRNA-seq`, `spatial transcriptomics`,
+  `in vivo PDX viability`, `histology`, `proximity extension assay`,
+  `compound screen`, `traction force microscopy`, `array`, `metabolic
+  screening`, `scCGI-seq`) either got a new `assay.csv` row with no
+  ontology identifier (not guessed) or were left as-is (`traction force
+  microscopy`/`scCGI-seq` already had a row with a populated `Ontology
+  Url` but blank `Ontology Identifier` - `harmonize.py`'s `load_cv_lookup`
+  skips a row entirely when its identifier is blank, a real,
+  pre-existing gap unrelated to this pass and not fixed here, except for
+  `UPLC-MSMS`, whose identifier was derivable from its own already-cited
+  PubMed URL using this repo's existing `PMID:` convention). All 13 show
+  up in `data/harmonized/datacatalog/unmapped_terms.csv`, not silently
+  dropped.
+- **`accessType`/`downloadType`/`dataType`/`funder` are confirmed
+  non-mappable or pre-existing gaps, not new bugs.** `accessType`
+  (`Open Access`) has no ontology equivalent, same as
+  `Publication`/`Tool.accessibility` (see
+  `plans/kg_pipeline_architecture_decisions.md`). `downloadType` (`Synapse
+  Hosted`/`Synapse Indexed`) is a Synapse-specific hosting concept with no
+  external analog. `dataType`'s CV rows carry no `Ontology Identifier`
+  (they're internal Sage `mc2_iconTag_map` category labels, not external
+  ontology terms). `funder`'s blank `Ontology Identifier`
+  (`consortium/consortium_funding_agency.csv`) predates this pass and
+  wasn't added to while extending that file with the `NIH-NCI` value.
+  All four show up in full in the unmapped-terms report by design - the
+  coverage-baseline mechanism doesn't apply to this stage at all (its own
+  `--out-dir` keeps it out of the main pipeline's baseline entirely, see
+  above), so there's no ratchet to move forward for them.
