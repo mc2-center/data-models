@@ -28,6 +28,7 @@ mc2-model-linkml:
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
 		--schema-id https://w3id.org/mc2-center/mc2-model --schema-name mc2_model \
 		--prefix 'CRDC_CDE=https://cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/DataElement/' \
+		--prefix 'MIXS=https://w3id.org/mixs/' \
 		--out schema/mc2_model.linkml.yaml
 	$(PYTHON) scripts/resolve_prefixes.py schema/mc2_model.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
