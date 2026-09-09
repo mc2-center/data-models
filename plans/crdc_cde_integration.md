@@ -1828,3 +1828,59 @@ Round 11 diagnosed is now actually closed, not just documented. `make test`: 73/
 specific tests independently re-run first). `make validate`: unaffected (`scdm_links.ttl` is a
 separate, uncommitted data output, not merged into `cckp_kg.ttl`) — no regressions, SHACL still
 conforms (296,190 triples).
+
+## Round 13 — verified full-plan integration status, finished the one remaining gap
+
+Cross-checked this entire plan against the current model (2026-09-08), as
+part of a broader controlled-vocabulary quality pass (see
+`reports/valid_value_descriptions_report.md` and
+`plans/legacy_cv_cleanup.md`). Findings:
+
+- **"New attributes to add"**: all confirmed present (Individual Year of
+  Birth/Death/Diagnosis, File Data Category/Checksum Type/Checksum
+  Value/Compression Status/Size, the 7 specimen-gap fields, the 3
+  treatment-gap fields, Individual Disease Progression or Recurrence Type,
+  Individual Lymph Node Involvement Anatomic Site Uberon Identifier,
+  Individual/Biospecimen ICD-10-CM Disease Code, Image DICOM Modality
+  Type, Image Platform Model Version, Project's own `CRDC_CDE:11459804`
+  tag).
+- **"Existing attributes to re-align controlled vocabularies on"**: 6 of 7
+  confirmed already implemented (Primary Diagnosis and Therapeutic Agent
+  as open reference-validated fields; Site of Origin, Known Metastasis
+  Sites, Biospecimen Site of Resection or Biopsy as UBERON pattern-
+  validated fields). **Biospecimen Type Category was also already correct**
+  (re-verified directly: its Valid Values do carry the full real 19-term
+  CDE 12445832 list including RNA/DNA/Central Nervous System/Cell Line —
+  an initial re-check misread a truncated shell-output sample and flagged
+  this as a gap; it wasn't one).
+- **Biospecimen Acquisition Method — the one genuine gap, now fixed**:
+  live-fetched CDE 15115495 ("Specimen Collection Method Type") via
+  `~/.claude/skills/cadsr-cde-match/scripts/cde_match.py fetch-cde
+  15115495` — its real permissible-value list is only 10 terms (Not
+  Reported, Needle Biopsy, Excisional Biopsy, Blood Draw, Tumor Resection,
+  Surgical Resection, Incisional Biopsy, Bone Marrow Aspiration, Other,
+  Aspiration), notably smaller/more generic than the prior 20-term
+  free-text list. Per explicit user decision (more granular terms like
+  Core needle biopsy/Fine needle aspirate/Punch biopsy/Shave biopsy would
+  otherwise have no direct slot under the real CDE), replaced Valid Values
+  with the real 10-term list. `CDE:6626651` stays tagged alongside
+  `CRDC_CDE:15115495`, still flagged for its own follow-up review as
+  originally planned — not touched here.
+- **The 4 orphaned legacy CV files** referenced in earlier turns of this
+  session as if they were staged CDE-replacement CVs
+  (`shared/therapeuticAgent.csv`, `shared/primaryDiagnosisCDS.csv`,
+  `shared/primaryDiseaseSite.csv`, `shared/tissueOrganOriginCDS.csv`) are
+  **not** — confirmed via `git log` they date to an October 2024 "Model
+  refactor and expansion" (`b3ff791`), predating this plan entirely, and
+  are referenced nowhere in it. They were superseded once Primary
+  Diagnosis/Therapeutic Agent/Site of Origin were converted to open
+  reference-validated fields. See `plans/legacy_cv_cleanup.md` for the
+  resolution (deletion).
+
+### Verification
+
+- `python3 -c` spot-check confirms `Biospecimen Acquisition Method`'s new
+  Valid Values and unchanged `Properties` tag.
+- `python update_valid_values.py` + `make collate`: regenerate cleanly, no
+  new duplicate `Attribute` names or dangling `DependsOn` references
+  introduced.
