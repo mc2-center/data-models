@@ -596,7 +596,7 @@
         {
             "@id": "bts:BiospecimenAcquisitionMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Records the method of acquisition or source for the specimen under consideration",
+            "rdfs:comment": "Records the method of acquisition or source for the specimen under consideration. Valid Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate, Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for follow-up review.",
             "rdfs:label": "BiospecimenAcquisitionMethod",
             "rdfs:subClassOf": [
                 {
@@ -608,64 +608,34 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:Autopsy"
+                    "@id": "bts:Aspiration"
                 },
                 {
-                    "@id": "bts:Biopsy"
+                    "@id": "bts:BloodDraw"
                 },
                 {
-                    "@id": "bts:Blooddraw"
-                },
-                {
-                    "@id": "bts:Coreneedlebiopsy"
+                    "@id": "bts:BoneMarrowAspiration"
                 },
                 {
                     "@id": "bts:ExcisionalBiopsy"
                 },
                 {
-                    "@id": "bts:Fineneedleaspirate"
-                },
-                {
-                    "@id": "bts:ForcepsBiopsy"
-                },
-                {
                     "@id": "bts:IncisionalBiopsy"
                 },
                 {
-                    "@id": "bts:Lymphadenectomy(regionalnodes)"
+                    "@id": "bts:NeedleBiopsy"
                 },
                 {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notreported"
-                },
-                {
-                    "@id": "bts:Notspecified"
+                    "@id": "bts:NotReported"
                 },
                 {
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Pancreaticoduodenectomy"
-                },
-                {
-                    "@id": "bts:Punchbiopsy"
-                },
-                {
-                    "@id": "bts:Re-excision"
-                },
-                {
-                    "@id": "bts:Sentinelnodebiopsy"
-                },
-                {
-                    "@id": "bts:Shavebiopsy"
-                },
-                {
                     "@id": "bts:SurgicalResection"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:TumorResection"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -6290,6 +6260,9 @@
                     "@id": "bts:TreatmentResponse"
                 },
                 {
+                    "@id": "bts:BiospecimenAcquisitionMethod"
+                },
+                {
                     "@id": "bts:BiospecimenPreservationTemperature"
                 },
                 {
@@ -6399,9 +6372,6 @@
                 },
                 {
                     "@id": "bts:BiospecimenComposition"
-                },
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
                 },
                 {
                     "@id": "bts:IndividualTumorLymphNodeStage"
@@ -7739,9 +7709,6 @@
                     "@id": "bts:BiospecimenComposition"
                 },
                 {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                },
-                {
                     "@id": "bts:NGSLibrarySelectionMethod"
                 }
             ],
@@ -7764,9 +7731,6 @@
                 },
                 {
                     "@id": "bts:BiospecimenComposition"
-                },
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
                 }
             ],
             "schema:isPartOf": {
@@ -29621,6 +29585,9 @@
                     "@id": "bts:BiospecimenEmbeddingMedium"
                 },
                 {
+                    "@id": "bts:BiospecimenAcquisitionMethod"
+                },
+                {
                     "@id": "bts:ToolDownloadType"
                 },
                 {
@@ -29631,9 +29598,6 @@
                 },
                 {
                     "@id": "bts:ToolDocumentationType"
-                },
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
                 },
                 {
                     "@id": "bts:ResourceTopic"
@@ -29687,10 +29651,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Autopsy",
+            "@id": "bts:Aspiration",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Autopsy",
+            "rdfs:label": "Aspiration",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenAcquisitionMethod"
@@ -29700,15 +29664,15 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Autopsy",
+            "sms:displayName": "Aspiration",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Biopsy",
+            "@id": "bts:BloodDraw",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Biopsy",
+            "rdfs:label": "BloodDraw",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenAcquisitionMethod"
@@ -29718,15 +29682,15 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Biopsy",
+            "sms:displayName": "Blood Draw",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Blooddraw",
+            "@id": "bts:BoneMarrowAspiration",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Blooddraw",
+            "rdfs:label": "BoneMarrowAspiration",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenAcquisitionMethod"
@@ -29736,25 +29700,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Blood draw",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Coreneedlebiopsy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Coreneedlebiopsy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Core needle biopsy",
+            "sms:displayName": "Bone Marrow Aspiration",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -29777,42 +29723,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Fineneedleaspirate",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Fineneedleaspirate",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Fine needle aspirate",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ForcepsBiopsy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ForcepsBiopsy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Forceps Biopsy",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:IncisionalBiopsy",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -29831,10 +29741,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Lymphadenectomy(regionalnodes)",
+            "@id": "bts:NeedleBiopsy",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Lymphadenectomy(regionalnodes)",
+            "rdfs:label": "NeedleBiopsy",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenAcquisitionMethod"
@@ -29844,115 +29754,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Lymphadenectomy (regional nodes)",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Notspecified",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Notspecified",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Not specified",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Pancreaticoduodenectomy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Pancreaticoduodenectomy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Pancreaticoduodenectomy",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Punchbiopsy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Punchbiopsy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Punch biopsy",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Re-excision",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Re-excision",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Re-excision",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Sentinelnodebiopsy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Sentinelnodebiopsy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Sentinel node biopsy",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Shavebiopsy",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Shavebiopsy",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenAcquisitionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Shave biopsy",
+            "sms:displayName": "Needle Biopsy",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -29971,6 +29773,24 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Surgical Resection",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TumorResection",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TumorResection",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenAcquisitionMethod"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Tumor Resection",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -69130,7 +68950,7 @@
         {
             "@id": "bts:FileDesign",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The overall design of the file, including a batch identifier, if applicable.",
+            "rdfs:comment": "The overall design of the file.",
             "rdfs:label": "FileDesign",
             "rdfs:subClassOf": [
                 {
@@ -69143,6 +68963,25 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string",
             "sms:displayName": "File Design",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FileBatchIdentifier",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects (see MIxS \"batch identifiers\": https://w3id.org/mixs/0001382). Free text, not a fixed list.",
+            "rdfs:label": "FileBatchIdentifier",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "File Batch Identifier",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -69374,6 +69213,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -69796,7 +69638,7 @@
         {
             "@id": "bts:FileLongitudinalEventType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The type of event to which File Longitudinal Total Time Elapsed is related",
+            "rdfs:comment": "The type of event to which File Longitudinal Total Time Elapsed is related (e.g. Enrollment, Baseline). Free text, not a fixed list.",
             "rdfs:label": "FileLongitudinalEventType",
             "rdfs:subClassOf": [
                 {
@@ -69806,14 +69648,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Enrollment"
-                },
-                {
-                    "@id": "bts:Baseline"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string",
             "sms:displayName": "File Longitudinal Event Type",
@@ -69823,7 +69657,7 @@
         {
             "@id": "bts:FileLongitudinalSequenceIdentifier",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",
+            "rdfs:comment": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.).",
             "rdfs:label": "FileLongitudinalSequenceIdentifier",
             "rdfs:subClassOf": [
                 {
@@ -69834,7 +69668,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:columnType": "number",
+            "sms:columnType": "string",
             "sms:displayName": "File Longitudinal Sequence Identifier",
             "sms:required": "sms:false",
             "sms:validationRules": []
@@ -70074,42 +69908,6 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "number",
             "sms:displayName": "File Data Size",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Enrollment",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Enrollment",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FileLongitudinalEventType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Enrollment",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Baseline",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Baseline",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FileLongitudinalEventType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Baseline",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

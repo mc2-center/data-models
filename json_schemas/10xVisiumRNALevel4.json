@@ -929,7 +929,7 @@
       "type": "string"
     },
     "FileDesign": {
-      "description": "The overall design of the file, including a batch identifier, if applicable.",
+      "description": "The overall design of the file.",
       "title": "File Design",
       "type": "string"
     },
@@ -1034,12 +1034,9 @@
       "title": "File Level"
     },
     "FileLongitudinalEventType": {
-      "description": "The type of event to which File Longitudinal Total Time Elapsed is related",
-      "enum": [
-        "Baseline",
-        "Enrollment"
-      ],
-      "title": "File Longitudinal Event Type"
+      "description": "The type of event to which File Longitudinal Total Time Elapsed is related (e.g. Enrollment, Baseline). Free text, not a fixed list.",
+      "title": "File Longitudinal Event Type",
+      "type": "string"
     },
     "FileLongitudinalGroup": {
       "description": "A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment",
@@ -1047,9 +1044,9 @@
       "type": "string"
     },
     "FileLongitudinalSequenceIdentifier": {
-      "description": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",
+      "description": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.).",
       "title": "File Longitudinal Sequence Identifier",
-      "type": "number"
+      "type": "string"
     },
     "FileLongitudinalTimeElapsedUnit": {
       "description": "The unit of time associated with Sequential and Total Time Elapsed attributes.",

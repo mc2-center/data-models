@@ -4,28 +4,18 @@
   "description": "Metadata attributes for describing a tissue or tumor sample",
   "properties": {
     "BiospecimenAcquisitionMethod": {
-      "description": "Records the method of acquisition or source for the specimen under consideration",
+      "description": "Records the method of acquisition or source for the specimen under consideration. Valid Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate, Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for follow-up review.",
       "enum": [
-        "Autopsy",
-        "Biopsy",
-        "Blooddraw",
-        "Coreneedlebiopsy",
+        "Aspiration",
+        "BloodDraw",
+        "BoneMarrowAspiration",
         "ExcisionalBiopsy",
-        "Fineneedleaspirate",
-        "ForcepsBiopsy",
         "IncisionalBiopsy",
-        "Lymphadenectomy(regionalnodes)",
-        "Notapplicable",
-        "Notreported",
-        "Notspecified",
+        "NeedleBiopsy",
+        "NotReported",
         "Other",
-        "Pancreaticoduodenectomy",
-        "Punchbiopsy",
-        "Re-excision",
-        "Sentinelnodebiopsy",
-        "Shavebiopsy",
         "SurgicalResection",
-        "Unknown"
+        "TumorResection"
       ],
       "title": "Biospecimen Acquisition Method"
     },

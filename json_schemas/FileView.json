@@ -1110,28 +1110,18 @@
       "type": "string"
     },
     "BiospecimenAcquisitionMethod": {
-      "description": "Records the method of acquisition or source for the specimen under consideration",
+      "description": "Records the method of acquisition or source for the specimen under consideration. Valid Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate, Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for follow-up review.",
       "enum": [
-        "Autopsy",
-        "Biopsy",
-        "Blooddraw",
-        "Coreneedlebiopsy",
+        "Aspiration",
+        "BloodDraw",
+        "BoneMarrowAspiration",
         "ExcisionalBiopsy",
-        "Fineneedleaspirate",
-        "ForcepsBiopsy",
         "IncisionalBiopsy",
-        "Lymphadenectomy(regionalnodes)",
-        "Notapplicable",
-        "Notreported",
-        "Notspecified",
+        "NeedleBiopsy",
+        "NotReported",
         "Other",
-        "Pancreaticoduodenectomy",
-        "Punchbiopsy",
-        "Re-excision",
-        "Sentinelnodebiopsy",
-        "Shavebiopsy",
         "SurgicalResection",
-        "Unknown"
+        "TumorResection"
       ],
       "title": "Biospecimen Acquisition Method"
     },
@@ -2819,6 +2809,11 @@
       "title": "File Alias",
       "type": "string"
     },
+    "FileBatchIdentifier": {
+      "description": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects (see MIxS \"batch identifiers\": https://w3id.org/mixs/0001382). Free text, not a fixed list.",
+      "title": "File Batch Identifier",
+      "type": "string"
+    },
     "FileDataCategory": {
       "description": "A broad classification of the contents of a data file generated from an experiment or a study.",
       "enum": [
@@ -2886,7 +2881,7 @@
       "type": "string"
     },
     "FileDesign": {
-      "description": "The overall design of the file, including a batch identifier, if applicable.",
+      "description": "The overall design of the file.",
       "title": "File Design",
       "type": "string"
     },
@@ -2991,12 +2986,9 @@
       "title": "File Level"
     },
     "FileLongitudinalEventType": {
-      "description": "The type of event to which File Longitudinal Total Time Elapsed is related",
-      "enum": [
-        "Baseline",
-        "Enrollment"
-      ],
-      "title": "File Longitudinal Event Type"
+      "description": "The type of event to which File Longitudinal Total Time Elapsed is related (e.g. Enrollment, Baseline). Free text, not a fixed list.",
+      "title": "File Longitudinal Event Type",
+      "type": "string"
     },
     "FileLongitudinalGroup": {
       "description": "A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment",
@@ -3004,9 +2996,9 @@
       "type": "string"
     },
     "FileLongitudinalSequenceIdentifier": {
-      "description": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",
+      "description": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.).",
       "title": "File Longitudinal Sequence Identifier",
-      "type": "number"
+      "type": "string"
     },
     "FileLongitudinalTimeElapsedUnit": {
       "description": "The unit of time associated with Sequential and Total Time Elapsed attributes.",
