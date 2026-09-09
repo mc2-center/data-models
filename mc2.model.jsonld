@@ -68969,7 +68969,7 @@
         {
             "@id": "bts:FileBatchIdentifier",
             "@type": "rdfs:Class",
-            "rdfs:comment": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects (see MIxS \"batch identifiers\": https://w3id.org/mixs/0001382). Free text, not a fixed list.",
+            "rdfs:comment": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects. Free text, not a fixed list.",
             "rdfs:label": "FileBatchIdentifier",
             "rdfs:subClassOf": [
                 {
@@ -70655,6 +70655,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -71796,6 +71799,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -72895,6 +72901,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -73195,6 +73204,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -80479,6 +80491,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -82272,6 +82287,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -82748,6 +82766,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -82982,6 +83003,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -83443,6 +83467,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -90918,6 +90945,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -93664,6 +93694,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -93841,6 +93874,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -94056,6 +94092,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -128029,6 +128068,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -128300,6 +128342,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -129051,6 +129096,9 @@
                     "@id": "bts:FileDesign"
                 },
                 {
+                    "@id": "bts:FileBatchIdentifier"
+                },
+                {
                     "@id": "bts:FileLevel"
                 },
                 {
@@ -129275,6 +129323,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"
@@ -129819,6 +129870,9 @@
                 },
                 {
                     "@id": "bts:FileDesign"
+                },
+                {
+                    "@id": "bts:FileBatchIdentifier"
                 },
                 {
                     "@id": "bts:FileLevel"

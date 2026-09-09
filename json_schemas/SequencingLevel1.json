@@ -912,6 +912,11 @@
       "title": "File Alias",
       "type": "string"
     },
+    "FileBatchIdentifier": {
+      "description": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects. Free text, not a fixed list.",
+      "title": "File Batch Identifier",
+      "type": "string"
+    },
     "FileDescription": {
       "description": "Description of the file.",
       "title": "File Description",
