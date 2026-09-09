@@ -21,9 +21,19 @@ situations:
                    carry an ontology mapping.
 
 For curation_gap and novel_term, this script queries an external registry for
-candidate matches - the EBI OLS4 REST API by default, or the ROR API for
-CVs whose `src` path contains "institution" - and writes every candidate to
-data/harmonized/mapping_suggestions.csv for a human to review.
+candidate matches, chosen per-CV by `choose_registry()` rather than hardcoded
+per field: the ROR API for CVs whose `src` path contains "institution", the
+SPDX license-list-data JSON for CVs already predominantly SPDX-coded (license
+CVs - SPDX isn't indexed in OLS at all), or the EBI OLS4 REST API otherwise.
+Every candidate is written to data/harmonized/mapping_suggestions.csv for a
+human to review.
+
+Adding support for a new non-OLS registry (e.g. a NIH grant-mechanism
+glossary) means adding one `<registry>_search()` function and one branch in
+`choose_registry()`/the dispatch in `main()` - not a new one-off script, which
+is exactly the gap that motivated this: SPDX mappings were previously done by
+hand-rolling a separate throwaway script each time a license CV needed
+curating.
 
 This script never writes back into a CV CSV or SSSOM file itself: it only
 proposes. Applying a suggestion is a deliberate follow-up edit to the
@@ -51,6 +61,12 @@ OLS_SEARCH_URL = "https://www.ebi.ac.uk/ols4/api/search"
 # `affiliation` endpoint is built for exactly this string-to-org matching
 # task and returns a real 0-1 confidence score, e.g. 1.0 for an exact name.
 ROR_AFFILIATION_URL = "https://api.ror.org/organizations"
+# SPDX license IDs aren't indexed in OLS at all (confirmed live, see
+# plans/cv_quality_pass.md) - the official license-list-data JSON is the
+# real, authoritative source for both a license's canonical id and its
+# full display name, so a CV backed by it gets its own registry backend
+# rather than a doomed OLS search.
+SPDX_LICENSES_URL = "https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json"
 
 # Accession-number / free-identifier fields that were never meant to carry an
 # ontology mapping (confirmed by inspecting their backing CV: every row is an
@@ -210,6 +226,60 @@ def ror_search(query, rows=3):
     return hits
 
 
+def load_spdx_licenses():
+    """Fetch the official SPDX license list once per run (not per value -
+    unlike OLS/ROR, there's no per-query endpoint; the whole ~700-entry list
+    is one JSON file). Returns [] on a fetch failure rather than raising, so
+    a network hiccup degrades to "no SPDX candidates" instead of crashing
+    the whole suggestion run."""
+    data = http_get_json(SPDX_LICENSES_URL)
+    return data.get("licenses") or []
+
+
+def spdx_search(query, spdx_licenses, rows=3):
+    """Fuzzy-match a raw license string against SPDX's own id + display name
+    (e.g. raw "Apache 2.0" -> licenseId "Apache-2.0", name "Apache License
+    2.0") - the same SequenceMatcher approach classify() already uses for
+    CV-internal typo detection, just against an external list instead."""
+    norm_query = normalize(query)
+    scored = []
+    for lic in spdx_licenses:
+        license_id, name = lic.get("licenseId") or "", lic.get("name") or ""
+        ratio = max(
+            SequenceMatcher(None, norm_query, normalize(name)).ratio() if name else 0.0,
+            SequenceMatcher(None, norm_query, normalize(license_id)).ratio() if license_id else 0.0,
+        )
+        scored.append((ratio, license_id, name))
+    scored.sort(key=lambda t: -t[0])
+    hits = []
+    for ratio, license_id, name in scored[:rows]:
+        if not license_id:
+            continue
+        hits.append({"source": "spdx", "curie": f"SPDX:{license_id}", "label": name,
+                     "ontology": "spdx", "url": f"https://spdx.org/licenses/{license_id}.html",
+                     "score": round(ratio, 2)})
+    return hits
+
+
+def choose_registry(src, hints):
+    """Which external registry backs candidate lookups for this CV.
+
+    "ror" for institution-name CVs (the pre-existing heuristic - matches
+    load_cv_lookup's own `src`-path check nowhere, but this script's own
+    long-standing convention). "spdx" when the CV's own existing curation
+    is predominantly SPDX-coded (license CVs). "ols" otherwise, the
+    default. To add a new non-OLS registry (e.g. a NIH grant-mechanism
+    glossary), add its own `<registry>_search()` function and one more
+    branch here, rather than a separate one-off script - `hints` (from
+    cv_ontology_hints) is already the CURIE-prefix signal to key off of.
+    """
+    if "institution" in src.lower():
+        return "ror"
+    if hints and hints[0] == "spdx":
+        return "spdx"
+    return "ols"
+
+
 def classify(value, attr_index):
     norm_value = normalize(value)
     row = attr_index.get(norm_value)
@@ -261,8 +331,9 @@ def main():
     for r in rows:
         by_field[(r["table"], r["field"])][r["value"]] += 1
 
-    cv_rows_cache, attr_index_cache, ontologies_cache = {}, {}, {}
+    cv_rows_cache, attr_index_cache, hints_cache = {}, {}, {}
     lookup_cache = {}
+    spdx_licenses_cache = None
     suggestions = []
     n_excluded = n_looked_up = 0
 
@@ -287,9 +358,9 @@ def main():
         if src not in cv_rows_cache:
             cv_rows_cache[src] = load_cv_rows(args.modules_dir, src)
             attr_index_cache[src] = cv_attribute_index(cv_rows_cache[src])
-            ontologies_cache[src] = guess_ontologies(cv_ontology_hints(cv_rows_cache[src]))
+            hints_cache[src] = cv_ontology_hints(cv_rows_cache[src])
         attr_index = attr_index_cache[src]
-        use_ror = "institution" in src.lower()
+        registry = choose_registry(src, hints_cache[src])
 
         for i, (value, count) in enumerate(value_counts.most_common()):
             if i >= args.max_values_per_field:
@@ -299,14 +370,18 @@ def main():
             category, detail = classify(value, attr_index)
             candidates = []
             if not args.no_lookup and category in ("curation_gap", "novel_term"):
-                cache_key = f"{'ror' if use_ror else src}:{normalize(value)}"
+                cache_key = f"{registry if registry != 'ols' else src}:{normalize(value)}"
                 if cache_key in lookup_cache:
                     candidates = lookup_cache[cache_key]
                 else:
-                    if use_ror:
+                    if registry == "ror":
                         candidates = ror_search(value)
+                    elif registry == "spdx":
+                        if spdx_licenses_cache is None:
+                            spdx_licenses_cache = load_spdx_licenses()
+                        candidates = spdx_search(value, spdx_licenses_cache)
                     else:
-                        candidates = ols_search(value, ontologies_cache[src])
+                        candidates = ols_search(value, guess_ontologies(hints_cache[src]))
                     lookup_cache[cache_key] = candidates
                     n_looked_up += 1
                     time.sleep(0.2)
@@ -341,7 +416,7 @@ def main():
     for cat, n in sorted(by_category.items(), key=lambda kv: -kv[1]):
         print(f"  {cat}: {n}")
     print(f"  {n_excluded} value(s) skipped as known non-ontology-mappable identifier fields")
-    print(f"  {n_looked_up} external registry lookup(s) performed (OLS4 / ROR)")
+    print(f"  {n_looked_up} external registry lookup(s) performed (OLS4 / ROR / SPDX)")
     print("This script only proposes candidates - review mapping_suggestions.csv and apply "
           "accepted mappings by hand-editing the relevant CV CSV's Ontology Identifier/Url columns.")
 

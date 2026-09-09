@@ -100,6 +100,16 @@ instead uses:
     candidate CURIE/label/URL to the suggestions file for a human to accept
     or reject by hand-editing the CV's `Ontology Identifier`/`Ontology Url`
     columns.
+    **Update (2026-09-09)**: this registry choice is now made per-CV by
+    `choose_registry()` rather than being a two-way OLS/ROR hardcode - a
+    third backend, SPDX's own license-list-data JSON, was added for
+    license CVs, since SPDX ids aren't indexed in OLS at all (confirmed
+    while investigating `Tool.license`'s coverage - see
+    `plans/cv_quality_pass.md` for why that number actually looked low,
+    which turned out to be a separate, already-explained cause). Adding a
+    future non-OLS registry (e.g. a NIH grant-mechanism glossary) is now a
+    matter of adding one `<registry>_search()` function and one
+    `choose_registry()` branch, not a new one-off script.
   - A small set of pure accession-number fields (`grantNumber` on every
     class - see `EXCLUDED_FIELDS` in `scripts/suggest_mappings.py`) is
     skipped without any network call: their backing CV
