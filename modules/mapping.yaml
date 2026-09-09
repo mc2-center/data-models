@@ -85,8 +85,6 @@ file:
   src: file/processLevel.csv
 - name: File Format
   src: shared/dataset_file_format.csv
-- name: File Longitudinal Event Type
-  src: file/eventType.csv
 geomxLevel1:
 - name: GeoMx DSP Assay Type
   src: geomxLevel1/assayType.csv
