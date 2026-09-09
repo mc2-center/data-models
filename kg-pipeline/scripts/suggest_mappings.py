@@ -39,6 +39,22 @@ each time a license CV needed curating. A CV whose dominant prefix is
 backend prints a warning instead of silently returning nothing, so a future
 gap like that surfaces immediately rather than being rediscovered by hand.
 
+Two more backlog-quality fixes, found by actually reading a full run's
+output rather than trusting the category counts alone:
+
+- `--confirmed-unmappable mappings/confirmed_unmappable.tsv` (the same file
+  build_triples.py already reads for tier-3 provisional IRIs) skips
+  re-querying a registry for any (table, field, value) a human already
+  checked and rejected - e.g. Publication.tumorType's "Pan-Cancer" alone
+  was producing 1000+ near-identical, already-known-wrong OLS candidates
+  every single run.
+- `search_query_for()` searches OLS using a curation_gap CV row's own
+  Description instead of its raw Attribute value when they differ - a CV
+  whose Attribute is a short code (education/ed_language.csv's ISO 639-1
+  codes: "en", "es", ...) searches OLS terribly on the bare code (matches
+  almost anything), but that row's own Description ("English", "Spanish",
+  ...) is already human-curated and sitting right there in the CV.
+
 This script never writes back into a CV CSV or SSSOM file itself: it only
 proposes. Applying a suggestion is a deliberate follow-up edit to the
 relevant modules/*/annotationProperty.csv-style CV file.
@@ -307,13 +323,16 @@ def choose_registry(hints, src=None):
 
 
 def classify(value, attr_index):
+    """Returns (category, detail, matched_row) - matched_row is the CV row
+    for "curation_gap" (the row search_query_for() should prefer searching
+    on, e.g. its Description, over the raw value itself), None otherwise."""
     norm_value = normalize(value)
     row = attr_index.get(norm_value)
     if row is not None:
         ident = (row.get("Ontology Identifier") or "").strip()
         if not ident:
-            return "curation_gap", None
-        return "already_mapped", None  # shouldn't occur if unmapped_terms.csv is fresh
+            return "curation_gap", None, row
+        return "already_mapped", None, None  # shouldn't occur if unmapped_terms.csv is fresh
 
     best_ratio, best_key = 0.0, None
     for term_norm in attr_index:
@@ -322,8 +341,29 @@ def classify(value, attr_index):
             best_ratio, best_key = ratio, term_norm
     if best_ratio >= TYPO_THRESHOLD:
         canonical = attr_index[best_key].get("Attribute")
-        return "possible_typo", {"likely_canonical_term": canonical, "similarity": round(best_ratio, 2)}
-    return "novel_term", None
+        return "possible_typo", {"likely_canonical_term": canonical, "similarity": round(best_ratio, 2)}, None
+    return "novel_term", None, None
+
+
+def search_query_for(value, matched_row):
+    """What to actually search the registry for.
+
+    For most values the raw value itself is the right query. But a
+    curation_gap CV row whose own Attribute is a short code (e.g.
+    education/ed_language.csv's ISO 639-1 codes - "en", "es", ...) searches
+    OLS terribly: a bare 2-letter string matches almost anything. That same
+    CV row's own Description ("English", "Spanish", ...) - already
+    human-curated, sitting right there in attr_index - is a far better
+    query. Only switch to it when it's meaningfully different from the raw
+    value (not just the same text repeated), so this doesn't change
+    behavior for the common case where Description is blank or redundant.
+    """
+    if not matched_row:
+        return value
+    description = (matched_row.get("Description") or "").strip()
+    if description and normalize(description) != normalize(value):
+        return description.split(".")[0][:80]
+    return value
 
 
 def main():
@@ -340,7 +380,18 @@ def main():
                          help="Classify only (curation_gap/possible_typo/novel_term); skip all network calls")
     parser.add_argument("--only-field", nargs="+", metavar="TABLE.FIELD",
                          help="Restrict to these table.field pairs, e.g. Tool.license Publication.tumorType")
+    parser.add_argument("--confirmed-unmappable", default=None,
+                         help="mappings/confirmed_unmappable.tsv (the same file build_triples.py already reads for "
+                              "tier-3 provisional IRIs) - skip re-querying a registry for any (table, field, value) "
+                              "already recorded there, instead of re-proposing the same known-hopeless candidates "
+                              "on every run")
     args = parser.parse_args()
+
+    confirmed_unmappable = {}
+    if args.confirmed_unmappable and os.path.isfile(args.confirmed_unmappable):
+        with open(args.confirmed_unmappable, newline="") as f:
+            for row in csv.DictReader(f, delimiter="\t"):
+                confirmed_unmappable[(row["table"], row["field"], normalize(row["value"]))] = row["reason"]
 
     field_srcs = build_field_srcs(args.schema, args.mapping)
     src_to_class_field = {}
@@ -361,7 +412,7 @@ def main():
     lookup_cache = {}
     spdx_licenses_cache = None
     suggestions = []
-    n_excluded = n_looked_up = 0
+    n_excluded = n_looked_up = n_confirmed_unmappable = 0
 
     for (table, field), value_counts in sorted(by_field.items()):
         if only and f"{table}.{field}" not in only:
@@ -381,6 +432,28 @@ def main():
                 })
             continue
 
+        # Values a human already checked and confirmed have no real mapping
+        # (mappings/confirmed_unmappable.tsv) get reported as such, not
+        # re-sent to a registry to produce the same rejected-on-sight
+        # candidates every run - e.g. Publication.tumorType's "Pan-Cancer"
+        # alone accounted for 1000+ near-identical OLS lookups before this.
+        remaining_value_counts = Counter()
+        for value, count in value_counts.items():
+            reason = confirmed_unmappable.get((table, field, normalize(value)))
+            if reason is not None:
+                n_confirmed_unmappable += count
+                suggestions.append({
+                    "table": table, "field": field, "value": value, "count": count,
+                    "cv_file": src, "category": "confirmed_non_mappable",
+                    "suggestion_detail": reason, "candidate_curie": "", "candidate_label": "",
+                    "candidate_url": "", "candidate_source": "",
+                })
+            else:
+                remaining_value_counts[value] = count
+        value_counts = remaining_value_counts
+        if not value_counts:
+            continue
+
         if src not in cv_rows_cache:
             cv_rows_cache[src] = load_cv_rows(args.modules_dir, src)
             attr_index_cache[src] = cv_attribute_index(cv_rows_cache[src])
@@ -393,21 +466,25 @@ def main():
                 print(f"  ! {table}.{field}: {len(value_counts) - args.max_values_per_field} more distinct "
                       f"value(s) beyond --max-values-per-field={args.max_values_per_field} not looked up")
                 break
-            category, detail = classify(value, attr_index)
+            category, detail, matched_row = classify(value, attr_index)
             candidates = []
             if not args.no_lookup and category in ("curation_gap", "novel_term"):
-                cache_key = f"{registry if registry != 'ols' else src}:{normalize(value)}"
+                # Only the OLS branch does a literal-text search that a
+                # cryptic-but-curated CV code (ISO 639 "en", etc.) confuses -
+                # SPDX/ROR already match on curated name+id fields directly.
+                query = search_query_for(value, matched_row) if registry == "ols" else value
+                cache_key = f"{registry if registry != 'ols' else src}:{normalize(query)}"
                 if cache_key in lookup_cache:
                     candidates = lookup_cache[cache_key]
                 else:
                     if registry == "ror":
-                        candidates = ror_search(value)
+                        candidates = ror_search(query)
                     elif registry == "spdx":
                         if spdx_licenses_cache is None:
                             spdx_licenses_cache = load_spdx_licenses()
-                        candidates = spdx_search(value, spdx_licenses_cache)
+                        candidates = spdx_search(query, spdx_licenses_cache)
                     else:
-                        candidates = ols_search(value, guess_ontologies(hints_cache[src]))
+                        candidates = ols_search(query, guess_ontologies(hints_cache[src]))
                     lookup_cache[cache_key] = candidates
                     n_looked_up += 1
                     time.sleep(0.2)
@@ -442,6 +519,8 @@ def main():
     for cat, n in sorted(by_category.items(), key=lambda kv: -kv[1]):
         print(f"  {cat}: {n}")
     print(f"  {n_excluded} value(s) skipped as known non-ontology-mappable identifier fields")
+    print(f"  {n_confirmed_unmappable} value(s) skipped as already confirmed non-mappable "
+          f"(mappings/confirmed_unmappable.tsv) - no registry lookup performed for these")
     print(f"  {n_looked_up} external registry lookup(s) performed (OLS4 / ROR / SPDX)")
     print("This script only proposes candidates - review mapping_suggestions.csv and apply "
           "accepted mappings by hand-editing the relevant CV CSV's Ontology Identifier/Url columns.")

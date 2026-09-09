@@ -75,7 +75,8 @@ suggest-mappings:
 		--schema schema/cckp_portal.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
 		--unmapped-csv data/harmonized/unmapped_terms.csv \
-		--out data/harmonized/mapping_suggestions.csv
+		--out data/harmonized/mapping_suggestions.csv \
+		--confirmed-unmappable mappings/confirmed_unmappable.tsv
 
 # --- Supplementary: ontology crosswalks for federation with sagebrain-model ---
 # (human review only, never consumed by harmonize.py/build_triples.py)

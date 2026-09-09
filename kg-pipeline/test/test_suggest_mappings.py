@@ -68,3 +68,32 @@ def test_spdx_search_respects_rows_limit_and_ranks_by_similarity():
 
 def test_spdx_search_empty_license_list_returns_no_hits():
     assert suggest_mappings.spdx_search("MIT", [], rows=3) == []
+
+
+def test_classify_curation_gap_returns_matched_row():
+    attr_index = {"en": {"Attribute": "en", "Description": "English", "Ontology Identifier": ""}}
+    category, detail, matched_row = suggest_mappings.classify("en", attr_index)
+    assert category == "curation_gap"
+    assert matched_row["Description"] == "English"
+
+
+def test_classify_novel_term_and_typo_return_no_matched_row():
+    attr_index = {"english": {"Attribute": "English", "Description": "", "Ontology Identifier": "NCIT:C43853"}}
+    assert suggest_mappings.classify("Zzznotarealterm", attr_index)[2] is None
+    category, detail, matched_row = suggest_mappings.classify("Englissh", attr_index)  # 1-char typo
+    assert category == "possible_typo"
+    assert matched_row is None
+
+
+def test_search_query_for_prefers_description_over_cryptic_code():
+    matched_row = {"Attribute": "en", "Description": "English"}
+    assert suggest_mappings.search_query_for("en", matched_row) == "English"
+
+
+def test_search_query_for_falls_back_to_value_when_no_useful_description():
+    assert suggest_mappings.search_query_for("Bash", None) == "Bash"
+    # Description identical (case/whitespace aside) to the value adds nothing new.
+    same_row = {"Attribute": "Bash", "Description": "bash"}
+    assert suggest_mappings.search_query_for("Bash", same_row) == "Bash"
+    empty_desc_row = {"Attribute": "Bash", "Description": ""}
+    assert suggest_mappings.search_query_for("Bash", empty_desc_row) == "Bash"

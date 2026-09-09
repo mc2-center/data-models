@@ -357,3 +357,42 @@ committed - see `data/` in `.gitignore`). Example resolved queries:
 - `Publication -[doiIri]-> https://doi.org/10.1038/...` and `Publication
   -[pubMedIdIri]-> https://pubmed.ncbi.nlm.nih.gov/...` - templated directly
   from the value, no CV curation involved.
+
+## `mapping_suggestions.csv` backlog review (2026-09-09)
+
+Reviewed a full live `make suggest-mappings` run (718 rows) term-by-term
+rather than trusting the category counts. Findings, and what changed as a
+result (see `scripts/suggest_mappings.py`):
+
+- **The single biggest source of noise wasn't a mapping-quality problem at
+  all**: `mappings/confirmed_unmappable.tsv` already recorded that
+  `Publication`/`Dataset.tumorType`'s "Pan-Cancer"/"Pan-cancer" (~1,175
+  rows alone), `Grant.theme`'s 8 confirmed terms, `Grant.grantType`'s 6,
+  and `Tool`/`Publication.accessibility`/`Tool.cost`/`Tool.license`'s "Not
+  licensed" have no real ontology equivalent - a human already checked and
+  rejected these live via OLS4/SPDX. `suggest_mappings.py` never read that
+  file, so it re-proposed the same rejected-on-sight candidates (things
+  like `Platform Development` → NCIT's "Elekta Xio", a radiation-therapy
+  brand name, purely on fuzzy text overlap) on every single run. Now
+  skipped entirely via `--confirmed-unmappable`.
+- **A real, fixable quality bug**: CVs whose `Attribute` is a short code
+  with a separately-curated `Description` (e.g. `education/ed_language.csv`'s
+  ISO 639-1 codes - `en`, `es`, ...) searched OLS on the bare code, which
+  matches almost anything (`"en"` was proposing an unrelated ovarian-tumor
+  NCIT concept). Fixed by searching on the CV row's own `Description`
+  instead when it's meaningfully different from the raw value
+  (`search_query_for()`) - `"en"` now correctly proposes NCIT's real
+  "English" concept.
+- **Negative result, worth recording so it isn't re-investigated**: for
+  `Tool.language`'s genuinely-unmapped programming languages/tools (`Go`,
+  `Julia`, `PowerShell`, `Dockerfile`, ...) and `Tool.inputFormat`/
+  `outputFormat`/`Dataset.fileFormats`'s obscure format codes (`H5AD`,
+  `MRC`, `DCD`, ...), tested restricting the OLS ontology filter to
+  exactly `swo`/`edam` (removing `FALLBACK_ONTOLOGIES` dilution) and also
+  tried broader, unrestricted, more descriptive queries (e.g. "Go
+  programming language"). Neither surfaced anything useful - OLS/SWO/EDAM
+  genuinely don't index these terms, confirming the earlier Wave 2 pass's
+  own conclusion (`reports/valid_value_descriptions_report.md`) that these
+  need domain-knowledge descriptions with no ontology mapping, not a
+  smarter query. Not worth a dedicated registry backend without a better
+  source in mind.
