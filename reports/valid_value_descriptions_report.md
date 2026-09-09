@@ -383,3 +383,30 @@ All 67 blank rows filled — programming/software language names. High/Medium-co
 All 81 blank rows filled — file/data format names. High/Medium-confidence matches mostly via NCIT and EDAM (FASTA, FASTQ, BAM, VCF, JSON, TIFF, HDF5, GTF/GFF3, maf, TSV, XML, ZIP, etc.). About 20 rows (COOL, DCC, DS_Store, FCS, FIG, FREQ, GCG, GCTx, LIF, MAP, ROUT, RPROJ, SGI, STAT, TDF, cloupe, SF, BPM, CLS, SCN, SVS, and administrative placeholders Unspecified/Pending Annotation) had no usable OLS match and were described from bioinformatics/software domain knowledge (Low confidence).
 
 **Note:** the agent assigned to `tool_language.csv` observed that CRLF, not bare `\n`, is this repo's actual native line-ending convention for individual CV term CSVs (verified separately against pre-session git history) — the earlier "normalize to `\n`" instruction given to every agent this session was based on a mistaken premise. Per user decision, the whole repo was subsequently standardized to bare `\n` in a dedicated cleanup commit (see `8c5a746`) with a new `.gitattributes` rule to enforce it going forward, so this file (and all others) now consistently use `\n`.
+
+### Wave 3 — Full-model controlled-vocabulary quality pass (ontology grounding, CDE compliance, descriptions)
+
+Full plan and implementation report: `plans/cv_quality_pass.md`. Summary
+of the description/ontology-mapping work (see that doc for the CDE-
+compliance and legacy-file-cleanup work, which isn't description backfill):
+
+| File | Rows | Description source | Confidence |
+|---|---|---|---|
+| biospecimen/fixative.csv | 8 | OLS `term` fetch on existing NCIT ids | High |
+| individual/lymphStage.csv | 24 | OLS `term` fetch on existing NCIT ids | High |
+| tool/entity_type.csv | 6 | OLS `term` fetch on existing NCIT/SIO ids | High |
+| tool/entity_role.csv | 6 of 7 | OLS `term` fetch (OBI/CRO/NCIT ids); the 7th (`credit:software`) isn't in OLS, left blank | High |
+| theme/theme_name.csv | 10 of 18 | OLS `term` fetch on existing NCIT/EDAM ids | High |
+| consortium/consortium_funding_agency.csv | 19 | OLS `term` fetch on existing NCIT ids | High |
+| tool/tool_operation.csv, tool_topic.csv, tool_data.csv | 374 (372 unique EDAM ids) | OLS `term` fetch on existing EDAM ids, batched | High |
+| tool/tool_license.csv | 321 | SPDX license-list-data's official license name (not OLS - SPDX isn't an OLS ontology) | High |
+| tool/tool_license.csv | 5 | Synthesized (BSD-style, Freeware, Not licensed, Other, Proprietary - not real SPDX ids) | Low |
+| biospecimen/specimenType.csv | 1 (re-mapped, not new) | `Analyte`: switched `SIO:001378` → exact `NCIT:C128639` for model-convention consistency | High |
+| dataCatalog/dataCatalog_data_type.csv, grant/grant_type.csv, theme/theme_name.csv (remaining 8), tool/tool_accessibility.csv, tool_cost.csv, shared/dataPermission.csv, person/chair_roles.csv, project/project_type.csv, tool/tool_documentation_type.csv, tool_download_type.csv, tool_link_type.csv, tool_type.csv, person/working_group_participation.csv | 85 | Synthesized (no real ontology equivalent - confirmed non-mappable or MC2/portal-internal categories) | Low/Medium |
+
+**Bug found and fixed, unrelated to the above**: `modules/shared/assay.csv`
+had 11 rows (added during the 2026-09-01 Data Catalog CV-realignment pass)
+with an unquoted `Notes` field containing an internal comma, breaking
+strict CSV parsing (`Expected 15 fields, saw 16/17`). Reconstructed each
+row's true `Notes` value from the over-split fields and re-quoted properly;
+verified all 103 CVs registered in `mapping.yaml` now parse cleanly.

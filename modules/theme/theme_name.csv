@@ -1,19 +1,19 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Computational Model Development,,,,FALSE,,Theme Name,,,,,,,,
-Computational Resource,,,,FALSE,,Theme Name,,,,,,,,
-Drug Resistance/Sensitivity,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C16523,http://purl.obolibrary.org/obo/NCIT_C16523,,interpretive/partial: NCIT 'Drug Resistance Process' covers only the resistance half of this compound theme
-Epigenetics,,,,FALSE,,Theme Name,,EDAM,,,EDAM:topic_3295,http://edamontology.org/topic_3295,,
-Evolution,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C16565,http://purl.obolibrary.org/obo/NCIT_C16565,,
-Experimental Model Development,,,,FALSE,,Theme Name,,,,,,,,
-Heterogeneity,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C28359,http://purl.obolibrary.org/obo/NCIT_C28359,,
-Immunotherapy,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C15262,http://purl.obolibrary.org/obo/NCIT_C15262,,
-Mechano-genetics,,,,FALSE,,Theme Name,,,,,,,,
-Mechano-resistance,,,,FALSE,,Theme Name,,,,,,,,
-Metabolism,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19536,http://purl.obolibrary.org/obo/NCIT_C19536,,interpretive: no exact 'Metabolism' label in NCIT; mapped to 'Metabolic Process'
-Metastasis,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19151,http://purl.obolibrary.org/obo/NCIT_C19151,,
-Method/Assay Development,,,,FALSE,,Theme Name,,,,,,,,
-Microenvironment,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C94498,http://purl.obolibrary.org/obo/NCIT_C94498,,interpretive: NCIT term is 'Tumor Microenvironment' - no bare 'Microenvironment' concept in NCIT; accepted given cancer-research grant context
-Oncogenic Stress,,,,FALSE,,Theme Name,,,,,,,,
-Platform Development,,,,FALSE,,Theme Name,,,,,,,,
-Tumor Progression,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C17609,http://purl.obolibrary.org/obo/NCIT_C17609,,
-Tumor-Immune,,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19095,http://purl.obolibrary.org/obo/NCIT_C19095,,interpretive: mapped to NCIT 'Tumor Immunology' (closest single-concept match)
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Computational Model Development,"Research theme focused on building computational or mathematical models to simulate, predict, or explain biological/cancer-related processes.",,,FALSE,,Theme Name,,,,,,,,
+Computational Resource,"Research theme focused on developing software tools, databases, or computational infrastructure for the cancer research community.",,,FALSE,,Theme Name,,,,,,,,
+Drug Resistance/Sensitivity,"Mechanisms, functions, activities, or processes exhibited by tumors or pathogens to withstand previously toxic drugs.",,,FALSE,,Theme Name,,NCIT,,,NCIT:C16523,http://purl.obolibrary.org/obo/NCIT_C16523,,interpretive/partial: NCIT 'Drug Resistance Process' covers only the resistance half of this compound theme
+Epigenetics,"Topic concerning the study of heritable changes, for example in gene expression or phenotype, caused by mechanisms other than changes in the DNA sequence.",,,FALSE,,Theme Name,,EDAM,,,EDAM:topic_3295,http://edamontology.org/topic_3295,,
+Evolution,The process by which organism populations change over successive generations that is influenced by gene mutation and natural selection.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C16565,http://purl.obolibrary.org/obo/NCIT_C16565,,
+Experimental Model Development,"Research theme focused on creating or characterizing new experimental (wet-lab) model systems, such as cell lines, organoids, or animal models.",,,FALSE,,Theme Name,,,,,,,,
+Heterogeneity,The quality or state of consisting of elements that are not of the same kind or nature.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C28359,http://purl.obolibrary.org/obo/NCIT_C28359,,
+Immunotherapy,Therapy designed to induce changes in a patient's immune status in order to treat disease.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C15262,http://purl.obolibrary.org/obo/NCIT_C15262,,
+Mechano-genetics,Research theme focused on how mechanical forces influence gene expression and genetic regulation within cells and tissues.,,,FALSE,,Theme Name,,,,,,,,
+Mechano-resistance,Research theme focused on how mechanical properties of cells or tissues contribute to resistance against therapies or disease progression.,,,FALSE,,Theme Name,,,,,,,,
+Metabolism,"Organic processes in a cell or organism that are necessary to sustain life, encompassing both anabolism (construction of complex molecules) and catabolism (breakdown of complex substances).",,,FALSE,,Theme Name,,NCIT,,,NCIT:C19536,http://purl.obolibrary.org/obo/NCIT_C19536,,interpretive: no exact 'Metabolism' label in NCIT; mapped to 'Metabolic Process'
+Metastasis,The spread or migration of cancer cells from one part of the body (the organ in which it first appeared) to another. The secondary tumor contains cells that are like those in the original (primary) tumor.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19151,http://purl.obolibrary.org/obo/NCIT_C19151,,
+Method/Assay Development,"Research theme focused on creating or improving experimental methods, assays, or protocols.",,,FALSE,,Theme Name,,,,,,,,
+Microenvironment,"The cellular and molecular environment immediately surrounding a tumor, including blood vessels, immune cells, fibroblasts, signaling molecules, and extracellular matrix, that interacts with and influences tumor growth and progression.",,,FALSE,,Theme Name,,NCIT,,,NCIT:C94498,http://purl.obolibrary.org/obo/NCIT_C94498,,interpretive: NCIT term is 'Tumor Microenvironment' - no bare 'Microenvironment' concept in NCIT; accepted given cancer-research grant context
+Oncogenic Stress,"Research theme focused on cellular stress responses induced by oncogenic events, such as DNA damage response or replication stress.",,,FALSE,,Theme Name,,,,,,,,
+Platform Development,Research theme focused on developing new experimental or technological platforms for cancer research.,,,FALSE,,Theme Name,,,,,,,,
+Tumor Progression,A pathologic process in which alterations at the molecular level result in a more aggressive cytologic and phenotypic profile and clinical course of a neoplasm.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C17609,http://purl.obolibrary.org/obo/NCIT_C17609,,
+Tumor-Immune,Interactions of the immune system and tumor cells.,,,FALSE,,Theme Name,,NCIT,,,NCIT:C19095,http://purl.obolibrary.org/obo/NCIT_C19095,,interpretive: mapped to NCIT 'Tumor Immunology' (closest single-concept match)

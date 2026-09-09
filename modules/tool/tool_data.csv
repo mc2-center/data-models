@@ -1,148 +1,148 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Accession,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2091,http://edamontology.org/data_2091,,Added by Brynn 06/30/2022
-Alignment,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1916,http://edamontology.org/data_1916,,Added by Brynn 06/30/2022
-Biological Model ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1085,http://edamontology.org/data_1085,,Added by Brynn 06/30/2022
-Biological Model Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1170,http://edamontology.org/data_1170,,Added by Brynn 06/30/2022
-Cell Line Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2316,http://edamontology.org/data_2316,,Added by Brynn 06/30/2022
-Cell Migration Track Image,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3449,http://edamontology.org/data_3449,,Added by Brynn 06/30/2022
-Cell Type Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2655,http://edamontology.org/data_2655,,Added by Brynn 06/30/2022
-Cell Type Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2892,http://edamontology.org/data_2892,,Added by Brynn 06/30/2022
-Cell Type Ontology ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3238,http://edamontology.org/data_3238,,Added by Brynn 06/30/2022
-Chromosome Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0987,http://edamontology.org/data_0987,,Added by Brynn 06/30/2022
-Chromosome Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0919,http://edamontology.org/data_0919,,Added by Brynn 06/30/2022
-Clustered Expression Profiles,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3768,http://edamontology.org/data_3768,,Added by Brynn 06/30/2022
-Codon Number,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2216,http://edamontology.org/data_2216,,Added by Brynn 06/30/2022
-Comparison Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0874,http://edamontology.org/data_0874,,Added by Brynn 06/30/2022
-Compound Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1086,http://edamontology.org/data_1086,,Added by Brynn 06/30/2022
-Compound Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0990,http://edamontology.org/data_0990,,Added by Brynn 06/30/2022
-Concentration,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2140,http://edamontology.org/data_2140,,Added by Brynn 06/30/2022
-Count Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3917,http://edamontology.org/data_3917,,Added by Brynn 06/30/2022
-DNA Sequence,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3494,http://edamontology.org/data_3494,,Added by Brynn 06/30/2022
-Data Index,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0955,http://edamontology.org/data_0955,,
-Data Reference,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2093,http://edamontology.org/data_2093,,Added by Brynn 06/30/2022
-Database Search Results,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2080,http://edamontology.org/data_2080,,Added by Brynn 06/30/2022
-Drug Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0993,http://edamontology.org/data_0993,,Added by Brynn 06/30/2022
-Drug Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2899,http://edamontology.org/data_2899,,Added by Brynn 06/30/2022
-Drug Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1696,http://edamontology.org/data_1696,,Added by Brynn 06/30/2022
-Electronic Health Record,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3861,http://edamontology.org/data_3861,,Added by Brynn 06/30/2022
-Enzyme Kinetics Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2024,http://edamontology.org/data_2024,,Added by Brynn 06/30/2022
-Experimental Measurement,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3108,http://edamontology.org/data_3108,,Added by Brynn 06/30/2022
-Expression Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2603,http://edamontology.org/data_2603,,Added by Brynn 06/30/2022
-GO-Term Enrichment Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3754,http://edamontology.org/data_3754,,Added by Brynn 06/30/2022
-Gene Expression Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3112,http://edamontology.org/data_3112,,Added by Brynn 06/30/2022
-Gene Expression Profile,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0928,http://edamontology.org/data_0928,,Added by Brynn 06/30/2022
-Gene ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2295,http://edamontology.org/data_2295,,Added by Brynn 06/30/2022
-Gene ID (NCBI),,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1027,http://edamontology.org/data_1027,,Added by Brynn 06/30/2022
-Gene Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1025,http://edamontology.org/data_1025,,Added by Brynn 06/30/2022
-Gene Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2299,http://edamontology.org/data_2299,,Added by Brynn 06/30/2022
-Gene Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0916,http://edamontology.org/data_0916,,Added by Brynn 06/30/2022
-Gene Symbol,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1026,http://edamontology.org/data_1026,,Added by Brynn 06/30/2022
-Gene Tree,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3271,http://edamontology.org/data_3271,,Added by Brynn 06/30/2022
-Genetic Map,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1278,http://edamontology.org/data_1278,,Added by Brynn 06/30/2022
-Genotype/Phenotype Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0920,http://edamontology.org/data_0920,,Added by Brynn 06/30/2022
-Heat Map,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1636,http://edamontology.org/data_1636,,Added by Brynn 06/30/2022
-Hidden Markov Model,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1364,http://edamontology.org/data_1364,,Added by Brynn 06/30/2022
-Hierarchy,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2589,http://edamontology.org/data_2589,,Added by Brynn 06/30/2022
-Histogram,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3905,http://edamontology.org/data_3905,,Added by Brynn 06/30/2022
-Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0842,http://edamontology.org/data_0842,,Added by Brynn 06/30/2022
-Image,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2968,http://edamontology.org/data_2968,,Added by Brynn 06/30/2022
-Image Metadata,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3546,http://edamontology.org/data_3546,,Added by Brynn 06/30/2022
-Kinetic Model,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3241,http://edamontology.org/data_3241,,Added by Brynn 06/30/2022
-MRI Image,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3442,http://edamontology.org/data_3442,,Added by Brynn 06/30/2022
-Map,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1274,http://edamontology.org/data_1274,,Added by Brynn 06/30/2022
-Map Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2019,http://edamontology.org/data_2019,,Added by Brynn 06/30/2022
-Mass Spectrometry Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2536,http://edamontology.org/data_2536,,Added by Brynn 06/30/2022
-Mass Spectrum,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0943,http://edamontology.org/data_0943,,Added by Brynn 06/30/2022
-Mathematical Model,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0950,http://edamontology.org/data_0950,,Added by Brynn 06/30/2022
-Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2082,http://edamontology.org/data_2082,,Added by Brynn 06/30/2022
-Molecular Property,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2087,http://edamontology.org/data_2087,,Added by Brynn 06/30/2022
-Molecular Simulation Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3842,http://edamontology.org/data_3842,,Added by Brynn 06/30/2022
-Molecule Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0982,http://edamontology.org/data_0982,,Added by Brynn 06/30/2022
-Molecule Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0984,http://edamontology.org/data_0984,,Added by Brynn 06/30/2022
-Morphology Parameter,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3723,http://edamontology.org/data_3723,,Added by Brynn 06/30/2022
-Mutation ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2209,http://edamontology.org/data_2209,,Added by Brynn 06/30/2022
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Accession,"A persistent (stable) and unique identifier, typically identifying an object (entry) from a database.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2091,http://edamontology.org/data_2091,,Added by Brynn 06/30/2022
+Alignment,"An alignment of molecular sequences, structures or profiles derived from them.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1916,http://edamontology.org/data_1916,,Added by Brynn 06/30/2022
+Biological Model ID,"Identifier of a mathematical model, typically an entry from a database.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1085,http://edamontology.org/data_1085,,Added by Brynn 06/30/2022
+Biological Model Name,Name of a biological (mathematical) model.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1170,http://edamontology.org/data_1170,,Added by Brynn 06/30/2022
+Cell Line Name,The name of a cell line.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2316,http://edamontology.org/data_2316,,Added by Brynn 06/30/2022
+Cell Migration Track Image,An image from a cell migration track assay.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3449,http://edamontology.org/data_3449,,Added by Brynn 06/30/2022
+Cell Type Identifier,A unique identifier of a type or group of cells.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2655,http://edamontology.org/data_2655,,Added by Brynn 06/30/2022
+Cell Type Name,The name of a type or group of cells.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2892,http://edamontology.org/data_2892,,Added by Brynn 06/30/2022
+Cell Type Ontology ID,Cell type ontology concept ID.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3238,http://edamontology.org/data_3238,,Added by Brynn 06/30/2022
+Chromosome Name,Name of a chromosome.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0987,http://edamontology.org/data_0987,,Added by Brynn 06/30/2022
+Chromosome Report,A human-readable collection of information about a specific chromosome.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0919,http://edamontology.org/data_0919,,Added by Brynn 06/30/2022
+Clustered Expression Profiles,Groupings of expression profiles according to a clustering algorithm.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3768,http://edamontology.org/data_3768,,Added by Brynn 06/30/2022
+Codon Number,"The number of a codon, for instance, at which a mutation is located.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2216,http://edamontology.org/data_2216,,Added by Brynn 06/30/2022
+Comparison Matrix,Matrix of integer or floating point numbers for amino acid or nucleotide sequence comparison.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0874,http://edamontology.org/data_0874,,Added by Brynn 06/30/2022
+Compound Identifier,Identifier of an entry from a database of chemicals.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1086,http://edamontology.org/data_1086,,Added by Brynn 06/30/2022
+Compound Name,Unique name of a chemical compound.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0990,http://edamontology.org/data_0990,,Added by Brynn 06/30/2022
+Concentration,The concentration of a chemical compound.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2140,http://edamontology.org/data_2140,,Added by Brynn 06/30/2022
+Count Matrix,"A table of unnormalized values representing summarised read counts per genomic region (e.g. gene, transcript, peak).",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3917,http://edamontology.org/data_3917,,Added by Brynn 06/30/2022
+DNA Sequence,A DNA sequence.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3494,http://edamontology.org/data_3494,,Added by Brynn 06/30/2022
+Data Index,An index of data of biological relevance.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0955,http://edamontology.org/data_0955,,
+Data Reference,"Reference to a dataset (or a cross-reference between two datasets), typically one or more entries in a biological database or ontology.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2093,http://edamontology.org/data_2093,,Added by Brynn 06/30/2022
+Database Search Results,A report of hits from searching a database of some type.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2080,http://edamontology.org/data_2080,,Added by Brynn 06/30/2022
+Drug Identifier,Identifier of a drug.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0993,http://edamontology.org/data_0993,,Added by Brynn 06/30/2022
+Drug Name,Common name of a drug.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2899,http://edamontology.org/data_2899,,Added by Brynn 06/30/2022
+Drug Report,A human-readable collection of information about a specific drug.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1696,http://edamontology.org/data_1696,,Added by Brynn 06/30/2022
+Electronic Health Record,A human-readable systematic collection of patient (or population) health information in a digital format.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3861,http://edamontology.org/data_3861,,Added by Brynn 06/30/2022
+Enzyme Kinetics Data,Data concerning chemical reaction(s) catalysed by enzyme(s).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2024,http://edamontology.org/data_2024,,Added by Brynn 06/30/2022
+Experimental Measurement,"Raw data such as measurements or other results from laboratory experiments, as generated from laboratory hardware.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3108,http://edamontology.org/data_3108,,Added by Brynn 06/30/2022
+Expression Data,"Image, hybridisation or some other data arising from a study of feature/molecule expression, typically profiling or quantification.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2603,http://edamontology.org/data_2603,,Added by Brynn 06/30/2022
+GO-Term Enrichment Data,"A ranked list of Gene Ontology concepts, each associated with a p-value, concerning or derived from the analysis of e.g. a set of genes or proteins.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3754,http://edamontology.org/data_3754,,Added by Brynn 06/30/2022
+Gene Expression Matrix,The final processed (normalised) data for a set of hybridisations in a microarray experiment.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3112,http://edamontology.org/data_3112,,Added by Brynn 06/30/2022
+Gene Expression Profile,"Data quantifying the level of expression of (typically) multiple genes, derived for example from microarray experiments.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0928,http://edamontology.org/data_0928,,Added by Brynn 06/30/2022
+Gene ID,"A unique (and typically persistent) identifier of a gene in a database, that is (typically) different to the gene name/symbol.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2295,http://edamontology.org/data_2295,,Added by Brynn 06/30/2022
+Gene ID (NCBI),An NCBI unique identifier of a gene.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1027,http://edamontology.org/data_1027,,Added by Brynn 06/30/2022
+Gene Identifier,"An identifier of a gene, such as a name/symbol or a unique identifier of a gene in a database.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1025,http://edamontology.org/data_1025,,Added by Brynn 06/30/2022
+Gene Name,"The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2299,http://edamontology.org/data_2299,,Added by Brynn 06/30/2022
+Gene Report,"A report on predicted or actual gene structure, regions which make an RNA product and features such as promoters, coding regions, splice sites etc.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0916,http://edamontology.org/data_0916,,Added by Brynn 06/30/2022
+Gene Symbol,The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1026,http://edamontology.org/data_1026,,Added by Brynn 06/30/2022
+Gene Tree,A phylogenetic tree that is an estimate of the character's phylogeny.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3271,http://edamontology.org/data_3271,,Added by Brynn 06/30/2022
+Genetic Map,"A map showing the relative positions of genetic markers in a nucleic acid sequence, based on estimation of non-physical distance such as recombination frequencies.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1278,http://edamontology.org/data_1278,,Added by Brynn 06/30/2022
+Genotype/Phenotype Report,"A human-readable collection of information about the set of genes (or allelic forms) present in an individual, organism or cell and associated with a specific physical characteristic, or a report concerning an organisms traits and phenotypes.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0920,http://edamontology.org/data_0920,,Added by Brynn 06/30/2022
+Heat Map,"A graphical 2D tabular representation of expression data, typically derived from an omics experiment. A heat map is a table where rows and columns correspond to different features and contexts (for example, cells or samples) and the cell colour represents the level of expression of a gene that...",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1636,http://edamontology.org/data_1636,,Added by Brynn 06/30/2022
+Hidden Markov Model,"A statistical Markov model of a system which is assumed to be a Markov process with unobserved (hidden) states. For example, a hidden Markov model representation of a set or alignment of sequences.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1364,http://edamontology.org/data_1364,,Added by Brynn 06/30/2022
+Hierarchy,"Raw data on a biological hierarchy, describing the hierarchy proper, hierarchy components and possibly associated annotation.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2589,http://edamontology.org/data_2589,,Added by Brynn 06/30/2022
+Histogram,"Visualization of distribution of quantitative data, e.g. expression data, by histograms, violin plots and density plots.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3905,http://edamontology.org/data_3905,,Added by Brynn 06/30/2022
+Identifier,"A text token, number or something else which identifies an entity, but which may not be persistent (stable) or unique (the same identifier may identify multiple things).",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0842,http://edamontology.org/data_0842,,Added by Brynn 06/30/2022
+Image,"Data (typically biological or biomedical) that has been rendered into an image, typically for display on screen.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2968,http://edamontology.org/data_2968,,Added by Brynn 06/30/2022
+Image Metadata,Any data concerning a specific biological or biomedical image.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3546,http://edamontology.org/data_3546,,Added by Brynn 06/30/2022
+Kinetic Model,"Mathematical model of a network, that contains biochemical kinetics.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3241,http://edamontology.org/data_3241,,Added by Brynn 06/30/2022
+MRI Image,"An imaging technique that uses magnetic fields and radiowaves to form images, typically to investigate the anatomy and physiology of the human body.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3442,http://edamontology.org/data_3442,,Added by Brynn 06/30/2022
+Map,A map of (typically one) DNA sequence annotated with positional or non-positional features.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1274,http://edamontology.org/data_1274,,Added by Brynn 06/30/2022
+Map Data,"Data describing a molecular map (genetic or physical) or a set of such maps, including various attributes of, data extracted from or derived from the analysis of them, but excluding the map(s) themselves. This includes metadata for map sets that share a common set of features which are mapped.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2019,http://edamontology.org/data_2019,,Added by Brynn 06/30/2022
+Mass Spectrometry Data,Data concerning a mass spectrometry measurement.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2536,http://edamontology.org/data_2536,,Added by Brynn 06/30/2022
+Mass Spectrum,Spectra from mass spectrometry.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0943,http://edamontology.org/data_0943,,Added by Brynn 06/30/2022
+Mathematical Model,A biological model represented in mathematical terms.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0950,http://edamontology.org/data_0950,,Added by Brynn 06/30/2022
+Matrix,An array of numerical values.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2082,http://edamontology.org/data_2082,,Added by Brynn 06/30/2022
+Molecular Property,"A report on the physical (e.g. structural) or chemical properties of molecules, or parts of a molecule.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2087,http://edamontology.org/data_2087,,Added by Brynn 06/30/2022
+Molecular Simulation Data,"Data coming from molecular simulations, computer ""experiments"" on model molecules.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3842,http://edamontology.org/data_3842,,Added by Brynn 06/30/2022
+Molecule Identifier,Name or other identifier of a molecule.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0982,http://edamontology.org/data_0982,,Added by Brynn 06/30/2022
+Molecule Name,Name of a specific molecule.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0984,http://edamontology.org/data_0984,,Added by Brynn 06/30/2022
+Morphology Parameter,"Experimentally determined parameter of the morphology of an organism, e.g. size & shape.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3723,http://edamontology.org/data_3723,,Added by Brynn 06/30/2022
+Mutation ID,A unique identifier of a specific mutation catalogued in a database.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2209,http://edamontology.org/data_2209,,Added by Brynn 06/30/2022
 Not Applicable,,,,FALSE,,Tool Data,,,,,,,,
-Nucleic Acid Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2119,http://edamontology.org/data_2119,,Added by Brynn 06/30/2022
-Nucleic Acid Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2084,http://edamontology.org/data_2084,,Added by Brynn 06/30/2022
-Nucleic Acid Sequence,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2977,http://edamontology.org/data_2977,,Added by Brynn 06/30/2022
-Ontology,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0582,http://edamontology.org/data_0582,,Added by Brynn 06/30/2022
-Ontology Concept Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0967,http://edamontology.org/data_0967,,Added by Brynn 06/30/2022
-Ontology Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2353,http://edamontology.org/data_2353,,Added by Brynn 06/30/2022
-Ontology Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2338,http://edamontology.org/data_2338,,Added by Brynn 06/30/2022
-Ontology Mapping,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3509,http://edamontology.org/data_3509,,Added by Brynn 06/30/2022
-Ontology Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1051,http://edamontology.org/data_1051,,Added by Brynn 06/30/2022
-Ontology Term,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0966,http://edamontology.org/data_0966,,Added by Brynn 06/30/2022
-Organism Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1869,http://edamontology.org/data_1869,,Added by Brynn 06/30/2022
-Organism Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2909,http://edamontology.org/data_2909,,Added by Brynn 06/30/2022
-Over-Represesntation Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3753,http://edamontology.org/data_3753,,Added by Brynn 06/30/2022
-P-Value,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1669,http://edamontology.org/data_1669,,Added by Brynn 06/30/2022
-Pair Sequence Alignment,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1381,http://edamontology.org/data_1381,,Added by Brynn 06/30/2022
-Pathway Or Network,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2600,http://edamontology.org/data_2600,,Added by Brynn 06/30/2022
-Pathway Or Network Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2984,http://edamontology.org/data_2984,,Added by Brynn 06/30/2022
-Pathway Overrepresentation Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3953,http://edamontology.org/data_3953,,Added by Brynn 06/30/2022
-Peptide Identification,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0945,http://edamontology.org/data_0945,,Added by Brynn 06/30/2022
-Peptide Property,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2979,http://edamontology.org/data_2979,,Added by Brynn 06/30/2022
-Phenotype Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3275,http://edamontology.org/data_3275,,Added by Brynn 06/30/2022
-Phylogenetic Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2523,http://edamontology.org/data_2523,,Added by Brynn 06/30/2022
-Phylogenetic Tree,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0872,http://edamontology.org/data_0872,,Added by Brynn 06/30/2022
-Plain Text,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3671,http://edamontology.org/data_3671,,Added by Brynn 06/30/2022
-Plot,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2884,http://edamontology.org/data_2884,,Added by Brynn 06/30/2022
-Position Weight Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1362,http://edamontology.org/data_1362,,Added by Brynn 06/30/2022
-Position-Specific Scoring Matrix,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2854,http://edamontology.org/data_2854,,Added by Brynn 06/30/2022
-Protein Contact Map,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1547,http://edamontology.org/data_1547,,Added by Brynn 06/30/2022
-Protein Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0989,http://edamontology.org/data_0989,,Added by Brynn 06/30/2022
-Protein Interaction Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0906,http://edamontology.org/data_0906,,Added by Brynn 06/30/2022
-Protein Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1009,http://edamontology.org/data_1009,,Added by Brynn 06/30/2022
-Protein Property,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0897,http://edamontology.org/data_0897,,Added by Brynn 06/30/2022
-Protein Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0896,http://edamontology.org/data_0896,,Added by Brynn 06/30/2022
-Protein Sequence,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2976,http://edamontology.org/data_2976,,Added by Brynn 06/30/2022
-Protein Structure Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1537,http://edamontology.org/data_1537,,Added by Brynn 06/30/2022
-Quality Control Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3914,http://edamontology.org/data_3914,,Added by Brynn 06/30/2022
-RNA Sequence,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3495,http://edamontology.org/data_3495,,Added by Brynn 06/30/2022
-Raw Image,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3424,http://edamontology.org/data_3424,,Added by Brynn 06/30/2022
-Reaction Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2978,http://edamontology.org/data_2978,,Added by Brynn 06/30/2022
-RefSeq Accession,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1098,http://edamontology.org/data_1098,,Added by Brynn 06/30/2022
-Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2048,http://edamontology.org/data_2048,,Added by Brynn 06/30/2022
-Resource Metadata,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2337,http://edamontology.org/data_2337,,Added by Brynn 06/30/2022
-Sample Annotation,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3113,http://edamontology.org/data_3113,,Added by Brynn 06/30/2022
-Sample ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3273,http://edamontology.org/data_3273,,Added by Brynn 06/30/2022
-Score,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1772,http://edamontology.org/data_1772,,Added by Brynn 06/30/2022
-Sequence,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2044,http://edamontology.org/data_2044,,Added by Brynn 06/30/2022
-Sequence Alignment,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0863,http://edamontology.org/data_0863,,Added by Brynn 06/30/2022
-Sequence Attribute,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2534,http://edamontology.org/data_2534,,Added by Brynn 06/30/2022
-Sequence Cluster,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1235,http://edamontology.org/data_1235,,Added by Brynn 06/30/2022
-Sequence Composition Plot,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2166,http://edamontology.org/data_2166,,Added by Brynn 06/30/2022
-Sequence Composition Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1261,http://edamontology.org/data_1261,,Added by Brynn 06/30/2022
-Sequence Coordinates,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2012,http://edamontology.org/data_2012,,Added by Brynn 06/30/2022
-Sequence Features,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1255,http://edamontology.org/data_1255,,Added by Brynn 11/11/2022
-Sequence Image,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2969,http://edamontology.org/data_2969,,Added by Brynn 09/23/2022
-Sequence Motif,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1353,http://edamontology.org/data_1353,,Added by Brynn 06/30/2022
-Sequence Position,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1016,http://edamontology.org/data_1016,,Added by Brynn 06/30/2022
-Sequence Property,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1254,http://edamontology.org/data_1254,,Added by Brynn 06/30/2022
-Sequence Range,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1017,http://edamontology.org/data_1017,,Added by Brynn 06/30/2022
-Sequence Record,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0849,http://edamontology.org/data_0849,,Added by Brynn 06/30/2022
-Sequence Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2955,http://edamontology.org/data_2955,,Added by Brynn 06/30/2022
-Sequence Search Results,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0857,http://edamontology.org/data_0857,,Added by Brynn 06/30/2022
-Sequence Set,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0850,http://edamontology.org/data_0850,,Added by Brynn 06/30/2022
-Sequence Signature Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0860,http://edamontology.org/data_0860,,Added by Brynn 06/30/2022
-Sequence Similarity,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1413,http://edamontology.org/data_1413,,Added by Brynn 06/30/2022
-Sequence Similarity Score,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0865,http://edamontology.org/data_0865,,Added by Brynn 06/30/2022
-Sequence Variations,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3498,http://edamontology.org/data_3498,,Added by Brynn 06/30/2022
-Simulation,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3869,http://edamontology.org/data_3869,,Added by Brynn 06/30/2022
-Small Molecule Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0962,http://edamontology.org/data_0962,,Added by Brynn 06/30/2022
-Spectrum,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3483,http://edamontology.org/data_3483,,Added by Brynn 06/30/2022
-Statistical Estimate Score,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0951,http://edamontology.org/data_0951,,Added by Brynn 06/30/2022
-Strain Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2379,http://edamontology.org/data_2379,,Added by Brynn 06/30/2022
-Strain Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1046,http://edamontology.org/data_1046,,Added by Brynn 06/30/2022
-Structure,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0883,http://edamontology.org/data_0883,,Added by Brynn 06/30/2022
-Structure Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2085,http://edamontology.org/data_2085,,Added by Brynn 06/30/2022
-Taxonomy,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3028,http://edamontology.org/data_3028,,Added by Brynn 06/30/2022
-Text Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2526,http://edamontology.org/data_2526,,Added by Brynn 06/30/2022
-Text Mining Report,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0972,http://edamontology.org/data_0972,,Added by Brynn 06/30/2022
-Topology Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3872,http://edamontology.org/data_3872,,Added by Brynn 06/30/2022
-Training Material,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3669,http://edamontology.org/data_3669,,
-Trajectory Data,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3870,http://edamontology.org/data_3870,,Added by Brynn 06/30/2022
-Transcription Factor Identifier,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1077,http://edamontology.org/data_1077,,Added by Brynn 06/30/2022
-Transcription Factor Name,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2755,http://edamontology.org/data_2755,,Added by Brynn 06/30/2022
-Vmax,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0909,http://edamontology.org/data_0909,,Added by Brynn 06/30/2022
-dbSNP ID,,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1106,http://edamontology.org/data_1106,,Added by Brynn 06/30/2022
+Nucleic Acid Identifier,Name or other identifier of a nucleic acid molecule.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2119,http://edamontology.org/data_2119,,Added by Brynn 06/30/2022
+Nucleic Acid Report,A human-readable collection of information about one or more specific nucleic acid molecules.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2084,http://edamontology.org/data_2084,,Added by Brynn 06/30/2022
+Nucleic Acid Sequence,"One or more nucleic acid sequences, possibly with associated annotation.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2977,http://edamontology.org/data_2977,,Added by Brynn 06/30/2022
+Ontology,"An ontology of biological or bioinformatics concepts and relations, a controlled vocabulary, structured glossary etc.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0582,http://edamontology.org/data_0582,,Added by Brynn 06/30/2022
+Ontology Concept Data,Data concerning or derived from a concept from a biological ontology.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0967,http://edamontology.org/data_0967,,Added by Brynn 06/30/2022
+Ontology Data,Data concerning or derived from an ontology.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2353,http://edamontology.org/data_2353,,Added by Brynn 06/30/2022
+Ontology Identifier,Any arbitrary identifier of an ontology.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2338,http://edamontology.org/data_2338,,Added by Brynn 06/30/2022
+Ontology Mapping,A mapping of supplied textual terms or phrases to ontology concepts (URIs).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3509,http://edamontology.org/data_3509,,Added by Brynn 06/30/2022
+Ontology Name,Name of an ontology of biological or bioinformatics concepts and relations.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1051,http://edamontology.org/data_1051,,Added by Brynn 06/30/2022
+Ontology Term,A term (name) from an ontology.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0966,http://edamontology.org/data_0966,,Added by Brynn 06/30/2022
+Organism Identifier,A unique identifier of a (group of) organisms.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1869,http://edamontology.org/data_1869,,Added by Brynn 06/30/2022
+Organism Name,The name of an organism (or group of organisms).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2909,http://edamontology.org/data_2909,,Added by Brynn 06/30/2022
+Over-Represesntation Data,"A ranked list of categories (usually ontology concepts), each associated with a statistical metric of over-/under-representation within the studied data.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3753,http://edamontology.org/data_3753,,Added by Brynn 06/30/2022
+P-Value,"The P-value is the probability of obtaining by random chance a result that is at least as extreme as an observed result, assuming a NULL hypothesis is true.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1669,http://edamontology.org/data_1669,,Added by Brynn 06/30/2022
+Pair Sequence Alignment,Alignment of exactly two molecular sequences.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1381,http://edamontology.org/data_1381,,Added by Brynn 06/30/2022
+Pathway Or Network,Primary data about a specific biological pathway or network (the nodes and connections within the pathway or network).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2600,http://edamontology.org/data_2600,,Added by Brynn 06/30/2022
+Pathway Or Network Report,"An informative report concerning or derived from the analysis of a biological pathway or network, such as a map (diagram) or annotation.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2984,http://edamontology.org/data_2984,,Added by Brynn 06/30/2022
+Pathway Overrepresentation Data,"A ranked list of pathways, each associated with z-score, p-value or similar, concerning or derived from the analysis of e.g. a set of genes or proteins.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3953,http://edamontology.org/data_3953,,Added by Brynn 06/30/2022
+Peptide Identification,"Protein or peptide identifications with evidence supporting the identifications, for example from comparing a peptide mass fingerprint (from mass spectrometry) to a sequence database, or the set of typical spectra one obtains when running a protein through a mass spectrometer.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0945,http://edamontology.org/data_0945,,Added by Brynn 06/30/2022
+Peptide Property,Data concerning small peptides.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2979,http://edamontology.org/data_2979,,Added by Brynn 06/30/2022
+Phenotype Name,Name of a phenotype.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3275,http://edamontology.org/data_3275,,Added by Brynn 06/30/2022
+Phylogenetic Data,"Data concerning phylogeny, typically of molecular sequences, including reports of information concerning or derived from a phylogenetic tree, or from comparing two or more phylogenetic trees.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2523,http://edamontology.org/data_2523,,Added by Brynn 06/30/2022
+Phylogenetic Tree,"The raw data (not just an image) from which a phylogenetic tree is directly generated or plotted, such as topology, lengths (in time or in expected amounts of variance) and a confidence interval for each length.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0872,http://edamontology.org/data_0872,,Added by Brynn 06/30/2022
+Plain Text,"Any free or plain text, typically for human consumption and in English. Can instantiate also as a textual search query.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3671,http://edamontology.org/data_3671,,Added by Brynn 06/30/2022
+Plot,"Biological data that has been plotted as a graph of some type, or plotting instructions for rendering such a graph.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2884,http://edamontology.org/data_2884,,Added by Brynn 06/30/2022
+Position Weight Matrix,A profile (typically representing a sequence alignment) that is weighted matrix of nucleotide (or amino acid) counts per position.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1362,http://edamontology.org/data_1362,,Added by Brynn 06/30/2022
+Position-Specific Scoring Matrix,"A simple matrix of numbers, where each value (or column of values) is derived derived from analysis of the corresponding position in a sequence alignment.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2854,http://edamontology.org/data_2854,,Added by Brynn 06/30/2022
+Protein Contact Map,An amino acid residue contact map for a protein structure.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1547,http://edamontology.org/data_1547,,Added by Brynn 06/30/2022
+Protein Identifier,Identifier of a protein.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0989,http://edamontology.org/data_0989,,Added by Brynn 06/30/2022
+Protein Interaction Data,"Data concerning the interactions (predicted or known) within or between a protein, structural domain or part of a protein. This includes intra- and inter-residue contacts and distances, as well as interactions with other proteins and non-protein entities such as nucleic acid, metal atoms, water,...",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0906,http://edamontology.org/data_0906,,Added by Brynn 06/30/2022
+Protein Name,Name of a protein.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1009,http://edamontology.org/data_1009,,Added by Brynn 06/30/2022
+Protein Property,"A report of primarily non-positional data describing intrinsic physical, chemical or other properties of a protein molecule or model.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0897,http://edamontology.org/data_0897,,Added by Brynn 06/30/2022
+Protein Report,"An informative human-readable report about one or more specific protein molecules or protein structural domains, derived from analysis of primary (sequence or structural) data.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0896,http://edamontology.org/data_0896,,Added by Brynn 06/30/2022
+Protein Sequence,"One or more protein sequences, possibly with associated annotation.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2976,http://edamontology.org/data_2976,,Added by Brynn 06/30/2022
+Protein Structure Report,A human-readable collection of information about one or more specific protein 3D structure(s) or structural domains.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1537,http://edamontology.org/data_1537,,Added by Brynn 06/30/2022
+Quality Control Report,Report of the quality control review that was made of factors involved in a procedure.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3914,http://edamontology.org/data_3914,,Added by Brynn 06/30/2022
+RNA Sequence,An RNA sequence.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3495,http://edamontology.org/data_3495,,Added by Brynn 06/30/2022
+Raw Image,Raw biological or biomedical image generated by some experimental technique.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3424,http://edamontology.org/data_3424,,Added by Brynn 06/30/2022
+Reaction Data,"Data concerning a biochemical reaction, typically data and more general annotation on the kinetics of enzyme-catalysed reaction.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2978,http://edamontology.org/data_2978,,Added by Brynn 06/30/2022
+RefSeq Accession,Accession number of a RefSeq database entry.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1098,http://edamontology.org/data_1098,,Added by Brynn 06/30/2022
+Report,"A human-readable collection of information including annotation on a biological entity or phenomena, computer-generated reports of analysis of primary data (e.g. sequence or structural), and metadata (data about primary data) or any other free (essentially unformatted) text, as distinct from the...",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2048,http://edamontology.org/data_2048,,Added by Brynn 06/30/2022
+Resource Metadata,"Data concerning or describing some core computational resource, as distinct from primary data. This includes metadata on the origin, source, history, ownership or location of some thing.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2337,http://edamontology.org/data_2337,,Added by Brynn 06/30/2022
+Sample Annotation,"Annotation on a biological sample, for example experimental factors and their values.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3113,http://edamontology.org/data_3113,,Added by Brynn 06/30/2022
+Sample ID,Name or other identifier of an entry from a biosample database.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3273,http://edamontology.org/data_3273,,Added by Brynn 06/30/2022
+Score,"A numerical value, that is some type of scored value arising for example from a prediction method.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1772,http://edamontology.org/data_1772,,Added by Brynn 06/30/2022
+Sequence,"One or more molecular sequences, possibly with associated annotation.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2044,http://edamontology.org/data_2044,,Added by Brynn 06/30/2022
+Sequence Alignment,Alignment of multiple molecular sequences.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0863,http://edamontology.org/data_0863,,Added by Brynn 06/30/2022
+Sequence Attribute,"An attribute of a molecular sequence, possibly in reference to some other sequence.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2534,http://edamontology.org/data_2534,,Added by Brynn 06/30/2022
+Sequence Cluster,A set of sequences that have been clustered or otherwise classified as belonging to a group including (typically) sequence cluster information.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1235,http://edamontology.org/data_1235,,Added by Brynn 06/30/2022
+Sequence Composition Plot,A plot of character or word composition / frequency of a molecular sequence.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2166,http://edamontology.org/data_2166,,Added by Brynn 06/30/2022
+Sequence Composition Report,A report (typically a table) on character or word composition / frequency of a molecular sequence(s).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1261,http://edamontology.org/data_1261,,Added by Brynn 06/30/2022
+Sequence Coordinates,"A position in a map (for example a genetic map), either a single position (point) or a region / interval.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2012,http://edamontology.org/data_2012,,Added by Brynn 06/30/2022
+Sequence Features,"Annotation of positional features of molecular sequence(s), i.e. that can be mapped to position(s) in the sequence.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1255,http://edamontology.org/data_1255,,Added by Brynn 11/11/2022
+Sequence Image,"Image of a molecular sequence, possibly with sequence features or properties shown.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2969,http://edamontology.org/data_2969,,Added by Brynn 09/23/2022
+Sequence Motif,Any specific or conserved pattern (typically expressed as a regular expression) in a molecular sequence.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1353,http://edamontology.org/data_1353,,Added by Brynn 06/30/2022
+Sequence Position,"A position of one or more points (base or residue) in a sequence, or part of such a specification.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1016,http://edamontology.org/data_1016,,Added by Brynn 06/30/2022
+Sequence Property,"An informative report about non-positional sequence features, typically a report on general molecular sequence properties derived from sequence analysis.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1254,http://edamontology.org/data_1254,,Added by Brynn 06/30/2022
+Sequence Range,Specification of range(s) of sequence positions.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1017,http://edamontology.org/data_1017,,Added by Brynn 06/30/2022
+Sequence Record,A molecular sequence and associated metadata.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0849,http://edamontology.org/data_0849,,Added by Brynn 06/30/2022
+Sequence Report,"An informative report of information about molecular sequence(s), including basic information (metadata), and reports generated from molecular sequence analysis, including positional features and non-positional properties.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2955,http://edamontology.org/data_2955,,Added by Brynn 06/30/2022
+Sequence Search Results,A report of sequence hits and associated data from searching a database of sequences (for example a BLAST search). This will typically include a list of scores (often with statistical evaluation) and a set of alignments for the hits.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0857,http://edamontology.org/data_0857,,Added by Brynn 06/30/2022
+Sequence Set,A collection of one or typically multiple molecular sequences (which can include derived data or metadata) that do not (typically) correspond to molecular sequence database records or entries and which (typically) are derived from some analytical method.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0850,http://edamontology.org/data_0850,,Added by Brynn 06/30/2022
+Sequence Signature Data,"Sequence signature data concerns specific or conserved pattern in molecular sequences and the classifiers used for their identification, including sequence motifs, profiles or other diagnostic element.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0860,http://edamontology.org/data_0860,,Added by Brynn 06/30/2022
+Sequence Similarity,"Sequence similarity is the similarity (expressed as a percentage) of two molecular sequences calculated from their alignment, a scoring matrix for scoring characters substitutions and penalties for gap insertion and extension.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1413,http://edamontology.org/data_1413,,Added by Brynn 06/30/2022
+Sequence Similarity Score,A value representing molecular sequence similarity.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0865,http://edamontology.org/data_0865,,Added by Brynn 06/30/2022
+Sequence Variations,Data on gene sequence variations resulting large-scale genotyping and DNA sequencing projects.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3498,http://edamontology.org/data_3498,,Added by Brynn 06/30/2022
+Simulation,"Data coming from molecular simulations, computer ""experiments"" on model molecules. Typically formed by two separated but indivisible pieces of information: topology data (static) and trajectory data (dynamic).",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3869,http://edamontology.org/data_3869,,Added by Brynn 06/30/2022
+Small Molecule Report,A human-readable collection of information about a specific chemical compound.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0962,http://edamontology.org/data_0962,,Added by Brynn 06/30/2022
+Spectrum,The spectrum of frequencies of electromagnetic radiation emitted from a molecule as a result of some spectroscopy experiment.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3483,http://edamontology.org/data_3483,,Added by Brynn 06/30/2022
+Statistical Estimate Score,A value representing estimated statistical significance of some observed data; typically sequence database hits.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0951,http://edamontology.org/data_0951,,Added by Brynn 06/30/2022
+Strain Identifier,"Identifier of a strain of an organism variant, typically a plant, virus or bacterium.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2379,http://edamontology.org/data_2379,,Added by Brynn 06/30/2022
+Strain Name,"The name of a strain of an organism variant, typically a plant, virus or bacterium.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1046,http://edamontology.org/data_1046,,Added by Brynn 06/30/2022
+Structure,3D coordinate and associated data for a macromolecular tertiary (3D) structure or part of a structure.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0883,http://edamontology.org/data_0883,,Added by Brynn 06/30/2022
+Structure Report,"A human-readable collection of information about one or more molecular tertiary (3D) structures. It might include annotation on the structure, a computer-generated report of analysis of structural data, and metadata (data about primary data) or any other free (essentially unformatted) text, as...",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2085,http://edamontology.org/data_2085,,Added by Brynn 06/30/2022
+Taxonomy,"Data concerning the classification, identification and naming of organisms.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3028,http://edamontology.org/data_3028,,Added by Brynn 06/30/2022
+Text Data,"Data concerning, extracted from, or derived from the analysis of a scientific text (or texts) such as a full text article from a scientific journal.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2526,http://edamontology.org/data_2526,,Added by Brynn 06/30/2022
+Text Mining Report,A human-readable collection of information resulting from text mining.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0972,http://edamontology.org/data_0972,,Added by Brynn 06/30/2022
+Topology Data,"Static information of a structure molecular system that is needed for a molecular simulation: the list of atoms, their non-bonded parameters for Van der Waals and electrostatic interactions, and the complete connectivity in terms of bonds, angles and dihedrals.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3872,http://edamontology.org/data_3872,,Added by Brynn 06/30/2022
+Training Material,"Learning material is a document or another digital object that is designed for learning (educational, training) purposes.",,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3669,http://edamontology.org/data_3669,,
+Trajectory Data,Dynamic information of a structure molecular system coming from a molecular simulation: XYZ 3D coordinates (sometimes with their associated velocities) for every atom along time.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_3870,http://edamontology.org/data_3870,,Added by Brynn 06/30/2022
+Transcription Factor Identifier,Identifier of a transcription factor (or a TF binding site).,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1077,http://edamontology.org/data_1077,,Added by Brynn 06/30/2022
+Transcription Factor Name,The name of a transcription factor.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_2755,http://edamontology.org/data_2755,,Added by Brynn 06/30/2022
+Vmax,The maximum initial velocity or rate of a reaction. It is the limiting velocity as substrate concentrations get very large.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_0909,http://edamontology.org/data_0909,,Added by Brynn 06/30/2022
+dbSNP ID,Identifier of a dbSNP database entry.,,,FALSE,,Tool Data,,EDAM,,,EDAM:data_1106,http://edamontology.org/data_1106,,Added by Brynn 06/30/2022
