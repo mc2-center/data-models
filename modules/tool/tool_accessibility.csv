@@ -1,4 +1,4 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Open Access,,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
-Open Access (With Restrictions),,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
-Restricted Access,,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Open Access,The resource is freely accessible to anyone without restriction.,,,FALSE,,Tool Accessibility,,EDAM,,,,,,
+Open Access (With Restrictions),"The resource is freely accessible, but with some conditions on use (e.g., registration, attribution, or non-commercial use requirements).",,,FALSE,,Tool Accessibility,,EDAM,,,,,,
+Restricted Access,"Access to the resource is limited to specific users or requires approval, such as a data use agreement or account request.",,,FALSE,,Tool Accessibility,,EDAM,,,,,,
