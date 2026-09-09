@@ -1,18 +1,46 @@
 import suggest_mappings
 
 
-def test_choose_registry_institution_src_uses_ror():
-    assert suggest_mappings.choose_registry("institution/institution_name.csv", []) == "ror"
-    assert suggest_mappings.choose_registry("institution/institution_alias.csv", ["ncit"]) == "ror"
+def test_choose_registry_reads_dominant_prefix_not_src_path():
+    # Driven by the CV's own existing curation, not a path heuristic - an
+    # institution CV with no ROR-prefixed rows yet (e.g. a brand-new one)
+    # gets no special treatment just because "institution" is in the path.
+    assert suggest_mappings.choose_registry(["ror"], src="institution/institution_name.csv") == "ror"
+    assert suggest_mappings.choose_registry(["ror"], src="grant/some_other_cv.csv") == "ror"
+    assert suggest_mappings.choose_registry([], src="institution/institution_name.csv") == "ols"
 
 
 def test_choose_registry_spdx_hint_uses_spdx():
-    assert suggest_mappings.choose_registry("tool/tool_license.csv", ["spdx"]) == "spdx"
+    assert suggest_mappings.choose_registry(["spdx"], src="tool/tool_license.csv") == "spdx"
 
 
-def test_choose_registry_defaults_to_ols():
-    assert suggest_mappings.choose_registry("shared/tumorType.csv", ["ncit"]) == "ols"
-    assert suggest_mappings.choose_registry("shared/tumorType.csv", []) == "ols"
+def test_choose_registry_defaults_to_ols_for_real_ols_ontologies():
+    assert suggest_mappings.choose_registry(["ncit"], src="shared/tumorType.csv") == "ols"
+    assert suggest_mappings.choose_registry([], src="shared/tumorType.csv") == "ols"
+
+
+def test_choose_registry_warns_on_confirmed_non_ols_prefix_with_no_backend(capsys):
+    # Simulate the exact SPDX-before-the-fix situation with a second
+    # confirmed-non-OLS prefix that (deliberately) has no registered
+    # backend, to prove the warning path actually fires instead of
+    # silently defaulting to a doomed OLS search.
+    suggest_mappings.NON_OLS_PREFIXES.add("madeupprefix")
+    try:
+        registry = suggest_mappings.choose_registry(["madeupprefix"], src="fake/fake_cv.csv")
+    finally:
+        suggest_mappings.NON_OLS_PREFIXES.discard("madeupprefix")
+    assert registry == "ols"
+    captured = capsys.readouterr()
+    assert "fake/fake_cv.csv" in captured.out
+    assert "madeupprefix" in captured.out
+    assert "PREFIX_TO_REGISTRY" in captured.out
+
+
+def test_choose_registry_no_warning_for_ordinary_unrecognized_prefix(capsys):
+    # A prefix with no prior "confirmed not in OLS" signal is just an
+    # ordinary OLS lookup, not a known-doomed one - no warning expected.
+    suggest_mappings.choose_registry(["uberon"], src="shared/tissue.csv")
+    assert capsys.readouterr().out == ""
 
 
 FAKE_SPDX_LICENSES = [

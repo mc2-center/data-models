@@ -103,6 +103,17 @@ This uses `scripts/vendor/csv_to_linkml.py`, a vendored copy of the
 dependencies) - reproducible from a clean clone, no Claude Code skill
 installation required.
 
+**`make suggest-mappings` picks its external registry per-CV automatically**
+(`scripts/suggest_mappings.py`'s `choose_registry()`), driven by whatever
+CURIE prefix a CV's own existing `Ontology Identifier` values already use
+most (`ROR:...` → the ROR API, `SPDX:...` → SPDX's own license-list-data,
+anything else → EBI OLS4). If you hit a CV backed by some other non-OLS
+registry, add one `<registry>_search()` function and one entry to
+`PREFIX_TO_REGISTRY` there - don't hand-roll a separate one-off script the
+way SPDX mappings used to be done. A prefix confirmed not to be in OLS
+(`NON_OLS_PREFIXES`) but still missing a registered backend prints a
+warning instead of silently returning nothing.
+
 ## Consuming the graph
 
 `data/rdf/` isn't one file - it's several, some independent and some layered

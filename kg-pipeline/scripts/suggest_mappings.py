@@ -21,19 +21,23 @@ situations:
                    carry an ontology mapping.
 
 For curation_gap and novel_term, this script queries an external registry for
-candidate matches, chosen per-CV by `choose_registry()` rather than hardcoded
-per field: the ROR API for CVs whose `src` path contains "institution", the
-SPDX license-list-data JSON for CVs already predominantly SPDX-coded (license
-CVs - SPDX isn't indexed in OLS at all), or the EBI OLS4 REST API otherwise.
-Every candidate is written to data/harmonized/mapping_suggestions.csv for a
-human to review.
+candidate matches, chosen per-CV by `choose_registry()` - driven entirely by
+the CURIE prefix that CV's own existing curation already uses most (e.g. a CV
+whose populated `Ontology Identifier` values are mostly `ROR:...` gets ROR;
+mostly `SPDX:...` gets SPDX's own license-list-data JSON, since SPDX isn't
+indexed in OLS at all), falling back to the EBI OLS4 REST API otherwise. Every
+candidate is written to data/harmonized/mapping_suggestions.csv for a human to
+review.
 
 Adding support for a new non-OLS registry (e.g. a NIH grant-mechanism
-glossary) means adding one `<registry>_search()` function and one branch in
-`choose_registry()`/the dispatch in `main()` - not a new one-off script, which
-is exactly the gap that motivated this: SPDX mappings were previously done by
-hand-rolling a separate throwaway script each time a license CV needed
-curating.
+glossary, once some CV starts using an `NIHGRANT:`-style prefix) means adding
+one `<registry>_search()` function and one entry to `PREFIX_TO_REGISTRY` - not
+a new one-off script, which is exactly the gap that motivated this: SPDX
+mappings were previously done by hand-rolling a separate throwaway script
+each time a license CV needed curating. A CV whose dominant prefix is
+*confirmed* not in OLS (`NON_OLS_PREFIXES`) but still has no registered
+backend prints a warning instead of silently returning nothing, so a future
+gap like that surfaces immediately rather than being rediscovered by hand.
 
 This script never writes back into a CV CSV or SSSOM file itself: it only
 proposes. Applying a suggestion is a deliberate follow-up edit to the
@@ -261,22 +265,44 @@ def spdx_search(query, spdx_licenses, rows=3):
     return hits
 
 
-def choose_registry(src, hints):
+# CURIE prefix (lowercased, as cv_ontology_hints returns it) -> the registry
+# backend that actually resolves it. Driven entirely by what the CV's own
+# existing curation already committed to (e.g. institution_name.csv already
+# has real `ROR:...` Ontology Identifier values; tool_license.csv has real
+# `SPDX:...` ones) - not a guess about the field name or file path. Adding a
+# future non-OLS registry (e.g. a NIH grant-mechanism glossary once some CV
+# starts using an `NIHGRANT:`-style prefix) is one dict entry here plus one
+# `<registry>_search()` function - no new branch, no new one-off script.
+PREFIX_TO_REGISTRY = {"ror": "ror", "spdx": "spdx"}
+
+
+def choose_registry(hints, src=None):
     """Which external registry backs candidate lookups for this CV.
 
-    "ror" for institution-name CVs (the pre-existing heuristic - matches
-    load_cv_lookup's own `src`-path check nowhere, but this script's own
-    long-standing convention). "spdx" when the CV's own existing curation
-    is predominantly SPDX-coded (license CVs). "ols" otherwise, the
-    default. To add a new non-OLS registry (e.g. a NIH grant-mechanism
-    glossary), add its own `<registry>_search()` function and one more
-    branch here, rather than a separate one-off script - `hints` (from
-    cv_ontology_hints) is already the CURIE-prefix signal to key off of.
+    Reads `hints` (from cv_ontology_hints - the CURIE prefix(es) already in
+    use among this CV's populated Ontology Identifier rows, most-common
+    first) against PREFIX_TO_REGISTRY. Falls back to "ols" when the
+    dominant prefix isn't registered there - the common, correct case for
+    any real OLS-indexed ontology (ncit, edam, obi, uberon, ...) or for a
+    CV with no existing curation yet to read a signal from.
+
+    `src` is used only for a one-line heads-up in the specific case this
+    function can actually detect as wrong: the dominant prefix is in
+    NON_OLS_PREFIXES (already confirmed, not guessed, to not exist in
+    OLS - see that constant) but has no PREFIX_TO_REGISTRY entry, meaning
+    it's about to get a search that's guaranteed to return nothing, the
+    same silent gap SPDX had before this function existed. A prefix this
+    function has no prior information about (neither confirmed-OLS nor
+    confirmed-non-OLS) is sent to OLS without a warning, same as always -
+    that's an ordinary lookup, not a known-doomed one.
     """
-    if "institution" in src.lower():
-        return "ror"
-    if hints and hints[0] == "spdx":
-        return "spdx"
+    if hints and hints[0] in PREFIX_TO_REGISTRY:
+        return PREFIX_TO_REGISTRY[hints[0]]
+    if hints and hints[0] in NON_OLS_PREFIXES:
+        print(f"  ! {src or '(unknown CV)'}: dominant existing prefix '{hints[0]}' is confirmed "
+              f"not indexed in OLS and has no PREFIX_TO_REGISTRY backend yet - falling back to OLS "
+              f"anyway, which will find nothing. Add '{hints[0]}' to PREFIX_TO_REGISTRY with a real "
+              f"<registry>_search() function.")
     return "ols"
 
 
@@ -360,7 +386,7 @@ def main():
             attr_index_cache[src] = cv_attribute_index(cv_rows_cache[src])
             hints_cache[src] = cv_ontology_hints(cv_rows_cache[src])
         attr_index = attr_index_cache[src]
-        registry = choose_registry(src, hints_cache[src])
+        registry = choose_registry(hints_cache[src], src=src)
 
         for i, (value, count) in enumerate(value_counts.most_common()):
             if i >= args.max_values_per_field:
