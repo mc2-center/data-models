@@ -35,7 +35,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
 | NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 6/6 |
-| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1100/1100 |
+| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1089/1089 |
 | OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
 | OBI | `http://purl.obolibrary.org/obo/OBI_` | 26/26 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
@@ -43,7 +43,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/34 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |
 | PRIDE | `http://purl.obolibrary.org/obo/PRIDE_` | 2/2 |
 | ROR | `https://ror.org/` | 270/270 |
-| SIO | `http://semanticscience.org/resource/SIO_` | 3/3 |
+| SIO | `http://semanticscience.org/resource/SIO_` | 2/2 |
 | SNOMED | `http://snomed.info/id/` | 10/10 |
 | SWO | `http://www.ebi.ac.uk/swo/SWO_` | 49/51 ⚠️ 2 row(s) had an unrelated Ontology Url, excluded from the vote |
 | T4FS | `http://purl.obolibrary.org/obo/T4FS_` | 1/1 |

@@ -2,10 +2,10 @@
 
 ## Summary
 - input files: 1
-- attributes read: 605
+- attributes read: 606
 - classes: 39
-- slots: 566
-- enums: 141
+- slots: 567
+- enums: 140
 - warnings: 0
 
 ## Warnings (0)
@@ -31,4 +31,4 @@ Design decisions applied automatically — verify they're right for your case.
 - 'DUOPlus5' has a conditional DependsOn on ['dataTier'] — consider encoding as a LinkML `rules:` entry if this must be enforced.
 - 'DUOPlus6' has a conditional DependsOn on ['license'] — consider encoding as a LinkML `rules:` entry if this must be enforced.
 - 'DUOPlus7' has a conditional DependsOn on ['attribution'] — consider encoding as a LinkML `rules:` entry if this must be enforced.
-- '10x Visium RNA Level 1' treated as a class (DependsOn lists 39 fields) even though IsTemplate is not set — verify this is a component, not a typo.
+- '10x Visium RNA Level 1' treated as a class (DependsOn lists 40 fields) even though IsTemplate is not set — verify this is a component, not a typo.
