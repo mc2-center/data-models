@@ -116,6 +116,30 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
     return field_lookups
 
 
+def split_field_values(raw_value, multivalued):
+    """Split a raw CCKP cell into the individual CV term(s) it holds.
+
+    Multivalued fields use LIST_DELIMITER ("|") per this pipeline's own
+    convention. Scalar (non-multivalued) fields are declared single-valued
+    in cckp_portal.linkml.yaml, but real submitted data sometimes crams
+    several comma-separated terms into one cell anyway (e.g. Tool.license:
+    "MIT, BSD-2-Clause, Not licensed"; also seen on Tool.toolEntityRole and
+    Tool.linkType) - splitting scalar values on comma is safe specifically
+    for this function's callers (both restrict it to `mc2_enum`-tagged
+    fields only): confirmed no real CV term registered anywhere in
+    modules/mapping.yaml contains a literal comma. This is deliberately
+    NOT applied to free-text scalar fields (e.g. Grant.investigator, which
+    can genuinely cram multiple names into one comma-separated string with
+    no safe way to un-guess the split - see scripts/link_scdm.py's own
+    docstring) - callers must only invoke this for enum-backed fields.
+    """
+    if multivalued:
+        return raw_value.split(LIST_DELIMITER)
+    if "," in raw_value:
+        return raw_value.split(",")
+    return [raw_value]
+
+
 def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, sssom_rows):
     lookups = field_lookups.get(cls_name, {})
     if not lookups:
@@ -135,7 +159,7 @@ def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, 
     for row_idx, row in enumerate(rows):
         for field, (enum_name, src, lookup, multivalued) in lookups.items():
             raw_value = row.get(field, "") or ""
-            values = raw_value.split(LIST_DELIMITER) if multivalued else [raw_value]
+            values = split_field_values(raw_value, multivalued)
             resolved_iris = []
             for v in values:
                 v = v.strip()

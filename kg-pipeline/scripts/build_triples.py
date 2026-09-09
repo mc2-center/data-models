@@ -33,6 +33,8 @@ import yaml
 from linkml_runtime import SchemaView
 from rdflib.namespace import RDF, XSD
 
+from harmonize import split_field_values
+
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
 # Tier-3 of the identifier policy documented in README.md ("registry CURIE" /
@@ -280,7 +282,19 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             # Level") is used for every row.get(...) lookup below; only the
             # RDF predicate local name is ever slugified via field_slug().
             raw_value = (row.get(field) or "").strip()
-            values = [v.strip() for v in raw_value.split(LIST_DELIMITER)] if meta["multivalued"] else [raw_value]
+            # split_field_values() also splits a comma-crammed scalar value
+            # (e.g. Tool.license: "MIT, BSD-2-Clause, Not licensed") into its
+            # individual terms - restricted to mc2_enum fields, since that's
+            # the only case it's confirmed safe for (see its docstring).
+            # Non-enum scalar fields (e.g. Grant.investigator) never reach
+            # the comma-splitting branch here, matching harmonize.py's own
+            # field scoping.
+            if meta["multivalued"]:
+                values = [v.strip() for v in raw_value.split(LIST_DELIMITER)]
+            elif meta["mc2_enum"]:
+                values = [v.strip() for v in split_field_values(raw_value, multivalued=False)]
+            else:
+                values = [raw_value]
             values = [v for v in values if v]
 
             predicate = CCKP[field_slug(field)]
