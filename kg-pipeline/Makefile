@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm validate update-coverage-baseline publish-portal-kg test clean \
+.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
 	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg
 
@@ -133,6 +133,24 @@ link-scdm:
 		--program-crosswalk mappings/crosswalks/consortium_to_scdm_program.tsv \
 		--out data/rdf/scdm_links.ttl
 
+# Promotes reviewed NCIT->MONDO/UBERON crosswalk rows (mappings/crosswalks/
+# tumorType_ncit_to_mondo.sssom.tsv, tissue_ncit_to_uberon.sssom.tsv) into
+# an additional linked graph - see scripts/link_ontology_crosswalk.py's
+# docstring and plans/mondo_uberon_federation_promotion.md. Own target, not
+# folded into `make all`/`triples`: both crosswalks ship reviewed=false
+# until a human curates them, so this currently mints 0 edges by design,
+# same reasoning as `link-scdm`'s consortium crosswalk above. Output stays
+# a separate file (data/rdf/ontology_crosswalk_links.ttl), matching how
+# data/rdf/scdm_links.ttl stays separate from cckp_kg.ttl rather than being
+# folded in.
+link-ontology-crosswalk:
+	$(PYTHON) scripts/link_ontology_crosswalk.py \
+		--harmonized-dir data/harmonized \
+		--mc2-schema schema/mc2_model.linkml.yaml \
+		--tumor-type-crosswalk mappings/crosswalks/tumorType_ncit_to_mondo.sssom.tsv \
+		--tissue-crosswalk mappings/crosswalks/tissue_ncit_to_uberon.sssom.tsv \
+		--out data/rdf/ontology_crosswalk_links.ttl
+
 # --- Supplementary: Data Catalog annotations (native Synapse Dataset entity
 # annotations - measurementTechnique, license, ... - distinct from the CCKP
 # portal's own Dataset schema) --- (see plans/datacatalog_kg_integration.md).
@@ -185,17 +203,20 @@ combined-kg: triples triples-datacatalog
 
 # The fullest public-portal graph: combined-kg (base + DataCatalog) with
 # scdm_links.ttl's SCDM Organization/Program/Person nodes and
-# institutionRef/consortiumRef/investigatorRef/contributorRef edges folded
-# in too, via the generic scripts/merge_ttl.py (scdm_links.ttl reuses the
-# same subject IRIs as edge sources, so this is a plain triple-set union,
-# same as combined-kg's own DataCatalog merge - see "Consuming the graph" in
+# institutionRef/consortiumRef/investigatorRef/contributorRef edges, and
+# ontology_crosswalk_links.ttl's reviewed MONDO/UBERON edges, folded in too,
+# via the generic scripts/merge_ttl.py (both overlay files reuse the same
+# subject IRIs as edge sources, so this is a plain triple-set union, same
+# as combined-kg's own DataCatalog merge - see "Consuming the graph" in
 # README.md). Own output file, data/rdf/cckp_kg_full.ttl - doesn't change
 # combined-kg's own output, so anyone relying on cckp_kg_with_datacatalog.ttl
-# NOT having SCDM's tier-2/derived-not-authoritative data mixed in is
-# unaffected. Not a dependency of `all` - same opt-in reasoning as
-# `link-scdm`/`combined-kg` above.
-full-kg: combined-kg link-scdm
+# NOT having SCDM's/the ontology crosswalk's tier-2/derived-not-authoritative
+# data mixed in is unaffected. Not a dependency of `all` - same opt-in
+# reasoning as `link-scdm`/`link-ontology-crosswalk`/`combined-kg` above.
+full-kg: combined-kg link-scdm link-ontology-crosswalk
 	$(PYTHON) scripts/merge_ttl.py --base data/rdf/cckp_kg_with_datacatalog.ttl --overlay data/rdf/scdm_links.ttl \
+		--out data/rdf/cckp_kg_full.ttl
+	$(PYTHON) scripts/merge_ttl.py --base data/rdf/cckp_kg_full.ttl --overlay data/rdf/ontology_crosswalk_links.ttl \
 		--out data/rdf/cckp_kg_full.ttl
 	$(PYTHON) scripts/validate_graph.py --shacl schema/cckp_portal.shacl.ttl data/rdf/cckp_kg_full.ttl
 
