@@ -14,7 +14,7 @@ Individual Recurrence Status,Yes/No/Unknown indicator to identify whether a pati
 Individual Vital Status,Text term that describes the patient's current vital status.,"Unspecified, Unknown, Dead, Alive, Not reported",,,"CDE:2847330, CRDC_CDE:2847330",,string,,,,,,
 Individual Residual Disease Status,A text term describing the assessment of the presence of tumor cells remaining in the body following cancer treatment.,"R0, RX, R2, R1, Not Reported",,,CRDC_CDE:15157297,,string,,,,,,
 Individual Age 90 or Older,The response to indicate whether an individual is age 90 or older.,"No, Yes",,,CRDC_CDE:15354920,,string,,,,,,
-Individual Year of Birth,The 4-digit year of the subject's birth. Note: a PHI/de-identification consideration was raised and accepted for this field -- see plans/crdc_cde_integration.md.,,,,CRDC_CDE:16032218,,number,,,,,,
+Individual Year of Birth,The 4-digit year of the subject's birth.,,,,CRDC_CDE:16032218,,number,,,,,,
 Individual Year of Death,The year of a subject's death.,,,,CRDC_CDE:15112166,,number,,,,,,
 Individual Year of Diagnosis,Numeric value to represent the year of an individual's diagnosis of cancer.,,,,CRDC_CDE:15157224,,number,,,,,,
 Individual Disease Progression or Recurrence Type,A term describing the kind of worsening or return of disease that a subject is experiencing.,"Not Reported, Unknown, Regional, Local, Biochemical, Distant, Locoregional",,,CRDC_CDE:14742451,,string,,,,,,

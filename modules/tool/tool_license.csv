@@ -1,4 +1,4 @@
-Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
 AAL,Attribution Assurance License,,,FALSE,,Tool License,,EDAM,,,SPDX:AAL,https://spdx.org/licenses/AAL.html,,
 ADSL,Amazon Digital Services License,,,FALSE,,Tool License,,EDAM,,,SPDX:ADSL,https://spdx.org/licenses/ADSL.html,,
 AFL-1.1,Academic Free License v1.1,,,FALSE,,Tool License,,EDAM,,,SPDX:AFL-1.1,https://spdx.org/licenses/AFL-1.1.html,,
@@ -44,7 +44,7 @@ BSD-4-Clause,"BSD 4-Clause ""Original"" or ""Old"" License",,,FALSE,,Tool Licens
 BSD-4-Clause-UC,BSD-4-Clause (University of California-Specific),,,FALSE,,Tool License,,EDAM,,,SPDX:BSD-4-Clause-UC,https://spdx.org/licenses/BSD-4-Clause-UC.html,,
 BSD-Protection,BSD Protection License,,,FALSE,,Tool License,,EDAM,,,SPDX:BSD-Protection,https://spdx.org/licenses/BSD-Protection.html,,
 BSD-Source-Code,BSD Source Code Attribution,,,FALSE,,Tool License,,EDAM,,,SPDX:BSD-Source-Code,https://spdx.org/licenses/BSD-Source-Code.html,,
-BSD-style,"A license similar in structure and permissiveness to the BSD license family, but not itself a registered SPDX license identifier (e.g. a project-specific or lightly modified variant).",,,FALSE,,Tool License,,,,,SPDX:BSD-style,https://spdx.org/licenses/BSD-style.html,,Added by Rancho 08-03-2021
+BSD-style,"A license similar in structure and permissiveness to the BSD license family, but not itself a registered SPDX license identifier (e.g. a project-specific or lightly modified variant).",,,FALSE,,Tool License,,,,,SPDX:BSD-style,https://spdx.org/licenses/BSD-style.html,,
 BSL-1.0,Boost Software License 1.0,,,FALSE,,Tool License,,EDAM,,,SPDX:BSL-1.0,https://spdx.org/licenses/BSL-1.0.html,,
 Bahyph,Bahyph License,,,FALSE,,Tool License,,EDAM,,,SPDX:Bahyph,https://spdx.org/licenses/Bahyph.html,,
 Barr,Barr License,,,FALSE,,Tool License,,EDAM,,,SPDX:Barr,https://spdx.org/licenses/Barr.html,,
