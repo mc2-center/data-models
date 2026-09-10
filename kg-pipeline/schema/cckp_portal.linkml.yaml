@@ -46,6 +46,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   cckp: https://w3id.org/mc2-center/cckp-portal/
   mc2: https://w3id.org/mc2-center/mc2-model/
+  schema: https://schema.org/
 default_prefix: cckp
 default_range: string
 imports:
@@ -69,6 +70,8 @@ slots:
 classes:
   Dataset:
     description: A CCKP Dataset record (DatasetView, syn21897968).
+    exact_mappings:
+      - https://schema.org/Dataset
     tree_root: true
     slots:
       - grantNumber
@@ -158,6 +161,8 @@ classes:
 
   Publication:
     description: A CCKP Publication record (PublicationView, syn21868591).
+    exact_mappings:
+      - https://schema.org/ScholarlyArticle
     tree_root: true
     slots:
       - grantNumber
@@ -241,6 +246,8 @@ classes:
 
   Tool:
     description: A CCKP Tool record (ToolView, syn26127427).
+    exact_mappings:
+      - https://schema.org/SoftwareApplication
     tree_root: true
     slots:
       - grantNumber
@@ -410,6 +417,8 @@ classes:
 
   Grant:
     description: A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes.
+    exact_mappings:
+      - https://schema.org/MonetaryGrant
     tree_root: true
     slots:
       - grantNumber
@@ -493,6 +502,8 @@ classes:
 
   EducationalResource:
     description: A CCKP Educational Resource record (EducationalResource, syn51497305).
+    close_mappings:
+      - https://schema.org/LearningResource
     tree_root: true
     slots:
       - grantNumber
