@@ -57,14 +57,44 @@ def test_build_organization_crosswalk_raises_on_id_collision(tmp_path):
         crosswalk_scdm.build_organization_crosswalk(str(institution_csv), None)
 
 
-def test_build_program_crosswalk_ships_unreviewed(tmp_path):
-    consortium_csv = tmp_path / "consortium_name.csv"
-    write_csv(consortium_csv, INSTITUTION_HEADER, [
-        ["HTAN", "", "", "", "FALSE", "", "Consortium Name", "", "Sage", "", "", "NCIT:C181842",
-         "http://purl.obolibrary.org/obo/NCIT_C181842", "", ""],
-    ])
+def consortium_id_row(program_id, acronym):
+    # modules/consortium/consortium_id.csv's real row shape (verified
+    # against the live file): Attribute is already the program.<slug> id,
+    # Parent is "Program Id", Source is "Sage", and the bare acronym real
+    # CCKP `consortium` values store lives in Notes - NCIt Code is blank
+    # for every row.
+    return [program_id, "", "", "", "FALSE", "", "Program Id", "", "Sage", "", "", "", "", "", acronym]
+
+
+def test_build_program_crosswalk_reads_program_id_from_attribute_and_acronym_from_notes(tmp_path):
+    consortium_csv = tmp_path / "consortium_id.csv"
+    write_csv(consortium_csv, INSTITUTION_HEADER, [consortium_id_row("program.htan", "HTAN")])
     rows = crosswalk_scdm.build_program_crosswalk(str(consortium_csv))
     assert rows == [{
         "consortium_name": "HTAN", "scdm_program_id": "program.htan", "scdm_name": "HTAN",
         "scdm_description": "", "scdm_status": "", "scdm_funding_source": "", "reviewed": "false",
     }]
+
+
+def test_build_program_crosswalk_skips_rows_without_acronym(tmp_path):
+    consortium_csv = tmp_path / "consortium_id.csv"
+    write_csv(consortium_csv, INSTITUTION_HEADER, [consortium_id_row("program.htan", "")])
+    assert crosswalk_scdm.build_program_crosswalk(str(consortium_csv)) == []
+
+
+def test_build_program_crosswalk_preserves_curated_row_on_rerun(tmp_path):
+    consortium_csv = tmp_path / "consortium_id.csv"
+    write_csv(consortium_csv, INSTITUTION_HEADER, [consortium_id_row("program.htan", "HTAN")])
+    curated = {
+        "program.htan": {
+            "consortium_name": "HTAN", "scdm_program_id": "program.htan", "scdm_name": "HTAN",
+            "scdm_description": "Human Tumor Atlas Network", "scdm_status": "active",
+            "scdm_funding_source": "National Cancer Institute", "reviewed": "true",
+        },
+    }
+    rows = crosswalk_scdm.build_program_crosswalk(str(consortium_csv), existing_rows=curated)
+    assert rows == [curated["program.htan"]]
+
+
+def test_load_existing_program_rows_missing_file_returns_empty(tmp_path):
+    assert crosswalk_scdm.load_existing_program_rows(str(tmp_path / "nope.tsv")) == {}

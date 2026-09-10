@@ -102,7 +102,7 @@ crosswalk-scdm:
 	$(PYTHON) scripts/crosswalk_scdm.py \
 		--institution-cv $(MODULES_DIR)/institution/institution_name.csv \
 		--institution-alias-cv $(MODULES_DIR)/institution/institution_alias.csv \
-		--consortium-cv $(MODULES_DIR)/consortium/consortium_name.csv \
+		--consortium-cv $(MODULES_DIR)/consortium/consortium_id.csv \
 		--organization-out mappings/crosswalks/institution_to_scdm_organization.tsv \
 		--program-out mappings/crosswalks/consortium_to_scdm_program.tsv
 
