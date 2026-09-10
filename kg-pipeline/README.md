@@ -70,12 +70,13 @@ make sagecdm-schema        # regenerate schema/sagecdm.ttl from schema/vendor/sa
 make crosswalk-scdm        # institution/consortium -> SCDM Organization/Program crosswalks
 make triples               # build RDF -> data/rdf/<Table>.ttl + data/rdf/cckp_kg.ttl
 make link-scdm             # link the CCKP graph to SCDM Organization/Program/Person -> data/rdf/scdm_links.ttl
+make link-ontology-crosswalk # promote reviewed NCIT->MONDO/UBERON crosswalk rows -> data/rdf/ontology_crosswalk_links.ttl
 make extract-datacatalog   # pull Data Catalog annotations from native Synapse Dataset entities -> data/raw/
 make harmonize-datacatalog # resolve Data Catalog controlled-vocabulary values -> data/harmonized/datacatalog/
 make triples-datacatalog   # build RDF -> data/rdf/DataCatalog.ttl (merges onto existing cckp:Dataset subjects)
 make merge-datacatalog     # fold DataCatalog.ttl into cckp_kg.ttl IN PLACE (dropped by the next `make triples`)
 make combined-kg           # triples + triples-datacatalog, merged into their own data/rdf/cckp_kg_with_datacatalog.ttl
-make full-kg               # combined-kg + link-scdm, merged into data/rdf/cckp_kg_full.ttl (the fullest graph)
+make full-kg               # combined-kg + link-scdm + link-ontology-crosswalk, merged into data/rdf/cckp_kg_full.ttl (the fullest graph)
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -124,20 +125,24 @@ on top of each other. Which one to load depends on what you need:
 | Just one entity type (e.g. only Datasets) | `Dataset.ttl` (or `Publication`/`Tool`/`Grant`/`EducationalResource.ttl`) | `make triples` |
 | The 5 CCKP portal tables as one graph, nothing else | `cckp_kg.ttl` | `make triples` |
 | ...plus native Synapse Dataset-entity annotations (`measurementTechnique`, `license`, `creator`, ...) | `cckp_kg_with_datacatalog.ttl` | `make combined-kg` |
-| ...plus SCDM Organization/Program federation links | `cckp_kg_full.ttl` | `make full-kg` |
+| ...plus SCDM Organization/Program federation links and reviewed MONDO/UBERON crosswalk edges | `cckp_kg_full.ttl` | `make full-kg` |
 | Only the SCDM federation layer itself, to reason about separately | `scdm_links.ttl` | `make link-scdm` |
+| Only the reviewed MONDO/UBERON crosswalk edges, to reason about separately | `ontology_crosswalk_links.ttl` | `make link-ontology-crosswalk` |
 | The schema alone (classes/properties, no instance data) | `schema/mc2_model.ttl` + `schema/cckp_portal.ttl` | `make schema` |
 
 **Why so many files instead of one.** Some of this is genuine subsetting
 (`cckp_kg.ttl` is just the 5 class files concatenated - nothing new
-asserted). Some is deliberate provenance separation: `DataCatalog.ttl` and
-`scdm_links.ttl` both reuse the *same* subject IRIs as `cckp_kg.ttl` (a
-`Dataset`/`Grant`/etc. is the same node in every file), so they combine by
-simple triple-set union - no join logic needed - but each stays its own file
-by default because it's a different trust tier (DataCatalog: same subjects,
-different upstream source, not yet broadly verified; scdm_links: this
-pipeline's own derived/provisional read of SCDM, not an authoritative SCDM
-data source). `combined-kg`/`full-kg` exist so you don't have to do that
+asserted). Some is deliberate provenance separation: `DataCatalog.ttl`,
+`scdm_links.ttl`, and `ontology_crosswalk_links.ttl` all reuse the *same*
+subject IRIs as `cckp_kg.ttl` (a `Dataset`/`Grant`/etc. is the same node in
+every file), so they combine by simple triple-set union - no join logic
+needed - but each stays its own file by default because it's a different
+trust tier (DataCatalog: same subjects, different upstream source, not yet
+broadly verified; scdm_links: this pipeline's own derived/provisional read
+of SCDM, not an authoritative SCDM data source; ontology_crosswalk_links:
+NCIT->MONDO/UBERON crosswalk hits gated on a human `reviewed=true` flip, not
+this pipeline's own primary harmonization anchor). `combined-kg`/`full-kg`
+exist so you don't have to do that
 union yourself if you just want everything: they rebuild their inputs fresh
 and merge them into their own separate output file, rather than mutating
 `cckp_kg.ttl` in place (that in-place mutation is what `merge-datacatalog`
@@ -166,7 +171,7 @@ stages" below for what it is and how to build it.
 ## Additional pipeline stages
 
 Beyond the core extract → harmonize → map-to-RDF → validate flow above,
-this pipeline has three optional stages, each with its own `make` targets
+this pipeline has four optional stages, each with its own `make` targets
 (shown in "Running" above) and its own design-rationale doc:
 
 - **Data Catalog** (native Synapse Dataset-entity annotations - `license`,
@@ -178,6 +183,14 @@ this pipeline has three optional stages, each with its own `make` targets
   `Publication`/`Tool` institution and consortium values to cross-portal
   `sagecdm:Organization`/`Program`/`Person` entities. See
   [`plans/scdm_alignment.md`](../plans/scdm_alignment.md).
+- **MONDO/UBERON crosswalk promotion**: adds `cckp:tumorTypeMondoTerm`/
+  `cckp:tissueUberonTerm` edges alongside the existing NCIT-anchored
+  `cckp:tumorTypeTerm`/`cckp:tissueTerm` edges, for every harmonized value
+  whose `mappings/crosswalks/*_ncit_to_mondo|uberon.sssom.tsv` row has been
+  human-flipped to `reviewed=true` (default `false` - see
+  `scripts/crosswalk_ontology.py`'s docstring). Additive only, never
+  replacing the NCIT edge. See
+  [`plans/mondo_uberon_federation_promotion.md`](../plans/mondo_uberon_federation_promotion.md).
 - **MC2 assay-metadata KG** (biospecimen/individual/model/sequencing/
   imaging): a separate, access-controlled stage linking MC2's
   assay/subject-level modules into
@@ -232,8 +245,18 @@ kg-pipeline/
     sagecdm.ttl               - generated via `make sagecdm-schema`
   mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
   mappings/crosswalks/*.sssom.tsv - supplementary MONDO/UBERON federation
-                                crosswalks (generated, committed, human-review
-                                only - never consumed by harmonize.py)
+                                crosswalks (generated, committed, never
+                                consumed by harmonize.py). Ships a `reviewed`
+                                column (default `false`, preserved across
+                                regeneration) - only `tumorType_ncit_to_mondo`
+                                and `tissue_ncit_to_uberon` are actually
+                                consumed once reviewed=true, by
+                                `scripts/link_ontology_crosswalk.py`
+                                (`make link-ontology-crosswalk`);
+                                `diseaseType`/`diseaseStatus_ncit_to_mondo`
+                                stay committed but unconsumed - no CCKP
+                                portal field carries those two attributes
+                                (see that script's docstring).
   mappings/crosswalks/institution_to_scdm_organization.tsv - deterministic,
                                 no review needed (see "Additional pipeline
                                 stages" above)
@@ -260,13 +283,16 @@ kg-pipeline/
     link_sagebrain.py            - MC2 assay-metadata KG: sagebrain property links
     crosswalk_scdm.py            - institution/consortium -> SCDM crosswalks (make crosswalk-scdm)
     link_scdm.py                  - SCDM Organization/Program/Person links (make link-scdm)
+    link_ontology_crosswalk.py    - promotes reviewed MONDO/UBERON crosswalk rows into edges (make link-ontology-crosswalk)
     extract_datacatalog.py        - Data Catalog: native Dataset-entity annotations (make extract-datacatalog)
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
   data/                        - gitignored: raw/, harmonized/, rdf/ (rdf/ includes
                                 scdm_links.ttl once `make link-scdm` has been run,
-                                DataCatalog.ttl once `make triples-datacatalog` has)
+                                ontology_crosswalk_links.ttl once `make
+                                link-ontology-crosswalk` has, DataCatalog.ttl
+                                once `make triples-datacatalog` has)
   data/harmonized/datacatalog/ - Data Catalog's own harmonize --out-dir, kept
                                 separate from data/harmonized/'s own
                                 unmapped_terms.csv (see "Additional pipeline

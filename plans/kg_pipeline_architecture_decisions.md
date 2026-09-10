@@ -231,6 +231,71 @@ confirmed by isolating and grepping for `skos:exactMatch schema:`/
 here, and not fixed as part of this change - worth knowing before assuming
 any future `cckp_portal.ttl` diff represents real schema drift.
 
+## MONDO/UBERON crosswalk promotion
+
+Second initiative from the same SageBrain-doc review (2026-09-10) -
+`plans/mondo_uberon_federation_promotion.md`, now implemented. The
+NCIT->MONDO/UBERON crosswalks below (see "Ontology crosswalks for
+federation, kept separate from harmonization" under "Interoperating with
+sagebrain-model") were previously human-review-only proposal files with no
+consumer at all. Two changes:
+
+1. `scripts/crosswalk_ontology.py`'s writer now emits a `reviewed` column
+   (default `"false"`, exact same convention as
+   `mappings/crosswalks/consortium_to_scdm_program.tsv`/
+   `scripts/crosswalk_scdm.py`) - `load_existing_reviewed()` preserves a
+   human's prior `true` flips across a re-run rather than resetting them,
+   keyed on `subject_id` (the source NCIT CURIE), which is stable across
+   re-runs unlike row order.
+2. New `scripts/link_ontology_crosswalk.py` (`make link-ontology-crosswalk`)
+   reads only `reviewed=="true"` rows and mints an *additional* edge -
+   `cckp:tumorTypeMondoTerm` / `cckp:tissueUberonTerm` - alongside (never
+   replacing) the NCIT-anchored `cckp:tumorTypeTerm`/`cckp:tissueTerm` edge
+   `build_triples.py` already emits. Output is its own file,
+   `data/rdf/ontology_crosswalk_links.ttl`, folded into `make full-kg`
+   alongside `scdm_links.ttl` - never merged into `cckp_kg.ttl` in place.
+
+**Real, surfaced scope-narrowing found during implementation:** the plan
+originally scoped 4 crosswalk files (`tumorType`/`diseaseType`/
+`diseaseStatus_ncit_to_mondo`, `tissue_ncit_to_uberon`). Checking
+`schema/cckp_portal.linkml.yaml` and `modules/mapping.yaml` directly showed
+"Disease Type" and "Last Known Disease Status" are MC2
+individual/biospecimen-level attributes, not fields on any of the 5 CCKP
+portal classes - and not extracted by the access-controlled mc2-assay stage
+either (confirmed by this same doc's own earlier finding: `File View` only
+carries a `Biospecimen Key` foreign key, not the specimen's own detail
+fields). No `cckp:diseaseTypeTerm`/`diseaseStatusTerm` edge exists anywhere
+in this pipeline's output to attach a MONDO edge to. Only `tumorType` and
+`tissue` (both real `Dataset`/`Publication` attributes) are wired up in
+`link_ontology_crosswalk.py`; the other two crosswalks stay committed,
+`reviewed` column and all, for whenever a future stage extracts those
+fields - `link_ontology_crosswalk.py`'s own run output prints them under
+"Not yet consumable" rather than silently ignoring them.
+
+**Also found and left as-is (out of scope for this promotion):** one row in
+`tissue_ncit_to_uberon.sssom.tsv` (`Peripheral Blood Mononuclear Cell` ->
+`CL:2000001`) resolved to CL, not UBERON - `crosswalk_ontology.py`'s own
+target-ontology search can return the best available OLS hit outside the
+nominal target ontology. `schema/mc2_model.linkml.yaml`'s `prefixes:` block
+has no `CL:` entry (only `MONDO:`/`UBERON:`/`NCIT:`/...), so
+`build_triples.py`'s `expand_curie_or_url()` can't expand it and this one
+row is silently skipped by that function's existing "unexpandable - skip
+rather than emit a broken IRI" behavior - not a bug, but worth knowing
+before assuming 100% of a `reviewed=true` tissue crosswalk row always
+produces an edge.
+
+**Verified against real, live harmonized data** (not just the fixture-based
+test suite): with every crosswalk row still `reviewed=false` (the shipped
+default), `make link-ontology-crosswalk` correctly produces 0 edges. Manually
+flipping 5 rows in each of `tumorType_ncit_to_mondo.sssom.tsv`/
+`tissue_ncit_to_uberon.sssom.tsv` to `reviewed=true` and re-running against
+the real `data/harmonized/` tree produced 161 real triples (133
+`tumorTypeMondoTerm` edges across 129 Dataset/Publication rows, 28
+`tissueUberonTerm` edges across 27 rows) resolving to real MONDO/UBERON
+IRIs on real minted subject IRIs (e.g.
+`.../data/Dataset/syn24985098 -> MONDO_0018874`) - then reverted before
+committing, since no row has actually been human-reviewed yet.
+
 ## Interoperating with sagebrain-model
 
 [sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model) is a
