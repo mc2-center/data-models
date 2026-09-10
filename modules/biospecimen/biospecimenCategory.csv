@@ -1,5 +1,4 @@
 "Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
-"Analyte","The sample or material being subjected to analysis.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C128639","http://purl.obolibrary.org/obo/NCIT_C128639","C128639",""
 "Ascites","A biospecimen of ascitic fluid.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C159203","http://purl.obolibrary.org/obo/NCIT_C159203","C159203",""
 "Blood","A small volume of blood removed for testing or storage.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C17610","http://purl.obolibrary.org/obo/NCIT_C17610","C17610",""
 "Bone Marrow","A biological sample containing components collected from bone marrow of an experimental subject.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C164009","http://purl.obolibrary.org/obo/NCIT_C164009","C164009",""
@@ -10,3 +9,5 @@
 "Stool","Portion of semisolid bodily waste discharged through the anus.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","UBERON:0001988","http://purl.obolibrary.org/obo/UBERON_0001988","",""
 "Tissue","A piece of tissue removed from an organism for examination, analysis, or propagation.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C19697","http://purl.obolibrary.org/obo/NCIT_C19697","C19697",""
 "Urine","A biospecimen obtained from urine.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C189126","http://purl.obolibrary.org/obo/NCIT_C189126","C189126",""
+"Not Reported","Not provided or available.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biospecimen Type Category","","CDS v5.0.4/Sample-sample_type","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""

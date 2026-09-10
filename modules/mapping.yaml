@@ -1,4 +1,6 @@
 biospecimen:
+- name: Biospecimen Type Category
+  src: biospecimen/biospecimenCategory.csv
 - name: Biospecimen Type
   src: biospecimen/specimenType.csv
 - name: Biospecimen Composition
