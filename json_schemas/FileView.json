@@ -1351,8 +1351,15 @@
     },
     "BiospecimenStain": {
       "description": "Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.",
-      "title": "Biospecimen Stain",
-      "type": "string"
+      "enum": [
+        "H&E",
+        "IHC",
+        "Insituhybridization",
+        "MIHC",
+        "Other",
+        "Wright-Giemsa"
+      ],
+      "title": "Biospecimen Stain"
     },
     "BiospecimenTaxonomyID": {
       "description": "A label provided by the NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/) that uniquely identifies the species or other taxonomic group from which the biospecimen originates (e.g. 9606 for Homo sapiens). Companion formal identifier to Biospecimen Species; reference-validated, not a fixed list.",
@@ -2628,16 +2635,23 @@
       "enum": [
         "Ascites",
         "Blood",
+        "BodyFluidorSubstance",
         "BoneMarrow",
+        "CellLine",
         "Cells",
-        "Fluids",
+        "CentralNervousSystem",
+        "DNA",
         "MouthRinse",
         "NotReported",
+        "RNA",
+        "Saliva",
+        "Skin",
         "Sputum",
         "Stool",
         "Tissue",
         "Unknown",
-        "Urine"
+        "Urine",
+        "Xenograft"
       ],
       "title": "Biospecimen Type Category"
     },
@@ -2843,9 +2857,9 @@
     "FileDataChecksumType": {
       "description": "The method by which the file checksum was calculated.",
       "enum": [
-        "SHA-1",
-        "SHA-256",
-        "SHA-512"
+        "Md5sum",
+        "Sha1",
+        "Sha256"
       ],
       "title": "File Data Checksum Type"
     },
@@ -4197,26 +4211,31 @@
       "items": {
         "enum": [
           "3-DimensionalConformalRadiationTherapy",
+          "AblationTherapy",
           "AllogeneicHematopoieticStemCellTransplantation",
           "AutologousStemCellTransplantation",
           "Brachytherapy",
           "CellularTherapy",
           "Chemotherapy",
           "ConcurrentChemoradiation",
+          "ConditioningTherapy",
           "Control",
           "ConventionalRadiotherapy",
           "ElectronBeamRadiationTherapy",
           "ExternalBeamRadiationTherapy",
           "High-DoseRateBrachytherapy",
           "HormoneTherapy",
+          "ImmunosuppressiveTherapy/GVHDProphylaxisforTransplant",
           "Immunotherapy",
           "Intensity-ModulatedRadiationTherapy",
           "Low-DoseRateBrachytherapy",
           "NotReported",
+          "OncolyticVirusTherapy",
           "OrganTransplantation",
           "PalliativeCare",
           "Pharmacotherapy",
           "PhotonBeamRadiationTherapy",
+          "Post-TransplantSalvageTherapy",
           "ProtonBeamRadiationTherapy",
           "RadiationTherapy",
           "RadiofrequencyAblation",
@@ -4226,7 +4245,9 @@
           "StereotacticRadiosurgery",
           "SurgicalProcedure",
           "TargetedMolecularTherapy",
-          "Unknown"
+          "TargetedTherapy",
+          "Unknown",
+          "VaccineTherapy"
         ],
         "type": "string"
       },

@@ -1532,6 +1532,7 @@ slots:
     description: Any of the various methods that use a dye, reagent, or other material for producing coloration
       in tissues or microorganisms for microscopic examination.
     required: true
+    range: Biospecimen Stain Enum
     annotations:
       cde_id: '8120269'
   Biospecimen Timepoint Offset:
@@ -4105,13 +4106,29 @@ enums:
       Cells:
         description: A biospecimen comprised of purified or partially-purified cells.
         meaning: NCIT:C192998
-      Fluids:
-        description: A biospecimen that consists of a body fluid.
-        meaning: NCIT:C204466
+      Body Fluid or Substance:
+        description: Material produced by living organisms; a necessary constituent of, or product of,
+          an organismal process.
+        meaning: NCIT:C13236
+      Cell Line:
+        description: A permanently established cell culture that will proliferate indefinitely given appropriate
+          fresh medium and space.
+        meaning: NCIT:C16403
+      Central Nervous System:
+        description: The part of the nervous system that consists of the brain, spinal cord, and meninges.
+        meaning: NCIT:C12438
       Mouth Rinse:
         description: A sample consisting of biological material from the buccal cavity, collected by introducing
           a solution into the mouth, swishing, and collecting the rinse.
         meaning: NCIT:C198712
+      Saliva:
+        description: The watery fluid in the mouth produced by the salivary glands that moistens food
+          to aid digestion and helps protect the mouth against infection.
+        meaning: NCIT:C13275
+      Skin:
+        description: An organ that constitutes the external surface of the body, consisting of the epidermis,
+          dermis, and skin appendages.
+        meaning: NCIT:C12470
       Sputum:
         description: A respiratory biospecimen obtained via expectoration.
         meaning: NCIT:C189124
@@ -4124,6 +4141,15 @@ enums:
       Urine:
         description: A biospecimen obtained from urine.
         meaning: NCIT:C189126
+      RNA:
+        description: A biospecimen consisting of isolated or enriched ribonucleic acid (RNA).
+        meaning: NCIT:C198568
+      DNA:
+        description: A biospecimen consisting of extracted deoxyribonucleic acid (DNA).
+        meaning: NCIT:C449
+      Xenograft:
+        description: A biospecimen derived from the culturing of a derived cell line in a non-human organism.
+        meaning: NCIT:C156443
       Not Reported:
         description: Not provided or available.
         meaning: NCIT:C43234
@@ -5872,6 +5898,29 @@ enums:
       Xenograft:
         description: A biospecimen derived from the culturing of a derived cell line in a non-human organism.
         meaning: NCIT:C156443
+  Biospecimen Stain Enum:
+    permissible_values:
+      H&E:
+        description: 'Hematoxylin-and-eosin staining: a routine staining procedure of tissue sections
+          using two dyes to stain the nucleus and the cytoplasm/connective tissue separately.'
+        meaning: NCIT:C23011
+      IHC:
+        description: Immunohistochemical staining that visualizes antigens via sequential application
+          of a primary antibody, a secondary antibody, and a chromogenic enzyme complex.
+        meaning: NCIT:C23020
+      In situ hybridization:
+        description: Use of a DNA or RNA probe to detect the presence of complementary sequences in chromosomes
+      mIHC:
+        description: A method that enables simultaneous detection of multiple biomarkers on a single tissue
+          section using immunohistochemistry techniques.
+        meaning: NCIT:C181927
+      Other:
+        description: Different than the one(s) previously specified or mentioned.
+        meaning: NCIT:C17649
+      Wright-Giemsa:
+        description: A polychromatic stain that permits differentiation of cells present in hematopoietic
+          tissues and demonstration of certain microorganisms.
+        meaning: NCIT:C23041
   Biospecimen Incidence Type Enum:
     permissible_values:
       Primary:
@@ -11293,9 +11342,9 @@ enums:
       Nanotechnology: null
   File Data Checksum Type Enum:
     permissible_values:
-      SHA-1: null
-      SHA-256: null
-      SHA-512: null
+      md5sum: null
+      sha1: null
+      sha256: null
   File Data Compression Status Enum:
     permissible_values:
       Unknown: null
@@ -13309,6 +13358,18 @@ enums:
       DNBSEQ-T7:
         description: The DNBSEQ-T7 is a model type of the BGISEQ sequencing library platform.
         meaning: GENEPIO:0100147
+      Affymetrix SNP 6.0:
+        description: A high-density microarray platform manufactured by Affymetrix for genome-wide detection
+          of single nucleotide polymorphisms and copy number variation.
+        meaning: NCIT:C202277
+      GeneChip U133 Plus 2.0:
+        description: A gene expression microarray manufactured by Affymetrix covering over 47000 transcripts
+          on the human genome.
+        meaning: NCIT:C206467
+      GeneChip U133A:
+        description: A gene expression microarray manufactured by Affymetrix covering a subset of well-characterized
+          human genes.
+        meaning: NCIT:C206468
       GridION:
         description: A DNA sequencer manufactured by Oxford Nanopore Technologies that can run and analyze
           up to five individual flow cells, producing up to 150 Gb of data per run, using real-time nanopore
@@ -13318,6 +13379,12 @@ enums:
         description: The HeliScope is a DNA sequencer manufactured by Helicos BioSciences that performs
           single-molecule sequencing of unamplified DNA templates using reversible-terminator chemistry.
         meaning: OBI:0000717
+      Illumina Human Methylation 27:
+        description: A DNA methylation microarray manufactured by Illumina interrogating approximately
+          27000 CpG sites across the human genome.
+      Illumina Human Methylation 450:
+        description: A DNA methylation microarray manufactured by Illumina interrogating approximately
+          450000 CpG sites across the human genome.
       Illumina Genome Analyzer:
         description: A DNA sequencer manufactured by Solexa (later acquired by Illumina) as one of its
           first sequencer lines, launched in 2006, capable of sequencing 1 gigabase (Gb) of data in a
@@ -13374,6 +13441,14 @@ enums:
       Illumina iSeq 100:
         description: The Illumina iSeq 100 is a model type of the Illumina sequencing library platform.
         meaning: GENEPIO:0100121
+      Illumina Methylation Epic:
+        description: A DNA methylation microarray (BeadChip) manufactured by Illumina interrogating over
+          850000 methylation sites across the genome.
+        meaning: OBI:0002131
+      Illumina Methylation Epic v2:
+        description: The second-generation version of the Illumina Infinium MethylationEPIC BeadChip,
+          interrogating over 900000 methylation sites across the genome.
+        meaning: OBI:0003650
       Illumina MiniSeq:
         description: A benchtop DNA sequencer manufactured by Illumina using sequencing-by-synthesis chemistry,
           with an output capacity of approximately 1.65-7.5 Gb per run.
@@ -13388,6 +13463,14 @@ enums:
           the NextSeq series succeeded the HiSeq/MiSeq lines with high throughput in a compact benchtop
           format.
         meaning: GENEPIO:0100126
+      Illumina NextSeq 1000:
+        description: The Illumina NextSeq 1000 is a benchtop high-throughput sequencing machine developed
+          by Illumina using XLEAP-SBS chemistry.
+        meaning: EFO:0010962
+      Illumina NextSeq 2000:
+        description: The Illumina NextSeq 2000 is a benchtop high-throughput sequencing machine developed
+          by Illumina using XLEAP-SBS chemistry with onboard data analysis.
+        meaning: EFO:0010963
       Illumina NextSeq 2500:
         description: This name does not correspond to a standard commercially released Illumina platform;
           it appears to conflate the Illumina NextSeq (500/550) benchtop sequencer series with the HiSeq
@@ -13410,6 +13493,10 @@ enums:
         description: The Illumina NovaSeq 6000 is a high-throughput sequencing machine developed by Illumina,
           with two flow cells and an output of up to 6000 Gb using patterned flow-cell sequencing-by-synthesis
           technology.
+        meaning: EFO:0008637
+      Illumina NovaSeq S4:
+        description: The S4 flow-cell configuration of the Illumina NovaSeq 6000, offering the platform's
+          highest throughput mode.
         meaning: EFO:0008637
       Illumina NovaSeq X Plus:
         description: The Illumina NovaSeq X Plus is a high-throughput sequencing machine developed by
@@ -14924,6 +15011,14 @@ enums:
       Concurrent Chemoradiation:
         description: Treatment in which radiation therapy is administered at the same time as chemotherapy.
         meaning: NCIT:C141342
+      Conditioning Therapy:
+        description: Administration of high doses of chemotherapy or radiation therapy, as well as immunosuppressive
+          therapy, to a transplant recipient prior to a bone marrow or hematopoietic stem cell transplant.
+        meaning: NCIT:C64468
+      Ablation Therapy:
+        description: Removal, separation, detachment, extirpation, or eradication of a body part, pathway,
+          or function by surgery, chemical destruction, morbid process, or noxious substance.
+        meaning: NCIT:C20985
       Control:
         description: A negative control in which the subject or specimen received no active treatment,
           used as a comparator.
@@ -14947,6 +15042,10 @@ enums:
         description: Various treatment modalities that produce the desired therapeutic effect by means
           of a change of hormone/hormones level.
         meaning: NCIT:C15445
+      Immunosuppressive Therapy/GVHD Prophylaxis for Transplant:
+        description: Graft versus host disease prophylaxis or therapy administered in the context of a
+          transplant.
+        meaning: NCIT:C15448
       Immunotherapy:
         description: Therapy designed to induce changes in a patient's immune status in order to treat
           disease.
@@ -14963,6 +15062,9 @@ enums:
       Not Reported:
         description: Not provided or available.
         meaning: NCIT:C43234
+      Oncolytic Virus Therapy:
+        description: A targeted therapy that uses viral infection to cause the lysis of tumor cells.
+        meaning: NCIT:C62713
       Organ Transplantation:
         description: The transfer of an organ, organ part, or tissue from one body to another, for the
           purpose of replacing the recipient's damaged or failing organ with a working one from the donor.
@@ -14980,6 +15082,10 @@ enums:
       Photon Beam Radiation Therapy:
         description: Radiation therapy using a photon beam.
         meaning: NCIT:C104914
+      Post-Transplant Salvage Therapy:
+        description: Treatment administered after a transplant when standard therapy has failed or a relapse
+          has occurred.
+        meaning: NCIT:C15359
       Proton Beam Radiation Therapy:
         description: A type of external beam radiation therapy using a beam of protons. It has the advantage
           of precisely localizing the radiation dose on the targeted tissue and avoiding damage to the
@@ -15020,9 +15126,17 @@ enums:
         description: Cancer therapies designed to act upon specific molecules in metabolic pathways or
           processes involved in carcinogenesis, tumor growth, or tumor spread.
         meaning: NCIT:C76243
+      Targeted Therapy:
+        description: A type of cancer treatment that uses testing and medication to more precisely identify
+          and treat cancer, targeting genes or proteins necessary to the proliferation of cancer cells.
+        meaning: NCIT:C93352
       Unknown:
         description: Not known, observed, recorded; or reported as unknown by the data contributor.
         meaning: NCIT:C17998
+      Vaccine Therapy:
+        description: Immunotherapy using a preparation that stimulates the immune system to destroy pathogenic
+          microorganisms or tumor cells.
+        meaning: NCIT:C15347
   Treatment Response Enum:
     permissible_values:
       Complete Response:
