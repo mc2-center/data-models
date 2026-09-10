@@ -170,6 +170,67 @@ instead uses:
   top-level `slots:` with `slot_usage:` overrides per class, not needed for
   correct RDF output today.
 
+## Schema.org class alignment (Layer-1 ontology alignment)
+
+Reviewed a draft Sage Bionetworks doc, "SageBrain RDF Knowledge Graph
+Construction" (NF-OSI-derived KG pipeline architecture reference, not
+checked into this repo), against this pipeline's ontology-alignment code
+(2026-09-10). That doc frames class-level BioLink/schema-level type
+assertions as the cheapest, fastest ontology-alignment step ("BioLink
+alignment is faster to adopt and immediately enables cross-portal
+schema-level queries"), done before any deeper domain-ontology curation
+work. `schema/cckp_portal.linkml.yaml`'s 5 core classes had no class-level
+external alignment at all until this pass, even though
+`scripts/build_datacatalog_triples.py` already asserts real `schema:`
+**predicates** onto the same `cckp:Dataset` subjects.
+
+Added a `schema` prefix (`https://schema.org/`, matching
+`build_datacatalog_triples.py`'s own namespace exactly) and a class-level
+`exact_mappings`/`close_mappings` entry per class: `Dataset` ->
+`schema:Dataset`, `Publication` -> `schema:ScholarlyArticle` (schema.org has
+no bare "Publication" class; this is what the Bioschemas `Publication`
+profile itself is built on), `Tool` -> `schema:SoftwareApplication` (same
+reasoning, Bioschemas `Tool` profile), `Grant` -> `schema:MonetaryGrant`
+(schema.org's own guidance prefers this over the bare `Grant` class for
+funding-type grants), `EducationalResource` -> `schema:LearningResource` as
+a `close_mappings` only (looser fit - schema.org has no
+"EducationalResource" class). See `plans/cckp_schema_class_alignment.md`
+for the full plan and rationale, including the 4-domain-vs-1 comparison
+against the PDF's suggested cross-portal ontology table (species/assay
+already matched NCBITaxon/EFO before this review; MONDO/UBERON promotion for
+disease/tissue is a separate, not-yet-implemented plan,
+`plans/mondo_uberon_federation_promotion.md`).
+
+**Implementation quirk found and worked around:** writing the mapping as a
+bare CURIE (`schema:Dataset`) in the LinkML source causes `linkml generate
+owl` to expand it using a different, built-in default prefix map
+(bioregistry's `http://schema.org/`, not this schema's own declared
+`https://schema.org/`) *and* drop the `@prefix schema:` line entirely,
+emitting a fully-expanded `http://schema.org/Dataset` IRI instead - silently
+inconsistent with `build_datacatalog_triples.py`'s `https://` predicates.
+Writing the full IRI directly in `exact_mappings:/close_mappings:` (e.g.
+`https://schema.org/Dataset`) makes the generator correctly emit `@prefix
+schema: <https://schema.org/>` and compact CURIEs matching the schema's own
+declared prefix. Confirmed via `SchemaView(...).namespaces()` (correctly
+resolves `schema` -> `https://schema.org/` per the YAML's own `prefixes:`
+block) that this is a generator-specific quirk in how `exact_mappings`/
+`close_mappings` CURIEs get expanded, not a schema-loading problem -
+`test_schema_loads.py` and all `test_build_triples_*.py` pass unchanged
+either way. If a future class-level mapping is added, use the full IRI form,
+not a CURIE, to avoid re-hitting this.
+
+Also confirmed (regenerating from the *unmodified* committed YAML before
+making any edit) that `linkml generate owl`'s blank-node/OWL-restriction
+ordering is non-deterministic across separate runs - a ~1000-line diff
+against the already-committed `cckp_portal.ttl` appeared even with zero
+schema changes. The ~500-line diff `make schema` produced for this change is
+therefore mostly this pre-existing, unrelated reordering, not new content -
+the actual substantive addition is 1 prefix line + 5 mapping triples,
+confirmed by isolating and grepping for `skos:exactMatch schema:`/
+`skos:closeMatch schema:` before committing. Not a new problem introduced
+here, and not fixed as part of this change - worth knowing before assuming
+any future `cckp_portal.ttl` diff represents real schema drift.
+
 ## Interoperating with sagebrain-model
 
 [sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model) is a

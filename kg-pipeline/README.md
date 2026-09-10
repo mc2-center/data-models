@@ -211,7 +211,18 @@ kg-pipeline/
     mc2_model.linkml.yaml    - generated via `make mc2-model-linkml` + resolve_prefixes.py
     mc2_model.ttl             - generated via `make schema`
     mc2_model_prefixes_report.md
-    cckp_portal.linkml.yaml  - hand-authored; imports mc2_model.linkml.yaml
+    cckp_portal.linkml.yaml  - hand-authored; imports mc2_model.linkml.yaml.
+                                Each of the 5 classes carries a class-level
+                                schema.org mapping (`exact_mappings`/
+                                `close_mappings` - Dataset/Publication/Tool/
+                                Grant -> schema:Dataset/ScholarlyArticle/
+                                SoftwareApplication/MonetaryGrant exactly,
+                                EducationalResource -> schema:LearningResource
+                                as a close match only) - a cheap Layer-1
+                                schema-level alignment, same schema.org
+                                vocabulary the Data Catalog stage already
+                                asserts real predicates in (see
+                                `plans/cckp_schema_class_alignment.md`).
     cckp_portal.ttl           - generated via `make schema`
     cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
                                 "Additional pipeline stages" above)
