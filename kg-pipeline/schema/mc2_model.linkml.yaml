@@ -1418,12 +1418,9 @@ slots:
     annotations:
       cde_id: '15100774'
   Biospecimen Type Category:
-    description: 'The general category of material that forms the biospecimen sample, as captured in the
-      Specimen Material Category CDE. Note: Biospecimen Analyte Type (a sibling attribute) is applicable
-      when Type Category = Analyte -- re-verified against this closed list (see Round 9 note); the CDE''s
-      real value list does not include a literal ''Analyte'' term, so that conditional relationship needs
-      a follow-up look at which of these categories (most likely RNA, DNA, or Cells) actually correspond
-      to what MC2 calls Analyte.'
+    description: The general category of material that forms the biospecimen sample, per NCI caDSR CDE
+      12445832 (Specimen Material Category). See Biospecimen Type for finer-grained specimen classification
+      (e.g. specific analyte types).
     required: true
     range: Biospecimen Type Category Enum
     exact_mappings:
@@ -1515,11 +1512,7 @@ slots:
     annotations:
       cde_id: '8037927'
   Biospecimen Acquisition Method:
-    description: Records the method of acquisition or source for the specimen under consideration. Valid
-      Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value
-      list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate,
-      Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for
-      follow-up review.
+    description: Records the method of acquisition or source for the specimen under consideration.
     range: Biospecimen Acquisition Method Enum
     exact_mappings:
     - CRDC_CDE:15115495
@@ -1528,7 +1521,7 @@ slots:
   Biospecimen Description:
     description: A description of the biospecimen.
   Biospecimen Pathology:
-    description: The pathology identifier associated with the biospecimen.
+    description: The pathology identifier associated with the biospecimen. Not currently in use.
     range: Biospecimen Pathology Enum
   Biospecimen BioSample Identifier:
     description: BioSample (SAMN) accession number corresponding to the source of this biospecimen.
@@ -2614,8 +2607,7 @@ slots:
     exact_mappings:
     - CRDC_CDE:15354920
   Individual Year of Birth:
-    description: 'The 4-digit year of the subject''s birth. Note: a PHI/de-identification consideration
-      was raised and accepted for this field -- see plans/crdc_cde_integration.md.'
+    description: The 4-digit year of the subject's birth.
     range: float
     exact_mappings:
     - CRDC_CDE:16032218
@@ -4100,25 +4092,44 @@ slots:
 enums:
   Biospecimen Type Category Enum:
     permissible_values:
-      Blood: null
-      Ascites: null
-      Bone Marrow: null
-      Cells: null
-      Stool: null
-      Body Fluid or Substance: null
-      Sputum: null
-      Urine: null
-      Tissue: null
-      Mouth Rinse: null
-      Not Reported: null
-      Unknown: null
-      Xenograft: null
-      Skin: null
-      Saliva: null
-      RNA: null
-      DNA: null
-      Central Nervous System: null
-      Cell Line: null
+      Ascites:
+        description: A biospecimen of ascitic fluid.
+        meaning: NCIT:C159203
+      Blood:
+        description: A small volume of blood removed for testing or storage.
+        meaning: NCIT:C17610
+      Bone Marrow:
+        description: A biological sample containing components collected from bone marrow of an experimental
+          subject.
+        meaning: NCIT:C164009
+      Cells:
+        description: A biospecimen comprised of purified or partially-purified cells.
+        meaning: NCIT:C192998
+      Fluids:
+        description: A biospecimen that consists of a body fluid.
+        meaning: NCIT:C204466
+      Mouth Rinse:
+        description: A sample consisting of biological material from the buccal cavity, collected by introducing
+          a solution into the mouth, swishing, and collecting the rinse.
+        meaning: NCIT:C198712
+      Sputum:
+        description: A respiratory biospecimen obtained via expectoration.
+        meaning: NCIT:C189124
+      Stool:
+        description: Portion of semisolid bodily waste discharged through the anus.
+        meaning: UBERON:0001988
+      Tissue:
+        description: A piece of tissue removed from an organism for examination, analysis, or propagation.
+        meaning: NCIT:C19697
+      Urine:
+        description: A biospecimen obtained from urine.
+        meaning: NCIT:C189126
+      Not Reported:
+        description: Not provided or available.
+        meaning: NCIT:C43234
+      Unknown:
+        description: Not known, observed, recorded, or reported as unknown by the data contributor.
+        meaning: NCIT:C17998
   Biospecimen Type Enum:
     permissible_values:
       Additional - New Primary:

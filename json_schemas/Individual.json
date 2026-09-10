@@ -290,7 +290,7 @@
       "title": "Individual Vital Status"
     },
     "IndividualYearofBirth": {
-      "description": "The 4-digit year of the subject's birth. Note: a PHI/de-identification consideration was raised and accepted for this field -- see plans/crdc_cde_integration.md.",
+      "description": "The 4-digit year of the subject's birth.",
       "title": "Individual Year of Birth",
       "type": "number"
     },

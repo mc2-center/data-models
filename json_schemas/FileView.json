@@ -1110,7 +1110,7 @@
       "type": "string"
     },
     "BiospecimenAcquisitionMethod": {
-      "description": "Records the method of acquisition or source for the specimen under consideration. Valid Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate, Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for follow-up review.",
+      "description": "Records the method of acquisition or source for the specimen under consideration.",
       "enum": [
         "Aspiration",
         "BloodDraw",
@@ -2624,27 +2624,20 @@
       "title": "Biospecimen Type"
     },
     "BiospecimenTypeCategory": {
-      "description": "The general category of material that forms the biospecimen sample, as captured in the Specimen Material Category CDE. Note: Biospecimen Analyte Type (a sibling attribute) is applicable when Type Category = Analyte -- re-verified against this closed list (see Round 9 note); the CDE's real value list does not include a literal 'Analyte' term, so that conditional relationship needs a follow-up look at which of these categories (most likely RNA, DNA, or Cells) actually correspond to what MC2 calls Analyte.",
+      "description": "The general category of material that forms the biospecimen sample, per NCI caDSR CDE 12445832 (Specimen Material Category). See Biospecimen Type for finer-grained specimen classification (e.g. specific analyte types).",
       "enum": [
         "Ascites",
         "Blood",
-        "BodyFluidorSubstance",
         "BoneMarrow",
-        "CellLine",
         "Cells",
-        "CentralNervousSystem",
-        "DNA",
+        "Fluids",
         "MouthRinse",
         "NotReported",
-        "RNA",
-        "Saliva",
-        "Skin",
         "Sputum",
         "Stool",
         "Tissue",
         "Unknown",
-        "Urine",
-        "Xenograft"
+        "Urine"
       ],
       "title": "Biospecimen Type Category"
     },

@@ -278,7 +278,7 @@
         {
             "@id": "bts:BiospecimenTypeCategory",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The general category of material that forms the biospecimen sample, as captured in the Specimen Material Category CDE. Note: Biospecimen Analyte Type (a sibling attribute) is applicable when Type Category = Analyte -- re-verified against this closed list (see Round 9 note); the CDE's real value list does not include a literal 'Analyte' term, so that conditional relationship needs a follow-up look at which of these categories (most likely RNA, DNA, or Cells) actually correspond to what MC2 calls Analyte.",
+            "rdfs:comment": "The general category of material that forms the biospecimen sample, per NCI caDSR CDE 12445832 (Specimen Material Category). See Biospecimen Type for finer-grained specimen classification (e.g. specific analyte types).",
             "rdfs:label": "BiospecimenTypeCategory",
             "rdfs:subClassOf": [
                 {
@@ -290,10 +290,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:Blood"
+                    "@id": "bts:Ascites"
                 },
                 {
-                    "@id": "bts:Ascites"
+                    "@id": "bts:Blood"
                 },
                 {
                     "@id": "bts:BoneMarrow"
@@ -302,49 +302,28 @@
                     "@id": "bts:Cells"
                 },
                 {
-                    "@id": "bts:Stool"
+                    "@id": "bts:Fluids"
                 },
                 {
-                    "@id": "bts:BodyFluidorSubstance"
+                    "@id": "bts:MouthRinse"
                 },
                 {
                     "@id": "bts:Sputum"
                 },
                 {
-                    "@id": "bts:Urine"
+                    "@id": "bts:Stool"
                 },
                 {
                     "@id": "bts:Tissue"
                 },
                 {
-                    "@id": "bts:MouthRinse"
+                    "@id": "bts:Urine"
                 },
                 {
                     "@id": "bts:NotReported"
                 },
                 {
                     "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Xenograft"
-                },
-                {
-                    "@id": "bts:Skin"
-                },
-                {
-                    "@id": "bts:Saliva"
-                },
-                {
-                    "@id": "bts:RNA"
-                },
-                {
-                    "@id": "bts:DNA"
-                },
-                {
-                    "@id": "bts:CentralNervousSystem"
-                },
-                {
-                    "@id": "bts:CellLine"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -596,7 +575,7 @@
         {
             "@id": "bts:BiospecimenAcquisitionMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Records the method of acquisition or source for the specimen under consideration. Valid Values replaced with CRDC_CDE:15115495's (Specimen Collection Method Type) real caDSR permissible-value list; the prior free-text list's more granular terms (Core needle biopsy, Fine needle aspirate, Punch biopsy, Shave biopsy, etc.) no longer have a direct slot -- CDE:6626651 remains flagged for follow-up review.",
+            "rdfs:comment": "Records the method of acquisition or source for the specimen under consideration.",
             "rdfs:label": "BiospecimenAcquisitionMethod",
             "rdfs:subClassOf": [
                 {
@@ -5666,6 +5645,24 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Ascites",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ascites",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenTypeCategory"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Ascites",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Blood",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -5686,24 +5683,6 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Blood",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Ascites",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Ascites",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Ascites",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -5750,10 +5729,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Stool",
+            "@id": "bts:Fluids",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Stool",
+            "rdfs:label": "Fluids",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenTypeCategory"
@@ -5763,15 +5742,15 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Stool",
+            "sms:displayName": "Fluids",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BodyFluidorSubstance",
+            "@id": "bts:MouthRinse",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "BodyFluidorSubstance",
+            "rdfs:label": "MouthRinse",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenTypeCategory"
@@ -5781,7 +5760,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Body Fluid or Substance",
+            "sms:displayName": "Mouth Rinse",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -5804,10 +5783,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Urine",
+            "@id": "bts:Stool",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Urine",
+            "rdfs:label": "Stool",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenTypeCategory"
@@ -5817,7 +5796,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Urine",
+            "sms:displayName": "Stool",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6191,10 +6170,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:MouthRinse",
+            "@id": "bts:Urine",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "MouthRinse",
+            "rdfs:label": "Urine",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:BiospecimenTypeCategory"
@@ -6204,7 +6183,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Mouth Rinse",
+            "sms:displayName": "Urine",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6406,168 +6385,6 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "unknown",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Xenograft",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Xenograft",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenPathology"
-                },
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                },
-                {
-                    "@id": "bts:BiospecimenComposition"
-                },
-                {
-                    "@id": "bts:MeasurementTechnique"
-                },
-                {
-                    "@id": "bts:Assay"
-                },
-                {
-                    "@id": "bts:DSPDatasetAssay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Xenograft",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Skin",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Skin",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                },
-                {
-                    "@id": "bts:Tissue"
-                },
-                {
-                    "@id": "bts:DSPDatasetTissue"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Skin",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Saliva",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Saliva",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                },
-                {
-                    "@id": "bts:BiospecimenType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Saliva",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:RNA",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "RNA",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                },
-                {
-                    "@id": "bts:BiospecimenType"
-                },
-                {
-                    "@id": "bts:ToolTopic"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "RNA",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DNA",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DNA",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                },
-                {
-                    "@id": "bts:BiospecimenType"
-                },
-                {
-                    "@id": "bts:ToolTopic"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DNA",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CentralNervousSystem",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CentralNervousSystem",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Central Nervous System",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CellLine",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CellLine",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BiospecimenTypeCategory"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Cell Line",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6910,6 +6727,27 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Control Analyte",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DNA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DNA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenType"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DNA",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -7424,6 +7262,45 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:RNA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "RNA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenType"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "RNA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Saliva",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Saliva",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Saliva",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Slides",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -7888,6 +7765,36 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Tumor specimen from de novo untreated malignancy of the bladder",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Xenograft",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Xenograft",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimenPathology"
+                },
+                {
+                    "@id": "bts:BiospecimenComposition"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Xenograft",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -29797,7 +29704,7 @@
         {
             "@id": "bts:BiospecimenPathology",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The pathology identifier associated with the biospecimen.",
+            "rdfs:comment": "The pathology identifier associated with the biospecimen. Not currently in use.",
             "rdfs:label": "BiospecimenPathology",
             "rdfs:subClassOf": [
                 {
@@ -84403,7 +84310,7 @@
         {
             "@id": "bts:IndividualYearofBirth",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The 4-digit year of the subject's birth. Note: a PHI/de-identification consideration was raised and accepted for this field -- see plans/crdc_cde_integration.md.",
+            "rdfs:comment": "The 4-digit year of the subject's birth.",
             "rdfs:label": "IndividualYearofBirth",
             "rdfs:subClassOf": [
                 {
@@ -100481,6 +100388,27 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Sinonasal Tract",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Skin",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Skin",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:DSPDatasetTissue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Skin",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
