@@ -21,6 +21,8 @@ biospecimen:
   src: biospecimen/specimenIncidence.csv
 - name: Biospecimen Acquisition Method
   src: biospecimen/acquisitionMethod.csv
+- name: Biospecimen Stain
+  src: biospecimen/stainType.csv
 consortium:
 - name: Consortium Funding Agency
   src: consortium/consortium_funding_agency.csv
