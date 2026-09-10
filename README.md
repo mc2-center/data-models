@@ -26,8 +26,6 @@
 
 🔎 **Data Models Explorer**: https://mc2-center.github.io/data-models/
 
-📊 **Data Curator App**: https://dca.app.sagebionetworks.org/
-
 ---
 
 ## Overview
@@ -35,7 +33,7 @@
 This project contains the released versions of the JSON-LD schemas for the
 [Cancer Complexity Knowledge Portal] (CCKP), and more broadly, MC2 Center.
 You can learn more about the schemas/data models and other aspects of this
-project in our portal documentation - coming soon! The MC2 Center data model
+project in our Data Models Explorer. The MC2 Center data model
 is in both CSV and JSON-LD format, and individual entity schemas are also
 exported as standalone JSON Schemas in `./json_schemas`.
 
@@ -81,16 +79,11 @@ See [contributing guidelines] for the full development and release process.
 
 ```
 .
-├── dca_config/
 ├── docs/
 ├── modules/
 ├── scripts/
 └── templates/
 ```
-
-### DCA Configuration
-
-MC2 Center's configurations for the DCA is located in `./dca_config`.
 
 ### Documentation
 
