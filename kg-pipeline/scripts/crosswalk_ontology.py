@@ -65,7 +65,22 @@ def crosswalk(cv_rows, target_ontology, rows=3):
     return results
 
 
+def load_existing_reviewed(path):
+    """{subject_id: reviewed value} from a previously-written crosswalk file at
+    `path`, if one exists - so re-running this script (e.g. after a CV edit)
+    never silently resets a row a human already flipped to reviewed=true.
+    Keyed on subject_id (the source NCIT/BTO CURIE), which is stable across
+    re-runs unlike row order."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, newline="") as f:
+        rows = [line for line in f if not line.startswith("#")]
+    reader = csv.DictReader(rows, delimiter="\t")
+    return {row["subject_id"]: row.get("reviewed", "false") for row in reader if row.get("subject_id")}
+
+
 def write_sssom(path, source_prefix, target_ontology, results):
+    previously_reviewed = load_existing_reviewed(path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", newline="") as f:
         f.write("# curie_map:\n#   skos: http://www.w3.org/2004/02/skos/core#\n"
@@ -74,18 +89,19 @@ def write_sssom(path, source_prefix, target_ontology, results):
                 f"{os.path.basename(path)}\n")
         f.write(f"# comment: supplementary {source_prefix}->{target_ontology.upper()} crosswalk for "
                 "federation with sagebrain-model - NOT the mapping harmonize.py resolves against; "
-                "review before treating any row as confirmed.\n")
+                "a row is only consumed by scripts/link_ontology_crosswalk.py once reviewed=true.\n")
         f.write("# license: https://creativecommons.org/publicdomain/zero/1.0/\n")
         writer = csv.writer(f, delimiter="\t")
         writer.writerow(["subject_id", "subject_label", "predicate_id", "object_id", "object_label",
-                          "mapping_justification", "confidence"])
+                          "mapping_justification", "confidence", "reviewed"])
         for r in results:
             if not r["target_curie"]:
                 continue
             justification = "semapv:LexicalMatching"
             confidence = "high" if r["exact_label_match"] else "low"
+            reviewed = previously_reviewed.get(r["source_curie"], "false")
             writer.writerow([r["source_curie"], r["source_term"], "skos:exactMatch",
-                              r["target_curie"], r["target_label"], justification, confidence])
+                              r["target_curie"], r["target_label"], justification, confidence, reviewed])
 
 
 def main():
