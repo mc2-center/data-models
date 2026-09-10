@@ -83,25 +83,38 @@ separate handling, not added here.
   deliverable in sync - see this plan's Implementation Report for the
   result.
 
-## Known follow-up, not resolved here
+## Follow-up (resolved in a later pass, same day)
 
-- `Fluids` (the CV's existing Attribute label) doesn't textually match the
-  CDE's literal permissible value `Body Fluid or Substance` - ontologically
-  correct (`NCIT:C204466`), but a system expecting the exact CDE-literal
-  string for CRDC/GDC-compatible submission would see a mismatch. Not
-  renamed here since the user's direction didn't cover it and renaming an
-  existing Attribute value is a bigger, separate change.
-- Which of `RNA`/`DNA`/`Cells` (or another CDE 12445832 category) an
-  `Analyte`-typed `Biospecimen Type` value should roll up to at the
-  `Biospecimen Type Category` level remains genuinely unresolved - the
-  caDSR CDE record itself doesn't provide cross-CDE value crosswalks; would
-  need the actual CDS/GDC data dictionary's own documented relationship
-  (if one exists) to answer with real evidence rather than a guess.
-- The other 8 CDE-real values not yet in `biospecimenCategory.csv`
-  (`Body Fluid or Substance`, `Xenograft`, `Skin`, `Saliva`, `RNA`, `DNA`,
-  `Central Nervous System`, `Cell Line`) - deliberately left out per user
-  direction ("captured elsewhere"), not lost: they're still documented
-  above and in this file's own history for whoever picks this up.
+The items below were originally left open, then closed once the user
+established a hard standing rule
+(`~/.claude` memory `feedback_cde_alignment_is_mandatory`): any CDE/CRDC_CDE-
+mapped attribute's CV must fully match the CDE's real permissible-value
+list, full stop - "captured elsewhere" did not mean "acceptable to leave
+incomplete."
+
+- **`Fluids` renamed to `Body Fluid or Substance`, code corrected.** Checking
+  `NCIT:C204466` (the code `Fluids` carried) against OLS showed it actually
+  resolves to "Body Fluid **Specimen**" (the specimen-instance sense) - not
+  a match for the CDE's real permissible value, which is the
+  material-*category* sense, `NCIT:C13236` ("Body Fluid or **Substance**").
+  Renamed the row to the CDE's exact literal string and corrected the code.
+- **The other 8 CDE-real values added**: `Cell Line` (`NCIT:C16403`),
+  `Central Nervous System` (`NCIT:C12438`) - both fresh OLS lookups, exact
+  label matches - and `Xenograft` (`NCIT:C156443`, reused from
+  `biospecimen/specimenComp.csv`/`pathology.csv`'s existing convention for
+  the same concept), `Skin` (`NCIT:C12470`, reused from `shared/tissue.csv`),
+  `Saliva` (`NCIT:C13275`), `RNA` (`NCIT:C198568`), `DNA` (`NCIT:C449`, all
+  three reused from `biospecimen/specimenType.csv`'s existing curation of
+  the same terms at the more granular `Biospecimen Type` level). The CV is
+  now 19/19 rows, exact parity with CDE 12445832's real permissible-value
+  list - verified programmatically (see Implementation Report addendum).
+- **Still genuinely unresolved, not a completeness gap**: which of
+  `RNA`/`DNA`/`Cells` an `Analyte`-typed `Biospecimen Type` value should
+  roll up to at the `Biospecimen Type Category` level - the caDSR CDE
+  record itself doesn't provide cross-CDE value crosswalks, so this needs
+  the actual CDS/GDC data dictionary's own documented relationship (if one
+  exists), not a guess. This is a *semantic mapping* question between two
+  already-complete CVs, not a missing-value gap.
 
 ## Process
 
@@ -119,3 +132,24 @@ entry added. `mc2.model.csv`, `all_valid_values.csv`,
 `mc2.model.jsonld` all regenerated via the documented `make` targets - no
 manual edits to any generated artifact. All verification in the section
 above passed.
+
+### Addendum: full CDE-parity follow-up
+
+Implemented the "Follow-up" section above in a second pass the same day.
+Verified programmatically:
+
+```
+CV count: 19
+CDE count: 19
+Missing from CV: set()
+Extra in CV (not in CDE): set()
+```
+
+Regenerated `mc2.model.csv`/`all_valid_values.csv` (`make collate`),
+`json_schemas/Biospecimen.json`/`FileView.json`
+(`create_json_from_model.py`, confirmed via a full `make generate-json` run
+that no other schema changed), `mc2.model.jsonld`
+(`convert_model_to_jsonld.py`), and kg-pipeline's own
+`schema/mc2_model.linkml.yaml`/`mc2_model.ttl`
+(`make mc2-model-linkml && make schema`). kg-pipeline's 97-test suite
+passes unchanged.
