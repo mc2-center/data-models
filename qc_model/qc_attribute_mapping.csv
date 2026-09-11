@@ -12,9 +12,9 @@ PublicationView,Publication Year,first,,
 PublicationView,Publication Keywords,first,,
 PublicationView,Publication Authors,first,,
 PublicationView,Publication Abstract,first,,
-PublicationView,Publication Assay,first,,strict
-PublicationView,Publication Tumor Type,first,,strict
-PublicationView,Publication Tissue,first,,strict
+PublicationView,Assay,first,,strict
+PublicationView,Tumor Type,first,,strict
+PublicationView,Tissue,first,,strict
 PublicationView,Publication Accessibility,first,,all
 PublicationView,Publication Dataset Alias,first,,
 PublicationView,entityId,""","".join",,
@@ -27,10 +27,10 @@ DatasetView,PublicationView Key,""","".join",pubsColumn,
 DatasetView,Dataset Name,first,,
 DatasetView,Dataset Description,first,,
 DatasetView,Dataset Design,first,,
-DatasetView,Dataset Assay,first,,strict
-DatasetView,Dataset Species,first,,strict
-DatasetView,Dataset Tumor Type,first,,strict
-DatasetView,Dataset Tissue,first,,strict
+DatasetView,Assay,first,,strict
+DatasetView,Species,first,,strict
+DatasetView,Tumor Type,first,,strict
+DatasetView,Tissue,first,,strict
 DatasetView,Dataset Url,first,,all
 DatasetView,Dataset Doi,first,,
 DatasetView,Dataset File Formats,first,,strict
@@ -57,7 +57,7 @@ ToolView,Tool Type,first,,strict
 ToolView,Tool Topic,first,,strict
 ToolView,Tool Operating System,first,,
 ToolView,Tool Language,first,,strict
-ToolView,Tool License,first,,
+ToolView,License,first,,
 ToolView,Tool Cost,first,,
 ToolView,Tool Accessibility,first,,
 ToolView,Tool Download Url,first,,
@@ -102,7 +102,7 @@ EducationalResource,Resource Origin Institution,first,,
 EducationalResource,Resource Language,first,,
 EducationalResource,Resource Contributors,first,,
 EducationalResource,Resource Secondary Topic,first,,
-EducationalResource,Resource License,first,,
+EducationalResource,License,first,,
 EducationalResource,Resource Use Requirements,first,,
 EducationalResource,Resource Internal Identifier,first,,
 EducationalResource,Resource Media Accessibility,first,,
