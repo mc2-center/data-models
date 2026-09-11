@@ -15,7 +15,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | DCTERMS | `http://purl.org/dc/terms/` | 1/1 |
 | DOID | `http://purl.obolibrary.org/obo/DOID_` | 1/1 |
 | ECO | `http://purl.obolibrary.org/obo/ECO_` | 6/6 |
-| EDAM | `http://edamontology.org/` | 516/519 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
+| EDAM | `http://edamontology.org/` | 535/538 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
 | EFO | `http://www.ebi.ac.uk/efo/EFO_` | 88/88 |
 | EMAPA | `http://purl.obolibrary.org/obo/EMAPA_` | 1/1 |
 | ENVO | `http://purl.obolibrary.org/obo/ENVO_` | 1/1 |
@@ -35,9 +35,9 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
 | NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 6/6 |
-| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1122/1122 |
+| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1193/1193 |
 | OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
-| OBI | `http://purl.obolibrary.org/obo/OBI_` | 28/28 |
+| OBI | `http://purl.obolibrary.org/obo/OBI_` | 29/29 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
 | OMIT | `http://purl.obolibrary.org/obo/OMIT_` | 1/1 |
 | PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/34 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |

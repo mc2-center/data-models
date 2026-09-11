@@ -265,6 +265,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -310,6 +311,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -377,6 +379,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -424,6 +427,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -472,6 +476,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -595,6 +600,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -631,6 +637,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -695,6 +702,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -759,6 +767,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -794,6 +803,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -964,6 +974,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1008,6 +1019,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1053,6 +1065,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1086,6 +1099,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1242,6 +1256,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1273,6 +1288,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1318,6 +1334,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1358,6 +1375,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1397,6 +1415,7 @@ classes:
     - Tumor Type
     - File Url
     - File Format
+    - File Assay Category
     - Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
@@ -1509,8 +1528,6 @@ slots:
     required: true
     multivalued: true
     range: Biospecimen Embedding Medium Enum
-    annotations:
-      cde_id: '8037927'
   Biospecimen Acquisition Method:
     description: Records the method of acquisition or source for the specimen under consideration.
     range: Biospecimen Acquisition Method Enum
@@ -1831,8 +1848,6 @@ slots:
       separated.
     multivalued: true
     range: Dataset File Formats Enum
-    annotations:
-      cde_id: '11416926'
   DatasetView_id:
     description: Unique ID associated with this Dataset View entry, used as a key for record linking and
       updates. Unless otherwise directed, this value should be equivalent to Dataset Alias. For externally
@@ -2091,8 +2106,6 @@ slots:
   GeoMx DSP Assay Type:
     description: The assay type which was used for the GeoMx DSP pipeline.
     range: GeoMx DSP Assay Type Enum
-    annotations:
-      cde_id: '7789196'
   NanoStringGeoMxDSPLevel2_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
@@ -3515,6 +3528,10 @@ slots:
     required: true
     multivalued: true
     range: Assay Enum
+  File Assay Category:
+    description: The broad category of experimental method used to generate the file, per NCI caDSR CDE
+      12373576 (Research Activity Experimental Method Type).
+    range: File Assay Category Enum
     exact_mappings:
     - CRDC_CDE:12373576
   Tissue:
@@ -3617,8 +3634,6 @@ slots:
     required: true
     multivalued: true
     range: DSP Dataset Assay Enum
-    exact_mappings:
-    - CRDC_CDE:12373576
   DSP Dataset Tissue:
     description: Tissue type(s) associated with the dataset. Multiple values permitted, comma separated.
     multivalued: true
@@ -3634,8 +3649,6 @@ slots:
       or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes'
     multivalued: true
     range: DSP Data Use Codes Enum
-    annotations:
-      cde_id: '0002001'
   Study Name:
     description: Name of the study
     required: true
@@ -3654,8 +3667,6 @@ slots:
     description: Unique row identifier, used as a primary key for record updates.
     required: true
     identifier: true
-    annotations:
-      cde_id: '12960571'
   Study Number of Participants:
     description: The number of participant instances associated with systematic investigation into a subject.
     required: true
@@ -4402,68 +4413,33 @@ enums:
         meaning: NCIT:C43234
   Biospecimen Composition Enum:
     permissible_values:
-      Additional Primary:
-        description: A primary malignant neoplasm in a patient who has been already diagnosed with a primary
-          malignant neoplasm in another anatomic site.
-        meaning: NCIT:C95606
-      Atypia or hyperplasia:
-        description: A pathological process that precedes and often leads to the development of cancer.
-        meaning: NCIT:C36032
-      Local recurrence:
-        description: The return of a disease after a period of remission.
-        meaning: NCIT:C38155
       Metastatic:
         description: A tumor that has spread from its original site of growth to another anatomic site.
         meaning: NCIT:C3261
-      Normal:
-        description: Tissue sample with cellular composition and architectural patterns expected for the
-          particular anatomic site in which it belongs; no evidence of abnormal cellular infiltrates or
-          tumor mass formation.
-        meaning: NCIT:C162623
-      Normal adjacent:
-        description: A specimen comprised of morphologically normal tissue collected from the area immediately
-          surrounding a tumor in an experimental subject.
-        meaning: NCIT:C164032
-      Normal distant:
-        description: A specimen comprised of morphologically normal tissue collected from a site distant
-          from the tumor in an experimental subject.
-      NOS:
-        description: Not more specifically or particularly described than the stated category.
-        meaning: NCIT:C19594
-      Not applicable:
+      Not Applicable:
         description: Determination of a value is not relevant in the current context.
         meaning: NCIT:C48660
-      Not reported:
+      Not Reported:
         description: An indication that the required information was not provided.
         meaning: NCIT:C43234
       Premalignant:
         description: A pathological process that precedes and often leads to the development of cancer.
         meaning: NCIT:C36032
-      Premalignant - in situ:
-        description: A neoplasm in which the malignant cells are confined to the epithelium of origin,
-          without invasion of the basement membrane.
-        meaning: NCIT:C2917
       Primary:
         description: A tumor at the original site at which it arose.
         meaning: NCIT:C8509
+      Prior Primary:
+        description: Recurrent Disease, Primary Site
+        meaning: NCIT:C55072
+      Progression:
+        description: Progressive Disease
+        meaning: NCIT:C35571
       Recurrent:
         description: The return of a disease after a period of remission.
         meaning: NCIT:C38155
-      Tissue:
-        description: A piece of tissue removed from an organism for examination, analysis, or propagation.
-        meaning: NCIT:C19697
-      Tumor post-adjuvant therapy:
-        description: A specimen derived from a subject after treatment with a neoadjuvant therapeutic.
-        meaning: NCIT:C156444
-      Tumor post-neoadjuvant therapy:
-        description: A specimen derived from a subject after treatment with a neoadjuvant therapeutic.
-        meaning: NCIT:C156444
-      Tumor post-therapy:
-        description: A specimen derived from a subject after treatment with a neoadjuvant therapeutic.
-        meaning: NCIT:C156444
-      Tumor specimen from de novo untreated malignancy of the bladder:
-        description: A tumor specimen obtained from a bladder malignancy that arose without prior treatment
-          (de novo) and had not been treated at the time of collection.
+      Synchronous Primary:
+        description: Malignant Neoplasm of Multiple Primary Sites
+        meaning: NCIT:C35427
       Unknown:
         description: Not known, observed, recorded, or reported as unknown by the data contributor.
         meaning: NCIT:C17998
@@ -4471,15 +4447,6 @@ enums:
         description: A transplantation of cancer cells derived from an established cancer cell line into
           an immunodeficient mouse.
         meaning: NCIT:C156443
-      Synchronous Primary:
-        description: Malignant Neoplasm of Multiple Primary Sites
-        meaning: NCIT:C35427
-      Progression:
-        description: Progressive Disease
-        meaning: NCIT:C35571
-      Prior Primary:
-        description: Recurrent Disease, Primary Site
-        meaning: NCIT:C55072
   Biospecimen Tumor Status Enum:
     permissible_values:
       Tumor:
@@ -4504,71 +4471,50 @@ enums:
       Cryopreserved:
         description: Preservation of cells, tissues, organs, or embryos by storage at low temperatures.
         meaning: NCIT:C16475
-      Cryopreservation in liquid nitrogen - dead tissue:
-        description: Preservation of cells, tissues, organs, or embryos by storage at low temperatures.
-        meaning: NCIT:C16475
-      Cryopreservation in dry ice - dead tissue:
-        description: Preservation of cells, tissues, organs, or embryos by storage at low temperatures.
-        meaning: NCIT:C16475
-      Cryopreservation in liquid nitrogen - live cells:
-        description: Preservation of cells, tissues, organs, or embryos by storage at low temperatures.
-        meaning: NCIT:C16475
-      Formalin fixed paraffin embedded - FFPE:
-        description: A tissue sample that has been fixed with formalin and embedded in paraffin for long-term
-          preservation and histological analysis.
-        meaning: NCIT:C172265
-      Formalin fixed-unbuffered:
-        description: The use of unbuffered formalin for preservation of tissue samples.
-        meaning: NCIT:C185402
-      Formalin fixed-buffered:
-        description: The use of buffered formalin for preservation of tissue samples.
-        meaning: NCIT:C185403
+      Cytospin Slide:
+        description: A slide prepared by centrifuging a cell suspension to concentrate cells onto the
+          slide surface.
+        meaning: NCIT:C115350
+      Fixation:
+        description: The chemical preservation of a substance to maintain structural and/or molecular
+          features of that substance as they exist in the living entity.
+        meaning: NCIT:C25219
       Fresh:
         description: Tissue which has not been exposed to a fixative solution.
         meaning: NCIT:C84517
-      Fresh dissociated and single cell sorted into plates in NP40 buffer:
-        description: A tissue preparation process that takes dissociated, sorted cells and distributes
-          them into cell propagation plates.
-        meaning: NCIT:C185406
-      OCT:
-        description: A solution of water soluble glycols and resins that provide a specimen support matrix
-          for cryostat sectioning at temperatures of -10 degrees C and below.
-        meaning: NCIT:C63523
-      Snap Frozen:
-        description: To freeze rapidly so as to preserve structure and prevent ice crystal formation.
-        meaning: NCIT:C63521
-      Frozen:
-        description: A tissue sample that has been frozen prior to analysis.
-        meaning: NCIT:C158417
-      Negative 80 Deg C:
-        description: An indication that a specimen has been stored at a temperature of negative 80 degrees
-          Celsius.
-        meaning: NCIT:C178955
-      Liquid Nitrogen:
-        description: An indication that a material has been stored in liquid nitrogen.
-        meaning: NCIT:C185338
-      Fresh dissociated:
+      Fresh Dissociated:
         description: A tissue preparation process that takes fresh tissue and dissociates it into single
           cell suspensions.
         meaning: NCIT:C185404
-      Fresh dissociated and single cell sorted:
+      Fresh Dissociated and Single Cell Sorted:
         description: A tissue preparation process that separates fresh dissociated tissue cells into cell
           populations by single cell sorting.
         meaning: NCIT:C185405
-      Fresh dissociated and single cell sorted into plates:
+      Fresh Dissociated and Single Cell Sorted into Plates:
         description: A tissue preparation process that takes dissociated, sorted cells and distributes
           them into cell propagation plates.
         meaning: NCIT:C185406
-      Methacarn fixed paraffin embedded - MFPE:
-        description: A tissue sample that has been fixed with Methacarn and embedded in paraffin for long-term
-          preservation and histological analysis.
-        meaning: NCIT:C19597
-      unknown:
-        description: Not known, observed, recorded, or reported as unknown by the data contributor.
-        meaning: NCIT:C17998
+      Frozen:
+        description: A tissue sample that has been frozen prior to analysis.
+        meaning: NCIT:C158417
+      Not Applicable:
+        description: Determination of a value is not relevant in the current context.
+        meaning: NCIT:C48660
       Not Reported:
         description: An indication that the required information was not provided.
         meaning: NCIT:C43234
+      Refrigerated:
+        description: A specimen that has been kept or preserved at a low temperature in a refrigerator.
+        meaning: NCIT:C70718
+      Refrigerated Vacuum Chamber:
+        description: A device designed to maintain a vacuum at a below-ambient temperature.
+        meaning: NCIT:C185340
+      Snap Frozen:
+        description: To freeze rapidly so as to preserve structure and prevent ice crystal formation.
+        meaning: NCIT:C63521
+      Unknown:
+        description: Not known, observed, recorded; or reported as unknown by the data contributor.
+        meaning: NCIT:C17998
   Biospecimen Timepoint Type Enum:
     permissible_values:
       Diagnosis: null
@@ -10969,348 +10915,298 @@ enums:
         meaning: NCIT:C52095
   File Format Enum:
     permissible_values:
+      ADF:
+        description: Array Design Format.
+        meaning: NCIT:C172213
       AVI:
-        description: A multimedia container format for audio video interleaved (AVI) files that allows
-          for synchronous audio-with-video playback.
+        description: AVI Format file format.
         meaning: NCIT:C190162
       BAI:
-        description: An index file associated with a binary alignment map (BAM) file, a compressed binary
-          version of a sequence alignment/map (SAM) file, used to enable rapid random access to alignment
-          records.
+        description: BAI File file format.
         meaning: NCIT:C190163
       BAM:
-        description: A binary representation of a sequence alignment map (SAM), a compact and indexable
-          representation of nucleotide sequence alignments, compressed using the BGZF (Blocked GNU Zip
-          Format) library.
+        description: Binary Alignment Map file format.
         meaning: NCIT:C153249
+      BAS:
+        description: BAM statistics file format.
+      BCR Biotab:
+        description: BCR Biotab file format.
+        meaning: NCIT:C190164
       BED:
-        description: BED (Browser Extensible Data) format is a tab-delimited text format for describing
-          genomic regions or features, such as gene models or annotation tracks, typically displayed in
-          a genome browser.
+        description: BED Format file format.
         meaning: EDAM:format_3003
-      CDS:
-        description: CDS (coding sequence) refers to a nucleotide sequence file, typically in FASTA-like
-          text format, that contains only the protein-coding portion of a gene or transcript, excluding
-          untranslated regions.
-      CHP:
-        description: Format of an Affymetrix data file containing computed (normalized) expression, genotyping,
-          or resequencing results for individual probes on a microarray, generated by Affymetrix analysis
-          software.
-        meaning: EDAM:format_1644
-      COOL:
-        description: cool is a sparse, compressed binary file format built on HDF5 for storing genomic
-          contact matrices, such as Hi-C interaction data, developed as part of the Cooler/cooltools software
-          ecosystem.
+      bedgraph:
+        description: Bedgraph Format file format.
+        meaning: NCIT:C190165
+      BEDPE Format:
+        description: BEDPE paired-end feature file format.
+        meaning: NCIT:C184749
+      bigBed:
+        description: BigBed file format.
+        meaning: NCIT:C190166
+      bigWig:
+        description: BigWig Format file format.
+        meaning: NCIT:C190167
+      Binary Format:
+        description: The Binary Format file format.
+        meaning: EDAM:format_2333
+      BIOM:
+        description: Biological Observation Matrix (BIOM) file format.
+        meaning: NCIT:C190169
+      cdf:
+        description: A file that provides information about the probes contained within an Affymetrix
+          expression microarray probe set.
+        meaning: NCIT:C209894
+      CEL:
+        description: Affymetrix CEL Format file format.
+        meaning: NCIT:C191737
+      CNS:
+        description: Cytoscape input file format.
+        meaning: NCIT:C209889
+      CRAI:
+        description: CRAM index file format.
+        meaning: NCIT:C192224
+      CRAM:
+        description: CRAM sequence alignment file format.
+        meaning: NCIT:C190170
       CSV:
-        description: A text file format that separates data elements with commas.
+        description: Comma Separated Values Format file format.
         meaning: NCIT:C182456
-      DAE:
-        description: DAE (Digital Asset Exchange) is an XML-based file format defined by the COLLADA specification
-          for exchanging 3D graphics assets, including geometry, materials, and animation, between different
-          software applications.
-      DB:
-        description: DB is a generic file extension denoting a database file used to store structured,
-          queryable data, most commonly associated with lightweight database engines such as SQLite.
-        meaning: EDAM:format_3621
-      DCC:
-        description: A legacy, tab-delimited text file format used by data coordinating centers (e.g.,
-          the TCGA/TARGET Data Coordinating Center) to distribute processed microarray and other genomic
-          data to downstream users.
-      DS_Store:
-        description: .DS_Store is a hidden metadata file automatically generated by the macOS Finder to
-          store folder view settings and icon positions; it is not a data format and typically appears
-          as an incidental artifact rather than an intended data file.
+      DICOM:
+        description: A comprehensive set of standards for communications between medical imaging devices,
+          including a file format definition.
+        meaning: NCIT:C49059
+      DICT:
+        description: HET group dictionary entry file format.
+        meaning: NCIT:C209890
+      DOC:
+        description: Microsoft Word legacy document file format.
+        meaning: NCIT:C210442
+      DOCX:
+        description: DOCX Format file format.
+        meaning: NCIT:C190171
+      DSV:
+        description: DSV Format file format.
+        meaning: EDAM:format_3751
+      EMF:
+        description: Enhanced Metafile image file format.
+        meaning: NCIT:C224003
       FASTA:
-        description: A text-based format for representing nucleotide or peptide sequences, in which base
-          pairs or amino acids are represented using single-letter codes, with each sequence preceded
-          by a single-line description beginning with a '>' character.
+        description: FASTA Format file format.
         meaning: EDAM:format_1929
       FASTQ:
-        description: FASTQ format is a text-based format for storing both a biological sequence (usually
-          nucleotide sequence) and its corresponding quality scores.
+        description: Investigation Description Format file format.
         meaning: EFO:0004155
-      FCS:
-        description: FCS (Flow Cytometry Standard) is a binary file format standardized by the International
-          Society for Advancement of Cytometry for storing list-mode flow cytometry data, including per-event
-          fluorescence and light-scatter measurements plus instrument and acquisition metadata.
-        meaning: OBI:0000327
-      FIG:
-        description: FIG is a vector graphics file format associated with drawing and plotting tools,
-          such as Xfig or MATLAB saved figures, used to store editable diagrams, plots, or illustrations.
-      FREQ:
-        description: FREQ is a generic, tool-specific text file format used to report allele, genotype,
-          or variant frequency data, with column structure varying by the producing software.
-      GCG:
-        description: GCG is a legacy sequence file format originally used by the Genetics Computer Group
-          (GCG) software suite, now part of the Wisconsin Package, for representing annotated nucleotide
-          or protein sequences.
-        meaning: EDAM:format_1935
-      GCT:
-        description: A tab-delimited, matrix file text format that describes a gene expression dataset;
-          the columns of the matrix correspond to profiles/samples, the rows correspond to genes, and
-          the values of the cells correspond to an expression measurement.
-        meaning: NCIT:C123891
-      GCTx:
-        description: GCTx is a binary, HDF5-based extension of the GCT format used to store very large
-          gene-expression or profiling matrices, developed for the Broad Institute's Connectivity Map
-          (CMap)/LINCS projects.
+      GCT/Res Format:
+        description: GCT/RES Format file format.
+        meaning: EDAM:format_3709
+      GenBank Format:
+        description: GenBank sequence file format.
+        meaning: NCIT:C190174
       GFF3:
-        description: A tab-separated format for sequence data. It uses one line per feature, each containing
-          9 columns of data, plus optional track definition lines.
+        description: General Feature Format Version 3 file format.
         meaning: NCIT:C190175
+      GIF:
+        description: Graphics Interchange Format file format.
+        meaning: EDAM:format_3467
+      GPR:
+        description: GenePix Results file format.
+        meaning: NCIT:C190176
       GTF:
-        description: A tab-delimited text format based on the general feature format (GFF) but which also
-          contains some additional information for each gene.
+        description: GTF Format file format.
         meaning: NCIT:C190177
+      gVCF:
+        description: Genomic Variant Call Format, an extension of VCF that records genotype information
+          for all positions.
+        meaning: NCIT:C204352
       GZIP Format:
-        description: A file format consisting of a 10-byte header containing a magic number, a version
-          number, and a timestamp, a Deflate-compressed body, and an 8-byte footer containing a checksum
-          and the length of the original uncompressed data.
+        description: Gzip File Format file format.
         meaning: NCIT:C80220
-      HDF:
-        description: HDF is the name of a set of file formats and libraries designed to store and organize
-          large amounts of numerical data, originally developed at the National Center for Supercomputing
-          Applications; it is supported by many platforms including Java, MATLAB, Python, and R.
-        meaning: EDAM:format_3873
       HDF5:
-        description: A hierarchical, filesystem-like data format that can store metadata in the form of
-          user-defined, named attributes, which are attached to groups and datasets, and representations
-          of images and tables built up using datasets, groups and attributes.
+        description: Hierarchical Data Format 5 file format.
         meaning: NCIT:C184763
+      HIC:
+        description: HIC contact matrix file format.
+        meaning: NCIT:C203672
       HTML:
-        description: HTML (HyperText Markup Language) is a markup format used to structure and present
-          content, including text, images, and hyperlinks, for display in web browsers.
+        description: Hypertext Markup Language file format.
         meaning: EDAM:format_2331
+      HTSeq Count:
+        description: HTSeq-count tool output file format.
+        meaning: NCIT:C205749
       IDAT:
-        description: A proprietary, encrypted, compressed electronic file format from Illumina Inc. for
-          storing genome-wide profiling data. The data contains a summary of the intensity data generated
-          from each probe used during a sequencing or array run.
+        description: IDAT Format file format.
         meaning: NCIT:C184762
-      JPG:
-        description: JPEG (Joint Photographic Experts Group) is a lossy compressed raster image file format
-          commonly used for photographic and other continuous-tone images.
-        meaning: EDAM:format_3579
+      IDF:
+        description: Investigation Description Format.
+        meaning: NCIT:C172212
+      idpDB:
+        description: IDPicker file format.
+        meaning: NCIT:C209893
+      im3:
+        description: Vectra multispectral image file format.
+      JPEG:
+        description: Joint Photographic Experts Group (JPEG) image file format.
+        meaning: NCIT:C48230
+      JPEG 2000:
+        description: JPEG 2000 image file format.
+        meaning: NCIT:C184768
       JSON:
-        description: A common open standard file format and data interchange format that uses human-readable
-          text consisting of attribute-value pairs and arrays to store and transmit data.
+        description: JSON Format file format.
         meaning: NCIT:C184769
-      LIF:
-        description: LIF (Leica Image File) is a proprietary container file format produced by Leica microscopy
-          acquisition software that stores multi-dimensional, multi-channel microscope images along with
-          associated metadata.
-      MAP:
-        description: MAP files are plain-text files that associate genomic marker positions with identifiers,
-          most commonly the PLINK .map format used in genetics to record chromosome and position information
-          for markers paired with a corresponding genotype file.
-        meaning: EDAM:format_3285
+      MAF:
+        description: Mutation Annotation Format file format.
+        meaning: NCIT:C172215
+      MAGE-TAB:
+        description: The MAGE-TAB file format.
+        meaning: EDAM:format_3162
       MAT:
-        description: A proprietary, binary data container format used by MATLAB software to store workspace
-          variables.
+        description: MAT Format file format.
         meaning: NCIT:C190178
-      MATLAB script:
-        description: The file format for MATLAB scripts or functions, stored as plain text with a .m extension
-          and executed within the MATLAB software environment.
+      MATLAB Script:
+        description: MATLAB Script File file format.
         meaning: EDAM:format_4007
-      MSF:
-        description: A proprietary mass-spectrometry format used by Thermo Scientific's ProteomeDiscoverer
-          software; it corresponds to an SQLite database that stores peptide and protein identification
-          results.
-        meaning: EDAM:format_3702
-      MTX:
-        description: A format for the storage of numerical or pattern matrices in a dense (array format)
-          or sparse (coordinate format) representation.
+      MCD:
+        description: Fluidigm Hyperion mass cytometry data file format.
+        meaning: NCIT:C224107
+      MEX:
+        description: Market Exchange (MEX) sparse matrix file format.
+        meaning: NCIT:C184778
+      MPEG-4:
+        description: MP4 multimedia file format.
+        meaning: NCIT:C190180
+      mtx:
+        description: The mtx file format.
         meaning: NCIT:C201789
+      mzIdentML:
+        description: The mzIdentML file format.
+        meaning: EDAM:format_3247
+      mzML:
+        description: Mass Spectrometry Markup Language file format.
+        meaning: EDAM:format_3244
+      mzXML:
+        description: Mass Spectrometry Extensible Markup Language file format.
+        meaning: EDAM:format_3654
+      NIFTI Format:
+        description: NIfTI Format file format.
+        meaning: EDAM:format_3549
+      ODS:
+        description: OpenDocument spreadsheet file format.
+        meaning: NCIT:C224004
+      ODT:
+        description: OpenDocument text file format.
+        meaning: NCIT:C224005
+      OME-TIFF:
+        description: Open Microscopy Environment Tagged Image File Format file format.
+        meaning: EDAM:format_3727
+      Parquet:
+        description: Apache Parquet columnar storage file format.
+        meaning: NCIT:C223247
       PDF:
-        description: An open file format created and controlled by Adobe Systems for representing two-dimensional
-          documents in a device-independent and resolution-independent fixed-layout format that encapsulates
-          text, fonts, images, and vector graphics.
+        description: Portable Document Format file format.
         meaning: NCIT:C63805
+      PDT:
+        description: Pro Tools session file legacy format.
+        meaning: NCIT:C224007
+      PED:
+        description: Pedigree file format.
+        meaning: NCIT:C209891
+      Plain Text Data Format:
+        description: A file format consisting of unformatted plain text.
+        meaning: NCIT:C85873
       PNG:
-        description: An extensible file format for lossless data compression of images.
+        description: Portable Network Graphics file format.
         meaning: NCIT:C85437
-      PZFX:
-        description: An XML-based file format used by GraphPad Prism software to store analysis projects,
-          including data tables, graphs, and statistical results.
-        meaning: NCIT:C224011
-      Python Script:
-        description: A plain text file that stores python code.
+      PRISM:
+        description: GraphPad Prism project file format.
+        meaning: NCIT:C224010
+      Python Script Format:
+        description: Python script file format.
         meaning: NCIT:C190184
+      PZFX:
+        description: GraphPad Prism XML File Format file format.
+        meaning: NCIT:C224011
+      QPTIFF:
+        description: QPTIFF tagged image file format used for multispectral imaging.
+        meaning: NCIT:C222390
       R File Format:
-        description: R is a tool for data manipulation and analysis, both a programming language and a
-          working environment; the format is used for writing and executing scripts, typically for statistical
-          computation and graphics, and for storing complete R workspaces or selected R objects.
+        description: R Format file format.
         meaning: NCIT:C190186
-      RAW:
-        description: A proprietary file format developed by Thermo Scientific to capture mass spectrometry
-          data produced by Thermo mass spectrometers.
-        meaning: NCIT:C190190
-      RDS:
-        description: A native binary file format used to save and load single R objects to and from a
-          file.
+      R Markdown:
+        description: R Markdown document file format.
+        meaning: NCIT:C190187
+      rdata:
+        description: R data file format.
+        meaning: NCIT:C224809
+      rds:
+        description: R Data Serialization file format.
         meaning: NCIT:C209895
-      ROUT:
-        description: A .Rout file is the plain-text output log generated when an R script is executed
-          in batch mode (via R CMD BATCH), capturing console output, computed results, and any warnings
-          or errors.
-      RPROJ:
-        description: An .Rproj file is a plain-text configuration file created by RStudio that records
-          project-specific settings, such as the working directory and build options, for an R project.
       RTF:
-        description: A file format that contains various formatting elements and enables exchanges of
-          text files across different word processing platforms and applications.
+        description: Rich Text Format file format.
         meaning: NCIT:C209896
-      SGI:
-        description: SGI (Silicon Graphics Image) is a raster image file format originally developed by
-          Silicon Graphics, Inc. for storing bitmap graphics, supporting both uncompressed and run-length-encoded
-          pixel data.
-      SRA:
-        description: SRA archive format is the archive format used for input to, and export from, the
-          NCBI Sequence Read Archive, storing raw next-generation sequencing reads and associated metadata.
-        meaning: EDAM:format_3698
-      STAT:
-        description: STAT denotes a plain-text file containing summary statistics or quality-control metrics
-          generated by an analysis tool, such as alignment or variant-calling statistics; its exact content
-          and structure vary by the producing software.
-      TAR Format:
-        description: A file format generated by the Unix command-line utility tar (tape archive). It is
-          used for collecting many files into one archive file.
+      SAS:
+        description: Statistical Analysis System (SAS) file format.
+        meaning: NCIT:C219045
+      SAS binary:
+        description: SAS binary file format.
+        meaning: NCIT:C219048
+      SDRF:
+        description: Sample and Data Relationship Format.
+        meaning: NCIT:C172211
+      SEG:
+        description: Segmented Data Format.
+        meaning: NCIT:C209892
+      Sequence Record Format:
+        description: The Sequence Record Format file format.
+        meaning: EDAM:format_1919
+      SPSS:
+        description: SPSS statistical software file format.
+        meaning: NCIT:C219046
+      STATA:
+        description: STATA statistical software file format.
+        meaning: NCIT:C219047
+      SVG:
+        description: Scalable Vector Graphics file format.
+        meaning: EDAM:format_3604
+      SVS:
+        description: Spectral View Settings Format file format.
+        meaning: NCIT:C162692
+      TAR:
+        description: TAR archive file format.
         meaning: NCIT:C190189
-      TDF:
-        description: TDF (Tiled Data File) is a binary, indexed file format used by the Integrative Genomics
-          Viewer (IGV) to store precomputed, multi-resolution genomic data, such as coverage or feature
-          density, for fast visualization across zoom levels.
+      TBI:
+        description: Tabix index file format.
+        meaning: NCIT:C184806
+      Thermo RAW:
+        description: Thermo Fisher mass spectrometry RAW file format.
+        meaning: NCIT:C190190
       TIFF:
-        description: A versatile bitmap image format that supports numerous data compression schemes,
-          widely used for high-quality raster images, including microscopy and pathology images.
+        description: The TIFF file format.
         meaning: EDAM:format_3591
       TSV:
-        description: A file format where each line in the file contains a single piece of data and where
-          each field or value in a line of data is separated from the next by a tab character.
+        description: Tab-Separated Value Format file format.
         meaning: NCIT:C164049
       TXT:
-        description: A data format consisting of readable textual material maintained as a sequential
-          file.
+        description: Plain Text Data Format file format.
         meaning: NCIT:C85873
       VCF:
-        description: A text-based electronic file used for storing gene sequence variation data. The first
-          text section is composed of a header containing the metadata and keywords used in the file,
-          followed by the body of the file which is tab-separated into eight mandatory data columns for
-          each sample, plus optional columns for other sample-related data.
+        description: Variant Call File Format file format.
         meaning: NCIT:C172216
-      WIG:
-        description: Wiggle format (WIG) of a sequence annotation track that consists of a value for each
-          sequence position, typically displayed in a genome browser.
-        meaning: EDAM:format_3005
-      XML:
-        description: XML (Extensible Markup Language) is a flexible, tag-based text format for representing
-          structured, hierarchical data in a manner that is both human-readable and machine-parsable.
-        meaning: EDAM:format_2332
-      ZIP:
-        description: An archive file format that supports lossless data compression. It is used to compress
-          one or more files together into a single location.
-        meaning: NCIT:C190192
-      bed12:
-        description: A BED file variant in which each feature is described using all twelve standard BED
-          columns, with no non-standard columns allowed.
-        meaning: EDAM:format_3586
-      bedgraph:
-        description: A format that allows display of continuous-valued data in track format. This display
-          type is useful for probability scores and transcriptome data.
-        meaning: NCIT:C190165
-      cel:
-        description: A type of file that stores the results of intensity calculations of pixel values
-          for DNA microarray image analysis, including intensity values, standard deviation, pixel counts,
-          and outlier/exclusion flags for each feature on the probe array.
-        meaning: NCIT:C191737
-      cloupe:
-        description: The .cloupe file format is a proprietary binary format produced by 10x Genomics Cell
-          Ranger pipelines for visualizing and exploring single-cell sequencing data in the Loupe Browser
-          desktop application.
-      docx:
-        description: A file type that uses Open XML Document format to store data for Microsoft Word and
-          other compatible programs.
-        meaning: NCIT:C190171
-      mzIdentML:
-        description: The exchange format for peptides and proteins identified from mass spectra, standardised
-          by HUPO PSI-PI; it can be used for outputs of proteomics search engines.
-        meaning: EDAM:format_3247
-      mzXML:
-        description: A common file format for proteomics mass spectrometric data developed at the Seattle
-          Proteome Center/Institute for Systems Biology.
-        meaning: EDAM:format_3654
-      pptx:
-        description: A visual design format that includes layout, fonts, colors, and aspect ratios for
-          slide-based presentations. PPTX is an XML-based format that is the default for modern Microsoft
-          PowerPoint files.
-        meaning: NCIT:C224009
-      rcc:
-        description: Reporter Code Count (RCC) is a data file output by the NanoString nCounter Digital
-          Analyzer, containing gene/sample information, probe information, and probe counts.
-        meaning: EDAM:format_3580
-      xls:
-        description: A proprietary binary file format used to store spreadsheet data in Microsoft Excel.
+      XLS:
+        description: XLS Format file format.
         meaning: NCIT:C190191
-      xlsx:
-        description: A proprietary file format developed by Microsoft that allows the user to save a spreadsheet
-          created in Excel in an open XML format; the file can be read and opened by other spreadsheet-compatible
-          applications.
+      XLSX:
+        description: Excel Open XML Format file format.
         meaning: NCIT:C164050
-      MGF:
-        description: Mascot Generic Format (MGF) is a text-based file format that encodes multiple tandem
-          mass spectrometry (MS/MS) spectra, with m/z and intensity pairs, in a single file.
-        meaning: EDAM:format_3651
-      BIGWIG:
-        description: A format for large sequence annotation tracks that consist of a value for each sequence
-          position, similar to the textual wiggle (WIG) format, but indexed and compressed for efficient
-          random access.
-        meaning: NCIT:C190167
-      H5AD:
-        description: H5AD is an HDF5-based file format used by the AnnData Python library (and Scanpy/Seurat-compatible
-          tools) to store annotated data matrices, such as single-cell gene-expression counts, together
-          with associated observation and variable (cell/gene) metadata.
-        meaning: EDAM:format_3590
-      H5:
-        description: An HDF5 file appears to the user as a directed graph whose nodes are higher-level
-          HDF5 objects, such as groups, datasets, and named datatypes, used to store and organize large
-          amounts of numerical and hierarchical data.
-        meaning: EDAM:format_3590
-      SF:
-        description: SF commonly denotes the tab-delimited transcript-quantification output file (e.g.,
-          quant.sf) produced by RNA-seq pseudoalignment/quantification tools such as Salmon, reporting
-          per-transcript abundance estimates (TPM and read counts).
-      PKL:
-        description: Format used by the Python pickle module for serializing and de-serializing a Python
-          object structure to and from a byte stream.
-        meaning: EDAM:format_4002
-      BPM:
-        description: BPM (BeadPool Manifest) is a proprietary Illumina binary file format that contains
-          the design and manifest information, such as probe sequences, bead addresses, and annotations,
-          for a genotyping or methylation microarray.
-      Unspecified:
-        description: Indicates that the file format of the associated dataset or file has not been specified
-          by the data submitter.
-        meaning: NCIT:C38046
-      Pending Annotation:
-        description: Indicates that curatorial annotation of the file's format has not yet been completed
-          and is pending further review.
-        meaning: NCIT:C53470
-      maf:
-        description: A tab-delimited text file containing mutation information aggregated across a set
-          of variant call files (VCF).
-        meaning: NCIT:C172215
-      CLS:
-        description: CLS is a plain-text categorical class (phenotype) label file format used by tools
-          such as GSEA to specify sample group or class assignments corresponding to columns in an expression
-          dataset.
-      SCN:
-        description: SCN is a proprietary, TIFF-based whole-slide image file format produced by Leica
-          Biosystems digital pathology scanners, encoding multi-resolution, multi-channel brightfield
-          or fluorescence slide images.
-      SVS:
-        description: SVS is a proprietary, pyramidal TIFF-based whole-slide image file format produced
-          by Aperio (Leica Biosystems) digital slide scanners, used to store high-resolution histopathology
-          images.
-        meaning: NCIT:C162692
+      XML:
+        description: Extensible Markup Language file format.
+        meaning: EDAM:format_2332
+      YAML:
+        description: YAML Language file format.
+        meaning: EDAM:format_3750
+      ZIP:
+        description: ZIP Format file format.
+        meaning: NCIT:C190192
   File Data Category Enum:
     permissible_values:
       Clinical: null
@@ -11986,7 +11882,7 @@ enums:
           single-cell resolution alongside digital profiling data from photocleavable-oligonucleotide-barcoded
           probes imaged from selected regions of interest.'
         meaning: NCIT:C181933
-      H&E:
+      H and E:
         description: 'Hematoxylin and Eosin (H&E) staining: a routine histological staining method using
           two dyes, hematoxylin, which stains cell nuclei a dark purplish color, and eosin, which stains
           cytoplasm and connective tissue an orangish-pink color.'
@@ -12013,29 +11909,58 @@ enums:
           elemental metal reporters, capable of analyzing up to 100 targets simultaneously over a five-log
           dynamic range.'
         meaning: NCIT:C181930
+      mIF:
+        description: 'Multiplexed Immunofluorescence (mIF): a method that enables simultaneous detection
+          of multiple biomarkers on a single tissue section using immunofluorescence techniques.'
+        meaning: NCIT:C181928
       mIHC:
         description: 'Multiplexed Immunohistochemistry (mIHC): a method that enables simultaneous detection
           of multiple biomarkers on a single tissue section using immunohistochemistry techniques.'
         meaning: NCIT:C181927
-      MxIF:
-        description: 'Multiplexed Immunofluorescence (MxIF): a method that enables simultaneous detection
-          of multiple biomarkers on a single tissue section using immunofluorescence techniques.'
-        meaning: NCIT:C181928
       Not Applicable:
         description: Indicates that determination of a value is not relevant in the current context.
         meaning: NCIT:C48660
-      SABER:
-        description: 'Signal Amplification By Exchange Reaction (SABER): a DNA-based in situ hybridization
-          method that uses a primer exchange reaction to generate long, concatemeric single-stranded DNA
-          amplification tails on oligonucleotide probes, enabling programmable, multiplexed signal amplification
-          for imaging RNA, DNA, or protein targets without enzymatic or antibody-based amplification.'
-        meaning: EFO:0022998
       t-CyCIF:
         description: 'Tissue-based Cyclic Immunofluorescence (t-CyCIF): a multiplex immunofluorescence
           imaging assay that uses iterative cycles of antibody staining, fluorescence imaging, and fluorophore
           inactivation to enable highly multiplexed spatial detection and quantification of protein targets
           within the same tissue specimen while preserving tissue architecture and cellular context.'
         meaning: EFO:0023019
+      ELISA:
+        description: A highly sensitive technique for detecting and measuring antigens or antibodies in
+          a solution using immobilized antibodies and a tagged detection step.
+        meaning: NCIT:C16553
+      CyTOF:
+        description: A flow cytometry technique (Mass Cytometry) that utilizes mass spectrometry to detect
+          antibodies labeled with heavy metal ion tags bound to antigens of interest on single cells.
+        meaning: NCIT:C187898
+      ctdDNA:
+        description: Circulating tumor-derived DNA shed into a bodily fluid by a tumor.
+        meaning: NCIT:C113243
+      ATAC-Seq:
+        description: A molecular genetic technique that isolates and sequences chromosomal regions rich
+          in open chromatin, identifying regions of transcription factor and nucleosome binding.
+        meaning: NCIT:C156056
+      NULISA:
+        description: 'NUcleic acid-Linked Immuno-Sandwich Assay (NULISA): a proximity-based immunoassay
+          technology for high-sensitivity, high-plex protein quantification.'
+      RNA-Seq:
+        description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
+          messenger RNA transcripts in an individual.
+        meaning: NCIT:C124261
+      WES:
+        description: A procedure that can determine the DNA sequence for all of the exons in an individual.
+        meaning: NCIT:C101295
+      TCR-Seq:
+        description: Sequencing of T cell receptor genes to characterize the T cell receptor repertoire.
+        meaning: NCIT:C189102
+      scRNA-Seq:
+        description: A procedure that can determine the nucleotide sequence for all of the RNA transcripts
+          in an amplified nucleotide sample derived from a single cell.
+        meaning: NCIT:C171152
+      Olink PEA:
+        description: 'Olink Proximity Extension Assay: a high-multiplex protein biomarker detection technology.'
+        meaning: OBI:0003112
   Image DICOM Modality Type Enum:
     permissible_values:
       OP: null
@@ -13155,12 +13080,28 @@ enums:
       RNA-Seq:
         description: Random sequencing of whole transcriptome
         meaning: NCIT:C124261
+      mRNA-Seq:
+        description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
+          messenger RNA transcripts in an individual.
+        meaning: NCIT:C129432
+      Bulk RNA-Seq:
+        description: RNA sequencing performed on a population of cells in aggregate rather than at single-cell
+          resolution.
+        meaning: NCIT:C219552
+      scRNA-Seq:
+        description: A procedure that can determine the nucleotide sequence for all of the RNA transcripts
+          in an amplified nucleotide sample derived from a single cell.
+        meaning: NCIT:C171152
       SELEX:
         description: Systematic Evolution of Ligands by EXponential enrichment
         meaning: NCIT:C204826
       DNA-Seq:
         description: The determination of the sequence of purine and pyrimidine bases in a strand of DNA.
         meaning: NCIT:C153598
+      scDNA-Seq:
+        description: A procedure that can determine the nucleotide sequence of specific regions or the
+          entire genome in an amplified nucleotide sample derived from a single cell.
+        meaning: NCIT:C223894
       ssRNA-seq:
         description: strand-specific RNA sequencing
         meaning: NCIT:C172859
@@ -14880,36 +14821,15 @@ enums:
           with attribution.
   Sex Enum:
     permissible_values:
-      Decline to answer:
-        description: Used to indicate when a respondent makes a decision to not answer a question.
-        meaning: NCIT:C51024
-      Don't know:
-        description: Not known, observed, recorded, or reported as unknown by the data contributor.
-        meaning: NCIT:C17998
       Female:
         description: An individual who belongs to the sex that normally produces ova.
         meaning: NCIT:C16576
-      Intersex:
-        description: Refers to an individual who was born with genitalia and/or secondary sexual characteristics
-          of indeterminate sex, or which combine features of both sexes.
-        meaning: NCIT:C45908
       Male:
         description: An individual who belongs to the sex that normally produces sperm.
         meaning: NCIT:C20197
-      None of these describe me:
-        description: A response indicating that none of the provided response options accurately describe
-          the respondent.
-        meaning: NCIT:C177109
-      Prefer not to answer:
-        description: A response indicating that an individual prefers or preferred not to answer.
-        meaning: NCIT:C132222
       Unknown:
         description: Not known, observed, recorded, or reported as unknown by the data contributor.
         meaning: NCIT:C17998
-      X:
-        description: A designation used when biological sex is recorded as 'X', typically indicating a
-          non-binary, indeterminate, or unspecified sex designation.
-        meaning: NCIT:C200588
   Tumor Grade Enum:
     permissible_values:
       GB Borderline:
@@ -17389,6 +17309,40 @@ enums:
         description: A screening assay testing multiple chemical compounds for a biological effect.
       metabolic screening:
         description: A screening assay assessing metabolic activity or metabolite profiles.
+  File Assay Category Enum:
+    permissible_values:
+      DNA Sequencing:
+        description: The determination of the sequence of purines and pyrimidines in deoxyribonucleic
+          acid (DNA).
+        meaning: NCIT:C153598
+      Immunofluorescence:
+        description: A microscopy staining method that utilizes immunofluorescent markers for use with
+          histological applications of preserved cells.
+        meaning: NCIT:C142337
+      LC-MS/MS:
+        description: An analytical technique wherein liquid chromatography is coupled to tandem mass spectrometry
+          in order to separate
+      Methylation Analysis:
+        description: An analysis of DNA or protein to detect the presence and/or location of methyl groups.
+        meaning: NCIT:C190764
+      Multigene Expression Assay:
+        description: An assay that can simultaneously analyze the expression of multiple genes or genetic
+          loci of interest.
+        meaning: NCIT:C210244
+      Pathology:
+        description: The medical science, and specialty practice, concerned with all aspects of disease,
+          with special reference to the essential nature, causes, and development of abnormal conditions.
+        meaning: NCIT:C18189
+      Quantitative Immunofluorescence:
+        description: Immunofluorescence techniques that allow for objective
+      Radiology:
+        description: The branch of medical science dealing with the medical use of X-rays or other penetrating
+          radiation.
+        meaning: NCIT:C17059
+      RNA Sequencing:
+        description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
+          messenger RNA transcripts in an individual.
+        meaning: NCIT:C124261
   Tissue Enum:
     permissible_values:
       Gonad:

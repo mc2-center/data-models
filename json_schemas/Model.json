@@ -130,15 +130,9 @@
     "Sex": {
       "description": "Biological sex associated with the individual, biospecimen donor, or model.",
       "enum": [
-        "Declinetoanswer",
-        "Don'tknow",
         "Female",
-        "Intersex",
         "Male",
-        "Noneofthesedescribeme",
-        "Prefernottoanswer",
-        "Unknown",
-        "X"
+        "Unknown"
       ],
       "title": "Sex"
     },
