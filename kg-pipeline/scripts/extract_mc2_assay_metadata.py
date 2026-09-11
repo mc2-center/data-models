@@ -1,0 +1,216 @@
+"""MC2 assay-metadata discovery + extraction (Part B, B1+B2).
+
+Reads real per-file Synapse annotations reachable from each already-extracted
+CCKP `Dataset.datasetId` and turns them into a `File View`-shaped CSV -
+NOT a Biospecimen/Individual/Model extract. See the "Discovery findings"
+section of this docstring for why, established by probing live data rather
+than assumed:
+
+  1. Identity check first. A `Dataset.datasetId` is NOT always a real Synapse
+     `Dataset`/`DatasetCollection` entity - some are plain Folders (confirmed
+     live: 2 of the first 15 datasetIds probed). Only `Dataset`/
+     `DatasetCollection` entities (`entity.concreteType ==
+     "org.sagebionetworks.repo.model.table.Dataset[Collection]"`) are queried
+     further - a Folder is skipped, never treated as walkable.
+  2. A confirmed Dataset/DatasetCollection entity's membership comes from its
+     own `datasetItems` property (a list of `{entityId, versionNumber}`
+     dicts) - NOT from listing a folder's children.
+  3. Per mc2-center-dcc's own `table_to_annotations.py` (the DCC's write-side
+     pipeline that produces these annotations), metadata is pushed down as
+     *native Synapse annotations* directly on each member File entity - read
+     here via `syn.get_annotations(file_id)`, never re-derived by this
+     script. Confirmed live: every File's annotation dict has a **stable**
+     key set (`BiospecimenKey`, `Component`, `DataUseCodes`, `DatasetViewKey`,
+     `EntityId`, `FileAlias`, `FileAssay`, `FileDescription`, `FileDesign`,
+     `FileFormat`, `FileLevel`, `FileSpecies`, `FileTissue`, `FileTumorType`,
+     `FileUrl`, `FileViewId`, `Id`, `StudyKey`) across every Dataset probed -
+     this is the MC2 model's `File View` class (see `modules/file/
+     annotationProperty.csv`, `schema/mc2_model.linkml.yaml`'s `File View`
+     class), NOT the full Biospecimen/Individual/Model record: `File View`
+     only carries a `Biospecimen Key` **foreign key**, not Biospecimen's own
+     detail fields (Type, Species, Preservation Method, Preservation Medium
+     [renamed from Fixative this session], ...). Reaching those requires the
+     DCC's own upstream Biospecimen/Individual/Model *tables* (joined via
+     that key) - explicitly out of scope for this script per the decision to
+     read only already-resolved per-file annotations, not re-derive
+     DCC-internal joins.
+  4. `FileTissue`/`FileTumorType` appear in every live annotation dict.
+     **Updated 2026-09-03**: the MC2 attributes these keys resolve to were
+     consolidated this session from per-module copies (`File Tissue`/`File
+     Tumor Type`) into shared `Tissue`/`Tumor Type` attributes now used by
+     `Dataset View`/`File View`/`Publication View` alike - and, as a
+     verified side effect, they ARE now attached to the `File View` class's
+     `slots:` list in the regenerated `schema/mc2_model.linkml.yaml`
+     (confirmed via `SchemaView.induced_class("File View").attributes`,
+     not assumed). The previously-documented gap (not attached to any
+     class, so `make harmonize-mc2-assay`'s normal pass never touched them)
+     is resolved for `Tissue`/`Tumor Type` as of this consolidation.
+
+     **Verified 2026-09-04** (not just inferred): the redundant piece -
+     `link_sagebrain.py` re-harmonizing these two fields itself via a second
+     `load_cv_lookup` pass - IS gone (confirmed no such call remains in that
+     script). What's left in `link_sagebrain.py` is NOT redundant: it reads
+     the already-resolved NCIT `{field}_ontology_iri` values `harmonize.py`'s
+     normal pass now produces and cross-walks them further, to UBERON/MONDO
+     (sagebrain-model's own anchor ontologies), emitting sagebrain-specific
+     `source_tissue`/`has_pathology` triples on synthetic `MaterialSample`
+     stub nodes - a real federation-specific step `harmonize.py`/
+     `build_triples.py` never do. Traced end-to-end: this environment's
+     cached `data/mc2_assay/raw/File View.csv` predates this session's
+     renames (its headers still read `File Tissue`/`File Assay`, from
+     before this fix), so re-running `make harmonize-mc2-assay` against it
+     as-is resolves nothing for these two fields - not a mechanism failure,
+     just extraction staleness (no Synapse credentials here to pull a fresh
+     `File View.csv` with current headers). Verified the actual mechanism
+     instead against a renamed copy of that same real cached data (same real
+     values, headers updated to the names this fix now produces): harmonize.py
+     resolved 3 Tissue + 4 Tumor Type terms to real NCIT IRIs, and
+     `link_sagebrain.py` emitted 10 real UBERON/MONDO triples on 4 distinct
+     `MaterialSample` nodes from them - confirming both halves work and stay
+     genuinely distinct. See `link_sagebrain.py`'s own docstring and
+     plans/crdc_cde_integration.md's kg-pipeline round for the full trace.
+
+Output: one row per member file, `data/mc2_assay/raw/File View.csv` (matches
+the class's real name, spaces included, per harmonize.py's `{cls_name}.csv`
+convention), plus a `datasetId` column so a `cckp_join`-style edge back to
+the (public) `Dataset` class is possible later - not the DCC's internal
+Biospecimen/Individual/Model tables, which this script never touches.
+"""
+
+import argparse
+import csv
+import os
+import time
+
+import synapseclient
+
+# Synapse annotation key -> MC2 model attribute name, built from what's
+# actually observed on live File View-annotated files (verified against
+# several real Datasets, not assumed from the schema alone - see docstring
+# point 4 re: FileTissue/FileTumorType). `Component`/`EntityId`/`Id` are
+# Synapse/schematic bookkeeping, not modeled MC2 attributes - skipped.
+ANNOTATION_KEY_TO_ATTRIBUTE = {
+    "FileViewId": "FileView_id",
+    "BiospecimenKey": "Biospecimen Key",
+    "StudyKey": "Study Key",
+    "DatasetViewKey": "DatasetView Key",
+    "FileAlias": "File Alias",
+    "FileDescription": "File Description",
+    "FileDesign": "File Design",
+    "FileLevel": "File Level",
+    "FileAssay": "Assay",
+    "FileSpecies": "Species",
+    "FileUrl": "File Url",
+    "FileFormat": "File Format",
+    "DataUseCodes": "Data Use Codes",
+    "FileTissue": "Tissue",
+    "FileTumorType": "Tumor Type",
+}
+DATASET_CONCRETE_TYPES = {
+    "org.sagebionetworks.repo.model.table.Dataset",
+    "org.sagebionetworks.repo.model.table.DatasetCollection",
+}
+LIST_DELIMITER = "|"
+
+
+def annotation_values(ann, key):
+    """synapseclient annotation values always come back as a list, even for
+    a single-valued slot - join multi-valued ones with harmonize.py's own
+    LIST_DELIMITER; a single value is returned bare."""
+    values = [v for v in (ann.get(key) or []) if v not in (None, "")]
+    return LIST_DELIMITER.join(str(v) for v in values)
+
+
+def discover_dataset_entities(syn, dataset_ids, sleep_s=0.1):
+    """Identity-check every candidate id; return only confirmed Dataset/
+    DatasetCollection entities. Reports (not silently drops) what else was
+    found, since the plan explicitly calls this out as unknown until probed."""
+    confirmed, skipped_by_type = [], {}
+    for did in dataset_ids:
+        try:
+            entity = syn.get(did, downloadFile=False)
+        except Exception as exc:  # noqa: BLE001 - report and keep going
+            skipped_by_type[f"ERROR: {exc}"] = skipped_by_type.get(f"ERROR: {exc}", 0) + 1
+            continue
+        if entity.concreteType in DATASET_CONCRETE_TYPES:
+            confirmed.append(did)
+        else:
+            skipped_by_type[entity.concreteType] = skipped_by_type.get(entity.concreteType, 0) + 1
+        time.sleep(sleep_s)
+    return confirmed, skipped_by_type
+
+
+def extract_file_view_rows(syn, dataset_ids, sleep_s=0.1, max_files_per_dataset=None):
+    rows = []
+    for did in dataset_ids:
+        entity = syn.get(did, downloadFile=False)
+        items = entity.properties.get("datasetItems") or []
+        if max_files_per_dataset:
+            items = items[:max_files_per_dataset]
+        for item in items:
+            file_id = item["entityId"]
+            try:
+                ann = syn.get_annotations(file_id)
+            except Exception as exc:  # noqa: BLE001 - report and keep going
+                print(f"  ! could not read annotations for {file_id}: {exc}")
+                continue
+            row = {"datasetId": did, "fileEntityId": file_id}
+            for key, attr in ANNOTATION_KEY_TO_ATTRIBUTE.items():
+                row[attr] = annotation_values(ann, key)
+            if any(v for k, v in row.items() if k not in ("datasetId", "fileEntityId")):
+                rows.append(row)
+            time.sleep(sleep_s)
+    return rows
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--dataset-csv", required=True, help="data/raw/Dataset.csv (already extracted)")
+    parser.add_argument("--out-dir", required=True, help="data/mc2_assay/raw")
+    parser.add_argument("--max-datasets", type=int, default=None,
+                         help="Cap how many datasetIds to probe/extract - omit for all")
+    parser.add_argument("--max-files-per-dataset", type=int, default=None,
+                         help="Cap how many member files to read per confirmed Dataset entity")
+    parser.add_argument("--discovery-report", default=None,
+                         help="Optional path to write the identity-check discovery report as JSON")
+    args = parser.parse_args()
+
+    with open(args.dataset_csv, newline="") as f:
+        dataset_ids = [r["datasetId"] for r in csv.DictReader(f)]
+    if args.max_datasets:
+        dataset_ids = dataset_ids[: args.max_datasets]
+
+    syn = synapseclient.Synapse()
+    syn.login(silent=True)
+
+    confirmed, skipped_by_type = discover_dataset_entities(syn, dataset_ids)
+    print(f"Discovery: {len(confirmed)}/{len(dataset_ids)} datasetId(s) are real Dataset/DatasetCollection entities")
+    for concrete_type, n in sorted(skipped_by_type.items(), key=lambda kv: -kv[1]):
+        print(f"  skipped {n}: {concrete_type}")
+
+    if args.discovery_report:
+        import json
+
+        with open(args.discovery_report, "w") as f:
+            json.dump({"n_probed": len(dataset_ids), "n_confirmed": len(confirmed),
+                       "skipped_by_type": skipped_by_type}, f, indent=2)
+        print(f"Wrote discovery report -> {args.discovery_report}")
+
+    rows = extract_file_view_rows(syn, confirmed, max_files_per_dataset=args.max_files_per_dataset)
+    print(f"Extracted {len(rows)} File View row(s) from {len(confirmed)} confirmed Dataset entity/entities")
+
+    os.makedirs(args.out_dir, exist_ok=True)
+    out_path = os.path.join(args.out_dir, "File View.csv")
+    fieldnames = ["datasetId", "fileEntityId"] + list(ANNOTATION_KEY_TO_ATTRIBUTE.values())
+    with open(out_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    print(f"Wrote -> {out_path}")
+    print("Note: this is a File View extract (per-file annotations only) - NOT full Biospecimen/Individual/"
+          "Model records, which live in separate DCC-internal tables this script does not query. See the "
+          "module docstring's 'Discovery findings'.")
+
+
+if __name__ == "__main__":
+    main()

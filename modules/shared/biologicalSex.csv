@@ -1,10 +1,4 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Decline to answer,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Don't know,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Female,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Intersex,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Male,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-None of these describe me,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Prefer not to answer,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-Unknown,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
-X,,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Female,An individual who belongs to the sex that normally produces ova.,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,NCIT:C16576,http://purl.obolibrary.org/obo/NCIT_C16576,C16576,
+Male,An individual who belongs to the sex that normally produces sperm.,,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,NCIT:C20197,http://purl.obolibrary.org/obo/NCIT_C20197,C20197,
+Unknown,"Not known, observed, recorded, or reported as unknown by the data contributor.",,,FALSE,,Biological Sex,,CDS v5.0.4/Participant-sex,,,NCIT:C17998,http://purl.obolibrary.org/obo/NCIT_C17998,C17998,

@@ -1,5 +1,5 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Oligo-dT,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Poly-dT,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Feature barcoding,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
-Random,,,,FALSE,,Reverse Transcription Primer,,,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Oligo-dT","DNA primers consisting of 12-18 deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.","","","FALSE","","Reverse Transcription Primer","","","","","NCIT:C201929","http://purl.obolibrary.org/obo/NCIT_C201929","C201929",""
+"Poly-dT","DNA primers consisting of deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.","","","FALSE","","Reverse Transcription Primer","","","","","NCIT:C201929","http://purl.obolibrary.org/obo/NCIT_C201929","C201929",""
+"Feature barcoding","A technology platform that uses oligonucleotide barcodes to simultaneously measure gene expression and other cellular features (surface proteins, T/B cell receptors, CRISPR perturbations) at single-cell resolution.","","","FALSE","","Reverse Transcription Primer","","","","","NCIT:C202255","http://purl.obolibrary.org/obo/NCIT_C202255","C202255",""
+"Random","Short oligonucleotides of random sequence that anneal throughout the length of RNA templates and are used to prime reverse transcription.","","","FALSE","","Reverse Transcription Primer","","","","","NCIT:C201930","http://purl.obolibrary.org/obo/NCIT_C201930","C201930",""

@@ -1,116 +1,116 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Allergy Clinical Immunology and Immunotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biochemistry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioimaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Bioinformatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biological Databases,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomedical Science,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biomolecular Simulation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biophysics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotechnology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Biotherapeutics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cell Culture Collection,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chemistry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chip-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Chromosome Conformation Capture,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Comparative Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,
-Compound Libraries and Screening,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computational Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Computer Science,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytogenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Cytometry,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Mutation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Packaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-DNA Polymorphism,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Architecture Analysis and Design,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Identity and Mapping,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Mining,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Submission Annotation and Curation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Data Visualisation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Developmental Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Development,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Discovery,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Drug Metabolism,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Electron Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Epigenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Evolutionary Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Exome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Experimental Design and Studies,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Function Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Functional Regulatory and Non-Coding RNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-GWAS Study,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Expression,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Regulation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Structure,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene Transcripts,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Gene and Protein Families,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Engineering,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetic Variation,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Genotype and Phenotype,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Imaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoinformatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoprecipitation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Immunoproteins and Antigens,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Infectious Disease,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Informatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Laboratory Techniques,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Light Microscopy,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Lipids,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Machine Learning,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mapping,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Mathematics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Imaging,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medical Informatics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicine,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Medicines Research and Development,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Membrane and Lipoproteins,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Metagenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 11/11/2022
-Molecular Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Genetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Molecular Interactions Pathways and Networks,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acid Structure Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Nucleic Acids,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Omics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Oncology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Ontology and Terminology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pathology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacogenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Pharmacovigilance,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenetics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogenomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Phylogeny,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Preclinical and Clinical Studies,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Probes and Primers,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Expression,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Modifications,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Protein Properties,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteins,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Proteomics Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-RNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Safety Sciences,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sample Collections,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequence Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Simulation Experiment,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Software Engineering,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Statistics and Probability,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Analysis,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Structural Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Systems Biology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcription Factors and Regulatory Sites,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Transcriptomics,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Virology,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Whole Genome Sequencing,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-Workflows,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
-scRNA-Seq,,,,FALSE,,Tool Topic,,EDAM,,,,,,Added by Brynn 06/30/2022
+Allergy Clinical Immunology and Immunotherapeutics,"Health issues related to the immune system and their prevention, diagnosis and management.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3400,http://edamontology.org/topic_3400,,
+Biochemistry,Chemical substances and physico-chemical processes and that occur within living organisms.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3292,http://edamontology.org/topic_3292,,
+Bioimaging,The use of imaging techniques to understand biology.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3383,http://edamontology.org/topic_3383,,
+Bioinformatics,"The archival, curation, processing and analysis of complex biological data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0091,http://edamontology.org/topic_0091,,
+Biological Databases,"The general handling of data stored in digital archives such as databases, databanks, web portals, and other data resources.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3489,http://edamontology.org/topic_3489,,
+Biology,"The study of life and living organisms, including their morphology, biochemistry, physiology, development, evolution, and so on.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3070,http://edamontology.org/topic_3070,,
+Biomedical Science,Topic concerning biological science that is (typically) performed in the context of medicine.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3344,http://edamontology.org/topic_3344,,
+Biomolecular Simulation,The study and simulation of molecular conformations using a computational model and computer simulations.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3892,http://edamontology.org/topic_3892,,
+Biophysics,The use of physics to study biological system.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3306,http://edamontology.org/topic_3306,,
+Biotechnology,"The exploitation of biological process, structure and function for industrial purposes, for example the genetic manipulation of microorganisms for the antibody production.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3297,http://edamontology.org/topic_3297,,
+Biotherapeutics,The process of formulating and administering a pharmaceutical compound to achieve a therapeutic effect.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3374,http://edamontology.org/topic_3374,,
+Cell Biology,"Cells, such as key genes and proteins involved in the cell cycle.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2229,http://edamontology.org/topic_2229,,
+Cell Culture Collection,"Collections of cells grown under laboratory conditions, specifically, cells from multi-cellular eukaryotes and especially animal cells.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3340,http://edamontology.org/topic_3340,,
+Chemistry,"The composition and properties of matter, reactions, and the use of reactions to create new substances.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3314,http://edamontology.org/topic_3314,,
+Chip-Seq,The analysis of protein-DNA interactions where chromatin immunoprecipitation (ChIP) is used in combination with massively parallel DNA sequencing to identify the binding sites of DNA-associated proteins.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3169,http://edamontology.org/topic_3169,,
+Chromosome Conformation Capture,Molecular biology methods used to analyze the spatial organization of chromatin in a cell.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3940,http://edamontology.org/topic_3940,,
+Comparative Genomics,"The study (typically comparison) of the sequence, structure or function of multiple genomes.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0797,http://edamontology.org/topic_0797,,
+Compound Libraries and Screening,"Collections of chemicals, typically for use in high-throughput screening experiments.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3343,http://edamontology.org/topic_3343,,
+Computational Biology,"The development and application of theory, analytical methods, mathematical models and computational simulation of biological systems.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3307,http://edamontology.org/topic_3307,,
+Computer Science,The theory and practical use of computer systems.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3316,http://edamontology.org/topic_3316,,
+Cytogenetics,"The branch of genetics concerned with the relationships between chromosomes and cellular behaviour, especially during mitosis and meiosis.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3959,http://edamontology.org/topic_3959,,
+Cytometry,Cytometry is the measurement of the characteristics of cells.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3934,http://edamontology.org/topic_3934,,
+DNA,"DNA sequences and structure, including processes such as methylation and replication.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0654,http://edamontology.org/topic_0654,,
+DNA Mutation,DNA mutation.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2533,http://edamontology.org/topic_2533,,
+DNA Packaging,"DNA-histone complexes (chromatin), organisation of chromatin into nucleosomes and packaging into higher-order structures.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3176,http://edamontology.org/topic_3176,,
+DNA Polymorphism,DNA polymorphism.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2885,http://edamontology.org/topic_2885,,
+Data Architecture Analysis and Design,"The development of policies, models and standards that cover data acquisition, storage and integration, such that it can be put to use, typically through a process of systematically applying statistical and / or logical techniques to describe, illustrate, summarise or evaluate data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3365,http://edamontology.org/topic_3365,,
+Data Identity and Mapping,"Topic concerning the identity of biological entities, or reports on such entities, and the mapping of entities and records in different databases.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3345,http://edamontology.org/topic_3345,,
+Data Mining,The discovery of patterns in large data sets and the extraction and trasnsformation of those patterns into a useful format.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3473,http://edamontology.org/topic_3473,,
+Data Submission Annotation and Curation,"Data curation and archival includes the preservation of data in a repository, archive, or a deposition database; and curation of data and metadata, database accessions, annotation, and data provenance.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0219,http://edamontology.org/topic_0219,,
+Data Visualisation,"Rendering (drawing on a computer screen) or visualisation of molecular sequences, structures or other biomolecular data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0092,http://edamontology.org/topic_0092,,
+Developmental Biology,How organisms grow and develop.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3064,http://edamontology.org/topic_3064,,
+Drug Development,The process of bringing a new drug to market once a lead compounds has been identified through drug discovery.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3373,http://edamontology.org/topic_3373,,
+Drug Discovery,The discovery and design of drugs or potential drug compounds.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3336,http://edamontology.org/topic_3336,,
+Drug Metabolism,The study of how a drug interacts with the body.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3375,http://edamontology.org/topic_3375,,
+Electron Microscopy,"The study of matter by studying the interference pattern from firing electrons at a sample, to analyse structures at resolutions higher than can be achieved using light.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0611,http://edamontology.org/topic_0611,,
+Epigenetics,"Topic concerning the study of heritable changes, for example in gene expression or phenotype, caused by mechanisms other than changes in the DNA sequence.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3295,http://edamontology.org/topic_3295,,
+Evolutionary Biology,"The evolutionary processes, from the genetic to environmental scale, that produced life in all its diversity.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3299,http://edamontology.org/topic_3299,,
+Exome Sequencing,"Laboratory technique to sequence all the protein-coding regions in a genome, i.e., the exome.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3676,http://edamontology.org/topic_3676,,
+Experimental Design and Studies,"The design of an experiment intended to test a hypothesis, and describe or explain empirical data obtained under various experimental conditions.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3678,http://edamontology.org/topic_3678,,
+Function Analysis,The study of gene and protein function including the prediction of functional properties of a protein.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_1775,http://edamontology.org/topic_1775,,
+Functional Genomics,"The study of gene or protein functions and their interactions in totality in a given organism, tissue, cell etc.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0085,http://edamontology.org/topic_0085,,
+Functional Regulatory and Non-Coding RNA,"Non-coding or functional RNA sequences, including regulatory RNA sequences, ribosomal RNA (rRNA) and transfer RNA (tRNA).",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0659,http://edamontology.org/topic_0659,,
+GWAS Study,Genome-wide association study experiments.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3517,http://edamontology.org/topic_3517,,
+Gene Expression,The analysis of levels and patterns of synthesis of gene products (proteins and functional RNA) including interpretation in functional terms of gene expression data.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0203,http://edamontology.org/topic_0203,,
+Gene Regulation,The regulation of gene expression.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0204,http://edamontology.org/topic_0204,,
+Gene Structure,"Gene structure, regions which make an RNA product and features such as promoters, coding regions, gene fusion, splice sites etc.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0114,http://edamontology.org/topic_0114,,
+Gene Transcripts,"Transcription of DNA into RNA and features of a messenger RNA (mRNA) molecules including precursor RNA, primary (unprocessed) transcript and fully processed molecules.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3512,http://edamontology.org/topic_3512,,
+Gene and Protein Families,"Particular gene(s), gene family or other gene group or system and their encoded proteins.Primarily the classification of proteins (from sequence or structural data) into clusters, groups, families etc., curation of a particular protein or protein family, or any other proteins that have been...",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0623,http://edamontology.org/topic_0623,,
+Genetic Engineering,The application of biotechnology to directly manipulate an organism's genes.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3912,http://edamontology.org/topic_3912,,
+Genetic Variation,"Stable, naturally occurring mutations in a nucleotide sequence including alleles, naturally occurring mutations such as single base nucleotide substitutions, deletions and insertions, RFLPs and other polymorphisms.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0199,http://edamontology.org/topic_0199,,
+Genetics,"The study of genes, genetic variation and heredity in living organisms.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3053,http://edamontology.org/topic_3053,,
+Genomics,"Whole genomes of one or more organisms, or genomes in general, such as meta-information on genomes, genome projects, gene names etc.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0622,http://edamontology.org/topic_0622,,
+Genotype and Phenotype,"The study of genetic constitution of a living entity, such as an individual, and organism, a cell and so on, typically with respect to a particular observable phenotypic traits, or resources concerning such traits, which might be an aspect of biochemistry, physiology, morphology, anatomy,...",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0625,http://edamontology.org/topic_0625,,
+Imaging,The visual representation of an object.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3382,http://edamontology.org/topic_3382,,
+Immunoinformatics,"Immunoinformatics is the field of computational biology that deals with the study of immunoloogical questions. Immunoinformatics is at the interface between immunology and computer science. It takes advantage of computational, statistical, mathematical approaches and enhances the understanding of...",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3948,http://edamontology.org/topic_3948,,
+Immunology,"The application of information technology to immunology such as immunological processes, immunological genes, proteins and peptide ligands, antigens and so on.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0804,http://edamontology.org/topic_0804,,
+Immunomics,"The study of immune system as a whole, its regulation and response to pathogens using genome-wide approaches.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3967,http://edamontology.org/topic_3967,,
+Immunoprecipitation Experiment,"Experimental techniques to purify a protein-DNA crosslinked complex. Usually sequencing follows e.g. in the techniques ChIP-chip, ChIP-seq and MeDIP-seq.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3656,http://edamontology.org/topic_3656,,
+Immunoproteins and Antigens,Immunity-related proteins and their ligands.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2830,http://edamontology.org/topic_2830,,
+Infectious Disease,"The branch of medicine that deals with the prevention, diagnosis and management of transmissible disease with clinically evident illness resulting from infection with pathogenic biological agents (viruses, bacteria, fungi, protozoa, parasites and prions).",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3324,http://edamontology.org/topic_3324,,
+Informatics,The study and practice of information processing and use of computer information systems.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0605,http://edamontology.org/topic_0605,,
+Laboratory Techniques,,,,FALSE,,Tool Topic,,EDAM,,,,,,
+Light Microscopy,The use of optical instruments to magnify the image of an object.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3385,http://edamontology.org/topic_3385,,
+Lipids,Lipids and their structures.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0153,http://edamontology.org/topic_0153,,
+Machine Learning,"A topic concerning the application of artificial intelligence methods to algorithms, in order to create methods that can learn from data in order to generate an output, rather than relying on explicitly encoded information only.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3474,http://edamontology.org/topic_3474,,
+Mapping,"The mapping of complete (typically nucleotide) sequences. Mapping (in the sense of short read alignment, or more generally, just alignment) has application in RNA-Seq analysis (mapping of transcriptomics reads), variant discovery (e.g. mapping of exome capture), and re-sequencing (mapping of WGS...",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0102,http://edamontology.org/topic_0102,,
+Mathematics,"The study of numbers (quantity) and other topics including structure, space, and change.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3315,http://edamontology.org/topic_3315,,
+Medical Imaging,The use of imaging techniques for clinical purposes for medical research.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3384,http://edamontology.org/topic_3384,,
+Medical Informatics,"The application of information technology to health, disease and biomedicine.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3063,http://edamontology.org/topic_3063,,
+Medicine,"Research in support of healing by diagnosis, treatment, and prevention of disease.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3303,http://edamontology.org/topic_3303,,
+Medicines Research and Development,"The discovery, development and approval of medicines.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3376,http://edamontology.org/topic_3376,,
+Membrane and Lipoproteins,"Lipoproteins (protein-lipid assemblies), and proteins or region of a protein that spans or are associated with a membrane.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0820,http://edamontology.org/topic_0820,,
+Metagenomics,"The study of genetic material recovered from environmental samples, and associated environmental data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3174,http://edamontology.org/topic_3174,,
+Molecular Biology,"The molecular basis of biological activity, particularly the macromolecules (e.g. proteins and nucleic acids) that are essential to life.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3047,http://edamontology.org/topic_3047,,
+Molecular Genetics,The structure and function of genes at a molecular level.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3321,http://edamontology.org/topic_3321,,
+Molecular Interactions Pathways and Networks,"Molecular interactions, biological pathways, networks and other models.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0602,http://edamontology.org/topic_0602,,
+Nucleic Acid Structure Analysis,"The archival, curation, processing and analysis of nucleic acid structural information, such as whole structures, structural features and alignments, and associated annotation.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0097,http://edamontology.org/topic_0097,,
+Nucleic Acids,"The processing and analysis of nucleic acid sequence, structural and other data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0077,http://edamontology.org/topic_0077,,
+Omics,"The collective characterisation and quantification of pools of biological molecules that translate into the structure, function, and dynamics of an organism or organisms.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3391,http://edamontology.org/topic_3391,,
+Oncology,"The study of cancer, for example, genes and proteins implicated in cancer.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2640,http://edamontology.org/topic_2640,,
+Ontology and Terminology,"The conceptualisation, categorisation and nomenclature (naming) of entities or phenomena within biology or bioinformatics. This includes formal ontologies, controlled vocabularies, structured glossary, symbols and terminology or other related resource.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0089,http://edamontology.org/topic_0089,,
+Pathology,"Diseases, including diseases in general and the genes, gene variations and proteins involved in one or more specific diseases.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0634,http://edamontology.org/topic_0634,,
+Pharmacogenomics,"The influence of genotype on drug response, for example by correlating gene expression or single-nucleotide polymorphisms with drug efficacy or toxicity.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0208,http://edamontology.org/topic_0208,,
+Pharmacology,The study of drugs and their effects or responses in living systems.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0202,http://edamontology.org/topic_0202,,
+Pharmacovigilance,"The detection, assessment, understanding and prevention of adverse effects of medicines.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3378,http://edamontology.org/topic_3378,,
+Phylogenetics,The study of evolutionary relationships amongst organisms from analysis of genetic information (typically gene or protein sequences).,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3293,http://edamontology.org/topic_3293,,
+Phylogenomics,"The integrated study of evolutionary relationships and whole genome data, for example, in the analysis of species trees, horizontal gene transfer and evolutionary reconstruction.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0194,http://edamontology.org/topic_0194,,
+Phylogeny,The study of evolutionary relationships amongst organisms.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0084,http://edamontology.org/topic_0084,,
+Preclinical and Clinical Studies,"The testing of new medicines, vaccines or procedures on animals (preclinical) and humans (clinical) prior to their approval by regulatory authorities.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3379,http://edamontology.org/topic_3379,,
+Probes and Primers,Molecular probes (e.g. a peptide probe or DNA microarray probe) or PCR primers and hybridisation oligos in a nucleic acid sequence.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0632,http://edamontology.org/topic_0632,,
+Protein Expression,The translation of mRNA into protein and subsequent protein processing in the cell.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0108,http://edamontology.org/topic_0108,,
+Protein Modifications,"Protein chemical modifications, e.g. post-translational modifications.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0601,http://edamontology.org/topic_0601,,
+Protein Properties,"The study of the physical and biochemical properties of peptides and proteins, for example the hydrophobic, hydrophilic and charge properties of a protein.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0123,http://edamontology.org/topic_0123,,
+Proteins,"Archival, processing and analysis of protein data, typically molecular sequence and structural data.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0078,http://edamontology.org/topic_0078,,
+Proteomics,"Proteomics is in the narrow sense (sensu stricto) the application of methods to separate, characterise, identify, and quantify all proteins (the proteome) - or a substantial set of proteins - that are present in a sample. Proteomics in the broad sense is the science of proteins and peptides on the...",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0121,http://edamontology.org/topic_0121,,
+Proteomics Experiment,Proteomics experiments.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3520,http://edamontology.org/topic_3520,,
+RNA,RNA sequences and structures.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0099,http://edamontology.org/topic_0099,,
+RNA-Seq,"A topic concerning high-throughput sequencing of cDNA to measure the RNA content (transcriptome) of a sample, for example, to investigate how different alleles of a gene are expressed, detect post-transcriptional mutations or identify gene fusions.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3170,http://edamontology.org/topic_3170,,
+Safety Sciences,The safety (or lack) of drugs and other medical interventions.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3377,http://edamontology.org/topic_3377,,
+Sample Collections,Biological samples and specimens.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3277,http://edamontology.org/topic_3277,,
+Sequence Analysis,"The archival, processing and analysis of molecular sequences (monomer composition of polymers) including molecular sequence data resources, sequence sites, alignments, motifs and profiles.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0080,http://edamontology.org/topic_0080,,
+Sequencing,"The determination of complete (typically nucleotide) sequences, including those of genomes (full genome sequencing, de novo sequencing and resequencing), amplicons and transcriptomes.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3168,http://edamontology.org/topic_3168,,
+Simulation Experiment,"Biological computational model experiments (simulation), for example the minimum information required in order to permit its correct interpretation and reproduction.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3524,http://edamontology.org/topic_3524,,
+Software Engineering,The process that leads from an original formulation of a computing problem to executable programs.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3372,http://edamontology.org/topic_3372,,
+Statistics and Probability,The application of statistical methods to biological problems.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2269,http://edamontology.org/topic_2269,,
+Structural Analysis,"The curation, processing, analysis and prediction of data about the structure of biological molecules, typically proteins and nucleic acids and other macromolecules.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0081,http://edamontology.org/topic_0081,,
+Structural Biology,"The molecular structure of biological molecules, particularly macromolecules such as proteins and nucleic acids.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_1317,http://edamontology.org/topic_1317,,
+Systems Biology,The holistic modelling and analysis of complex biological systems and the interactions therein.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_2259,http://edamontology.org/topic_2259,,
+Transcription Factors and Regulatory Sites,"Proteins that bind to DNA and control transcription of DNA to mRNA (transcription factors) and also transcriptional regulatory sites, elements and regions (such as promoters, enhancers, silencers and boundary elements / insulators) in nucleotide sequences.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0749,http://edamontology.org/topic_0749,,
+Transcriptomics,"The analysis of transcriptomes, or a set of all the RNA molecules in a specific cell, tissue etc.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3308,http://edamontology.org/topic_3308,,
+Virology,"Study of viruses, e.g. sequence and structural data, interactions of viral proteins, or a viral genome including molecular sequences, genes and annotation.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0781,http://edamontology.org/topic_0781,,
+Whole Genome Sequencing,Laboratory technique to sequence the complete DNA sequence of an organism's genome at a single time.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_3673,http://edamontology.org/topic_3673,,
+Workflows,Biological or biomedical analytical workflows or pipelines.,,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_0769,http://edamontology.org/topic_0769,,
+scRNA-Seq,"Combined with NGS (Next Generation Sequencing) technologies, single-cell sequencing allows the study of genetic information (DNA, RNA, epigenome...) at a single cell level. It is often used for differential analysis and gene expression profiling.",,,FALSE,,Tool Topic,,EDAM,,,EDAM:topic_4028,http://edamontology.org/topic_4028,,

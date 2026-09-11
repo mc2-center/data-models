@@ -1,5 +1,5 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Annual Meeting,,,,FALSE,,Chair Roles,,,,,,,,
-None,,,,FALSE,,Chair Roles,,,,,,,,
-Steering Committee,,,,FALSE,,Chair Roles,,,,,,,,
-Working Group,,,,FALSE,,Chair Roles,,,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Annual Meeting,The individual chairs or co-chairs the MC2 Center's annual meeting.,,,FALSE,,Chair Roles,,,,,,,,
+None,The individual does not hold a chair role.,,,FALSE,,Chair Roles,,,,,,,,
+Steering Committee,The individual chairs or co-chairs the MC2 Center's steering committee.,,,FALSE,,Chair Roles,,,,,,,,
+Working Group,The individual chairs or co-chairs one of the MC2 Center's working groups.,,,FALSE,,Chair Roles,,,,,,,,

@@ -1,0 +1,444 @@
+[
+  {
+    "row_index": 0,
+    "term": "Individual",
+    "existing_description": "Information about models and individuals from which biospecimen(s) were collected.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Individual_id",
+    "existing_description": "Unique row identifier, used as a primary key for record updates. This should follow the GrantNumber-INDxxx convention unless otherwise indicated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:12220014, primary_key."
+  },
+  {
+    "row_index": 2,
+    "term": "Individual Known Metastasis Sites",
+    "existing_description": "The text term(s) used to describe the anatomic site(s) of metastasis associated with the patient's malignant disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "Individual Last Known Disease Status",
+    "existing_description": "Text term that describes the last known status of an individual.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:2847330."
+  },
+  {
+    "row_index": 4,
+    "term": "Individual Sex",
+    "existing_description": "Biological sex associated with the specimen donor",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:7572817."
+  },
+  {
+    "row_index": 5,
+    "term": "Individual Disease Type",
+    "existing_description": "The type of tumor associated with the specimen. Multiple values permitted, comma separated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13471160."
+  },
+  {
+    "row_index": 6,
+    "term": "Individual Primary Diagnosis",
+    "existing_description": "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14714127."
+  },
+  {
+    "row_index": 7,
+    "term": "Individual Primary Site",
+    "existing_description": "Primary site in the body associated with the primary diagnosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14883047."
+  },
+  {
+    "row_index": 8,
+    "term": "Individual Tumor Subtype",
+    "existing_description": "The subtype related to the scientific determination and investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms of tissue growth resulting from uncontrolled cell proliferation.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Individual Tumor Grade",
+    "existing_description": "Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11325685."
+  },
+  {
+    "row_index": 10,
+    "term": "Individual Site of Origin",
+    "existing_description": "The text term used to describe the anatomic site of origin, of the patient's malignant disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "Individual Age at Diagnosis",
+    "existing_description": "Age at the time the individual was diagnosed, expressed in years.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:15019300."
+  },
+  {
+    "row_index": 12,
+    "term": "Individual Gender",
+    "existing_description": "Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "Individual dbGaP Subject Id",
+    "existing_description": "The identifer assigned to the participant by dbGap",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "Individual Days to Last Followup",
+    "existing_description": "Number of days between the dates used for index and last follow-up",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "Individual Primary Tumor Stage",
+    "existing_description": "Extent of the primary cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:3440328."
+  },
+  {
+    "row_index": 16,
+    "term": "Individual Tumor Lymph Node Stage",
+    "existing_description": "Extent of the regional lymph node involvement for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:3440330."
+  },
+  {
+    "row_index": 17,
+    "term": "Individual Days To Recurrence",
+    "existing_description": "Number of days between the date used for index and the date the patient's disease recurred",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 18,
+    "term": "Individual Days to Last Known Disease Status",
+    "existing_description": "Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "Individual Treatment Type",
+    "existing_description": "Text term that describes the kind of treatment administered.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14737565."
+  },
+  {
+    "row_index": 20,
+    "term": "Individual Days to Treatment",
+    "existing_description": "Number of days between the date used for index and the date the treatment started.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 21,
+    "term": "Individual Therapeutic Agent",
+    "existing_description": "Text identification of the individual agent(s) used as part of a treatment regimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13579886."
+  },
+  {
+    "row_index": 22,
+    "term": "Individual Metastasis Stage",
+    "existing_description": "Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:3440331."
+  },
+  {
+    "row_index": 23,
+    "term": "Individual Recurrence Status",
+    "existing_description": "Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13529783."
+  },
+  {
+    "row_index": 24,
+    "term": "Individual Treatment Response",
+    "existing_description": "Text term that describes the patient's final outcome after the treatment was administered.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13383448."
+  },
+  {
+    "row_index": 25,
+    "term": "Individual Vital Status",
+    "existing_description": "Text term that describes the patient's current vital status.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Individual metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

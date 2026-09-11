@@ -1,0 +1,44 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/mixins
+name: sage-cdm-mixins
+title: Sage CDM Mixins
+description: >-
+  Reusable mixins available across CDM entity classes. A mixin contributes slots to a class
+  without placing it in an inheritance hierarchy, which is the right tool for cross-cutting
+  concerns like provenance that apply to every entity regardless of domain.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788846642/CDM+Modeling+Principles
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - props
+
+classes:
+
+  ProvenanceMixin:
+    title: PROVENANCE_MIXIN
+    description: >-
+      Where a CDM record came from and who last touched it. Applied to every entity via
+      BaseEntity, so each record can be traced back to the upstream system that populated it.
+    mixin: true
+    slots:
+      - source
+      - source_url
+      - created_by
+      - updated_by
+      - date_created
+      - date_updated
+    comments:
+      - >-
+        Every slot here is optional. The CDM is populated by pipelines that are still being
+        built, and a record that is useful but lacks full provenance should not fail
+        validation. Tighten to required once the populate pipelines under SCDM-6 and SCDM-19
+        are actually emitting these fields.

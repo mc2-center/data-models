@@ -1,0 +1,10 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_documentation_type.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+API Documentation	API Documentation	skos:exactMatch	https://schema.org/APIReference	semapv:ManualMappingCuration
+Citation Instructions	Citation Instructions	skos:exactMatch	http://edamontology.org/data_0970	semapv:ManualMappingCuration
+FAQ	FAQ	skos:exactMatch	https://schema.org/FAQPage	semapv:ManualMappingCuration
+Training Material	Training Material	skos:exactMatch	http://edamontology.org/data_3669	semapv:ManualMappingCuration

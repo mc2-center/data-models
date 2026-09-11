@@ -1,3 +1,3 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Paired-end,,,,FALSE,,NGS Library Layout,,CDS v5.0.4/Genomic Info-library_layout,,,,,,
-Single-indexed,,,,FALSE,,NGS Library Layout,,CDS v5.0.4/Genomic Info-library_layout,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Paired-end","A DNA sequencing strategy where a single read is initiated from each end of a DNA fragment.","","","FALSE","","NGS Library Layout","","CDS v5.0.4/Genomic Info-library_layout","","","NCIT:C150423","http://purl.obolibrary.org/obo/NCIT_C150423","C150423",""
+"Single-indexed","An indexed sequencing method that includes one index read.","","","FALSE","","NGS Library Layout","","CDS v5.0.4/Genomic Info-library_layout","","","NCIT:C165444","http://purl.obolibrary.org/obo/NCIT_C165444","C165444",""

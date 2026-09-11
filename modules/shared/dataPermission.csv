@@ -1,5 +1,5 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Agreement,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
-Attestation,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
-Award,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
-Other,,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Agreement,Access or use of the data is governed by a signed data use agreement between the requester and the data provider.,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Attestation,"Access or use of the data requires the requester to attest to certain conditions of use (e.g., intended purpose, compliance with policies).",,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Award,"Access or use of the data is granted as part of a formal award or allocation process (e.g., a data access committee approval).",,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,
+Other,A data permission mechanism not covered by any of the other listed values.,,,FALSE,,Study Data Permission,,DUOplus4,,,,https://github.com/Sage-Bionetworks/governanceDUO/blob/main/metadata%20structure.md,,

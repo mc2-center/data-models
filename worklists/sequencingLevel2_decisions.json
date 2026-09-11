@@ -1,0 +1,38 @@
+[
+  {
+    "row_index": 0,
+    "term": "Sequencing Level 2",
+    "ontology_identifier": "OBI:0600047",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0600047",
+    "label": "sequencing assay",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "OBI:0600047 'sequencing assay' is the best parent class for this schema node. Level 2 represents aligned sequencing data; no specific ontology term exists for this data processing level."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "SequencingLevel2_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C49189 'Primary Key' directly matches the use as a unique row identifier / primary key."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "NGS Aligned Reads",
+    "ontology_identifier": "NCIT:C164052",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C164052",
+    "label": "Aligned Sequence Read",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C164052 'Aligned Sequence Read' is defined as 'the determination of the order of a set of sequenced nucleic acid fragments via alignment to a reference genome'. Matches aligned reads."
+    }
+  }
+]

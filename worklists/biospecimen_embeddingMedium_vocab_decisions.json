@@ -1,0 +1,29 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Paraffin wax",
+    "ontology_identifier": "NCIT:C727",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C727",
+    "label": "Paraffin",
+    "description": "A common name for a group of high molecular weight alkane hydrocarbons; a white, odorless, tasteless, waxy solid widely used as an embedding medium for tissue processing in histology.",
+    "verification": {"verdict": "partial", "note": "NCIT:C727 Paraffin; label omits 'wax' but the NCIT definition explicitly describes it as a waxy solid used in biological specimen preparation. Best available NCIT match for paraffin wax embedding medium."}
+  },
+  {
+    "row_index": 2,
+    "term": "Methacrylate",
+    "ontology_identifier": "NCIT:C47615",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C47615",
+    "label": "Methyl Methacrylate",
+    "description": "A methyl ester of methacrylic acid; a reactive resin used as cement in dentistry, orthopaedic surgery, and ophthalmology, and as a hard plastic embedding medium for electron microscopy.",
+    "verification": {"verdict": "partial", "note": "NCIT:C47615 Methyl Methacrylate; label specifies the methyl ester form rather than methacrylate in general. Methacrylate resin embedding typically uses methyl methacrylate specifically. Review recommended to confirm usage context."}
+  },
+  {
+    "row_index": 9,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  }
+]}

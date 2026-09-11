@@ -1,4 +1,4 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-3 Prime,,,,FALSE,,End Bias,,HTAN,,,,,,
-5 Prime,,,,FALSE,,End Bias,,HTAN,,,,,,
-Full Length Transcript,,,,FALSE,,End Bias,,HTAN,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"3 Prime","An artifact of cDNA amplification and cloning where the 3' end of transcripts is over-represented in the final sample or library.","","","FALSE","","End Bias","","HTAN","","","NCIT:C202270","http://purl.obolibrary.org/obo/NCIT_C202270","C202270",""
+"5 Prime","An artifact of cDNA amplification and cloning where the 5' end of transcripts is over-represented in the final sample or library.","","","FALSE","","End Bias","","HTAN","","","NCIT:C202271","http://purl.obolibrary.org/obo/NCIT_C202271","C202271",""
+"Full Length Transcript","A cDNA molecule that spans the entire length of an RNA transcript, from its 5' end to its 3' end.","","","FALSE","","End Bias","","HTAN","","","NCIT:C202272","http://purl.obolibrary.org/obo/NCIT_C202272","C202272",""

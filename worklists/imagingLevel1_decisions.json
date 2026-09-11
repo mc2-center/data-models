@@ -1,0 +1,86 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 1",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node representing raw imaging data level 1; best NCIT match is Imaging Procedure as the general class for imaging activities. OBI:0003327 (image data set) is an alternative but NCIT is preferred per task instructions."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel1_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "Image Assay Type",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for 'imaging assay type' exists. Imaging Procedure is the best available parent class. CDE:7789196 is also noted in the existing model."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Image Protocol Link",
+    "ontology_identifier": "NCIT:C164390",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C164390",
+    "label": "Imaging Process Protocol Element",
+    "description": "A set of parameter values necessary to obtain or reconstruct a set of images for an imaging process protocol.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for a protocol link/URL. Imaging Process Protocol Element is the closest match representing imaging protocol information."
+    }
+  },
+  {
+    "row_index": 4,
+    "term": "Image Platform Model",
+    "ontology_identifier": "NCIT:C177610",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C177610",
+    "label": "Instrument Model",
+    "description": "The name and/or number associated with a specific device style or design that was developed and built to carry out a specific function or set of functions.",
+    "verification": {
+      "verdict": "match",
+      "note": "Instrument Model is a direct match for the specific model of the instrument used in the imaging experiment."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "Image Platform Manufacturer",
+    "ontology_identifier": "NCIT:C25392",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25392",
+    "label": "Manufacturer",
+    "description": "A person, enterprise, or entity that produces finished goods.",
+    "verification": {
+      "verdict": "match",
+      "note": "Manufacturer is a direct match for the producer of the imaging equipment."
+    }
+  },
+  {
+    "row_index": 6,
+    "term": "Image Software",
+    "ontology_identifier": "NCIT:C17146",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17146",
+    "label": "Computer Program",
+    "description": "A sequence of instructions written in a form understandable by a computer system that, when executed, tells the computer to perform a specific task or set of tasks.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for imaging software. Computer Program (NCIT:C17146) is the best available parent class for a software package used to capture, generate, and process images."
+    }
+  }
+]

@@ -1,9 +1,9 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-A,,,,FALSE,,visium,,HTAN,,,,,,
-B,,,,FALSE,,visium,,HTAN,,,,,,
-C,,,,FALSE,,visium,,HTAN,,,,,,
-D,,,,FALSE,,visium,,HTAN,,,,,,
-A1,,,,FALSE,,visium,,HTAN,,,,,,
-B1,,,,FALSE,,visium,,HTAN,,,,,,
-C1,,,,FALSE,,visium,,HTAN,,,,,,
-D1,,,,FALSE,,visium,,HTAN,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+A,"Capture area A, one of four positions (A, B, C, D) on this 10x Genomics Visium slide format; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+B,"Capture area B, one of four positions (A, B, C, D) on this 10x Genomics Visium slide format; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+C,"Capture area C, one of four positions (A, B, C, D) on this 10x Genomics Visium slide format; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+D,"Capture area D, one of four positions (A, B, C, D) on this 10x Genomics Visium slide format; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+A1,"Capture area A1, one of the four standard positions (A1, B1, C1, D1) on a 10x Genomics Visium slide; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+B1,"Capture area B1, one of the four standard positions (A1, B1, C1, D1) on a 10x Genomics Visium slide; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+C1,"Capture area C1, one of the four standard positions (A1, B1, C1, D1) on a 10x Genomics Visium slide; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,
+D1,"Capture area D1, one of the four standard positions (A1, B1, C1, D1) on a 10x Genomics Visium slide; each capture area contains a grid of spatially barcoded spots used to capture mRNA from a mounted tissue section.",,,FALSE,,visium,,HTAN,,,,,,

@@ -1,0 +1,47 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Unspecified",
+    "ontology_identifier": "NCIT:C38046",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38046",
+    "label": "Unspecified",
+    "description": "Not stated explicitly or in detail.",
+    "verification": {"verdict": "match", "note": "NCIT:C38046 Unspecified; exact label match. Standard NCIT missing-value qualifier."}
+  },
+  {
+    "row_index": 1,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 2,
+    "term": "Dead",
+    "ontology_identifier": "NCIT:C28554",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28554",
+    "label": "Dead",
+    "description": "The cessation of life.",
+    "verification": {"verdict": "match", "note": "NCIT:C28554 Dead; exact label match. Parent class is Vital Status / Outcome in NCIT."}
+  },
+  {
+    "row_index": 3,
+    "term": "Alive",
+    "ontology_identifier": "NCIT:C37987",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C37987",
+    "label": "Alive",
+    "description": "Showing characteristics of life; displaying signs of life.",
+    "verification": {"verdict": "match", "note": "NCIT:C37987 Alive; exact label match. Parent class is Vital Status in NCIT."}
+  },
+  {
+    "row_index": 4,
+    "term": "Not reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier. Note term label casing differs ('Not reported' vs 'Not Reported') — ontology label is the authoritative form."}
+  }
+]}

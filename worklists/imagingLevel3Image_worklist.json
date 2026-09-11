@@ -1,0 +1,36 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 3 Image",
+    "existing_description": "Quality controlled or co-registered image data",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Image metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel3Image_id",
+    "existing_description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Image metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: primary_key."
+  }
+]

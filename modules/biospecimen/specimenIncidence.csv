@@ -1,7 +1,7 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Primary,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
-Progression,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
-Recurrence,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
-Metastasis,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
-Remission,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
-No Disease,,,,FALSE,,Biospecimen Incidence Type,,CDS v5.0.4/Diagnosis-incidence_type,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Primary","Occurring first in time or sequence; original; of greatest rank or importance or value.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C25251","http://purl.obolibrary.org/obo/NCIT_C25251","C25251",""
+"Progression","A clinical, pathologic, and/or molecular finding indicating that the course of a disease is worsening in terms of extent or severity.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C35571","http://purl.obolibrary.org/obo/NCIT_C35571","C35571",""
+"Recurrence","The return of a disease after a period of remission.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C38155","http://purl.obolibrary.org/obo/NCIT_C38155","C38155",""
+"Metastasis","The spread of a neoplasm from the original site of growth to another site.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C19151","http://purl.obolibrary.org/obo/NCIT_C19151","C19151",""
+"Remission","A state in which the signs and symptoms of a disease are reduced or absent.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C18246","http://purl.obolibrary.org/obo/NCIT_C18246","C18246",""
+"No Disease","Diagnostic tests fail to detect presence of disease.","","","FALSE","","Biospecimen Incidence Type","","CDS v5.0.4/Diagnosis-incidence_type","","","NCIT:C40413","http://purl.obolibrary.org/obo/NCIT_C40413","C40413",""

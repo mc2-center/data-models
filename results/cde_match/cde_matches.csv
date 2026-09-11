@@ -1,0 +1,172 @@
+attribute,n_permissible_values,existing_cde,top_cde_public_id,top_cde_version,top_score,top_cde_long_name,top_pv_match_ratio,n_candidates,existing_vs_top
+Biospecimen Type Category,11,11253427,6813527,1,83.85,Category,,10,disagree
+Biospecimen Type,61,,2759630,1,79.98,Additional Radiation Therapy Post Recurrent Disease Type,0.016,10,
+Biospecimen Species,29,,2787346,1,79.98,Diagnosis Biopsy Histology Finding Basis Laboratory Finding Result,0.034,10,
+Biospecimen Sex,9,7572817,2681095,2.1,79.98,Body Fluid or Substance Specimen Collection Type,0.111,10,disagree
+Biospecimen Disease Type,46,,2759161,1,79.98,Adjuvant Radiation Therapy Type,0.022,10,
+Biospecimen Tumor Grade,12,11325685,3197612,1,79.98,Participant Personal Medical History Cancer Indicator,0.083,10,disagree
+Biospecimen Composition,21,12922545,2757957,1,79.98,Neoadjuvant Radiation Therapy Type,0.048,10,disagree
+Biospecimen Tumor Status,5,14688604,5595675,1,79.98,Bone Normal Present Indicator,0.2,10,disagree
+Biospecimen Preservation Method,20,8028962,2309,5,79.98,Assessment Method Type,0.05,10,disagree
+Biospecimen Anatomic Site,342,14156279,2182297,1,84.98,Disease Site,0.058,10,disagree
+Biospecimen Site of Resection or Biopsy,614,0000006,,,,,,0,
+Biospecimen Site of Origin,614,0000004,,,,,,0,
+Biospecimen Therapeutic Agent,4475,13579886,,,,,,0,
+Biospecimen Tumor Morphology,1152,0000003,,,,,,0,
+Biospecimen Fixative,24,0065078,,,,,,0,
+Biospecimen Embedding Medium,10,8037927,2003953,3,79.98,Specimen Collection Period Type,0.1,10,disagree
+Biospecimen Acquisition Method,20,,6626651,2,80,Biospecimen Acquisition Method Type,1.0,10,
+Biospecimen Pathology,9,,2787346,1,79.98,Diagnosis Biopsy Histology Finding Basis Laboratory Finding Result,0.111,10,
+Biospecimen Last Known Disease Status,11,,15726820,1,79.98,Intervention or Procedure Status HL7 FHIR Terminology Code,0.091,10,
+Biospecimen Known Metastasis Sites,342,,2856440,3,79.99,Tumor Location Anatomic Site Name,0.532,10,
+Biospecimen Primary Site,246,,7058670,1,83.55,Diagnosis,,10,
+Biospecimen Primary Diagnosis,800,14714127,7058670,1,83.55,Diagnosis,,10,disagree
+Biospecimen Treatment Response,11,13383448,13383448,1,80,Disease Response Assessment Outcome,1.0,10,agree
+Biospecimen Incidence Type,6,0002002,7385445,1,83.55,Disease Status,,10,disagree
+Biospecimen Treatment Type,30,14737565,3333730,2,79.98,Treatment Assignment Type,0.033,10,disagree
+Consortium Funding Agency,1,,16002760,1,58.9,Study Administration Funding Agency Organization Name,,2,
+accessType,4,,2740401,1,63.9,Protocol Deviation Severity Type,,10,
+countryOfOrigin,249,,6227555,2,79.98,Hereditary Gene Panel Code,0.004,10,
+funder,1,,,,,,,0,
+license,11,,14902606,1,63.55,Data File Dataset License Type,,1,
+measurementTechnique,382,,2182879,1,79.98,Not Obtained Indicator,0.003,10,
+species,29,,2182879,1,79.98,Not Obtained Indicator,0.069,10,
+Dataset Assay,382,,5473,14,79.98,Biomarker Name,0.01,10,
+Dataset Species,29,,6951303,1,79.98,Data Collection Species Type,0.034,10,
+Dataset Tumor Type,186,,6407343,1,79.98,Malignant Neoplasm Anatomic Type,0.005,10,
+Dataset Tissue,114,,7003892,1,83.55,Tissue Type,,10,
+Dataset File Formats,81,,11416926,2,79.98,Data File Format Type,0.37,10,
+Dataset Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource Topic,37,,7348004,1,79.98,Protocol Deviations Domain Eligibility Determination Source,0.027,10,
+Resource Activity Type,22,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource Primary Format,10,,7050005,1,83.55,Media Type,,10,
+Resource Intended Use,4,,2539206,1,79.98,Treatment Regimen Intent Type,0.25,10,
+Resource Primary Audience,7,,7348004,1,79.98,Protocol Deviations Domain Eligibility Determination Source,0.143,10,
+Resource Educational Level,10,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource Language,186,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource License,326,,3171797,1,79.98,Drug Abuse Type,0.003,10,
+Resource Media Accessibility,18,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Resource Access Hazard,4,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+File Assay,382,,5473,14,79.98,Biomarker Name,0.01,10,
+File Level,7,,5477,2.31,63.85,Biomarker Value,,10,
+File Species,29,,6951303,1,79.98,Data Collection Species Type,0.034,3,
+File Tumor Type,186,,6407343,1,79.98,Malignant Neoplasm Anatomic Type,0.005,10,
+File Tissue,114,,7003892,1,83.55,Tissue Type,,10,
+File Longitudinal Event Type,2,,2193236,2,83.9,Time,,10,
+File Format,81,11416926,11416926,2,74.98,Data File Format Type,0.37,10,agree
+File Anatomic Site,333,14156279,5098518,1,79.98,Infectious Disorder Integer::5 Site Name,0.015,10,disagree
+GeoMx DSP Assay Type,4,,7789196,2,83.55,Assay Type,,10,
+Grant Type,6,,2740401,1,63.9,Protocol Deviation Severity Type,,10,
+Grant Theme Name,18,,,,,,,0,
+Grant Institution Name,91,,5798571,1,79.98,MCL Contributing Institution Name,0.066,10,
+Grant Institution Alias,91,,5798571,1,79.98,MCL Contributing Institution Name,0.011,9,
+Grant Consortium Name,11,,2813153,1,58.85,Registering Consortium Code,,1,
+Channel Passed QC,2,,6632314,1,63.85,Group ID,,2,
+Channel Antibody Role,2,,2614002,2,63.9,Image Acquisition Scan Begin Second Time,,6,
+Channel Metal Symbol,117,,,,,,,0,
+Image Assay Type,14,7789196,7789196,2,74.99,Assay Type,0.786,10,agree
+Image Working Distance Unit,5,,2093,3,79.99,Agent Quantity UOM,0.6,10,
+Image Immersion Type,6,,8058286,2,95,Imaging Procedure Microscope Immersion Medium Type,1.0,1,
+Image Pyramidal,2,,7788945,2,80,Imaging Pyramid Representation True False Indicator,1.0,10,
+Image Pixels BigEndian,2,,,,,,,0,
+Image Segmentation Data Type,5,,6692738,1,63.85,Lung Segmental Bronchus Location Anatomic Site,,1,
+Image Object Class,6,,17278542,1,63.55,Intervention or Procedure Surgical Classification Structure Name,,2,
+Image Summary Statistic,3,,6944747,1,83.55,Function,,10,
+Individual Known Metastasis Sites,342,,2856440,3,79.99,Tumor Location Anatomic Site Name,0.532,10,
+Individual Last Known Disease Status,11,2847330,13362328,1,79.98,Gene Alteration Assessment Status,0.091,10,disagree
+Individual Sex,9,7572817,2681095,2.1,79.98,Body Fluid or Substance Specimen Collection Type,0.111,10,disagree
+Individual Disease Type,46,13471160,2759161,1,79.98,Adjuvant Radiation Therapy Type,0.022,10,disagree
+Individual Primary Diagnosis,800,14714127,7058670,1,83.55,Diagnosis,,10,disagree
+Individual Primary Site,246,14883047,7058670,1,83.55,Diagnosis,,10,disagree
+Individual Tumor Grade,12,11325685,,,,,,0,
+Individual Site of Origin,614,,,,,,,0,
+Individual Gender,6,,,,,,,0,
+Individual Primary Tumor Stage,37,3440328,,,,,,0,
+Individual Tumor Lymph Node Stage,26,3440330,,,,,,0,
+Individual Treatment Type,30,14737565,3333730,2,79.98,Treatment Assignment Type,0.033,10,disagree
+Individual Therapeutic Agent,4475,13579886,2735650,1,79.98,Non-protocol Therapy Administered Type,,10,disagree
+Individual Metastasis Stage,9,3440331,2211,4.1,79.98,Cancer Progression Distant First Distant Diagnosis Indicator,0.111,10,disagree
+Individual Recurrence Status,7,13529783,2797530,1,79.99,Negation Infectious Disorder Liver Toxicity Unknown Etiology Indicator,0.571,10,disagree
+Individual Treatment Response,11,13383448,62605,3,79.98,Adverse Event Outcome Type,0.091,10,disagree
+Individual Vital Status,5,,2006655,1,84.98,Vital status,0.2,10,
+Institution Location State,58,,7539999,1,79.99,Address State Name,0.897,10,
+Model Sex,9,7572817,6343385,3,79.98,Sex,0.333,10,disagree
+Model Disease Type,46,,2759161,1,79.98,Adjuvant Radiation Therapy Type,0.022,10,
+Model Species,29,,6951303,1,79.98,Data Collection Species Type,0.034,7,
+Model Treatment Type,30,14737565,3333730,2,79.98,Treatment Assignment Type,0.033,10,disagree
+Model Therapeutic Agent,4475,13579886,2950646,1,79.98,Interruption Or Modification Agent Name,,10,disagree
+Model Primary Diagnosis,800,14714127,7058670,1,83.55,Diagnosis,,10,disagree
+Model Site of Origin,614,,14156279,2,80,Disease Anatomic Site ICD-O-3 Site Label Text,1.0,10,
+Model Primary Site,246,,7058670,1,83.55,Diagnosis,,10,
+Model Treatment Response,11,13383448,13383448,1,80,Disease Response Assessment Outcome,1.0,10,agree
+Working Group Participation,9,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Chair Roles,4,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Consent For Portal Display,2,,2680551,2,63.85,Specimen Submission Institution Address Text,,10,
+Portal Display,2,,15250312,1,63.55,Disease or Disorder Type Health Level Seven Display Name Text,,1,
+Person Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Person Consortium Name,11,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Project Type,2,,2740401,1,63.9,Protocol Deviation Severity Type,,10,
+Project Grant Number,155,,16002823,1,63.9,Study Administration Grant Funding Number Identifier,,7,
+Project Consortium Name,11,,5335698,1,63.85,The Cancer Human Biobank Project Identifier,,3,
+Publication Assay,382,,5473,14,79.98,Biomarker Name,0.01,10,
+Publication Tumor Type,186,,6407343,1,79.98,Malignant Neoplasm Anatomic Type,0.005,10,
+Publication Tissue,114,,7003892,1,83.55,Tissue Type,,10,
+Publication Accessibility,2,,6596849,1,63.55,Resting Occurrence Indicator,,10,
+Publication Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+NGS Library Selection Method,38,6347743,,,,,,0,
+NGS Library Strategy,39,6273393,7789196,2,74.98,Assay Type,0.026,3,disagree
+NGS Library Source Material,6,15235975,15235975,1,80,Specimen Material Source,1.0,10,agree
+NGS Library Layout,2,11527735,6421489,1,63.9,Medical History Event Reported Term,,9,disagree
+NGS Sequencing Platform,67,6352164,6347771,1,79.98,Sequencing Library Platform Name,0.015,8,disagree
+NGS Read Indicator,5,,,,,,,0,
+NGS Library Source Molecule,6,15235981,,,,,,0,
+NGS Matrix Type,4,,,,,,,0,
+NGS RNA End Bias,3,,,,,,,0,
+NGS RNA Reverse Transcription Primer,4,,,,,,,0,
+Data Use Codes,25,0002001,,,,,,0,
+dataUseModifiers,32,00002002,,,,,,0,
+geographicalRestriction,249,,,,,,,0,
+sourceGeography,249,,,,,,,0,
+deidentificationType,4,,,,,,,0,
+dataPermission,4,,,,,,,0,
+dataTier,4,,,,,,,0,
+license,11,,14902606,1,63.55,Data File Dataset License Type,,1,
+DSP Dataset Assay,382,,2721569,1,79.98,Prior Therapy Administered Code,0.003,10,
+DSP Dataset Species,29,,6951303,1,79.98,Data Collection Species Type,0.034,10,
+DSP Dataset Tumor Type,186,,6407343,1,79.98,Malignant Neoplasm Anatomic Type,0.005,10,
+DSP Dataset Tissue,114,,7003892,1,83.55,Tissue Type,,10,
+DSP Dataset Level,7,,5477,2.31,63.85,Biomarker Value,,7,
+DSP Dataset Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Study De-identification Method Type,4,14576319,14576319,1,80,Data File Deidentification Method Type,1.0,10,agree
+Study License,11,14902606,,,,,,0,
+Study Index Date,4,,,,,,,0,
+Study Data Use Codes,32,0002001,,,,,,0,
+Tool Accessibility,3,,,,,,,0,
+Tool Cost,3,,,,,,,0,
+Tool Documentation Type,15,,2241245,1,79.98,Surgical Procedure Breast Neoplasm Performed Type,0.067,10,
+Tool Download Type,18,,3091636,1,79.98,Agent Cytokine Administered Type,0.056,10,
+Tool Entity Role,7,,2201713,2,74.98,Person Affiliation Role Text Type,0.286,5,
+Tool Entity Type,6,,2740401,1,63.9,Protocol Deviation Severity Type,,10,
+Tool Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Input Data,147,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Input Format,122,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Language,67,,6707231,1,79.98,Organism Source Source Type,0.015,10,
+Tool License,326,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Link Type,12,,2241245,1,79.98,Surgical Procedure Breast Neoplasm Performed Type,0.083,10,
+Tool Operating System,3,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Operation,118,,6944747,1,83.55,Function,,10,
+Tool Output Data,147,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Output Format,122,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Package Dependencies Present,2,,1012,3,63.85,Chronic Disease Present Ind-3,,3,
+Tool Grant Number,155,,2183360,2,63.9,Laboratory Test Result Numeric Value,,10,
+Tool Topic,115,,,,,,,0,
+Tool Type,18,,,,,,,0,
+Visium Capture Area,8,,,,,,,0,
+Visium Slide Version,4,,,,,,,0,
+Visium Spatial Read1,2,,6421489,1,63.9,Medical History Event Reported Term,,8,
+Visium Spatial Read2,2,,6421489,1,63.9,Medical History Event Reported Term,,8,
+Visium Spatial Library Construction Method,12,,2003837,3,83.85,Result,,10,
+Visium Image Re-orientation,2,,6848650,1,63.9,Montreal Cognitive Assessment Version 8.1 Orientation Test Score,,8,
+Visium Applied Hard Trimming,2,,,,,,,0,
+Visium File Type,18,,2767073,1,63.9,Pulse Rate Measurement Value,,10,

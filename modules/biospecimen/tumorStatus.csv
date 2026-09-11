@@ -1,6 +1,6 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Tumor,,,,FALSE,,Biospecimen Tumor Status,,CDS v5.0.4/Sample-sample_tumor_status,,,,,,
-Normal,,,,FALSE,,Biospecimen Tumor Status,,CDS v5.0.4/Sample-sample_tumor_status,,,,,,
-Not Reported,,,,FALSE,,Biospecimen Tumor Status,,CDS v5.0.4/Sample-sample_tumor_status,,,,,,
-Peritumoral,,,,FALSE,,Biospecimen Tumor Status,,CDS v5.0.4/Sample-sample_tumor_status,,,,,,
-Unknown,,,,FALSE,,Biospecimen Tumor Status,,CDS v5.0.4/Sample-sample_tumor_status,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Tumor","Tissue sample that contains an abnormal cellular infiltrate forming a solid mass.","","","FALSE","","Biospecimen Tumor Status","","CDS v5.0.4/Sample-sample_tumor_status","","","NCIT:C18009","http://purl.obolibrary.org/obo/NCIT_C18009","C18009",""
+"Normal","Tissue sample with cellular composition and architectural patterns expected for the particular anatomic site in which it belongs. There is no evidence of abnormal cellular infiltrates or tumor mass formation.","","","FALSE","","Biospecimen Tumor Status","","CDS v5.0.4/Sample-sample_tumor_status","","","NCIT:C162623","http://purl.obolibrary.org/obo/NCIT_C162623","C162623",""
+"Not Reported","An indication that the required information was not provided.","","","FALSE","","Biospecimen Tumor Status","","CDS v5.0.4/Sample-sample_tumor_status","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Peritumoral","Located in tissues surrounding a tumor.","","","FALSE","","Biospecimen Tumor Status","","CDS v5.0.4/Sample-sample_tumor_status","","","NCIT:C119010","http://purl.obolibrary.org/obo/NCIT_C119010","C119010",""
+"Unknown","Not known, observed, recorded, or reported as unknown by the data contributor.","","","FALSE","","Biospecimen Tumor Status","","CDS v5.0.4/Sample-sample_tumor_status","","","NCIT:C17998","http://purl.obolibrary.org/obo/NCIT_C17998","C17998",""

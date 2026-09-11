@@ -1,0 +1,50 @@
+[
+  {
+    "row_index": 0,
+    "term": "3 Prime",
+    "existing_description": "An artifact of cDNA amplification and cloning where the 3' end of transcripts is over-represented in the final sample or library.",
+    "existing_ontology_identifier": "NCIT:C202270",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202270",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 1,
+    "term": "5 Prime",
+    "existing_description": "An artifact of cDNA amplification and cloning where the 5' end of transcripts is over-represented in the final sample or library.",
+    "existing_ontology_identifier": "NCIT:C202271",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202271",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 2,
+    "term": "Full Length Transcript",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

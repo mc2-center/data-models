@@ -1,0 +1,721 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sagecdm: <https://sage-bionetworks.github.io/SageCommonDataModel/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sagecdm:Portfolio a owl:Class ;
+    rdfs:label "Portfolio" ;
+    dcterms:title "PORTFOLIO" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sagecdm:Person ;
+            owl:onProperty sagecdm:persons ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sagecdm:Program ;
+            owl:onProperty sagecdm:programs ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sagecdm:Project ;
+            owl:onProperty sagecdm:projects ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sagecdm:Organization ;
+            owl:onProperty sagecdm:organizations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sagecdm:Study ;
+            owl:onProperty sagecdm:studies ] ;
+    skos:definition "A container holding a set of CDM records. Not a CDM entity — it exists so that a collection of records can be serialized, exchanged, and validated as one document, and so cross-record references can be checked for resolvability." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:contributing_organizations a owl:ObjectProperty ;
+    rdfs:label "contributing_organizations" ;
+    dcterms:title "Contributing Organizations" ;
+    rdfs:range sagecdm:Organization ;
+    skos:definition "The organizations that contribute data, personnel, or resources to a study. Used for institutional attribution and cross-program collaboration mapping." ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "If a study is contributed to by five institutions in a formal collaboration, all five belong here.",
+        "Not funders — funding is tracked at the program and project level via funding_source. Not individual people." .
+
+sagecdm:funding_source a owl:ObjectProperty ;
+    rdfs:label "funding_source" ;
+    dcterms:title "Funding Source" ;
+    rdfs:range sagecdm:Organization ;
+    skos:definition "The organization(s) providing financial support. Funders are ORGANIZATION records with ROR identifiers, not free-text names." ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "Grant-level detail (grant number, mechanism, PI, dates) belongs on a future GRANT entity, not here. This slot tracks funding organizations only.",
+        "Maps to Crossref/DataCite `funder`; the ROR identifier travels with the referenced ORGANIZATION.",
+        "Not a grant number, not a funding mechanism such as U01 or R01, not a program officer, and not a funding announcement number." .
+
+sagecdm:identifiers a owl:ObjectProperty ;
+    rdfs:label "identifiers" ;
+    dcterms:title "Identifiers" ;
+    rdfs:range sagecdm:PersonIdentifier ;
+    skos:definition "A repeatable list of source-system identifiers known for this person, captured as-is without forced resolution." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Never collapse these into a single preferred or canonical identifier — that determination is deliberately deferred.",
+        "ORCID is captured the same way as any other source identifier and is not treated as more authoritative at capture time, even though it is the field's own standard answer to person disambiguation. Any eventual prioritisation of ORCID belongs to the deferred matching effort." .
+
+sagecdm:sage_cdm.owl.ttl a owl:Ontology ;
+    rdfs:label "sage-cdm" ;
+    dcterms:license "Apache-2.0" ;
+    dcterms:title "Sage Common Data Model" ;
+    rdfs:seeAlso <https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4237754409/Sage+Common+Data+Model+CDM>,
+        <https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788846642/CDM+Modeling+Principles> ;
+    skos:definition """Umbrella schema for the Sage Common Data Model. Imports every base class, mixin, and Phase 1 entity class so that generators, validators, and downstream consumers have a single entry point.
+Import this file (not the individual entity files) when you want the whole model. Import an individual entity file when you want just that class and its dependencies.
+Phase 1 entities: ORGANIZATION, PERSON, PROGRAM, PROJECT, STUDY. Not yet implemented: PORTAL (SCDM-2), and the role-assignment relationship connecting PERSON to PROGRAM / PROJECT / STUDY.""" .
+
+sagecdm:url a owl:DatatypeProperty ;
+    rdfs:label "url" ;
+    dcterms:title "URL" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A fully qualified public https web address for the resource." ;
+    skos:exactMatch <http://schema.org/url> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Declared here because SCDM-5 names it as a shared primitive; PORTAL (SCDM-2) is its first consumer. PROJECT deliberately uses its own website_url slot instead, matching the wording of the PROJECT spec.",
+        "Never a staging or preview URL, and never one requiring authentication." .
+
+sagecdm:PersonIdentifier a owl:Class ;
+    rdfs:label "PersonIdentifier" ;
+    dcterms:title "PERSON_IDENTIFIER" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:source_value ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:source_system ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:identifier_type ] ;
+    skos:definition "A single identifier for a person as captured from one source system. Deliberately a structure rather than a resolved value: one person may accumulate many of these, and two entries are not assumed to be reconcilable." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Not a CDM entity — it has no independent identity and is always inlined within a PERSON record. It therefore does not extend BaseEntity." .
+
+sagecdm:ProvenanceMixin a owl:Class ;
+    rdfs:label "ProvenanceMixin" ;
+    dcterms:title "PROVENANCE_MIXIN" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:date_created ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:created_by ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:date_updated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:source ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:updated_by ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:source_url ] ;
+    skos:definition "Where a CDM record came from and who last touched it. Applied to every entity via BaseEntity, so each record can be traced back to the upstream system that populated it." ;
+    skos:inScheme sagecdm:mixins ;
+    skos:note "Every slot here is optional. The CDM is populated by pipelines that are still being built, and a record that is useful but lacks full provenance should not fail validation. Tighten to required once the populate pipelines under SCDM-6 and SCDM-19 are actually emitting these fields." .
+
+sagecdm:acronym a owl:DatatypeProperty ;
+    rdfs:label "acronym" ;
+    dcterms:title "Acronym" ;
+    rdfs:range xsd:string ;
+    skos:definition "The organization's commonly-used acronym or short name, cached from ROR's acronyms list for local convenience and searchability." ;
+    skos:exactMatch <http://schema.org/alternateName> ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "Not a campus code, a department abbreviation, or a funding mechanism such as U01.",
+        "Not every organization has one in common use — Sage Bionetworks does not. Leave blank rather than inventing one.",
+        "Single-valued by design. ROR stores a list; the CDM caches only the single most commonly-used value, matching how Sage staff actually refer to organizations day to day (JAX, NIA, NIH). Consumers needing the full list resolve via ror_id." .
+
+sagecdm:created_by a owl:DatatypeProperty ;
+    rdfs:label "created_by" ;
+    dcterms:title "Created By" ;
+    rdfs:range xsd:string ;
+    skos:definition "The actor that created this CDM record — a person's identifier string, a service account, or the name of the pipeline that wrote it." ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Deliberately a string rather than a reference to PERSON. PERSON is designed to capture identity without resolving it, so the same human may hold several PERSON records; binding provenance to one of them would assert an identity claim the model explicitly declines to make. Revisit once the deferred PERSON matching strategy lands." .
+
+sagecdm:date_created a owl:DatatypeProperty ;
+    rdfs:label "date_created" ;
+    dcterms:title "Date Created" ;
+    rdfs:range xsd:dateTime ;
+    skos:definition "Timestamp at which this CDM record was first created." ;
+    skos:exactMatch <http://schema.org/dateCreated> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "A record-level system timestamp, not a business date. Business dates (start_date, end_date, launch_date) are plain ISO 8601 dates per the CDM naming conventions; these provenance stamps carry a time component." .
+
+sagecdm:date_updated a owl:DatatypeProperty ;
+    rdfs:label "date_updated" ;
+    dcterms:title "Date Updated" ;
+    rdfs:range xsd:dateTime ;
+    skos:definition "Timestamp at which this CDM record was last modified." ;
+    skos:exactMatch <http://schema.org/dateModified> ;
+    skos:inScheme sagecdm:props .
+
+sagecdm:display_name a owl:DatatypeProperty ;
+    rdfs:label "display_name" ;
+    dcterms:title "Display Name" ;
+    rdfs:range xsd:string ;
+    skos:definition "The best-known name string for the person, for display purposes only. Whichever name string is available and most complete at the time the record is created or updated." ;
+    skos:exactMatch <http://schema.org/name> ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Explicitly NOT authoritative or canonical — no name matching has been performed. Do not use this field alone to decide whether two records refer to the same person.",
+        "Replaces separate given_name / family_name fields. A single display string is more forgiving of inconsistent source data than forcing every source to split cleanly." .
+
+sagecdm:identifier_type a owl:ObjectProperty ;
+    rdfs:label "identifier_type" ;
+    dcterms:title "Identifier Type" ;
+    rdfs:range sagecdm:IdentifierTypeEnum ;
+    skos:definition "The kind of identifier this entry holds." ;
+    skos:inScheme sagecdm:person .
+
+sagecdm:organizations a owl:ObjectProperty ;
+    rdfs:label "organizations" ;
+    dcterms:title "Organizations" ;
+    skos:definition "ORGANIZATION records in this document." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:persons a owl:ObjectProperty ;
+    rdfs:label "persons" ;
+    dcterms:title "Persons" ;
+    skos:definition "PERSON records in this document." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:primary_affiliation a owl:ObjectProperty ;
+    rdfs:label "primary_affiliation" ;
+    dcterms:title "Primary Affiliation" ;
+    rdfs:range sagecdm:Organization ;
+    skos:definition "Reference to a person's primary institutional affiliation." ;
+    skos:exactMatch <http://schema.org/affiliation> ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "Never a free-text institution name — reuse ORGANIZATION rather than redefining it." .
+
+sagecdm:primary_contact a owl:ObjectProperty ;
+    rdfs:label "primary_contact" ;
+    dcterms:title "Primary Contact" ;
+    rdfs:range sagecdm:Person ;
+    skos:definition "The person to contact for questions about this entity. The enduring point of contact, which is often but not always the PI." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Modelled as a direct reference rather than a role in STUDY_TEAM because it is queried so frequently (portal Contact field, ADEL ticket routing, external inquiries) that a direct reference is cheaper than an edge lookup.",
+        "Not a group email address and not a team name. Not the PI by default — the PI may or may not be the contact." .
+
+sagecdm:programs a owl:ObjectProperty ;
+    rdfs:label "programs" ;
+    dcterms:title "Programs" ;
+    skos:definition "PROGRAM records in this document." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:projects a owl:ObjectProperty ;
+    rdfs:label "projects" ;
+    dcterms:title "Projects" ;
+    skos:definition "PROJECT records in this document." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:source a owl:DatatypeProperty ;
+    rdfs:label "source" ;
+    dcterms:title "Source" ;
+    rdfs:range xsd:string ;
+    skos:definition "The upstream system or process this record was populated from — e.g. a Synapse project table, the Sage Finance program registry, a ROR lookup, or manual curation." ;
+    skos:inScheme sagecdm:props .
+
+sagecdm:source_system a owl:ObjectProperty ;
+    rdfs:label "source_system" ;
+    dcterms:title "Source System" ;
+    rdfs:range sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "The system this identifier was captured from." ;
+    skos:inScheme sagecdm:person .
+
+sagecdm:source_url a owl:DatatypeProperty ;
+    rdfs:label "source_url" ;
+    dcterms:title "Source URL" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A resolvable address for the specific upstream record this CDM record was populated from, where one exists." ;
+    skos:exactMatch <http://schema.org/url> ;
+    skos:inScheme sagecdm:props .
+
+sagecdm:source_value a owl:DatatypeProperty ;
+    rdfs:label "source_value" ;
+    dcterms:title "Source Value" ;
+    rdfs:range xsd:string ;
+    skos:definition "The raw identifier string exactly as it appears in the source system." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Captured verbatim. Do not normalise, lowercase, or otherwise clean the value." .
+
+sagecdm:studies a owl:ObjectProperty ;
+    rdfs:label "studies" ;
+    dcterms:title "Studies" ;
+    skos:definition "STUDY records in this document." ;
+    skos:inScheme sagecdm:sage_cdm .
+
+sagecdm:type a owl:ObjectProperty ;
+    rdfs:label "type" ;
+    dcterms:title "Type" ;
+    rdfs:range sagecdm:OrganizationTypeEnum ;
+    skos:definition "The type of organization, cached from ROR's classification." ;
+    skos:exactMatch dcterms:type ;
+    skos:inScheme sagecdm:organization .
+
+sagecdm:updated_by a owl:DatatypeProperty ;
+    rdfs:label "updated_by" ;
+    dcterms:title "Updated By" ;
+    rdfs:range xsd:string ;
+    skos:definition "The actor that last modified this CDM record. Same string-not-reference rationale as created_by." ;
+    skos:inScheme sagecdm:props .
+
+sagecdm:website_url a owl:DatatypeProperty ;
+    rdfs:label "website_url" ;
+    dcterms:title "Website URL" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A public web address specific to the project — a project landing page or dedicated site." ;
+    skos:exactMatch <http://schema.org/url> ;
+    skos:inScheme sagecdm:project ;
+    skos:note "Not the portal URL (that belongs on PORTAL), not a grant page, and not a Synapse project URL." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#adel_service_desk> a owl:Class ;
+    rdfs:label "adel_service_desk" ;
+    rdfs:subClassOf sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "ADEL Service Desk intake forms, where PI and liaison fields are free text." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#hr_finance> a owl:Class ;
+    rdfs:label "hr_finance" ;
+    rdfs:subClassOf sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "The HR / finance system, including the Program Budgets tool (Retool)." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#jira> a owl:Class ;
+    rdfs:label "jira" ;
+    rdfs:subClassOf sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "Jira, including ADEL and other Sage Jira projects." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#orcid> a owl:Class ;
+    rdfs:label "orcid" ;
+    rdfs:subClassOf sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "ORCID, the persistent identifier registry for researchers." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#synapse> a owl:Class ;
+    rdfs:label "synapse" ;
+    rdfs:subClassOf sagecdm:IdentifierSourceSystemEnum ;
+    skos:definition "Synapse account data. Note that a Synapse account may use a personal rather than institutional email." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#email> a owl:Class ;
+    rdfs:label "email" ;
+    rdfs:subClassOf sagecdm:IdentifierTypeEnum ;
+    skos:definition "An email address." ;
+    skos:note "PII. Privacy handling for identifier values is an open governance question and needs input before broad population." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#employee_id> a owl:Class ;
+    rdfs:label "employee_id" ;
+    rdfs:subClassOf sagecdm:IdentifierTypeEnum ;
+    skos:definition "An internal employee or personnel number." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#orcid_id> a owl:Class ;
+    rdfs:label "orcid_id" ;
+    rdfs:subClassOf sagecdm:IdentifierTypeEnum ;
+    skos:definition "An ORCID iD." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#username> a owl:Class ;
+    rdfs:label "username" ;
+    rdfs:subClassOf sagecdm:IdentifierTypeEnum ;
+    skos:definition "A login or account name within the source system." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#active> a owl:Class ;
+    rdfs:label "active" ;
+    rdfs:subClassOf sagecdm:LifecycleStatusEnum ;
+    skos:definition "Currently operating; data contribution or generation ongoing." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#completed> a owl:Class ;
+    rdfs:label "completed" ;
+    rdfs:subClassOf sagecdm:LifecycleStatusEnum ;
+    skos:definition "Has ended; historical data preserved but no new contribution expected. Use this for \"retired\" and \"wrapped up\" as well." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#on_hold> a owl:Class ;
+    rdfs:label "on_hold" ;
+    rdfs:subClassOf sagecdm:LifecycleStatusEnum ;
+    skos:definition "Paused; may resume." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#planned> a owl:Class ;
+    rdfs:label "planned" ;
+    rdfs:subClassOf sagecdm:LifecycleStatusEnum ;
+    skos:definition "Approved and starting soon, but not yet operational." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#archive> a owl:Class ;
+    rdfs:label "archive" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Archives, libraries, and repositories." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#company> a owl:Class ;
+    rdfs:label "company" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "For-profit companies." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#education> a owl:Class ;
+    rdfs:label "education" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Universities, colleges, and other degree-granting institutions." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#facility> a owl:Class ;
+    rdfs:label "facility" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Research facilities, instruments, and core facilities." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#funder> a owl:Class ;
+    rdfs:label "funder" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Funding organizations. Per ROR's 2023 unification of the Crossref Funder Registry, funders are ORGANIZATION records rather than a separate FUNDER entity." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#government> a owl:Class ;
+    rdfs:label "government" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Government agencies and institutes, including the NIH institutes." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#healthcare> a owl:Class ;
+    rdfs:label "healthcare" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Hospitals, clinics, and health systems." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#nonprofit> a owl:Class ;
+    rdfs:label "nonprofit" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Non-profit organizations, including Sage Bionetworks itself." .
+
+<https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#other> a owl:Class ;
+    rdfs:label "other" ;
+    rdfs:subClassOf sagecdm:OrganizationTypeEnum ;
+    skos:definition "Anything ROR classifies outside the categories above." .
+
+sagecdm:Study a owl:Class ;
+    rdfs:label "Study" ;
+    dcterms:title "STUDY" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:status ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:project ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^study\\.[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$" ] ) ] ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:start_date ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:program ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:name ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:end_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:primary_contact ],
+        sagecdm:BaseEntity ;
+    skos:definition "A defined research study that generates data or analyses within a program. A study belongs to exactly one program, and optionally to one project within that program." ;
+    skos:inScheme sagecdm:study ;
+    skos:note "Granularity — whether a related set of experiments is one STUDY or many under a collection — is the most consequential open question for this entity and needs DMG discussion. No study_collection slot is modelled pending that decision.",
+        "Historical tracking (\"who was on this study in 2024?\") requires temporal edges on STUDY_TEAM, not slots here.",
+        "Team composition is deferred to STUDY_TEAM (2026-07-15). Role-typed PERSON-to-STUDY relationships land once the role vocabulary is agreed. No temporary `pi` slot is provided: the STUDY page recommends waiting rather than creating migration debt." .
+
+sagecdm:country a owl:DatatypeProperty ;
+    rdfs:label "country" ;
+    dcterms:title "Country" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^[A-Z]{2}$" ] ) ] ) ] ;
+    skos:definition "The country the organization is primarily based in, cached from ROR, as an ISO 3166-1 alpha-2 two-letter code." ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "Never a full country name, and never a region, state, or city." .
+
+sagecdm:end_date a owl:DatatypeProperty ;
+    rdfs:label "end_date" ;
+    dcterms:title "End Date" ;
+    rdfs:range xsd:date ;
+    skos:definition "The date the entity concluded activities. Populated only when status is completed. ISO 8601 (YYYY-MM-DD)." ;
+    skos:exactMatch <http://schema.org/endDate> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Not a grant expiration date if activities extended beyond it, and never a planned future end date for something still active." .
+
+sagecdm:ror_id a owl:DatatypeProperty ;
+    rdfs:label "ror_id" ;
+    dcterms:title "ROR ID" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( xsd:anyURI [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^https://ror\\.org/0[a-hj-km-np-tv-z0-9]{6}[0-9]{2}$" ] ) ] ) ] ;
+    skos:definition "The organization's ROR identifier. This is the external source of truth for the organization across the scholarly ecosystem — once populated, ROR owns location, aliases, funder identifiers, and organizational hierarchy." ;
+    skos:exactMatch <http://schema.org/identifier> ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "Enter the full ROR URL, not the bare ID, and never a GRID ID.",
+        "Strongly recommended even though optional. Kept optional because some small labs, informal groups, and brand-new organizations legitimately are not in ROR, and requiring it would exclude them. If an organization warrants inclusion, ROR is community-governed and accepts submissions." .
+
+sagecdm:start_date a owl:DatatypeProperty ;
+    rdfs:label "start_date" ;
+    dcterms:title "Start Date" ;
+    rdfs:range xsd:date ;
+    skos:definition "The date the entity began scientific or data-generating activities. ISO 8601 (YYYY-MM-DD)." ;
+    skos:exactMatch <http://schema.org/startDate> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "If the exact date is not recoverable, enter the first of the month and add a note.",
+        "Not the grant award date, not the date the work was conceived, and not the date of the first planning meeting or sprint." .
+
+sagecdm:Person a owl:Class ;
+    rdfs:label "Person" ;
+    dcterms:title "PERSON" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^person\\.[a-z0-9]+$" ] ) ] ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:primary_affiliation ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:display_name ],
+        sagecdm:BaseEntity ;
+    skos:definition "An individual who participates in Sage research in any capacity. What a person DOES (PI, Co-PI, Data Manager) is not modelled here — role is captured via a separate role-assignment relationship tied to a specific entity instance." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Organizational job title (e.g. Associate Director, Science & Data) is explicitly not modelled. Job title is a property of the person independent of any entity, distinct from a role assignment which is always tied to a specific entity instance. A person can hold both at once." .
+
+sagecdm:Program a owl:Class ;
+    rdfs:label "Program" ;
+    dcterms:title "PROGRAM" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:name ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:status ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^program\\.[a-z0-9]+(-[a-z0-9]+)*$" ] ) ] ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        sagecdm:BaseEntity ;
+    skos:definition "A research program at Sage Bionetworks. A program contains one or more studies, may be surfaced on one or more portals, and may adopt one or more data standards." ;
+    skos:inScheme sagecdm:program ;
+    skos:note "No start_date or end_date in Phase 1 (2026-07-21). Lifecycle is captured via status. Actual dates require deciding which date is meant (data contribution start? grant award? RFA release?) and do not unblock any priority query.",
+        "No website_url in Phase 1 (2026-07-21). Program websites overlap with portal URLs and add complexity for questionable value.",
+        "The PROGRAM-to-PORTAL relationship is deliberately absent. Whether it is a slot on PROGRAM or a separate PROGRAM_MAPPING table is an open modelling question awaiting DMG sign-off; adding a slot now would prejudge it and create migration debt." .
+
+sagecdm:Project a owl:Class ;
+    rdfs:label "Project" ;
+    dcterms:title "PROJECT" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^project\\.[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$" ] ) ] ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:website_url ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:end_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:start_date ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:program ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:name ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:status ],
+        sagecdm:BaseEntity ;
+    skos:definition "An organizing container within a program that produces studies or datasets. A project belongs to exactly one program and contains zero or more studies. Projects are optional in the hierarchy." ;
+    skos:inScheme sagecdm:project ;
+    skos:note "A project belongs to exactly one program (2026-07-15). Cross-program work is modelled as separate projects per program.",
+        "Whether a separate grant_number slot is needed is unresolved: a single grant may support multiple projects, and a project may draw on multiple grants. Not modelled pending a decision." .
+
+sagecdm:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    dcterms:title "Description" ;
+    rdfs:range xsd:string ;
+    skos:definition "One-paragraph plain-language description of the entity's purpose and scope. Typically 2-4 sentences." ;
+    skos:exactMatch <http://schema.org/description> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Not marketing copy, not grant boilerplate, and not a list of child entities — those are relationships." .
+
+sagecdm:status a owl:ObjectProperty ;
+    rdfs:label "status" ;
+    dcterms:title "Status" ;
+    rdfs:range sagecdm:LifecycleStatusEnum ;
+    skos:definition "Current lifecycle state of the entity." ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Loosely aligns with ISO 21500 programme lifecycle stages. Never free text." .
+
+sagecdm:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    dcterms:title "Name" ;
+    rdfs:range xsd:string ;
+    skos:definition "Human-readable display name, as it appears in official documentation, grant materials, or on the resource itself." ;
+    skos:exactMatch <http://schema.org/name> ;
+    skos:inScheme sagecdm:props .
+
+sagecdm:program a owl:ObjectProperty ;
+    rdfs:label "program" ;
+    dcterms:title "Program" ;
+    rdfs:range sagecdm:Program ;
+    skos:definition "The parent program this entity belongs to." ;
+    skos:inScheme sagecdm:program ;
+    skos:note "Exactly one program per project or study. Work that genuinely spans programs is modelled as separate records per program, which keeps attribution unambiguous.",
+        "Not a portal, not a funder, and not a grant number." .
+
+sagecdm:project a owl:ObjectProperty ;
+    rdfs:label "project" ;
+    dcterms:title "Project" ;
+    rdfs:range sagecdm:Project ;
+    skos:definition "The parent project this study belongs to, where one applies." ;
+    skos:inScheme sagecdm:project ;
+    skos:note "Never a project in a different program, and never a Synapse project.",
+        "Optional because not every program uses the project concept. A study may connect directly to a program with no project in between.",
+        "Where populated, must reference a project belonging to the SAME program as the referring study. LinkML cannot express this cross-field constraint declaratively; it is enforced in tests/test_cross_references.py." .
+
+sagecdm:BaseEntity a owl:Class ;
+    rdfs:label "BaseEntity" ;
+    dcterms:title "BASE_ENTITY" ;
+    rdfs:subClassOf [ owl:unionOf ( sagecdm:Organization sagecdm:Person sagecdm:Program sagecdm:Project sagecdm:Study ) ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        sagecdm:ProvenanceMixin ;
+    skos:definition "Abstract supertype for every CDM entity. Contributes the identifier that all entities share and, through ProvenanceMixin, the record-level provenance surface." ;
+    skos:inScheme sagecdm:base_entity ;
+    skos:note "Deliberately holds only id and provenance. name is NOT here: PERSON uses display_name instead, because no single name string for a person is authoritative across Sage source systems. Hoisting name would force PERSON to either carry a field the spec rejects or override an inherited one.",
+        "Entities extend this with `is_a: BaseEntity` and narrow the id pattern via slot_usage." .
+
+sagecdm:IdentifierTypeEnum a owl:Class ;
+    rdfs:label "IdentifierTypeEnum" ;
+    dcterms:title "Identifier Type" ;
+    owl:unionOf ( <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#email> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#username> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#employee_id> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#orcid_id> ) ;
+    skos:definition "The kind of identifier captured from a source system." ;
+    skos:inScheme sagecdm:person ;
+    linkml:permissible_values <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#email>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#employee_id>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#orcid_id>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierTypeEnum#username> .
+
+sagecdm:LifecycleStatusEnum a owl:Class ;
+    rdfs:label "LifecycleStatusEnum" ;
+    dcterms:title "Lifecycle Status" ;
+    owl:unionOf ( <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#active> <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#planned> <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#completed> <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#on_hold> ) ;
+    skos:definition "Current lifecycle state of a program, project, or study. Shared across the three because all three specs define an identical value set." ;
+    skos:inScheme sagecdm:props ;
+    skos:note "PORTAL uses a different value set (active / in_development / retired) and will introduce its own enum under SCDM-2. Do not widen this one to accommodate it." ;
+    linkml:permissible_values <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#active>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#completed>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#on_hold>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/LifecycleStatusEnum#planned> .
+
+sagecdm:Organization a owl:Class ;
+    rdfs:label "Organization" ;
+    dcterms:title "ORGANIZATION" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^[A-Z]{2}$" ] ) ] ) ] ;
+            owl:onProperty sagecdm:country ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^org\\.[a-z0-9]+(-[a-z0-9]+)*$" ] ) ] ;
+            owl:onProperty sagecdm:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:acronym ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:anyURI [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^https://ror\\.org/0[a-hj-km-np-tv-z0-9]{6}[0-9]{2}$" ] ) ] ) ] ;
+            owl:onProperty sagecdm:ror_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty sagecdm:ror_id ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:name ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty sagecdm:id ],
+        sagecdm:BaseEntity ;
+    skos:definition "An institution, company, funder, or other organizational entity that participates in Sage research. A thin cache over ROR — name, acronym, type, and country are cached values, and ror_id is the durable link back to the source of truth." ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "No description or status slots, by design (2026-07-21). Consistent with the thin-wrapper principle: the name is usually sufficient identification, and ROR holds descriptive metadata and lifecycle information." .
+
+sagecdm:IdentifierSourceSystemEnum a owl:Class ;
+    rdfs:label "IdentifierSourceSystemEnum" ;
+    dcterms:title "Identifier Source System" ;
+    owl:unionOf ( <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#jira> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#synapse> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#adel_service_desk> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#hr_finance> <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#orcid> ) ;
+    skos:definition "The source system a captured person identifier came from." ;
+    skos:inScheme sagecdm:person ;
+    skos:note "Closed vocabulary on purpose. An unrecognised source system should surface as a validation failure and be added here by PR, rather than disappearing into a generic `other` bucket — knowing which system a string came from is the entire point of capturing it." ;
+    linkml:permissible_values <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#adel_service_desk>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#hr_finance>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#jira>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#orcid>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/IdentifierSourceSystemEnum#synapse> .
+
+sagecdm:OrganizationTypeEnum a owl:Class ;
+    rdfs:label "OrganizationTypeEnum" ;
+    dcterms:title "Organization Type" ;
+    owl:unionOf ( <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#education> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#healthcare> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#company> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#archive> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#nonprofit> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#government> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#facility> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#funder> <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#other> ) ;
+    skos:definition "The type of organization, cached from ROR's classification. Values are ROR's own organization types." ;
+    skos:inScheme sagecdm:organization ;
+    skos:note "A type, not a role. Organizations of type funder fund programs, but that fact is captured in the relationship, not on the organization." ;
+    linkml:permissible_values <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#archive>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#company>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#education>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#facility>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#funder>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#government>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#healthcare>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#nonprofit>,
+        <https://sage-bionetworks.github.io/SageCommonDataModel/OrganizationTypeEnum#other> .
+
+sagecdm:id a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    dcterms:title "Identifier" ;
+    rdfs:range xsd:string ;
+    skos:definition "Stable machine identifier for the entity within the CDM. Must be unique across the CDM. Once assigned, do not change — downstream references depend on it." ;
+    skos:exactMatch <http://schema.org/identifier> ;
+    skos:inScheme sagecdm:props ;
+    skos:note "Each entity applies its own lowercase dot-prefix and pattern via slot_usage, per the CDM naming conventions — e.g. program.amp-ad, org.sage-bionetworks, study.amp-ad.jax-iu-pitt-5xfad.",
+        "Never a UUID, a Synapse ID, a grant number, a URL, or a display name with spaces or capitals." .
+
+

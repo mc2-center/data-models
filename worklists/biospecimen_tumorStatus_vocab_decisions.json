@@ -1,0 +1,47 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Tumor",
+    "ontology_identifier": "NCIT:C18009",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18009",
+    "label": "Tumor Tissue Sample",
+    "description": "Tissue sample that contains an abnormal cellular infiltrate forming a solid mass.",
+    "verification": {"verdict": "partial", "note": "NCIT:C18009 Tumor Tissue Sample; label adds 'Tissue Sample' qualifier but correctly describes a tumor-derived biospecimen as opposed to a Normal tissue sample (NCIT:C162623 for 'Normal'). Best available NCIT match for the tumor biospecimen status value."}
+  },
+  {
+    "row_index": 1,
+    "term": "Normal",
+    "ontology_identifier": "NCIT:C162623",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C162623",
+    "label": "Normal Tissue Sample",
+    "description": "Tissue sample with cellular composition and architectural patterns expected for the particular anatomic site in which it belongs. There is no evidence of abnormal cellular infiltrates or tumor mass formation.",
+    "verification": {"verdict": "match", "note": "NCIT:C162623 Normal Tissue Sample; matches the specimen-status sense of Normal (non-tumor tissue)."}
+  },
+  {
+    "row_index": 2,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "An indication that the required information was not provided.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard CDISC/NCIT qualifier."}
+  },
+  {
+    "row_index": 3,
+    "term": "Peritumoral",
+    "ontology_identifier": "NCIT:C119010",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C119010",
+    "label": "Peritumoral",
+    "description": "Located in tissues surrounding a tumor.",
+    "verification": {"verdict": "match", "note": "NCIT:C119010 Peritumoral; exact label and definition match for tissue surrounding a tumor."}
+  },
+  {
+    "row_index": 4,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  }
+]}

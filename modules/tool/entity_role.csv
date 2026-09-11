@@ -1,8 +1,8 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Developer,,,,FALSE,,Tool Entity Role,,,,,,,,
-Maintainer,,,,FALSE,,Tool Entity Role,,,,,,,,
-Provider,,,,FALSE,,Tool Entity Role,,,,,,,,
-Documentor,,,,FALSE,,Tool Entity Role,,,,,,,,
-Contributor,,,,FALSE,,Tool Entity Role,,,,,,,,
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Developer,An individual or organization responsible for writing and maintaining the software's source code.,,,FALSE,,Tool Entity Role,,,,,credit:software,https://credit.niso.org/contributor-roles/software,,
+Maintainer,"An individual or organization responsible for managing updates, fixes, and ongoing upkeep of the software.",,,FALSE,,Tool Entity Role,,,,,schema:maintainer,https://schema.org/maintainer,,
+Provider,"A role which inheres in a person or organization and is realized in a planned process which provides access to training, materials or execution of protocols for an organization or person.",,,FALSE,,Tool Entity Role,,,,,OBI:0000947,http://purl.obolibrary.org/obo/OBI_0000947,,
+Documentor,"A documentation role that involves preparation of instruction manuals, journal articles, and other supporting documents to communicate complex and technical information more easily.",,,FALSE,,Tool Entity Role,,,,,CRO:0000091,http://purl.obolibrary.org/obo/CRO_0000091,,
+Contributor,"An individual or organization that has made a contribution to the resource, distinct from its primary developer(s).",,,FALSE,,Tool Entity Role,,,,,DCTERMS:contributor,http://purl.org/dc/terms/contributor,,
 Support,,,,FALSE,,Tool Entity Role,,,,,,,,
-Primary Contact,,,,FALSE,,Tool Entity Role,,,,,,,,
+Primary Contact,The main or principle contact person for a study.,,,FALSE,,Tool Entity Role,,,,,NCIT:C127533,http://purl.obolibrary.org/obo/NCIT_C127533,C127533,

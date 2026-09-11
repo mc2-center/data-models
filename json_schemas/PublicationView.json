@@ -3,27 +3,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "The denormalized manifest for publication submission.",
   "properties": {
-    "GrantViewKey": {
-      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
-      "pattern": "CA\\d{6}",
-      "title": "GrantView Key",
-      "type": "string"
-    },
-    "PublicationAbstract": {
-      "description": "The abstract of the publication.",
-      "title": "Publication Abstract",
-      "type": "string"
-    },
-    "PublicationAccessibility": {
-      "description": "Whether there are non-monetary restrictions on accessing an the publication.",
-      "enum": [
-        "OpenAccess",
-        "RestrictedAccess"
-      ],
-      "title": "Publication Accessibility"
-    },
-    "PublicationAssay": {
-      "description": "Assay(s) associated with the publication. Multiple values permitted, comma separated.",
+    "Assay": {
+      "description": "The assay the dataset, file, or publication is representative of. Multiple values permitted, comma separated.",
       "items": {
         "enum": [
           "10-cellRNASequencing",
@@ -94,6 +75,7 @@
           "Collision-InducedDissociation",
           "ColorimetricCellViabilityAssay",
           "ComparativeGenomicHybridization",
+          "Compoundscreen",
           "ComputationalModeling",
           "ComputationalTool",
           "ComputedTomography",
@@ -178,6 +160,7 @@
           "HiChIP",
           "High-ContentScreen",
           "HighThroughputScreening",
+          "Histology",
           "HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture",
           "Hydrogels",
           "HydrophilicInteractionChromatography",
@@ -200,9 +183,12 @@
           "InVitroTranslation",
           "InVivoBioluminescence",
           "Inductively-CoupledPlasmaMassSpectrometry",
+          "Insilicosynthesis",
           "InterferenceReflectionMicroscopy",
           "IntravitalMicroscopy",
           "InvasionAssay",
+          "InvivoPDXviability",
+          "Invivotumorgrowth",
           "IsothermalTitrationCalorimetry",
           "Karyotyping",
           "Knife-EdgeScanningMicroscopy",
@@ -231,6 +217,7 @@
           "MathematicalModeling",
           "MeDIP",
           "MeRIP-Seq",
+          "Metabolicscreening",
           "MetaboliteProfilingAssay",
           "MetastaticColonizationAssay",
           "MethylBindingDomainSequencing",
@@ -294,6 +281,7 @@
           "PrecisionRun-OnSequencing",
           "ProteomicsAssay",
           "ProximityLigationAssay",
+          "Proximityextensionassay",
           "Pull-DownAssay",
           "QFISH",
           "QPCR",
@@ -304,6 +292,7 @@
           "RIP",
           "RIP-Seq",
           "RNASequencing",
+          "RNAarray",
           "RNAiScreen",
           "RT-PCR",
           "RT-qPCR",
@@ -325,6 +314,7 @@
           "Second-HarmonicImagingMicroscopy",
           "SeqFISH",
           "ShRNA",
+          "ShRNA-seq",
           "ShotgunMassSpectrometry",
           "SiRNA",
           "Single-CellBCRSequencing",
@@ -348,6 +338,7 @@
           "SnRNA-seq",
           "SoftAgarAssay",
           "SouthernBlotting",
+          "Spatialtranscriptomics",
           "Spectroscopy",
           "StatisticalModeling",
           "StimulatedEmissionDepletionMicroscopy",
@@ -410,8 +401,27 @@
         ],
         "type": "string"
       },
-      "title": "Publication Assay",
+      "title": "Assay",
       "type": "array"
+    },
+    "GrantViewKey": {
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "CA\\d{6}",
+      "title": "GrantView Key",
+      "type": "string"
+    },
+    "PublicationAbstract": {
+      "description": "The abstract of the publication.",
+      "title": "Publication Abstract",
+      "type": "string"
+    },
+    "PublicationAccessibility": {
+      "description": "Whether there are non-monetary restrictions on accessing an the publication.",
+      "enum": [
+        "OpenAccess",
+        "RestrictedAccess"
+      ],
+      "title": "Publication Accessibility"
     },
     "PublicationAuthors": {
       "description": "Authors of the publication. Multiple values permitted, comma separated.",
@@ -448,8 +458,39 @@
       "title": "Publication Keywords",
       "type": "array"
     },
-    "PublicationTissue": {
-      "description": "Tissue type(s) associated with the publication. Multiple values permitted, comma separated.",
+    "PublicationTitle": {
+      "description": "Title of the publication",
+      "title": "Publication Title",
+      "type": "string"
+    },
+    "PublicationViewId": {
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the PubMed Id, unless directed otherwise.",
+      "title": "PublicationView_id",
+      "type": "string"
+    },
+    "PublicationYear": {
+      "description": "Year of the publication",
+      "title": "Publication Year",
+      "type": "number"
+    },
+    "PubmedId": {
+      "description": "The PubMed identifier associated with the publication.",
+      "title": "Pubmed Id",
+      "type": "string"
+    },
+    "PubmedUrl": {
+      "description": "Pubmed URL for the publication",
+      "format": "uri",
+      "title": "Pubmed Url",
+      "type": "string"
+    },
+    "StudyKey": {
+      "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",
+      "title": "Study Key",
+      "type": "string"
+    },
+    "Tissue": {
+      "description": "Tissue type(s) associated with the dataset, file, or publication. Multiple values permitted, comma separated.",
       "items": {
         "enum": [
           "AbdominalEsophagus",
@@ -569,16 +610,11 @@
         ],
         "type": "string"
       },
-      "title": "Publication Tissue",
+      "title": "Tissue",
       "type": "array"
     },
-    "PublicationTitle": {
-      "description": "Title of the publication",
-      "title": "Publication Title",
-      "type": "string"
-    },
-    "PublicationTumorType": {
-      "description": "Tumor type(s) associated with the publication. Multiple values permitted, comma separated.",
+    "TumorType": {
+      "description": "The tumor type(s), if applicable, associated with the dataset, file, or publication. Multiple values permitted, comma separated.",
       "items": {
         "enum": [
           "AcinarCellCarcinoma",
@@ -770,45 +806,17 @@
         ],
         "type": "string"
       },
-      "title": "Publication Tumor Type",
+      "title": "Tumor Type",
       "type": "array"
-    },
-    "PublicationViewId": {
-      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the PubMed Id, unless directed otherwise.",
-      "title": "PublicationView_id",
-      "type": "string"
-    },
-    "PublicationYear": {
-      "description": "Year of the publication",
-      "title": "Publication Year",
-      "type": "number"
-    },
-    "PubmedId": {
-      "description": "The PubMed identifier associated with the publication.",
-      "title": "Pubmed Id",
-      "type": "string"
-    },
-    "PubmedUrl": {
-      "description": "Pubmed URL for the publication",
-      "format": "uri",
-      "title": "Pubmed Url",
-      "type": "string"
-    },
-    "StudyKey": {
-      "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",
-      "title": "Study Key",
-      "type": "string"
     }
   },
   "required": [
+    "Assay",
     "PublicationAbstract",
     "PublicationAccessibility",
-    "PublicationAssay",
     "PublicationAuthors",
     "PublicationJournal",
-    "PublicationTissue",
     "PublicationTitle",
-    "PublicationTumorType",
     "PublicationViewId",
     "PublicationYear",
     "PubmedId",
