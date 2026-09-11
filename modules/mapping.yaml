@@ -88,7 +88,7 @@ file:
 - name: File Level
   src: file/processLevel.csv
 - name: File Format
-  src: shared/dataset_file_format.csv
+  src: shared/fileFormat.csv
 geomxLevel1:
 - name: GeoMx DSP Assay Type
   src: geomxLevel1/assayType.csv
