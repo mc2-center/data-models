@@ -70,7 +70,15 @@ import rdflib
 from rdflib.namespace import RDF
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_triples import LIST_DELIMITER, mint_id, mint_iri, normalize, read_harmonized  # noqa: E402
+from build_triples import IDENTIFIER_FIELD, LIST_DELIMITER, mint_id, mint_iri, normalize, read_harmonized  # noqa: E402
+
+
+def _has_identifier(cls_name, row):
+    """False for a row whose declared identifier field is blank (e.g. the
+    live Dataset table's placeholder/deleted-row remnants) - mirrors
+    build_triples.py's build_class_graph() skip so this script doesn't
+    crash on the same rows."""
+    return cls_name not in IDENTIFIER_FIELD or (row.get(IDENTIFIER_FIELD[cls_name]) or "").strip()
 
 SAGECDM = rdflib.Namespace("https://sage-bionetworks.github.io/SageCommonDataModel/")
 CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
@@ -160,6 +168,8 @@ def link_institutions(g, harmonized_dir, organization_crosswalk):
     n_edges = 0
     for cls_name, fields in INSTITUTION_FIELDS.items():
         for row in read_harmonized(harmonized_dir, cls_name):
+            if not _has_identifier(cls_name, row):
+                continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
             targets = set()
             for field in fields:
@@ -177,6 +187,8 @@ def link_consortia(g, harmonized_dir, program_crosswalk):
     n_edges = 0
     for cls_name in CONSORTIUM_CLASSES:
         for row in read_harmonized(harmonized_dir, cls_name):
+            if not _has_identifier(cls_name, row):
+                continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
             for value in split_values(row.get("consortium") or "", multivalued=True):
                 hit = program_crosswalk.get(normalize(value))
@@ -196,6 +208,8 @@ def link_investigators(g, harmonized_dir):
     for cls_name, (field, multivalued) in INVESTIGATOR_FIELDS.items():
         predicate = predicate_by_class[cls_name]
         for row in read_harmonized(harmonized_dir, cls_name):
+            if not _has_identifier(cls_name, row):
+                continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
             for display_name in split_values(row.get(field) or "", multivalued):
                 key = normalize(display_name)

@@ -272,7 +272,18 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     class_uri = CCKP[class_slug(cls_name)]
     fields_meta = schema_meta[cls_name]
 
+    skipped_blank = 0
     for row in read_harmonized(harmonized_dir, cls_name):
+        if cls_name in IDENTIFIER_FIELD and not (row.get(IDENTIFIER_FIELD[cls_name]) or "").strip():
+            # A row with no declared identifier isn't a resolvable record -
+            # e.g. the live Dataset table can carry placeholder/deleted-row
+            # remnants with every field blank except an incidental Synapse
+            # row `version`. Skip rather than raise (classes with a
+            # FALLBACK_ID_FIELD instead - Publication/Tool/
+            # EducationalResource - are unaffected; mint_id()'s own
+            # fallback/hash logic still runs for those below).
+            skipped_blank += 1
+            continue
         row_id = mint_id(cls_name, row)
         subject = mint_iri(cls_name, row_id)
         g.add((subject, RDF.type, class_uri))
@@ -350,6 +361,9 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
                     target_iri = index.get(v)
                     if target_iri:
                         g.add((subject, ref_predicate, target_iri))
+
+    if skipped_blank:
+        print(f"{cls_name}: skipped {skipped_blank} fully-blank row(s)")
     return g
 
 
