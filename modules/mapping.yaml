@@ -188,6 +188,8 @@ sequencingRNALevel1:
 shared:
 - name: dataUseModifiers
   src: shared/duo.csv
+- name: File Assay Category
+  src: shared/fileAssayCategory.csv
 - name: geographicalRestriction
   src: shared/sourceGeography.csv
 - name: sourceGeography
