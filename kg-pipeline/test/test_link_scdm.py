@@ -117,6 +117,23 @@ def test_split_person_names_single_word_before_first_comma_reads_as_last_first()
     assert link_scdm.split_person_names("Krogan, Nevan J") == ["Nevan J Krogan"]
 
 
+def test_split_person_names_surname_particle_keeps_multiword_last_name_as_one_person():
+    # "Van't Veer" is 2 words but starts with a known particle -> still one
+    # person in LAST, FIRST order, not a 2-person list.
+    assert link_scdm.split_person_names("Van't Veer, Laura") == ["Laura Van't Veer"]
+    assert link_scdm.split_person_names("De La Cruz, Maria") == ["Maria De La Cruz"]
+    # Case-insensitive match against the particle list.
+    assert link_scdm.split_person_names("van der Berg, Anna") == ["Anna van der Berg"]
+
+
+def test_split_person_names_particle_lookalike_first_name_not_falsely_caught():
+    # "Vanessa" merely starts with the letters "van" - exact first-word
+    # match against the particle list must not treat this as a particle.
+    assert link_scdm.split_person_names("Vanessa Redgrave, John Smith") == [
+        "Vanessa Redgrave", "John Smith",
+    ]
+
+
 def test_link_investigators_mints_one_stub_per_distinct_name_and_flags_provisional(tmp_path):
     harmonized_dir = tmp_path
     with open(harmonized_dir / "Grant_harmonized.csv", "w", newline="") as f:

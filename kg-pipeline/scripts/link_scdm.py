@@ -131,6 +131,20 @@ def split_values(raw_value, multivalued):
     return [v.strip() for v in values if v.strip()]
 
 
+# Lowercase surname particles that can make a single last name span 2+
+# words (e.g. "Van't Veer, Laura", "De La Cruz, Maria") - checked by exact
+# match on the first word before the first comma, not by prefix, so a
+# genuine first name that merely starts with the same letters (e.g.
+# "Vanessa") isn't caught by mistake. Not exhaustive - a multi-word surname
+# using some other, rarer particle still falls through to the word-count
+# heuristic below.
+SURNAME_PARTICLES = {
+    "van", "van't", "vander", "vanden", "von", "der", "den", "de", "des",
+    "du", "da", "di", "del", "della", "dos", "das", "la", "le", "mac", "mc",
+    "st", "st.", "o'",
+}
+
+
 def split_person_names(raw_value):
     """Split a free-text scalar like Grant.investigator into individual
     person names.
@@ -139,14 +153,16 @@ def split_person_names(raw_value):
     heuristic: multiple people already in "First [MI] Last" order, joined
     by commas (e.g. "Amy Brock, Thomas E. Yankeelov" - two people); or a
     single person in "Last, First MI" order (e.g. "Krogan, Nevan"). Told
-    apart by word count of the text before the first comma: a single word
-    there reads as a last name (LAST, FIRST MI - one person, put back in
-    First MI Last order below) rather than the first person's full name in
-    a comma-joined list (two-plus words - FIRST MI LAST, FIRST MI LAST,
-    ...). Still a heuristic, not infallible: a single "Last, First" name
-    whose last name is itself multi-word (e.g. "Van't Veer, Laura") reads
-    as two words before the comma and gets treated as a list instead - a
-    known, accepted false positive, not silently hidden.
+    apart by the text before the first comma: a single word there reads as
+    a last name (LAST, FIRST MI - one person, put back in First MI Last
+    order below) rather than the first person's full name in a comma-joined
+    list (two-plus words - FIRST MI LAST, FIRST MI LAST, ...) - unless that
+    first word is a known surname particle (SURNAME_PARTICLES above), in
+    which case the whole multi-word segment is still read as one last name
+    (e.g. "Van't Veer, Laura" - one person, not two). Still a heuristic,
+    not infallible: a multi-word surname using some other, rarer particle
+    not in that list still gets treated as a list instead - a known,
+    accepted false positive, not silently hidden.
     """
     raw_value = (raw_value or "").strip()
     if not raw_value:
@@ -154,7 +170,9 @@ def split_person_names(raw_value):
     parts = [p.strip() for p in raw_value.split(",")]
     if len(parts) == 1:
         return [parts[0]] if parts[0] else []
-    if len(parts[0].split()) < 2:
+    first_words = parts[0].split()
+    starts_with_particle = bool(first_words) and first_words[0].casefold() in SURNAME_PARTICLES
+    if len(first_words) < 2 or starts_with_particle:
         # LAST, FIRST MI - one person, not a comma-joined list of names.
         last = parts[0]
         first_mi = " ".join(p for p in parts[1:] if p)
