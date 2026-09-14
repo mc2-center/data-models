@@ -58,11 +58,13 @@ class _FakeSynapseForQuery:
 def test_find_dataset_entity_ids_deduplicates_and_warns_on_mismatch(capsys):
     df = pd.DataFrame({
         "datasetId": ["syn1", "syn1", "syn2", "syn3"],
+        "downloadType": ["Synapse Indexed", "Synapse Indexed", "Synapse Hosted", "Synapse Indexed"],
         "downloadSynId": ["syn1", "syn1", "syn2", "syn_MISMATCH"],
     })
     syn = _FakeSynapseForQuery(df)
-    ids = extract_datacatalog.find_dataset_entity_ids(syn, dataset_table_id="synTEST")
-    assert ids == ["syn1", "syn2", "syn3"]  # deduplicated, datasetId used even on mismatch
+    result = extract_datacatalog.find_dataset_entity_ids(syn, dataset_table_id="synTEST")
+    # deduplicated, datasetId used even on mismatch, table's own downloadType carried through
+    assert result == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted", "syn3": "Synapse Indexed"}
     assert "WARNING" in capsys.readouterr().out
 
 
@@ -84,7 +86,7 @@ def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema
     syn = _FakeSynapseForAnnotations({
         "syn1": {"license": ["CC-BY 4.0"], "dataUseModifiers": ["Pending Annotation"]},
     })
-    row = extract_datacatalog.extract_datacatalog_rows(syn, ["syn1"])[0]
+    row = extract_datacatalog.extract_datacatalog_rows(syn, {"syn1": "Synapse Indexed"})[0]
     assert row["dataCatalogLicense"] == "CC-BY 4.0"
     assert row["dataCatalogDataUseModifiers"] == "Pending Annotation"
     assert "license" not in row
@@ -98,7 +100,7 @@ def test_extract_datacatalog_rows_reads_known_keys_only():
             "entityType": ["dataset"], "newKey": [""], "Component": ["Dataset"],  # noise, must be ignored
         },
     })
-    rows = extract_datacatalog.extract_datacatalog_rows(syn, ["syn1"])
+    rows = extract_datacatalog.extract_datacatalog_rows(syn, {"syn1": "Synapse Indexed"})
     assert len(rows) == 1
     row = rows[0]
     assert row["DataCatalog_id"] == "syn1"
@@ -108,6 +110,24 @@ def test_extract_datacatalog_rows_reads_known_keys_only():
     assert "entityType" not in row
     assert "newKey" not in row
     assert "Component" not in row
+
+
+def test_extract_datacatalog_rows_uses_table_download_type_not_entity_annotation():
+    # Regression test: the entity's own native `downloadType` annotation was
+    # found live (2026-09-14) to disagree with the CCKP Dataset table's
+    # curated downloadType column on 959/966 rows (mostly blank or stuck at
+    # "Synapse Hosted" on the entity, vs the table's real "Synapse Indexed"
+    # for most rows) - the table's value is what the portal actually uses,
+    # so it must win regardless of what the entity annotation says.
+    syn = _FakeSynapseForAnnotations({
+        "syn1": {"downloadType": ["Synapse Hosted"]},
+        "syn2": {},  # entity has no downloadType annotation at all
+    })
+    rows = extract_datacatalog.extract_datacatalog_rows(
+        syn, {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
+    )
+    by_id = {r["DataCatalog_id"]: r["downloadType"] for r in rows}
+    assert by_id == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
 
 
 def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_path):

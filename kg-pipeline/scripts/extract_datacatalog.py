@@ -22,6 +22,15 @@ across the full qualifying set, zero mismatches) - so `datasetId` alone is
 the entity to fetch annotations from. `Externally Hosted`/`Not Available for
 Download` rows have a blank `downloadSynId` and are skipped.
 
+`downloadType` itself is NOT read from the entity's own native annotation,
+unlike every other field here - confirmed live (2026-09-14) the entity
+annotation disagrees with the table's own `downloadType` column on 959/966
+qualifying rows (mostly blank or stuck at "Synapse Hosted" on the entity,
+vs the table's portal-curated "Synapse Indexed" for 953/977). The table
+column is what the portal actually uses to decide how a dataset is
+presented/downloaded, so `find_dataset_entity_ids()` carries it through and
+`extract_datacatalog_rows()` uses that instead of `ann.get("downloadType")`.
+
 Known annotation keys read (see modules/dataCatalog/annotationProperty.csv
 for what each means) - every one of these was deliberately named to match
 its live Synapse annotation key exactly, except `dataUseModifiers`/`license`,
@@ -75,18 +84,22 @@ def login():
 
 
 def find_dataset_entity_ids(syn, dataset_table_id=DATASET_TABLE_ID):
-    """{datasetId} for every CCKP Dataset row backed by a real Synapse
-    Dataset entity - downloadType in ('Synapse Hosted', 'Synapse Indexed'),
-    deduplicated (a datasetId can appear more than once in the merged table,
-    e.g. under different grants/themes)."""
-    query = (f"SELECT datasetId, downloadSynId FROM {dataset_table_id} "
+    """{datasetId: downloadType} for every CCKP Dataset row backed by a real
+    Synapse Dataset entity - downloadType in ('Synapse Hosted', 'Synapse
+    Indexed'), deduplicated (a datasetId can appear more than once in the
+    merged table, e.g. under different grants/themes; if duplicates
+    disagree on downloadType - not observed live - the last one wins).
+    The table's own downloadType is carried through and used verbatim
+    rather than re-read from the entity's annotation - see module
+    docstring for why."""
+    query = (f"SELECT datasetId, downloadType, downloadSynId FROM {dataset_table_id} "
              "WHERE downloadType IN ('Synapse Hosted', 'Synapse Indexed')")
     df = syn.tableQuery(query).asDataFrame()
     mismatches = df[df["datasetId"] != df["downloadSynId"]]
     if len(mismatches):
         print(f"WARNING: {len(mismatches)} row(s) have downloadSynId != datasetId - "
               "using datasetId, but this contradicts what was verified live 2026-09-01.")
-    return sorted(set(df["datasetId"]))
+    return dict(zip(df["datasetId"], df["downloadType"]))
 
 
 def annotation_value(ann, key, multivalued):
@@ -117,12 +130,12 @@ SCHEMA_FIELD_RENAMES = {
 }
 
 
-def extract_datacatalog_rows(syn, dataset_ids, sleep_s=0.0):
+def extract_datacatalog_rows(syn, dataset_download_types, sleep_s=0.0):
     import time
 
     rows = []
     n_errors = 0
-    for did in dataset_ids:
+    for did, table_download_type in dataset_download_types.items():
         try:
             ann = syn.get_annotations(did)
         except Exception as exc:  # noqa: BLE001 - report and keep going
@@ -132,6 +145,9 @@ def extract_datacatalog_rows(syn, dataset_ids, sleep_s=0.0):
         row = {"DataCatalog_id": did}
         for attr in KNOWN_ATTRIBUTES:
             row[SCHEMA_FIELD_RENAMES.get(attr, attr)] = annotation_value(ann, attr, attr in MULTIVALUED_ATTRIBUTES)
+        # Override with the table's own value - the entity's native
+        # annotation for this one field is unreliable (see module docstring).
+        row["downloadType"] = table_download_type
         rows.append(row)
         if sleep_s:
             time.sleep(sleep_s)
@@ -161,13 +177,13 @@ def main():
 
     syn = login()
 
-    dataset_ids = find_dataset_entity_ids(syn)
+    dataset_download_types = find_dataset_entity_ids(syn)
     if args.max_datasets:
-        dataset_ids = dataset_ids[: args.max_datasets]
-    print(f"{len(dataset_ids)} native Synapse Dataset entity/entities to read "
+        dataset_download_types = dict(list(dataset_download_types.items())[: args.max_datasets])
+    print(f"{len(dataset_download_types)} native Synapse Dataset entity/entities to read "
           f"(downloadType in Synapse Hosted/Synapse Indexed)")
 
-    rows = extract_datacatalog_rows(syn, dataset_ids)
+    rows = extract_datacatalog_rows(syn, dataset_download_types)
 
     os.makedirs(args.out_dir, exist_ok=True)
     out_path = os.path.join(args.out_dir, "DataCatalog.csv")
