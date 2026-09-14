@@ -82,6 +82,7 @@ make query-examples        # run queries/examples/*.rq domain queries (prints re
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
+make deploy-kg             # upload just data/rdf/cckp_kg_full.ttl -> its own distribution folder (syn77443315) for other systems to pull from
 make all                   # schema + extract + harmonize + triples + validate
 make test                  # pytest test/ (fixture-based, no live Synapse access needed)
 
@@ -289,7 +290,8 @@ kg-pipeline/
     extract_datacatalog.py        - Data Catalog: native Dataset-entity annotations (make extract-datacatalog)
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
-    publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
+    publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay),
+                                   plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl alone
     run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header

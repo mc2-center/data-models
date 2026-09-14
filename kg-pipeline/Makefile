@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg test clean \
+.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg deploy-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
 	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg query-checks query-examples
 
@@ -257,6 +257,14 @@ update-coverage-baseline:
 # scripts/publish_kg.py's docstring.
 publish-portal-kg:
 	$(PYTHON) scripts/publish_kg.py --profile portal
+
+# Uploads just the single final merged graph, data/rdf/cckp_kg_full.ttl, as
+# one File entity directly into its own distribution folder (syn77443315) -
+# other systems pull straight from this file, so it gets its own narrow
+# publish path rather than being nested under publish-portal-kg's rdf/
+# subfolder. See scripts/publish_kg.py's module docstring.
+deploy-kg:
+	$(PYTHON) scripts/publish_kg.py --deploy-kg
 
 test:
 	pytest test/

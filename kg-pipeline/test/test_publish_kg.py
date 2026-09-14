@@ -61,3 +61,29 @@ def test_mc2_assay_profile_requires_acl_check():
     profile = publish_mod.PROFILES["mc2-assay"]
     assert profile["require_restricted_acl"] is True
     assert profile["data_dir"] == "data/mc2_assay"
+
+
+def test_deploy_full_kg_refuses_when_source_file_missing(tmp_path):
+    with pytest.raises(SystemExit, match="run `make full-kg` first"):
+        publish_mod.deploy_full_kg(None, path=str(tmp_path / "does_not_exist.ttl"))
+
+
+def test_deploy_full_kg_stores_file_with_expected_parent(tmp_path, monkeypatch):
+    ttl_path = tmp_path / "cckp_kg_full.ttl"
+    ttl_path.write_text("# fake turtle\n")
+
+    stored_calls = []
+
+    class _FakeStoredFile:
+        id = "syn999"
+        version_number = 3
+
+    def fake_store(entity, synapse_client=None):
+        stored_calls.append((entity.path, entity.parent_id, synapse_client))
+        return _FakeStoredFile()
+
+    monkeypatch.setattr(publish_mod, "store", fake_store)
+    result = publish_mod.deploy_full_kg("fake-syn", path=str(ttl_path), target="synTARGET")
+
+    assert result.id == "syn999"
+    assert stored_calls == [(str(ttl_path), "synTARGET", "fake-syn")]

@@ -29,16 +29,27 @@ one-time assumption baked in when the target was first configured.
 
 Mirrors the local `{data_dir}/{raw,harmonized,rdf}/` directory structure as
 Synapse subfolders under the target container, and re-running this script
-uploads new File *versions* in place (synapseclient's `store()` finds an
-existing File by (parent, name) and versions it automatically - no extra
-logic needed here for "upload as new versions on build").
+uploads new File *versions* in place (`store()` finds an existing File by
+(parent, name) and versions it automatically - no extra logic needed here
+for "upload as new versions on build").
+
+A third, narrower mode - `--deploy-kg` (see `deploy_full_kg` below) -
+uploads only the single final merged graph, `data/rdf/cckp_kg_full.ttl`,
+directly into its own dedicated distribution folder (not nested under an
+`rdf/` subfolder the way the two tree-mirroring profiles above are):
+other systems pull straight from this one file, so it gets its own simple,
+single-purpose publish path (`make deploy-kg`) rather than being folded
+into the portal profile's directory-tree upload.
 """
 
 import argparse
+import asyncio
 import os
 
 import synapseclient
-from synapseclient import File, Folder
+from synapseclient.api import get_children
+from synapseclient.models import File, Folder
+from synapseclient.operations import store
 
 PUBLIC_PRINCIPAL_ID = 273949
 AUTHENTICATED_USERS_PRINCIPAL_ID = 273948
@@ -58,6 +69,10 @@ PROFILES = {
         "require_restricted_acl": True,
     },
 }
+
+# --deploy-kg's target/source - see the module docstring's third paragraph.
+FULL_KG_TARGET = "syn77443315"
+FULL_KG_PATH = os.path.join("data", "rdf", "cckp_kg_full.ttl")
 
 
 def effective_acl(syn, entity_id):
@@ -97,11 +112,18 @@ def assert_target_is_restricted(syn, target_id):
           f"read/download grant.")
 
 
-def get_or_create_folder(syn, name, parent_id):
-    for child in syn.getChildren(parent_id, includeTypes=["folder"]):
+async def _find_child_folder_id(parent_id, name, syn):
+    async for child in get_children(parent=parent_id, include_types=["folder"], synapse_client=syn):
         if child["name"] == name:
             return child["id"]
-    folder = syn.store(Folder(name=name, parent=parent_id))
+    return None
+
+
+def get_or_create_folder(syn, name, parent_id):
+    existing_id = asyncio.run(_find_child_folder_id(parent_id, name, syn))
+    if existing_id:
+        return existing_id
+    folder = store(Folder(name=name, parent_id=parent_id), synapse_client=syn)
     return folder.id
 
 
@@ -116,17 +138,29 @@ def upload_directory(syn, local_dir, target_folder_id):
         local_path = os.path.join(local_dir, filename)
         if not os.path.isfile(local_path):
             continue
-        stored = syn.store(File(path=local_path, parent=target_folder_id))
-        uploaded.append((filename, stored.id, stored.versionNumber))
-        print(f"  {filename} -> {stored.id} (version {stored.versionNumber})")
+        stored = store(File(path=local_path, parent_id=target_folder_id), synapse_client=syn)
+        uploaded.append((filename, stored.id, stored.version_number))
+        print(f"  {filename} -> {stored.id} (version {stored.version_number})")
     return uploaded
+
+
+def deploy_full_kg(syn, path=FULL_KG_PATH, target=FULL_KG_TARGET):
+    """Upload the single final merged graph directly into `target` as one
+    File entity - see the module docstring's third paragraph for why this
+    is a separate, narrower path from upload_directory()'s tree mirroring."""
+    if not os.path.isfile(path):
+        raise SystemExit(f"{path} not found - run `make full-kg` first")
+    stored = store(File(path=path, parent_id=target), synapse_client=syn)
+    print(f"{path} -> {stored.id} (version {stored.version_number})")
+    return stored
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--profile", choices=sorted(PROFILES), required=True,
+    parser.add_argument("--profile", choices=sorted(PROFILES), default=None,
                          help="Which pipeline's output to publish - sets --target/--data-dir/ACL-check "
-                              "defaults below, each individually overridable")
+                              "defaults below, each individually overridable. Mutually exclusive with "
+                              "--deploy-kg.")
     parser.add_argument("--target", default=None,
                          help="Synapse container (Project/Folder) to publish into - defaults to the "
                               "profile's own designated staging location")
@@ -135,14 +169,24 @@ def main():
     parser.add_argument("--skip-acl-check", action="store_true",
                          help="Danger: for a require_restricted_acl profile, upload without verifying "
                               "the target's ACL is restricted first")
+    parser.add_argument("--deploy-kg", action="store_true",
+                         help=f"Upload {FULL_KG_PATH} directly to its distribution folder "
+                              f"({FULL_KG_TARGET}) instead of running a --profile publish")
     args = parser.parse_args()
+
+    if args.deploy_kg == bool(args.profile):
+        parser.error("pass exactly one of --profile or --deploy-kg")
+
+    syn = synapseclient.Synapse()
+    syn.login(silent=True)
+
+    if args.deploy_kg:
+        deploy_full_kg(syn)
+        return
 
     profile = PROFILES[args.profile]
     target = args.target or profile["target"]
     data_dir = args.data_dir or profile["data_dir"]
-
-    syn = synapseclient.Synapse()
-    syn.login(silent=True)
 
     if not profile["require_restricted_acl"]:
         print(f"Profile '{args.profile}' publishes intentionally public data - no ACL check needed.")
