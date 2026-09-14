@@ -77,7 +77,8 @@ make triples-datacatalog   # build RDF -> data/rdf/DataCatalog.ttl (merges onto 
 make merge-datacatalog     # fold DataCatalog.ttl into cckp_kg.ttl IN PLACE (dropped by the next `make triples`)
 make combined-kg           # triples + triples-datacatalog, merged into their own data/rdf/cckp_kg_with_datacatalog.ttl
 make full-kg               # combined-kg + link-scdm + link-ontology-crosswalk, merged into data/rdf/cckp_kg_full.ttl (the fullest graph) - includes query-checks below
-make query-checks          # run queries/*.rq sanity queries against cckp_kg_full.ttl without rebuilding it
+make query-checks          # run queries/*.rq sanity queries (pass/fail) against cckp_kg_full.ttl without rebuilding it
+make query-examples        # run queries/examples/*.rq domain queries (prints results, not pass/fail) against cckp_kg_full.ttl
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -289,6 +290,7 @@ kg-pipeline/
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
+    run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header
                                 format) - graph-wide referential integrity and aggregate checks
@@ -301,8 +303,9 @@ kg-pipeline/
                                 portal-Assay curation-gap finder) - `# name:`/`# description:`
                                 header only, no `# expect:` (not pass/fail assertions, so NOT
                                 picked up by validate_graph.py's --queries glob, which only reads
-                                queries/*.rq directly, not subdirectories); run by hand with
-                                rdflib against whichever data/rdf/*.ttl file you want to query
+                                queries/*.rq directly, not subdirectories); run instead via
+                                `make query-examples`, or scripts/run_query.py directly against
+                                whichever data/rdf/*.ttl file(s) you want to query
   data/                        - gitignored: raw/, harmonized/, most of rdf/ (the per-class
                                 ttls - Dataset.ttl, Publication.ttl, ... - and DataCatalog.ttl
                                 stay generated-only). rdf/cckp_kg*.ttl, scdm_links.ttl, and

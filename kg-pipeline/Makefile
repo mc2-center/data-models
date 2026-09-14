@@ -11,7 +11,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
 
 .PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
-	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg query-checks
+	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg query-checks query-examples
 
 all: schema extract harmonize triples validate
 
@@ -228,6 +228,14 @@ full-kg: combined-kg link-scdm link-ontology-crosswalk
 # rebuilding it - already folded into `full-kg` above.
 query-checks:
 	$(PYTHON) scripts/validate_graph.py --queries queries data/rdf/cckp_kg_full.ttl
+
+# Run every queries/examples/*.rq domain query against the already-built
+# cckp_kg_full.ttl and print its results - these are exploratory/evaluation
+# queries, not pass/fail assertions (no `# expect:` header, so they'd
+# error out of query-checks/validate_graph.py's --queries mode above; see
+# scripts/run_query.py).
+query-examples:
+	$(PYTHON) scripts/run_query.py queries/examples data/rdf/cckp_kg_full.ttl
 
 # --- Stage 5: Validate ---
 
