@@ -295,6 +295,14 @@ kg-pipeline/
                                 (e.g. "does every consortiumRef edge point at a real
                                 sagecdm:Program") that SHACL shapes can't easily express;
                                 run against cckp_kg_full.ttl by `make full-kg`/`make query-checks`
+  queries/examples/*.rq        - domain/research-question queries demonstrating what the graph
+                                can answer (tumor-type search, publication-dataset traceability,
+                                tool discovery, SCDM-federated program rollups, a DataCatalog vs.
+                                portal-Assay curation-gap finder) - `# name:`/`# description:`
+                                header only, no `# expect:` (not pass/fail assertions, so NOT
+                                picked up by validate_graph.py's --queries glob, which only reads
+                                queries/*.rq directly, not subdirectories); run by hand with
+                                rdflib against whichever data/rdf/*.ttl file you want to query
   data/                        - gitignored: raw/, harmonized/, most of rdf/ (the per-class
                                 ttls - Dataset.ttl, Publication.ttl, ... - and DataCatalog.ttl
                                 stay generated-only). rdf/cckp_kg*.ttl, scdm_links.ttl, and
