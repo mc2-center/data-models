@@ -16,10 +16,14 @@ Reads the same harmonized CSVs build_triples.py builds cckp_kg.ttl from
     values that resolve to a reviewed row get a cckp:consortiumRef edge.
   - Provisional sagecdm:Person stubs from Grant.investigator (scalar) and
     EducationalResource.contributors (free text, no controlled
-    vocabulary) - one stub per distinct display-name string, flagged
-    cckp:provisional (same tier-3 discipline build_triples.py already uses
-    for confirmed-unmappable CV terms), explicitly not claiming a resolved
-    identity. Linked back via cckp:investigatorRef/cckp:contributorRef.
+    vocabulary) - one stub per distinct person, flagged cckp:provisional
+    (same tier-3 discipline build_triples.py already uses for
+    confirmed-unmappable CV terms), explicitly not claiming a resolved
+    identity. "Distinct person" merges same first/last name entries whose
+    middle name/initial matches or is missing from one of them (see
+    _find_or_mint_person()'s docstring), and every display name is
+    normalized to proper capitalization (see proper_case_name()) before
+    being stored. Linked back via cckp:investigatorRef/cckp:contributorRef.
     Deliberately does NOT try to match an investigator/contributor string
     against any existing Person registry - this pipeline has no Person
     data in scope (see cckp_portal.linkml.yaml's own v1-scope note) and
@@ -249,15 +253,108 @@ def link_consortia(g, harmonized_dir, program_crosswalk):
     return n_edges
 
 
+def _parse_first_middle_last(display_name):
+    """(first, middle, last), all casefolded - or None if display_name has
+    fewer than 2 words and first/last can't be told apart (e.g. a mononym,
+    or a non-person string like "MC2 Center" that slipped into a
+    Person-shaped field). middle is "" when there isn't one; a trailing
+    "." is stripped so an initial matches with or without it ("E."/"E")."""
+    tokens = normalize(display_name).split(" ")
+    if len(tokens) < 2:
+        return None
+    first, last = tokens[0], tokens[-1]
+    middle = " ".join(tokens[1:-1]).rstrip(".")
+    return first, middle, last
+
+
+def _proper_case_word(word):
+    """Title-case a single shouted ("EUN") or all-lowercase ("van") word.
+    Left untouched if it's already mixed-case (e.g. "McDonald", an
+    already-deliberate casing) or contains a digit (e.g. "MC2", not a name
+    word at all) - str.title() would mangle either (McDonald -> Mcdonald,
+    MC2 -> Mc2)."""
+    if any(ch.isdigit() for ch in word):
+        return word
+    if word.isupper() or word.islower():
+        return word.title()
+    return word
+
+
+def proper_case_name(display_name):
+    """Normalize a name to proper capitalization for display (e.g. "EUN
+    HYUN AHN" -> "Eun Hyun Ahn"). Word-by-word via _proper_case_word(), so
+    already mixed-case or digit-bearing words are left alone. Still
+    imperfect for a few specific particles - str.title() capitalizes after
+    an apostrophe, so "van't" (correctly lowercase-t) comes out "Van'T" -
+    a known, accepted limitation, not silently hidden."""
+    return " ".join(_proper_case_word(w) for w in display_name.split())
+
+
+def _mint_person(g, display_name):
+    display_name = proper_case_name(display_name)
+    person_iri = mint_iri("Person", "investigator-" + normalize(display_name).replace(" ", "-"))
+    g.add((person_iri, RDF.type, SAGECDM.Person))
+    g.add((person_iri, SAGECDM.display_name, rdflib.Literal(display_name)))
+    g.add((person_iri, CCKP.provisional, rdflib.Literal(True)))
+    return person_iri
+
+
+def _find_or_mint_person(g, groups, ungrouped, display_name):
+    """Return display_name's sagecdm:Person IRI, reusing an existing one
+    where it's the same person under this module's name-matching rule:
+    same first and last name, and a middle name/initial that either
+    matches exactly (case/period-insensitive) or is missing from one of
+    the two - e.g. "Thomas Yankeelov" and "Thomas E. Yankeelov" merge, but
+    "Thomas E. Yankeelov" and "Thomas J. Yankeelov" don't. A missing-middle
+    name that could equally belong to 2+ already-distinguished full names
+    for the same first/last is left unmerged (and, if repeated, reuses its
+    own single stub rather than re-guessing or re-minting) - ambiguous,
+    not silently resolved either way.
+
+    `groups` is {(first, last): [[middle, iri], ...]} for names successfully
+    parsed by _parse_first_middle_last(); `ungrouped` is a plain
+    normalize(display_name) -> iri map for names that aren't (both dicts
+    mutated in place, shared across calls for one link_investigators() run).
+    """
+    parsed = _parse_first_middle_last(display_name)
+    if parsed is None:
+        key = normalize(display_name)
+        if key not in ungrouped:
+            ungrouped[key] = _mint_person(g, display_name)
+        return ungrouped[key]
+
+    first, middle, last = parsed
+    bucket = groups.setdefault((first, last), [])
+    matches = [entry for entry in bucket if entry[0] == middle or not entry[0] or not middle]
+    if len(matches) == 1:
+        entry = matches[0]
+        if not entry[0] and middle:
+            # Upgrade the stored middle (and display name) now that a
+            # fuller version of the same person has shown up.
+            entry[0] = middle
+            g.set((entry[1], SAGECDM.display_name, rdflib.Literal(proper_case_name(display_name))))
+        return entry[1]
+    if len(matches) > 1:
+        exact = [entry for entry in bucket if entry[0] == middle]
+        if exact:
+            return exact[0][1]
+    person_iri = _mint_person(g, display_name)
+    bucket.append([middle, person_iri])
+    return person_iri
+
+
 def link_investigators(g, harmonized_dir):
-    """Mint one provisional sagecdm:Person stub per distinct display-name
-    string seen across Grant.investigator/EducationalResource.contributors,
-    linking each source row to it via cckp:investigatorRef/contributorRef.
-    Grant.investigator (scalar) is split into individual names via
-    split_person_names()'s comma heuristic; EducationalResource.contributors
-    (already a real `|`-delimited list) still uses the plain pipe split -
-    see this module's docstring for both fields' caveats."""
-    minted = {}
+    """Mint one provisional sagecdm:Person stub per distinct person seen
+    across Grant.investigator/EducationalResource.contributors (see
+    _find_or_mint_person()'s docstring for how "distinct person" is
+    decided), linking each source row to it via
+    cckp:investigatorRef/contributorRef. Grant.investigator (scalar) is
+    split into individual names via split_person_names()'s comma
+    heuristic; EducationalResource.contributors (already a real
+    `|`-delimited list) still uses the plain pipe split - see this
+    module's docstring for both fields' caveats."""
+    groups = {}
+    ungrouped = {}
     n_edges = 0
     predicate_by_class = {"Grant": CCKP.investigatorRef, "EducationalResource": CCKP.contributorRef}
     for cls_name, (field, multivalued) in INVESTIGATOR_FIELDS.items():
@@ -269,16 +366,11 @@ def link_investigators(g, harmonized_dir):
             raw = row.get(field) or ""
             candidates = split_values(raw, multivalued) if multivalued else split_person_names(raw)
             for display_name in candidates:
-                key = normalize(display_name)
-                if key not in minted:
-                    person_iri = mint_iri("Person", "investigator-" + key.replace(" ", "-"))
-                    g.add((person_iri, RDF.type, SAGECDM.Person))
-                    g.add((person_iri, SAGECDM.display_name, rdflib.Literal(display_name)))
-                    g.add((person_iri, CCKP.provisional, rdflib.Literal(True)))
-                    minted[key] = person_iri
-                g.add((subject, predicate, minted[key]))
+                person_iri = _find_or_mint_person(g, groups, ungrouped, display_name)
+                g.add((subject, predicate, person_iri))
                 n_edges += 1
-    return len(minted), n_edges
+    n_persons = len(ungrouped) + sum(len(bucket) for bucket in groups.values())
+    return n_persons, n_edges
 
 
 def build_scdm_links(harmonized_dir, organization_crosswalk_path, program_crosswalk_path):

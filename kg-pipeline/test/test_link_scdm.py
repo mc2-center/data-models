@@ -134,6 +134,50 @@ def test_split_person_names_particle_lookalike_first_name_not_falsely_caught():
     ]
 
 
+def test_proper_case_name_titlecases_shouted_and_lowercase_names():
+    assert link_scdm.proper_case_name("EUN HYUN AHN") == "Eun Hyun Ahn"
+    assert link_scdm.proper_case_name("mikala egeblad") == "Mikala Egeblad"
+
+
+def test_proper_case_name_leaves_mixed_case_and_digit_words_alone():
+    # Already-deliberate casing (McDonald) and an acronym-with-digit (MC2)
+    # would both be mangled by a naive str.title() call.
+    assert link_scdm.proper_case_name("Ross McDonald") == "Ross McDonald"
+    assert link_scdm.proper_case_name("MC2 Center") == "MC2 Center"
+
+
+def test_find_or_mint_person_merges_missing_middle_with_full_middle_name():
+    g = rdflib.Graph()
+    groups, ungrouped = {}, {}
+    sparse = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas Yankeelov")
+    full = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas E. Yankeelov")
+    assert sparse == full  # same person, middle initial missing on one side
+    # Display name upgraded to the fuller version once it's seen.
+    assert (full, SAGECDM.display_name, rdflib.Literal("Thomas E. Yankeelov")) in g
+    assert (full, SAGECDM.display_name, rdflib.Literal("Thomas Yankeelov")) not in g
+
+
+def test_find_or_mint_person_keeps_conflicting_middle_names_distinct():
+    g = rdflib.Graph()
+    groups, ungrouped = {}, {}
+    e_version = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas E. Yankeelov")
+    j_version = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas J. Yankeelov")
+    assert e_version != j_version  # same first/last, but conflicting middles
+
+
+def test_find_or_mint_person_ambiguous_missing_middle_reuses_its_own_stub():
+    g = rdflib.Graph()
+    groups, ungrouped = {}, {}
+    link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas E. Yankeelov")
+    link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas J. Yankeelov")
+    # "Thomas Yankeelov" (no middle) could be either of the two above -
+    # left unmerged with both, but repeat occurrences reuse the same stub.
+    first = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas Yankeelov")
+    second = link_scdm._find_or_mint_person(g, groups, ungrouped, "Thomas Yankeelov")
+    assert first == second
+    assert len(groups[("thomas", "yankeelov")]) == 3
+
+
 def test_link_investigators_mints_one_stub_per_distinct_name_and_flags_provisional(tmp_path):
     harmonized_dir = tmp_path
     with open(harmonized_dir / "Grant_harmonized.csv", "w", newline="") as f:
@@ -176,6 +220,25 @@ def test_link_investigators_splits_comma_joined_grant_investigator_scalar(tmp_pa
     assert (amy, SAGECDM.display_name, rdflib.Literal("Amy Brock")) in g
     assert (thomas, SAGECDM.display_name, rdflib.Literal("Thomas E. Yankeelov")) in g
     assert (nevan, SAGECDM.display_name, rdflib.Literal("Nevan Krogan")) in g
+
+
+def test_link_investigators_merges_and_proper_cases_across_rows(tmp_path):
+    harmonized_dir = tmp_path
+    with open(harmonized_dir / "Grant_harmonized.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["grantId", "investigator"])
+        writer.writerow(["syn1", "EUN AHN"])  # shouted case, no middle
+        writer.writerow(["syn2", "Eun Hyun Ahn"])  # same person, fuller name, normal case
+
+    g = rdflib.Graph()
+    n_persons, n_edges = link_scdm.link_investigators(g, str(harmonized_dir))
+    assert n_persons == 1
+    assert n_edges == 2
+
+    person = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Person/investigator-eun-ahn")
+    assert (person, SAGECDM.display_name, rdflib.Literal("Eun Hyun Ahn")) in g
+    assert (person, SAGECDM.display_name, rdflib.Literal("Eun Ahn")) not in g
+    assert (person, SAGECDM.display_name, rdflib.Literal("EUN AHN")) not in g
 
 
 def test_build_scdm_links_end_to_end(tmp_path):
