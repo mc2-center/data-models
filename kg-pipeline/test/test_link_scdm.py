@@ -93,6 +93,30 @@ def test_link_consortia_only_uses_reviewed_programs(tmp_path):
     assert link_scdm.link_consortia(g2, str(harmonized_dir), unreviewed_crosswalk) == 0
 
 
+def test_split_person_names_no_comma_returns_single_name():
+    assert link_scdm.split_person_names("Sohail Tavazoie") == ["Sohail Tavazoie"]
+    assert link_scdm.split_person_names("") == []
+    assert link_scdm.split_person_names("   ") == []
+
+
+def test_split_person_names_comma_joined_full_names_splits_into_multiple_people():
+    # Each part before its own comma is 2+ words -> a list of already
+    # "First MI Last"-ordered names, not one "Last, First" name.
+    assert link_scdm.split_person_names("Amy Brock, Thomas E. Yankeelov") == [
+        "Amy Brock", "Thomas E. Yankeelov",
+    ]
+    assert link_scdm.split_person_names(
+        "Gerald Denis, Naomi Ko, Stefano Monti, Andrew Emili, Senthil Muthuswamy"
+    ) == ["Gerald Denis", "Naomi Ko", "Stefano Monti", "Andrew Emili", "Senthil Muthuswamy"]
+
+
+def test_split_person_names_single_word_before_first_comma_reads_as_last_first():
+    # "Krogan" alone before the comma -> one person in LAST, FIRST MI order,
+    # put back into First MI Last order.
+    assert link_scdm.split_person_names("Krogan, Nevan") == ["Nevan Krogan"]
+    assert link_scdm.split_person_names("Krogan, Nevan J") == ["Nevan J Krogan"]
+
+
 def test_link_investigators_mints_one_stub_per_distinct_name_and_flags_provisional(tmp_path):
     harmonized_dir = tmp_path
     with open(harmonized_dir / "Grant_harmonized.csv", "w", newline="") as f:
@@ -114,6 +138,27 @@ def test_link_investigators_mints_one_stub_per_distinct_name_and_flags_provision
     assert (jane, rdflib.RDF.type, SAGECDM.Person) in g
     assert (jane, SAGECDM.display_name, rdflib.Literal("Jane Doe")) in g
     assert (jane, CCKP.provisional, rdflib.Literal(True)) in g
+
+
+def test_link_investigators_splits_comma_joined_grant_investigator_scalar(tmp_path):
+    harmonized_dir = tmp_path
+    with open(harmonized_dir / "Grant_harmonized.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["grantId", "investigator"])
+        writer.writerow(["syn1", "Amy Brock, Thomas E. Yankeelov"])  # 2 people, First Last order
+        writer.writerow(["syn2", "Krogan, Nevan"])  # 1 person, Last, First order
+
+    g = rdflib.Graph()
+    n_persons, n_edges = link_scdm.link_investigators(g, str(harmonized_dir))
+    assert n_persons == 3  # Amy Brock, Thomas E. Yankeelov, Nevan Krogan
+    assert n_edges == 3  # syn1->Amy, syn1->Thomas, syn2->Nevan
+
+    amy = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Person/investigator-amy-brock")
+    thomas = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Person/investigator-thomas-e.-yankeelov")
+    nevan = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Person/investigator-nevan-krogan")
+    assert (amy, SAGECDM.display_name, rdflib.Literal("Amy Brock")) in g
+    assert (thomas, SAGECDM.display_name, rdflib.Literal("Thomas E. Yankeelov")) in g
+    assert (nevan, SAGECDM.display_name, rdflib.Literal("Nevan Krogan")) in g
 
 
 def test_build_scdm_links_end_to_end(tmp_path):

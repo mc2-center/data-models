@@ -50,15 +50,16 @@ data, not assumed): Grant.investigator is genuinely a scalar STRING column
 in the live Synapse table (per cckp_portal.linkml.yaml's own header
 comment), but its raw values are sometimes several PI names crammed into
 one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
-Grant row) - this mints ONE garbled Person stub for the whole string
-rather than one per real person, since splitting on commas here would be
-guessing (a legitimate single name can itself contain a comma, e.g. "Van't
-Veer, Laura"-style orderings) with no reliable way to tell the two cases
-apart from the string alone. Similarly, EducationalResource.contributors
+Grant row). split_person_names() below splits these into one Person stub
+per real person, disambiguated from a single "Last, First MI" name (which
+also contains a comma) by word count - see its own docstring for the
+heuristic and its known false-positive case. EducationalResource.contributors
 (a real `|`-delimited list) sometimes has a degree suffix like "MS"/"PhD"
 show up as its own list entry, separate from the name it modifies - a raw
 data-entry inconsistency in the live table, not a bug in this script's
-delimiter handling. Neither is silently cleaned up here.
+delimiter handling, and not something a comma-based heuristic can fix (no
+comma survives the upstream `|`-split by the time this script sees each
+entry) - not silently cleaned up here.
 """
 
 import argparse
@@ -128,6 +129,38 @@ def load_program_crosswalk(path):
 def split_values(raw_value, multivalued):
     values = raw_value.split(LIST_DELIMITER) if multivalued else [raw_value]
     return [v.strip() for v in values if v.strip()]
+
+
+def split_person_names(raw_value):
+    """Split a free-text scalar like Grant.investigator into individual
+    person names.
+
+    Two real formats show up in the live data, indistinguishable without a
+    heuristic: multiple people already in "First [MI] Last" order, joined
+    by commas (e.g. "Amy Brock, Thomas E. Yankeelov" - two people); or a
+    single person in "Last, First MI" order (e.g. "Krogan, Nevan"). Told
+    apart by word count of the text before the first comma: a single word
+    there reads as a last name (LAST, FIRST MI - one person, put back in
+    First MI Last order below) rather than the first person's full name in
+    a comma-joined list (two-plus words - FIRST MI LAST, FIRST MI LAST,
+    ...). Still a heuristic, not infallible: a single "Last, First" name
+    whose last name is itself multi-word (e.g. "Van't Veer, Laura") reads
+    as two words before the comma and gets treated as a list instead - a
+    known, accepted false positive, not silently hidden.
+    """
+    raw_value = (raw_value or "").strip()
+    if not raw_value:
+        return []
+    parts = [p.strip() for p in raw_value.split(",")]
+    if len(parts) == 1:
+        return [parts[0]] if parts[0] else []
+    if len(parts[0].split()) < 2:
+        # LAST, FIRST MI - one person, not a comma-joined list of names.
+        last = parts[0]
+        first_mi = " ".join(p for p in parts[1:] if p)
+        name = f"{first_mi} {last}".strip()
+        return [name] if name else []
+    return [p for p in parts if p]
 
 
 def add_organizations(g, organization_crosswalk):
@@ -201,7 +234,11 @@ def link_consortia(g, harmonized_dir, program_crosswalk):
 def link_investigators(g, harmonized_dir):
     """Mint one provisional sagecdm:Person stub per distinct display-name
     string seen across Grant.investigator/EducationalResource.contributors,
-    linking each source row to it via cckp:investigatorRef/contributorRef."""
+    linking each source row to it via cckp:investigatorRef/contributorRef.
+    Grant.investigator (scalar) is split into individual names via
+    split_person_names()'s comma heuristic; EducationalResource.contributors
+    (already a real `|`-delimited list) still uses the plain pipe split -
+    see this module's docstring for both fields' caveats."""
     minted = {}
     n_edges = 0
     predicate_by_class = {"Grant": CCKP.investigatorRef, "EducationalResource": CCKP.contributorRef}
@@ -211,7 +248,9 @@ def link_investigators(g, harmonized_dir):
             if not _has_identifier(cls_name, row):
                 continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
-            for display_name in split_values(row.get(field) or "", multivalued):
+            raw = row.get(field) or ""
+            candidates = split_values(raw, multivalued) if multivalued else split_person_names(raw)
+            for display_name in candidates:
                 key = normalize(display_name)
                 if key not in minted:
                     person_iri = mint_iri("Person", "investigator-" + key.replace(" ", "-"))
