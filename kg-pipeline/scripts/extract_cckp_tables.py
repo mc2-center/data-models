@@ -19,6 +19,7 @@ from datetime import datetime, timezone
 
 import synapseclient
 import yaml
+from synapseclient.models import Table
 
 TABLES = {
     "Dataset": "syn21897968",
@@ -57,8 +58,9 @@ def flatten_cell(value):
 
 def extract_table(syn, name, synid, out_dir):
     query = f"SELECT * FROM {synid}"
-    results = syn.tableQuery(query)
-    df = results.asDataFrame()
+    # include_row_id_and_row_version=False matches the old syn.tableQuery(...)
+    # .asDataFrame()'s default output shape (no ROW_ID/ROW_VERSION columns).
+    df = Table.query(query=query, include_row_id_and_row_version=False, synapse_client=syn)
     df = df.map(flatten_cell)
 
     out_path = os.path.join(out_dir, f"{name}.csv")

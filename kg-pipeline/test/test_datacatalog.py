@@ -37,70 +37,64 @@ def test_annotation_value_multivalued_joins_with_pipe_delimiter():
     assert extract_datacatalog.annotation_value(ann, "keywords", multivalued=True) == "Pancreas|C57BL/6"
 
 
-class _FakeTableQueryResult:
-    def __init__(self, df):
-        self._df = df
-
-    def asDataFrame(self):  # noqa: N802 - matches synapseclient's real method name
-        return self._df
-
-
-class _FakeSynapseForQuery:
-    """Minimal stand-in for synapseclient.Synapse.tableQuery - no live network calls."""
-
-    def __init__(self, df):
-        self._df = df
-
-    def tableQuery(self, query):  # noqa: N802 - matches synapseclient's real method name
-        return _FakeTableQueryResult(self._df)
-
-
-def test_find_dataset_entity_ids_deduplicates_and_warns_on_mismatch(capsys):
+def test_find_dataset_entity_ids_deduplicates_and_warns_on_mismatch(capsys, monkeypatch):
     df = pd.DataFrame({
         "datasetId": ["syn1", "syn1", "syn2", "syn3"],
         "downloadType": ["Synapse Indexed", "Synapse Indexed", "Synapse Hosted", "Synapse Indexed"],
         "downloadSynId": ["syn1", "syn1", "syn2", "syn_MISMATCH"],
     })
-    syn = _FakeSynapseForQuery(df)
-    result = extract_datacatalog.find_dataset_entity_ids(syn, dataset_table_id="synTEST")
+    # Table.query(...) is a classmethod-style call (no Table instance needed) -
+    # stand in for it directly rather than faking a `syn` object, since this
+    # code no longer goes through syn.tableQuery(...).
+    monkeypatch.setattr(extract_datacatalog.Table, "query", staticmethod(lambda **kwargs: df))
+    result = extract_datacatalog.find_dataset_entity_ids(None, dataset_table_id="synTEST")
     # deduplicated, datasetId used even on mismatch, table's own downloadType carried through
     assert result == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted", "syn3": "Synapse Indexed"}
     assert "WARNING" in capsys.readouterr().out
 
 
-class _FakeSynapseForAnnotations:
-    def __init__(self, annotations):
-        self._annotations = annotations
+def _fake_dataset_model(annotations_by_id):
+    """Stand-in for synapseclient.models.Dataset - Dataset(id=...).get(...)
+    now replaces syn.get_annotations(...), so the fake mirrors that shape
+    instead of a `syn` object with a get_annotations() method."""
 
-    def get_annotations(self, entity_id):
-        return self._annotations[entity_id]
+    class _FakeDataset:
+        def __init__(self, id):  # noqa: A002 - matches the real Dataset(id=...) constructor
+            self._id = id
+            self.annotations = None
+
+        def get(self, synapse_client=None):
+            self.annotations = annotations_by_id[self._id]
+            return self
+
+    return _FakeDataset
 
 
-def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names():
+def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names(monkeypatch):
     # Regression test: modules/dataCatalog/annotationProperty.csv renamed
     # these two attributes to dataCatalogLicense/dataCatalogDataUseModifiers,
     # but the live Synapse annotation keys are still license/dataUseModifiers.
     # extract_datacatalog.py must write the CSV under the renamed schema
     # field names, or harmonize.py/build_datacatalog_triples.py (which key
     # off schema/mc2_model.linkml.yaml) silently find nothing.
-    syn = _FakeSynapseForAnnotations({
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
         "syn1": {"license": ["CC-BY 4.0"], "dataUseModifiers": ["Pending Annotation"]},
-    })
-    row = extract_datacatalog.extract_datacatalog_rows(syn, {"syn1": "Synapse Indexed"})[0]
+    }))
+    row = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})[0]
     assert row["dataCatalogLicense"] == "CC-BY 4.0"
     assert row["dataCatalogDataUseModifiers"] == "Pending Annotation"
     assert "license" not in row
     assert "dataUseModifiers" not in row
 
 
-def test_extract_datacatalog_rows_reads_known_keys_only():
-    syn = _FakeSynapseForAnnotations({
+def test_extract_datacatalog_rows_reads_known_keys_only(monkeypatch):
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
         "syn1": {
             "title": ["A Dataset"], "species": ["Homo sapiens"], "creator": ["Jane Doe", "John Smith"],
             "entityType": ["dataset"], "newKey": [""], "Component": ["Dataset"],  # noise, must be ignored
         },
-    })
-    rows = extract_datacatalog.extract_datacatalog_rows(syn, {"syn1": "Synapse Indexed"})
+    }))
+    rows = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})
     assert len(rows) == 1
     row = rows[0]
     assert row["DataCatalog_id"] == "syn1"
@@ -112,19 +106,19 @@ def test_extract_datacatalog_rows_reads_known_keys_only():
     assert "Component" not in row
 
 
-def test_extract_datacatalog_rows_uses_table_download_type_not_entity_annotation():
+def test_extract_datacatalog_rows_uses_table_download_type_not_entity_annotation(monkeypatch):
     # Regression test: the entity's own native `downloadType` annotation was
     # found live (2026-09-14) to disagree with the CCKP Dataset table's
     # curated downloadType column on 959/966 rows (mostly blank or stuck at
     # "Synapse Hosted" on the entity, vs the table's real "Synapse Indexed"
     # for most rows) - the table's value is what the portal actually uses,
     # so it must win regardless of what the entity annotation says.
-    syn = _FakeSynapseForAnnotations({
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
         "syn1": {"downloadType": ["Synapse Hosted"]},
         "syn2": {},  # entity has no downloadType annotation at all
-    })
+    }))
     rows = extract_datacatalog.extract_datacatalog_rows(
-        syn, {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
+        None, {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
     )
     by_id = {r["DataCatalog_id"]: r["downloadType"] for r in rows}
     assert by_id == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}

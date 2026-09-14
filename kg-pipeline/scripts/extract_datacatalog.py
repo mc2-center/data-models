@@ -8,9 +8,9 @@ native Synapse annotations, populated directly on the Dataset entity itself
 (by Synapse's own Data Catalog UI/metadata assistant, confirmed live: only
 11 of 966 probed entities carry a `Component: Dataset` schematic-submission
 marker alongside them; the rest carry the same key set with no such marker).
-This script reads them directly via `syn.get_annotations()`, the same way
-extract_mc2_assay_metadata.py reads native per-file annotations rather than
-re-deriving anything.
+This script reads them directly via `Dataset(id=...).get(synapse_client=syn)
+.annotations`, the same way extract_mc2_assay_metadata.py reads native
+per-file annotations rather than re-deriving anything.
 
 Which CCKP Dataset rows qualify (established live, not assumed): of
 `syn21897968` (the CCKP Dataset merged table)'s rows, only those with
@@ -53,6 +53,7 @@ from datetime import datetime, timezone
 
 import synapseclient
 import yaml
+from synapseclient.models import Dataset, Table
 
 DATASET_TABLE_ID = "syn21897968"
 LIST_DELIMITER = "|"
@@ -94,7 +95,7 @@ def find_dataset_entity_ids(syn, dataset_table_id=DATASET_TABLE_ID):
     docstring for why."""
     query = (f"SELECT datasetId, downloadType, downloadSynId FROM {dataset_table_id} "
              "WHERE downloadType IN ('Synapse Hosted', 'Synapse Indexed')")
-    df = syn.tableQuery(query).asDataFrame()
+    df = Table.query(query=query, include_row_id_and_row_version=False, synapse_client=syn)
     mismatches = df[df["datasetId"] != df["downloadSynId"]]
     if len(mismatches):
         print(f"WARNING: {len(mismatches)} row(s) have downloadSynId != datasetId - "
@@ -137,7 +138,7 @@ def extract_datacatalog_rows(syn, dataset_download_types, sleep_s=0.0):
     n_errors = 0
     for did, table_download_type in dataset_download_types.items():
         try:
-            ann = syn.get_annotations(did)
+            ann = Dataset(id=did).get(synapse_client=syn).annotations
         except Exception as exc:  # noqa: BLE001 - report and keep going
             print(f"  ! could not read annotations for {did}: {exc}")
             n_errors += 1

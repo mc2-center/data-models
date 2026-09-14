@@ -8,18 +8,20 @@ than assumed:
 
   1. Identity check first. A `Dataset.datasetId` is NOT always a real Synapse
      `Dataset`/`DatasetCollection` entity - some are plain Folders (confirmed
-     live: 2 of the first 15 datasetIds probed). Only `Dataset`/
-     `DatasetCollection` entities (`entity.concreteType ==
-     "org.sagebionetworks.repo.model.table.Dataset[Collection]"`) are queried
-     further - a Folder is skipped, never treated as walkable.
+     live: 2 of the first 15 datasetIds probed). Only entities the
+     `synapseclient.operations.get()` factory resolves to a
+     `synapseclient.models.Dataset`/`DatasetCollection` instance are queried
+     further (`isinstance(entity, (Dataset, DatasetCollection))`) - a Folder
+     is skipped, never treated as walkable.
   2. A confirmed Dataset/DatasetCollection entity's membership comes from its
-     own `datasetItems` property (a list of `{entityId, versionNumber}`
-     dicts) - NOT from listing a folder's children.
+     own `items` attribute (a list of `EntityRef(id=..., version=...)`
+     objects) - NOT from listing a folder's children.
   3. Per mc2-center-dcc's own `table_to_annotations.py` (the DCC's write-side
      pipeline that produces these annotations), metadata is pushed down as
      *native Synapse annotations* directly on each member File entity - read
-     here via `syn.get_annotations(file_id)`, never re-derived by this
-     script. Confirmed live: every File's annotation dict has a **stable**
+     here via `File(id=file_id, download_file=False).get(synapse_client=syn)
+     .annotations`, never re-derived by this script. Confirmed live: every
+     File's annotation dict has a **stable**
      key set (`BiospecimenKey`, `Component`, `DataUseCodes`, `DatasetViewKey`,
      `EntityId`, `FileAlias`, `FileAssay`, `FileDescription`, `FileDesign`,
      `FileFormat`, `FileLevel`, `FileSpecies`, `FileTissue`, `FileTumorType`,
@@ -83,6 +85,9 @@ import os
 import time
 
 import synapseclient
+from synapseclient.models import Dataset, DatasetCollection, File
+from synapseclient.operations import FileOptions
+from synapseclient.operations import get as syn_get
 
 # Synapse annotation key -> MC2 model attribute name, built from what's
 # actually observed on live File View-annotated files (verified against
@@ -106,10 +111,6 @@ ANNOTATION_KEY_TO_ATTRIBUTE = {
     "FileTissue": "Tissue",
     "FileTumorType": "Tumor Type",
 }
-DATASET_CONCRETE_TYPES = {
-    "org.sagebionetworks.repo.model.table.Dataset",
-    "org.sagebionetworks.repo.model.table.DatasetCollection",
-}
 LIST_DELIMITER = "|"
 
 
@@ -128,14 +129,15 @@ def discover_dataset_entities(syn, dataset_ids, sleep_s=0.1):
     confirmed, skipped_by_type = [], {}
     for did in dataset_ids:
         try:
-            entity = syn.get(did, downloadFile=False)
+            entity = syn_get(did, file_options=FileOptions(download_file=False), synapse_client=syn)
         except Exception as exc:  # noqa: BLE001 - report and keep going
             skipped_by_type[f"ERROR: {exc}"] = skipped_by_type.get(f"ERROR: {exc}", 0) + 1
             continue
-        if entity.concreteType in DATASET_CONCRETE_TYPES:
+        if isinstance(entity, (Dataset, DatasetCollection)):
             confirmed.append(did)
         else:
-            skipped_by_type[entity.concreteType] = skipped_by_type.get(entity.concreteType, 0) + 1
+            type_name = type(entity).__name__
+            skipped_by_type[type_name] = skipped_by_type.get(type_name, 0) + 1
         time.sleep(sleep_s)
     return confirmed, skipped_by_type
 
@@ -143,14 +145,14 @@ def discover_dataset_entities(syn, dataset_ids, sleep_s=0.1):
 def extract_file_view_rows(syn, dataset_ids, sleep_s=0.1, max_files_per_dataset=None):
     rows = []
     for did in dataset_ids:
-        entity = syn.get(did, downloadFile=False)
-        items = entity.properties.get("datasetItems") or []
+        entity = syn_get(did, file_options=FileOptions(download_file=False), synapse_client=syn)
+        items = entity.items or []
         if max_files_per_dataset:
             items = items[:max_files_per_dataset]
         for item in items:
-            file_id = item["entityId"]
+            file_id = item.id
             try:
-                ann = syn.get_annotations(file_id)
+                ann = File(id=file_id, download_file=False).get(synapse_client=syn).annotations
             except Exception as exc:  # noqa: BLE001 - report and keep going
                 print(f"  ! could not read annotations for {file_id}: {exc}")
                 continue

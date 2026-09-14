@@ -39,52 +39,46 @@ def test_annotation_values_joins_multivalued_with_pipe_delimiter():
     assert extract_mod.annotation_values(ann, "NotPresent") == ""
 
 
-class _FakeEntity:
-    def __init__(self, concrete_type, dataset_items=None):
-        self.concreteType = concrete_type
-        self.properties = {"datasetItems": dataset_items or []}
+def test_discover_dataset_entities_filters_by_concrete_type(monkeypatch):
+    from synapseclient.models import Dataset, DatasetCollection, Folder
 
-
-class _FakeSynapse:
-    """Minimal stand-in for synapseclient.Synapse - no live network calls."""
-
-    def __init__(self, entities, annotations):
-        self._entities = entities
-        self._annotations = annotations
-
-    def get(self, entity_id, downloadFile=False):  # noqa: N803 - matches synapseclient's real signature
-        return self._entities[entity_id]
-
-    def get_annotations(self, entity_id):
-        return self._annotations[entity_id]
-
-
-def test_discover_dataset_entities_filters_by_concrete_type():
-    syn = _FakeSynapse(
-        entities={
-            "syn1": _FakeEntity("org.sagebionetworks.repo.model.table.Dataset"),
-            "syn2": _FakeEntity("org.sagebionetworks.repo.model.Folder"),
-            "syn3": _FakeEntity("org.sagebionetworks.repo.model.table.DatasetCollection"),
-        },
-        annotations={},
-    )
-    confirmed, skipped = extract_mod.discover_dataset_entities(syn, ["syn1", "syn2", "syn3"], sleep_s=0)
+    entities = {
+        "syn1": Dataset(id="syn1"),
+        "syn2": Folder(id="syn2"),
+        "syn3": DatasetCollection(id="syn3"),
+    }
+    # synapseclient.operations.get(...) (imported as extract_mod.syn_get)
+    # replaces syn.get(...) - stand in for it directly, returning real (but
+    # network-free) dataclass model instances so isinstance() checks in
+    # discover_dataset_entities() behave exactly as they would live.
+    monkeypatch.setattr(extract_mod, "syn_get", lambda entity_id, **kwargs: entities[entity_id])
+    confirmed, skipped = extract_mod.discover_dataset_entities(None, ["syn1", "syn2", "syn3"], sleep_s=0)
     assert confirmed == ["syn1", "syn3"]
-    assert skipped == {"org.sagebionetworks.repo.model.Folder": 1}
+    assert skipped == {"Folder": 1}
 
 
-def test_extract_file_view_rows_maps_annotation_keys_to_attribute_names():
-    syn = _FakeSynapse(
-        entities={"syn_ds": _FakeEntity(
-            "org.sagebionetworks.repo.model.table.Dataset",
-            dataset_items=[{"entityId": "syn_file_1", "versionNumber": 1}],
-        )},
-        annotations={"syn_file_1": {
-            "FileViewId": ["syn_file_1"], "BiospecimenKey": ["BSP-01"], "FileAssay": ["RNA-Seq"],
-            "FileSpecies": ["Human"], "Component": ["FileView"], "Id": ["uuid-1"],
-        }},
-    )
-    rows = extract_mod.extract_file_view_rows(syn, ["syn_ds"], sleep_s=0)
+def test_extract_file_view_rows_maps_annotation_keys_to_attribute_names(monkeypatch):
+    from synapseclient.models import Dataset, EntityRef
+
+    dataset = Dataset(id="syn_ds", items=[EntityRef(id="syn_file_1", version=1)])
+    monkeypatch.setattr(extract_mod, "syn_get", lambda entity_id, **kwargs: dataset)
+
+    fake_annotations = {
+        "FileViewId": ["syn_file_1"], "BiospecimenKey": ["BSP-01"], "FileAssay": ["RNA-Seq"],
+        "FileSpecies": ["Human"], "Component": ["FileView"], "Id": ["uuid-1"],
+    }
+
+    class _FakeFile:
+        def __init__(self, id, download_file):  # noqa: A002 - matches File(id=..., download_file=...)
+            self.annotations = None
+
+        def get(self, synapse_client=None):
+            self.annotations = fake_annotations
+            return self
+
+    monkeypatch.setattr(extract_mod, "File", _FakeFile)
+
+    rows = extract_mod.extract_file_view_rows(None, ["syn_ds"], sleep_s=0)
     assert len(rows) == 1
     row = rows[0]
     assert row["datasetId"] == "syn_ds"
