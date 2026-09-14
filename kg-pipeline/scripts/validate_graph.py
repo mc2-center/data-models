@@ -39,12 +39,26 @@ scripts/suggest_mappings.py and README.md) are always excluded from the gate.
                                           make sh:class join-target checks
                                           vacuous by entailing the very type
                                           being checked for).
+  --queries QUERY_DIR DATA_FILE...        Run every queries/*.rq sanity
+                                          query (graph-wide referential
+                                          integrity and aggregate checks
+                                          that are awkward or impossible to
+                                          express as a SHACL shape - e.g.
+                                          "does every consortiumRef edge
+                                          point at a real sagecdm:Program")
+                                          against the given Turtle file(s).
+                                          See queries/*.rq for the query
+                                          format (a `# name:`/`# expect:`/
+                                          `# description:` header followed
+                                          by a SPARQL SELECT).
 """
 
 import argparse
 import csv
+import glob
 import json
 import os
+import re
 import sys
 from collections import Counter
 
@@ -159,6 +173,78 @@ def shacl_validate(shapes_path, data_paths):
     return conforms
 
 
+QUERY_HEADER_RE = re.compile(r"^#\s*(name|expect|description):\s*(.*)$")
+MIN_COUNT_RE = re.compile(r"^min_count\s+(\d+)$")
+
+
+def parse_query_file(path):
+    """(name, expect, description, sparql) from one queries/*.rq file - a
+    `# name: ...` / `# expect: ...` / `# description: ...` header (any
+    order, blank lines allowed between them) followed by the SPARQL SELECT
+    itself. `expect` is either "empty" (pass iff the query returns zero
+    rows - a find-the-violations query) or "min_count N" (pass iff it
+    returns at least N rows - a sanity floor)."""
+    meta = {}
+    body_lines = []
+    in_header = True
+    with open(path) as f:
+        for line in f:
+            if in_header:
+                m = QUERY_HEADER_RE.match(line.strip())
+                if m:
+                    meta[m.group(1)] = m.group(2).strip()
+                    continue
+                if not line.strip():
+                    continue
+                in_header = False
+            body_lines.append(line)
+    for required in ("name", "expect"):
+        if required not in meta:
+            raise ValueError(f"{path}: missing required '# {required}: ...' header line")
+    return meta["name"], meta["expect"], meta.get("description", ""), "".join(body_lines)
+
+
+def check_expectation(expect, n_rows):
+    if expect == "empty":
+        return n_rows == 0
+    m = MIN_COUNT_RE.match(expect)
+    if m:
+        return n_rows >= int(m.group(1))
+    raise ValueError(f"unknown '# expect: {expect}' - must be 'empty' or 'min_count N'")
+
+
+def run_query_checks(query_dir, data_paths):
+    """Run every queries/*.rq sanity query against the union of data_paths.
+    Returns a list of {name, path, expect, n_rows, passed, description,
+    sample} dicts, one per query file, sorted by filename."""
+    graph = rdflib.Graph()
+    for path in data_paths:
+        graph.parse(path, format="turtle")
+
+    results = []
+    for path in sorted(glob.glob(os.path.join(query_dir, "*.rq"))):
+        name, expect, description, sparql = parse_query_file(path)
+        rows = list(graph.query(sparql))
+        results.append({
+            "name": name, "path": path, "expect": expect, "description": description,
+            "n_rows": len(rows), "passed": check_expectation(expect, len(rows)), "sample": rows[:5],
+        })
+    return results
+
+
+def print_query_check_results(results):
+    n_failed = sum(1 for r in results if not r["passed"])
+    for r in results:
+        status = "OK" if r["passed"] else "FAIL"
+        print(f"{status}    {r['name']}  (expect: {r['expect']}, got {r['n_rows']} row(s))  [{r['path']}]")
+        if not r["passed"]:
+            print(f"      {r['description']}")
+            for row in r["sample"]:
+                print(f"      violation: {row}")
+    print(f"\n{len(results) - n_failed}/{len(results)} query check(s) passed")
+    return n_failed == 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--parse-only", nargs="+", metavar="FILE", help="Turtle files to syntax-check")
@@ -174,10 +260,13 @@ def main():
     parser.add_argument("--shacl", nargs="+", metavar="PATH",
                          help="First path is a SHACL shapes Turtle file, rest are instance-data Turtle "
                               "files to validate against it")
+    parser.add_argument("--queries", nargs="+", metavar="PATH",
+                         help="First path is a directory of queries/*.rq sanity queries, rest are "
+                              "instance-data Turtle files to run them against")
     args = parser.parse_args()
 
-    if not args.parse_only and not args.coverage and not args.shacl:
-        parser.error("pass --parse-only, --coverage, and/or --shacl")
+    if not args.parse_only and not args.coverage and not args.shacl and not args.queries:
+        parser.error("pass --parse-only, --coverage, --shacl, and/or --queries")
 
     ok = True
     if args.parse_only:
@@ -190,6 +279,9 @@ def main():
     if args.shacl:
         shapes_path, *data_paths = args.shacl
         ok = shacl_validate(shapes_path, data_paths) and ok
+    if args.queries:
+        query_dir, *data_paths = args.queries
+        ok = print_query_check_results(run_query_checks(query_dir, data_paths)) and ok
 
     sys.exit(0 if ok else 1)
 

@@ -1,0 +1,12 @@
+# name: consortium_ref_targets_are_programs
+# expect: empty
+# description: Every cckp:consortiumRef edge (from link_scdm.py's
+#   link_consortia()) should point at a node typed sagecdm:Program -
+#   catches a crosswalk lookup returning a stale or mistyped id.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX sagecdm: <https://sage-bionetworks.github.io/SageCommonDataModel/>
+
+SELECT ?subject ?target WHERE {
+  ?subject cckp:consortiumRef ?target .
+  FILTER NOT EXISTS { ?target a sagecdm:Program }
+}

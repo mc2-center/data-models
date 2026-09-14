@@ -11,7 +11,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
 
 .PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
-	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg
+	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg query-checks
 
 all: schema extract harmonize triples validate
 
@@ -219,6 +219,15 @@ full-kg: combined-kg link-scdm link-ontology-crosswalk
 	$(PYTHON) scripts/merge_ttl.py --base data/rdf/cckp_kg_full.ttl --overlay data/rdf/ontology_crosswalk_links.ttl \
 		--out data/rdf/cckp_kg_full.ttl
 	$(PYTHON) scripts/validate_graph.py --shacl schema/cckp_portal.shacl.ttl data/rdf/cckp_kg_full.ttl
+	$(PYTHON) scripts/validate_graph.py --queries queries data/rdf/cckp_kg_full.ttl
+
+# Re-run just the queries/*.rq sanity checks (graph-wide referential
+# integrity/aggregate checks awkward or impossible to express as a SHACL
+# shape - e.g. "does every consortiumRef edge point at a real
+# sagecdm:Program") against the already-built cckp_kg_full.ttl, without
+# rebuilding it - already folded into `full-kg` above.
+query-checks:
+	$(PYTHON) scripts/validate_graph.py --queries queries data/rdf/cckp_kg_full.ttl
 
 # --- Stage 5: Validate ---
 

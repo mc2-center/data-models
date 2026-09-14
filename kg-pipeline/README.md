@@ -76,7 +76,8 @@ make harmonize-datacatalog # resolve Data Catalog controlled-vocabulary values -
 make triples-datacatalog   # build RDF -> data/rdf/DataCatalog.ttl (merges onto existing cckp:Dataset subjects)
 make merge-datacatalog     # fold DataCatalog.ttl into cckp_kg.ttl IN PLACE (dropped by the next `make triples`)
 make combined-kg           # triples + triples-datacatalog, merged into their own data/rdf/cckp_kg_with_datacatalog.ttl
-make full-kg               # combined-kg + link-scdm + link-ontology-crosswalk, merged into data/rdf/cckp_kg_full.ttl (the fullest graph)
+make full-kg               # combined-kg + link-scdm + link-ontology-crosswalk, merged into data/rdf/cckp_kg_full.ttl (the fullest graph) - includes query-checks below
+make query-checks          # run queries/*.rq sanity queries against cckp_kg_full.ttl without rebuilding it
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
@@ -276,7 +277,7 @@ kg-pipeline/
     suggest_mappings.py         - Stage 3.5 (human-review candidate mappings)
     crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
-    validate_graph.py          - Stage 5 (+ SHACL validation)
+    validate_graph.py          - Stage 5 (+ SHACL validation, + queries/*.rq sanity checks)
     extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
@@ -288,11 +289,17 @@ kg-pipeline/
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay)
-  data/                        - gitignored: raw/, harmonized/, rdf/ (rdf/ includes
-                                scdm_links.ttl once `make link-scdm` has been run,
-                                ontology_crosswalk_links.ttl once `make
-                                link-ontology-crosswalk` has, DataCatalog.ttl
-                                once `make triples-datacatalog` has)
+  queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
+                                docstring for the `# name:`/`# expect:`/`# description:` header
+                                format) - graph-wide referential integrity and aggregate checks
+                                (e.g. "does every consortiumRef edge point at a real
+                                sagecdm:Program") that SHACL shapes can't easily express;
+                                run against cckp_kg_full.ttl by `make full-kg`/`make query-checks`
+  data/                        - gitignored: raw/, harmonized/, most of rdf/ (the per-class
+                                ttls - Dataset.ttl, Publication.ttl, ... - and DataCatalog.ttl
+                                stay generated-only). rdf/cckp_kg*.ttl, scdm_links.ttl, and
+                                ontology_crosswalk_links.ttl ARE committed (see .gitignore) -
+                                the merged/derived graphs worth diffing between rebuilds
   data/harmonized/datacatalog/ - Data Catalog's own harmonize --out-dir, kept
                                 separate from data/harmonized/'s own
                                 unmapped_terms.csv (see "Additional pipeline
@@ -300,7 +307,7 @@ kg-pipeline/
   data/mc2_assay/              - gitignored (access-controlled - see
                                 "Additional pipeline stages" above): raw/, harmonized/, rdf/
   test/
-    fixtures/*.csv, shacl_*.ttl - small hand-made sample rows/graphs
+    fixtures/*.csv, shacl_*.ttl, queries/*.rq - small hand-made sample rows/graphs/queries
     conftest.py, test_*.py     - pytest suite (no live Synapse access needed,
                                 except test_mc2_assay_file_view.py's fixture-only
                                 tests, which also need none - live calls are

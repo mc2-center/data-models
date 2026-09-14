@@ -1,0 +1,8 @@
+# name: has_people
+# expect: min_count 1
+# description: Test fixture query - at least one ex:Person exists.
+PREFIX ex: <http://example.org/>
+
+SELECT ?p WHERE {
+  ?p a ex:Person .
+}
