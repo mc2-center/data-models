@@ -248,7 +248,19 @@ kg-pipeline/
                                 schema-level alignment, same schema.org
                                 vocabulary the Data Catalog stage already
                                 asserts real predicates in (see
-                                `plans/cckp_schema_class_alignment.md`).
+                                `plans/cckp_schema_class_alignment.md`) - plus
+                                the same shape of mapping to Biolink
+                                (`biolink:Dataset`/`Publication` exactly;
+                                Tool/EducationalResource -> the generic
+                                `biolink:InformationContentEntity`, Grant ->
+                                `biolink:AdministrativeEntity`, as close
+                                matches - Biolink has no dedicated class for
+                                any of the three). build_triples.py
+                                materializes this second mapping as an actual
+                                `rdf:type` on every instance (`BIOLINK_TYPE`
+                                there) rather than relying on the target
+                                triple store to reason over the schema-level
+                                mapping - see that script's docstring.
     cckp_portal.ttl           - generated via `make schema`
     cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
                                 "Additional pipeline stages" above)

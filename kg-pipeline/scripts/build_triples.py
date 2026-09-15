@@ -30,6 +30,14 @@ matching the convention already used by schema/mc2_model.linkml.yaml's
 default schema-id - detected by the id's own shape (`SYNAPSE_ID_RE`), not by
 which class it belongs to, since some classes (e.g. EducationalResource) mint
 from a Synapse id in some rows and a non-Synapse fallback in others.
+
+Dual-typing with Biolink: each row also gets a second `rdf:type` alongside
+its `cckp:{Class}` type, from `BIOLINK_TYPE` below, so the graph is queryable
+by Biolink class today without waiting on the target triple store to support
+OWL/RDFS reasoning over the schema-level `skos:exactMatch`/`skos:closeMatch`
+mappings already declared in cckp_portal.linkml.yaml. Once that reasoning is
+available, this per-instance materialization can be dropped in favor of a
+real `rdfs:subClassOf` axiom from `cckp:{Class}` to its Biolink type.
 """
 
 import argparse
@@ -55,6 +63,20 @@ DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
 # source value were ever cased differently.
 SYNAPSE_ID_RE = re.compile(r"^syn\d+$", re.IGNORECASE)
 SYNAPSE_NS = "https://www.synapse.org/Synapse:"
+BIOLINK = rdflib.Namespace("https://w3id.org/biolink/vocab/")
+# Best-effort Biolink type per CCKP class, for the instance-level dual-typing
+# described in the module docstring. Dataset/Publication have a real,
+# same-meaning Biolink class (also asserted as a schema-level
+# skos:exactMatch in cckp_portal.linkml.yaml); Biolink has no Tool/Grant/
+# EducationalResource class, so those three map to the closest generic
+# Biolink parent (also asserted there as skos:closeMatch, not exactMatch).
+BIOLINK_TYPE = {
+    "Dataset": BIOLINK.Dataset,
+    "Publication": BIOLINK.Publication,
+    "Tool": BIOLINK.InformationContentEntity,
+    "Grant": BIOLINK.AdministrativeEntity,
+    "EducationalResource": BIOLINK.InformationContentEntity,
+}
 # Tier-3 of the identifier policy documented in README.md ("registry CURIE" /
 # "w3id.org-minted portal IRI" / "provisional placeholder"): a stable, local
 # IRI for a raw CV value a human has actively checked against every relevant
@@ -290,7 +312,9 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
     g.bind("cckp", CCKP)
+    g.bind("biolink", BIOLINK)
     class_uri = CCKP[class_slug(cls_name)]
+    biolink_type = BIOLINK_TYPE.get(cls_name)
     fields_meta = schema_meta[cls_name]
 
     skipped_blank = 0
@@ -308,6 +332,8 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
         row_id = mint_id(cls_name, row)
         subject = mint_iri(cls_name, row_id)
         g.add((subject, RDF.type, class_uri))
+        if biolink_type is not None:
+            g.add((subject, RDF.type, biolink_type))
 
         for field, meta in fields_meta.items():
             # `field` (the harmonized CSV's actual column header, e.g. "File
