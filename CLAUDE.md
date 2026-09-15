@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Data models and controlled vocabularies for the [Cancer Complexity Knowledge Portal](https://cancercomplexity.synapse.org/) (CCKP). The model is maintained as CSV files in domain-specific `modules/`, collated into `mc2.model.csv`, and converted to JSON-LD/JSON Schema via `synapseclient.extensions.curator` (the actively-maintained successor to [schematicpy](https://pypi.org/project/schematicpy/), which Sage Bionetworks has announced will be retired by end of 2026) for use by the [Data Curator App](https://dca.app.sagebionetworks.org/).
 
+A second subsystem, `kg-pipeline/`, converts this model (plus live CCKP portal data pulled from Synapse) into an RDF knowledge graph - its own LinkML schema, an extract → harmonize → map-to-RDF → validate build, and a Synapse publish path. It has its own README, Makefile, and Python environment - see "kg-pipeline (knowledge graph)" under Architecture below.
+
 ## Commands
 
 ```bash
@@ -24,14 +26,22 @@ make generate-json              # python create_json_from_model.py <data types> 
 # Generate JSON schemas for specific data types only
 python create_json_from_model.py Biospecimen Study Dataset
 
-# QC model build (NOTE: qc_convert still calls the old, non-functional
-# `schematic schema convert` against qc_model/mc2_qc.model.csv, a separately
-# hand-formatted copy of the model with schematicpy's older required columns
-# -- unlike `make convert`, this was not migrated; needs a follow-up decision)
-make qc
-
 # Docs dev server
 mkdocs serve   # http://localhost:8000
+```
+
+```bash
+# kg-pipeline: separate venv + requirements.txt (isolated from the root
+# install above - linkml pulls a large, independently-versioned dependency
+# tree). Run from kg-pipeline/.
+cd kg-pipeline
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+make schema     # regenerate schema/*.ttl from schema/*.linkml.yaml
+make all        # schema + extract (needs Synapse credentials) + harmonize + triples + validate
+make full-kg    # combined-kg + SCDM/ontology-crosswalk federation -> data/rdf/cckp_kg_full.ttl
+make test       # pytest test/ - no live Synapse access needed
 ```
 
 ## Architecture
@@ -51,14 +61,27 @@ Each domain lives in `modules/<domain>/`:
 - No NaN — use empty strings (`keep_default_na=False`)
 - Index on `Attribute` column when updating via pandas
 
+### kg-pipeline (knowledge graph)
+
+`kg-pipeline/` is a separate, self-contained pipeline (own `README.md`, `Makefile`, `requirements.txt`, `test/`) that builds an RDF knowledge graph from this model plus live CCKP portal data:
+
+- **Stage 0**: this repo's `mc2.model.csv` → `schema/mc2_model.linkml.yaml` (via a vendored `csv-to-linkml` converter) → `schema/mc2_model.ttl` (OWL/Turtle)
+- **Stages 2-4**: pull the 5 CCKP portal Synapse tables → resolve controlled-vocabulary values against this model's CVs (real ontology IRIs: NCIT, MONDO, EFO, OBI, ...) → mint RDF instance triples typed `cckp:{Class}`, at a placeholder `w3id.org/mc2-center/cckp-portal/data/{Class}/{id}` IRI
+- **Stage 5**: SHACL shape validation + `queries/*.rq` sanity checks
+- Optional stages: Data Catalog annotations, SCDM (Sage Common Data Model) federation, MC2 assay-metadata KG (access-controlled, linked into `sagebrain-model`)
+- Publish path: Synapse only (`make publish-portal-kg`, `make deploy-kg`)
+
+See `kg-pipeline/README.md` for the full command reference, directory layout, and design rationale (also `plans/kg_pipeline_architecture_decisions.md`).
+
 ### PR requirements
 PRs to main must have exactly one semantic label: `major`, `minor`, `patch`, or `non-release`. The `pr-check.yml` workflow enforces this.
 
 ### CI workflows (`.github/workflows/`)
 | Workflow | Trigger | What it does |
 |----------|---------|--------------|
-| `build-jsonld.yml` | PR to main (module changes) | `make all` to validate collation + schema conversion |
 | `build-docs.yml` | Push to main | Builds MkDocs site → GitHub Pages |
 | `pr-check.yml` | PR events | Validates semantic label |
 | `google-sheet-sync.yml` | Scheduled/manual | Syncs RFC Google Sheets to a CSV branch |
 | `create-release.yml` | Manual trigger | Creates GitHub release with version bump |
+
+No CI currently validates `make all` (root model) or `kg-pipeline/`'s build/tests on PRs (the old `build-jsonld.yml` was removed as obsolete; nothing replaced it) - run them locally before pushing model or kg-pipeline changes.
