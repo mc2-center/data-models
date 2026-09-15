@@ -63,3 +63,27 @@ def test_upload_uploads_schema_rdf_provenance_then_manifest_last(tmp_path, monke
         provenance_content = f.read()
     assert manifest_content == provenance_content
     assert f"{prefix}/" in manifest_content  # void:dataDump points at this build's prefix
+
+
+def test_dry_run_mirrors_the_upload_layout_locally_without_aws(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+
+    calls = []
+    monkeypatch.setattr(up.subprocess, "run", lambda *a, **k: calls.append((a, k)))
+    # aws doesn't need to be on PATH at all for a dry run.
+    monkeypatch.setattr(up.shutil, "which", lambda _: None)
+
+    dry_run_dir = tmp_path / "mirror"
+    prefix = up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15",
+                        tmp_root=str(tmp_path), dry_run_dir=str(dry_run_dir))
+
+    assert calls == []  # never shells out to aws
+    assert prefix == "s3://some-bucket/cckp/2026-09-15"
+    mirrored = dry_run_dir / "cckp" / "2026-09-15"
+    assert (mirrored / "data" / "schema" / "mc2_model.ttl").is_file()
+    assert (mirrored / "data" / "rdf" / "cckp_kg_full.ttl").is_file()
+    assert (mirrored / "data" / "_provenance.ttl").is_file()
+    assert (mirrored / "manifest.ttl").is_file()
