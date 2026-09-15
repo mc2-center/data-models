@@ -39,10 +39,15 @@ exported as standalone JSON Schemas in `./json_schemas`.
 
 Beyond the original entity types (Dataset, Study, Publication, Grant,
 Educational Resource, File, Tool, Person), the model also covers Biospecimen,
-Individual, and Model (non-human organism/cell line) entities, as well as
-assay-level metadata for imaging (multiplexed/single-channel imaging),
-NanoString GeoMx Digital Spatial Profiler (DSP) spatial transcriptomics,
-bulk/single-cell sequencing, and 10x Genomics Visium spatial transcriptomics.
+Individual, Model (non-human organism/cell line), and Data Catalog entities,
+as well as assay-level metadata for imaging (multiplexed/single-channel
+imaging), NanoString GeoMx Digital Spatial Profiler (DSP) spatial
+transcriptomics, bulk/single-cell sequencing, and 10x Genomics Visium
+spatial transcriptomics.
+
+A companion [`kg-pipeline`](./kg-pipeline) project builds an RDF knowledge
+graph from this model and live CCKP portal data - see
+[Knowledge Graph Pipeline](#knowledge-graph-pipeline) below.
 
 ## Usage
 
@@ -75,11 +80,31 @@ mkdocs serve   # http://localhost:8000
 
 See [contributing guidelines] for the full development and release process.
 
+## Knowledge Graph Pipeline
+
+[`kg-pipeline/`](./kg-pipeline) is a separate, self-contained pipeline that
+converts this model plus live CCKP portal data (pulled from Synapse) into a
+queryable RDF knowledge graph: an [extract → harmonize → map-to-RDF →
+validate](./kg-pipeline#architecture) build producing a LinkML/OWL schema
+and per-entity RDF instance data, with real ontology IRI mappings (NCIT,
+MONDO, EFO, OBI, ...) sourced from this model's own controlled vocabularies.
+It also links the graph to related efforts - Data Catalog (native Synapse
+Dataset annotations), SCDM (Sage Common Data Model) federation, and
+[sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model)
+interoperability for assay-level metadata.
+
+It has its own README, `Makefile`, and Python environment (isolated from
+this repo's root `requirements.txt`). See
+**[`kg-pipeline/README.md`](./kg-pipeline/README.md)** for setup, the full
+command reference, and design rationale.
+
 ## Folder Structure
 
 ```
 .
 ├── docs/
+├── json_schemas/
+├── kg-pipeline/
 ├── modules/
 ├── scripts/
 └── templates/
