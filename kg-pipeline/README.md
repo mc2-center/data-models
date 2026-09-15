@@ -321,6 +321,10 @@ kg-pipeline/
     crosswalk_scdm.py            - institution/consortium -> SCDM crosswalks (make crosswalk-scdm)
     link_scdm.py                  - SCDM Organization/Program/Person links (make link-scdm)
     link_ontology_crosswalk.py    - promotes reviewed MONDO/UBERON crosswalk rows into edges (make link-ontology-crosswalk)
+    merge_ttl.py                   - generic two-file Turtle union (parse both, serialize the
+                                   merge) - folds scdm_links.ttl and ontology_crosswalk_links.ttl
+                                   onto cckp_kg_with_datacatalog.ttl to produce cckp_kg_full.ttl
+                                   (make full-kg); safe to re-run, RDF triples are a set
     extract_datacatalog.py        - Data Catalog: native Dataset-entity annotations (make extract-datacatalog)
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
@@ -346,11 +350,10 @@ kg-pipeline/
                                 queries/*.rq directly, not subdirectories); run instead via
                                 `make query-examples`, or scripts/run_query.py directly against
                                 whichever data/rdf/*.ttl file(s) you want to query
-  data/                        - gitignored: raw/, harmonized/, most of rdf/ (the per-class
-                                ttls - Dataset.ttl, Publication.ttl, ... - and DataCatalog.ttl
-                                stay generated-only). rdf/cckp_kg*.ttl, scdm_links.ttl, and
-                                ontology_crosswalk_links.ttl ARE committed (see .gitignore) -
-                                the merged/derived graphs worth diffing between rebuilds
+  data/                        - entirely gitignored (raw/, harmonized/, rdf/ - every file
+                                here, including cckp_kg*.ttl/scdm_links.ttl/
+                                ontology_crosswalk_links.ttl, is generated-only, never
+                                committed; see .gitignore)
   data/harmonized/datacatalog/ - Data Catalog's own harmonize --out-dir, kept
                                 separate from data/harmonized/'s own
                                 unmapped_terms.csv (see "Additional pipeline
