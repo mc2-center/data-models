@@ -82,7 +82,9 @@ make query-examples        # run queries/examples/*.rq domain queries (prints re
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
-make deploy-kg             # upload just data/rdf/cckp_kg_full.ttl -> its own distribution folder (syn77443315) for other systems to pull from
+make manifest              # regenerate just data/rdf/manifest.ttl (see build_manifest.py) - already part of full-kg
+make deploy-kg             # upload data/rdf/cckp_kg_full.ttl + manifest.ttl -> their distribution folder (syn77443315) for other systems to pull from
+make upload-sagebrain-s3   # publish schema/*.ttl + cckp_kg_full.ttl + manifest.ttl -> the SageBrain Neptune S3 bucket (requires SAGEBRAIN_BUCKET + aws CLI)
 make all                   # schema + extract + harmonize + triples + validate
 make test                  # pytest test/ (fixture-based, no live Synapse access needed)
 
@@ -171,6 +173,16 @@ separate domain entirely - different subject IRIs, access-controlled source
 data - and isn't connected to anything above; see "Additional pipeline
 stages" below for what it is and how to build it.
 
+**Instance IRIs.** A row whose identifying value is a real Synapse entity id
+(`synNNN...` - Dataset, Grant, EducationalResource's `alias`, MC2 assay's
+`File View`) is addressed by its canonical Synapse IRI,
+`https://www.synapse.org/Synapse:synNNN...`, not a second, parallel id
+minted just for this graph - see `mint_iri()` in `scripts/build_triples.py`.
+Every other entity (Publication/Tool rows with no Synapse id, SCDM
+Organization/Program/Person nodes minted by `link_scdm.py`) keeps the
+placeholder `https://w3id.org/mc2-center/cckp-portal/data/{Class}/{id}`
+namespace.
+
 ## Additional pipeline stages
 
 Beyond the core extract → harmonize → map-to-RDF → validate flow above,
@@ -238,7 +250,19 @@ kg-pipeline/
                                 schema-level alignment, same schema.org
                                 vocabulary the Data Catalog stage already
                                 asserts real predicates in (see
-                                `plans/cckp_schema_class_alignment.md`).
+                                `plans/cckp_schema_class_alignment.md`) - plus
+                                the same shape of mapping to Biolink
+                                (`biolink:Dataset`/`Publication` exactly;
+                                Tool/EducationalResource -> the generic
+                                `biolink:InformationContentEntity`, Grant ->
+                                `biolink:AdministrativeEntity`, as close
+                                matches - Biolink has no dedicated class for
+                                any of the three). build_triples.py
+                                materializes this second mapping as an actual
+                                `rdf:type` on every instance (`BIOLINK_TYPE`
+                                there) rather than relying on the target
+                                triple store to reason over the schema-level
+                                mapping - see that script's docstring.
     cckp_portal.ttl           - generated via `make schema`
     cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
                                 "Additional pipeline stages" above)
@@ -280,6 +304,16 @@ kg-pipeline/
     crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
     validate_graph.py          - Stage 5 (+ SHACL validation, + queries/*.rq sanity checks)
+    build_manifest.py            - Stage 6: emits data/rdf/manifest.ttl, a small PROV/VOID
+                                  statement about the build (make manifest, folded into
+                                  make full-kg) - the lightweight trigger file `make deploy-kg`
+                                  publishes alongside cckp_kg_full.ttl for a downstream
+                                  auto-loader. Shape matches nf-osi/kg-pipeline's own
+                                  manifest.ttl (prov:Activity + void:Dataset, git commit/ref,
+                                  void:dataDump) so the same Neptune bulk-loader convention
+                                  works for either pipeline's publish target - see the
+                                  script's docstring. scripts/upload_sagebrain_s3.py reuses
+                                  this same builder for its own manifest.ttl.
     extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
@@ -287,11 +321,19 @@ kg-pipeline/
     crosswalk_scdm.py            - institution/consortium -> SCDM crosswalks (make crosswalk-scdm)
     link_scdm.py                  - SCDM Organization/Program/Person links (make link-scdm)
     link_ontology_crosswalk.py    - promotes reviewed MONDO/UBERON crosswalk rows into edges (make link-ontology-crosswalk)
+    merge_ttl.py                   - generic two-file Turtle union (parse both, serialize the
+                                   merge) - folds scdm_links.ttl and ontology_crosswalk_links.ttl
+                                   onto cckp_kg_with_datacatalog.ttl to produce cckp_kg_full.ttl
+                                   (make full-kg); safe to re-run, RDF triples are a set
     extract_datacatalog.py        - Data Catalog: native Dataset-entity annotations (make extract-datacatalog)
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay),
-                                   plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl alone
+                                   plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl + manifest.ttl
+    upload_sagebrain_s3.py         - local equivalent of nf-osi/kg-pipeline's
+                                   upload-sagebrain-s3.yml (make upload-sagebrain-s3) - publishes
+                                   schema/*.ttl + cckp_kg_full.ttl + manifest.ttl to the SageBrain
+                                   Neptune S3 bucket using local AWS credentials, no CI/OIDC
     run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header
@@ -302,17 +344,17 @@ kg-pipeline/
   queries/examples/*.rq        - domain/research-question queries demonstrating what the graph
                                 can answer (tumor-type search, publication-dataset traceability,
                                 tool discovery, SCDM-federated program rollups, a DataCatalog vs.
-                                portal-Assay curation-gap finder) - `# name:`/`# description:`
+                                portal-Assay curation-gap finder, cross-class lookup via a shared
+                                Biolink type) - `# name:`/`# description:`
                                 header only, no `# expect:` (not pass/fail assertions, so NOT
                                 picked up by validate_graph.py's --queries glob, which only reads
                                 queries/*.rq directly, not subdirectories); run instead via
                                 `make query-examples`, or scripts/run_query.py directly against
                                 whichever data/rdf/*.ttl file(s) you want to query
-  data/                        - gitignored: raw/, harmonized/, most of rdf/ (the per-class
-                                ttls - Dataset.ttl, Publication.ttl, ... - and DataCatalog.ttl
-                                stay generated-only). rdf/cckp_kg*.ttl, scdm_links.ttl, and
-                                ontology_crosswalk_links.ttl ARE committed (see .gitignore) -
-                                the merged/derived graphs worth diffing between rebuilds
+  data/                        - entirely gitignored (raw/, harmonized/, rdf/ - every file
+                                here, including cckp_kg*.ttl/scdm_links.ttl/
+                                ontology_crosswalk_links.ttl, is generated-only, never
+                                committed; see .gitignore)
   data/harmonized/datacatalog/ - Data Catalog's own harmonize --out-dir, kept
                                 separate from data/harmonized/'s own
                                 unmapped_terms.csv (see "Additional pipeline
