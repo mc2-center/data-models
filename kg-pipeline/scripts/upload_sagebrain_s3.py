@@ -27,6 +27,17 @@ cckp_kg.ttl, cckp_kg_with_datacatalog.ttl, ...) - only the single final
 merged graph, data/rdf/cckp_kg_full.ttl, is uploaded, matching
 `make deploy-kg`'s existing scope for the Synapse publish path.
 
+schema/*.ttl, by contrast, is uploaded in full every run, matching upstream
+exactly (all of schema/ontology.ttl + shapes.ttl, unconditionally) even
+though two of our four files - mc2_model.ttl and cckp_portal.ttl - are
+*also* already merged into cckp_kg_full.ttl itself (build_triples.py's own
+--merge-with, unlike upstream's RML stage, which never merges its ontology
+into instance output). That overlap is real but harmless (duplicate
+triples are a no-op once loaded, since RDF is a set) - matching upstream's
+"schema/ is always the canonical, complete TBox source" convention was
+chosen over trimming it down to just the non-redundant sagecdm.ttl +
+cckp_portal.shacl.ttl, since both reach the identical graph in Neptune.
+
 No CI/OIDC role assumption - run this with whatever AWS credentials your
 shell already has configured (SSO profile, env vars, ~/.aws/credentials).
 
