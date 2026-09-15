@@ -82,7 +82,8 @@ make query-examples        # run queries/examples/*.rq domain queries (prints re
 make validate              # parse-check the schema turtle + coverage report + regression gate + SHACL shapes
 make update-coverage-baseline  # after intentionally curating a CV or accepting a new gap
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
-make deploy-kg             # upload just data/rdf/cckp_kg_full.ttl -> its own distribution folder (syn77443315) for other systems to pull from
+make manifest              # regenerate just data/rdf/manifest.ttl (see build_manifest.py) - already part of full-kg
+make deploy-kg             # upload data/rdf/cckp_kg_full.ttl + manifest.ttl -> their distribution folder (syn77443315) for other systems to pull from
 make all                   # schema + extract + harmonize + triples + validate
 make test                  # pytest test/ (fixture-based, no live Synapse access needed)
 
@@ -302,6 +303,10 @@ kg-pipeline/
     crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
     validate_graph.py          - Stage 5 (+ SHACL validation, + queries/*.rq sanity checks)
+    build_manifest.py            - Stage 6: emits data/rdf/manifest.ttl, a small PROV statement
+                                  about the build (make manifest, folded into make full-kg) -
+                                  the lightweight trigger file `make deploy-kg` publishes
+                                  alongside cckp_kg_full.ttl for a downstream auto-loader
     extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
@@ -313,7 +318,7 @@ kg-pipeline/
     build_datacatalog_triples.py  - Data Catalog: merges onto the existing cckp:Dataset subject (make triples-datacatalog)
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay),
-                                   plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl alone
+                                   plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl + manifest.ttl
     run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header
