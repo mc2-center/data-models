@@ -71,6 +71,7 @@ def test_deploy_full_kg_refuses_when_source_file_missing(tmp_path):
 def test_deploy_full_kg_stores_file_with_expected_parent(tmp_path, monkeypatch):
     ttl_path = tmp_path / "cckp_kg_full.ttl"
     ttl_path.write_text("# fake turtle\n")
+    missing_manifest_path = tmp_path / "does_not_exist_manifest.ttl"
 
     stored_calls = []
 
@@ -83,7 +84,34 @@ def test_deploy_full_kg_stores_file_with_expected_parent(tmp_path, monkeypatch):
         return _FakeStoredFile()
 
     monkeypatch.setattr(publish_mod, "store", fake_store)
-    result = publish_mod.deploy_full_kg("fake-syn", path=str(ttl_path), target="synTARGET")
+    result = publish_mod.deploy_full_kg(
+        "fake-syn", path=str(ttl_path), manifest_path=str(missing_manifest_path), target="synTARGET")
 
     assert result.id == "syn999"
     assert stored_calls == [(str(ttl_path), "synTARGET", "fake-syn")]
+
+
+def test_deploy_full_kg_also_uploads_manifest_when_present(tmp_path, monkeypatch):
+    ttl_path = tmp_path / "cckp_kg_full.ttl"
+    ttl_path.write_text("# fake turtle\n")
+    manifest_path = tmp_path / "manifest.ttl"
+    manifest_path.write_text("# fake manifest\n")
+
+    stored_calls = []
+
+    class _FakeStoredFile:
+        id = "syn999"
+        version_number = 3
+
+    def fake_store(entity, synapse_client=None):
+        stored_calls.append((entity.path, entity.parent_id, synapse_client))
+        return _FakeStoredFile()
+
+    monkeypatch.setattr(publish_mod, "store", fake_store)
+    publish_mod.deploy_full_kg(
+        "fake-syn", path=str(ttl_path), manifest_path=str(manifest_path), target="synTARGET")
+
+    assert stored_calls == [
+        (str(ttl_path), "synTARGET", "fake-syn"),
+        (str(manifest_path), "synTARGET", "fake-syn"),
+    ]

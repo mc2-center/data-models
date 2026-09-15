@@ -34,12 +34,14 @@ uploads new File *versions* in place (`store()` finds an existing File by
 for "upload as new versions on build").
 
 A third, narrower mode - `--deploy-kg` (see `deploy_full_kg` below) -
-uploads only the single final merged graph, `data/rdf/cckp_kg_full.ttl`,
-directly into its own dedicated distribution folder (not nested under an
-`rdf/` subfolder the way the two tree-mirroring profiles above are):
-other systems pull straight from this one file, so it gets its own simple,
-single-purpose publish path (`make deploy-kg`) rather than being folded
-into the portal profile's directory-tree upload.
+uploads the single final merged graph, `data/rdf/cckp_kg_full.ttl`, plus its
+small `data/rdf/manifest.ttl` PROV companion (see scripts/build_manifest.py),
+directly into their own dedicated distribution folder (not nested under an
+`rdf/` subfolder the way the two tree-mirroring profiles above are): other
+systems pull straight from these files - manifest.ttl as the lightweight
+new-version trigger, cckp_kg_full.ttl as the payload it points at - so this
+gets its own simple, single-purpose publish path (`make deploy-kg`) rather
+than being folded into the portal profile's directory-tree upload.
 """
 
 import argparse
@@ -70,9 +72,10 @@ PROFILES = {
     },
 }
 
-# --deploy-kg's target/source - see the module docstring's third paragraph.
+# --deploy-kg's target/sources - see the module docstring's third paragraph.
 FULL_KG_TARGET = "syn77443315"
 FULL_KG_PATH = os.path.join("data", "rdf", "cckp_kg_full.ttl")
+MANIFEST_PATH = os.path.join("data", "rdf", "manifest.ttl")
 
 
 def effective_acl(syn, entity_id):
@@ -144,14 +147,23 @@ def upload_directory(syn, local_dir, target_folder_id):
     return uploaded
 
 
-def deploy_full_kg(syn, path=FULL_KG_PATH, target=FULL_KG_TARGET):
-    """Upload the single final merged graph directly into `target` as one
-    File entity - see the module docstring's third paragraph for why this
-    is a separate, narrower path from upload_directory()'s tree mirroring."""
+def deploy_full_kg(syn, path=FULL_KG_PATH, manifest_path=MANIFEST_PATH, target=FULL_KG_TARGET):
+    """Upload the single final merged graph, plus its manifest.ttl PROV
+    companion, directly into `target` as two File entities - see the module
+    docstring's third paragraph for why this is a separate, narrower path
+    from upload_directory()'s tree mirroring. manifest.ttl is optional (a
+    pre-existing deployment predates it) - warn and skip rather than fail
+    the whole deploy if it's missing."""
     if not os.path.isfile(path):
         raise SystemExit(f"{path} not found - run `make full-kg` first")
     stored = store(File(path=path, parent_id=target), synapse_client=syn)
     print(f"{path} -> {stored.id} (version {stored.version_number})")
+
+    if os.path.isfile(manifest_path):
+        stored_manifest = store(File(path=manifest_path, parent_id=target), synapse_client=syn)
+        print(f"{manifest_path} -> {stored_manifest.id} (version {stored_manifest.version_number})")
+    else:
+        print(f"WARNING: {manifest_path} not found - skipping (run `make full-kg` to generate it)")
     return stored
 
 
