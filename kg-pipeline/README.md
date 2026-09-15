@@ -84,6 +84,7 @@ make update-coverage-baseline  # after intentionally curating a CV or accepting 
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
 make manifest              # regenerate just data/rdf/manifest.ttl (see build_manifest.py) - already part of full-kg
 make deploy-kg             # upload data/rdf/cckp_kg_full.ttl + manifest.ttl -> their distribution folder (syn77443315) for other systems to pull from
+make upload-sagebrain-s3   # publish schema/*.ttl + cckp_kg_full.ttl + manifest.ttl -> the SageBrain Neptune S3 bucket (requires SAGEBRAIN_BUCKET + aws CLI)
 make all                   # schema + extract + harmonize + triples + validate
 make test                  # pytest test/ (fixture-based, no live Synapse access needed)
 
@@ -311,7 +312,8 @@ kg-pipeline/
                                   manifest.ttl (prov:Activity + void:Dataset, git commit/ref,
                                   void:dataDump) so the same Neptune bulk-loader convention
                                   works for either pipeline's publish target - see the
-                                  script's docstring.
+                                  script's docstring. scripts/upload_sagebrain_s3.py reuses
+                                  this same builder for its own manifest.ttl.
     extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
@@ -324,6 +326,10 @@ kg-pipeline/
     merge_datacatalog.py           - folds data/rdf/DataCatalog.ttl into cckp_kg.ttl (make merge-datacatalog)
     publish_kg.py                 - Synapse publish for both pipelines (--profile portal|mc2-assay),
                                    plus --deploy-kg (make deploy-kg) for cckp_kg_full.ttl + manifest.ttl
+    upload_sagebrain_s3.py         - local equivalent of nf-osi/kg-pipeline's
+                                   upload-sagebrain-s3.yml (make upload-sagebrain-s3) - publishes
+                                   schema/*.ttl + cckp_kg_full.ttl + manifest.ttl to the SageBrain
+                                   Neptune S3 bucket using local AWS credentials, no CI/OIDC
     run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header
