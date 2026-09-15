@@ -1,6 +1,6 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-TNBC,,,,FALSE,,Tumor Subtype,,,,,,,,
-LumA,,,,FALSE,,Tumor Subtype,,,,,,,,
-LumB,,,,FALSE,,Tumor Subtype,,,,,,,,
-HER2,,,,FALSE,,Tumor Subtype,,,,,,,,
-Not Applicable,,,,FALSE,,Tumor Subtype,,,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"TNBC","An invasive breast carcinoma that is negative for expression of estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2).","","","FALSE","","Tumor Subtype","","","","","NCIT:C71732","http://purl.obolibrary.org/obo/NCIT_C71732","C71732",""
+"LumA","A biologic subset of breast carcinoma defined by high expression of genes characteristic of luminal epithelial cells, including estrogen receptor (ER). This subtype is associated with a good prognosis.","","","FALSE","","Tumor Subtype","","","","","NCIT:C53554","http://purl.obolibrary.org/obo/NCIT_C53554","C53554",""
+"LumB","A biologic subset of breast carcinoma defined by low to moderate expression of genes characteristic of luminal epithelial cells including estrogen receptor (ER), and high expression of GGH, LAPTM4B, and CCNE1.","","","FALSE","","Tumor Subtype","","","","","NCIT:C53555","http://purl.obolibrary.org/obo/NCIT_C53555","C53555",""
+"HER2","A biologic subset of breast carcinoma defined by high expression of HER2, GRB7, and TRAP100, and by lack of expression of estrogen receptor (ER).","","","FALSE","","Tumor Subtype","","","","","NCIT:C53556","http://purl.obolibrary.org/obo/NCIT_C53556","C53556",""
+"Not Applicable","Determination of a value is not relevant in the current context.","","","FALSE","","Tumor Subtype","","","","","NCIT:C48660","http://purl.obolibrary.org/obo/NCIT_C48660","C48660",""

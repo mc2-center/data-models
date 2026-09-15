@@ -1,0 +1,11 @@
+# name: core_classes_present
+# expect: min_count 5
+# description: All 5 CCKP portal classes have at least one instance - a
+#   sanity floor that catches an extract/harmonize/triples stage silently
+#   returning zero rows for one of them.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+
+SELECT DISTINCT ?type WHERE {
+  VALUES ?type { cckp:Dataset cckp:Publication cckp:Tool cckp:Grant cckp:EducationalResource }
+  ?s a ?type .
+}

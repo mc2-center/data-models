@@ -1,0 +1,117 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/study
+name: sage-cdm-study
+title: Sage CDM STUDY
+description: >-
+  STUDY represents a defined research study that generates data or analyses within a
+  program. A study is the level at which most Sage data is organized, cited, and governed —
+  "which study is this data from?" is central to how the portfolio works.
+
+  This file contributes no reference slots; nothing in Phase 1 points at STUDY.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788617252/Entity+STUDY
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - base_entity
+  - organization
+  - person
+  - program
+  - project
+
+classes:
+
+  Study:
+    title: STUDY
+    description: >-
+      A defined research study that generates data or analyses within a program. A study
+      belongs to exactly one program, and optionally to one project within that program.
+    is_a: BaseEntity
+    slots:
+      - name
+      - description
+      - program
+      - status
+      - project
+      - primary_contact
+      - start_date
+      - end_date
+      - contributing_organizations
+    slot_usage:
+      id:
+        description: >-
+          Stable machine identifier for the study. A short lowercase string prefixed with
+          `study.`, incorporating the parent program and a recognizable short study name.
+        pattern: '^study\.[a-z0-9]+(-[a-z0-9]+)*\.[a-z0-9]+(-[a-z0-9]+)*$'
+        examples:
+          - value: study.amp-ad.jax-iu-pitt-5xfad
+        comments:
+          - Never a Synapse study ID, a grant number, a UUID, or the full title with spaces.
+      name:
+        description: >-
+          Human-readable display name for the study, as it appears in program documentation,
+          publications, or the portal. Short form preferred.
+        examples:
+          - value: JAX.IU.Pitt 5XFAD
+        comments:
+          - >-
+            Prefer the short working name over the full formal grant title. Never the
+            program or project name.
+      description:
+        description: >-
+          One-paragraph plain-language description of the study's scientific aim and scope,
+          covering what it does, what data it produces, and its scientific goal.
+        comments:
+          - >-
+            Never a copy of the grant abstract, never a list of team members (that is
+            STUDY_TEAM), and never a list of datasets.
+      program:
+        description: The parent program this study belongs to.
+        required: true
+        examples:
+          - value: program.amp-ad
+      status:
+        description: Current lifecycle state of the study.
+        comments:
+          - >-
+            Never data-availability language such as "data released" or "embargoed" — those
+            are separate concerns.
+      project:
+        description: >-
+          The parent project this study belongs to, if the program uses the project concept.
+        required: false
+      primary_contact:
+        description: >-
+          The enduring point of contact for this study. Feeds the Synapse portal Contact
+          field and ADEL ticket routing.
+      start_date:
+        description: The date the study began data generation or scientific activities.
+        comments:
+          - >-
+            Not the grant award date, not protocol approval, and not the date data was first
+            uploaded to a portal.
+      end_date:
+        description: >-
+          The date the study concluded activities. Populated only when status is completed.
+      contributing_organizations:
+        description: >-
+          The organizations contributing data, personnel, or resources to this study.
+    comments:
+      - >-
+        Team composition is deferred to STUDY_TEAM (2026-07-15). Role-typed PERSON-to-STUDY
+        relationships land once the role vocabulary is agreed. No temporary `pi` slot is
+        provided: the STUDY page recommends waiting rather than creating migration debt.
+      - >-
+        Granularity — whether a related set of experiments is one STUDY or many under a
+        collection — is the most consequential open question for this entity and needs DMG
+        discussion. No study_collection slot is modelled pending that decision.
+      - >-
+        Historical tracking ("who was on this study in 2024?") requires temporal edges on
+        STUDY_TEAM, not slots here.

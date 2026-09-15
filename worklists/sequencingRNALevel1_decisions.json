@@ -1,0 +1,50 @@
+[
+  {
+    "row_index": 0,
+    "term": "Sequencing RNA Level 1",
+    "ontology_identifier": "OBI:0001177",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0001177",
+    "label": "RNA sequencing assay",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "OBI:0001177 'RNA sequencing assay' is defined as 'an assay that determines the sequence of an RNA molecule'. Good match for an unaligned/unprocessed RNA sequencing data schema node."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "SequencingRNALevel1_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C49189 'Primary Key' directly matches the use as a unique row identifier / primary key."
+    }
+  },
+  {
+    "row_index": 4,
+    "term": "NGS RNA RIN",
+    "ontology_identifier": "NCIT:C63637",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C63637",
+    "label": "RNA Integrity Number",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C63637 'RNA Integrity Number' is defined as 'a numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample, including the presence or absence of degradation products'. Exact match."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "NGS RNA DV200",
+    "ontology_identifier": "NCIT:C183241",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C183241",
+    "label": "DV200 Assay",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C183241 'DV200 Assay' is defined as 'a method to determine the quality of RNA obtained from a sample. DV200 evaluates the percentage of fragments of greater than 200 nucleotides'. Matches the DV200 attribute concept."
+    }
+  }
+]

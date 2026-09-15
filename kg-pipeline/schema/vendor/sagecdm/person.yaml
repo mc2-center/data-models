@@ -1,0 +1,203 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/person
+name: sage-cdm-person
+title: Sage CDM PERSON
+description: >-
+  PERSON represents an individual who participates in Sage research in any capacity — PI,
+  Co-Investigator, data manager/curator, data liaison, program officer, or other role.
+  PERSON is standalone: a person exists independent of any project, program, or study.
+
+  Design principle — capture, don't resolve. Sage has no stable, unique identifier for a
+  person that holds across every source system. Jira usernames, Synapse accounts, the
+  HR/finance system, and ADEL Service Desk free-text fields can all refer to the same human
+  with different strings. PERSON captures source identifiers as encountered rather than
+  resolving them into a canonical identity at ingest. It is ACCEPTABLE and EXPECTED for the
+  same human to exist as several PERSON records during this phase — over-splitting is
+  recoverable, a bad forced merge is not. Do not build matching logic against this schema.
+
+  Reference slots contributed by this file: primary_contact.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788355196/Entity+PERSON
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+  schema: http://schema.org/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - base_entity
+  - organization
+
+enums:
+
+  IdentifierSourceSystemEnum:
+    title: Identifier Source System
+    description: The source system a captured person identifier came from.
+    comments:
+      - >-
+        Closed vocabulary on purpose. An unrecognised source system should surface as a
+        validation failure and be added here by PR, rather than disappearing into a generic
+        `other` bucket — knowing which system a string came from is the entire point of
+        capturing it.
+    permissible_values:
+      jira:
+        description: Jira, including ADEL and other Sage Jira projects.
+      synapse:
+        description: >-
+          Synapse account data. Note that a Synapse account may use a personal rather than
+          institutional email.
+      adel_service_desk:
+        description: ADEL Service Desk intake forms, where PI and liaison fields are free text.
+      hr_finance:
+        description: The HR / finance system, including the Program Budgets tool (Retool).
+      orcid:
+        description: ORCID, the persistent identifier registry for researchers.
+
+  IdentifierTypeEnum:
+    title: Identifier Type
+    description: The kind of identifier captured from a source system.
+    permissible_values:
+      email:
+        description: An email address.
+        comments:
+          - >-
+            PII. Privacy handling for identifier values is an open governance question and
+            needs input before broad population.
+      username:
+        description: A login or account name within the source system.
+      employee_id:
+        description: An internal employee or personnel number.
+      orcid_id:
+        description: An ORCID iD.
+
+slots:
+
+  display_name:
+    title: Display Name
+    description: >-
+      The best-known name string for the person, for display purposes only. Whichever name
+      string is available and most complete at the time the record is created or updated.
+    required: true
+    range: string
+    exact_mappings:
+      - schema:name
+    comments:
+      - >-
+        Explicitly NOT authoritative or canonical — no name matching has been performed. Do
+        not use this field alone to decide whether two records refer to the same person.
+      - >-
+        Replaces separate given_name / family_name fields. A single display string is more
+        forgiving of inconsistent source data than forcing every source to split cleanly.
+
+  identifiers:
+    title: Identifiers
+    description: >-
+      A repeatable list of source-system identifiers known for this person, captured as-is
+      without forced resolution.
+    range: PersonIdentifier
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+    comments:
+      - >-
+        Never collapse these into a single preferred or canonical identifier — that
+        determination is deliberately deferred.
+      - >-
+        ORCID is captured the same way as any other source identifier and is not treated as
+        more authoritative at capture time, even though it is the field's own standard
+        answer to person disambiguation. Any eventual prioritisation of ORCID belongs to the
+        deferred matching effort.
+
+  source_system:
+    title: Source System
+    description: The system this identifier was captured from.
+    required: true
+    range: IdentifierSourceSystemEnum
+
+  identifier_type:
+    title: Identifier Type
+    description: The kind of identifier this entry holds.
+    required: true
+    range: IdentifierTypeEnum
+
+  source_value:
+    title: Source Value
+    description: The raw identifier string exactly as it appears in the source system.
+    required: true
+    range: string
+    comments:
+      - Captured verbatim. Do not normalise, lowercase, or otherwise clean the value.
+
+  # --- Reference slots targeting Person -------------------------------------
+  primary_contact:
+    title: Primary Contact
+    description: >-
+      The person to contact for questions about this entity. The enduring point of contact,
+      which is often but not always the PI.
+    range: Person
+    inlined: false
+    comments:
+      - >-
+        Not a group email address and not a team name. Not the PI by default — the PI may or
+        may not be the contact.
+      - >-
+        Modelled as a direct reference rather than a role in STUDY_TEAM because it is queried
+        so frequently (portal Contact field, ADEL ticket routing, external inquiries) that a
+        direct reference is cheaper than an edge lookup.
+
+classes:
+
+  PersonIdentifier:
+    title: PERSON_IDENTIFIER
+    description: >-
+      A single identifier for a person as captured from one source system. Deliberately a
+      structure rather than a resolved value: one person may accumulate many of these, and
+      two entries are not assumed to be reconcilable.
+    slots:
+      - source_system
+      - identifier_type
+      - source_value
+    comments:
+      - >-
+        Not a CDM entity — it has no independent identity and is always inlined within a
+        PERSON record. It therefore does not extend BaseEntity.
+
+  Person:
+    title: PERSON
+    description: >-
+      An individual who participates in Sage research in any capacity. What a person DOES
+      (PI, Co-PI, Data Manager) is not modelled here — role is captured via a separate
+      role-assignment relationship tied to a specific entity instance.
+    is_a: BaseEntity
+    slots:
+      - display_name
+      - identifiers
+      - primary_affiliation
+    slot_usage:
+      id:
+        description: >-
+          Stable machine identifier for the person within the CDM. A short lowercase string
+          prefixed with `person.`, system-generated at record creation — deliberately NOT
+          derived from name or email, since neither is guaranteed stable or unique.
+        pattern: '^person\.[a-z0-9]+$'
+        examples:
+          - value: person.a1b2c3
+        comments:
+          - >-
+            Because identity resolution is deferred, the same human may legitimately hold
+            more than one id during this phase. Do not treat id uniqueness as equivalent to
+            person uniqueness yet.
+          - >-
+            Never an email address, a Jira username, or any single source system's
+            identifier — those belong in identifiers.
+    comments:
+      - >-
+        Organizational job title (e.g. Associate Director, Science & Data) is explicitly not
+        modelled. Job title is a property of the person independent of any entity, distinct
+        from a role assignment which is always tied to a specific entity instance. A person
+        can hold both at once.

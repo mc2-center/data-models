@@ -1,0 +1,65 @@
+[
+  {
+    "row_index": 0,
+    "term": "Oligo-dT",
+    "existing_description": "DNA primers consisting of 12-18 deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.",
+    "existing_ontology_identifier": "NCIT:C201929",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 1,
+    "term": "Poly-dT",
+    "existing_description": "DNA primers consisting of deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.",
+    "existing_ontology_identifier": "NCIT:C201929",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 2,
+    "term": "Feature barcoding",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "Random",
+    "existing_description": "Short oligonucleotides of random sequence that anneal throughout the length of RNA templates and are used to prime reverse transcription.",
+    "existing_ontology_identifier": "NCIT:C201930",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201930",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencingrnalevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  }
+]

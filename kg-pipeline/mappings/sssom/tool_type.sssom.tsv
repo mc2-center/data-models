@@ -1,0 +1,14 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_type.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Command-Line Tool	Command-Line Tool	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000030	semapv:ManualMappingCuration
+Library	Library	skos:exactMatch	http://purl.obolibrary.org/obo/IAO_0000593	semapv:ManualMappingCuration
+Plug-In	Plug-In	skos:exactMatch	http://www.ebi.ac.uk/swo/SWO_0000083	semapv:ManualMappingCuration
+Script	Script	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C96999	semapv:ManualMappingCuration
+Web API	Web API	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C75301	semapv:ManualMappingCuration
+Web Application	Web Application	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C172305	semapv:ManualMappingCuration
+Web Service	Web Service	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C45412	semapv:ManualMappingCuration
+Workflow	Workflow	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C42753	semapv:ManualMappingCuration

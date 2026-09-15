@@ -1,0 +1,74 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "M0",
+    "ontology_identifier": "NCIT:C48699",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48699",
+    "label": "M0 TNM Finding",
+    "description": "A distant metastasis TNM finding indicating that there is no evidence of distant metastasis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48699 M0 TNM Finding; generic M-category TNM finding. Existing description is accurate but shorter than NCIT definition. Label differs (M0 vs M0 TNM Finding) but is the correct NCIT concept for absence of distant metastasis."}
+  },
+  {
+    "row_index": 1,
+    "term": "M1",
+    "ontology_identifier": "NCIT:C48700",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48700",
+    "label": "M1 TNM Finding",
+    "description": "A clinical and/or pathologic distant metastasis TNM finding indicating the spread of cancer to distant anatomic sites.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48700 M1 TNM Finding; generic M-category TNM finding for presence of distant metastasis. Label differs (M1 vs M1 TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 2,
+    "term": "M1a",
+    "ontology_identifier": "NCIT:C48701",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48701",
+    "label": "M1a TNM Finding",
+    "description": "A distant metastasis TNM finding indicating the spread of cancer to a single distant organ or site; the specific meaning varies by cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48701 M1a TNM Finding; generic M1a subcategory. NCIT definition notes that the specific meaning depends on cancer type. Label differs (M1a vs M1a TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 3,
+    "term": "M1b",
+    "ontology_identifier": "NCIT:C48702",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48702",
+    "label": "M1b TNM Finding",
+    "description": "A distant metastasis TNM finding indicating the spread of cancer to multiple distant organs or sites; the specific meaning varies by cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48702 M1b TNM Finding; generic M1b subcategory. The specific meaning depends on cancer type. Label differs (M1b vs M1b TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 4,
+    "term": "M1c",
+    "ontology_identifier": "NCIT:C48703",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48703",
+    "label": "M1c TNM Finding",
+    "description": "A distant metastasis TNM finding indicating the spread of cancer to additional distant anatomic sites; the specific meaning varies by cancer type.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48703 M1c TNM Finding; generic M1c subcategory. Specific meaning depends on cancer type. Label differs (M1c vs M1c TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 5,
+    "term": "MX",
+    "ontology_identifier": "NCIT:C48704",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48704",
+    "label": "MX TNM Finding",
+    "description": "A distant metastasis TNM finding indicating that the status of distant metastasis cannot be assessed.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48704 MX TNM Finding; exact concept for unassessable metastasis status. Label differs (MX vs MX TNM Finding) but is the correct NCIT concept."}
+  },
+  {
+    "row_index": 7,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 8,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "An indication that the required information was not provided.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  }
+]}

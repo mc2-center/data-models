@@ -1,0 +1,992 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Gonad",
+    "ontology_identifier": "NCIT:C12725",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12725",
+    "label": "Gonad",
+    "description": "The part of the reproductive system that produces and releases eggs (ovaries) or sperm (testicles/testes).",
+    "verification": {"verdict": "match", "note": "NCIT:C12725 Gonad; exact label match; parent of Testis and Ovary in NCIT hierarchy."}
+  },
+  {
+    "row_index": 1,
+    "term": "Abdominal Esophagus",
+    "ontology_identifier": "NCIT:C12252",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12252",
+    "label": "Abdominal Esophagus",
+    "description": "Clinical esophageal segment composed of smooth muscle. It corresponds to the inferior part of the lower third topographic segment of the esophagus. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12252 Abdominal Esophagus; exact label match; replaces ICD-O code C15.2 which is not a valid NCIT CURIE."}
+  },
+  {
+    "row_index": 2,
+    "term": "Adipose Tissue",
+    "ontology_identifier": "NCIT:C12472",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12472",
+    "label": "Adipose Tissue",
+    "description": "Connective tissue consisting primarily of adipocytes (fat cells) and supporting structural matrix.",
+    "verification": {"verdict": "match", "note": "NCIT:C12472 Adipose Tissue; exact label match; replaces ICD-O code C49.9."}
+  },
+  {
+    "row_index": 3,
+    "term": "Adrenal Gland",
+    "ontology_identifier": "NCIT:C12666",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12666",
+    "label": "Adrenal Gland",
+    "description": "The endocrine glands adjacent to the kidneys that consist of the outer adrenal cortex and the inner adrenal medulla in mammals.",
+    "verification": {"verdict": "match", "note": "NCIT:C12666 Adrenal Gland; exact label match."}
+  },
+  {
+    "row_index": 4,
+    "term": "Alveolus",
+    "ontology_identifier": "NCIT:C12986",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12986",
+    "label": "Alveolus",
+    "description": "Tiny air sacs at the end of the bronchioles (tiny branches of air tubes) in the lungs. The alveoli are where the lungs and the bloodstream exchange carbon dioxide and oxygen.",
+    "verification": {"verdict": "match", "note": "NCIT:C12986 Alveolus; exact label match; replaces ICD-O code C03.9."}
+  },
+  {
+    "row_index": 5,
+    "term": "Aorta",
+    "ontology_identifier": "NCIT:C12669",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12669",
+    "label": "Aorta",
+    "description": "The major artery of the body; it arises from the left ventricle of the heart and terminally bifurcates into the common iliac arteries.",
+    "verification": {"verdict": "match", "note": "NCIT:C12669 Aorta; exact label match; replaces ICD-O code C49.3."}
+  },
+  {
+    "row_index": 6,
+    "term": "Artery",
+    "ontology_identifier": "NCIT:C12372",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12372",
+    "label": "Artery",
+    "description": "A blood vessel that carries blood from the heart to tissues and organs in the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C12372 Artery; exact label match; replaces ICD-O code C49.9."}
+  },
+  {
+    "row_index": 7,
+    "term": "Ascending Colon",
+    "ontology_identifier": "NCIT:C12265",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12265",
+    "label": "Ascending Colon",
+    "description": "The first part of the colon (large intestine) that starts in the right lower quadrant of the abdomen and ends at the transverse colon in the right upper quadrant of the abdomen. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12265 Ascending Colon; exact label match; replaces ICD-O code C18.2."}
+  },
+  {
+    "row_index": 8,
+    "term": "Bile Duct",
+    "ontology_identifier": "NCIT:C12376",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12376",
+    "label": "Bile Duct",
+    "description": "Any of the ducts conveying bile between the liver and the intestine, including hepatic, cystic, and common bile duct.",
+    "verification": {"verdict": "match", "note": "NCIT:C12376 Bile Duct; exact label match; replaces ICD-O code C24.0."}
+  },
+  {
+    "row_index": 9,
+    "term": "Bladder",
+    "ontology_identifier": "NCIT:C12414",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12414",
+    "label": "Bladder",
+    "description": "The organ that stores urine.",
+    "verification": {"verdict": "match", "note": "NCIT:C12414 Bladder; exact label match (NCIT uses 'Bladder' as preferred term for Urinary Bladder); replaces ICD-O code C67.9."}
+  },
+  {
+    "row_index": 10,
+    "term": "Blood",
+    "ontology_identifier": "NCIT:C12434",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12434",
+    "label": "Blood",
+    "description": "A tissue with red blood cells, white blood cells, platelets, and other substances suspended in fluid called plasma. Blood takes oxygen and nutrients to the tissues, and carries away wastes.",
+    "verification": {"verdict": "match", "note": "NCIT:C12434 Blood; exact label match; replaces ICD-O code C42.0."}
+  },
+  {
+    "row_index": 11,
+    "term": "Blood Vessel",
+    "ontology_identifier": "NCIT:C12679",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12679",
+    "label": "Blood Vessel",
+    "description": "A tubular structure through which the blood circulates in the body. Blood vessels constitute a network composed of arteries, arterioles, capillaries, venules, and veins. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12679 Blood Vessel; exact label match."}
+  },
+  {
+    "row_index": 12,
+    "term": "Bone",
+    "ontology_identifier": "NCIT:C12366",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12366",
+    "label": "Bone",
+    "description": "The structural organ comprised of specialized connective tissue that forms the skeletal components of the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C12366 Bone; exact label match; replaces ICD-O code C41.9."}
+  },
+  {
+    "row_index": 13,
+    "term": "Bone Marrow",
+    "ontology_identifier": "NCIT:C12431",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12431",
+    "label": "Bone Marrow",
+    "description": "The tissue occupying the spaces of some bones. It consists of blood vessel sinuses and a network of hematopoietic cells.",
+    "verification": {"verdict": "match", "note": "NCIT:C12431 Bone Marrow; exact label match; replaces ICD-O code C42.1."}
+  },
+  {
+    "row_index": 14,
+    "term": "Brain",
+    "ontology_identifier": "NCIT:C12439",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12439",
+    "label": "Brain",
+    "description": "An organ composed of grey and white matter containing billions of neurons that is the center for intelligence and reasoning. It is protected by the bony cranium.",
+    "verification": {"verdict": "match", "note": "NCIT:C12439 Brain; exact label match; replaces ICD-O code C71.9."}
+  },
+  {
+    "row_index": 15,
+    "term": "Breast",
+    "ontology_identifier": "NCIT:C12971",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12971",
+    "label": "Breast",
+    "description": "One of two hemispheric projections of variable size situated in the subcutaneous layer over the pectoralis major muscle on either side of the chest. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12971 Breast; exact label match; replaces ICD-O code C50.9."}
+  },
+  {
+    "row_index": 16,
+    "term": "Caecum",
+    "ontology_identifier": "NCIT:C12381",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12381",
+    "label": "Cecum",
+    "description": "The pouch-like first segment of the large intestine, located in the lower right abdomen, extending from the terminal ileum of the small intestine to the ascending colon.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12381 Cecum; 'Caecum' is the British spelling of the same anatomical structure as the American 'Cecum'; replaces UBERON:0001153 with preferred NCIT term."}
+  },
+  {
+    "row_index": 18,
+    "term": "Cardia",
+    "ontology_identifier": "NCIT:C12256",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12256",
+    "label": "Gastric Cardia",
+    "description": "The portion of the stomach immediately adjacent to the esophagogastric junction, characterized by cardiac-type mucous glands.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12256 Gastric Cardia; the vocab term 'Cardia' refers to the same structure, but NCIT uses the qualified form 'Gastric Cardia'; replaces ICD-O code C16.0."}
+  },
+  {
+    "row_index": 19,
+    "term": "Cartilage",
+    "ontology_identifier": "NCIT:C12373",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12373",
+    "label": "Cartilage",
+    "description": "A type of connective tissue composed of chondrocytes and an extracellular matrix, composed of collagen, elastin, and ground substance. There are three types of cartilage; namely elastic, hyaline, and fibrocartilage.",
+    "verification": {"verdict": "match", "note": "NCIT:C12373 Cartilage; exact label match."}
+  },
+  {
+    "row_index": 20,
+    "term": "Cervix Uteri",
+    "ontology_identifier": "NCIT:C12311",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12311",
+    "label": "Cervix Uteri",
+    "description": "The portion of the uterus (or uterine horns) that empties into the vagina.",
+    "verification": {"verdict": "match", "note": "NCIT:C12311 Cervix Uteri; exact label match; replaces ICD-O code C53.9."}
+  },
+  {
+    "row_index": 21,
+    "term": "Choroid",
+    "ontology_identifier": "NCIT:C12344",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12344",
+    "label": "Choroid",
+    "description": "A thin layer of tissue that is part of the middle layer of the wall of the eye, between the sclera (white outer layer of the eye) and the retina (the inner layer of nerve tissue at the back of the eye). The choroid is filled with blood vessels that bring oxygen and nutrients to the eye.",
+    "verification": {"verdict": "match", "note": "NCIT:C12344 Choroid; exact label match."}
+  },
+  {
+    "row_index": 22,
+    "term": "Colon",
+    "ontology_identifier": "NCIT:C12382",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12382",
+    "label": "Colon",
+    "description": "The portion of the large intestine which extends from the cecum (or small intestine in animals that don't have a cecum) to the rectum.",
+    "verification": {"verdict": "match", "note": "NCIT:C12382 Colon; exact label match; replaces ICD-O code C18.0."}
+  },
+  {
+    "row_index": 23,
+    "term": "Connective and Soft Tissue",
+    "ontology_identifier": "NCIT:C12964",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12964",
+    "label": "Connective and Soft Tissue",
+    "description": "The supporting connective tissue of an organ.",
+    "verification": {"verdict": "match", "note": "NCIT:C12964 Connective and Soft Tissue; exact label match; replaces ICD-O code C49.9."}
+  },
+  {
+    "row_index": 24,
+    "term": "Cornea",
+    "ontology_identifier": "NCIT:C12342",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12342",
+    "label": "Cornea",
+    "description": "The transparent, avascular tissue covering the front of the eye and is continuous with the sclera.",
+    "verification": {"verdict": "match", "note": "NCIT:C12342 Cornea; exact label match."}
+  },
+  {
+    "row_index": 25,
+    "term": "Duodenum",
+    "ontology_identifier": "NCIT:C12263",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12263",
+    "label": "Duodenum",
+    "description": "The portion of the small intestine between the stomach and jejunum.",
+    "verification": {"verdict": "match", "note": "NCIT:C12263 Duodenum; exact label match."}
+  },
+  {
+    "row_index": 26,
+    "term": "Ear",
+    "ontology_identifier": "NCIT:C12394",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12394",
+    "label": "Ear",
+    "description": "A sensory organ that contains auditory and vestibular apparatuses.",
+    "verification": {"verdict": "match", "note": "NCIT:C12394 Ear; exact label match; replaces ICD-O code C44.2."}
+  },
+  {
+    "row_index": 27,
+    "term": "Embryo",
+    "ontology_identifier": "NCIT:C28147",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28147",
+    "label": "Embryo",
+    "description": "Early stage in the prenatal development of an animal. This stage occurs from implantation until closure of the hard palate.",
+    "verification": {"verdict": "match", "note": "NCIT:C28147 Embryo; exact label match."}
+  },
+  {
+    "row_index": 28,
+    "term": "Embryonic Heart",
+    "ontology_identifier": "NCIT:C34153",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C34153",
+    "label": "Embryonic Heart",
+    "description": "The rudimentary heart found in the human embryo that begins development during the third week of gestation, and which is formed by paired endocardial heart tubes derived from splanchnic mesenchyme, which subsequently fuse to form the primitive heart.",
+    "verification": {"verdict": "match", "note": "NCIT:C34153 Embryonic Heart; exact label match; existing description matches NCIT definition."}
+  },
+  {
+    "row_index": 29,
+    "term": "Endocervix",
+    "ontology_identifier": "NCIT:C12309",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12309",
+    "label": "Endocervix",
+    "description": "The portion of the cervix which is lined by single columnar epithelium (mucosa). (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12309 Endocervix; exact label match; replaces ICD-O code C53.0."}
+  },
+  {
+    "row_index": 30,
+    "term": "Endometrium",
+    "ontology_identifier": "NCIT:C12313",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12313",
+    "label": "Endometrium",
+    "description": "The mucous membrane comprising the inner layer of the uterine wall; it consists of a simple columnar epithelium and a lamina propria that contains simple tubular uterine glands.",
+    "verification": {"verdict": "match", "note": "NCIT:C12313 Endometrium; exact label match; replaces ICD-O code C54.1."}
+  },
+  {
+    "row_index": 31,
+    "term": "Endothelium",
+    "ontology_identifier": "NCIT:C12481",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12481",
+    "label": "Endothelium",
+    "description": "The layer of cells that lines the cavities of the heart and of the blood vessels (Endothelium, Vascular) and lymph vessels (Endothelium, Lymphatic), and the serous cavities of the body, originating from the mesoderm.",
+    "verification": {"verdict": "match", "note": "NCIT:C12481 Endothelium; exact label match."}
+  },
+  {
+    "row_index": 32,
+    "term": "Epithelium",
+    "ontology_identifier": "NCIT:C12710",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12710",
+    "label": "Epithelium",
+    "description": "The avascular cellular layers that cover body surfaces and cavities and may form glands.",
+    "verification": {"verdict": "match", "note": "NCIT:C12710 Epithelium; exact label match."}
+  },
+  {
+    "row_index": 33,
+    "term": "Esophagus",
+    "ontology_identifier": "NCIT:C12389",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12389",
+    "label": "Esophagus",
+    "description": "The portion of the digestive tract between the pharynx and stomach.",
+    "verification": {"verdict": "match", "note": "NCIT:C12389 Esophagus; exact label match; replaces ICD-O code C15.9."}
+  },
+  {
+    "row_index": 34,
+    "term": "Eye",
+    "ontology_identifier": "NCIT:C12401",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12401",
+    "label": "Eye",
+    "description": "The sensory organ of vision.",
+    "verification": {"verdict": "match", "note": "NCIT:C12401 Eye; exact label match; replaces ICD-O code C69.9."}
+  },
+  {
+    "row_index": 35,
+    "term": "Fallopian Tube",
+    "ontology_identifier": "NCIT:C12403",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12403",
+    "label": "Fallopian Tube",
+    "description": "The tube through which eggs pass from an ovary.",
+    "verification": {"verdict": "match", "note": "NCIT:C12403 Fallopian Tube; exact label match; replaces ICD-O code C57.0."}
+  },
+  {
+    "row_index": 36,
+    "term": "Foreskin",
+    "ontology_identifier": "NCIT:C33049",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C33049",
+    "label": "Male Prepuce",
+    "description": "The loose skin that covers the head of the penis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C33049 Male Prepuce; 'Foreskin' is the lay term for the male prepuce; the same anatomical structure with a different label."}
+  },
+  {
+    "row_index": 37,
+    "term": "Frontal Lobe",
+    "ontology_identifier": "NCIT:C12352",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12352",
+    "label": "Frontal Lobe",
+    "description": "The part of the brain located anterior to the parietal lobes at the front of each cerebral hemisphere. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12352 Frontal Lobe; exact label match; replaces ICD-O code C71.1."}
+  },
+  {
+    "row_index": 38,
+    "term": "Gastroesophageal Junction",
+    "ontology_identifier": "NCIT:C32668",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C32668",
+    "label": "Gastroesophageal Junction",
+    "description": "The place where the esophagus is connected to the stomach.",
+    "verification": {"verdict": "match", "note": "NCIT:C32668 Gastroesophageal Junction; exact label match."}
+  },
+  {
+    "row_index": 39,
+    "term": "Gastrointestinal Tract",
+    "ontology_identifier": "NCIT:C34082",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C34082",
+    "label": "Gastrointestinal Tract",
+    "description": "The upper gastrointestinal (GI) tract is comprised of mouth, pharynx, esophagus and stomach while the lower GI tract consists of intestines and anus. The primary function of the GI tract is to ingest, digest, absorb and ultimately excrete food stuff. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C34082 Gastrointestinal Tract; exact label match; replaces ICD-O code C26.9."}
+  },
+  {
+    "row_index": 40,
+    "term": "Genitourinary",
+    "ontology_identifier": "NCIT:C12810",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12810",
+    "label": "Genitourinary System",
+    "description": "Of or related to the genital and urinary organs or their functions.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12810 Genitourinary System; the vocab term 'Genitourinary' is an abbreviated form of the NCIT label 'Genitourinary System'; same conceptual scope."}
+  },
+  {
+    "row_index": 41,
+    "term": "Hair Follicle",
+    "ontology_identifier": "NCIT:C13317",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13317",
+    "label": "Hair Follicle",
+    "description": "A tube-like invagination of the epidermis from which the hair shaft develops and into which the sebaceous glands open; the follicle is lined by a cellular inner and outer root sheath of epidermal origin and is invested with a fibrous sheath derived from the dermis. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C13317 Hair Follicle; exact label match."}
+  },
+  {
+    "row_index": 42,
+    "term": "Head and Neck",
+    "ontology_identifier": "NCIT:C12418",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12418",
+    "label": "Head and Neck",
+    "description": "The area of the body comprising the skull, facial bones and the cervical vertebrae, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature, soft tissue and lymph nodes draining these areas.",
+    "verification": {"verdict": "match", "note": "NCIT:C12418 Head and Neck; exact label match; replaces ICD-O code C76.0."}
+  },
+  {
+    "row_index": 43,
+    "term": "Heart",
+    "ontology_identifier": "NCIT:C12727",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12727",
+    "label": "Heart",
+    "description": "A hollow organ located slightly to the left of the middle portion of the chest. It is composed of muscle and it is divided by a septum into two sides: the right side which receives de-oxygenated blood from the body and the left side which sends newly oxygenated blood to the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C12727 Heart; exact label match; replaces ICD-O code C38.0."}
+  },
+  {
+    "row_index": 44,
+    "term": "Heart Muscle",
+    "ontology_identifier": "NCIT:C12371",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12371",
+    "label": "Myocardium",
+    "description": "The muscle tissue of the HEART composed of striated, involuntary muscle known as cardiac muscle.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12371 Myocardium; 'Heart Muscle' is the lay term for the myocardium; same anatomical structure described by lay vs. medical terminology."}
+  },
+  {
+    "row_index": 45,
+    "term": "Hematopoietic System",
+    "ontology_identifier": "NCIT:C12909",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12909",
+    "label": "Hematopoietic System",
+    "description": "The bodily system of organs and tissues, primarily the bone marrow, spleen, tonsils, and lymph nodes, involved in the production of blood.",
+    "verification": {"verdict": "match", "note": "NCIT:C12909 Hematopoietic System; exact label match; replaces ICD-O code C42.4."}
+  },
+  {
+    "row_index": 46,
+    "term": "Hippocampus",
+    "ontology_identifier": "NCIT:C12444",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12444",
+    "label": "Hippocampus",
+    "description": "A curved gray matter structure of the temporal lobe lying on the floor of the lateral ventricle of the brain.",
+    "verification": {"verdict": "match", "note": "NCIT:C12444 Hippocampus; exact label match."}
+  },
+  {
+    "row_index": 47,
+    "term": "Intestine",
+    "ontology_identifier": "NCIT:C12736",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12736",
+    "label": "Intestine",
+    "description": "The portion of the gastrointestinal tract that includes the small and large intestines.",
+    "verification": {"verdict": "match", "note": "NCIT:C12736 Intestine; exact label match; replaces ICD-O code C26.0."}
+  },
+  {
+    "row_index": 48,
+    "term": "Intra-Abdominal Lymph Nodes",
+    "ontology_identifier": "NCIT:C12360",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12360",
+    "label": "Abdominal Lymph Node",
+    "description": "Any lymph node within the abdomen.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12360 Abdominal Lymph Node; the vocab term 'Intra-Abdominal Lymph Nodes' (plural, with 'Intra-' prefix) is not an exact match to NCIT 'Abdominal Lymph Node' (singular); same anatomical concept; replaces ICD-O code C77.2."}
+  },
+  {
+    "row_index": 49,
+    "term": "Intrathoracic Lymph Nodes",
+    "ontology_identifier": "NCIT:C12359",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12359",
+    "label": "Intrathoracic Lymph Node",
+    "description": "Any lymph node within the thoracic cavity.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12359 Intrathoracic Lymph Node; vocab term is plural ('Nodes'), NCIT label is singular ('Node'); otherwise exact concept match; replaces ICD-O code C77.1."}
+  },
+  {
+    "row_index": 50,
+    "term": "Joint",
+    "ontology_identifier": "NCIT:C13044",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13044",
+    "label": "Joint",
+    "description": "is an organ that constitutes an anatomical junction; it consists of two or more adjacent bones, parts of which are interconnected by organ parts that consist of various types of connective tissue.",
+    "verification": {"verdict": "match", "note": "NCIT:C13044 Joint; exact label match."}
+  },
+  {
+    "row_index": 51,
+    "term": "Kidney",
+    "ontology_identifier": "NCIT:C12415",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12415",
+    "label": "Kidney",
+    "description": "The organs of the urinary tract located in the retroperitoneal cavity adjacent to the spine and composed of the renal cortex and the renal medulla.",
+    "verification": {"verdict": "match", "note": "NCIT:C12415 Kidney; exact label match; replaces ICD-O code C64.9."}
+  },
+  {
+    "row_index": 52,
+    "term": "Larynx",
+    "ontology_identifier": "NCIT:C12420",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12420",
+    "label": "Larynx",
+    "description": "The cartilaginous structure of the respiratory tract between the pharynx and the trachea. It contains elastic vocal cords required for sound production.",
+    "verification": {"verdict": "match", "note": "NCIT:C12420 Larynx; exact label match."}
+  },
+  {
+    "row_index": 53,
+    "term": "Ligament",
+    "ontology_identifier": "NCIT:C13046",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13046",
+    "label": "Ligament",
+    "description": "Band of fibrous tissue connecting bone to bone or cartilage to bone thereby supporting or strengthening a joint. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C13046 Ligament; exact label match."}
+  },
+  {
+    "row_index": 54,
+    "term": "Liver",
+    "ontology_identifier": "NCIT:C12392",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12392",
+    "label": "Liver",
+    "description": "An abdominal organ that has variable lobation which are composed mainly of hepatic lobules.",
+    "verification": {"verdict": "match", "note": "NCIT:C12392 Liver; exact label match; replaces ICD-O code C22.0."}
+  },
+  {
+    "row_index": 55,
+    "term": "Lung",
+    "ontology_identifier": "NCIT:C12468",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12468",
+    "label": "Lung",
+    "description": "One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place.",
+    "verification": {"verdict": "match", "note": "NCIT:C12468 Lung; exact label match; replaces ICD-O code C34.9."}
+  },
+  {
+    "row_index": 56,
+    "term": "Lymph",
+    "ontology_identifier": "NCIT:C13252",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13252",
+    "label": "Lymph",
+    "description": "The clear fluid that travels through the lymphatic system and carries cells that help fight infections and other diseases.",
+    "verification": {"verdict": "match", "note": "NCIT:C13252 Lymph; exact label match; classified under Body Fluid or Substance in NCIT."}
+  },
+  {
+    "row_index": 57,
+    "term": "Lymph Node",
+    "ontology_identifier": "NCIT:C12745",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12745",
+    "label": "Lymph Node",
+    "description": "Secondary lymphoid organ associated with lymphatic vessels and consisting of an outer cortex, inner medulla and sinuses.",
+    "verification": {"verdict": "match", "note": "NCIT:C12745 Lymph Node; exact label match; replaces ICD-O code C77.9."}
+  },
+  {
+    "row_index": 58,
+    "term": "Lymph Nodes of Axilla or Arm",
+    "ontology_identifier": "NCIT:C12904",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12904",
+    "label": "Axillary Lymph Node",
+    "description": "One of approximately 20-30 lymph nodes in chain formation that traverse the concavity of the underarm to the clavicle.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12904 Axillary Lymph Node; the vocab term includes 'or Arm' which NCIT does not; 'Axillary' covers the axilla/armpit region; singular vs plural difference; replaces ICD-O code C77.3."}
+  },
+  {
+    "row_index": 59,
+    "term": "Lymph Nodes of Inguinal Region or Leg",
+    "ontology_identifier": "NCIT:C32801",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C32801",
+    "label": "Inguinal Lymph Node",
+    "description": "Any lymph node that is located in the inguinal region or in either leg.",
+    "verification": {"verdict": "partial", "note": "NCIT:C32801 Inguinal Lymph Node; the vocab term includes 'or Leg' which NCIT does not explicitly include; singular vs plural difference; replaces ICD-O code C77.4."}
+  },
+  {
+    "row_index": 60,
+    "term": "Lymphatic System",
+    "ontology_identifier": "NCIT:C12746",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12746",
+    "label": "Lymphatic System",
+    "description": "The tissues and organs that produce, store, and carry white blood cells that fight infections and other diseases. This system includes the bone marrow, spleen, thymus, lymph nodes, and lymphatic vessels.",
+    "verification": {"verdict": "match", "note": "NCIT:C12746 Lymphatic System; exact label match."}
+  },
+  {
+    "row_index": 61,
+    "term": "Lymphoid Tissue",
+    "ontology_identifier": "NCIT:C13049",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13049",
+    "label": "Lymphoid Tissue",
+    "description": "Tissue characterized by the presence of large numbers of lymphocytes in different stages of transformation. Connective tissue cells including fibroblasts and macrophages may be present.",
+    "verification": {"verdict": "match", "note": "NCIT:C13049 Lymphoid Tissue; exact label match."}
+  },
+  {
+    "row_index": 62,
+    "term": "Main Bronchus",
+    "ontology_identifier": "NCIT:C12284",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12284",
+    "label": "Main Bronchus",
+    "description": "The left and right main bronchi considered as a group.",
+    "verification": {"verdict": "match", "note": "NCIT:C12284 Main Bronchus; exact label match; replaces ICD-O code C34.0."}
+  },
+  {
+    "row_index": 63,
+    "term": "Mammary Gland",
+    "ontology_identifier": "NCIT:C12367",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12367",
+    "label": "Mammary Gland",
+    "description": "The exocrine glands of the mammae that produce milk in females, and are composed of lobules, alveolar ducts and alveoli.",
+    "verification": {"verdict": "match", "note": "NCIT:C12367 Mammary Gland; exact label match; replaces ICD-O code C50.9."}
+  },
+  {
+    "row_index": 64,
+    "term": "Meninges",
+    "ontology_identifier": "NCIT:C12348",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12348",
+    "label": "Meninges",
+    "description": "The three thin layers of tissue that cover and protect the brain and spinal cord.",
+    "verification": {"verdict": "match", "note": "NCIT:C12348 Meninges; exact label match; replaces ICD-O code C70.0."}
+  },
+  {
+    "row_index": 65,
+    "term": "Mesenchyme",
+    "ontology_identifier": "NCIT:C13301",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13301",
+    "label": "Mesenchyme",
+    "description": "Embryonic tissue of mesodermal origin.  Develops into connective tissue, blood vessels, and lymphatic tissue.",
+    "verification": {"verdict": "match", "note": "NCIT:C13301 Mesenchyme; exact label match."}
+  },
+  {
+    "row_index": 66,
+    "term": "Mucosa",
+    "ontology_identifier": "NCIT:C13166",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13166",
+    "label": "Mucosa",
+    "description": "Mucous membrane.",
+    "verification": {"verdict": "match", "note": "NCIT:C13166 Mucosa; exact label match."}
+  },
+  {
+    "row_index": 67,
+    "term": "Muscle",
+    "ontology_identifier": "NCIT:C13056",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13056",
+    "label": "Muscle",
+    "description": "One of the contractile organs of the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C13056 Muscle; exact label match; replaces ICD-O code C49.9."}
+  },
+  {
+    "row_index": 68,
+    "term": "Nasal Cavity",
+    "ontology_identifier": "NCIT:C12424",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12424",
+    "label": "Nasal Cavity",
+    "description": "The upper respiratory tract extending from the nares to the pharynx.",
+    "verification": {"verdict": "match", "note": "NCIT:C12424 Nasal Cavity; exact label match; replaces ICD-O code C30.0."}
+  },
+  {
+    "row_index": 69,
+    "term": "Nervous System",
+    "ontology_identifier": "NCIT:C12755",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12755",
+    "label": "Nervous System",
+    "description": "The organized network of nerve tissue in the body. It includes the central nervous system (the brain and spinal cord), the peripheral nervous system (nerves that extend from the spinal cord to the rest of the body), and other nerve tissue.",
+    "verification": {"verdict": "match", "note": "NCIT:C12755 Nervous System; exact label match; replaces ICD-O code C72.9."}
+  },
+  {
+    "row_index": 70,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 71,
+    "term": "Olfactory Mucosa",
+    "ontology_identifier": "NCIT:C33205",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C33205",
+    "label": "Olfactory Mucosa",
+    "description": "The part of the nasal mucosa composed of neuroepithelial tissue and mucus-producing Bowman's glands. The mucus moistens the epithelium and helps dissolve odor-containing gases.",
+    "verification": {"verdict": "match", "note": "NCIT:C33205 Olfactory Mucosa; exact label match."}
+  },
+  {
+    "row_index": 72,
+    "term": "Omentum",
+    "ontology_identifier": "NCIT:C33209",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C33209",
+    "label": "Omentum",
+    "description": "A fold of the peritoneum (the thin tissue that lines the abdomen) that surrounds the stomach and other organs in the abdomen.",
+    "verification": {"verdict": "match", "note": "NCIT:C33209 Omentum; exact label match."}
+  },
+  {
+    "row_index": 73,
+    "term": "Oral Cavity",
+    "ontology_identifier": "NCIT:C12421",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12421",
+    "label": "Oral Cavity",
+    "description": "The cavity of the mouth.",
+    "verification": {"verdict": "match", "note": "NCIT:C12421 Oral Cavity; exact label match; replaces ICD-O code C06.0."}
+  },
+  {
+    "row_index": 74,
+    "term": "Oral Mucosa",
+    "ontology_identifier": "NCIT:C77637",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C77637",
+    "label": "Oral Mucosa",
+    "description": "The mucosal membranes that line the oral cavity.",
+    "verification": {"verdict": "match", "note": "NCIT:C77637 Oral Mucosa; exact label match."}
+  },
+  {
+    "row_index": 75,
+    "term": "Ovary",
+    "ontology_identifier": "NCIT:C12404",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12404",
+    "label": "Ovary",
+    "description": "The pair of female reproductive glands in which the ova, or eggs, are formed. The ovaries are located in the pelvis, one on each side of the uterus.",
+    "verification": {"verdict": "match", "note": "NCIT:C12404 Ovary; exact label match; replaces ICD-O code C56.9."}
+  },
+  {
+    "row_index": 76,
+    "term": "Pancreas",
+    "ontology_identifier": "NCIT:C12393",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12393",
+    "label": "Pancreas",
+    "description": "An organ behind the lower part of the stomach that is the shape of a fish and about the size of a hand. It is a compound gland composed of both exocrine and endocrine tissues.",
+    "verification": {"verdict": "match", "note": "NCIT:C12393 Pancreas; exact label match; replaces ICD-O code C25.9."}
+  },
+  {
+    "row_index": 77,
+    "term": "Pelvic Lymph Nodes",
+    "ontology_identifier": "NCIT:C12363",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12363",
+    "label": "Pelvic Lymph Node",
+    "description": "Any lymph node within the pelvic region. (NCI)",
+    "verification": {"verdict": "partial", "note": "NCIT:C12363 Pelvic Lymph Node; vocab term is plural ('Nodes'), NCIT label is singular ('Node'); otherwise exact concept match; replaces ICD-O code C77.5."}
+  },
+  {
+    "row_index": 80,
+    "term": "Peripheral Nerves",
+    "ontology_identifier": "NCIT:C12465",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12465",
+    "label": "Peripheral Nervous System",
+    "description": "The nerves outside of the brain and spinal cord, including the autonomic, cranial, and spinal nerves. Peripheral nerves contain non-neuronal cells and connective tissue as well as axons.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12465 Peripheral Nervous System; the vocab term 'Peripheral Nerves' refers to the same anatomical territory as NCIT 'Peripheral Nervous System'; replaces ICD-O code C47.9 which is not a valid NCIT CURIE."}
+  },
+  {
+    "row_index": 81,
+    "term": "Peritoneum",
+    "ontology_identifier": "NCIT:C12770",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12770",
+    "label": "Peritoneum",
+    "description": "The tissue that lines the wall of the abdominal cavity, intestine, mesentery, and pelvic organs. It consists of the parietal peritoneum and the visceral peritoneum.",
+    "verification": {"verdict": "match", "note": "NCIT:C12770 Peritoneum; exact label match."}
+  },
+  {
+    "row_index": 82,
+    "term": "Pharynx",
+    "ontology_identifier": "NCIT:C12425",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12425",
+    "label": "Pharynx",
+    "description": "The hollow tube inside the neck that starts behind the nose and ends at the top of the trachea (windpipe) and esophagus (the tube that goes to the stomach).",
+    "verification": {"verdict": "match", "note": "NCIT:C12425 Pharynx; exact label match."}
+  },
+  {
+    "row_index": 83,
+    "term": "Pituitary Gland",
+    "ontology_identifier": "NCIT:C12399",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12399",
+    "label": "Pituitary Gland",
+    "description": "The main endocrine gland. It produces hormones that control other glands and many body functions, especially growth.",
+    "verification": {"verdict": "match", "note": "NCIT:C12399 Pituitary Gland; exact label match."}
+  },
+  {
+    "row_index": 84,
+    "term": "Placenta",
+    "ontology_identifier": "NCIT:C13272",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13272",
+    "label": "Placenta",
+    "description": "The organ that nourishes the developing fetus in the uterus.",
+    "verification": {"verdict": "match", "note": "NCIT:C13272 Placenta; exact label match; replaces ICD-O code C58.9."}
+  },
+  {
+    "row_index": 85,
+    "term": "Pleura",
+    "ontology_identifier": "NCIT:C12469",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12469",
+    "label": "Pleura",
+    "description": "The tissue that lines the wall of the thoracic cavity and the surface of the lungs.",
+    "verification": {"verdict": "match", "note": "NCIT:C12469 Pleura; exact label match."}
+  },
+  {
+    "row_index": 86,
+    "term": "Prostate Gland",
+    "ontology_identifier": "NCIT:C12410",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12410",
+    "label": "Prostate Gland",
+    "description": "The walnut shaped accessory sex gland of the male reproductive system. It is located in the pelvis just below the bladder, surrounding the prostatic part of the urethra.",
+    "verification": {"verdict": "match", "note": "NCIT:C12410 Prostate Gland; exact label match; replaces ICD-O code C61.9."}
+  },
+  {
+    "row_index": 87,
+    "term": "Rectum",
+    "ontology_identifier": "NCIT:C12390",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12390",
+    "label": "Rectum",
+    "description": "The terminal portion of the large intestine extending from the terminus of the colon to the anus or anal canal.",
+    "verification": {"verdict": "match", "note": "NCIT:C12390 Rectum; exact label match; replaces ICD-O code C18.9."}
+  },
+  {
+    "row_index": 88,
+    "term": "Reproductive System",
+    "ontology_identifier": "NCIT:C12841",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12841",
+    "label": "Reproductive System",
+    "description": "The organs and tissues involved in the production and maturation of gametes and in their union and subsequent development as offspring.",
+    "verification": {"verdict": "match", "note": "NCIT:C12841 Reproductive System; exact label match."}
+  },
+  {
+    "row_index": 89,
+    "term": "Respiratory System",
+    "ontology_identifier": "NCIT:C12779",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12779",
+    "label": "Respiratory System",
+    "description": "The organs that are involved in breathing. These include the nose, throat, larynx, trachea, bronchi, and lungs.",
+    "verification": {"verdict": "match", "note": "NCIT:C12779 Respiratory System; exact label match."}
+  },
+  {
+    "row_index": 90,
+    "term": "Salivary Gland",
+    "ontology_identifier": "NCIT:C12426",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12426",
+    "label": "Salivary Gland",
+    "description": "Any number of exocrine glands that secrete saliva into the oral cavity.",
+    "verification": {"verdict": "match", "note": "NCIT:C12426 Salivary Gland; exact label match."}
+  },
+  {
+    "row_index": 91,
+    "term": "Sclera",
+    "ontology_identifier": "NCIT:C12784",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12784",
+    "label": "Sclera",
+    "description": "The white, opaque, fibrous, outer tunic of the eyeball, covering it entirely excepting the segment covered anteriorly by the cornea.",
+    "verification": {"verdict": "match", "note": "NCIT:C12784 Sclera; exact label match."}
+  },
+  {
+    "row_index": 92,
+    "term": "Sinonasal Tract",
+    "ontology_identifier": "NCIT:C54292",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C54292",
+    "label": "Sinonasal Tract",
+    "description": "The area of the head comprised of the nasal cavity and paranasal sinuses.",
+    "verification": {"verdict": "match", "note": "NCIT:C54292 Sinonasal Tract; exact label match."}
+  },
+  {
+    "row_index": 93,
+    "term": "Skin",
+    "ontology_identifier": "NCIT:C12470",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12470",
+    "label": "Skin",
+    "description": "An organ that constitutes the external surface of the body. It consists of the epidermis, dermis, and skin appendages. (NCI)",
+    "verification": {"verdict": "match", "note": "NCIT:C12470 Skin; exact label match; replaces ICD-O code C44.9."}
+  },
+  {
+    "row_index": 94,
+    "term": "Small Intestine",
+    "ontology_identifier": "NCIT:C12386",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12386",
+    "label": "Small Intestine",
+    "description": "The villous section of the intestine extending from the pylorus to the proximal large intestine.",
+    "verification": {"verdict": "match", "note": "NCIT:C12386 Small Intestine; exact label match; replaces ICD-O code C17.9."}
+  },
+  {
+    "row_index": 95,
+    "term": "Spinal Cord",
+    "ontology_identifier": "NCIT:C12464",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12464",
+    "label": "Spinal Cord",
+    "description": "The portion of the central nervous system that lies within the vertebral canal and from which the spinal nerves emerge.",
+    "verification": {"verdict": "match", "note": "NCIT:C12464 Spinal Cord; exact label match; replaces ICD-O code C72.0."}
+  },
+  {
+    "row_index": 96,
+    "term": "Spleen",
+    "ontology_identifier": "NCIT:C12432",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12432",
+    "label": "Spleen",
+    "description": "An organ that is part of the lymphatic system. The spleen produces lymphocytes, filters the blood, stores blood cells, and destroys old blood cells.",
+    "verification": {"verdict": "match", "note": "NCIT:C12432 Spleen; exact label match; replaces ICD-O code C42.2."}
+  },
+  {
+    "row_index": 97,
+    "term": "Stomach",
+    "ontology_identifier": "NCIT:C12391",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12391",
+    "label": "Stomach",
+    "description": "The portion of the gastrointestinal tract located between the esophagus and the proximal duodenum.",
+    "verification": {"verdict": "match", "note": "NCIT:C12391 Stomach; exact label match; replaces ICD-O code C16.9."}
+  },
+  {
+    "row_index": 98,
+    "term": "Synovial Membrane",
+    "ontology_identifier": "NCIT:C12473",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12473",
+    "label": "Synovial Membrane",
+    "description": "The inner layer of the connective tissue that seals the joint.",
+    "verification": {"verdict": "match", "note": "NCIT:C12473 Synovial Membrane; exact label match."}
+  },
+  {
+    "row_index": 99,
+    "term": "Tendon",
+    "ontology_identifier": "NCIT:C13045",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13045",
+    "label": "Tendon",
+    "description": "Tough, fibrous, cord-like tissue that connects muscle to bone or another structure, such as an eyeball. Tendons help the bone or structure to move.",
+    "verification": {"verdict": "match", "note": "NCIT:C13045 Tendon; exact label match."}
+  },
+  {
+    "row_index": 100,
+    "term": "Testis",
+    "ontology_identifier": "NCIT:C12412",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12412",
+    "label": "Testis",
+    "description": "The male gonad.",
+    "verification": {"verdict": "match", "note": "NCIT:C12412 Testis; exact label match; replaces ICD-O code C62.9."}
+  },
+  {
+    "row_index": 101,
+    "term": "Thymus",
+    "ontology_identifier": "NCIT:C12433",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12433",
+    "label": "Thymus Gland",
+    "description": "An organ that is part of the lymphatic system, in which T lymphocytes grow and multiply. The thymus is in the chest behind the breastbone.",
+    "verification": {"verdict": "partial", "note": "NCIT:C12433 Thymus Gland; the vocab term 'Thymus' and NCIT label 'Thymus Gland' refer to the same organ; NCIT appends 'Gland'; replaces ICD-O code C37.9."}
+  },
+  {
+    "row_index": 102,
+    "term": "Thyroid Gland",
+    "ontology_identifier": "NCIT:C12400",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12400",
+    "label": "Thyroid Gland",
+    "description": "Endocrine gland(s) adjacent to the trachea in mammals that produce thyroxine and other hormones.",
+    "verification": {"verdict": "match", "note": "NCIT:C12400 Thyroid Gland; exact label match; replaces ICD-O code C73.9."}
+  },
+  {
+    "row_index": 103,
+    "term": "Tongue",
+    "ontology_identifier": "NCIT:C12422",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12422",
+    "label": "Tongue",
+    "description": "The muscular organ located in the floor of the mouth and serving as the principal organ of taste and modification of the voice in speech.",
+    "verification": {"verdict": "match", "note": "NCIT:C12422 Tongue; exact label match."}
+  },
+  {
+    "row_index": 104,
+    "term": "Tonsil",
+    "ontology_identifier": "NCIT:C12802",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12802",
+    "label": "Tonsil",
+    "description": "excludes lingual tonsil C02.4 and pharyngeal tonsil C11.1",
+    "verification": {"verdict": "match", "note": "NCIT:C12802 Tonsil; exact label match; replaces ICD-O code C09.9. Note: existing description is a legacy ICD-O note rather than a true definition — human review recommended."}
+  },
+  {
+    "row_index": 105,
+    "term": "Trachea",
+    "ontology_identifier": "NCIT:C12428",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12428",
+    "label": "Trachea",
+    "description": "The fibrocartilaginous, mucous-lined tube passing from the larynx to the bronchi.",
+    "verification": {"verdict": "match", "note": "NCIT:C12428 Trachea; exact label match; replaces ICD-O code C33.9."}
+  },
+  {
+    "row_index": 106,
+    "term": "Umbilical Cord",
+    "ontology_identifier": "NCIT:C34320",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C34320",
+    "label": "Umbilical Cord",
+    "description": "Extraembryonic structure that connects the fetus to the placenta. It contains two arteries and one vein.",
+    "verification": {"verdict": "match", "note": "NCIT:C34320 Umbilical Cord; exact label match."}
+  },
+  {
+    "row_index": 107,
+    "term": "Unspecified",
+    "ontology_identifier": "NCIT:C38046",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38046",
+    "label": "Unspecified",
+    "description": "Not stated explicitly or in detail.",
+    "verification": {"verdict": "match", "note": "NCIT:C38046 Unspecified; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 108,
+    "term": "Uterus",
+    "ontology_identifier": "NCIT:C12405",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12405",
+    "label": "Uterus",
+    "description": "The small, hollow, pear-shaped organ in a woman's pelvis. This is the organ in which a fetus develops.",
+    "verification": {"verdict": "match", "note": "NCIT:C12405 Uterus; exact label match; replaces ICD-O code C55.9."}
+  },
+  {
+    "row_index": 109,
+    "term": "Vagina",
+    "ontology_identifier": "NCIT:C12407",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12407",
+    "label": "Vagina",
+    "description": "The muscular canal extending from the uterus to the exterior of the body.",
+    "verification": {"verdict": "match", "note": "NCIT:C12407 Vagina; exact label match."}
+  },
+  {
+    "row_index": 110,
+    "term": "Vascular Endothelium",
+    "ontology_identifier": "NCIT:C13053",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13053",
+    "label": "Vascular Endothelium",
+    "description": "The layer of simple squamous epithelial tissue that lines the luminal surface of the entire circulatory system.",
+    "verification": {"verdict": "match", "note": "NCIT:C13053 Vascular Endothelium; exact label match."}
+  },
+  {
+    "row_index": 111,
+    "term": "Vein",
+    "ontology_identifier": "NCIT:C12814",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12814",
+    "label": "Vein",
+    "description": "A blood vessel that carries blood towards the heart.",
+    "verification": {"verdict": "match", "note": "NCIT:C12814 Vein; exact label match; replaces ICD-O code C49.9."}
+  },
+  {
+    "row_index": 112,
+    "term": "Vertebra",
+    "ontology_identifier": "NCIT:C12933",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C12933",
+    "label": "Vertebra",
+    "description": "Any of the ring-shaped bony structures that constitute the spinal column and surround the spinal cord.",
+    "verification": {"verdict": "match", "note": "NCIT:C12933 Vertebra; exact label match; replaces ICD-O code C41.2."}
+  }
+]}

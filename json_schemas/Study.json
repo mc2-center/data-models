@@ -5,14 +5,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000007"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -31,14 +31,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000012"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -57,14 +57,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000020"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -83,14 +83,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000022"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -109,14 +109,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000024"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -135,14 +135,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000025"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -161,14 +161,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000026"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -187,14 +187,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUO:0000028"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -213,14 +213,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus1"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -239,14 +239,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus2"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -265,14 +265,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus3"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -291,14 +291,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus4"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -317,14 +317,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus5"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -343,40 +343,14 @@
     {
       "if": {
         "properties": {
-          "StudyDataUseCodes": {
-            "enum": [
-              "DUOPlus6"
-            ]
-          }
-        },
-        "required": [
-          "StudyDataUseCodes"
-        ]
-      },
-      "then": {
-        "properties": {
-          "License": {
-            "not": {
-              "type": "null"
-            }
-          }
-        },
-        "required": [
-          "License"
-        ]
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "StudyDataUseCodes": {
+          "DataUseCodes": {
             "enum": [
               "DUOPlus7"
             ]
           }
         },
         "required": [
-          "StudyDataUseCodes"
+          "DataUseCodes"
         ]
       },
       "then": {
@@ -431,6 +405,48 @@
         "type": "string"
       },
       "title": "dataTier",
+      "type": "array"
+    },
+    "DataUseCodes": {
+      "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
+      "items": {
+        "enum": [
+          "DUO:0000004",
+          "DUO:0000006",
+          "DUO:0000007",
+          "DUO:0000011",
+          "DUO:0000012",
+          "DUO:0000015",
+          "DUO:0000016",
+          "DUO:0000017",
+          "DUO:0000018",
+          "DUO:0000019",
+          "DUO:0000020",
+          "DUO:0000021",
+          "DUO:0000022",
+          "DUO:0000024",
+          "DUO:0000025",
+          "DUO:0000026",
+          "DUO:0000027",
+          "DUO:0000028",
+          "DUO:0000029",
+          "DUO:0000042",
+          "DUO:0000043",
+          "DUO:0000044",
+          "DUO:0000045",
+          "DUO:0000046",
+          "DUOPlus1",
+          "DUOPlus2",
+          "DUOPlus3",
+          "DUOPlus4",
+          "DUOPlus5",
+          "DUOPlus6",
+          "DUOPlus7",
+          "PendingAnnotation"
+        ],
+        "type": "string"
+      },
+      "title": "Data Use Codes",
       "type": "array"
     },
     "DeidentificationType": {
@@ -724,21 +740,354 @@
       "title": "institutionSpecificRestriction",
       "type": "string"
     },
+    "Investigator": {
+      "description": "Investigator(s) associated with this record. Provide either the investigator's free-text name or a PersonView_id reference (see PersonView Key) -- both forms are acceptable. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Investigator",
+      "type": "array"
+    },
     "License": {
       "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
       "items": {
         "enum": [
+          "AAL",
+          "ADSL",
+          "AFL-1.1",
+          "AFL-1.2",
+          "AFL-2.0",
+          "AFL-2.1",
+          "AFL-3.0",
+          "AGPL-1.0",
+          "AGPL-3.0",
+          "AMDPLPA",
+          "AML",
+          "AMPAS",
+          "ANTLR-PD",
+          "APAFML",
+          "APL-1.0",
+          "APSL-1.0",
+          "APSL-1.1",
+          "APSL-1.2",
+          "APSL-2.0",
+          "Abstyles",
+          "Adobe-2006",
+          "Adobe-Glyph",
+          "Afmparse",
+          "Aladdin",
+          "Apache-1.0",
+          "Apache-1.1",
+          "Apache-2.0",
           "Apache2",
+          "Artistic-1.0",
+          "Artistic-1.0-Perl",
+          "Artistic-1.0-cl8",
+          "Artistic-2.0",
+          "BSD-2-Clause",
+          "BSD-2-Clause-FreeBSD",
+          "BSD-2-Clause-NetBSD",
+          "BSD-3-Clause",
+          "BSD-3-Clause-Attribution",
+          "BSD-3-Clause-Clear",
+          "BSD-3-Clause-LBNL",
+          "BSD-3-Clause-No-Nuclear-License",
+          "BSD-3-Clause-No-Nuclear-License-2014",
+          "BSD-3-Clause-No-Nuclear-Warranty",
+          "BSD-4-Clause",
+          "BSD-4-Clause-UC",
+          "BSD-Protection",
+          "BSD-Source-Code",
+          "BSD-style",
           "BSD3Clause",
+          "BSL-1.0",
+          "Bahyph",
+          "Barr",
+          "Beerware",
+          "BitTorrent-1.0",
+          "BitTorrent-1.1",
+          "Borceux",
+          "Bzip2-1.0.5",
+          "Bzip2-1.0.6",
+          "CATOSL-1.1",
+          "CC-BY-1.0",
+          "CC-BY-2.0",
+          "CC-BY-2.5",
+          "CC-BY-3.0",
+          "CC-BY-4.0",
+          "CC-BY-NC-1.0",
+          "CC-BY-NC-2.0",
+          "CC-BY-NC-2.5",
+          "CC-BY-NC-3.0",
+          "CC-BY-NC-4.0",
+          "CC-BY-NC-ND-1.0",
+          "CC-BY-NC-ND-2.0",
+          "CC-BY-NC-ND-2.5",
+          "CC-BY-NC-ND-3.0",
+          "CC-BY-NC-ND-4.0",
+          "CC-BY-NC-SA-1.0",
+          "CC-BY-NC-SA-2.0",
+          "CC-BY-NC-SA-2.5",
+          "CC-BY-NC-SA-3.0",
+          "CC-BY-NC-SA-4.0",
+          "CC-BY-ND-1.0",
+          "CC-BY-ND-2.0",
+          "CC-BY-ND-2.5",
+          "CC-BY-ND-3.0",
+          "CC-BY-ND-4.0",
+          "CC-BY-SA-1.0",
+          "CC-BY-SA-2.0",
+          "CC-BY-SA-2.5",
+          "CC-BY-SA-3.0",
+          "CC-BY-SA-4.0",
           "CC0",
+          "CC0-1.0",
           "CCBY",
           "CCBYNC",
           "CCBYNCND",
           "CCBYNCSA",
           "CCBYND",
           "CCBYSA",
+          "CDDL-1.0",
+          "CDDL-1.1",
+          "CECILL-1.0",
+          "CECILL-1.1",
+          "CECILL-2.0",
+          "CECILL-2.1",
+          "CECILL-B",
+          "CECILL-C",
+          "CNRI-Jython",
+          "CNRI-Python",
+          "CNRI-Python-GPL-Compatible",
+          "CPAL-1.0",
+          "CPL-1.0",
+          "CPOL-1.02",
+          "CUA-OPL-1.0",
+          "Caldera",
+          "ClArtistic",
+          "Condor-1.1",
+          "Crossword",
+          "CrystalStacker",
+          "Cube",
+          "Curl",
+          "D-FSL-1.0",
+          "DOC",
+          "DSDP",
+          "Diffmark",
+          "Dotseqn",
+          "Dvipdfm",
+          "ECL-1.0",
+          "ECL-2.0",
+          "EFL-1.0",
+          "EFL-2.0",
+          "EGenix",
+          "EPL-1.0",
+          "EUDatagrid",
+          "EUPL-1.0",
+          "EUPL-1.1",
+          "Entessa",
+          "ErlPL-1.1",
+          "Eurosym",
+          "FSFAP",
+          "FSFUL",
+          "FSFULLR",
+          "FTL",
+          "Fair",
+          "Frameworx-1.0",
+          "FreeImage",
+          "Freeware",
+          "GFDL-1.1",
+          "GFDL-1.2",
+          "GFDL-1.3",
+          "GL2PS",
+          "GPL-1.0",
+          "GPL-2.0",
+          "GPL-3.0",
           "GPL3",
-          "MIT"
+          "GSOAP-1.3b",
+          "Giftware",
+          "Glide",
+          "Glulxe",
+          "Gnuplot",
+          "HPND",
+          "HaskellReport",
+          "IBM-pibs",
+          "ICU",
+          "IJG",
+          "IMatix",
+          "IPA",
+          "IPL-1.0",
+          "ISC",
+          "ImageMagick",
+          "Imlib2",
+          "Info-ZIP",
+          "Intel",
+          "Intel-ACPI",
+          "Interbase-1.0",
+          "JSON",
+          "JasPer-2.0",
+          "LAL-1.2",
+          "LAL-1.3",
+          "LGPL-2.0",
+          "LGPL-2.1",
+          "LGPL-3.0",
+          "LGPLLR",
+          "LPL-1.0",
+          "LPL-1.02",
+          "LPPL-1.0",
+          "LPPL-1.1",
+          "LPPL-1.2",
+          "LPPL-1.3a",
+          "LPPL-1.3c",
+          "Latex2e",
+          "Leptonica",
+          "LiLiQ-P-1.1",
+          "LiLiQ-R-1.1",
+          "LiLiQ-Rplus-1.1",
+          "Libpng",
+          "Libtiff",
+          "MIT",
+          "MIT-CMU",
+          "MIT-advertising",
+          "MIT-enna",
+          "MIT-feh",
+          "MITNFA",
+          "MPL-1.0",
+          "MPL-1.1",
+          "MPL-2.0",
+          "MPL-2.0-no-copyleft-exception",
+          "MS-PL",
+          "MS-RL",
+          "MTLL",
+          "MakeIndex",
+          "MirOS",
+          "Motosoto",
+          "Mpich2",
+          "Multics",
+          "Mup",
+          "NASA-1.3",
+          "NBPL-1.0",
+          "NCSA",
+          "NGPL",
+          "NLOD-1.0",
+          "NLPL",
+          "NOSL",
+          "NPL-1.0",
+          "NPL-1.1",
+          "NPOSL-3.0",
+          "NRL",
+          "NTP",
+          "Naumen",
+          "NetCDF",
+          "Newsletr",
+          "Nokia",
+          "Notlicensed",
+          "Noweb",
+          "Nunit",
+          "OCCT-PL",
+          "OCLC-2.0",
+          "ODbL-1.0",
+          "OFL-1.0",
+          "OFL-1.1",
+          "OGTSL",
+          "OLDAP-1.1",
+          "OLDAP-1.2",
+          "OLDAP-1.3",
+          "OLDAP-1.4",
+          "OLDAP-2.0",
+          "OLDAP-2.0.1",
+          "OLDAP-2.1",
+          "OLDAP-2.2",
+          "OLDAP-2.2.1",
+          "OLDAP-2.2.2",
+          "OLDAP-2.3",
+          "OLDAP-2.4",
+          "OLDAP-2.5",
+          "OLDAP-2.6",
+          "OLDAP-2.7",
+          "OLDAP-2.8",
+          "OML",
+          "OPL-1.0",
+          "OSET-PL-2.1",
+          "OSL-1.0",
+          "OSL-1.1",
+          "OSL-2.0",
+          "OSL-2.1",
+          "OSL-3.0",
+          "OpenSSL",
+          "Other",
+          "PDDL-1.0",
+          "PHP-3.0",
+          "PHP-3.01",
+          "Plexus",
+          "PostgreSQL",
+          "Proprietary",
+          "Psfrag",
+          "Psutils",
+          "Python-2.0",
+          "QPL-1.0",
+          "Qhull",
+          "RHeCos-1.1",
+          "RPL-1.1",
+          "RPL-1.5",
+          "RPSL-1.0",
+          "RSA-MD",
+          "RSCPL",
+          "Rdisc",
+          "Ruby",
+          "SAX-PD",
+          "SCEA",
+          "SGI-B-1.0",
+          "SGI-B-1.1",
+          "SGI-B-2.0",
+          "SISSL",
+          "SISSL-1.2",
+          "SMLNJ",
+          "SMPPL",
+          "SNIA",
+          "SPL-1.0",
+          "SWL",
+          "Saxpath",
+          "Sendmail",
+          "SimPL-2.0",
+          "Sleepycat",
+          "Spencer-86",
+          "Spencer-94",
+          "Spencer-99",
+          "SugarCRM-1.1.3",
+          "TCL",
+          "TMate",
+          "TORQUE-1.1",
+          "TOSL",
+          "UPL-1.0",
+          "Unicode-TOU",
+          "Unlicense",
+          "VOSTROM",
+          "VSL-1.0",
+          "Vim",
+          "W3C",
+          "W3C-19980720",
+          "WTFPL",
+          "Watcom-1.0",
+          "Wsuipa",
+          "X11",
+          "XFree86-1.1",
+          "XSkat",
+          "Xerox",
+          "Xinetd",
+          "Xnet",
+          "Xpp",
+          "YPL-1.0",
+          "YPL-1.1",
+          "ZPL-1.1",
+          "ZPL-2.0",
+          "ZPL-2.1",
+          "Zed",
+          "Zend-2.0",
+          "Zimbra-1.3",
+          "Zimbra-1.4",
+          "Zlib",
+          "Zlib-acknowledgement"
         ],
         "type": "string"
       },
@@ -1030,48 +1379,6 @@
       "title": "sourceGeography",
       "type": "array"
     },
-    "StudyDataUseCodes": {
-      "description": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
-      "items": {
-        "enum": [
-          "DUO:0000004",
-          "DUO:0000006",
-          "DUO:0000007",
-          "DUO:0000011",
-          "DUO:0000012",
-          "DUO:0000015",
-          "DUO:0000016",
-          "DUO:0000017",
-          "DUO:0000018",
-          "DUO:0000019",
-          "DUO:0000020",
-          "DUO:0000021",
-          "DUO:0000022",
-          "DUO:0000024",
-          "DUO:0000025",
-          "DUO:0000026",
-          "DUO:0000027",
-          "DUO:0000028",
-          "DUO:0000029",
-          "DUO:0000042",
-          "DUO:0000043",
-          "DUO:0000044",
-          "DUO:0000045",
-          "DUO:0000046",
-          "DUOPlus1",
-          "DUOPlus2",
-          "DUOPlus3",
-          "DUOPlus4",
-          "DUOPlus5",
-          "DUOPlus6",
-          "DUOPlus7",
-          "PendingAnnotation"
-        ],
-        "type": "string"
-      },
-      "title": "Study Data Use Codes",
-      "type": "array"
-    },
     "StudyDeidentificationMethodDescription": {
       "description": "Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.",
       "title": "Study Deidentification Method Description",
@@ -1112,14 +1419,6 @@
       ],
       "title": "Study Index Date"
     },
-    "StudyInvestigator": {
-      "description": "Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.",
-      "items": {
-        "type": "string"
-      },
-      "title": "Study Investigator",
-      "type": "array"
-    },
     "StudyName": {
       "description": "Name of the study",
       "title": "Study Name",
@@ -1131,8 +1430,9 @@
       "type": "number"
     },
     "StudyNumberofSamples": {
-      "description": "TBD",
-      "title": "Study Number of Samples"
+      "description": "The number of specimens associated with systematic investigation into a subject.",
+      "title": "Study Number of Samples",
+      "type": "number"
     },
     "StudyProjectIdentifier": {
       "description": "The Synapse Project identifier (synID) with which this Study is related.",
@@ -1143,6 +1443,11 @@
       "pattern": "syn[0-9]+",
       "title": "Study Project Identifier",
       "type": "array"
+    },
+    "StudyShortName": {
+      "description": "The acronym or abbreviated form of the title for a research data collection (e.g. GLIOMA01).",
+      "title": "Study Short Name",
+      "type": "string"
     },
     "StudydbGaPAccessionId": {
       "description": "A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.",
@@ -1161,12 +1466,13 @@
     }
   },
   "required": [
+    "Investigator",
     "StudyDeidentificationMethodType",
     "StudyDescription",
     "StudyId",
-    "StudyInvestigator",
     "StudyName",
-    "StudyNumberofParticipants"
+    "StudyNumberofParticipants",
+    "StudyNumberofSamples"
   ],
   "title": "Study",
   "type": "object"

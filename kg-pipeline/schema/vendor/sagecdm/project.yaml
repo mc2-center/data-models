@@ -1,0 +1,148 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/project
+name: sage-cdm-project
+title: Sage CDM PROJECT
+description: >-
+  PROJECT represents an organizing container within a program that produces studies or
+  datasets. Not every program uses the concept — where used, it groups related studies under
+  a shared scientific aim, funding mechanism, or coordinating team.
+
+  "Project" here is the conceptual CDM entity, NOT a Synapse Project. A Synapse Project is a
+  storage and access-control container; a CDM Project is an organizing scientific unit. The
+  two can coexist and reference each other but are not the same thing.
+
+  Reference slots contributed by this file: project.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788453414/Entity+PROJECT
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+  schema: http://schema.org/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - base_entity
+  - organization
+  - program
+
+slots:
+
+  website_url:
+    title: Website URL
+    description: >-
+      A public web address specific to the project — a project landing page or dedicated
+      site.
+    range: uri
+    exact_mappings:
+      - schema:url
+    comments:
+      - >-
+        Not the portal URL (that belongs on PORTAL), not a grant page, and not a Synapse
+        project URL.
+
+  # --- Reference slots targeting Project ------------------------------------
+  project:
+    title: Project
+    description: >-
+      The parent project this study belongs to, where one applies.
+    range: Project
+    inlined: false
+    slot_uri: dcterms:isPartOf
+    comments:
+      - >-
+        Optional because not every program uses the project concept. A study may connect
+        directly to a program with no project in between.
+      - >-
+        Where populated, must reference a project belonging to the SAME program as the
+        referring study. LinkML cannot express this cross-field constraint declaratively;
+        it is enforced in tests/test_cross_references.py.
+      - Never a project in a different program, and never a Synapse project.
+
+classes:
+
+  Project:
+    title: PROJECT
+    description: >-
+      An organizing container within a program that produces studies or datasets. A project
+      belongs to exactly one program and contains zero or more studies. Projects are optional
+      in the hierarchy.
+    is_a: BaseEntity
+    slots:
+      - name
+      - description
+      - program
+      - status
+      - start_date
+      - end_date
+      - funding_source
+      - website_url
+    slot_usage:
+      id:
+        description: >-
+          Stable machine identifier for the project. A short lowercase string prefixed with
+          `project.`, incorporating the parent program where possible.
+        pattern: '^project\.[a-z0-9]+(-[a-z0-9]+)*\.[a-z0-9]+(-[a-z0-9]+)*$'
+        examples:
+          - value: project.amp-als.answer-als
+        comments:
+          - Never a Synapse project ID, a grant number, or a UUID.
+      name:
+        description: >-
+          Human-readable display name for the project, as it appears in program
+          documentation, grant materials, or the portal.
+        examples:
+          - value: Answer ALS
+        comments:
+          - Never the program name and never a study name.
+      description:
+        description: >-
+          One-paragraph plain-language description of the project's scientific aim and
+          scope. 2-4 sentences.
+        comments:
+          - Never a grant abstract verbatim.
+      program:
+        description: The parent program this project belongs to.
+        required: true
+        examples:
+          - value: program.amp-als
+      status:
+        description: Current lifecycle state of the project.
+        comments:
+          - >-
+            Never grant-cycle phase language such as "Year 3" or "renewal pending".
+      start_date:
+        description: >-
+          The date the project began scientific or data-generating activities. Distinct from
+          the grant start date — this is when work actually began.
+        examples:
+          - value: '2019-04-01'
+      end_date:
+        description: >-
+          The date the project concluded activities. Populated only when status is completed.
+        examples:
+          - value: '2024-03-31'
+      funding_source:
+        description: >-
+          The organization(s) funding this project.
+        comments:
+          - >-
+            DEVIATION FROM SPEC, needs DMG ratification. The PROJECT page (draft, 2026-07-15)
+            types this as a free-text string holding a funder name or grant number, and
+            raises "does funding_source stay a string or become a reference to ORGANIZATION?"
+            as an open question. The later PROGRAM page (2026-07-21) resolved the same
+            question in favour of an ORGANIZATION reference. Implemented as a reference here
+            for consistency — one slot name cannot carry two ranges, and the string form
+            would make "who funds what?" unqueryable across the two entities.
+    comments:
+      - >-
+        A project belongs to exactly one program (2026-07-15). Cross-program work is modelled
+        as separate projects per program.
+      - >-
+        Whether a separate grant_number slot is needed is unresolved: a single grant may
+        support multiple projects, and a project may draw on multiple grants. Not modelled
+        pending a decision.

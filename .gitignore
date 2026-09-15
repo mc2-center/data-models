@@ -79,3 +79,4 @@ kg-pipeline/__pycache__/
 kg-pipeline/**/__pycache__/
 kg-pipeline/.venv/
 .pytest_cache/
+/.vscode

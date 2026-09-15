@@ -1,0 +1,14 @@
+# name: publications_for_datasets
+# description: Every Publication linked to a Dataset (via Publication.dataset
+#   -> Dataset.datasetAlias), with the Publication's resolved PubMed IRI -
+#   the reproducibility/citation-tracing question "where was this dataset
+#   published, and how do I cite it" answered with a real resolvable link
+#   instead of a bare numeric PubMed ID.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+
+SELECT ?pub ?title ?pubmedIri ?dataset WHERE {
+  ?pub a cckp:Publication ;
+       cckp:datasetRef ?dataset ;
+       cckp:publicationTitle ?title .
+  OPTIONAL { ?pub cckp:pubMedIdIri ?pubmedIri }
+}

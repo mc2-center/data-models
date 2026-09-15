@@ -1,0 +1,10 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/resource_educational_level.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Adult Education	Adult Education	skos:exactMatch	http://snomed.info/id/161125007	semapv:ManualMappingCuration
+Community College / Lower Division	Community College / Lower Division	skos:exactMatch	http://snomed.info/id/224870001	semapv:ManualMappingCuration
+Graduate / Profession	Graduate / Profession	skos:exactMatch	http://id.nlm.nih.gov/mesh/D004500	semapv:ManualMappingCuration
+High School	High School	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C89278	semapv:ManualMappingCuration

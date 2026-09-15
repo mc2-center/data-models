@@ -1,0 +1,12 @@
+# name: no_shouted_person_names
+# expect: empty
+# description: No sagecdm:Person display_name should be all-uppercase -
+#   catches a regression in link_scdm.py's proper_case_name() (e.g. "EUN
+#   HYUN AHN" passing through un-normalized).
+PREFIX sagecdm: <https://sage-bionetworks.github.io/SageCommonDataModel/>
+
+SELECT ?person ?name WHERE {
+  ?person a sagecdm:Person ;
+          sagecdm:display_name ?name .
+  FILTER (STR(?name) = UCASE(STR(?name)) && STR(?name) != LCASE(STR(?name)))
+}
