@@ -9,7 +9,7 @@ OWLGEN_FLAGS := --skip-vacuous-local-range-axioms \
                 --skip-vacuous-min-zero-cardinality-axioms \
                 --consolidate-cardinality-axioms
 
-.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg deploy-kg manifest test clean \
+.PHONY: all mc2-model-linkml schema sagecdm-schema extract harmonize suggest-mappings crosswalk-ontology crosswalk-scdm triples link-scdm link-ontology-crosswalk validate update-coverage-baseline publish-portal-kg deploy-kg manifest upload-sagebrain-s3 test clean \
 	extract-mc2-assay harmonize-mc2-assay triples-mc2-assay link-sagebrain publish-mc2-assay \
 	extract-datacatalog harmonize-datacatalog triples-datacatalog merge-datacatalog combined-kg full-kg query-checks query-examples
 
@@ -274,6 +274,17 @@ publish-portal-kg:
 # subfolder. See scripts/publish_kg.py's module docstring.
 deploy-kg:
 	$(PYTHON) scripts/publish_kg.py --deploy-kg
+
+# Local equivalent of nf-osi/kg-pipeline's upload-sagebrain-s3.yml: publish
+# schema/*.ttl + data/rdf/cckp_kg_full.ttl (+ manifest.ttl trigger) to the
+# SageBrain Neptune S3 bucket, using whatever AWS credentials your shell
+# already has configured - no CI/OIDC involved. Requires SAGEBRAIN_BUCKET
+# (no default - see scripts/upload_sagebrain_s3.py's docstring) and the
+# `aws` CLI on PATH. Own opt-in target, not part of `all`/`full-kg`/
+# `deploy-kg` - a separate publish destination, same as publish-portal-kg
+# and deploy-kg are separate from each other.
+upload-sagebrain-s3:
+	$(PYTHON) scripts/upload_sagebrain_s3.py
 
 test:
 	pytest test/
