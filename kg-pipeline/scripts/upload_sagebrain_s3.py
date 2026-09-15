@@ -40,6 +40,13 @@ Usage:
     export SAGEBRAIN_PORTAL=cckp                 # optional, default: cckp
     export AWS_REGION=us-east-1                  # optional, default: us-east-1
     python scripts/upload_sagebrain_s3.py
+
+--dry-run [DIR] skips `aws` entirely and mirrors the exact prefix layout
+that would be uploaded into a local directory instead (default:
+sagebrain_s3_dry_run/) - useful for inspecting the output shape, or for a
+first run before real bucket credentials/name are available. --bucket is
+still required in dry-run mode (it's part of the mirrored path), but
+doesn't need to be a real bucket.
 """
 
 import argparse
@@ -65,17 +72,29 @@ def run_aws(*args, region):
     subprocess.run(["aws", "s3", *args, "--region", region], check=True)
 
 
-def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_root="."):
+def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_root=".", dry_run_dir=None):
     if not os.path.isfile(FULL_KG_PATH):
         raise SystemExit(f"{FULL_KG_PATH} not found - run `make full-kg` first")
     schema_ttls = sorted(glob.glob(os.path.join(SCHEMA_DIR, "*.ttl")))
     if not schema_ttls:
         raise SystemExit(f"no *.ttl files found directly under {SCHEMA_DIR}/ - run `make schema` first")
-    if shutil.which("aws") is None:
+    if dry_run_dir is None and shutil.which("aws") is None:
         raise SystemExit("the `aws` CLI is not on PATH - install/configure it first")
 
     date = date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     prefix = s3_prefix(bucket, portal, date)
+
+    def place(src, relative_path):
+        """Upload src to `{prefix}/{relative_path}` for real, or mirror it
+        under dry_run_dir at the same relative layout when dry-running."""
+        dest = f"{prefix}/{relative_path}"
+        if dry_run_dir is not None:
+            local_dest = os.path.join(dry_run_dir, portal, date, relative_path)
+            os.makedirs(os.path.dirname(local_dest), exist_ok=True)
+            shutil.copyfile(src, local_dest)
+        else:
+            run_aws("cp", src, dest, region=region)
+        return dest
 
     commit_sha, branch = git_info()
     manifest_graph = build_manifest(f"{prefix}/", portal=portal, repo_url=repo_url,
@@ -92,17 +111,13 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
     # grows a vendored .ttl.
     print(f"data/schema/ ({len(schema_ttls)} file(s)) -> {prefix}/data/schema/")
     for path in schema_ttls:
-        run_aws("cp", path, f"{prefix}/data/schema/{os.path.basename(path)}", region=region)
+        place(path, f"data/schema/{os.path.basename(path)}")
 
-    print(f"{FULL_KG_PATH} -> {prefix}/data/rdf/cckp_kg_full.ttl")
-    run_aws("cp", FULL_KG_PATH, f"{prefix}/data/rdf/cckp_kg_full.ttl", region=region)
-
-    print(f"{provenance_path} -> {prefix}/data/_provenance.ttl")
-    run_aws("cp", provenance_path, f"{prefix}/data/_provenance.ttl", region=region)
+    print(f"{FULL_KG_PATH} -> {place(FULL_KG_PATH, 'data/rdf/cckp_kg_full.ttl')}")
+    print(f"{provenance_path} -> {place(provenance_path, 'data/_provenance.ttl')}")
 
     # Sentinel last: writing manifest.ttl is what triggers the Neptune load.
-    print(f"{manifest_path} -> {prefix}/manifest.ttl  (sentinel - triggers the load)")
-    run_aws("cp", manifest_path, f"{prefix}/manifest.ttl", region=region)
+    print(f"{manifest_path} -> {place(manifest_path, 'manifest.ttl')}  (sentinel - triggers the load)")
 
     return prefix
 
@@ -116,13 +131,21 @@ def main():
     parser.add_argument("--region", default=os.environ.get("AWS_REGION", DEFAULT_REGION),
                          help="AWS region (env: AWS_REGION, default: %(default)s)")
     parser.add_argument("--date", default=None, help="Override the YYYY-MM-DD prefix (default: today, UTC)")
+    parser.add_argument("--dry-run", nargs="?", const="sagebrain_s3_dry_run", default=None, metavar="DIR",
+                         help="Skip `aws` and mirror the upload layout into DIR instead "
+                              "(default: %(const)s)")
     args = parser.parse_args()
 
     if not args.bucket:
-        sys.exit("--bucket (or SAGEBRAIN_BUCKET) is required - see sagebrain-infra for the real bucket name")
+        sys.exit("--bucket (or SAGEBRAIN_BUCKET) is required - see sagebrain-infra for the real bucket name "
+                  "(any placeholder works with --dry-run)")
 
-    prefix = upload(args.bucket, args.portal, args.region, date=args.date)
-    print(f"Done: {prefix}")
+    prefix = upload(args.bucket, args.portal, args.region, date=args.date, dry_run_dir=args.dry_run)
+    if args.dry_run:
+        portal_date = prefix.split(f"{args.bucket}/", 1)[1]  # "<portal>/<date>"
+        print(f"Done (dry run): {args.dry_run}/{portal_date}/  (would be {prefix})")
+    else:
+        print(f"Done: {prefix}")
 
 
 if __name__ == "__main__":
