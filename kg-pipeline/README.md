@@ -344,7 +344,8 @@ kg-pipeline/
   queries/examples/*.rq        - domain/research-question queries demonstrating what the graph
                                 can answer (tumor-type search, publication-dataset traceability,
                                 tool discovery, SCDM-federated program rollups, a DataCatalog vs.
-                                portal-Assay curation-gap finder) - `# name:`/`# description:`
+                                portal-Assay curation-gap finder, cross-class lookup via a shared
+                                Biolink type) - `# name:`/`# description:`
                                 header only, no `# expect:` (not pass/fail assertions, so NOT
                                 picked up by validate_graph.py's --queries glob, which only reads
                                 queries/*.rq directly, not subdirectories); run instead via
