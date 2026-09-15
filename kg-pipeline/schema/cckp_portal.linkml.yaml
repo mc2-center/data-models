@@ -72,6 +72,7 @@ classes:
     description: A CCKP Dataset record (DatasetView, syn21897968).
     exact_mappings:
       - https://schema.org/Dataset
+      - https://w3id.org/biolink/vocab/Dataset
     tree_root: true
     slots:
       - grantNumber
@@ -163,6 +164,7 @@ classes:
     description: A CCKP Publication record (PublicationView, syn21868591).
     exact_mappings:
       - https://schema.org/ScholarlyArticle
+      - https://w3id.org/biolink/vocab/Publication
     tree_root: true
     slots:
       - grantNumber
@@ -248,6 +250,10 @@ classes:
     description: A CCKP Tool record (ToolView, syn26127427).
     exact_mappings:
       - https://schema.org/SoftwareApplication
+    close_mappings:
+      # Biolink has no Tool/software class - InformationContentEntity is the
+      # closest generic parent, not a same-meaning match.
+      - https://w3id.org/biolink/vocab/InformationContentEntity
     tree_root: true
     slots:
       - grantNumber
@@ -419,6 +425,11 @@ classes:
     description: A CCKP Grant record (GrantView, syn21918972). Referenced by (not referencing) the other v1 classes.
     exact_mappings:
       - https://schema.org/MonetaryGrant
+    close_mappings:
+      # Biolink has no Grant class - AdministrativeEntity ("an entity that is
+      # the byproduct of an administrative process") is the closest generic
+      # parent, not a same-meaning match.
+      - https://w3id.org/biolink/vocab/AdministrativeEntity
     tree_root: true
     slots:
       - grantNumber
@@ -504,6 +515,9 @@ classes:
     description: A CCKP Educational Resource record (EducationalResource, syn51497305).
     close_mappings:
       - https://schema.org/LearningResource
+      # Biolink has no EducationalResource/LearningResource class -
+      # InformationContentEntity is the closest generic parent.
+      - https://w3id.org/biolink/vocab/InformationContentEntity
     tree_root: true
     slots:
       - grantNumber
