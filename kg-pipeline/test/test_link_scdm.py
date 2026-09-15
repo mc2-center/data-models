@@ -68,7 +68,7 @@ def test_link_institutions_resolves_grant_institution_and_alias(tmp_path):
     n_edges = link_scdm.link_institutions(g, str(harmonized_dir), crosswalk)
     # Same org resolved via both grantInstitution and institutionAlias - deduped to one edge.
     assert n_edges == 1
-    subject = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Grant/syn1")
+    subject = rdflib.URIRef("https://www.synapse.org/Synapse:syn1")
     target = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Organization/org.sage-bionetworks")
     assert (subject, CCKP.institutionRef, target) in g
 
@@ -267,7 +267,7 @@ def test_build_scdm_links_end_to_end(tmp_path):
         "institution_edges": 1, "consortium_edges": 1,
         "person_stubs": 1, "investigator_edges": 1,
     }
-    grant = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Grant/syn1")
+    grant = rdflib.URIRef("https://www.synapse.org/Synapse:syn1")
     assert (grant, CCKP.institutionRef,
             rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Organization/org.sage-bionetworks")) in g
     assert (grant, CCKP.consortiumRef,
