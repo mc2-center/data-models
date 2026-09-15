@@ -88,10 +88,20 @@ queryable RDF knowledge graph: an [extract → harmonize → map-to-RDF →
 validate](./kg-pipeline#architecture) build producing a LinkML/OWL schema
 and per-entity RDF instance data, with real ontology IRI mappings (NCIT,
 MONDO, EFO, OBI, ...) sourced from this model's own controlled vocabularies.
+Instance data is dual-typed against [Biolink](https://biolink.github.io/biolink-model/)
+alongside the portal's own classes, and addressed by Synapse's own canonical
+IRI wherever a row already has one, rather than minting a second identifier.
 It also links the graph to related efforts - Data Catalog (native Synapse
 Dataset annotations), SCDM (Sage Common Data Model) federation, and
 [sagebrain-model](https://github.com/Sage-Bionetworks/sagebrain-model)
 interoperability for assay-level metadata.
+
+Built graphs are published to Synapse, and optionally to a SageBrain Neptune
+S3 bucket (a local-runnable equivalent of
+[nf-osi/kg-pipeline](https://github.com/nf-osi/kg-pipeline)'s own S3 upload
+workflow) - each publish is paired with a small `manifest.ttl` PROV/VOID
+statement about the build, used as a lightweight trigger file by a
+downstream auto-loader.
 
 It has its own README, `Makefile`, and Python environment (isolated from
 this repo's root `requirements.txt`). See
