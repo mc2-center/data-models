@@ -171,6 +171,16 @@ separate domain entirely - different subject IRIs, access-controlled source
 data - and isn't connected to anything above; see "Additional pipeline
 stages" below for what it is and how to build it.
 
+**Instance IRIs.** A row whose identifying value is a real Synapse entity id
+(`synNNN...` - Dataset, Grant, EducationalResource's `alias`, MC2 assay's
+`File View`) is addressed by its canonical Synapse IRI,
+`https://www.synapse.org/Synapse:synNNN...`, not a second, parallel id
+minted just for this graph - see `mint_iri()` in `scripts/build_triples.py`.
+Every other entity (Publication/Tool rows with no Synapse id, SCDM
+Organization/Program/Person nodes minted by `link_scdm.py`) keeps the
+placeholder `https://w3id.org/mc2-center/cckp-portal/data/{Class}/{id}`
+namespace.
+
 ## Additional pipeline stages
 
 Beyond the core extract → harmonize → map-to-RDF → validate flow above,

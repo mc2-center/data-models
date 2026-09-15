@@ -16,9 +16,20 @@ CSVs:
           triple per resolved join (`cckp:{field}Ref`) to the related
           entity's minted IRI.
 
-Instance IRIs: https://w3id.org/mc2-center/cckp-portal/data/{Class}/{id}
-(placeholder namespace, matching the convention already used by
-schema/mc2_model.linkml.yaml's default schema-id).
+Instance IRIs: a row whose minted id is a real Synapse entity id (`synNNN...`)
+gets the canonical Synapse IRI, `https://www.synapse.org/Synapse:synNNN...`,
+rather than a second, parallel identifier minted just for this graph -
+these rows already have stable identity in Synapse (Dataset.datasetId,
+Grant.grantId, EducationalResource.alias, File View.FileView_id), and a
+second identifier would just be one more thing to keep in sync with the
+first. Every other row (Publication/Tool/EducationalResource rows falling
+back to a non-Synapse key, and non-Synapse-sourced entities like SCDM
+Organization/Program/Person minted elsewhere) keeps the placeholder
+`https://w3id.org/mc2-center/cckp-portal/data/{Class}/{id}` namespace,
+matching the convention already used by schema/mc2_model.linkml.yaml's
+default schema-id - detected by the id's own shape (`SYNAPSE_ID_RE`), not by
+which class it belongs to, since some classes (e.g. EducationalResource) mint
+from a Synapse id in some rows and a non-Synapse fallback in others.
 """
 
 import argparse
@@ -37,6 +48,13 @@ from harmonize import split_field_values
 
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
+# A minted id that's actually a real Synapse entity id gets the canonical
+# Synapse IRI instead of a second, parallel identifier - see module
+# docstring. Case-insensitive: Synapse ids are conventionally lowercase
+# ("syn12345678") but this shouldn't silently fall back to DATA_NS if a
+# source value were ever cased differently.
+SYNAPSE_ID_RE = re.compile(r"^syn\d+$", re.IGNORECASE)
+SYNAPSE_NS = "https://www.synapse.org/Synapse:"
 # Tier-3 of the identifier policy documented in README.md ("registry CURIE" /
 # "w3id.org-minted portal IRI" / "provisional placeholder"): a stable, local
 # IRI for a raw CV value a human has actively checked against every relevant
@@ -175,7 +193,10 @@ def field_slug(name):
 
 
 def mint_iri(cls_name, row_id):
-    return rdflib.URIRef(DATA_NS + class_slug(cls_name) + "/" + quote(str(row_id), safe=""))
+    row_id = str(row_id)
+    if SYNAPSE_ID_RE.match(row_id):
+        return rdflib.URIRef(SYNAPSE_NS + row_id)
+    return rdflib.URIRef(DATA_NS + class_slug(cls_name) + "/" + quote(row_id, safe=""))
 
 
 def load_prefixes(mc2_schema_path):

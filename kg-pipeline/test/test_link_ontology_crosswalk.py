@@ -52,11 +52,11 @@ def test_link_field_emits_edge_only_for_reviewed_hit(tmp_path):
     assert n_edges == 1
     assert n_rows == 1
 
-    reviewed_subject = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Dataset/syn1")
+    reviewed_subject = rdflib.URIRef("https://www.synapse.org/Synapse:syn1")
     target = rdflib.URIRef("http://purl.obolibrary.org/obo/MONDO_0005012")
     assert (reviewed_subject, CCKP.tumorTypeMondoTerm, target) in g
 
-    unreviewed_subject = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Dataset/syn2")
+    unreviewed_subject = rdflib.URIRef("https://www.synapse.org/Synapse:syn2")
     assert (unreviewed_subject, CCKP.tumorTypeMondoTerm, None) not in g
 
 
@@ -115,7 +115,7 @@ def test_build_ontology_crosswalk_links_end_to_end(tmp_path):
     assert stats["tumorType"] == {"reviewed_rows": 1, "edges": 1, "rows_linked": 1, "predicate": "tumorTypeMondoTerm"}
     assert stats["tissue"] == {"reviewed_rows": 1, "edges": 1, "rows_linked": 1, "predicate": "tissueUberonTerm"}
 
-    dataset = rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Dataset/syn1")
+    dataset = rdflib.URIRef("https://www.synapse.org/Synapse:syn1")
     assert (dataset, CCKP.tumorTypeMondoTerm,
             rdflib.URIRef("http://purl.obolibrary.org/obo/MONDO_0005012")) in g
     assert (dataset, CCKP.tissueUberonTerm,
