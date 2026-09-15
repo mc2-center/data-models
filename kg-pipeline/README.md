@@ -303,10 +303,15 @@ kg-pipeline/
     crosswalk_ontology.py       - MONDO/UBERON federation crosswalks (human-review)
     build_triples.py           - Stage 4
     validate_graph.py          - Stage 5 (+ SHACL validation, + queries/*.rq sanity checks)
-    build_manifest.py            - Stage 6: emits data/rdf/manifest.ttl, a small PROV statement
-                                  about the build (make manifest, folded into make full-kg) -
-                                  the lightweight trigger file `make deploy-kg` publishes
-                                  alongside cckp_kg_full.ttl for a downstream auto-loader
+    build_manifest.py            - Stage 6: emits data/rdf/manifest.ttl, a small PROV/VOID
+                                  statement about the build (make manifest, folded into
+                                  make full-kg) - the lightweight trigger file `make deploy-kg`
+                                  publishes alongside cckp_kg_full.ttl for a downstream
+                                  auto-loader. Shape matches nf-osi/kg-pipeline's own
+                                  manifest.ttl (prov:Activity + void:Dataset, git commit/ref,
+                                  void:dataDump) so the same Neptune bulk-loader convention
+                                  works for either pipeline's publish target - see the
+                                  script's docstring.
     extract_mc2_assay_metadata.py - MC2 assay-metadata KG: Synapse Dataset-entity
                                 discovery + File View extraction (live Synapse
                                 credentials required - not used by `make all`)
