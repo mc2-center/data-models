@@ -73,6 +73,7 @@ from build_manifest import DEFAULT_PORTAL, DEFAULT_REPO_URL, build_manifest, git
 FULL_KG_PATH = os.path.join("data", "rdf", "cckp_kg_full.ttl")
 SCHEMA_DIR = "schema"
 DEFAULT_REGION = "us-east-1"
+SAGEBRAIN_BUCKET = "app-prod-neptune-neptunedatabucketb8719d9a-jfo3bsfisgfn"
 
 
 def s3_prefix(bucket, portal, date):
@@ -135,7 +136,7 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--bucket", default=os.environ.get("SAGEBRAIN_BUCKET"),
+    parser.add_argument("--bucket", default=os.environ.get("SAGEBRAIN_BUCKET", SAGEBRAIN_BUCKET),
                          help="SageBrain Neptune S3 bucket name (env: SAGEBRAIN_BUCKET, required)")
     parser.add_argument("--portal", default=os.environ.get("SAGEBRAIN_PORTAL", DEFAULT_PORTAL),
                          help="Portal-scoped S3 prefix segment (env: SAGEBRAIN_PORTAL, default: %(default)s)")
