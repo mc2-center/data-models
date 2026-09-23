@@ -230,11 +230,11 @@ full-kg: combined-kg link-scdm link-ontology-crosswalk
 manifest:
 	$(PYTHON) scripts/build_manifest.py --out data/rdf/manifest.ttl
 
-# Re-run just the queries/*.rq sanity checks (graph-wide referential
-# integrity/aggregate checks awkward or impossible to express as a SHACL
-# shape - e.g. "does every consortiumRef edge point at a real
-# sagecdm:Program") against the already-built cckp_kg_full.ttl, without
-# rebuilding it - already folded into `full-kg` above.
+# Re-run just the queries/*.rq sanity checks (graph-wide aggregate and
+# cross-row checks awkward or impossible to express as a SHACL shape - e.g.
+# "is every core class present at all") against the already-built
+# cckp_kg_full.ttl, without rebuilding it - already folded into `full-kg`
+# above.
 query-checks:
 	$(PYTHON) scripts/validate_graph.py --queries queries data/rdf/cckp_kg_full.ttl
 
