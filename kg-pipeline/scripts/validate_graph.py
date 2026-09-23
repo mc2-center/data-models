@@ -40,12 +40,11 @@ scripts/suggest_mappings.py and README.md) are always excluded from the gate.
                                           vacuous by entailing the very type
                                           being checked for).
   --queries QUERY_DIR DATA_FILE...        Run every queries/*.rq sanity
-                                          query (graph-wide referential
-                                          integrity and aggregate checks
-                                          that are awkward or impossible to
-                                          express as a SHACL shape - e.g.
-                                          "does every consortiumRef edge
-                                          point at a real sagecdm:Program")
+                                          query (graph-wide aggregate and
+                                          cross-row checks that are awkward
+                                          or impossible to express as a
+                                          SHACL shape - e.g. "is every core
+                                          class present at all")
                                           against the given Turtle file(s).
                                           See queries/*.rq for the query
                                           format (a `# name:`/`# expect:`/
@@ -153,7 +152,11 @@ def coverage(unmapped_csv, ttl_paths, baseline_path=None, fail_on_regression=Fal
     return ok
 
 
-def shacl_validate(shapes_path, data_paths):
+def run_shacl(shapes_path, data_paths):
+    """(conforms, results_graph, results_text, data_graph, shapes_graph)
+    from pyshacl, without printing - shacl_validate() is the reporting
+    wrapper. shapes_graph is returned so a caller can resolve a result's
+    sh:sourceShape blank node back to its named shape."""
     import pyshacl
 
     data_graph = rdflib.Graph()
@@ -165,6 +168,11 @@ def shacl_validate(shapes_path, data_paths):
     conforms, results_graph, results_text = pyshacl.validate(
         data_graph, shacl_graph=shapes_graph, inference="none", abort_on_first=False,
     )
+    return conforms, results_graph, results_text, data_graph, shapes_graph
+
+
+def shacl_validate(shapes_path, data_paths):
+    conforms, _, results_text, data_graph, _ = run_shacl(shapes_path, data_paths)
     if conforms:
         print(f"OK    {shapes_path} conforms against {', '.join(data_paths)} "
               f"({len(data_graph)} triple(s) checked)")
