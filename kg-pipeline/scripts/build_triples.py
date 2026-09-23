@@ -359,10 +359,13 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
-                    try:
-                        g.add((subject, predicate, rdflib.Literal(v, datatype=datatype)))
-                    except Exception:  # noqa: BLE001 - malformed source value, keep as plain literal rather than drop the row
-                        g.add((subject, predicate, rdflib.Literal(v)))
+                    # rdflib doesn't raise on a lexical form that doesn't fit
+                    # the datatype (e.g. "PMC123"^^xsd:integer) - it flags
+                    # it ill_typed. Keep a malformed source value as a plain
+                    # literal rather than drop the row or ship an ill-typed
+                    # one; the SHACL sh:datatype shapes flag it.
+                    lit = rdflib.Literal(v, datatype=datatype)
+                    g.add((subject, predicate, rdflib.Literal(v) if lit.ill_typed else lit))
                 else:
                     g.add((subject, predicate, rdflib.Literal(v)))
 

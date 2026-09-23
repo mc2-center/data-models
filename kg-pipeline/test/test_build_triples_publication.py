@@ -55,3 +55,30 @@ def test_doi_shaped_value_in_a_pubmed_field_is_still_recognized():
     # detection is by value shape, not by trusting the field's declared kind.
     assert build_triples.external_iri("pubmed", "https://doi.org/10.7303/syn66527467") == \
         "https://doi.org/10.7303/syn66527467"
+
+
+def test_malformed_integer_value_becomes_plain_literal_not_ill_typed(harmonized_dir, tmp_path):
+    # rdflib doesn't raise on "PMC123"^^xsd:integer, it flags it ill_typed -
+    # build_triples.py must fall back to a plain literal so PublicationShape's
+    # sh:datatype check (not an ill-typed literal in Neptune) surfaces it.
+    import csv
+
+    import build_triples
+    from conftest import MC2_SCHEMA_PATH, SCHEMA_PATH
+
+    src = harmonized_dir["dir"] / "Publication_harmonized.csv"
+    with open(src, newline="") as f:
+        rows = list(csv.DictReader(f))
+    rows[0]["pubMedId"] = "PMC123"
+    with open(tmp_path / "Publication_harmonized.csv", "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    schema_meta = build_triples.get_schema_metadata(SCHEMA_PATH)
+    g = build_triples.build_class_graph(
+        "Publication", schema_meta, str(tmp_path), {}, build_triples.load_prefixes(MC2_SCHEMA_PATH),
+    )
+    values = list(g.objects(None, CCKP["pubMedId"]))
+    assert rdflib.Literal("PMC123") in values
+    assert not any(v.ill_typed for v in values)
