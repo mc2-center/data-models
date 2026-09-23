@@ -331,7 +331,10 @@ their own:
   the same reason sagebrain's own validation does - inference would make
   `sh:class` checks vacuous by entailing the very type being checked for.
   Known-good/known-bad fixtures live at
-  `test/fixtures/shacl_conforming.ttl`/`shacl_violating.ttl`.
+  `test/fixtures/shacl_conforming.ttl`/`shacl_violating*.ttl` (one
+  `shacl_violating_<shape>.ttl` per shape added in
+  `plans/cckp_shacl_shape_gaps.md`, which extended the shapes to all 5
+  portal classes and the SCDM crosswalk refs).
 - **A 3-tier identifier policy**, matching the one documented in
   sagebrain's `examples/README.md`:
   1. **Registry identifier** - a real external ontology/registry CURIE
