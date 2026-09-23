@@ -1,0 +1,22 @@
+# name: merged_tools_have_no_conflicting_scalars
+# expect: empty
+# description: Portal rows that share a toolName (the same tool listed once
+#   per grant) merge into one cckp:Tool node, which is only safe while
+#   those rows agree on every single-valued field. Flags any Tool carrying
+#   more than one distinct value for a scalar, non-enum Tool field from
+#   cckp_portal.linkml.yaml (grantNumber, consortium, theme, and the
+#   comma-split enum fields are legitimately multi-valued and excluded).
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+
+SELECT ?tool ?field (COUNT(DISTINCT ?value) AS ?n) WHERE {
+  VALUES ?field {
+    cckp:description cckp:homepage cckp:version cckp:functionNote cckp:cmd
+    cckp:downloadUrl cckp:downloadLink cckp:downloadNote cckp:downloadVersion
+    cckp:documentationUrl cckp:documentationNote cckp:linkUrl cckp:linkNote
+    cckp:portalDisplay cckp:doi cckp:synapseLink cckp:toolDateLastModified
+    cckp:toolReleaseDate cckp:toolPackageDependencies
+    cckp:toolComputeRequirements cckp:toolEntityName
+  }
+  ?tool a cckp:Tool ;
+        ?field ?value .
+} GROUP BY ?tool ?field HAVING (COUNT(DISTINCT ?value) > 1)
