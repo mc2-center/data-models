@@ -294,8 +294,9 @@ kg-pipeline/
                                 no review needed (see "Additional pipeline
                                 stages" above)
   mappings/crosswalks/consortium_to_scdm_program.tsv - generated, committed,
-                                human-review required before use (ships
-                                reviewed: false)
+                                human-review required before use (new rows
+                                generate reviewed: false; all 11 committed
+                                rows are reviewed: true)
   mappings/confirmed_unmappable.tsv - human-curated (table, field, value, reason)
                                 registry backing build_triples.py's tier-3
                                 provisional placeholder IRIs
