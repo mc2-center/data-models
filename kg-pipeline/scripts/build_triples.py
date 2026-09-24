@@ -39,13 +39,15 @@ mappings already declared in cckp_portal.linkml.yaml. Once that reasoning is
 available, this per-instance materialization can be dropped in favor of a
 real `rdfs:subClassOf` axiom from `cckp:{Class}` to its Biolink type.
 
-Typing with governanceDUO's `gov:SynapseEntity`: a row whose subject got the
-canonical Synapse IRI (see above) also gets a third `rdf:type`,
-`gov:SynapseEntity` (`https://sagebionetworks.org/governance/SynapseEntity`,
-governanceDUO's class for "a concrete Synapse entity", imported into
-sagebrain-model's default build). Both graphs land in the same SageBrain
-Neptune store, so this makes the same real-world Synapse entity join on type
-across graphs, not just on the IRI string happening to match.
+Deliberately NOT dual-typed with governanceDUO's `gov:SynapseEntity`, even
+though a canonical-Synapse-IRI subject and both graphs share the same
+SageBrain Neptune store: governanceDUO owns that type and its
+`shape:SynapseEntityShape` is `sh:closed` with a required `gov:benefactor`
+(Synapse ACL metadata this pipeline doesn't have) - see
+plans/kg_pipeline_sagebrain_alignment.md for the full rationale (sagebrain-
+model's own "D9: one owner per term and shape" principle). The cross-graph
+join works via the shared `syn:synNNN` IRI alone; no shared `rdf:type` is
+needed for it.
 """
 
 import argparse
@@ -71,10 +73,6 @@ DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
 # source value were ever cased differently.
 SYNAPSE_ID_RE = re.compile(r"^syn\d+$", re.IGNORECASE)
 SYNAPSE_NS = "https://www.synapse.org/Synapse:"
-# governanceDUO's class for "a concrete Synapse entity" (project, folder,
-# file, ...), imported into sagebrain-model's default build - see module
-# docstring's "Typing with governanceDUO's gov:SynapseEntity" section.
-GOV = rdflib.Namespace("https://sagebionetworks.org/governance/")
 BIOLINK = rdflib.Namespace("https://w3id.org/biolink/vocab/")
 # Best-effort Biolink type per CCKP class, for the instance-level dual-typing
 # described in the module docstring. Dataset/Publication have a real,
@@ -325,7 +323,6 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
     g.bind("cckp", CCKP)
     g.bind("biolink", BIOLINK)
-    g.bind("gov", GOV)
     class_uri = CCKP[class_slug(cls_name)]
     biolink_type = BIOLINK_TYPE.get(cls_name)
     fields_meta = schema_meta[cls_name]
@@ -347,8 +344,6 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
         g.add((subject, RDF.type, class_uri))
         if biolink_type is not None:
             g.add((subject, RDF.type, biolink_type))
-        if str(subject).startswith(SYNAPSE_NS):
-            g.add((subject, RDF.type, GOV.SynapseEntity))
 
         for field, meta in fields_meta.items():
             # `field` (the harmonized CSV's actual column header, e.g. "File

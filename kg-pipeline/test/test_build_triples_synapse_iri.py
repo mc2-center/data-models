@@ -5,7 +5,7 @@ import rdflib
 import build_triples
 
 CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
-GOV = rdflib.Namespace("https://sagebionetworks.org/governance/")
+GOV = rdflib.Namespace("https://w3id.org/synapse/governance#")
 
 
 def test_mint_iri_uses_canonical_synapse_iri_for_a_real_synapse_id():
@@ -59,24 +59,15 @@ def test_dataset_row_with_real_synapse_id_is_addressed_as_synapse_entity(tmp_pat
                    for s, _, _ in g.triples((None, rdflib.RDF.type, CCKP["Dataset"])))
 
 
-def test_synapse_canonical_subject_is_also_typed_as_gov_synapse_entity(tmp_path):
-    # governanceDUO's gov:SynapseEntity is imported into sagebrain-model's
-    # default build; both graphs land in the same SageBrain Neptune store,
-    # so this makes a Synapse entity join on type across graphs, not just on
-    # the IRI string happening to match.
+def test_synapse_canonical_subject_is_not_typed_as_gov_synapse_entity(tmp_path):
+    # Deliberate, not an oversight: governanceDUO owns gov:SynapseEntity, and
+    # its shape:SynapseEntityShape is sh:closed with a required
+    # gov:benefactor (Synapse ACL metadata this pipeline doesn't have).
+    # Asserting the type here would violate sagebrain-model's own "one owner
+    # per term and shape" principle (D9) the moment the two graphs' shapes
+    # are validated together - see plans/kg_pipeline_sagebrain_alignment.md.
+    # The cross-graph join works via the shared syn:synNNN IRI alone.
     write_dataset_harmonized_csv(tmp_path, "syn61795461")
-    schema_meta = {"Dataset": {
-        "datasetId": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
-        "datasetName": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
-    }}
-    g = build_triples.build_class_graph("Dataset", schema_meta, str(tmp_path), join_indices={}, mc2_prefixes={})
-
-    subject = rdflib.URIRef("https://www.synapse.org/Synapse:syn61795461")
-    assert (subject, rdflib.RDF.type, GOV.SynapseEntity) in g
-
-
-def test_non_synapse_subject_is_not_typed_as_gov_synapse_entity(tmp_path):
-    write_dataset_harmonized_csv(tmp_path, "not-a-synapse-id")
     schema_meta = {"Dataset": {
         "datasetId": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
         "datasetName": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
