@@ -1315,7 +1315,7 @@ acquisitionMethod,Surgical Resection,"Lymphadenectomy (regional nodes), Pancreat
 acquisitionMethod,Tumor Resection,
 stainType,H&E,
 stainType,IHC,
-stainType,In situ hybridization,CRDC_CDE:8120269
+stainType,In situ hybridization,
 stainType,mIHC,
 stainType,Other,
 stainType,Wright-Giemsa,
