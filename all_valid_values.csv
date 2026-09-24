@@ -1844,7 +1844,7 @@ assay,PET-CT,Positron Emission Tomography and Computed Tomography Scan
 assay,Paraquat Survival Assay,Paraquat survival assay
 assay,Partial Wave Spectroscopy,"Partial wave spectroscopy, Partial Wave Spectroscopy"
 assay,Patient Derived Xenograft,"Patient-Derived Xenograft Model, Patient-Derived Xenograft, PDX, PDTX"
-assay,Pending Annotation,"Pending annotation, LA, Limited Access"
+assay,Pending Annotation,Pending annotation
 assay,Permeability Assay,"Permeability Assay;FITC-dextran permeability assay;PAMPA;epithelial permeability assay, Permeability assay"
 assay,Phagocytosis Assay,"phagocytosis, Phagocytosis, Phagocytosis assay"
 assay,Photoacoustic Imaging,PAI
@@ -2095,7 +2095,7 @@ tissue,Oral Mucosa,
 tissue,Ovary,"Genital System, Female, Ovary, Ovaries"
 tissue,Pancreas,Pancreas
 tissue,Pelvic Lymph Nodes,"Pelvic Lymph Node, PELVIC LYMPH NODE, Lymph Node(s) Pelvic"
-tissue,Pending Annotation,"LA, Limited Access"
+tissue,Pending Annotation,
 tissue,Periodontal Ligament,"Periodontium, Periodontal Membrane"
 tissue,Peripheral Nerves,Murine Peripheral Nerves
 tissue,Peritoneum,Human Peritoneal Membrane
@@ -2273,7 +2273,7 @@ tumorType,Pancreatic Carcinoma,"Cancer of the Pancreas, Exocrine Pancreas Carcin
 tumorType,Pancreatic Ductal Adenocarcinoma,"PDAC, PDA, Pancreatic Tubular Adenocarcinoma, Pancreas Ductal Adenocarcinoma, Ductal Adenocarcinoma of the Pancreas, Ductal Adenocarcinoma of Pancreas"
 tumorType,Pancreatic Neoplasm,"Pancreatic Tumor, Pancreas Tumor, Pancreas Neoplasm, Neoplasm of the Pancreas, Neoplasm of Pancreas, Tumor of Pancreas, Tumor of the Pancreas"
 tumorType,Pancreatic Neuroendocrine Carcinoma,"Islet cell carcinoma, Islet Cell Carcinoma, Malignant Pancreatic Endocrine Tumor, Malignant Islet Cell Tumor, Poorly Differentiated Neuroendocrine Neoplasm, PanNEC, Islet Cell Cancer, Pancreatic Endocrine Carcinoma, pancreatic endocrine cancer, High-Grade Pancreatic Neuroendocrine Carcinoma, High Grade Pancreatic Neuroendocrine Carcinoma, Pancreatic Neuroendocrine Cancer, Poorly Differentiated Pancreatic Endocrine Carcinoma, islet cell cancer"
-tumorType,Pending Annotation,"Limited Access, LA"
+tumorType,Pending Annotation,
 tumorType,Penile Carcinoma,"Carcinoma of the Penis, Penile Cancer, Carcinoma of Penis, Cancer of the Penis, penile cancer, Cancer of Penis"
 tumorType,Pheochromocytoma,"PCC, Pheochromocytoma (adrenal), Adrenal Gland Chromaffin Paraganglioma, Adrenal Gland Paraganglioma, Adrenal medullary paraganglioma, Adrenal Pheochromocytoma, Adrenal Gland Chromaffinoma, Intraadrenal Paraganglioma, Chromaffin Paraganglioma of the Adrenal Gland, Adrenal Gland Pheochromocytoma, Adrenal Medullary Paraganglioma, Adrenal Medullary Pheochromocytoma"
 tumorType,Pilocytic Astrocytoma,"Grade 1 Astrocytoma, Grade 1 Astrocytic Tumor, Grade I Astrocytoma, Grade I Astrocytic Neoplasm, Grade I Astrocytic Tumor, Grade 1 Astrocytic Neoplasm"
