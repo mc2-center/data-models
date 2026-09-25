@@ -85,8 +85,9 @@ PRs to main must have exactly one semantic label: `major`, `minor`, `patch`, or 
 | Workflow | Trigger | What it does |
 |----------|---------|--------------|
 | `build-docs.yml` | Push to main | Builds MkDocs site → GitHub Pages |
+| `docs-check.yml` | PR events | Runs `mkdocs build --strict` (no deploy) |
 | `pr-check.yml` | PR events | Validates semantic label |
 | `google-sheet-sync.yml` | Scheduled/manual | Syncs RFC Google Sheets to a CSV branch |
 | `create-release.yml` | Manual trigger | Creates GitHub release with version bump |
 
-No CI currently validates `make all` (root model) or `kg-pipeline/`'s build/tests on PRs (the old `build-jsonld.yml` was removed as obsolete; nothing replaced it) - run them locally before pushing model or kg-pipeline changes.
+No CI currently validates `make all` (root model) or `kg-pipeline/`'s build/tests on PRs (the old `build-jsonld.yml` was removed as obsolete; nothing replaced it) - run them locally before pushing model or kg-pipeline changes. `docs-check.yml` covers the docs site build itself.
