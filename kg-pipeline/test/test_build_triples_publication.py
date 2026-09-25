@@ -57,10 +57,11 @@ def test_doi_shaped_value_in_a_pubmed_field_is_still_recognized():
         "https://doi.org/10.7303/syn66527467"
 
 
-def test_malformed_integer_value_becomes_plain_literal_not_ill_typed(harmonized_dir, tmp_path):
+def test_malformed_integer_value_becomes_plain_literal_not_ill_typed(harmonized_dir, tmp_path, capsys):
     # rdflib doesn't raise on "PMC123"^^xsd:integer, it flags it ill_typed -
     # build_triples.py must fall back to a plain literal so PublicationShape's
-    # sh:datatype check (not an ill-typed literal in Neptune) surfaces it.
+    # sh:datatype check (not an ill-typed literal in Neptune) surfaces it, and
+    # print a summary line so the downgrade isn't silent otherwise.
     import csv
 
     import build_triples
@@ -82,3 +83,6 @@ def test_malformed_integer_value_becomes_plain_literal_not_ill_typed(harmonized_
     values = list(g.objects(None, CCKP["pubMedId"]))
     assert rdflib.Literal("PMC123") in values
     assert not any(v.ill_typed for v in values)
+
+    captured = capsys.readouterr()
+    assert "Publication: kept 1 ill-typed pubMedId value(s) as plain literals (expected xsd:integer)" in captured.out

@@ -55,6 +55,7 @@ import csv
 import hashlib
 import os
 import re
+from collections import defaultdict
 from urllib.parse import quote
 
 import rdflib
@@ -318,6 +319,22 @@ def xsd_datatype(range_name):
     return {"integer": XSD.integer, "boolean": XSD.boolean, "float": XSD.float, "double": XSD.double}.get(range_name)
 
 
+def normalized_boolean_lexical(v):
+    """Canonicalize a boolean-ish lexical form to xsd:boolean's canonical
+    "true"/"false" - the CCKP portal emits capitalized "True"/"False" (and
+    sometimes "1"/"0"), none of which are in xsd:boolean's lexical space
+    (true/false/1/0, case-sensitive), so every one of those values would
+    otherwise silently downgrade to a plain literal. Case-insensitive,
+    tolerant of surrounding whitespace. Returns None for anything else,
+    which falls through to the general ill-typed handling below."""
+    normalized = v.strip().lower()
+    if normalized in ("true", "1"):
+        return "true"
+    if normalized in ("false", "0"):
+        return "false"
+    return None
+
+
 def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_prefixes, confirmed_unmappable=None):
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
@@ -328,6 +345,8 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     fields_meta = schema_meta[cls_name]
 
     skipped_blank = 0
+    ill_typed_counts = defaultdict(int)
+    ill_typed_ranges = {}
     for row in read_harmonized(harmonized_dir, cls_name):
         if cls_name in IDENTIFIER_FIELD and not (row.get(IDENTIFIER_FIELD[cls_name]) or "").strip():
             # A row with no declared identifier isn't a resolvable record -
@@ -369,13 +388,29 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
+                    lexical = v
+                    if datatype == XSD.boolean:
+                        canonical = normalized_boolean_lexical(v)
+                        if canonical is not None:
+                            lexical = canonical
                     # rdflib doesn't raise on a lexical form that doesn't fit
-                    # the datatype (e.g. "PMC123"^^xsd:integer) - it flags
-                    # it ill_typed. Keep a malformed source value as a plain
-                    # literal rather than drop the row or ship an ill-typed
-                    # one; the SHACL sh:datatype shapes flag it.
-                    lit = rdflib.Literal(v, datatype=datatype)
-                    g.add((subject, predicate, rdflib.Literal(v) if lit.ill_typed else lit))
+                    # the datatype (e.g. "PMC123"^^xsd:integer, or a boolean
+                    # value that's neither "true"/"false"/"1"/"0" even after
+                    # normalizing above) - it flags it ill_typed. Keep a
+                    # malformed source value as a plain literal rather than
+                    # drop the row or ship an invalid typed one; each
+                    # downgrade is counted and printed in a summary line per
+                    # field below rather than swallowed silently. Only
+                    # Publication.pubMedId currently has a SHACL sh:datatype
+                    # shape to flag it further downstream - other fields rely
+                    # on this summary line alone.
+                    lit = rdflib.Literal(lexical, datatype=datatype)
+                    if lit.ill_typed:
+                        ill_typed_counts[field] += 1
+                        ill_typed_ranges[field] = meta["range"]
+                        g.add((subject, predicate, rdflib.Literal(v)))
+                    else:
+                        g.add((subject, predicate, lit))
                 else:
                     g.add((subject, predicate, rdflib.Literal(v)))
 
@@ -424,6 +459,10 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
 
     if skipped_blank:
         print(f"{cls_name}: skipped {skipped_blank} fully-blank row(s)")
+    for field in sorted(ill_typed_counts):
+        count = ill_typed_counts[field]
+        range_name = ill_typed_ranges[field]
+        print(f"{cls_name}: kept {count} ill-typed {field} value(s) as plain literals (expected xsd:{range_name})")
     return g
 
 
