@@ -472,7 +472,7 @@ make publish-mc2-assay     # upload raw/harmonized/rdf -> the restricted Synapse
 ## Verified against live data
 
 Last run against the real portal (2026-09-24) pulled **1141 Datasets, 4773
-Publications, 349 Tools, 160 Grants, 10 EducationalResources** and produced
+Publications, 349 Tool rows (331 Tool nodes after toolName merges), 160 Grants, 10 EducationalResources** and produced
 a merged graph of **304,990 triples** in `data/rdf/cckp_kg.ttl`
 (**340,786** in `data/rdf/cckp_kg_full.ttl`, with the DataCatalog, SCDM and
 ontology-crosswalk layers; not committed - see `data/` in `.gitignore`). Example resolved queries:

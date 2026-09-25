@@ -43,9 +43,13 @@ What it deliberately does **not** do:
    actively checked and confirmed no term exists, minted as an addressable
    but explicitly `cckp:provisional true` placeholder) — never guessed.
 2. It doesn't auto-apply a candidate mapping. `make suggest-mappings` and
-   `make crosswalk-ontology`/`make crosswalk-scdm` only ever propose;
-   every crosswalk file ships a `reviewed` column a human must flip before
-   its rows are consumed into an edge.
+   `make crosswalk-ontology`/`make crosswalk-scdm` only ever propose.
+   The judgment-based crosswalks (consortium→SCDM Program, NCIT→MONDO/UBERON)
+   ship a `reviewed` column a human must flip before a row becomes an edge.
+   SCDM Organizations need no gate: they're minted deterministically from
+   the institution's own ROR id. SCDM Person stubs aren't reviewed either,
+   so they're flagged `cckp:provisional true` rather than presented as
+   resolved identities.
 3. It doesn't assert governanceDUO's own `gov:SynapseEntity` type, even
    though this graph and governanceDUO's governance graph land in the same
    SageBrain Neptune store — see section 8.
@@ -87,7 +91,7 @@ flowchart LR
         s3[("SageBrain Neptune S3 bucket<br/>(make upload-sagebrain-s3)")]
     end
 
-    subgraph fed["Federation targets (human-reviewed)"]
+    subgraph fed["Federation targets"]
         scdm["Sage Common Data Model<br/>Organization/Program/Person"]
         crosswalks["MONDO/UBERON crosswalks"]
     end
@@ -133,8 +137,9 @@ flowchart LR
   pipeline's build can trigger the same downstream Neptune auto-loader.
 - **Federation targets**: the Sage Common Data Model (a sibling LinkML
   schema for cross-portal Organization/Program/Person entities) and
-  MONDO/UBERON crosswalks for sagebrain-anchored disease/tissue terms — both
-  human-reviewed before any edge is minted (section 6).
+  MONDO/UBERON crosswalks for sagebrain-anchored disease/tissue terms.
+  Program and MONDO/UBERON edges are human-reviewed before they're minted;
+  Organization and provisional Person links aren't (section 6).
 - **The MC2 assay-metadata KG** is a second, separate pipeline stage over
   access-controlled per-file annotations, publishing only to a private
   Synapse staging folder and linking into sagebrain-model's own classes —
@@ -231,10 +236,10 @@ embedded object.
 The graph's own predicate naming is a separate thing, layered on top only
 where kg-pipeline has actually resolved a join. `cckp_portal.linkml.yaml`
 doesn't reuse the model's "Key" vocabulary directly (the 5 View tables have
-their own join columns — `grantNumber`, `pubMedId`, `datasetAlias`,
-`consortium`, ...); instead it marks which string-valued slots are a join
+their own join columns — `grantNumber`, `pubMedId`, `dataset`/`datasets`,
+...); instead it marks which string-valued slots are a join
 with a `cckp_join: "TargetClass.target_field"` annotation (e.g.
-`Publication.datasetAlias`'s `cckp_join: "Dataset.datasetAlias"`), and
+`Publication.dataset`'s `cckp_join: "Dataset.datasetAlias"`), and
 `build_triples.py` resolves those at Stage 4 into a real object-property
 edge, `cckp:{field}Ref` (`cckp:datasetRef`, `cckp:grantNumberRef`,
 `cckp:pubMedIdRef`, ...) pointing at the target row's own minted IRI —
@@ -416,10 +421,15 @@ license CVs). It never edits a CV file itself.
 separate kind of proposal — supplementary crosswalks from this pipeline's
 NCIT/BTO-anchored CVs to the ontologies sagebrain-model and SCDM anchor the
 same concepts in (MONDO for disease, UBERON for tissue; ROR-backed
-`sagecdm:Organization`, curator-described `sagecdm:Program`). Every
-crosswalk file ships a `reviewed` column, default `"false"`, preserved
-across regeneration — `make link-ontology-crosswalk`/`make link-scdm` only
-mint an edge from a row a human has flipped to `"true"`. As of this
+`sagecdm:Organization`, curator-described `sagecdm:Program`). The
+consortium→Program and MONDO/UBERON crosswalks carry a `reviewed` column,
+default `"false"`, preserved across regeneration, and `make
+link-ontology-crosswalk`/`make link-scdm` only mint an edge from a row a
+human has flipped to `"true"`. `institution_to_scdm_organization.tsv` has
+no such column: a ROR id already is the organization's identity, so
+Organization nodes and `institutionRef` edges mint on every run. The
+`investigatorRef`/`contributorRef` Person stubs likewise aren't
+review-gated, which is why each is flagged `cckp:provisional true`. As of this
 writing, `mappings/crosswalks/consortium_to_scdm_program.tsv`'s 11 rows are
 all `reviewed=true` (the SCDM Program federation is live — `data/rdf/scdm_links.ttl`
 currently carries 11 `sagecdm:Program` nodes), while every row of the
@@ -443,15 +453,22 @@ stage is implemented and tested, but not yet acted on.
   and — since `rdfs:range` on a shared `cckp:{field}Ref` predicate can only
   state the *union* of every class it ever targets — a per-property
   `sh:class` shape naming the one true target of each specific join,
-  including the SCDM crosswalk refs.
+  including the SCDM crosswalk refs. Those structural checks (`sh:class`
+  join targets, external-IRI patterns) are `sh:Violation`s and fail the
+  build. The literal data-quality checks on one row's own field
+  (`Publication.pubMedId` typing, `Tool.toolName`, `EducationalResource`
+  title/alias) are `sh:Warning`s: they're printed, grouped by property, but
+  don't block `make full-kg` or deploy. Separately, `build_triples.py`
+  prints a per-field count of any value it kept as a plain literal because
+  it didn't fit the slot's datatype.
 - `--queries QUERY_DIR DATA...` — runs every `queries/*.rq` sanity query (a
   `# name:`/`# expect:`/`# description:` header over a SPARQL `SELECT`,
   `expect` either `empty` — a find-the-violations query — or `min_count N`
-  — a sanity floor). 9 such checks exist today (core-classes-present,
-  Biolink dual-typing consistency, every SCDM/DataCatalog join landing on
-  the right type, no all-caps person names, ...); all 9 currently pass
-  against `data/rdf/cckp_kg_full.ttl` (verified live for this page, not
-  assumed — section 9). `queries/examples/*.rq` is a separate,
+  — a sanity floor). They cover what SHACL can't easily express:
+  core-classes-present, Biolink dual-typing consistency, DataCatalog merges
+  landing on real Datasets, merged Tool nodes with conflicting scalars, and
+  person-name checks. All 6 currently pass against
+  `data/rdf/cckp_kg_full.ttl` (section 9). `queries/examples/*.rq` is a separate,
   non-pass/fail directory of domain questions the graph can answer, run
   with `make query-examples`/`scripts/run_query.py` instead (section 7).
 
@@ -602,9 +619,9 @@ do so.
 | Part | Status |
 |---|---|
 | Schema (`schema/mc2_model.ttl`/`cckp_portal.ttl`), `make schema` | Operational |
-| Public portal graph (`make triples`/`combined-kg`/`full-kg`) | Operational against live Synapse data — last verified build: 1141 Datasets, 4773 Publications, 349 Tools, 160 Grants, 10 EducationalResources, 966 DataCatalog-annotated rows (`data_sources.yaml`); `cckp_kg.ttl` 304,990 triples, `cckp_kg_full.ttl` 340,786 triples |
-| SHACL structural validation (`schema/cckp_portal.shacl.ttl`) | Operational, run in `make validate`/`make full-kg` |
-| `queries/*.rq` sanity checks | Operational; 9/9 pass against the current `cckp_kg_full.ttl` |
+| Public portal graph (`make triples`/`combined-kg`/`full-kg`) | Operational against live Synapse data — last verified build: 1141 Datasets, 4773 Publications, 349 Tool rows (331 `cckp:Tool` nodes — rows sharing a `toolName` merge), 160 Grants, 10 EducationalResources, 966 DataCatalog-annotated rows (`data_sources.yaml`); `cckp_kg.ttl` 304,990 triples, `cckp_kg_full.ttl` 340,786 triples |
+| SHACL validation (`schema/cckp_portal.shacl.ttl`) | Operational, run in `make validate`/`make full-kg`; structural violations fail the build, literal data-quality warnings are reported only |
+| `queries/*.rq` sanity checks | Operational; 6/6 pass against the current `cckp_kg_full.ttl` |
 | `queries/examples/*.rq` domain queries | Operational; all 6 parse and return real rows against the current build (section 7) |
 | SCDM Organization federation (`make link-scdm`) | Operational; 90 `sagecdm:Organization` nodes minted deterministically from ROR ids |
 | SCDM Program federation | Operational as of this writing — all 11 consortium crosswalk rows are `reviewed=true`, so `scdm_links.ttl` carries 11 `sagecdm:Program` nodes and their `consortiumRef` edges |
