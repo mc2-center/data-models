@@ -1,3 +1,11 @@
 * text=auto eol=lf
 
 *.csv text eol=lf
+
+# LinkML-generated OWL (make schema / make sagecdm-schema). owlgen's output
+# order isn't stable across runs, so review the *.linkml.yaml sources
+# instead; GitHub collapses these diffs. cckp_portal.shacl.ttl is
+# hand-authored and stays reviewable.
+kg-pipeline/schema/mc2_model.ttl linguist-generated
+kg-pipeline/schema/cckp_portal.ttl linguist-generated
+kg-pipeline/schema/sagecdm.ttl linguist-generated
