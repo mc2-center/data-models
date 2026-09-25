@@ -1,4 +1,4 @@
-synapseclient>=4.13.0
+synapseclient[curator]>=4.13.0
 pandas
 PyYAML
 google-api-python-client
