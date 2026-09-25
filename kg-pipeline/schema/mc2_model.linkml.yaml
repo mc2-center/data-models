@@ -5855,7 +5855,9 @@ enums:
           of a primary antibody, a secondary antibody, and a chromogenic enzyme complex.
         meaning: NCIT:C23020
       In situ hybridization:
-        description: Use of a DNA or RNA probe to detect the presence of complementary sequences in chromosomes
+        description: Use of a DNA or RNA probe to detect the presence of complementary sequences in chromosomes,
+          cells, or tissues.
+        meaning: NCIT:C17562
       mIHC:
         description: A method that enables simultaneous detection of multiple biomarkers on a single tissue
           section using immunohistochemistry techniques.
@@ -17321,7 +17323,8 @@ enums:
         meaning: NCIT:C142337
       LC-MS/MS:
         description: An analytical technique wherein liquid chromatography is coupled to tandem mass spectrometry
-          in order to separate
+          in order to separate, identify, and quantify substances in a sample.
+        meaning: NCIT:C122168
       Methylation Analysis:
         description: An analysis of DNA or protein to detect the presence and/or location of methyl groups.
         meaning: NCIT:C190764
@@ -17334,7 +17337,9 @@ enums:
           with special reference to the essential nature, causes, and development of abnormal conditions.
         meaning: NCIT:C18189
       Quantitative Immunofluorescence:
-        description: Immunofluorescence techniques that allow for objective
+        description: Immunofluorescence techniques that allow for objective, continuous-scale measurement
+          of a target molecule.
+        meaning: NCIT:C221816
       Radiology:
         description: The branch of medical science dealing with the medical use of X-rays or other penetrating
           radiation.

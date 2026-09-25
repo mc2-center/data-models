@@ -35,7 +35,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
 | NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 6/6 |
-| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1193/1193 |
+| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1196/1196 |
 | OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
 | OBI | `http://purl.obolibrary.org/obo/OBI_` | 29/29 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
