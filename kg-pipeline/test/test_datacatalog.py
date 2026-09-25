@@ -173,3 +173,30 @@ def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_pat
             rdflib.URIRef("https://spdx.org/licenses/CC-BY-4.0.html")) in g
     assert (subject, CCKP.dataCatalogDataUseModifiers, rdflib.Literal("Pending Annotation")) in g
     assert (subject, CCKP.dataCatalogDataUseModifiersTerm, None) not in g
+
+
+def test_ill_typed_datacatalog_value_kept_plain_and_reported(tmp_path, capsys):
+    # rdflib flags "unknown"^^xsd:float ill_typed rather than raising, so the
+    # stage must detect it itself: keep it as a plain literal and report it,
+    # never ship an ill-typed literal.
+    malformed_rows = []
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, malformed_rows, class_order=["DataCatalog"]
+    )
+    out_path = tmp_path / "DataCatalog_harmonized.csv"
+    harmonize.harmonize_table(
+        "DataCatalog", str(FIXTURES_DIR / "DataCatalog.csv"), str(out_path), field_lookups, [], defaultdict(set),
+    )
+    df = pd.read_csv(out_path, dtype=str, keep_default_na=False)
+    df["individualCount"] = "unknown"
+    df["yearProcessed"] = "2021"
+    df.to_csv(out_path, index=False)
+
+    g, _ = build_datacatalog_triples.build_datacatalog_graph(str(tmp_path), SCHEMA_PATH)
+    subject = build_triples.mint_iri("Dataset", "syn_dc_1")
+    count_values = list(g.objects(subject, CCKP.individualCount))
+    assert count_values == [rdflib.Literal("unknown")]
+    year_values = list(g.objects(subject, CCKP.yearProcessed))
+    assert len(year_values) == 1 and year_values[0].datatype == rdflib.XSD.float
+    assert not year_values[0].ill_typed
+    assert "DataCatalog: kept 1 ill-typed individualCount value(s) as plain literals (expected xsd:float)" in capsys.readouterr().out

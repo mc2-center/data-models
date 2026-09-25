@@ -31,6 +31,7 @@ own {field}Term convention for its Dataset class.
 
 import argparse
 import os
+from collections import defaultdict
 import sys
 
 import rdflib
@@ -39,7 +40,8 @@ from rdflib.namespace import RDF, XSD
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_triples import (  # noqa: E402
     LIST_DELIMITER, expand_curie_or_url, external_iri, field_slug,
-    get_schema_metadata, load_prefixes, mint_iri, read_harmonized, xsd_datatype,
+    get_schema_metadata, load_prefixes, mint_iri, read_harmonized, report_ill_typed,
+    typed_literal, xsd_datatype,
 )
 
 CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
@@ -76,6 +78,8 @@ def build_datacatalog_graph(harmonized_dir, mc2_schema_path):
     g.bind("schema", SCHEMA)
 
     n_triples_by_predicate_kind = {"schema": 0, "cckp": 0, "term": 0, "doi": 0}
+    ill_typed_counts = defaultdict(int)
+    ill_typed_ranges = {}
 
     for row in read_harmonized(harmonized_dir, "DataCatalog"):
         dataset_id = (row.get("DataCatalog_id") or "").strip()
@@ -110,10 +114,13 @@ def build_datacatalog_graph(harmonized_dir, mc2_schema_path):
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
-                    try:
-                        g.add((subject, predicate, rdflib.Literal(v, datatype=datatype)))
-                    except Exception:  # noqa: BLE001 - malformed source value, keep as plain literal
+                    lit = typed_literal(v, datatype)
+                    if lit is None:
+                        ill_typed_counts[field] += 1
+                        ill_typed_ranges[field] = meta["range"]
                         g.add((subject, predicate, rdflib.Literal(v)))
+                    else:
+                        g.add((subject, predicate, lit))
                 else:
                     g.add((subject, predicate, rdflib.Literal(v)))
                 n_triples_by_predicate_kind[kind] += 1
@@ -130,6 +137,7 @@ def build_datacatalog_graph(harmonized_dir, mc2_schema_path):
                         g.add((subject, term_predicate, rdflib.URIRef(expanded)))
                         n_triples_by_predicate_kind["term"] += 1
 
+    report_ill_typed("DataCatalog", ill_typed_counts, ill_typed_ranges)
     return g, n_triples_by_predicate_kind
 
 

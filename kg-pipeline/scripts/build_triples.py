@@ -335,6 +335,26 @@ def normalized_boolean_lexical(v):
     return None
 
 
+def typed_literal(v, datatype):
+    """A literal for raw portal value v in an xsd datatype slot, or None
+    if v doesn't fit the datatype even after boolean normalization. rdflib
+    doesn't raise on a lexical form outside the datatype's lexical space
+    (e.g. "PMC123"^^xsd:integer) - it only flags the literal ill_typed - so
+    callers must check for None, keep v as a plain literal, and report it
+    rather than ship an ill-typed literal or drop the value."""
+    lexical = v
+    if datatype == XSD.boolean:
+        lexical = normalized_boolean_lexical(v) or v
+    lit = rdflib.Literal(lexical, datatype=datatype)
+    return None if lit.ill_typed else lit
+
+
+def report_ill_typed(cls_name, ill_typed_counts, ill_typed_ranges):
+    for field in sorted(ill_typed_counts):
+        print(f"{cls_name}: kept {ill_typed_counts[field]} ill-typed {field} value(s) "
+              f"as plain literals (expected xsd:{ill_typed_ranges[field]})")
+
+
 def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_prefixes, confirmed_unmappable=None):
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
@@ -388,24 +408,11 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
-                    lexical = v
-                    if datatype == XSD.boolean:
-                        canonical = normalized_boolean_lexical(v)
-                        if canonical is not None:
-                            lexical = canonical
-                    # rdflib doesn't raise on a lexical form that doesn't fit
-                    # the datatype (e.g. "PMC123"^^xsd:integer, or a boolean
-                    # value that's neither "true"/"false"/"1"/"0" even after
-                    # normalizing above) - it flags it ill_typed. Keep a
-                    # malformed source value as a plain literal rather than
-                    # drop the row or ship an invalid typed one; each
-                    # downgrade is counted and printed in a summary line per
-                    # field below rather than swallowed silently. Only
-                    # Publication.pubMedId currently has a SHACL sh:datatype
-                    # shape to flag it further downstream - other fields rely
-                    # on this summary line alone.
-                    lit = rdflib.Literal(lexical, datatype=datatype)
-                    if lit.ill_typed:
+                    # Only Publication.pubMedId has a SHACL sh:datatype shape
+                    # downstream; every other field relies on the
+                    # report_ill_typed() summary line below.
+                    lit = typed_literal(v, datatype)
+                    if lit is None:
                         ill_typed_counts[field] += 1
                         ill_typed_ranges[field] = meta["range"]
                         g.add((subject, predicate, rdflib.Literal(v)))
@@ -459,10 +466,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
 
     if skipped_blank:
         print(f"{cls_name}: skipped {skipped_blank} fully-blank row(s)")
-    for field in sorted(ill_typed_counts):
-        count = ill_typed_counts[field]
-        range_name = ill_typed_ranges[field]
-        print(f"{cls_name}: kept {count} ill-typed {field} value(s) as plain literals (expected xsd:{range_name})")
+    report_ill_typed(cls_name, ill_typed_counts, ill_typed_ranges)
     return g
 
 
