@@ -195,6 +195,30 @@ def _load_attribute_owners() -> dict:
     }
 
 
+def _extra_vocab_owners() -> dict:
+    """mapping.yaml top-level keys that own attributes, aren't one of the
+    data-model pages in DATA_MODELS, but are still linked to from a data
+    model's valid-values column (e.g. "shared" - cross-model vocab like
+    Assay/Tissue/Tumor Type, referenced via DependsOn from many models but
+    with no page of its own otherwise). These need a standalone valid-values
+    page too, or the "View" link _create_markdown_link() builds for them
+    points nowhere. A key that owns attributes but that no model page ever
+    references (e.g. "consortium", "institution", "project" - each only
+    self-referenced by its own non-page root manifest attribute) doesn't
+    need one.
+
+    Returns {mapping.yaml key: human-readable nav title}.
+    """
+    owners = _load_attribute_owners()
+    referenced = set()
+    for model in DATA_MODELS:
+        for attribute in _get_model_attributes(model):
+            owner = owners.get(attribute)
+            if owner and owner not in DATA_MODELS:
+                referenced.add(owner)
+    return {key: key[0].upper() + key[1:] for key in referenced}
+
+
 # --- Core logic functions ---
 def generate_linked_table(model: str):
     """Generate CSV with linked attributes to list of valid values.
@@ -255,14 +279,18 @@ def generate_linked_table(model: str):
     table["Examples"] = table["Examples"].fillna("")
 
     # If an attribute has a list of standard terms, link to its anchor on
-    # whichever model's valid-values page actually owns it.
+    # whichever model's valid-values page actually owns it. An attribute can
+    # have Valid Values without a mapping.yaml owner (the list is inline in
+    # annotationProperty.csv rather than backed by a CV file) - there's no
+    # valid-values page for those to link to, so render "None" rather than a
+    # dead link.
     attribute_owners = _load_attribute_owners()
     table["Standard Terms"] = table.apply(
         lambda row: (
             _create_markdown_link(
-                row["Attribute"], attribute_owners.get(row["Attribute"], model), text="View"
+                row["Attribute"], attribute_owners[row["Attribute"]], text="View"
             )
-            if row["Valid Values"]
+            if row["Attribute"] in attribute_owners
             else "None"
         ),
         axis=1,
@@ -344,6 +372,13 @@ def on_pre_build(config):
         generate_linked_table(model)
         generate_valid_values_markdown(model)
 
+    # Cross-model vocab keys (e.g. "shared") aren't data models themselves -
+    # no linked table/reference.csv, since there's no template to render one
+    # for - but still need their own valid-values page, since data-model
+    # pages link "View" for these attributes to it (see _extra_vocab_owners).
+    for key in _extra_vocab_owners():
+        generate_valid_values_markdown(key)
+
 
 def on_files(_, config):
     """Update docs site navigation after all files are gathered and generated.
@@ -366,6 +401,14 @@ def on_files(_, config):
     # if the docs page exists and has contents.
     for model, page_title in DATA_MODELS.items():
         docs_page = join("valid_values", f"{model}.md")
+        if isfile(join("docs", docs_page)) and getsize(join("docs", docs_page)) > 0:
+            config["nav"]["Standard Terms"]["Terms by model"].append(
+                {page_title: docs_page}
+            )
+
+    # Cross-model vocab pages (e.g. "Shared") go after the per-model entries.
+    for key, page_title in _extra_vocab_owners().items():
+        docs_page = join("valid_values", f"{key}.md")
         if isfile(join("docs", docs_page)) and getsize(join("docs", docs_page)) > 0:
             config["nav"]["Standard Terms"]["Terms by model"].append(
                 {page_title: docs_page}
