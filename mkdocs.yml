@@ -7,6 +7,12 @@ site_description: >-
 repo_url: https://github.com/mc2-center/data-models
 repo_name: data-models
 
+# Report links to missing in-page anchors as warnings, so `mkdocs build
+# --strict` (docs-check.yml) fails on a dead "View" link to a standard-terms
+# anchor rather than only logging it at INFO level.
+validation:
+  anchors: warn
+
 # Navigation - see nav.yml to edit the actual navigation
 nav:
   - index.md
