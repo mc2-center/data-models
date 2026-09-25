@@ -46,6 +46,14 @@
 # the schema actually declares (Tool.toolName is `required: true`,
 # Publication.pubMedId is `range: integer`), so a row that only reached the
 # synthetic fallback because it breaks those declarations is flagged here.
+#
+# ToolShape.toolName, EducationalResourceShape.title/alias, and
+# PublicationShape.pubMedId are `sh:severity sh:Warning`: they're literal
+# data-quality checks on one dirty row's own field, not structural graph
+# damage, so one bad row is reported but doesn't block `make full-kg`/
+# deploy. DatasetShape/GrantShape keep the default sh:Violation: their
+# datasetId/grantId is the always-populated identifier slot, so a missing
+# or mistyped one means extraction itself broke.
 
 shape:DatasetShape
     a sh:NodeShape ;
@@ -80,6 +88,7 @@ shape:PublicationShape
         sh:name "pubMedId" ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer ;
+        sh:severity sh:Warning ;
         sh:message "A Publication instance may have at most one pubMedId, typed xsd:integer. A missing pubMedId is allowed (e.g. preprints; mint_id() then falls back to a synthetic ID). A non-integer value (a PMCID, a DOI) is kept by build_triples.py as a plain literal and fails this check." ;
     ] .
 
@@ -92,6 +101,7 @@ shape:ToolShape
         sh:name "toolName" ;
         sh:minCount 1 ; sh:maxCount 1 ;
         sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
         sh:message "Every Tool instance must have exactly one toolName (required in the schema, and the key mint_id() uses to mint this instance's own IRI). A Tool without one was minted from a synthetic fallback ID." ;
     ] .
 
@@ -104,6 +114,7 @@ shape:EducationalResourceShape
         sh:name "title" ;
         sh:minCount 1 ; sh:maxCount 1 ;
         sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
         sh:message "Every EducationalResource instance must have exactly one title." ;
     ] ;
     sh:property [
@@ -111,6 +122,7 @@ shape:EducationalResourceShape
         sh:name "alias" ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
         sh:message "An EducationalResource instance may have at most one alias (its Synapse ID). mint_id() keys on internalIdentifier first and alias when that is blank, so a second alias means two rows with different aliases were merged on a shared internalIdentifier." ;
     ] .
 

@@ -38,7 +38,14 @@ scripts/suggest_mappings.py and README.md) are always excluded from the gate.
                                           configuration - inference would
                                           make sh:class join-target checks
                                           vacuous by entailing the very type
-                                          being checked for).
+                                          being checked for). Some property
+                                          shapes are sh:severity sh:Warning
+                                          (literal data-quality checks on
+                                          Publication/Tool/EducationalResource
+                                          fields - see cckp_portal.shacl.ttl
+                                          §1); those are printed but don't
+                                          fail this check - only an
+                                          sh:Violation does.
   --queries QUERY_DIR DATA_FILE...        Run every queries/*.rq sanity
                                           query (graph-wide aggregate and
                                           cross-row checks that are awkward
@@ -62,6 +69,7 @@ import sys
 from collections import Counter
 
 import rdflib
+from rdflib.namespace import RDF, SH
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from suggest_mappings import EXCLUDED_FIELDS  # noqa: E402
@@ -156,7 +164,13 @@ def run_shacl(shapes_path, data_paths):
     """(conforms, results_graph, results_text, data_graph, shapes_graph)
     from pyshacl, without printing - shacl_validate() is the reporting
     wrapper. shapes_graph is returned so a caller can resolve a result's
-    sh:sourceShape blank node back to its named shape."""
+    sh:sourceShape blank node back to its named shape.
+
+    allow_warnings=True so pyshacl's own `conforms` already reflects "no
+    sh:Violation present" rather than "no result at all" - but
+    shacl_validate() below still partitions results_graph by
+    sh:resultSeverity itself rather than trusting `conforms` alone, since a
+    caller (or a future pyshacl version) could change that default."""
     import pyshacl
 
     data_graph = rdflib.Graph()
@@ -166,19 +180,54 @@ def run_shacl(shapes_path, data_paths):
     shapes_graph.parse(shapes_path, format="turtle")
 
     conforms, results_graph, results_text = pyshacl.validate(
-        data_graph, shacl_graph=shapes_graph, inference="none", abort_on_first=False,
+        data_graph, shacl_graph=shapes_graph, inference="none", abort_on_first=False, allow_warnings=True,
     )
     return conforms, results_graph, results_text, data_graph, shapes_graph
 
 
+def partition_shacl_results(results_graph):
+    """Split a pyshacl results_graph's sh:ValidationResult nodes into
+    (violations, warnings) lists of {focus_node, path, message} dicts,
+    keyed on each individual result's own sh:resultSeverity - not on
+    pyshacl's single graph-wide `conforms` flag, which only distinguishes
+    "no result at all" from "some result" unless allow_warnings is set
+    just so. Anything not literally sh:Violation (sh:Warning, sh:Info) is
+    treated as non-blocking and reported as a warning."""
+    violations, warnings = [], []
+    for result in results_graph.subjects(RDF.type, SH.ValidationResult):
+        entry = {
+            "focus_node": results_graph.value(result, SH.focusNode),
+            "path": results_graph.value(result, SH.resultPath),
+            "message": results_graph.value(result, SH.resultMessage),
+        }
+        severity = results_graph.value(result, SH.resultSeverity)
+        (violations if severity == SH.Violation else warnings).append(entry)
+    return violations, warnings
+
+
+def print_shacl_warnings(warnings):
+    if not warnings:
+        return
+    print(f"\n{len(warnings)} SHACL warning(s) (data-quality issues that don't block the build):")
+    by_path = Counter(str(w["path"]) for w in warnings)
+    for path, n in sorted(by_path.items()):
+        print(f"  {path}: {n} warning(s)")
+        sample = next(w for w in warnings if str(w["path"]) == path)
+        print(f"      e.g. {sample['focus_node']}: {sample['message']}")
+
+
 def shacl_validate(shapes_path, data_paths):
-    conforms, _, results_text, data_graph, _ = run_shacl(shapes_path, data_paths)
-    if conforms:
+    _, results_graph, results_text, data_graph, _ = run_shacl(shapes_path, data_paths)
+    violations, warnings = partition_shacl_results(results_graph)
+    ok = len(violations) == 0
+    if ok:
         print(f"OK    {shapes_path} conforms against {', '.join(data_paths)} "
-              f"({len(data_graph)} triple(s) checked)")
+              f"({len(data_graph)} triple(s) checked, {len(warnings)} warning(s))")
     else:
-        print(f"FAIL  {shapes_path} violated by {', '.join(data_paths)}:\n{results_text}")
-    return conforms
+        print(f"FAIL  {shapes_path} violated by {', '.join(data_paths)} "
+              f"({len(violations)} violation(s), {len(warnings)} warning(s)):\n{results_text}")
+    print_shacl_warnings(warnings)
+    return ok
 
 
 QUERY_HEADER_RE = re.compile(r"^#\s*(name|expect|description):\s*(.*)$")

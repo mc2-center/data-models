@@ -346,10 +346,10 @@ kg-pipeline/
                                 docstring for the `# name:`/`# expect:`/`# description:` header
                                 format) - graph-wide aggregate and cross-row checks (e.g. "is
                                 every core class present in the graph at all") that SHACL shapes
-                                can't easily express. The *_ref_targets_are_*.rq files duplicate
-                                the SCDM ref shapes in cckp_portal.shacl.ttl as a SPARQL-side
-                                cross-check;
-                                run against cckp_kg_full.ttl by `make full-kg`/`make query-checks`
+                                can't easily express; run against cckp_kg_full.ttl by
+                                `make full-kg`/`make query-checks`. (SCDM ref-target typing is
+                                checked by the `sh:class` *RefShape shapes in cckp_portal.shacl.ttl,
+                                not here.)
   queries/examples/*.rq        - domain/research-question queries demonstrating what the graph
                                 can answer (tumor-type search, publication-dataset traceability,
                                 tool discovery, SCDM-federated program rollups, a DataCatalog vs.
