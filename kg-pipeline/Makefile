@@ -94,9 +94,11 @@ crosswalk-ontology:
 # --- Supplementary: institution/consortium crosswalks for federation with
 # SCDM (Sage Common Data Model) --- (see plans/scdm_alignment.md). The
 # institution crosswalk is deterministic (a ROR id already is the
-# organization's identity); the consortium crosswalk ships reviewed=false
-# and needs human curation before scripts/link_scdm.py will mint from it -
-# see scripts/crosswalk_scdm.py's docstring for why.
+# organization's identity); the consortium crosswalk is generated with
+# reviewed=false and needs human curation before scripts/link_scdm.py will
+# mint from it - see scripts/crosswalk_scdm.py's docstring for why. All 11
+# committed consortium rows are curated (reviewed=true); re-running this
+# target only adds rows for new consortium CV values.
 
 crosswalk-scdm:
 	$(PYTHON) scripts/crosswalk_scdm.py \
@@ -119,10 +121,10 @@ triples:
 
 # Links the public CCKP-portal graph to SCDM Organization/Program/
 # provisional-Person entities - see scripts/link_scdm.py's docstring. Own
-# target, not folded into `make all`/`triples`: consortium_to_scdm_program.tsv
-# ships reviewed=false until a human curates it, so this currently mints 0
-# Program nodes/edges by design (Organization nodes/edges mint every run -
-# no review gate needed there). Output stays a separate file
+# target, not folded into `make all`/`triples`: a consortium_to_scdm_program.tsv
+# row mints its Program node/edges only once a human flips it to
+# reviewed=true (all 11 committed rows are, so 11 Programs mint today);
+# Organization nodes/edges mint every run - no review gate needed there. Output stays a separate file
 # (data/rdf/scdm_links.ttl), not merged into cckp_kg.ttl, matching how
 # data/mc2_assay/rdf/sagebrain_links.ttl stays separate from
 # mc2_assay_kg.ttl rather than being folded in.
@@ -139,7 +141,7 @@ link-scdm:
 # docstring and plans/mondo_uberon_federation_promotion.md. Own target, not
 # folded into `make all`/`triples`: both crosswalks ship reviewed=false
 # until a human curates them, so this currently mints 0 edges by design,
-# same reasoning as `link-scdm`'s consortium crosswalk above. Output stays
+# same review gate as `link-scdm`'s consortium crosswalk above. Output stays
 # a separate file (data/rdf/ontology_crosswalk_links.ttl), matching how
 # data/rdf/scdm_links.ttl stays separate from cckp_kg.ttl rather than being
 # folded in.
@@ -230,11 +232,11 @@ full-kg: combined-kg link-scdm link-ontology-crosswalk
 manifest:
 	$(PYTHON) scripts/build_manifest.py --out data/rdf/manifest.ttl
 
-# Re-run just the queries/*.rq sanity checks (graph-wide referential
-# integrity/aggregate checks awkward or impossible to express as a SHACL
-# shape - e.g. "does every consortiumRef edge point at a real
-# sagecdm:Program") against the already-built cckp_kg_full.ttl, without
-# rebuilding it - already folded into `full-kg` above.
+# Re-run just the queries/*.rq sanity checks (graph-wide aggregate and
+# cross-row checks awkward or impossible to express as a SHACL shape - e.g.
+# "is every core class present at all") against the already-built
+# cckp_kg_full.ttl, without rebuilding it - already folded into `full-kg`
+# above.
 query-checks:
 	$(PYTHON) scripts/validate_graph.py --queries queries data/rdf/cckp_kg_full.ttl
 

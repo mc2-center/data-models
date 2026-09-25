@@ -264,8 +264,14 @@ kg-pipeline/
                                 triple store to reason over the schema-level
                                 mapping - see that script's docstring.
     cckp_portal.ttl           - generated via `make schema`
-    cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes (see
-                                "Additional pipeline stages" above)
+    cckp_portal.shacl.ttl    - hand-authored instance-level SHACL shapes:
+                                identifying-field shapes for all 5 portal
+                                classes, external-IRI pattern shapes, and
+                                per-property sh:class target typing for
+                                every cckp:*Ref join (including the SCDM
+                                crosswalk refs, checked by `make full-kg`).
+                                Uploaded with the graph, so consumers can
+                                read it as the graph's own schema
     vendor/sagecdm/*.yaml    - vendored, pinned SageCommonDataModel LinkML
                                 source + VENDORED.md (see "Additional
                                 pipeline stages" above)
@@ -288,8 +294,9 @@ kg-pipeline/
                                 no review needed (see "Additional pipeline
                                 stages" above)
   mappings/crosswalks/consortium_to_scdm_program.tsv - generated, committed,
-                                human-review required before use (ships
-                                reviewed: false)
+                                human-review required before use (new rows
+                                generate reviewed: false; all 11 committed
+                                rows are reviewed: true)
   mappings/confirmed_unmappable.tsv - human-curated (table, field, value, reason)
                                 registry backing build_triples.py's tier-3
                                 provisional placeholder IRIs
@@ -337,10 +344,12 @@ kg-pipeline/
     run_query.py                  - prints results for one query file or a directory of them (make query-examples)
   queries/*.rq                 - sanity queries for validate_graph.py's --queries mode (see its
                                 docstring for the `# name:`/`# expect:`/`# description:` header
-                                format) - graph-wide referential integrity and aggregate checks
-                                (e.g. "does every consortiumRef edge point at a real
-                                sagecdm:Program") that SHACL shapes can't easily express;
-                                run against cckp_kg_full.ttl by `make full-kg`/`make query-checks`
+                                format) - graph-wide aggregate and cross-row checks (e.g. "is
+                                every core class present in the graph at all") that SHACL shapes
+                                can't easily express; run against cckp_kg_full.ttl by
+                                `make full-kg`/`make query-checks`. (SCDM ref-target typing is
+                                checked by the `sh:class` *RefShape shapes in cckp_portal.shacl.ttl,
+                                not here.)
   queries/examples/*.rq        - domain/research-question queries demonstrating what the graph
                                 can answer (tumor-type search, publication-dataset traceability,
                                 tool discovery, SCDM-federated program rollups, a DataCatalog vs.

@@ -263,8 +263,10 @@ classes:
         description: >-
           Name of the tool. Used as the practical identifying key for v1 -
           see Publication.pubMedId note re: no confirmed unique row-ID
-          column; build_triples.py falls back to a synthesized ID on
-          collision.
+          column. Rows that share a toolName (the same tool listed once per
+          grant) become one Tool node carrying each row's grantNumber,
+          consortium, and theme values; build_triples.py falls back to a
+          synthesized ID only when toolName is blank.
       description:
         description: Free-text description of the tool.
       homepage:
@@ -485,14 +487,9 @@ classes:
         # The real, already-built mechanism for this exact gap is
         # mappings/crosswalks/consortium_to_scdm_program.tsv (bare acronym ->
         # program.X) + scripts/link_scdm.py, which mints sagecdm:Program nodes and
-        # cckp:consortiumRef edges - but ONLY for rows with reviewed=true, and
-        # every row in that crosswalk is currently reviewed=false (auto-generated
-        # by crosswalk_scdm.py, awaiting human curation of scdm_status/
-        # scdm_funding_source/etc). So this isn't a missing mechanism, it's an
-        # existing one gated on a review step that hasn't happened yet - that
-        # review, not a schema change here, is what would actually resolve
-        # consortium linkage. See plans/crdc_cde_integration.md's kg-pipeline
-        # round for the full writeup.
+        # cckp:consortiumRef edges for every crosswalk row marked reviewed=true.
+        # Consortium linkage lives there, not in an mc2_enum here. See
+        # plans/crdc_cde_integration.md's kg-pipeline round for the full writeup.
         description: Consortium/consortia the grant belongs to. Best filter column.
       grantStartDate:
         description: Grant start date (free-text date string, not a fixed format).

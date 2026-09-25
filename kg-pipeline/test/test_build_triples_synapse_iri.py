@@ -5,6 +5,7 @@ import rdflib
 import build_triples
 
 CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
+GOV = rdflib.Namespace("https://w3id.org/synapse/governance#")
 
 
 def test_mint_iri_uses_canonical_synapse_iri_for_a_real_synapse_id():
@@ -56,3 +57,21 @@ def test_dataset_row_with_real_synapse_id_is_addressed_as_synapse_entity(tmp_pat
     # already has one in Synapse.
     assert not any(str(s).startswith("https://w3id.org/mc2-center/cckp-portal/data/Dataset/")
                    for s, _, _ in g.triples((None, rdflib.RDF.type, CCKP["Dataset"])))
+
+
+def test_synapse_canonical_subject_is_not_typed_as_gov_synapse_entity(tmp_path):
+    # Deliberate, not an oversight: governanceDUO owns gov:SynapseEntity, and
+    # its shape:SynapseEntityShape is sh:closed with a required
+    # gov:benefactor (Synapse ACL metadata this pipeline doesn't have).
+    # Asserting the type here would violate sagebrain-model's own "one owner
+    # per term and shape" principle (D9) the moment the two graphs' shapes
+    # are validated together - see plans/kg_pipeline_sagebrain_alignment.md.
+    # The cross-graph join works via the shared syn:synNNN IRI alone.
+    write_dataset_harmonized_csv(tmp_path, "syn61795461")
+    schema_meta = {"Dataset": {
+        "datasetId": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
+        "datasetName": {"multivalued": False, "range": "string", "mc2_enum": None, "cckp_join": None},
+    }}
+    g = build_triples.build_class_graph("Dataset", schema_meta, str(tmp_path), join_indices={}, mc2_prefixes={})
+
+    assert not any(g.triples((None, rdflib.RDF.type, GOV.SynapseEntity)))

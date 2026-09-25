@@ -331,7 +331,10 @@ their own:
   the same reason sagebrain's own validation does - inference would make
   `sh:class` checks vacuous by entailing the very type being checked for.
   Known-good/known-bad fixtures live at
-  `test/fixtures/shacl_conforming.ttl`/`shacl_violating.ttl`.
+  `test/fixtures/shacl_conforming.ttl`/`shacl_violating*.ttl` (one
+  `shacl_violating_<shape>.ttl` per shape added in
+  `plans/cckp_shacl_shape_gaps.md`, which extended the shapes to all 5
+  portal classes and the SCDM crosswalk refs).
 - **A 3-tier identifier policy**, matching the one documented in
   sagebrain's `examples/README.md`:
   1. **Registry identifier** - a real external ontology/registry CURIE
@@ -468,10 +471,11 @@ make publish-mc2-assay     # upload raw/harmonized/rdf -> the restricted Synapse
 
 ## Verified against live data
 
-Last run against the real portal pulled **1141 Datasets, 4773
-Publications, 331 Tools, 160 Grants, 10 EducationalResources** and produced
-a merged graph of **431,744 triples** in `data/rdf/cckp_kg.ttl` (not
-committed - see `data/` in `.gitignore`). Example resolved queries:
+Last run against the real portal (2026-09-24) pulled **1141 Datasets, 4773
+Publications, 349 Tool rows (331 Tool nodes after toolName merges), 160 Grants, 10 EducationalResources** and produced
+a merged graph of **304,990 triples** in `data/rdf/cckp_kg.ttl`
+(**340,786** in `data/rdf/cckp_kg_full.ttl`, with the DataCatalog, SCDM and
+ontology-crosswalk layers; not committed - see `data/` in `.gitignore`). Example resolved queries:
 
 - `Dataset -[tumorTypeTerm]-> NCIT:C3510` (Cutaneous Melanoma) for a real
   dataset row.

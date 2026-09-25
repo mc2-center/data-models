@@ -38,6 +38,16 @@ OWL/RDFS reasoning over the schema-level `skos:exactMatch`/`skos:closeMatch`
 mappings already declared in cckp_portal.linkml.yaml. Once that reasoning is
 available, this per-instance materialization can be dropped in favor of a
 real `rdfs:subClassOf` axiom from `cckp:{Class}` to its Biolink type.
+
+Deliberately NOT dual-typed with governanceDUO's `gov:SynapseEntity`, even
+though a canonical-Synapse-IRI subject and both graphs share the same
+SageBrain Neptune store: governanceDUO owns that type and its
+`shape:SynapseEntityShape` is `sh:closed` with a required `gov:benefactor`
+(Synapse ACL metadata this pipeline doesn't have) - see
+plans/kg_pipeline_sagebrain_alignment.md for the full rationale (sagebrain-
+model's own "D9: one owner per term and shape" principle). The cross-graph
+join works via the shared `syn:synNNN` IRI alone; no shared `rdf:type` is
+needed for it.
 """
 
 import argparse
@@ -45,6 +55,7 @@ import csv
 import hashlib
 import os
 import re
+from collections import defaultdict
 from urllib.parse import quote
 
 import rdflib
@@ -308,6 +319,42 @@ def xsd_datatype(range_name):
     return {"integer": XSD.integer, "boolean": XSD.boolean, "float": XSD.float, "double": XSD.double}.get(range_name)
 
 
+def normalized_boolean_lexical(v):
+    """Canonicalize a boolean-ish lexical form to xsd:boolean's canonical
+    "true"/"false" - the CCKP portal emits capitalized "True"/"False" (and
+    sometimes "1"/"0"), none of which are in xsd:boolean's lexical space
+    (true/false/1/0, case-sensitive), so every one of those values would
+    otherwise silently downgrade to a plain literal. Case-insensitive,
+    tolerant of surrounding whitespace. Returns None for anything else,
+    which falls through to the general ill-typed handling below."""
+    normalized = v.strip().lower()
+    if normalized in ("true", "1"):
+        return "true"
+    if normalized in ("false", "0"):
+        return "false"
+    return None
+
+
+def typed_literal(v, datatype):
+    """A literal for raw portal value v in an xsd datatype slot, or None
+    if v doesn't fit the datatype even after boolean normalization. rdflib
+    doesn't raise on a lexical form outside the datatype's lexical space
+    (e.g. "PMC123"^^xsd:integer) - it only flags the literal ill_typed - so
+    callers must check for None, keep v as a plain literal, and report it
+    rather than ship an ill-typed literal or drop the value."""
+    lexical = v
+    if datatype == XSD.boolean:
+        lexical = normalized_boolean_lexical(v) or v
+    lit = rdflib.Literal(lexical, datatype=datatype)
+    return None if lit.ill_typed else lit
+
+
+def report_ill_typed(cls_name, ill_typed_counts, ill_typed_ranges):
+    for field in sorted(ill_typed_counts):
+        print(f"{cls_name}: kept {ill_typed_counts[field]} ill-typed {field} value(s) "
+              f"as plain literals (expected xsd:{ill_typed_ranges[field]})")
+
+
 def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_prefixes, confirmed_unmappable=None):
     g = rdflib.Graph()
     CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
@@ -318,6 +365,8 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
     fields_meta = schema_meta[cls_name]
 
     skipped_blank = 0
+    ill_typed_counts = defaultdict(int)
+    ill_typed_ranges = {}
     for row in read_harmonized(harmonized_dir, cls_name):
         if cls_name in IDENTIFIER_FIELD and not (row.get(IDENTIFIER_FIELD[cls_name]) or "").strip():
             # A row with no declared identifier isn't a resolvable record -
@@ -359,10 +408,16 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             datatype = xsd_datatype(meta["range"])
             for v in values:
                 if datatype:
-                    try:
-                        g.add((subject, predicate, rdflib.Literal(v, datatype=datatype)))
-                    except Exception:  # noqa: BLE001 - malformed source value, keep as plain literal rather than drop the row
+                    # Only Publication.pubMedId has a SHACL sh:datatype shape
+                    # downstream; every other field relies on the
+                    # report_ill_typed() summary line below.
+                    lit = typed_literal(v, datatype)
+                    if lit is None:
+                        ill_typed_counts[field] += 1
+                        ill_typed_ranges[field] = meta["range"]
                         g.add((subject, predicate, rdflib.Literal(v)))
+                    else:
+                        g.add((subject, predicate, lit))
                 else:
                     g.add((subject, predicate, rdflib.Literal(v)))
 
@@ -411,6 +466,7 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
 
     if skipped_blank:
         print(f"{cls_name}: skipped {skipped_blank} fully-blank row(s)")
+    report_ill_typed(cls_name, ill_typed_counts, ill_typed_ranges)
     return g
 
 
