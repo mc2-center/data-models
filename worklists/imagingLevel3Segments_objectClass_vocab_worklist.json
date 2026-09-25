@@ -1,0 +1,101 @@
+[
+  {
+    "row_index": 0,
+    "term": "Nucleus",
+    "existing_description": "A body within the cell, surrounded by a membrane, within which lie the chromosomes, one or more nucleoli, combined with proteins, and exhibits mitosis.",
+    "existing_ontology_identifier": "NCIT:C13197",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13197",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 1,
+    "term": "Cytoplasm",
+    "existing_description": "The protoplasm of a cell outside the nucleus, bounded by the plasma membrane and containing all of the cell's organelles except the nucleus.",
+    "existing_ontology_identifier": "NCIT:C13226",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13226",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 2,
+    "term": "Plasma Membrane",
+    "existing_description": "The semipermeable membrane that encloses the cytoplasm of a cell.",
+    "existing_ontology_identifier": "NCIT:C13735",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C13735",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 3,
+    "term": "Whole Cell",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "Spot",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "Other",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Imaginglevel3Segments metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

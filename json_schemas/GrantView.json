@@ -3,6 +3,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "The denormalized manifest for grant submission.",
   "properties": {
+    "ConsortiumKey": {
+      "description": "Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",
+      "title": "Consortium Key",
+      "type": "string"
+    },
     "DurationofFunding": {
       "description": "Duration of the funding period, in years",
       "title": "Duration of Funding",
@@ -18,23 +23,6 @@
       "description": "Abstract for the grant",
       "title": "Grant Abstract",
       "type": "string"
-    },
-    "GrantConsortiumName": {
-      "description": "Consortium(s) associated with the grant. 1...1",
-      "enum": [
-        "CCBIR",
-        "CSBC",
-        "HTAN",
-        "ICBP",
-        "MetNet",
-        "NCI",
-        "NCIClinicalandTranslationalExploratory/DevelopmentalStudies",
-        "PDMC",
-        "PS-ON",
-        "SageBionetworks",
-        "TEC"
-      ],
-      "title": "Grant Consortium Name"
     },
     "GrantEndDate": {
       "description": "The end date of the grant YYYY-MM-DD format",
@@ -244,14 +232,6 @@
       "title": "Grant Institution Name",
       "type": "array"
     },
-    "GrantInvestigator": {
-      "description": "Investigator(s) associated witht the grant. 1...*",
-      "items": {
-        "type": "string"
-      },
-      "title": "Grant Investigator",
-      "type": "array"
-    },
     "GrantName": {
       "description": "Name of the grant",
       "title": "Grant Name",
@@ -326,26 +306,43 @@
       "title": "GrantView_id",
       "type": "string"
     },
+    "InstitutionKey": {
+      "description": "Unique Institution_id foreign key(s) that group the resource with other components, as part of the same institution-associated grants. Please provide multiple values as a comma-separated list.",
+      "title": "Institution Key",
+      "type": "string"
+    },
+    "Investigator": {
+      "description": "Investigator(s) associated with this record. Provide either the investigator's free-text name or a PersonView_id reference (see PersonView Key) -- both forms are acceptable. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Investigator",
+      "type": "array"
+    },
     "NIHRePORTERLink": {
       "description": "Link to the search results for this grant number on the NIH Reporter website",
       "format": "uri",
       "title": "NIH RePORTER Link",
       "type": "string"
+    },
+    "PersonViewKey": {
+      "description": "Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",
+      "title": "PersonView Key",
+      "type": "string"
     }
   },
   "required": [
     "GrantAbstract",
-    "GrantConsortiumName",
     "GrantEndDate",
     "GrantInstitutionAlias",
     "GrantInstitutionName",
-    "GrantInvestigator",
     "GrantName",
     "GrantNumber",
     "GrantStartDate",
     "GrantThemeName",
     "GrantType",
     "GrantViewId",
+    "Investigator",
     "NIHRePORTERLink"
   ],
   "title": "GrantView",

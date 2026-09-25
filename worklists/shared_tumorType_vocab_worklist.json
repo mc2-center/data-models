@@ -1,0 +1,3115 @@
+[
+  {
+    "row_index": 0,
+    "term": "Cutaneous Melanoma",
+    "existing_description": "A primary melanoma arising from atypical melanocytes in the skin.  Precursor lesions include acquired and congenital melanocytic nevi, and dysplastic nevi.  Several histologic variants have been recognized, including superficial spreading melanoma, acral lentiginous melanoma, nodular melanoma, and lentigo maligna melanoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Acinar Cell Carcinoma",
+    "existing_description": "A malignant glandular epithelial neoplasm consisting of secretory cells forming acinar patterns. Representative examples include the acinar cell carcinoma of the pancreas and the acinar adenocarcinoma of the prostate gland.",
+    "existing_ontology_identifier": "8550/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "Acute Lymphoblastic Leukemia",
+    "existing_description": "Leukemia with an acute onset, characterized by the presence of lymphoblasts in the bone marrow and the peripheral blood. It includes the acute B lymphoblastic leukemia and acute T lymphoblastic leukemia.",
+    "existing_ontology_identifier": "9835/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 3,
+    "term": "Acute Monocytic Leukemia",
+    "existing_description": "An acute myeloid leukemia in which the majority of monocytic cells are promonocytes.  (WHO, 2001)",
+    "existing_ontology_identifier": "9891/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "Acute Myeloid Leukemia",
+    "existing_description": "An aggressive (fast-growing) disease in which too many myeloblasts (immature white blood cells that are not lymphoblasts) are found in the bone marrow and blood.",
+    "existing_ontology_identifier": "9861/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "Acute Promyelocytic Leukemia",
+    "existing_description": "",
+    "existing_ontology_identifier": "9866/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "Adenocarcinoma",
+    "existing_description": "Cancer that begins in cells that line certain internal organs and that have gland-like (secretory) properties.",
+    "existing_ontology_identifier": "8140/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "Angiosarcoma",
+    "existing_description": "A type of cancer that begins in the cells that line blood vessels.",
+    "existing_ontology_identifier": "9120/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Astrocytoma",
+    "existing_description": "A tumor that begins in the brain or spinal cord in small, star-shaped cells called astrocytes.",
+    "existing_ontology_identifier": "9400/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Atypical Teratoid/Rhabdoid Tumor",
+    "existing_description": "An aggressive malignant embryonal neoplasm arising from the central nervous system. It is composed of cells with a large eccentric nucleus, prominent nucleolus, and abundant cytoplasm. Mutations of the SMARCB1 gene or very rarely SMARCA4 (BRG1) gene are present. The vast majority of cases occur in childhood. Symptoms include lethargy, vomiting, cranial nerve palsy, headache, and hemiplegia.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "B Acute Lymphoblastic Leukemia",
+    "existing_description": "The most frequent type of acute lymphoblastic leukemia.  Approximately 75% of cases occur in children under six years of age.  This is a good prognosis leukemia.  In the pediatric age group the complete remission rate is approximately 95% and the disease free survival rate is 70%.  Approximately 80% of children appear to be cured.  In the adult age group the complete remission rate is 60-85%.  (WHO, 2001)",
+    "existing_ontology_identifier": "9823/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "B-Cell Non-Hodgkin Lymphoma",
+    "existing_description": "The most common type of non-Hodgkin lymphoma.  It includes the most frequently seen morphologic variants which are: diffuse large B-cell lymphoma, follicular lymphoma, small lymphocytic lymphoma and marginal zone B-cell lymphoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 12,
+    "term": "Barrett Esophagus",
+    "existing_description": "Esophageal lesion lined with columnar metaplastic epithelium which is flat or villiform. Barrett epithelium is characterized by two different types of cells: goblet cells and columnar cells. The symptomatology of Barrett esophagus is that of gastro-esophageal reflux. It is the precursor of most esophageal adenocarcinomas.  (WHO)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 13,
+    "term": "Basal Cell Neoplasm",
+    "existing_description": "A neoplastic proliferation of basal cells in the epidermis (part of the skin) or other anatomic sites (most frequently the salivary glands).  The basal cell neoplastic proliferation in the epidermis results in basal cell carcinomas.  The basal cell neoplastic proliferation in the salivary glands can be benign, resulting in basal cell adenomas or malignant, resulting in basal cell adenocarcinomas.",
+    "existing_ontology_identifier": "8090/1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "Basal-Like Breast Carcinoma",
+    "existing_description": "A biologic subset of breast carcinoma defined by high expression of genes characteristic of basal epithelial cells, including KRT5 and KRT17, annexin 8, CX3CL1, and TRIM29, and usually by lack of expression of the estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2). It is the most common subtype of breast cancer associated with BRCA1 mutations, and is associated with a poor prognosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "Biliary Tract Carcinoma",
+    "existing_description": "A carcinoma arising from the intrahepatic bile ducts, hepatic ducts, common bile duct, cystic duct, or gallbladder.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 16,
+    "term": "Bladder Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the bladder (the organ that stores urine). Most bladder cancers are transitional cell carcinomas (cancer that begins in cells that normally make up the inner lining of the bladder). Other types include squamous cell carcinoma (cancer that begins in thin, flat cells) and adenocarcinoma (cancer that begins in cells that make and release mucus and other fluids). The cells that form squamous cell carcinoma and adenocarcinoma develop in the inner lining of the bladder as a result of chronic irritation and inflammation.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 17,
+    "term": "Bladder Neoplasm",
+    "existing_description": "A benign or malignant, primary or metastatic neoplasm of the bladder.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 18,
+    "term": "Bone Neoplasm",
+    "existing_description": "A benign, intermediate, or malignant neoplasm involving the bone or articular cartilage.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "Brain Neoplasm",
+    "existing_description": "The growth of abnormal cells in the tissues of the brain. Brain tumors can be benign (not cancer) or malignant (cancer).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 20,
+    "term": "Breast Adenocarcinoma",
+    "existing_description": "The most common histologic type of breast carcinoma.  Representative examples include invasive ductal carcinoma not otherwise specified, ductal carcinoma in situ, inflammatory carcinoma, secretory carcinoma, signet ring cell carcinoma, tubular carcinoma, invasive lobular carcinoma, and lobular carcinoma in situ.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 21,
+    "term": "Breast Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the breast, usually the ducts (tubes that carry milk to the nipple) and lobules (glands that make milk). It occurs in both men and women, although male breast cancer is rare.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 22,
+    "term": "Breast Neoplasm",
+    "existing_description": "A benign or malignant neoplasm of the breast parenchyma. It can originate from the ducts, lobules or the breast adipose tissue. Breast neoplasms are much more common in females than males.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 23,
+    "term": "Carcinoma",
+    "existing_description": "Cancer that begins in the skin or in tissues that line or cover internal organs.",
+    "existing_ontology_identifier": "8010/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 24,
+    "term": "Carcinoma In Situ",
+    "existing_description": "A malignant epithelial neoplasm which is confined to the epithelial layer without evidence of further tissue invasion.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 25,
+    "term": "Castration-Resistant Prostate Carcinoma",
+    "existing_description": "Prostate carcinoma that grows and continues to spread despite the surgical removal of the testes or medical intervention to block androgen production.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 26,
+    "term": "Cellular Schwannoma",
+    "existing_description": "A morphologic variant of schwannoma characterized by hypercellularity, Antoni A pattern, and the absence of well-formed Verocay bodies.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 27,
+    "term": "Central Nervous System Cavernous Hemangioma",
+    "existing_description": "A cavernous hemangioma arising from the central nervous system.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 28,
+    "term": "Central Nervous System Neoplasm",
+    "existing_description": "A tumor of the central nervous system, including brain stem glioma, craniopharyngioma, medulloblastoma, and meningioma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 29,
+    "term": "Cerebellar Neoplasm",
+    "existing_description": "A benign or malignant (primary or metastatic) tumor involving the cerebellum.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 30,
+    "term": "Cervical Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the cervix (the organ connecting the uterus and vagina). It is usually a slow-growing cancer that may not have symptoms but can be found with regular Pap tests (a procedure in which cells are scraped from the cervix and looked at under a microscope). Cervical cancer is almost always caused by human papillomavirus (HPV) infection.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 31,
+    "term": "Cervical Neoplasm",
+    "existing_description": "A benign, malignant, or precancerous neoplasm that affects the cervix.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 32,
+    "term": "Cervical Small Cell Carcinoma",
+    "existing_description": "A small cell neuroendocrine carcinoma arising from the cervix.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 33,
+    "term": "Cholangiocarcinoma",
+    "existing_description": "A rare type of cancer that develops in cells that line the bile ducts in the liver. Cancer that forms where the right and left ducts meet is called Klatskin tumor.",
+    "existing_ontology_identifier": "8160/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 34,
+    "term": "Chondroblastoma",
+    "existing_description": "A benign, chondroid-producing, well-circumscribed, lytic neoplasm usually arising from the epiphysis of long bones.  It is characterized by the presence of chondroblasts, osteoclast-like giant cells, chondroid formation, calcification, and mitotic activity. In aggressive cases, there is rearrangement of the 8q21 chromosome band.  It occurs most frequently in children and young adults and rarely metastasizes.",
+    "existing_ontology_identifier": "9230/0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 35,
+    "term": "Choriocarcinoma",
+    "existing_description": "An aggressive malignant tumor arising from trophoblastic cells. The vast majority of cases arise in the uterus and represent gestational choriocarcinomas that derive from placental trophoblastic cells. Approximately half of the cases develop from a complete hydatidiform mole. A minority of cases arise in the testis or the ovaries. There is often marked elevation of human chorionic gonadotropin (hCG) in the blood. Choriocarcinomas disseminate rapidly through the hematogenous route; the lungs are most frequently affected.",
+    "existing_ontology_identifier": "9100/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 36,
+    "term": "Chronic Lymphocytic Leukemia",
+    "existing_description": "The most common type of chronic lymphoid leukemia.  It comprises 90% of chronic lymphoid leukemias in the United States.  Morphologically, the neoplastic cells are small, round B-lymphocytes.  This type of leukemia is not considered to be curable with available therapy. (WHO, 2001)",
+    "existing_ontology_identifier": "9823/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 37,
+    "term": "Chronic Myeloid Leukemia",
+    "existing_description": "An aggressive (fast-growing) disease in which too many myeloblasts (immature white blood cells that are not lymphoblasts) are found in the bone marrow and blood.",
+    "existing_ontology_identifier": "9863/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 38,
+    "term": "Clear Cell Renal Cell Carcinoma",
+    "existing_description": "The most common type of kidney cancer. It begins in the lining of the renal tubules in the kidney. The renal tubules filter the blood and produce urine.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 39,
+    "term": "Colon Adenocarcinoma",
+    "existing_description": "An adenocarcinoma arising from the colon.  It is more frequently seen in populations with a Western type diet and in patients with a history of chronic inflammatory bowel disease.  Signs and symptoms include intestinal bleeding, anemia, and change in bowel habits.  According to the degree of cellular differentiation, colonic adenocarcinomas are divided into well, moderately, and poorly differentiated.  Histologic variants include mucinous adenocarcinoma, signet ring cell carcinoma, medullary carcinoma, serrated adenocarcinoma, cribriform comedo-type adenocarcinoma, and micropapillary adenocarcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 40,
+    "term": "Colon Carcinoma",
+    "existing_description": "Cancer that forms in the tissues of the colon (the longest part of the large intestine). Most colon cancers are adenocarcinomas (cancers that begin in cells that make and release mucus and other fluids).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 41,
+    "term": "Colorectal Adenocarcinoma",
+    "existing_description": "The most common type of colorectal carcinoma.  It is characterized by the presence of malignant glandular epithelial cells invading through the muscularis mucosa into the submucosa.  Histologic variants include mucinous adenocarcinoma, signet ring cell carcinoma, medullary carcinoma, serrated adenocarcinoma, cribriform comedo-type adenocarcinoma, and micropapillary adenocarcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 42,
+    "term": "Colorectal Adenoma",
+    "existing_description": "An adenoma that arises from the colon or rectum.  The group of colorectal adenomas includes tubular, villous, and tubulovillous adenomas, traditional serrated adenomas, sessile serrated adenomas/polyps, and familial adenomatous polyposis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 43,
+    "term": "Colorectal Carcinoma",
+    "existing_description": "Cancer that develops in the colon (the longest part of the large intestine) and/or the rectum (the last several inches of the large intestine before the anus).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 44,
+    "term": "Colorectal Neoplasm",
+    "existing_description": "A benign or malignant neoplasm that affects the colon or rectum.  Representative examples of benign neoplasms include lipoma and leiomyoma.  Representative examples of malignant neoplasms include carcinoma, lymphoma, and sarcoma.  Colorectal adenomas always exhibit epithelial dysplasia and are considered premalignant neoplasms.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 45,
+    "term": "Combined Hepatocellular Carcinoma and Cholangiocarcinoma",
+    "existing_description": "A rare tumor containing unequivocal elements of both hepatocellular and cholangiocarcinoma that are intimately admixed.  This tumor should be distinguished from separate hepatocellular carcinoma and cholangiocarcinoma arising in the same liver.  The prognosis of this tumor is poor.",
+    "existing_ontology_identifier": "8180/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 46,
+    "term": "Craniopharyngioma",
+    "existing_description": "A histologically benign, but locally destructive, partly cystic, epithelial tumor of the sellar region, derived from Rathke pouch epithelium.",
+    "existing_ontology_identifier": "9350/1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 47,
+    "term": "Cutaneous T Cell Lymphoma",
+    "existing_description": "Any of a group of T-cell non-Hodgkin lymphomas that begins in the skin as an itchy, red rash that can thicken or form a tumor. The most common types are mycosis fungoides and Sezary syndrome.",
+    "existing_ontology_identifier": "9709/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 48,
+    "term": "Diffuse Large B-Cell Lymphoma",
+    "existing_description": "A type of B-cell non-Hodgkin lymphoma (cancer of the immune system) that is usually aggressive (fast-growing). It is the most common type of non-Hodgkin lymphoma, and is marked by rapidly growing tumors in the lymph nodes, spleen, liver, bone marrow, or other organs. Other symptoms include fever, night sweats, and weight loss. There are several subtypes of diffuse large B-cell lymphoma.",
+    "existing_ontology_identifier": "9680/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 49,
+    "term": "Ductal Breast Carcinoma In Situ",
+    "existing_description": "A noninvasive condition in which abnormal cells are found in the lining of a breast duct. The abnormal cells have not spread outside the duct to other tissues in the breast. In some cases, ductal carcinoma in situ may become invasive cancer and spread to other tissues, although it is not known at this time how to predict which lesions will become invasive.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 50,
+    "term": "Dysembryoplastic Neuroepithelial Neoplasm",
+    "existing_description": "A neoplasm of the nervous system that arises from the neuroepithelial tissues.  Representative examples include astrocytic tumors, oligodendroglial tumors, ependymal tumors, and primitive neuroectodermal tumors.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 51,
+    "term": "Endometrial Carcinoma",
+    "existing_description": "Cancer that forms in the tissue lining the uterus (the small, hollow, pear-shaped organ in a woman's pelvis in which a fetus develops). Most endometrial cancers are adenocarcinomas (cancers that begin in cells that make and release mucus and other fluids).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 52,
+    "term": "Endometrial Neoplasm",
+    "existing_description": "A benign, borderline, or malignant neoplasm that affects the endometrium.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 53,
+    "term": "Ependymoma",
+    "existing_description": "A type of brain tumor that begins in cells lining the spinal cord central canal (fluid-filled space down the center) or the ventricles (fluid-filled spaces of the brain). Ependymomas may also form in the choroid plexus (tissue in the ventricles that makes cerebrospinal fluid).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 54,
+    "term": "Esophageal Adenocarcinoma",
+    "existing_description": "A malignant tumor with glandular differentiation arising predominantly from Barrett mucosa in the lower third of the esophagus.  Rare examples of esophageal adenocarcinoma deriving from ectopic gastric mucosa in the upper esophagus have also been reported.  Grossly, esophageal adenocarcinomas are similar to esophageal squamous cell carcinomas.  Microscopically, adenocarcinomas arising in the setting of Barrett esophagus are typically papillary and/or tubular.  The prognosis is poor.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 55,
+    "term": "Esophageal Carcinoma",
+    "existing_description": "Cancer that forms in tissues lining the esophagus (the muscular tube through which food passes from the throat to the stomach). Two types of esophageal cancer are squamous cell carcinoma (cancer that begins in flat cells lining the esophagus) and adenocarcinoma (cancer that begins in cells that make and release mucus and other fluids).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 56,
+    "term": "Esophageal Squamous Cell Carcinoma",
+    "existing_description": "A squamous cell carcinoma arising from the esophagus.  It is associated with a long history of tobacco and alcohol abuse and is exceedingly rare before the age of 30.  The median age is around 65 in both males and females.  It is located mostly in the middle and lower third of the esophagus.  Grossly, polypoid, ulcerated, plaque-like and occult lesions have been described.  The microscopic features are the same as in other squamous cell carcinomas.  Any degree of differentiation may occur, and variation within a single tumor is common.  The prognosis is poor.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 57,
+    "term": "Ewing Sarcoma",
+    "existing_description": "A type of cancer that forms in bone or soft tissue.",
+    "existing_ontology_identifier": "9260/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 58,
+    "term": "Extraventricular Neurocytoma",
+    "existing_description": "A WHO grade 2 neoplasm that arises from the brain parenchyma. Morphologically it is characterized by the presence of neoplastic uniform, round cells with neuronal differentiation. Unlike central neurocytoma, it does not involve the lateral ventricles. It usually affects young adults and has a favorable prognosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 59,
+    "term": "Fibroepithelial Polyp",
+    "existing_description": "A polypoid lesion composed of fibrous tissue and epithelium. Representative examples include skin tag, anal fibroepithelial polyp, and gingival fibroepithelial polyp.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 60,
+    "term": "Fibrolamellar Carcinoma",
+    "existing_description": "A distinctive type of liver cell carcinoma that arises in non-cirrhotic livers and is seen predominantly in young patients.  The tumor cells are polygonal and deeply eosinophilic, and are embedded in a fibrous stroma.  The prognosis is similar to classical hepatocellular carcinoma that arises in non-cirrhotic livers, and better than hepatocellular carcinoma that arises in cirrhotic livers.",
+    "existing_ontology_identifier": "8171/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 61,
+    "term": "Fibrosarcoma",
+    "existing_description": "A malignant mesenchymal neoplasm of the soft tissue and bone.",
+    "existing_ontology_identifier": "8810/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 62,
+    "term": "Follicular Lymphoma",
+    "existing_description": "A type of B-cell non-Hodgkin lymphoma (cancer of the immune system) that is usually indolent (slow-growing). The tumor cells grow as groups to form nodules. There are several subtypes of follicular lymphoma.",
+    "existing_ontology_identifier": "9690/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 63,
+    "term": "Gallbladder Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the gallbladder. The gallbladder is a pear-shaped organ below the liver that collects and stores bile (a fluid made by the liver to digest fat). Gallbladder cancer begins in the innermost layer of tissue and spreads through the outer layers as it grows.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 64,
+    "term": "Gastric Adenocarcinoma",
+    "existing_description": "An adenocarcinoma arising from the stomach glandular epithelium. Gastric adenocarcinoma is primarily a disease of older individuals.  It most commonly develops after a long period of atrophic gastritis and is strongly associated with Helicobacter pylori infection. The lack of early symptoms often delays the diagnosis of gastric cancer. The majority of patients present with advanced tumors which have poor rates of curability. Microscopically, two important histologic types of gastric adenocarcinoma are recognized: the intestinal and diffuse type. The overall prognosis of gastric adenocarcinomas is poor, even in patients who receive a \"curative\" resection (adapted from Sternberg's Surgical Pathology, 3rd ed., 1999).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 65,
+    "term": "Gastric Carcinoma",
+    "existing_description": "Cancer that forms in tissues lining the stomach.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 66,
+    "term": "Gastric Neoplasm",
+    "existing_description": "A benign or malignant neoplasm involving the stomach.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 67,
+    "term": "Gastroesophageal Adenocarcinoma",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 68,
+    "term": "Gastroesophageal Junction Adenocarcinoma",
+    "existing_description": "An adenocarcinoma that arises from and straddles the junction of the stomach and esophagus.  The category of adenocarcinomas of the gastroesophageal junction also includes the majority of adenocarcinomas previously called gastric cardia adenocarcinomas.  Squamous cell carcinomas that affect or cross the junction of the stomach and esophagus are classified as carcinomas of the distal esophagus.  Adenocarcinoma of the gastroesophageal junction occurs more often in Caucasian middle aged and elderly males.  Clinical signs and symptoms include dysphagia, abdominal pain, and weight loss.  The prognosis depends on the completeness of the surgical resection, the number of lymph nodes involved by cancer, and the presence or absence of postoperative complications.  The presence of TP53 mutations indicates worse prognosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 69,
+    "term": "Gastrointestinal Stromal Neoplasm",
+    "existing_description": "A type of tumor that usually begins in cells in the wall of the gastrointestinal tract. It can be benign or malignant.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 70,
+    "term": "Giant Cell Tumor",
+    "existing_description": "A benign, intermediate, or malignant tumor that arises from the bone or soft tissue. It is characterized by the presence of multinucleated osteoclast-like giant cells.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 71,
+    "term": "Glioblastoma",
+    "existing_description": "The most malignant astrocytic tumor (WHO grade 4).  It is composed of poorly differentiated neoplastic astrocytes and is characterized by the presence of cellular polymorphism, nuclear atypia, brisk mitotic activity, vascular thrombosis, microvascular proliferation, and necrosis. It typically affects adults and is preferentially located in the cerebral hemispheres. (Adapted from WHO)",
+    "existing_ontology_identifier": "9440/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 72,
+    "term": "Glioma",
+    "existing_description": "A general term for tumors of the central nervous system, including astrocytomas, ependymal tumors, glioblastoma multiforme, and primitive neuroectodermal tumors.",
+    "existing_ontology_identifier": "9380/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 73,
+    "term": "Head and Neck Carcinoma",
+    "existing_description": "A carcinoma that arises from the head and neck region.  Representative examples include oral cavity squamous cell carcinoma, laryngeal squamous cell carcinoma, and salivary gland carcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 74,
+    "term": "Head and Neck Neoplasm",
+    "existing_description": "A carcinoma that arises from the head and neck region.  Representative examples include oral cavity squamous cell carcinoma, laryngeal squamous cell carcinoma, and salivary gland carcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 75,
+    "term": "Head and Neck Squamous Cell Carcinoma",
+    "existing_description": "Cancer of the head and neck that begins in squamous cells (thin, flat cells that form the surface of the skin, eyes, various internal organs, and the lining of hollow organs and ducts of some glands). Squamous cell carcinoma of the head and neck includes cancers of the nasal cavity, sinuses, lips, mouth, salivary glands, throat, and larynx (voice box). Most head and neck cancers are squamous cell carcinomas.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 76,
+    "term": "Hepatocellular Carcinoma",
+    "existing_description": "A type of adenocarcinoma and the most common type of liver tumor.",
+    "existing_ontology_identifier": "8170/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 77,
+    "term": "High Grade Ovarian Serous Adenocarcinoma",
+    "existing_description": "A rapidly growing serous adenocarcinoma that arises from the ovary. It is characterized by the presence of high grade cytologic features and frequent mitotic figures.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 78,
+    "term": "Histiocytic Sarcoma",
+    "existing_description": "An aggressive malignant neoplasm with a poor response to therapy, usually presenting as stage III/IV disease. It is characterized by the presence of neoplastic cells with morphologic and immunophenotypic characteristics similar to those seen in mature histiocytes.",
+    "existing_ontology_identifier": "9755/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 79,
+    "term": "Hodgkin Lymphoma",
+    "existing_description": "A malignant neoplasm of the lymphatic system that is comprised of abnormal lymphocytes and is characterized by the presence of Reed-Sternberg cells.",
+    "existing_ontology_identifier": "9650/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 80,
+    "term": "Intestinal Neoplasm",
+    "existing_description": "A benign or malignant neoplasm involving the small or large intestine.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 81,
+    "term": "Intrahepatic Cholangiocarcinoma",
+    "existing_description": "A malignant neoplasm of the liver arising from/comprising cells resembling those of bile ducts.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 82,
+    "term": "Invasive Ductal Breast Carcinoma",
+    "existing_description": "The most common type of invasive breast cancer. It starts in the cells that line the milk ducts in the breast, grows outside the ducts, and often spreads to the lymph nodes.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 83,
+    "term": "Kaposi Sarcoma",
+    "existing_description": "A type of cancer characterized by the abnormal growth of blood vessels that develop into skin lesions or occur internally.",
+    "existing_ontology_identifier": "9140/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 84,
+    "term": "Leiomyoma",
+    "existing_description": "A well-circumscribed benign smooth muscle neoplasm characterized by the presence of spindle cells with cigar-shaped nuclei, interlacing fascicles, and a whorled pattern.",
+    "existing_ontology_identifier": "8890/0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 85,
+    "term": "Leukemia",
+    "existing_description": "Cancer that starts in blood-forming tissue such as the bone marrow and causes large numbers of blood cells to be produced and enter the bloodstream.",
+    "existing_ontology_identifier": "9800/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 86,
+    "term": "Liver and Intrahepatic Bile Duct Carcinoma",
+    "existing_description": "Primary liver cancer is cancer that forms in the tissues of the liver. Secondary liver cancer is cancer that spreads to the liver from another part of the body.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 87,
+    "term": "Liver and Intrahepatic Bile Duct Neoplasm",
+    "existing_description": "A benign or malignant neoplasm that affects the liver parenchyma or intrahepatic bile ducts.  Representative examples of benign neoplasms include hepatocellular adenoma, and bile duct adenoma.  Representative examples of malignant neoplasms include hepatocellular carcinoma, intrahepatic cholangiocarcinoma, and lymphoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 88,
+    "term": "Low Grade Glioma",
+    "existing_description": "A grade I or grade II glioma arising from the central nervous system. This category includes pilocytic astrocytoma, diffuse astrocytoma, subependymal giant cell astrocytoma, ependymoma, oligodendroglioma, oligoastrocytoma, and angiocentric glioma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 89,
+    "term": "Luminal A Breast Carcinoma",
+    "existing_description": "A biologic subset of breast carcinoma defined by high expression of genes characteristic of luminal epithelial cells, including estrogen receptor (ER), estrogen regulated protein LIV-1, and the transcription factors hepatocyte nuclear factor 3, HNF3A, XBP1, and GATA 3.  This subtype of breast cancer is associated with a good prognosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 90,
+    "term": "Lung Adenocarcinoma",
+    "existing_description": "A carcinoma that arises from the lung and is characterized by the presence of malignant glandular epithelial cells.  There is a male predilection with a male to female ratio of 2:1.  Usually lung adenocarcinoma is asymptomatic and is identified through screening studies or as an incidental radiologic finding.  If clinical symptoms are present they include shortness of breath, cough, hemoptysis, chest pain, and fever.  Tobacco smoke is a known risk factor.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 91,
+    "term": "Lung Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the lung, usually in the cells lining air passages. The two main types are small cell lung cancer and non-small cell lung cancer. These types are diagnosed based on how the cells look under a microscope.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 92,
+    "term": "Lung Neoplasm",
+    "existing_description": "A benign or malignant, primary or metastatic neoplasm involving the lungs.  Representative examples of benign neoplasms include adenoma, papilloma, chondroma, and endobronchial lipoma.  Representative examples of malignant neoplasms include carcinoma, carcinoid tumor, sarcoma, and lymphoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 93,
+    "term": "Lung Non-Small Cell Carcinoma",
+    "existing_description": "A group of lung cancers that are named for the kinds of cells found in the cancer and how the cells look under a microscope. The three main types of non-small cell lung cancer are squamous cell carcinoma, large cell carcinoma, and adenocarcinoma. Non-small cell lung cancer is the most common kind of lung cancer.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 94,
+    "term": "Lung Small Cell Carcinoma",
+    "existing_description": "An aggressive (fast-growing) cancer that forms in tissues of the lung and can spread to other parts of the body. The cancer cells look small and oval-shaped when looked at under a microscope.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 95,
+    "term": "Lung Squamous Cell Carcinoma",
+    "existing_description": "A carcinoma arising from squamous bronchial epithelial cells. It may be keratinizing or non-keratinizing. Keratinizing squamous cell carcinoma is characterized by the presence of keratinization, pearl formation, and/or intercellular bridges. Non-keratinizing squamous cell carcinoma is characterized by the absence of keratinization, pearl formation, and intercellular bridges. Cigarette smoking and arsenic exposure are strongly associated with squamous cell lung carcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 96,
+    "term": "Lymphoid Leukemia",
+    "existing_description": "A type of cancer in which the bone marrow makes too many lymphocytes (white blood cells).",
+    "existing_ontology_identifier": "9820/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 97,
+    "term": "Lymphoma",
+    "existing_description": "Cancer that begins in cells of the immune system. There are two basic categories of lymphomas. One kind is Hodgkin lymphoma, which is marked by the presence of a type of cell called the Reed-Sternberg cell. The other category is non-Hodgkin lymphomas, which includes a large, diverse group of cancers of immune system cells. Non-Hodgkin lymphomas can be further divided into cancers that have an indolent (slow-growing) course and those that have an aggressive (fast-growing) course. These subtypes behave and respond to treatment differently. Both Hodgkin and non-Hodgkin lymphomas can occur in children and adults, and prognosis and treatment depend on the stage and the type of cancer.",
+    "existing_ontology_identifier": "9590/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 98,
+    "term": "Malignant Brain Neoplasm",
+    "existing_description": "An abnormal solid mass arising within the brain with histologic features suggesting the potential to metastasize.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 99,
+    "term": "Malignant Digestive System Neoplasm",
+    "existing_description": "A primary or metastatic malignant neoplasm involving any part of the digestive system.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 100,
+    "term": "Malignant Genitourinary System Neoplasm",
+    "existing_description": "A primary or metastatic malignant neoplasm that affects the genitourinary system.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 101,
+    "term": "Malignant Glioma",
+    "existing_description": "A malignant neuroglial neoplasm. The term can apply to several primary neoplasm of the brain and spinal cord, including astrocytoma and oligodendroglioma in addition to others.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 102,
+    "term": "Malignant Neoplasm",
+    "existing_description": "Uncontrolled growth of abnormal cells with potential for metastatic spread.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 103,
+    "term": "Malignant Ovarian Neoplasm",
+    "existing_description": "Cancer that forms in tissues of the ovary (one of a pair of female reproductive glands in which the ova, or eggs, are formed). Most ovarian cancers are either ovarian epithelial carcinomas (cancer that begins in the cells on the surface of the ovary) or malignant germ cell tumors (cancer that begins in egg cells).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 104,
+    "term": "Malignant Pancreatic Neoplasm",
+    "existing_description": "A primary or metastatic malignant tumor involving the pancreas.  Representative examples include carcinoma and lymphoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 105,
+    "term": "Malignant Peripheral Nerve Sheath Tumor",
+    "existing_description": "An uncommon, highly aggressive malignant tumor, arising from the peripheral nerves and affecting mostly adults in their third to sixth decades of life.  It usually occurs in medium-sized and large nerves of the buttock, thigh, upper arm, or the paraspinal region.  It may be associated with neurofibromatosis 1 (NF1).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 106,
+    "term": "Malignant Peritoneal Neoplasm",
+    "existing_description": "Cancer of the tissue that lines the abdominal wall and covers organs in the abdomen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 107,
+    "term": "Malignant Skin Neoplasm",
+    "existing_description": "Cancer that forms in the tissues of the skin. There are several types of skin cancer. Skin cancer that forms in melanocytes (skin cells that make pigment) is called melanoma. Skin cancer that forms in the lower part of the epidermis (the outer layer of the skin) is called basal cell carcinoma. Skin cancer that forms in squamous cells (flat cells that form the surface of the skin) is called squamous cell carcinoma. Skin cancer that forms in neuroendocrine cells (cells that release hormones in response to signals from the nervous system) is called neuroendocrine carcinoma of the skin. Most skin cancers form in older people on parts of the body exposed to the sun or in people who have weakened immune systems.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 108,
+    "term": "Mantle Cell Lymphoma",
+    "existing_description": "An aggressive, usually diffuse non-Hodgkin lymphoma composed of small to medium sized B-lymphocytes (centrocytes).  Most patients present with advanced stage disease with lymphadenopathy, hepatosplenomegaly, and bone marrow involvement.  The gastrointestinal tract is the most commonly affected extranodal site by this type of non-Hodgkin lymphoma.  The vast majority of cases express the t(11;14)(q13;q32) resulting in the rearrangement of the BCL-1 gene and the overexpression of cyclin D1 mRNA.",
+    "existing_ontology_identifier": "9673/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 109,
+    "term": "Marginal Zone Lymphoma",
+    "existing_description": "An indolent (slow-growing) type of B-cell non-Hodgkin lymphoma that begins forming in certain areas (the marginal zones) of lymph tissue. There are three types based on whether it forms in the spleen, lymph nodes, or other lymphoid tissue that contains a lot of B cells (a type of white blood cell).",
+    "existing_ontology_identifier": "9699/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 110,
+    "term": "Medulloblastoma",
+    "existing_description": "A rapidly progressive cancer of the brain that originates in the cerebellum.",
+    "existing_ontology_identifier": "9470/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 111,
+    "term": "Melanoma",
+    "existing_description": "A malignant, usually aggressive tumor composed of atypical, neoplastic melanocytes. Most often, melanomas arise in the skin (cutaneous melanomas) and include the following histologic subtypes: superficial spreading melanoma, nodular melanoma, acral lentiginous melanoma, and lentigo maligna melanoma. Cutaneous melanomas may arise from acquired or congenital melanocytic or dysplastic nevi. Melanomas may also arise in other anatomic sites including the gastrointestinal system, eye, urinary tract, and reproductive system. Melanomas frequently metastasize to lymph nodes, liver, lungs, and brain.",
+    "existing_ontology_identifier": "8720/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 112,
+    "term": "Meningioma",
+    "existing_description": "A usually benign tumor that develops in the meninges.",
+    "existing_ontology_identifier": "9530/0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 113,
+    "term": "Mesothelioma",
+    "existing_description": "A usually malignant and aggressive neoplasm of the mesothelium which is often associated with exposure to asbestos.",
+    "existing_ontology_identifier": "9050/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 114,
+    "term": "Multiple Myeloma",
+    "existing_description": "A type of cancer that begins in plasma cells (white blood cells that produce antibodies).",
+    "existing_ontology_identifier": "9732/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 115,
+    "term": "Mycosis Fungoides",
+    "existing_description": "A type of non-Hodgkin's lymphoma that first appears on the skin and can spread to the lymph nodes or other organs such as the spleen, liver, or lungs.",
+    "existing_ontology_identifier": "9700/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 116,
+    "term": "Myeloid Leukemia",
+    "existing_description": "A progressive, proliferative disease of blood cells, originating from immature granulocytes.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 117,
+    "term": "Myeloid Neoplasm",
+    "existing_description": "Proliferation of myeloid cells originating from a primitive stem cell.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 118,
+    "term": "Myeloproliferative Neoplasm",
+    "existing_description": "A group of slow growing blood cancers, including chronic myelogenous leukemia, in which large numbers of abnormal red blood cells, white blood cells, or platelets grow and spread in the bone marrow and the peripheral blood.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 119,
+    "term": "Myoepithelioma",
+    "existing_description": "",
+    "existing_ontology_identifier": "8982/0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 120,
+    "term": "Nasopharyngeal Carcinoma",
+    "existing_description": "Cancer that forms in tissues of the nasopharynx (upper part of the throat behind the nose). Most nasopharyngeal cancers are squamous cell carcinomas (cancer that begins in flat cells lining the nasopharynx).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 121,
+    "term": "Neuroblastoma",
+    "existing_description": "Cancer that arises in immature nerve cells and affects mostly infants and children.",
+    "existing_ontology_identifier": "9500/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 122,
+    "term": "Neuroendocrine Neoplasm",
+    "existing_description": "An epithelial neoplasm with neuroendocrine differentiation. This category includes neuroendocrine tumors, neuroendocrine carcinomas, and paragangliomas.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 123,
+    "term": "Neuroepithelial Neoplasm",
+    "existing_description": "A neoplasm of the nervous system that arises from the neuroepithelial tissues.  Representative examples include astrocytic tumors, oligodendroglial tumors, ependymal tumors, and primitive neuroectodermal tumors.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 124,
+    "term": "Neurofibroma",
+    "existing_description": "An intraneural or extraneural neoplasm arising from nerve tissues and neural sheaths. It is composed of perineurial-like fibroblasts and Schwann cells. It usually presents as a localized cutaneous lesion and less often as a circumscribed peripheral nerve mass. Patients with neurofibromatosis type 1 present with multiple masses. Neurofibromas which arise from major nerves and plexiform neurofibromas are precursor lesions to malignant peripheral nerve sheath tumors.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 125,
+    "term": "Non-Functioning Pituitary Gland Adenoma",
+    "existing_description": "A hormone producing or non-producing pituitary neuroendocrine tumor not associated with a hormonal syndrome.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 126,
+    "term": "Non-Hodgkin Lymphoma",
+    "existing_description": "Distinct from Hodgkin lymphoma both morphologically and biologically, non-Hodgkin lymphoma (NHL) is characterized by the absence of Reed-Sternberg cells, can occur at any age, and usually presents as a localized or generalized lymphadenopathy associated with fever and weight loss. The clinical course varies according to the morphologic type. NHL is clinically classified as indolent, aggressive, or having a variable clinical course. NHL can be of B-or T-/NK-cell lineage.",
+    "existing_ontology_identifier": "9591/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 127,
+    "term": "Not Applicable",
+    "existing_description": "Determination of a value is not relevant in the current context. (NCI)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 128,
+    "term": "Oral Cavity Neoplasm",
+    "existing_description": "A benign or malignant neoplasm that affects the oral cavity.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 129,
+    "term": "Oral Cavity Squamous Cell Carcinoma",
+    "existing_description": "A type of mass spectrometry that uses the cyclotron frequency of ions in a fixed magnetic field to determine their ionic mass-to-charge ratio.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 130,
+    "term": "Oropharyngeal Neoplasm",
+    "existing_description": "A benign or malignant neoplasm that affects the oropharynx.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 131,
+    "term": "Osteosarcoma",
+    "existing_description": "A usually aggressive malignant bone-forming mesenchymal neoplasm, predominantly affecting adolescents and young adults. It usually involves bones and less frequently extraosseous sites. It often involves the long bones (particularly distal femur, proximal tibia, and proximal humerus). Pain with or without a palpable mass is the most frequent clinical symptom. It may spread to other anatomic sites, particularly the lungs.",
+    "existing_ontology_identifier": "9180/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 132,
+    "term": "Ovarian Adenosarcoma",
+    "existing_description": "A biphasic neoplasm that arises from the ovary and is characterized by the presence of mullerian-type epithelial tissue in a mesenchymal sarcomatous stroma.  The presence of a high grade sarcomatous component is associated with recurrences and metastases.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 133,
+    "term": "Ovarian Carcinoma",
+    "existing_description": "Cancer that occurs in the cells lining the ovaries.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 134,
+    "term": "Ovarian Neoplasm",
+    "existing_description": "A benign, borderline, or malignant neoplasm involving the ovary.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 135,
+    "term": "Ovarian Serous Adenocarcinoma",
+    "existing_description": "An adenocarcinoma that arises from the ovary and is characterized by the presence of malignant epithelial cells that, in well differentiated tumors, resemble the epithelium of the fallopian tube or, in poorly differentiated tumors, show anaplastic features and marked nuclear atypia.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 136,
+    "term": "Pan-cancer",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 137,
+    "term": "Pancreatic Adenocarcinoma",
+    "existing_description": "An adenocarcinoma which arises from the exocrine pancreas.  Ductal adenocarcinoma and its variants are the most common types of pancreatic adenocarcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 138,
+    "term": "Pancreatic Carcinoma",
+    "existing_description": "A disease in which malignant (cancer) cells are found in the tissues of the pancreas.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 139,
+    "term": "Pancreatic Ductal Adenocarcinoma",
+    "existing_description": "An infiltrating adenocarcinoma that arises from the epithelial cells of the pancreas.  It affects males more often than females and the patients are usually over 50 years of age.  Microscopically it is characterized by the presence of glandular (ductal) differentiation and desmoplastic stroma formation.  Signs and symptoms include pain, loss of weight, and jaundice.  It grows rapidly and is usually detected after it has metastasized to other anatomic sites.  The prognosis is usually poor.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 140,
+    "term": "Pancreatic Neoplasm",
+    "existing_description": "A benign or malignant neoplasm involving the pancreas.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 141,
+    "term": "Pancreatic Neuroendocrine Carcinoma",
+    "existing_description": "Cancer arising from cells in the islets of Langerhans, which are found in the pancreas.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 142,
+    "term": "Pending Annotation",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 143,
+    "term": "Penile Carcinoma",
+    "existing_description": "A rare cancer that forms in the penis (an external male reproductive organ). Most penile cancers are squamous cell carcinomas (cancer that begins in flat cells lining the penis).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 144,
+    "term": "Pheochromocytoma",
+    "existing_description": "Tumor that forms in the center of the adrenal gland (gland located above the kidney) that causes it to make too much adrenaline. Pheochromocytomas are usually benign (not cancer) but can cause high blood pressure, pounding headaches, heart palpitations, flushing of the face, nausea, and vomiting.",
+    "existing_ontology_identifier": "8700/0",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 145,
+    "term": "Pilocytic Astrocytoma",
+    "existing_description": "A WHO grade 1, relatively circumscribed, slowly growing, often cystic astrocytoma occurring in children and young adults.  Histologically it is characterized by a biphasic pattern with compacted bipolar cells associated with Rosenthal fibers and multipolar cells associated with microcysts and eosinophilic bodies/hyaline droplets. (WHO)",
+    "existing_ontology_identifier": "9421/1",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 146,
+    "term": "Pituitary Gland Adenoma",
+    "existing_description": "A well-differentiated neuroendocrine neoplasm that arises from the adenohypophysial cells of the anterior lobe of the pituitary gland. The tumor can be hormonally functioning or not. It has a low frequency of metastatic spread. When metastatic, the term metastatic pituitary neuroendocrine tumor is endorsed instead of pituitary carcinoma. (WHO)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 147,
+    "term": "Plasmablastic Lymphoma",
+    "existing_description": "An aggressive diffuse large B-cell lymphoma frequently arising in the setting of HIV infection and characterized by the presence of large neoplastic cells resembling B-immunoblasts which have the immunophenotypic profile of plasma cells.  Sites of involvement include the oral cavity, sinonasal cavity, skin, soft tissues, gastrointestinal tract, and bone.",
+    "existing_ontology_identifier": "9684/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 148,
+    "term": "Plasmacytoma",
+    "existing_description": "A type of cancer that begins in plasma cells (white blood cells that produce antibodies). A plasmacytoma may turn into multiple myeloma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 149,
+    "term": "Plexiform Schwannoma",
+    "existing_description": "A schwannoma characterized by a plexiform or multinodular growth pattern.  It usually arises from the skin or subcutaneous tissues in the extremities, trunk, and head and neck.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 150,
+    "term": "Precursor B-cell lymphoblastic leukemia",
+    "existing_description": "The most frequent type of acute lymphoblastic leukemia.  Approximately 75% of cases occur in children under six years of age.  This is a good prognosis leukemia.  In the pediatric age group the complete remission rate is approximately 95% and the disease free survival rate is 70%.  Approximately 80% of children appear to be cured.  In the adult age group the complete remission rate is 60-85%.  (WHO, 2001)",
+    "existing_ontology_identifier": "9836/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 151,
+    "term": "Primary Central Nervous System Lymphoma",
+    "existing_description": "Primary CNS lymphomas are extranodal malignant lymphomas arising in the CNS in the absence of obvious lymphoma outside the nervous system at the time of diagnosis. They should be differentiated from secondary involvement of the nervous system in systemic lymphomas. The incidence of primary CNS lymphomas has recently increased markedly worldwide from about 1% to over 6% of primary intracranial neoplasms due mainly as a consequence of the AIDS epidemic.  Primary CNS lymphomas affect all ages, with a peak incidence in immunocompetent subjects during the sixth and seventh decade of life and a male:female ratio of 3:2. In immunocompromised patients, the age at manifestation is lowest in individuals who have an inherited immunodeficiency (10 years), followed by transplant recipients (37 years) and AIDS patients (39 years, 90% males). About 60% of primary CNS lymphomas involve the supratentorial space, including the frontal (15%), temporal (8%), parietal (7%) and occipital (3%) lobes, basal ganglia/periventricular regions (10%) and corpus callosum (5%), the posterior fossa (13%), and the spinal cord (1%).  The majority of primary CNS lymphomas are large B-cell lymphomas, often associated with the Epstein-Barr virus.  (Adapted from WHO.)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 152,
+    "term": "Primary Myelofibrosis",
+    "existing_description": "A progressive, chronic disease in which the bone marrow is replaced by fibrous tissue and blood is made in organs such as the liver and the spleen, instead of in the bone marrow. This disease is marked by an enlarged spleen and progressive anemia.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 153,
+    "term": "Prostate Adenocarcinoma",
+    "existing_description": "An adenocarcinoma arising from the prostate gland.  It is one of the most common malignant tumors afflicting men.  The majority of adenocarcinomas arise in the peripheral zone and a minority occurs in the central or the transitional zone of the prostate gland.  Grading of prostatic adenocarcinoma predicts disease progression and correlates with survival.  Several grading systems have been proposed, of which the Gleason system is the most commonly used.  Gleason sums of 2 to 4 represent well-differentiated disease, 5 to 7 moderately differentiated disease and 8 to 10 poorly differentiated disease.  Prostatic-specific antigen (PSA) serum test is widely used as a screening test for the early detection of prostatic adenocarcinoma.  Treatment options include radical prostatectomy, radiation therapy, androgen ablation and cryotherapy.  Watchful waiting or surveillance alone is an option for older patients with low-grade or low-stage disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 154,
+    "term": "Prostate Carcinoma",
+    "existing_description": "One of the most common malignant tumors afflicting men.  The majority of carcinomas arise in the peripheral zone and a minority occur in the central or the transitional zone of the prostate gland.  Grossly, prostatic carcinomas appear as ill-defined yellow areas of discoloration in the prostate gland lobes.  Adenocarcinomas represent the overwhelming majority of prostatic carcinomas.  Prostatic-specific antigen (PSA) serum test is widely used as a screening test for the early detection of prostatic carcinoma.  Treatment options include radical prostatectomy, radiation therapy, androgen ablation and cryotherapy.  Watchful waiting or surveillance alone is an option for older patients with low-grade or low-stage disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 155,
+    "term": "Prostate Neoplasm",
+    "existing_description": "A benign, borderline, or malignant neoplasm that affects the prostate gland.  Representative examples include benign prostate phyllodes tumor, prostatic intraepithelial neoplasia, prostate carcinoma, and prostate sarcoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 156,
+    "term": "Rectal Adenocarcinoma",
+    "existing_description": "An adenocarcinoma arising from the rectum.  It is more frequently seen in populations with a Western type diet and in patients with a history of chronic inflammatory bowel disease.  Signs and symptoms include intestinal bleeding, anemia, and change in bowel habits.  According to the degree of cellular differentiation, rectal adenocarcinomas are divided into well, moderately, and poorly differentiated.  Histologic variants include mucinous adenocarcinoma, signet ring cell carcinoma, medullary carcinoma, serrated adenocarcinoma, cribriform comedo-type adenocarcinoma, and micropapillary adenocarcinoma.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 157,
+    "term": "Renal Cell Carcinoma",
+    "existing_description": "The most common type of kidney cancer. It begins in the lining of the renal tubules in the kidney. The renal tubules filter the blood and produce urine.",
+    "existing_ontology_identifier": "8260/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 158,
+    "term": "Retinoblastoma",
+    "existing_description": "Cancer that forms in the tissues of the retina (the light-sensitive layers of nerve tissue at the back of the eye). Retinoblastoma usually occurs in children younger than 5 years. It may be hereditary or nonhereditary (sporadic).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 159,
+    "term": "Rhabdomyosarcoma",
+    "existing_description": "Cancer that forms in the soft tissues in a type of muscle called striated muscle. Rhabdomyosarcoma can occur anywhere in the body.",
+    "existing_ontology_identifier": "8900/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 160,
+    "term": "Rosette-Forming Glioneuronal Tumor",
+    "existing_description": "A central nervous system neoplasm mostly occurring in the fourth ventricle region. It is characterized by the presence of neurocytes forming pseudorosettes and astrocytes which contain Rosenthal fibers. Cytologic atypia is minimal.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 161,
+    "term": "Salivary Gland Adenoid Cystic Carcinoma",
+    "existing_description": "An adenoid cystic carcinoma arising from the salivary gland.  It is characterized by the presence of epithelial and myoepithelial cells forming tubular, cribriform, and solid patterns.  It usually presents as a slow growing mass.  Patients may experience pain because of the tumor propensity for perineural invasion.  The tumor may follow an aggressive clinical course with recurrences and mestastases to distant sites including lungs, bones, brain, and liver.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 162,
+    "term": "Sarcoma",
+    "existing_description": "A usually aggressive malignant neoplasm of the soft tissue or bone. It arises from muscle, fat, fibrous tissue, bone, cartilage, and blood vessels. Sarcomas occur in both children and adults. The prognosis depends largely on the degree of differentiation (grade) of the neoplasm. Representative subtypes are liposarcoma, leiomyosarcoma, osteosarcoma, and chondrosarcoma.",
+    "existing_ontology_identifier": "8800/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 163,
+    "term": "Schwannoma",
+    "existing_description": "A tumor of the peripheral nervous system that arises in the nerve sheath (protective covering).  It is almost always benign, but rare malignant schwannomas have been reported.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 164,
+    "term": "Serous Tubal Intraepithelial Carcinoma",
+    "existing_description": "A non-invasive serous carcinoma arising from the fallopian tube.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 165,
+    "term": "Sinonasal Squamous Cell Carcinoma",
+    "existing_description": "A rare, keratinizing or non-keratinizing squamous cell carcinoma arising from the mucosal epithelium of the nasal cavity or the paranasal sinuses.  It affects most often the maxillary sinus.  Less frequently, it arises from the nasal cavity, ethmoid sinus, sphenoid sinus, and frontal sinus.  Symptoms include nasal fullness, epistaxis, rhinorhea, pain, and paresthesia.  Patients with nasal squamous cell carcinoma usually present earlier than patients with maxillary sinus carcinoma and have a better prognosis compared to the latter group.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 166,
+    "term": "Skin Carcinoma",
+    "existing_description": "Skin cancer that arises in basal cells or squamous cells but not in melanocytes (pigment-producing cells of the skin).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 167,
+    "term": "Skin Neoplasm",
+    "existing_description": "A benign, intermediate, or malignant neoplasm involving the skin.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 168,
+    "term": "Soft Tissue Sarcoma",
+    "existing_description": "A solid, malignant neoplasm originating in muscle, tendon, fat, blood vessels, nerves, connective or joint tissue.",
+    "existing_ontology_identifier": "8800/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 169,
+    "term": "Squamous Cell Carcinoma",
+    "existing_description": "Cancer that begins in squamous cells, which are thin, flat cells that look like fish scales. Squamous cells are found in the tissue that forms the surface of the skin, the lining of the hollow organs of the body, and the passages of the respiratory and digestive tracts.",
+    "existing_ontology_identifier": "8070/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 170,
+    "term": "Synovial Sarcoma",
+    "existing_description": "A malignant tumor that develops in the synovial membrane of the joints.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 171,
+    "term": "T Acute Lymphoblastic Leukemia",
+    "existing_description": "An aggressive (fast-growing) type of leukemia (blood cancer) in which too many T-cell lymphoblasts (immature white blood cells) are found in the bone marrow and blood.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 172,
+    "term": "T-Cell Lymphoma",
+    "existing_description": "A non-Hodgkin lymphoma of T-cell lineage. It includes the T lymphoblastic lymphoma and the mature T- and NK-cell lymphomas.",
+    "existing_ontology_identifier": "9702/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 173,
+    "term": "Teratoma",
+    "existing_description": "A type of germ cell tumor that may contain several different types of tissue, such as hair, muscle, and bone.  Teratomas occur most often in the ovaries in women, the testicles in men, and the tailbone in children.  Not all teratomas are malignant.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 174,
+    "term": "Testicular Embryonal Carcinoma",
+    "existing_description": "A malignant germ cell neoplasm arising from the testis.  It is composed of primitive epithelial cells arranged in solid, papillary, and glandular configurations.  Most patients present with a testicular mass, which may be associated with pain.  More than half of the patients have metastatic disease at diagnosis.  The form of treatment following radical orchiectomy is stage dependent.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 175,
+    "term": "Thyroid Gland Anaplastic Carcinoma",
+    "existing_description": "An aggressive carcinoma of the thyroid gland composed of undifferentiated cells.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 176,
+    "term": "Thyroid Gland Carcinoma",
+    "existing_description": "Cancer that forms in the thyroid gland (an organ at the base of the throat that makes hormones that help control heart rate, blood pressure, body temperature, and weight). Four main types of thyroid cancer are papillary, follicular, medullary, and anaplastic thyroid cancer. The four types are based on how the cancer cells look under a microscope.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 177,
+    "term": "Thyroid Gland Noninvasive Follicular Neoplasm with Papillary-Like Nuclear Features",
+    "existing_description": "A non-invasive neoplasm of thyroid follicular cells with a follicular growth pattern and nuclear features of papillary thyroid carcinoma that has an extremely low malignant potential. These tumors were formerly classified as non-invasive encapsulated follicular variant of papillary thyroid carcinoma or well-differentiated tumor of uncertain malignant potential. (WHO)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 178,
+    "term": "Triple-Negative Breast Carcinoma",
+    "existing_description": "An invasive breast carcinoma which is negative for expression of estrogen receptor (ER), progesterone receptor (PR), and human epidermal growth factor receptor 2 (HER2).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 179,
+    "term": "Urothelial Carcinoma",
+    "existing_description": "A malignant neoplasm derived from the transitional epithelium of the urinary tract (urinary bladder, ureter, urethra, or renal pelvis). It is frequently papillary.",
+    "existing_ontology_identifier": "8120/3",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 180,
+    "term": "Uterine Adenosarcoma",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 181,
+    "term": "Uveal Melanoma",
+    "existing_description": "A rare cancer of melanocytes (cells that produce the pigment melanin) found in the eye.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 182,
+    "term": "Uveal Neoplasm",
+    "existing_description": "A neoplasm that affects the uvea.  Uveal melanoma is a representative example.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 183,
+    "term": "Vascular Neoplasm",
+    "existing_description": "A benign, intermediate, or malignant neoplasm arising from vascular tissue including arteries, veins, venous sinuses, lymphatic vessels, arterioles and capillaries. It may occur in essentially any body location and is characterized by the presence of vascular channel formation and endothelial cells.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 184,
+    "term": "Not-Applicable",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 185,
+    "term": "Plexiform Neurofibroma",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

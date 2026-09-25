@@ -1,26 +1,439 @@
 {
   "$id": "http://example.com/DataCatalog",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000007"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "DiseaseSpecificResearch": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DiseaseSpecificResearch"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000012"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "ResearchSpecificRestrictions": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "ResearchSpecificRestrictions"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000020"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "CollaborationRequired": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "CollaborationRequired"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000022"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "GeographicalRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "GeographicalRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000024"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "PublicationMoratorium": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "PublicationMoratorium"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000025"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "TimeLimitOnUse": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "TimeLimitOnUse"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000026"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "UserSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "UserSpecificRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUO:0000028"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "InstitutionSpecificRestriction": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "InstitutionSpecificRestriction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus1"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "SourceGeography": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "SourceGeography"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus2"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "PopulationType": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "PopulationType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus3"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "DeidentificationType": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DeidentificationType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus4"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "DataPermission": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DataPermission"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus5"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "DataTier": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "DataTier"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus6"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "License": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "License"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "DataCatalogDataUseModifiers": {
+            "enum": [
+              "DUOPlus7"
+            ]
+          }
+        },
+        "required": [
+          "DataCatalogDataUseModifiers"
+        ]
+      },
+      "then": {
+        "properties": {
+          "Attribution": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "Attribution"
+        ]
+      }
+    }
+  ],
   "description": "The manifest used to describe datasets for the Synapse Data Catalog.",
   "properties": {
     "AccessType": {
       "description": "Access type for the dataset.",
       "enum": [
-        "Anonymous",
-        "Controlled",
-        "Open",
-        "Private"
+        "OpenAccess",
+        "RestrictedAccess"
       ],
       "title": "accessType"
+    },
+    "AgeGroup": {
+      "description": "Age group of the individual(s)/subject(s) the dataset's data were generated from (e.g. Adult). Free text pending a confident controlled vocabulary - too few real values observed to seed one yet.",
+      "title": "ageGroup",
+      "type": "string"
     },
     "AlternateName": {
       "description": "An altername name that can be used for search and discovery improvement.",
       "title": "alternateName",
       "type": "string"
     },
+    "Attribution": {
+      "description": "The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.",
+      "title": "attribution",
+      "type": "string"
+    },
+    "Authors": {
+      "description": "Author list for the dataset's associated publication. Distinct from creator, which captures the person(s)/organization(s) that generated or deposited the data itself.",
+      "items": {
+        "type": "string"
+      },
+      "title": "authors",
+      "type": "array"
+    },
     "Citation": {
       "description": "Academic articles that are recommended by the data provider to be cited in addition to the dataset doi itself. Can be identical to DatasetView.PublicationView Key.",
       "title": "citation",
+      "type": "string"
+    },
+    "CollaborationRequired": {
+      "description": "If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",
+      "title": "collaborationRequired",
       "type": "string"
     },
     "Community": {
@@ -33,13 +446,9 @@
       "title": "conditionsOfAccess",
       "type": "string"
     },
-    "Contributors": {
-      "description": "Organization(s), insitution(s), or person(s) that generated and/or deposited the data in Synapse. Can be identical to Grant Institution Name.",
-      "items": {
-        "type": "string"
-      },
-      "title": "contributors",
-      "type": "array"
+    "Contributor": {
+      "description": "TBD",
+      "title": "Contributor"
     },
     "CountryOfOrigin": {
       "description": "Origin of individuals from which data were generated. Omit if not applicable/unknown.",
@@ -302,8 +711,11 @@
     },
     "Creator": {
       "description": "Organization or person that is creator of the dataset. Default is the PI of the project and/or the user who created all files in the dataset.",
+      "items": {
+        "type": "string"
+      },
       "title": "creator",
-      "type": "string"
+      "type": "array"
     },
     "CroissantS3FileObject": {
       "description": "A Synapse url where the croissant file associated with this dataset is stored.",
@@ -311,18 +723,114 @@
       "title": "croissant_s3_file_object",
       "type": "string"
     },
+    "DataCatalogDataUseModifiers": {
+      "description": "List of data use ontology (DUO) terms that are true for dataset, which describes the allowable scope and terms for data use. Omit property if not applicable/unknown.",
+      "items": {
+        "enum": [
+          "DUO:0000004",
+          "DUO:0000006",
+          "DUO:0000007",
+          "DUO:0000011",
+          "DUO:0000012",
+          "DUO:0000015",
+          "DUO:0000016",
+          "DUO:0000017",
+          "DUO:0000018",
+          "DUO:0000019",
+          "DUO:0000020",
+          "DUO:0000021",
+          "DUO:0000022",
+          "DUO:0000024",
+          "DUO:0000025",
+          "DUO:0000026",
+          "DUO:0000027",
+          "DUO:0000028",
+          "DUO:0000029",
+          "DUO:0000042",
+          "DUO:0000043",
+          "DUO:0000044",
+          "DUO:0000045",
+          "DUO:0000046",
+          "DUOPlus1",
+          "DUOPlus2",
+          "DUOPlus3",
+          "DUOPlus4",
+          "DUOPlus5",
+          "DUOPlus6",
+          "DUOPlus7",
+          "PendingAnnotation"
+        ],
+        "type": "string"
+      },
+      "title": "dataCatalogDataUseModifiers",
+      "type": "array"
+    },
     "DataCatalogId": {
       "description": "Unique ID associated with a Data Catalog entry, used as a key for record linking and updates.",
       "pattern": "^syn\\d{7,8}$",
       "title": "DataCatalog_id",
       "type": "string"
     },
-    "DataUseModifiersCatalog": {
-      "description": "List of data use ontology (DUO) terms that are true for dataset, which describes the allowable scope and terms for data use. Omit property if not applicable/unknown.",
+    "DataCatalogLicense": {
+      "description": "The terms and conditions underwhich the data are allowed to be accessed and used. Unless information for license is clear, this should default to UNKNOWN.",
+      "enum": [
+        "Apache2",
+        "BSD3Clause",
+        "CC0",
+        "CCBY",
+        "CCBYNC",
+        "CCBYNCND",
+        "CCBYNCSA",
+        "CCBYND",
+        "CCBYSA",
+        "GPL3",
+        "MIT"
+      ],
+      "title": "dataCatalogLicense"
+    },
+    "DataPermission": {
+      "description": "The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.",
       "items": {
+        "enum": [
+          "Agreement",
+          "Attestation",
+          "Award",
+          "Other"
+        ],
         "type": "string"
       },
-      "title": "dataUseModifiersCatalog",
+      "title": "dataPermission",
+      "type": "array"
+    },
+    "DataTier": {
+      "description": "The tier of data access associated with the access requirement. Equivalent to DUOPlus5.",
+      "items": {
+        "enum": [
+          "Anonymous",
+          "Controlled",
+          "Open",
+          "Private"
+        ],
+        "type": "string"
+      },
+      "title": "dataTier",
+      "type": "array"
+    },
+    "DataType": {
+      "description": "Broad data-type category for the dataset (e.g. gene expression, chromatin activity, genomic variants). Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv's label taxonomy.",
+      "items": {
+        "enum": [
+          "Chromatinactivity",
+          "Geneexpression",
+          "Genomicvariants",
+          "Image",
+          "Immunoassay",
+          "Network",
+          "Nucleicacidsequencerecord"
+        ],
+        "type": "string"
+      },
+      "title": "dataType",
       "type": "array"
     },
     "DatasetViewKey": {
@@ -335,9 +843,34 @@
       "title": "datePublished",
       "type": "number"
     },
+    "DeidentificationType": {
+      "description": "The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.",
+      "items": {
+        "enum": [
+          "Automatic",
+          "Manual",
+          "NotApplicable",
+          "Semiautomatic"
+        ],
+        "type": "string"
+      },
+      "title": "deidentificationType",
+      "type": "array"
+    },
     "Description": {
       "description": "A text description of the dataset. Can be identifical to Dataset Description.",
       "title": "description",
+      "type": "string"
+    },
+    "DiseaseFocus": {
+      "description": "Disease area the dataset focuses on, as annotated directly on the Synapse Dataset entity. Not populated in current practice.",
+      "title": "diseaseFocus",
+      "type": "string"
+    },
+    "DiseaseSpecificResearch": {
+      "description": "The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list. MONDO terms can be found here: https://ols.monarchinitiative.org/ontologies/mondo",
+      "pattern": "MONDO:\\d{7}",
+      "title": "diseaseSpecificResearch",
       "type": "string"
     },
     "Doi": {
@@ -346,16 +879,317 @@
       "title": "doi",
       "type": "string"
     },
+    "DownloadType": {
+      "description": "Hosting type for the dataset's files, as annotated directly on the Synapse Dataset entity (distinct from the CCKP portal's own DatasetView.downloadType column).",
+      "enum": [
+        "SynapseHosted",
+        "SynapseIndexed"
+      ],
+      "title": "downloadType"
+    },
+    "ExternalRepositoryUri": {
+      "description": "External repository identifier(s) for the dataset, as CURIE-shaped references (e.g. geo:GSE12345, sra:SRP12345, bioproject:PRJNA12345).",
+      "items": {
+        "type": "string"
+      },
+      "title": "externalRepositoryUri",
+      "type": "array"
+    },
     "Funder": {
       "description": "The entity(ies) responsible for funding the data contributors.",
       "items": {
         "enum": [
-          "NIH"
+          "BroadInstitute",
+          "CenterforBiomedicalInformaticsandInformationTechnology",
+          "CenterforInheritedDiseaseResearch",
+          "DepartmentofDefense",
+          "DivisionofCancerControlandPopulationSciences",
+          "EvelynH.LauderFounder’sFundforMetastaticBreastCancerResearch",
+          "FoodandDrugAdministration",
+          "FoundationMedicineInc",
+          "GeorgetownLombardiComprehensiveCancerCenter",
+          "KnightCancerInstitute",
+          "LeukemiaandLymphomaSociety",
+          "MultipleMyelomaResearchFoundation",
+          "NCICenterforCancerResearch",
+          "NationalCancerInstitute",
+          "NationalClinicalTrialsNetwork",
+          "NationalInstitutesofHealth",
+          "NationalLibraryofMedicine",
+          "ProteogenomicTranslationalResearchCenters",
+          "PurdueUniversityCenterforCancerResearch",
+          "TransplantRecipientsInternationalOrganization",
+          "UNCLinebergerComprehensiveCancerCenter"
         ],
         "type": "string"
       },
       "title": "funder",
       "type": "array"
+    },
+    "GeographicalRestriction": {
+      "description": "The specific geographic region(s) to which use is limited by the access requirement.",
+      "items": {
+        "enum": [
+          "AD",
+          "AE",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AR",
+          "AS",
+          "AT",
+          "AU",
+          "AW",
+          "AX",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BF",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BO",
+          "BQ",
+          "BR",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BY",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CH",
+          "CI",
+          "CK",
+          "CL",
+          "CM",
+          "CN",
+          "CO",
+          "CR",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "EH",
+          "ER",
+          "ES",
+          "ET",
+          "FI",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GM",
+          "GN",
+          "GP",
+          "GQ",
+          "GR",
+          "GS",
+          "GT",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HM",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IQ",
+          "IR",
+          "IS",
+          "IT",
+          "JE",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KP",
+          "KR",
+          "KW",
+          "KY",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "LY",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MR",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NP",
+          "NR",
+          "NU",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PF",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PM",
+          "PN",
+          "PR",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RE",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SD",
+          "SE",
+          "SG",
+          "SH",
+          "SI",
+          "SJ",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SO",
+          "SR",
+          "SS",
+          "ST",
+          "SV",
+          "SX",
+          "SY",
+          "SZ",
+          "TC",
+          "TD",
+          "TF",
+          "TG",
+          "TH",
+          "TJ",
+          "TK",
+          "TL",
+          "TM",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "UM",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VC",
+          "VE",
+          "VG",
+          "VI",
+          "VN",
+          "VU",
+          "WF",
+          "WS",
+          "YE",
+          "YT",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "type": "string"
+      },
+      "title": "geographicalRestriction",
+      "type": "array"
+    },
+    "GrantNumber": {
+      "description": "Number of the grant (i.e. \"CA------\" format)",
+      "pattern": "^CA\\d{6}$",
+      "title": "Grant Number",
+      "type": "string"
     },
     "GrantViewKey": {
       "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
@@ -368,10 +1202,16 @@
       "title": "includedInDataCatalog",
       "type": "string"
     },
-    "Individuals": {
+    "IndividualCount": {
       "description": "The number of participants or samples associated with the files in the dataset. Can be identical to Study Number of Participants or DSP Number of Participants",
-      "title": "individuals",
+      "title": "individualCount",
       "type": "number"
+    },
+    "InstitutionSpecificRestriction": {
+      "description": "Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list. ROR IDs can be found here: https://ror.org/search",
+      "pattern": "ROR:[a-z0-9]{9}",
+      "title": "institutionSpecificRestriction",
+      "type": "string"
     },
     "Keywords": {
       "description": "Keywords associated with the dataset. Can be identical to Publication Keywords.",
@@ -385,17 +1225,342 @@
       "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
       "items": {
         "enum": [
+          "AAL",
+          "ADSL",
+          "AFL-1.1",
+          "AFL-1.2",
+          "AFL-2.0",
+          "AFL-2.1",
+          "AFL-3.0",
+          "AGPL-1.0",
+          "AGPL-3.0",
+          "AMDPLPA",
+          "AML",
+          "AMPAS",
+          "ANTLR-PD",
+          "APAFML",
+          "APL-1.0",
+          "APSL-1.0",
+          "APSL-1.1",
+          "APSL-1.2",
+          "APSL-2.0",
+          "Abstyles",
+          "Adobe-2006",
+          "Adobe-Glyph",
+          "Afmparse",
+          "Aladdin",
+          "Apache-1.0",
+          "Apache-1.1",
+          "Apache-2.0",
           "Apache2",
+          "Artistic-1.0",
+          "Artistic-1.0-Perl",
+          "Artistic-1.0-cl8",
+          "Artistic-2.0",
+          "BSD-2-Clause",
+          "BSD-2-Clause-FreeBSD",
+          "BSD-2-Clause-NetBSD",
+          "BSD-3-Clause",
+          "BSD-3-Clause-Attribution",
+          "BSD-3-Clause-Clear",
+          "BSD-3-Clause-LBNL",
+          "BSD-3-Clause-No-Nuclear-License",
+          "BSD-3-Clause-No-Nuclear-License-2014",
+          "BSD-3-Clause-No-Nuclear-Warranty",
+          "BSD-4-Clause",
+          "BSD-4-Clause-UC",
+          "BSD-Protection",
+          "BSD-Source-Code",
+          "BSD-style",
           "BSD3Clause",
+          "BSL-1.0",
+          "Bahyph",
+          "Barr",
+          "Beerware",
+          "BitTorrent-1.0",
+          "BitTorrent-1.1",
+          "Borceux",
+          "Bzip2-1.0.5",
+          "Bzip2-1.0.6",
+          "CATOSL-1.1",
+          "CC-BY-1.0",
+          "CC-BY-2.0",
+          "CC-BY-2.5",
+          "CC-BY-3.0",
+          "CC-BY-4.0",
+          "CC-BY-NC-1.0",
+          "CC-BY-NC-2.0",
+          "CC-BY-NC-2.5",
+          "CC-BY-NC-3.0",
+          "CC-BY-NC-4.0",
+          "CC-BY-NC-ND-1.0",
+          "CC-BY-NC-ND-2.0",
+          "CC-BY-NC-ND-2.5",
+          "CC-BY-NC-ND-3.0",
+          "CC-BY-NC-ND-4.0",
+          "CC-BY-NC-SA-1.0",
+          "CC-BY-NC-SA-2.0",
+          "CC-BY-NC-SA-2.5",
+          "CC-BY-NC-SA-3.0",
+          "CC-BY-NC-SA-4.0",
+          "CC-BY-ND-1.0",
+          "CC-BY-ND-2.0",
+          "CC-BY-ND-2.5",
+          "CC-BY-ND-3.0",
+          "CC-BY-ND-4.0",
+          "CC-BY-SA-1.0",
+          "CC-BY-SA-2.0",
+          "CC-BY-SA-2.5",
+          "CC-BY-SA-3.0",
+          "CC-BY-SA-4.0",
           "CC0",
+          "CC0-1.0",
           "CCBY",
           "CCBYNC",
           "CCBYNCND",
           "CCBYNCSA",
           "CCBYND",
           "CCBYSA",
+          "CDDL-1.0",
+          "CDDL-1.1",
+          "CECILL-1.0",
+          "CECILL-1.1",
+          "CECILL-2.0",
+          "CECILL-2.1",
+          "CECILL-B",
+          "CECILL-C",
+          "CNRI-Jython",
+          "CNRI-Python",
+          "CNRI-Python-GPL-Compatible",
+          "CPAL-1.0",
+          "CPL-1.0",
+          "CPOL-1.02",
+          "CUA-OPL-1.0",
+          "Caldera",
+          "ClArtistic",
+          "Condor-1.1",
+          "Crossword",
+          "CrystalStacker",
+          "Cube",
+          "Curl",
+          "D-FSL-1.0",
+          "DOC",
+          "DSDP",
+          "Diffmark",
+          "Dotseqn",
+          "Dvipdfm",
+          "ECL-1.0",
+          "ECL-2.0",
+          "EFL-1.0",
+          "EFL-2.0",
+          "EGenix",
+          "EPL-1.0",
+          "EUDatagrid",
+          "EUPL-1.0",
+          "EUPL-1.1",
+          "Entessa",
+          "ErlPL-1.1",
+          "Eurosym",
+          "FSFAP",
+          "FSFUL",
+          "FSFULLR",
+          "FTL",
+          "Fair",
+          "Frameworx-1.0",
+          "FreeImage",
+          "Freeware",
+          "GFDL-1.1",
+          "GFDL-1.2",
+          "GFDL-1.3",
+          "GL2PS",
+          "GPL-1.0",
+          "GPL-2.0",
+          "GPL-3.0",
           "GPL3",
-          "MIT"
+          "GSOAP-1.3b",
+          "Giftware",
+          "Glide",
+          "Glulxe",
+          "Gnuplot",
+          "HPND",
+          "HaskellReport",
+          "IBM-pibs",
+          "ICU",
+          "IJG",
+          "IMatix",
+          "IPA",
+          "IPL-1.0",
+          "ISC",
+          "ImageMagick",
+          "Imlib2",
+          "Info-ZIP",
+          "Intel",
+          "Intel-ACPI",
+          "Interbase-1.0",
+          "JSON",
+          "JasPer-2.0",
+          "LAL-1.2",
+          "LAL-1.3",
+          "LGPL-2.0",
+          "LGPL-2.1",
+          "LGPL-3.0",
+          "LGPLLR",
+          "LPL-1.0",
+          "LPL-1.02",
+          "LPPL-1.0",
+          "LPPL-1.1",
+          "LPPL-1.2",
+          "LPPL-1.3a",
+          "LPPL-1.3c",
+          "Latex2e",
+          "Leptonica",
+          "LiLiQ-P-1.1",
+          "LiLiQ-R-1.1",
+          "LiLiQ-Rplus-1.1",
+          "Libpng",
+          "Libtiff",
+          "MIT",
+          "MIT-CMU",
+          "MIT-advertising",
+          "MIT-enna",
+          "MIT-feh",
+          "MITNFA",
+          "MPL-1.0",
+          "MPL-1.1",
+          "MPL-2.0",
+          "MPL-2.0-no-copyleft-exception",
+          "MS-PL",
+          "MS-RL",
+          "MTLL",
+          "MakeIndex",
+          "MirOS",
+          "Motosoto",
+          "Mpich2",
+          "Multics",
+          "Mup",
+          "NASA-1.3",
+          "NBPL-1.0",
+          "NCSA",
+          "NGPL",
+          "NLOD-1.0",
+          "NLPL",
+          "NOSL",
+          "NPL-1.0",
+          "NPL-1.1",
+          "NPOSL-3.0",
+          "NRL",
+          "NTP",
+          "Naumen",
+          "NetCDF",
+          "Newsletr",
+          "Nokia",
+          "Notlicensed",
+          "Noweb",
+          "Nunit",
+          "OCCT-PL",
+          "OCLC-2.0",
+          "ODbL-1.0",
+          "OFL-1.0",
+          "OFL-1.1",
+          "OGTSL",
+          "OLDAP-1.1",
+          "OLDAP-1.2",
+          "OLDAP-1.3",
+          "OLDAP-1.4",
+          "OLDAP-2.0",
+          "OLDAP-2.0.1",
+          "OLDAP-2.1",
+          "OLDAP-2.2",
+          "OLDAP-2.2.1",
+          "OLDAP-2.2.2",
+          "OLDAP-2.3",
+          "OLDAP-2.4",
+          "OLDAP-2.5",
+          "OLDAP-2.6",
+          "OLDAP-2.7",
+          "OLDAP-2.8",
+          "OML",
+          "OPL-1.0",
+          "OSET-PL-2.1",
+          "OSL-1.0",
+          "OSL-1.1",
+          "OSL-2.0",
+          "OSL-2.1",
+          "OSL-3.0",
+          "OpenSSL",
+          "Other",
+          "PDDL-1.0",
+          "PHP-3.0",
+          "PHP-3.01",
+          "Plexus",
+          "PostgreSQL",
+          "Proprietary",
+          "Psfrag",
+          "Psutils",
+          "Python-2.0",
+          "QPL-1.0",
+          "Qhull",
+          "RHeCos-1.1",
+          "RPL-1.1",
+          "RPL-1.5",
+          "RPSL-1.0",
+          "RSA-MD",
+          "RSCPL",
+          "Rdisc",
+          "Ruby",
+          "SAX-PD",
+          "SCEA",
+          "SGI-B-1.0",
+          "SGI-B-1.1",
+          "SGI-B-2.0",
+          "SISSL",
+          "SISSL-1.2",
+          "SMLNJ",
+          "SMPPL",
+          "SNIA",
+          "SPL-1.0",
+          "SWL",
+          "Saxpath",
+          "Sendmail",
+          "SimPL-2.0",
+          "Sleepycat",
+          "Spencer-86",
+          "Spencer-94",
+          "Spencer-99",
+          "SugarCRM-1.1.3",
+          "TCL",
+          "TMate",
+          "TORQUE-1.1",
+          "TOSL",
+          "UPL-1.0",
+          "Unicode-TOU",
+          "Unlicense",
+          "VOSTROM",
+          "VSL-1.0",
+          "Vim",
+          "W3C",
+          "W3C-19980720",
+          "WTFPL",
+          "Watcom-1.0",
+          "Wsuipa",
+          "X11",
+          "XFree86-1.1",
+          "XSkat",
+          "Xerox",
+          "Xinetd",
+          "Xnet",
+          "Xpp",
+          "YPL-1.0",
+          "YPL-1.1",
+          "ZPL-1.1",
+          "ZPL-2.0",
+          "ZPL-2.1",
+          "Zed",
+          "Zend-2.0",
+          "Zimbra-1.3",
+          "Zimbra-1.4",
+          "Zlib",
+          "Zlib-acknowledgement"
         ],
         "type": "string"
       },
@@ -407,6 +1572,198 @@
       "format": "uri",
       "title": "link",
       "type": "string"
+    },
+    "Manifestation": {
+      "description": "Tumor type or other clinical manifestation associated with the dataset. Can be identical to Dataset Tumor Type.",
+      "enum": [
+        "AcinarCellCarcinoma",
+        "AcuteLymphoblasticLeukemia",
+        "AcuteMonocyticLeukemia",
+        "AcuteMyeloidLeukemia",
+        "AcutePromyelocyticLeukemia",
+        "Adenocarcinoma",
+        "Angiosarcoma",
+        "Astrocytoma",
+        "AtypicalTeratoid/RhabdoidTumor",
+        "B-CellNon-HodgkinLymphoma",
+        "BAcuteLymphoblasticLeukemia",
+        "BarrettEsophagus",
+        "Basal-LikeBreastCarcinoma",
+        "BasalCellNeoplasm",
+        "BiliaryTractCarcinoma",
+        "BladderCarcinoma",
+        "BladderNeoplasm",
+        "BoneNeoplasm",
+        "BrainNeoplasm",
+        "BreastAdenocarcinoma",
+        "BreastCarcinoma",
+        "BreastNeoplasm",
+        "Carcinoma",
+        "CarcinomaInSitu",
+        "Castration-ResistantProstateCarcinoma",
+        "CellularSchwannoma",
+        "CentralNervousSystemCavernousHemangioma",
+        "CentralNervousSystemNeoplasm",
+        "CerebellarNeoplasm",
+        "CervicalCarcinoma",
+        "CervicalNeoplasm",
+        "CervicalSmallCellCarcinoma",
+        "Cholangiocarcinoma",
+        "Chondroblastoma",
+        "Choriocarcinoma",
+        "ChronicLymphocyticLeukemia",
+        "ChronicMyeloidLeukemia",
+        "ClearCellRenalCellCarcinoma",
+        "ColonAdenocarcinoma",
+        "ColonCarcinoma",
+        "ColorectalAdenocarcinoma",
+        "ColorectalAdenoma",
+        "ColorectalCarcinoma",
+        "ColorectalNeoplasm",
+        "CombinedHepatocellularCarcinomaandCholangiocarcinoma",
+        "Craniopharyngioma",
+        "CutaneousMelanoma",
+        "CutaneousTCellLymphoma",
+        "DiffuseLargeB-CellLymphoma",
+        "DuctalBreastCarcinomaInSitu",
+        "DysembryoplasticNeuroepithelialNeoplasm",
+        "EndometrialCarcinoma",
+        "EndometrialNeoplasm",
+        "Ependymoma",
+        "EsophagealAdenocarcinoma",
+        "EsophagealCarcinoma",
+        "EsophagealSquamousCellCarcinoma",
+        "EwingSarcoma",
+        "ExtraventricularNeurocytoma",
+        "FibroepithelialPolyp",
+        "FibrolamellarCarcinoma",
+        "Fibrosarcoma",
+        "FollicularLymphoma",
+        "GallbladderCarcinoma",
+        "GastricAdenocarcinoma",
+        "GastricCarcinoma",
+        "GastricNeoplasm",
+        "GastroesophagealAdenocarcinoma",
+        "GastroesophagealJunctionAdenocarcinoma",
+        "GastrointestinalStromalNeoplasm",
+        "GiantCellTumor",
+        "Glioblastoma",
+        "Glioma",
+        "HeadandNeckCarcinoma",
+        "HeadandNeckNeoplasm",
+        "HeadandNeckSquamousCellCarcinoma",
+        "HepatocellularCarcinoma",
+        "HighGradeOvarianSerousAdenocarcinoma",
+        "HistiocyticSarcoma",
+        "HodgkinLymphoma",
+        "IntestinalNeoplasm",
+        "IntrahepaticCholangiocarcinoma",
+        "InvasiveDuctalBreastCarcinoma",
+        "KaposiSarcoma",
+        "Leiomyoma",
+        "Leukemia",
+        "LiverandIntrahepaticBileDuctCarcinoma",
+        "LiverandIntrahepaticBileDuctNeoplasm",
+        "LowGradeGlioma",
+        "LuminalABreastCarcinoma",
+        "LungAdenocarcinoma",
+        "LungCarcinoma",
+        "LungNeoplasm",
+        "LungNon-SmallCellCarcinoma",
+        "LungSmallCellCarcinoma",
+        "LungSquamousCellCarcinoma",
+        "LymphoidLeukemia",
+        "Lymphoma",
+        "MalignantBrainNeoplasm",
+        "MalignantDigestiveSystemNeoplasm",
+        "MalignantGenitourinarySystemNeoplasm",
+        "MalignantGlioma",
+        "MalignantNeoplasm",
+        "MalignantOvarianNeoplasm",
+        "MalignantPancreaticNeoplasm",
+        "MalignantPeripheralNerveSheathTumor",
+        "MalignantPeritonealNeoplasm",
+        "MalignantSkinNeoplasm",
+        "MantleCellLymphoma",
+        "MarginalZoneLymphoma",
+        "Medulloblastoma",
+        "Melanoma",
+        "Meningioma",
+        "Mesothelioma",
+        "MultipleMyeloma",
+        "MycosisFungoides",
+        "MyeloidLeukemia",
+        "MyeloidNeoplasm",
+        "MyeloproliferativeNeoplasm",
+        "Myoepithelioma",
+        "NasopharyngealCarcinoma",
+        "Neuroblastoma",
+        "NeuroendocrineNeoplasm",
+        "NeuroepithelialNeoplasm",
+        "Neurofibroma",
+        "Non-FunctioningPituitaryGlandAdenoma",
+        "Non-HodgkinLymphoma",
+        "Not-Applicable",
+        "NotApplicable",
+        "OralCavityNeoplasm",
+        "OralCavitySquamousCellCarcinoma",
+        "OropharyngealNeoplasm",
+        "Osteosarcoma",
+        "OvarianAdenosarcoma",
+        "OvarianCarcinoma",
+        "OvarianNeoplasm",
+        "OvarianSerousAdenocarcinoma",
+        "Pan-cancer",
+        "PancreaticAdenocarcinoma",
+        "PancreaticCarcinoma",
+        "PancreaticDuctalAdenocarcinoma",
+        "PancreaticNeoplasm",
+        "PancreaticNeuroendocrineCarcinoma",
+        "PendingAnnotation",
+        "PenileCarcinoma",
+        "Pheochromocytoma",
+        "PilocyticAstrocytoma",
+        "PituitaryGlandAdenoma",
+        "PlasmablasticLymphoma",
+        "Plasmacytoma",
+        "PlexiformNeurofibroma",
+        "PlexiformSchwannoma",
+        "PrecursorB-celllymphoblasticleukemia",
+        "PrimaryCentralNervousSystemLymphoma",
+        "PrimaryMyelofibrosis",
+        "ProstateAdenocarcinoma",
+        "ProstateCarcinoma",
+        "ProstateNeoplasm",
+        "RectalAdenocarcinoma",
+        "RenalCellCarcinoma",
+        "Retinoblastoma",
+        "Rhabdomyosarcoma",
+        "Rosette-FormingGlioneuronalTumor",
+        "SalivaryGlandAdenoidCysticCarcinoma",
+        "Sarcoma",
+        "Schwannoma",
+        "SerousTubalIntraepithelialCarcinoma",
+        "SinonasalSquamousCellCarcinoma",
+        "SkinCarcinoma",
+        "SkinNeoplasm",
+        "SoftTissueSarcoma",
+        "SquamousCellCarcinoma",
+        "SynovialSarcoma",
+        "T-CellLymphoma",
+        "TAcuteLymphoblasticLeukemia",
+        "Teratoma",
+        "TesticularEmbryonalCarcinoma",
+        "ThyroidGlandAnaplasticCarcinoma",
+        "ThyroidGlandCarcinoma",
+        "ThyroidGlandNoninvasiveFollicularNeoplasmwithPapillary-LikeNuclearFeatures",
+        "Triple-NegativeBreastCarcinoma",
+        "UrothelialCarcinoma",
+        "UterineAdenosarcoma",
+        "UvealMelanoma",
+        "UvealNeoplasm",
+        "VascularNeoplasm"
+      ],
+      "title": "manifestation"
     },
     "MeasurementTechnique": {
       "description": "Assay used to generate original data. Omit if not applicable (e.g. for curated dataset such as a list compounds from a database or text extracted from Wikipedia). Can be identical to Dataset Assay.",
@@ -480,6 +1837,7 @@
           "Collision-InducedDissociation",
           "ColorimetricCellViabilityAssay",
           "ComparativeGenomicHybridization",
+          "Compoundscreen",
           "ComputationalModeling",
           "ComputationalTool",
           "ComputedTomography",
@@ -564,6 +1922,7 @@
           "HiChIP",
           "High-ContentScreen",
           "HighThroughputScreening",
+          "Histology",
           "HumanInducedPluripotentStemCell-derivedCardiomyocytesCulture",
           "Hydrogels",
           "HydrophilicInteractionChromatography",
@@ -586,9 +1945,12 @@
           "InVitroTranslation",
           "InVivoBioluminescence",
           "Inductively-CoupledPlasmaMassSpectrometry",
+          "Insilicosynthesis",
           "InterferenceReflectionMicroscopy",
           "IntravitalMicroscopy",
           "InvasionAssay",
+          "InvivoPDXviability",
+          "Invivotumorgrowth",
           "IsothermalTitrationCalorimetry",
           "Karyotyping",
           "Knife-EdgeScanningMicroscopy",
@@ -617,6 +1979,7 @@
           "MathematicalModeling",
           "MeDIP",
           "MeRIP-Seq",
+          "Metabolicscreening",
           "MetaboliteProfilingAssay",
           "MetastaticColonizationAssay",
           "MethylBindingDomainSequencing",
@@ -680,6 +2043,7 @@
           "PrecisionRun-OnSequencing",
           "ProteomicsAssay",
           "ProximityLigationAssay",
+          "Proximityextensionassay",
           "Pull-DownAssay",
           "QFISH",
           "QPCR",
@@ -690,6 +2054,7 @@
           "RIP",
           "RIP-Seq",
           "RNASequencing",
+          "RNAarray",
           "RNAiScreen",
           "RT-PCR",
           "RT-qPCR",
@@ -711,6 +2076,7 @@
           "Second-HarmonicImagingMicroscopy",
           "SeqFISH",
           "ShRNA",
+          "ShRNA-seq",
           "ShotgunMassSpectrometry",
           "SiRNA",
           "Single-CellBCRSequencing",
@@ -734,6 +2100,7 @@
           "SnRNA-seq",
           "SoftAgarAssay",
           "SouthernBlotting",
+          "Spatialtranscriptomics",
           "Spectroscopy",
           "StatisticalModeling",
           "StimulatedEmissionDepletionMicroscopy",
@@ -799,10 +2166,290 @@
       "title": "measurementTechnique",
       "type": "array"
     },
+    "PopulationType": {
+      "description": "The population studied in the research associated with the access requirement. Equivalent to DUOPlus2",
+      "title": "populationType",
+      "type": "string"
+    },
+    "Portal": {
+      "description": "The Sage Bionetworks portal that curated this record (e.g. CCKP). Distinguishes provenance if this vocabulary is ever shared across multiple Sage portals.",
+      "title": "portal",
+      "type": "string"
+    },
+    "PublicationMoratorium": {
+      "description": "End date of the publication moratorium associated with the access requirement.",
+      "format": "date",
+      "title": "publicationMoratorium",
+      "type": "string"
+    },
+    "ResearchSpecificRestrictions": {
+      "description": "Research-specific restrictions associated with the access requirement.",
+      "title": "researchSpecificRestrictions",
+      "type": "string"
+    },
     "Series": {
       "description": "Data series designation (e.g., NF-OSI Processed Data).",
       "title": "series",
       "type": "string"
+    },
+    "SourceGeography": {
+      "description": "The geographical source of the data associated with the access requirement. Equivalent to DUOPlus1.",
+      "items": {
+        "enum": [
+          "AD",
+          "AE",
+          "AF",
+          "AG",
+          "AI",
+          "AL",
+          "AM",
+          "AO",
+          "AQ",
+          "AR",
+          "AS",
+          "AT",
+          "AU",
+          "AW",
+          "AX",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BF",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BL",
+          "BM",
+          "BN",
+          "BO",
+          "BQ",
+          "BR",
+          "BS",
+          "BT",
+          "BV",
+          "BW",
+          "BY",
+          "BZ",
+          "CA",
+          "CC",
+          "CD",
+          "CF",
+          "CG",
+          "CH",
+          "CI",
+          "CK",
+          "CL",
+          "CM",
+          "CN",
+          "CO",
+          "CR",
+          "CU",
+          "CV",
+          "CW",
+          "CX",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "EH",
+          "ER",
+          "ES",
+          "ET",
+          "FI",
+          "FJ",
+          "FK",
+          "FM",
+          "FO",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GF",
+          "GG",
+          "GH",
+          "GI",
+          "GL",
+          "GM",
+          "GN",
+          "GP",
+          "GQ",
+          "GR",
+          "GS",
+          "GT",
+          "GU",
+          "GW",
+          "GY",
+          "HK",
+          "HM",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IM",
+          "IN",
+          "IO",
+          "IQ",
+          "IR",
+          "IS",
+          "IT",
+          "JE",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KP",
+          "KR",
+          "KW",
+          "KY",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "LY",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MF",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MM",
+          "MN",
+          "MO",
+          "MP",
+          "MQ",
+          "MR",
+          "MS",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NC",
+          "NE",
+          "NF",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NP",
+          "NR",
+          "NU",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PF",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PM",
+          "PN",
+          "PR",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RE",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SD",
+          "SE",
+          "SG",
+          "SH",
+          "SI",
+          "SJ",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SO",
+          "SR",
+          "SS",
+          "ST",
+          "SV",
+          "SX",
+          "SY",
+          "SZ",
+          "TC",
+          "TD",
+          "TF",
+          "TG",
+          "TH",
+          "TJ",
+          "TK",
+          "TL",
+          "TM",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "UM",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VC",
+          "VE",
+          "VG",
+          "VI",
+          "VN",
+          "VU",
+          "WF",
+          "WS",
+          "YE",
+          "YT",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "type": "string"
+      },
+      "title": "sourceGeography",
+      "type": "array"
     },
     "Species": {
       "description": "Species of the organism(s) from which the data were generated. Omit property if not applicable, such as for data like compounds or other non-biological data. Can be identical to Dataset Species.",
@@ -812,6 +2459,7 @@
           "Armadillo",
           "AsianElephant",
           "Boar",
+          "Candidaalbicans",
           "Cat",
           "Chicken",
           "Cow",
@@ -823,6 +2471,7 @@
           "Human",
           "HumanCellLine",
           "HumanPatient",
+          "Macacanemestrina",
           "Mouse",
           "Multispecies",
           "NotApplicable",
@@ -830,6 +2479,7 @@
           "Rabbit",
           "Rat",
           "Rhesusmonkey",
+          "Schizosaccharomycespombe",
           "Sheep",
           "Trichoplaxadhaerens",
           "Unknown",
@@ -848,22 +2498,37 @@
       "title": "specimenCount",
       "type": "number"
     },
+    "StudyId": {
+      "description": "Unique row identifier, used as a primary key for record updates.",
+      "title": "Study_id",
+      "type": "string"
+    },
     "StudyKey": {
       "description": "The unique Study_id foreign keys associated with the resource, found in the grant Study information. Used to group the resource with other components. Please provide multiple values as a comma-separated list.",
       "title": "Study Key",
       "type": "string"
     },
     "Subject": {
-      "description": "Applicable subject term(s) for dataset cataloging; use the Library of Congress Subject Headings (LCSH) scheme.",
+      "description": "Applicable subject term(s) for dataset cataloging - in practice, a free-text model-system/specimen descriptor (e.g. C57BL/6, NOD SCID), not a Library of Congress Subject Heading.",
       "items": {
         "type": "string"
       },
       "title": "subject",
       "type": "array"
     },
+    "TimeLimitOnUse": {
+      "description": "Time limit on the use of the data associated with the access requirement.",
+      "title": "timeLimitOnUse",
+      "type": "number"
+    },
     "Title": {
       "description": "The name of the dataset.",
       "title": "title",
+      "type": "string"
+    },
+    "UserSpecificRestriction": {
+      "description": "The user-specific restrictions associated with the access requirement.",
+      "title": "userSpecificRestriction",
       "type": "string"
     },
     "VisualizeDataOn": {
@@ -881,7 +2546,9 @@
   "required": [
     "Creator",
     "DataCatalogId",
+    "GrantNumber",
     "Keywords",
+    "StudyId",
     "Title"
   ],
   "title": "DataCatalog",

@@ -1,0 +1,226 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/props
+name: sage-cdm-props
+title: Sage CDM Reusable Slots and Enumerations
+description: >-
+  Reusable slot definitions (attribute primitives) and shared enumerations that CDM entity
+  classes compose from. Every slot carries a title, a description sourced from the
+  corresponding Confluence entity definition block, and an external standard mapping where
+  one applies.
+
+  Scope note: this file holds primitive slots only — those whose range is a scalar type or
+  a shared enum. Slots whose range is another CDM entity (funding_source, program, project,
+  primary_contact, ...) are defined alongside the class they point AT, not here. Defining
+  them here would require props.yaml to import every entity schema while every entity schema
+  imports props.yaml, which is a circular import LinkML cannot resolve. See the header
+  comment in each entity file for which reference slots it contributes.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788846642/CDM+Modeling+Principles
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+
+# -----------------------------------------------------------------------------
+# Shared enumerations
+# -----------------------------------------------------------------------------
+enums:
+
+  LifecycleStatusEnum:
+    title: Lifecycle Status
+    description: >-
+      Current lifecycle state of a program, project, or study. Shared across the three
+      because all three specs define an identical value set.
+    comments:
+      - PORTAL uses a different value set (active / in_development / retired) and will
+        introduce its own enum under SCDM-2. Do not widen this one to accommodate it.
+    permissible_values:
+      active:
+        description: Currently operating; data contribution or generation ongoing.
+      planned:
+        description: Approved and starting soon, but not yet operational.
+      completed:
+        description: >-
+          Has ended; historical data preserved but no new contribution expected. Use this
+          for "retired" and "wrapped up" as well.
+      on_hold:
+        description: Paused; may resume.
+
+# -----------------------------------------------------------------------------
+# Identity and descriptive slots
+# -----------------------------------------------------------------------------
+slots:
+
+  id:
+    title: Identifier
+    description: >-
+      Stable machine identifier for the entity within the CDM. Must be unique across the
+      CDM. Once assigned, do not change — downstream references depend on it.
+    identifier: true
+    required: true
+    range: string
+    slot_uri: dcterms:identifier
+    exact_mappings:
+      - schema:identifier
+    comments:
+      - >-
+        Each entity applies its own lowercase dot-prefix and pattern via slot_usage, per the
+        CDM naming conventions — e.g. program.amp-ad, org.sage-bionetworks,
+        study.amp-ad.jax-iu-pitt-5xfad.
+      - >-
+        Never a UUID, a Synapse ID, a grant number, a URL, or a display name with spaces or
+        capitals.
+
+  name:
+    title: Name
+    description: >-
+      Human-readable display name, as it appears in official documentation, grant materials,
+      or on the resource itself.
+    required: true
+    range: string
+    slot_uri: dcterms:title
+    exact_mappings:
+      - schema:name
+
+  description:
+    title: Description
+    description: >-
+      One-paragraph plain-language description of the entity's purpose and scope. Typically
+      2-4 sentences.
+    required: true
+    range: string
+    slot_uri: dcterms:description
+    exact_mappings:
+      - schema:description
+    comments:
+      - >-
+        Not marketing copy, not grant boilerplate, and not a list of child entities — those
+        are relationships.
+
+  status:
+    title: Status
+    description: Current lifecycle state of the entity.
+    required: true
+    range: LifecycleStatusEnum
+    comments:
+      - Loosely aligns with ISO 21500 programme lifecycle stages. Never free text.
+
+  url:
+    title: URL
+    description: A fully qualified public https web address for the resource.
+    range: uri
+    slot_uri: dcat:landingPage
+    exact_mappings:
+      - schema:url
+    comments:
+      - >-
+        Never a staging or preview URL, and never one requiring authentication.
+      - >-
+        Declared here because SCDM-5 names it as a shared primitive; PORTAL (SCDM-2) is its
+        first consumer. PROJECT deliberately uses its own website_url slot instead, matching
+        the wording of the PROJECT spec.
+
+# -----------------------------------------------------------------------------
+# Date slots
+# -----------------------------------------------------------------------------
+  start_date:
+    title: Start Date
+    description: >-
+      The date the entity began scientific or data-generating activities. ISO 8601
+      (YYYY-MM-DD).
+    range: date
+    slot_uri: dcterms:temporal
+    exact_mappings:
+      - schema:startDate
+    comments:
+      - >-
+        Not the grant award date, not the date the work was conceived, and not the date of
+        the first planning meeting or sprint.
+      - If the exact date is not recoverable, enter the first of the month and add a note.
+
+  end_date:
+    title: End Date
+    description: >-
+      The date the entity concluded activities. Populated only when status is completed.
+      ISO 8601 (YYYY-MM-DD).
+    range: date
+    slot_uri: dcterms:temporal
+    exact_mappings:
+      - schema:endDate
+    comments:
+      - >-
+        Not a grant expiration date if activities extended beyond it, and never a planned
+        future end date for something still active.
+
+# -----------------------------------------------------------------------------
+# Provenance slots (composed into ProvenanceMixin — see mixins.yaml)
+# -----------------------------------------------------------------------------
+  source:
+    title: Source
+    description: >-
+      The upstream system or process this record was populated from — e.g. a Synapse project
+      table, the Sage Finance program registry, a ROR lookup, or manual curation.
+    range: string
+    slot_uri: dcterms:source
+
+  source_url:
+    title: Source URL
+    description: >-
+      A resolvable address for the specific upstream record this CDM record was populated
+      from, where one exists.
+    range: uri
+    exact_mappings:
+      - schema:url
+
+  created_by:
+    title: Created By
+    description: >-
+      The actor that created this CDM record — a person's identifier string, a service
+      account, or the name of the pipeline that wrote it.
+    range: string
+    slot_uri: dcterms:creator
+    comments:
+      - >-
+        Deliberately a string rather than a reference to PERSON. PERSON is designed to
+        capture identity without resolving it, so the same human may hold several PERSON
+        records; binding provenance to one of them would assert an identity claim the model
+        explicitly declines to make. Revisit once the deferred PERSON matching strategy
+        lands.
+
+  updated_by:
+    title: Updated By
+    description: >-
+      The actor that last modified this CDM record. Same string-not-reference rationale as
+      created_by.
+    range: string
+    slot_uri: dcterms:contributor
+
+  date_created:
+    title: Date Created
+    description: Timestamp at which this CDM record was first created.
+    range: datetime
+    slot_uri: dcterms:created
+    exact_mappings:
+      - schema:dateCreated
+    comments:
+      - >-
+        A record-level system timestamp, not a business date. Business dates (start_date,
+        end_date, launch_date) are plain ISO 8601 dates per the CDM naming conventions;
+        these provenance stamps carry a time component.
+
+  date_updated:
+    title: Date Updated
+    description: Timestamp at which this CDM record was last modified.
+    range: datetime
+    slot_uri: dcterms:modified
+    exact_mappings:
+      - schema:dateModified

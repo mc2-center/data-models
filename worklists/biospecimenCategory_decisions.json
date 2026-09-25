@@ -1,0 +1,101 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Analyte",
+    "ontology_identifier": "NCIT:C128639",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C128639",
+    "label": "Analyte",
+    "description": "The sample or material being subjected to analysis.",
+    "verification": {"verdict": "match", "note": "Exact label match. NCIT definition fits the biospecimen-category sense: a molecular or physical extract from a primary specimen prepared for analysis."}
+  },
+  {
+    "row_index": 1,
+    "term": "Ascites",
+    "ontology_identifier": "NCIT:C159203",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C159203",
+    "label": "Ascites Fluid Sample",
+    "description": "A biospecimen of ascitic fluid.",
+    "verification": {"verdict": "match", "note": "Exact specimen sense. NCIT C159203 is a Body Fluid Specimen child representing ascitic fluid biospecimen — correct in context."}
+  },
+  {
+    "row_index": 2,
+    "term": "Blood",
+    "ontology_identifier": "NCIT:C17610",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17610",
+    "label": "Blood Sample",
+    "description": "A small volume of blood removed for testing or storage.",
+    "verification": {"verdict": "match", "note": "Exact label synonym match. NCIT C17610 is the canonical blood biospecimen class; definition fits the specimen/body-substance sense."}
+  },
+  {
+    "row_index": 3,
+    "term": "Bone Marrow",
+    "ontology_identifier": "NCIT:C164009",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C164009",
+    "label": "Bone Marrow Sample",
+    "description": "A biological sample containing components collected from bone marrow of an experimental subject.",
+    "verification": {"verdict": "match", "note": "Exact concept match. C164009 is a direct child of NCIT Biospecimen, representing a bone marrow sample."}
+  },
+  {
+    "row_index": 4,
+    "term": "Cells",
+    "ontology_identifier": "NCIT:C192998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C192998",
+    "label": "Cell Specimen",
+    "description": "A biospecimen comprised of purified or partially-purified cells.",
+    "verification": {"verdict": "match", "note": "Closest NCIT concept for a cellular biospecimen category. C192998 is the parent of single-cell and bulk-cell specimen types; definition fits 'Cells' as a biospecimen category."}
+  },
+  {
+    "row_index": 5,
+    "term": "Fluids",
+    "ontology_identifier": "NCIT:C204466",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204466",
+    "label": "Body Fluid Specimen",
+    "description": "A biospecimen that consists of a body fluid.",
+    "verification": {"verdict": "partial", "note": "C204466 is the NCIT parent class for all body fluid biospecimens (Blood, Urine, Sputum, Ascites are all children). 'Fluids' as a biospecimen category maps correctly to this concept, though it is the broader class rather than a specific fluid type."}
+  },
+  {
+    "row_index": 6,
+    "term": "Mouth Rinse",
+    "ontology_identifier": "NCIT:C198712",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C198712",
+    "label": "Mouth Rinse Specimen",
+    "description": "A sample consisting of biological material from the buccal cavity, collected by introducing a solution into the mouth, swishing, and collecting the rinse.",
+    "verification": {"verdict": "match", "note": "Exact label match. Only term in NCIT for this concept; definition matches precisely."}
+  },
+  {
+    "row_index": 7,
+    "term": "Sputum",
+    "ontology_identifier": "NCIT:C189124",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C189124",
+    "label": "Sputum Sample",
+    "description": "A respiratory biospecimen obtained via expectoration.",
+    "verification": {"verdict": "match", "note": "Exact label synonym match. Only NCIT sputum specimen term; definition fits the biospecimen-category sense."}
+  },
+  {
+    "row_index": 8,
+    "term": "Stool",
+    "ontology_identifier": "UBERON:0001988",
+    "ontology_url": "http://purl.obolibrary.org/obo/UBERON_0001988",
+    "label": "feces",
+    "description": "Portion of semisolid bodily waste discharged through the anus.",
+    "verification": {"verdict": "partial", "note": "No NCIT specimen term for stool/feces exists. UBERON:0001988 represents the substance (feces) rather than a specimen of it, but is the best available match across all surveyed ontologies. Human review recommended to confirm UBERON is acceptable or to substitute a preferred local term."}
+  },
+  {
+    "row_index": 9,
+    "term": "Tissue",
+    "ontology_identifier": "NCIT:C19697",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19697",
+    "label": "Tissue Sample",
+    "description": "A piece of tissue removed from an organism for examination, analysis, or propagation.",
+    "verification": {"verdict": "match", "note": "Exact label synonym match. C19697 is the canonical NCIT tissue biospecimen class; definition fits the specimen/category sense."}
+  },
+  {
+    "row_index": 10,
+    "term": "Urine",
+    "ontology_identifier": "NCIT:C189126",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C189126",
+    "label": "Urine Sample",
+    "description": "A biospecimen obtained from urine.",
+    "verification": {"verdict": "match", "note": "Exact label synonym match. C189126 is the canonical NCIT urine specimen class."}
+  }
+]}

@@ -1,0 +1,20 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Mean",
+    "ontology_identifier": "NCIT:C53319",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C53319",
+    "label": "Arithmetic Mean",
+    "description": "The sum of a set of values divided by the number of values in the set.",
+    "verification": {"verdict": "match", "note": "NCIT:C53319 Arithmetic Mean; exact sense matches the statistical summary stat context."}
+  },
+  {
+    "row_index": 1,
+    "term": "Median",
+    "ontology_identifier": "NCIT:C28007",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28007",
+    "label": "Median",
+    "description": "The value which has an equal number of values greater and less than it.",
+    "verification": {"verdict": "match", "note": "NCIT:C28007 Median; exact label and sense match."}
+  }
+]}

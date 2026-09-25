@@ -1,0 +1,56 @@
+{"decisions": [
+  {
+    "row_index": 1,
+    "term": "Tumor Free",
+    "ontology_identifier": "NCIT:C156848",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156848",
+    "label": "Tumor Free",
+    "description": "There is no evidence of a tumor in the individual.",
+    "verification": {"verdict": "match", "note": "NCIT:C156848 Tumor Free; exact label match. Part of the NCIT Tumor Status hierarchy."}
+  },
+  {
+    "row_index": 2,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 4,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 5,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 8,
+    "term": "Localized Disease",
+    "ontology_identifier": "NCIT:C36162",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C36162",
+    "label": "Localized Disease",
+    "description": "A disease that is confined to a specific organ or tissue and has not spread to other anatomic sites.",
+    "verification": {"verdict": "match", "note": "NCIT:C36162 Localized Disease; exact label match."}
+  },
+  {
+    "row_index": 10,
+    "term": "New Tumor Event",
+    "ontology_identifier": "NCIT:C200667",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C200667",
+    "label": "New Tumor Event",
+    "description": "The presence of a primary, recurrent or metastatic neoplasm which has not been previously noted.",
+    "verification": {"verdict": "match", "note": "NCIT:C200667 New Tumor Event; exact label match."}
+  }
+]}

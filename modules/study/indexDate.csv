@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Diagnosis Date ,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,,,,
-Enrollment Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,,,,
-Collection Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,,,,
-Birth Date,,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,,,,
+Diagnosis Date ,The date on which a diagnosis of disease was made.,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,NCIT:C164339,http://purl.obolibrary.org/obo/NCIT_C164339,C164339,
+Enrollment Date,The date a subject is formally enrolled in a study.,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,NCIT:C222473,http://purl.obolibrary.org/obo/NCIT_C222473,C222473,
+Collection Date,The date on which the sample or data was collected.,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,NCIT:C81286,http://purl.obolibrary.org/obo/NCIT_C81286,C81286,
+Birth Date,The calendar date on which a person was born.,,,FALSE,,Study Index Date,,CDS v5.0.4/Study-index_date,,,NCIT:C68615,http://purl.obolibrary.org/obo/NCIT_C68615,C68615,

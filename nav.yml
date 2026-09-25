@@ -11,6 +11,7 @@ Data Models:
       - Person: model/person.md
   - Resource Sharing Data Model:
       - Dataset: model/dataset.md
+      - Data Catalog: model/dataCatalog.md
       - Dataset Sharing Plan: model/DataDSP.md
       - Education Resource: model/education.md
       - File: model/file.md

@@ -1,0 +1,8 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/resource_primary_format.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Audio	Audio	skos:exactMatch	https://w3id.org/evorao/Audio	semapv:ManualMappingCuration
+Video	Video	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C91063	semapv:ManualMappingCuration

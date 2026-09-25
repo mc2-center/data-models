@@ -1,0 +1,6192 @@
+{
+  "88": {
+    "CRDC Name": "ECOG Performance Status Score",
+    "permissible_values": [
+      {
+        "value": "0",
+        "long_name": "Fully active, able to carry on all pre-disease performance without restriction.",
+        "concept_code": "C105722"
+      },
+      {
+        "value": "1",
+        "long_name": "Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light housework, office work.",
+        "concept_code": "C105723"
+      },
+      {
+        "value": "2",
+        "long_name": "Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours.",
+        "concept_code": "C105725"
+      },
+      {
+        "value": "3",
+        "long_name": "Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours.",
+        "concept_code": "C105726"
+      },
+      {
+        "value": "4",
+        "long_name": "Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair.",
+        "concept_code": "C105727"
+      },
+      {
+        "value": "5",
+        "long_name": "Dead",
+        "concept_code": "C105720"
+      }
+    ]
+  },
+  "2003853": {
+    "CRDC Name": "Karnofsky Performance Status Score",
+    "permissible_values": [
+      {
+        "value": "100",
+        "long_name": "Normal, no complaints, no evidence of disease",
+        "concept_code": "C105707"
+      },
+      {
+        "value": "90",
+        "long_name": "Able to carry on normal activity; minor signs or symptoms of disease",
+        "concept_code": "C105709"
+      },
+      {
+        "value": "80",
+        "long_name": "Normal activity with effort; some signs or symptoms of disease",
+        "concept_code": "C105710"
+      },
+      {
+        "value": "70",
+        "long_name": "Cares for self, unable to carry on normal activity or to do active work",
+        "concept_code": "C105711"
+      },
+      {
+        "value": "60",
+        "long_name": "Requires occasional assistance, but is able to care for most of his/her needs",
+        "concept_code": "C105712"
+      },
+      {
+        "value": "50",
+        "long_name": "Requires considerable assistance and frequent medical care",
+        "concept_code": "C105713"
+      },
+      {
+        "value": "40",
+        "long_name": "Disabled, requires special care and assistance",
+        "concept_code": "C105714"
+      },
+      {
+        "value": "30",
+        "long_name": "Severely disabled, hospitalization indicated. Death not imminent",
+        "concept_code": "C105715"
+      },
+      {
+        "value": "20",
+        "long_name": "Very sick, hospitalization indicated. Death not imminent",
+        "concept_code": "C105716"
+      },
+      {
+        "value": "10",
+        "long_name": "Moribund, fatal processes progressing rapidly",
+        "concept_code": "C105718"
+      },
+      {
+        "value": "0",
+        "long_name": "Dead",
+        "concept_code": "C105720"
+      }
+    ]
+  },
+  "2006475": {
+    "CRDC Name": "Person Genealogy Suffix Code",
+    "permissible_values": [
+      {
+        "value": "II",
+        "long_name": "Second: C49463",
+        "concept_code": "C49463"
+      },
+      {
+        "value": "III",
+        "long_name": "Third",
+        "concept_code": "C49464"
+      },
+      {
+        "value": "IV",
+        "long_name": "Fourth",
+        "concept_code": "C49465"
+      },
+      {
+        "value": "Jr.",
+        "long_name": "Junior",
+        "concept_code": "C49466"
+      },
+      {
+        "value": "Sr.",
+        "long_name": "Senior",
+        "concept_code": "C49467"
+      },
+      {
+        "value": "I",
+        "long_name": "First",
+        "concept_code": "C25509"
+      }
+    ]
+  },
+  "2192199": {
+    "CRDC Name": "Subject Race",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "American Indian or Alaska Native",
+        "long_name": "American Indian or Alaska Native ",
+        "concept_code": "C41259"
+      },
+      {
+        "value": "Native Hawaiian or other Pacific Islander",
+        "long_name": "Native Hawaiian or Other Pacific Islander",
+        "concept_code": "C41219"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Asian",
+        "long_name": "Asian",
+        "concept_code": "C41260"
+      },
+      {
+        "value": "White",
+        "long_name": "White",
+        "concept_code": "C41261"
+      },
+      {
+        "value": "Black or African American",
+        "long_name": "Black or African American ",
+        "concept_code": "C16352"
+      },
+      {
+        "value": "Not allowed to collect",
+        "long_name": "Not Allowed To Collect",
+        "concept_code": "C141478"
+      }
+    ]
+  },
+  "2192217": {
+    "CRDC Name": "Subject Reported Ethnicity",
+    "permissible_values": [
+      {
+        "value": "Hispanic or Latino",
+        "long_name": "Hispanic or Latino",
+        "concept_code": "C17459"
+      },
+      {
+        "value": "Not Hispanic or Latino",
+        "long_name": "Not Hispanic or Latino",
+        "concept_code": "C41222"
+      },
+      {
+        "value": "Not reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not allowed to collect",
+        "long_name": "Not Allowed To Collect",
+        "concept_code": "C141478"
+      }
+    ]
+  },
+  "2201713": {
+    "CRDC Name": "Person Role Type",
+    "permissible_values": [
+      {
+        "value": "Radiation Oncologist",
+        "long_name": "Radiation Oncologist",
+        "concept_code": "C17833"
+      },
+      {
+        "value": "Project Coordinator",
+        "long_name": "Project Coordinator",
+        "concept_code": "C51851"
+      },
+      {
+        "value": "Referring Pathologist",
+        "long_name": "Referring Pathologist",
+        "concept_code": "C51859"
+      },
+      {
+        "value": "Regulatory Coordinator",
+        "long_name": "Regulatory Coordinator",
+        "concept_code": "C51862"
+      },
+      {
+        "value": "Representative Investigator",
+        "long_name": "Representative Investigator",
+        "concept_code": null
+      },
+      {
+        "value": "Research Clinician",
+        "long_name": "Research Clinician",
+        "concept_code": "C51863"
+      },
+      {
+        "value": "Research Nurse",
+        "long_name": "Research Nurse",
+        "concept_code": "C51864"
+      },
+      {
+        "value": "Registrar",
+        "long_name": "Tumor Registrar",
+        "concept_code": "C25357"
+      },
+      {
+        "value": "Surgeon",
+        "long_name": "Surgeon",
+        "concept_code": "C18071"
+      },
+      {
+        "value": "Research Pathologist",
+        "long_name": "Research Pathologist",
+        "concept_code": null
+      },
+      {
+        "value": "Reviewing Radiologist",
+        "long_name": "Reviewing Radiologist",
+        "concept_code": "C51868"
+      },
+      {
+        "value": "Site Representative Investigator",
+        "long_name": "Site Representative Investigator",
+        "concept_code": "C51875"
+      },
+      {
+        "value": "Sponsor/Medical Expert",
+        "long_name": "Sponsor/Medical Expert",
+        "concept_code": null
+      },
+      {
+        "value": "Statistician",
+        "long_name": "Statistician",
+        "concept_code": "C51877"
+      },
+      {
+        "value": "Study Chairperson",
+        "long_name": "Study Chairperson",
+        "concept_code": "C51878"
+      },
+      {
+        "value": "Study Coordinator",
+        "long_name": "Study Coordinator",
+        "concept_code": "C51880"
+      },
+      {
+        "value": "Community Educator",
+        "long_name": "Community Educator",
+        "concept_code": "C51813"
+      },
+      {
+        "value": "Guardian",
+        "long_name": "Guardian",
+        "concept_code": "C51828"
+      },
+      {
+        "value": "Laboratory Director",
+        "long_name": "Laboratory Director",
+        "concept_code": "C51829"
+      },
+      {
+        "value": "Laboratory Technologist",
+        "long_name": "Laboratory Technologist",
+        "concept_code": "C51830"
+      },
+      {
+        "value": "Lead Drug Monitor",
+        "long_name": "Lead Drug Monitor",
+        "concept_code": "C51831"
+      },
+      {
+        "value": "Legal Representative of the Sponsor",
+        "long_name": "Legal Representative of the Sponsor",
+        "concept_code": "C51832"
+      },
+      {
+        "value": "Neuropathologist",
+        "long_name": "Neuropathologist",
+        "concept_code": "C51837"
+      },
+      {
+        "value": "Pharmaceutical Liaison",
+        "long_name": "Pharmaceutical Liaison",
+        "concept_code": "C51839"
+      },
+      {
+        "value": "Pharmacologist",
+        "long_name": "Pharmacologist",
+        "concept_code": "C51841"
+      },
+      {
+        "value": "Physicist",
+        "long_name": "Physicist",
+        "concept_code": "C53446"
+      },
+      {
+        "value": "Population Member",
+        "long_name": "Population Member",
+        "concept_code": "C51844"
+      },
+      {
+        "value": "Practitioner Assigned",
+        "long_name": "Practitioner Assigned",
+        "concept_code": "C51846"
+      },
+      {
+        "value": "Protocol Author",
+        "long_name": "Protocol Author",
+        "concept_code": "C51853"
+      },
+      {
+        "value": "Sponsor",
+        "long_name": "Sponsor",
+        "concept_code": "C48355"
+      },
+      {
+        "value": "Treating Physician",
+        "long_name": "Treating Physician",
+        "concept_code": "C51883"
+      },
+      {
+        "value": "Admitting Physician",
+        "long_name": "Admitting Physician",
+        "concept_code": "C51798"
+      },
+      {
+        "value": "Attending Physician",
+        "long_name": "Attending Physician",
+        "concept_code": "C51803"
+      },
+      {
+        "value": "Audiologist",
+        "long_name": "Audiologist",
+        "concept_code": "C51804"
+      },
+      {
+        "value": "Bronchoscopist",
+        "long_name": "Bronchoscopist",
+        "concept_code": "C25753"
+      },
+      {
+        "value": "Central Reviewer",
+        "long_name": "Central Reviewer",
+        "concept_code": "C51807"
+      },
+      {
+        "value": "Clinical Coordinator",
+        "long_name": "Clinical Coordinator",
+        "concept_code": "C51811"
+      },
+      {
+        "value": "Co-Investigator",
+        "long_name": "Co-Investigator",
+        "concept_code": "C51812"
+      },
+      {
+        "value": "Consulting Physician",
+        "long_name": "Consulting Physician",
+        "concept_code": "C51815"
+      },
+      {
+        "value": "Coordinating Investigator",
+        "long_name": "Coordinating Investigator",
+        "concept_code": "C51818"
+      },
+      {
+        "value": "Evaluator",
+        "long_name": "Evaluator",
+        "concept_code": "C51824"
+      },
+      {
+        "value": "Practitioner",
+        "long_name": "Practitioner",
+        "concept_code": "C51845"
+      },
+      {
+        "value": "Translator",
+        "long_name": "Translator",
+        "concept_code": "C86928"
+      },
+      {
+        "value": "Participant",
+        "long_name": "Participant",
+        "concept_code": "C29867"
+      },
+      {
+        "value": "Interpreter",
+        "long_name": "Language interpreter",
+        "concept_code": "C86557"
+      },
+      {
+        "value": "Interviewer",
+        "long_name": "Interviewer",
+        "concept_code": "C63759"
+      },
+      {
+        "value": "Health Care Provider",
+        "long_name": "Health Care Provider",
+        "concept_code": "C16666"
+      },
+      {
+        "value": "Grant Principal Investigator",
+        "long_name": "Grant Principal Investigator",
+        "concept_code": "C51826"
+      },
+      {
+        "value": "Letter of Intent Review Chair",
+        "long_name": "Letter of Intent Review Chair",
+        "concept_code": "C51833"
+      },
+      {
+        "value": "Mail Contact",
+        "long_name": "Mail Contact",
+        "concept_code": "C51834"
+      },
+      {
+        "value": "Medical Physicist",
+        "long_name": "Medical Physicist",
+        "concept_code": "C51842"
+      },
+      {
+        "value": "Reviewing Pathologist",
+        "long_name": "Reviewing Pathologist",
+        "concept_code": "C51867"
+      },
+      {
+        "value": "Sponsor Medical Expert",
+        "long_name": "Sponsor Medical Expert",
+        "concept_code": "C51876"
+      },
+      {
+        "value": "Subject Recruiter",
+        "long_name": "Subject Recruiter",
+        "concept_code": "C51881"
+      },
+      {
+        "value": "Submitting Pathologist",
+        "long_name": "Submitting Pathologist",
+        "concept_code": "C51882"
+      },
+      {
+        "value": "Abstractor",
+        "long_name": "Abstractor",
+        "concept_code": "C62231"
+      },
+      {
+        "value": "Contact Person",
+        "long_name": "Contact",
+        "concept_code": "C25461"
+      },
+      {
+        "value": "Nurse",
+        "long_name": "Nurse",
+        "concept_code": "C20821"
+      },
+      {
+        "value": "Patient",
+        "long_name": "PATIENT",
+        "concept_code": "C16960"
+      },
+      {
+        "value": "Pharmacist",
+        "long_name": "Pharmacist",
+        "concept_code": "C51840"
+      },
+      {
+        "value": "Physician",
+        "long_name": "Physician",
+        "concept_code": "C25741"
+      },
+      {
+        "value": "Referring Physician",
+        "long_name": "Referring Physician",
+        "concept_code": "C51860"
+      },
+      {
+        "value": "Social Worker",
+        "long_name": "Social Worker",
+        "concept_code": "C28190"
+      },
+      {
+        "value": "Data Manager",
+        "long_name": "Data manager",
+        "concept_code": "C51820"
+      },
+      {
+        "value": "Investigator",
+        "long_name": "Investigator",
+        "concept_code": "C25936"
+      },
+      {
+        "value": "Associate",
+        "long_name": "Associate",
+        "concept_code": "C51802"
+      },
+      {
+        "value": "Agent Expert",
+        "long_name": "Agent Expert",
+        "concept_code": "C51800"
+      },
+      {
+        "value": "Mail Contact (Mgr)",
+        "long_name": "Mail Contact (Mgr)",
+        "concept_code": "C51834"
+      },
+      {
+        "value": "Protocol Chair at an Organization",
+        "long_name": "Protocol Chair at an Organization",
+        "concept_code": "C51855"
+      },
+      {
+        "value": "Employee",
+        "long_name": "Employee",
+        "concept_code": "C51823"
+      },
+      {
+        "value": "Site Investigator",
+        "long_name": "Site Investigator",
+        "concept_code": "C51873"
+      },
+      {
+        "value": "Checklist Completer",
+        "long_name": "Checklist Completer",
+        "concept_code": "C51809"
+      },
+      {
+        "value": "Checklist Supervisor",
+        "long_name": "Checklist Supervisor",
+        "concept_code": "C51810"
+      },
+      {
+        "value": "Primary Shipping Designee",
+        "long_name": "Primary Shipping Designee",
+        "concept_code": "C51848"
+      },
+      {
+        "value": "Program Director",
+        "long_name": "Program Director",
+        "concept_code": "C51849"
+      },
+      {
+        "value": "Drug Company Contact",
+        "long_name": "Drug Company Contact",
+        "concept_code": "C51822"
+      },
+      {
+        "value": "Protocol Specialist",
+        "long_name": "Protocol Specialist",
+        "concept_code": "C51858"
+      },
+      {
+        "value": "Shipping Designee",
+        "long_name": "Shipping Designee",
+        "concept_code": "C51871"
+      },
+      {
+        "value": "Branch Chief",
+        "long_name": "Branch Chief",
+        "concept_code": "C51805"
+      },
+      {
+        "value": "Participant Chief",
+        "long_name": "Participant Chief",
+        "concept_code": "C51838"
+      },
+      {
+        "value": "Head of Division",
+        "long_name": "Head of Division",
+        "concept_code": null
+      },
+      {
+        "value": "Address Module Coordinator",
+        "long_name": "Address Module Coordinator",
+        "concept_code": "C51796"
+      },
+      {
+        "value": "Registration Coordinator",
+        "long_name": "Registration Coordinator",
+        "concept_code": "C51861"
+      },
+      {
+        "value": "CDU Web Contact",
+        "long_name": "CDU Web Contact",
+        "concept_code": "C51806"
+      },
+      {
+        "value": "Agent Inspector",
+        "long_name": "Agent Inspector",
+        "concept_code": "C51801"
+      },
+      {
+        "value": "CEP Member",
+        "long_name": "CEP Member",
+        "concept_code": "C51808"
+      },
+      {
+        "value": "Adverse Event Coordinator",
+        "long_name": "Adverse Event Coordinator",
+        "concept_code": "C51799"
+      },
+      {
+        "value": "Account Administrator",
+        "long_name": "Account Administrator",
+        "concept_code": "C51795"
+      },
+      {
+        "value": "AdEERS Contact",
+        "long_name": "AdEERS Contact",
+        "concept_code": "C51797"
+      },
+      {
+        "value": "ABS Coordinator",
+        "long_name": "ABS Coordinator",
+        "concept_code": null
+      },
+      {
+        "value": "Group Coordinator",
+        "long_name": "Group Coordinator",
+        "concept_code": "C51827"
+      },
+      {
+        "value": "Division Head",
+        "long_name": "Division Head",
+        "concept_code": "C51821"
+      },
+      {
+        "value": "Primary CDUS Contact",
+        "long_name": "Primary CDUS Contact",
+        "concept_code": "C51847"
+      },
+      {
+        "value": "Secondary CDUS Contact",
+        "long_name": "Secondary CDUS Contact",
+        "concept_code": "C51870"
+      },
+      {
+        "value": "Grant Investigator",
+        "long_name": "Grant Investigator",
+        "concept_code": "C51825"
+      },
+      {
+        "value": "PMB Drug Company Contact",
+        "long_name": "PMB Drug Company Contact",
+        "concept_code": "C51843"
+      },
+      {
+        "value": "Principal Investigator (MGR)",
+        "long_name": "Principal Investigator (MGR)",
+        "concept_code": "C19924"
+      },
+      {
+        "value": "Mail to contact",
+        "long_name": "Mail to contact",
+        "concept_code": "C51835"
+      },
+      {
+        "value": "Clinical Research Associate",
+        "long_name": "Clinical research associate",
+        "concept_code": "C25465"
+      },
+      {
+        "value": "Concept Review Chair",
+        "long_name": "Concept Review Chair",
+        "concept_code": "C51814"
+      },
+      {
+        "value": "Co-Project Officer",
+        "long_name": "Co-Project Officer",
+        "concept_code": "C51819"
+      },
+      {
+        "value": "Contract Officer",
+        "long_name": "Contract Officer",
+        "concept_code": "C51816"
+      },
+      {
+        "value": "Grant Specialist",
+        "long_name": "Grant Specialist",
+        "concept_code": null
+      },
+      {
+        "value": "Medical Monitor",
+        "long_name": "Medical Monitor",
+        "concept_code": "C51836"
+      },
+      {
+        "value": "Program Specialist",
+        "long_name": "Program Specialist",
+        "concept_code": "C51850"
+      },
+      {
+        "value": "Project Officer",
+        "long_name": "Project Officer",
+        "concept_code": "C51852"
+      },
+      {
+        "value": "Protocol Chair",
+        "long_name": "Protocol Chair",
+        "concept_code": "C51854"
+      },
+      {
+        "value": "Protocol Lead Investigator",
+        "long_name": "Protocol Lead Investigator",
+        "concept_code": "C51856"
+      },
+      {
+        "value": "Protocol Review Chair",
+        "long_name": "Protocol Review Chair",
+        "concept_code": "C51857"
+      },
+      {
+        "value": "Review Liaison",
+        "long_name": "Review Liaison",
+        "concept_code": "C51865"
+      },
+      {
+        "value": "Review Specialist",
+        "long_name": "Review Specialist",
+        "concept_code": "C51866"
+      },
+      {
+        "value": "Scientific Monitor",
+        "long_name": "Scientific Monitor",
+        "concept_code": "C51869"
+      },
+      {
+        "value": "Site Leader",
+        "long_name": "Site Leader",
+        "concept_code": "C51874"
+      },
+      {
+        "value": "Study Chair",
+        "long_name": "Study Chair",
+        "concept_code": "C51878"
+      },
+      {
+        "value": "Contract Principal Investigator",
+        "long_name": "Contract Principal Investigator",
+        "concept_code": "C51817"
+      },
+      {
+        "value": "Funded Principal Investigator",
+        "long_name": "Funded Principal Investigator",
+        "concept_code": "C63403"
+      },
+      {
+        "value": "Principal Investigator",
+        "long_name": "Principal Investigator",
+        "concept_code": "C19924"
+      },
+      {
+        "value": "Site Coordinator",
+        "long_name": "Site Coordinator",
+        "concept_code": "C51872"
+      },
+      {
+        "value": "Maintainer",
+        "long_name": "Software Maintainer",
+        "concept_code": "C67227"
+      },
+      {
+        "value": "Developer",
+        "long_name": "Software Developer",
+        "concept_code": "C67226"
+      },
+      {
+        "value": "Surgical Oncologist",
+        "long_name": "Surgical Oncologist",
+        "concept_code": "C17840"
+      },
+      {
+        "value": "Physician Assistant",
+        "long_name": "Physician Assistant",
+        "concept_code": "C53423"
+      },
+      {
+        "value": "Nurse Practitioner",
+        "long_name": "Nurse Practitioner",
+        "concept_code": "C20852"
+      },
+      {
+        "value": "Oncology Nurse",
+        "long_name": "Oncology Nurse",
+        "concept_code": "C18065"
+      },
+      {
+        "value": "Medical Oncologist",
+        "long_name": "Medical Oncologist",
+        "concept_code": "C17838"
+      },
+      {
+        "value": "PCP",
+        "long_name": "Primary care physician",
+        "concept_code": "C93060"
+      },
+      {
+        "value": "Primary care physician",
+        "long_name": "Primary care physician",
+        "concept_code": "C93060"
+      },
+      {
+        "value": "Gastroenterologist",
+        "long_name": "Gastroenterologist",
+        "concept_code": "C17818"
+      },
+      {
+        "value": "Infusion Nurse",
+        "long_name": "Infusion Procedure Nurse",
+        "concept_code": "C15388:C20821"
+      },
+      {
+        "value": "Clinical Nurse Specialist",
+        "long_name": "Clinical Nurse Specialist",
+        "concept_code": "C20832"
+      },
+      {
+        "value": "Interventional Radiologist",
+        "long_name": "Interventional Radiologist",
+        "concept_code": "C147951"
+      },
+      {
+        "value": "Site Personnel",
+        "long_name": "Site Personnel",
+        "concept_code": null
+      },
+      {
+        "value": "Nurse Coach",
+        "long_name": "Nurse Coach",
+        "concept_code": "C175713"
+      },
+      {
+        "value": "Coordinator",
+        "long_name": "Coordinator",
+        "concept_code": "C45284"
+      },
+      {
+        "value": "SHE Instructor",
+        "long_name": "SHE Instructor",
+        "concept_code": null
+      },
+      {
+        "value": "Alternative Principal Investigator",
+        "long_name": "Alternative Principal Investigator",
+        "concept_code": "C25415:C19924"
+      },
+      {
+        "value": "ENABLE Coach",
+        "long_name": "ENABLE Coach",
+        "concept_code": "C175704:C157483"
+      },
+      {
+        "value": "Data Submitter",
+        "long_name": "Data Submitter",
+        "concept_code": "C201979"
+      },
+      {
+        "value": "Respondent",
+        "long_name": "Proxy Respondent",
+        "concept_code": "C142652"
+      },
+      {
+        "value": "Administrator or Manager",
+        "long_name": "Supervisor Or Manager",
+        "concept_code": "C134832:C37998:C70652"
+      },
+      {
+        "value": "Oncologist",
+        "long_name": "Oncologist",
+        "concept_code": "C17821"
+      },
+      {
+        "value": "Control Participant",
+        "long_name": "Participant Control",
+        "concept_code": "C216104"
+      },
+      {
+        "value": "Corresponding Author",
+        "long_name": "Corresponding Author",
+        "concept_code": "C227235"
+      },
+      {
+        "value": "First Author",
+        "long_name": "First Author",
+        "concept_code": "C227234"
+      }
+    ]
+  },
+  "2538920": {
+    "CRDC Name": "Body Height Unit of Measurement",
+    "permissible_values": [
+      {
+        "value": "[in_i]",
+        "long_name": "[in_i]",
+        "concept_code": "C48500"
+      },
+      {
+        "value": "[ft_i]",
+        "long_name": "[ft_i]",
+        "concept_code": "C71253"
+      },
+      {
+        "value": "cm",
+        "long_name": "CENTIMETER",
+        "concept_code": "C49668"
+      },
+      {
+        "value": "m",
+        "long_name": "Meter",
+        "concept_code": "C41139"
+      }
+    ]
+  },
+  "2630200": {
+    "CRDC Name": "Body Weight Unit of Measurement",
+    "permissible_values": [
+      {
+        "value": "[oz_av]",
+        "long_name": "Ounce",
+        "concept_code": "C48519"
+      },
+      {
+        "value": "[lb_av]",
+        "long_name": "Pound",
+        "concept_code": "C48531"
+      },
+      {
+        "value": "kg",
+        "long_name": "kilogram",
+        "concept_code": "C28252"
+      },
+      {
+        "value": "g",
+        "long_name": "gram",
+        "concept_code": "C48155"
+      }
+    ]
+  },
+  "2663165": {
+    "CRDC Name": "Person Name Prefix Abbreviation Text",
+    "permissible_values": [
+      {
+        "value": "Bish.",
+        "long_name": "Bishop",
+        "concept_code": "C69162"
+      },
+      {
+        "value": "Br.",
+        "long_name": "Brother: C48648",
+        "concept_code": "C48648"
+      },
+      {
+        "value": "Ch.",
+        "long_name": "Chaplain",
+        "concept_code": "C69163"
+      },
+      {
+        "value": "Dr.",
+        "long_name": "Doctor",
+        "concept_code": "C69164"
+      },
+      {
+        "value": "Fr.",
+        "long_name": "Father",
+        "concept_code": "C25174"
+      },
+      {
+        "value": "Miss",
+        "long_name": "Miss",
+        "concept_code": "C69167"
+      },
+      {
+        "value": "Mr.",
+        "long_name": "Mister",
+        "concept_code": "C69166"
+      },
+      {
+        "value": "Mrs.",
+        "long_name": "Mrs",
+        "concept_code": "C69168"
+      },
+      {
+        "value": "Ms.",
+        "long_name": "Ms",
+        "concept_code": "C69169"
+      },
+      {
+        "value": "Prof.",
+        "long_name": "Professor",
+        "concept_code": "C69170"
+      },
+      {
+        "value": "R.",
+        "long_name": "Rabbi",
+        "concept_code": "C69171"
+      },
+      {
+        "value": "Rev.",
+        "long_name": "Reverend",
+        "concept_code": "C69172"
+      },
+      {
+        "value": "Sr.",
+        "long_name": "Sister: C48649",
+        "concept_code": "C48649"
+      }
+    ]
+  },
+  "2668478": {
+    "CRDC Name": "Person Academic Degree Suffix Abbreviation Text",
+    "permissible_values": [
+      {
+        "value": "MD",
+        "long_name": "Doctor of Medicine",
+        "concept_code": "C39383"
+      },
+      {
+        "value": "DO",
+        "long_name": "Doctor of Osteopathic Medicine",
+        "concept_code": "C39385"
+      },
+      {
+        "value": "DMD",
+        "long_name": "Doctor of Dental Medicine",
+        "concept_code": "C39381"
+      },
+      {
+        "value": "DED",
+        "long_name": "Doctor of Education",
+        "concept_code": "C71359"
+      },
+      {
+        "value": "DD",
+        "long_name": "Doctor of Divinity",
+        "concept_code": "C71358"
+      },
+      {
+        "value": "DC",
+        "long_name": "Doctor of Chiropractic",
+        "concept_code": "C39380"
+      },
+      {
+        "value": "DBA",
+        "long_name": "Doctor of Business Administration",
+        "concept_code": "C71356"
+      },
+      {
+        "value": "BT",
+        "long_name": "Bachelor of Theology",
+        "concept_code": "C71354"
+      },
+      {
+        "value": "BSW",
+        "long_name": "Bachelor of Social Work",
+        "concept_code": "C71353"
+      },
+      {
+        "value": "BSL",
+        "long_name": "Bachelor of Science in Law",
+        "concept_code": "C71352"
+      },
+      {
+        "value": "BS",
+        "long_name": "Bachelor of Science",
+        "concept_code": null
+      },
+      {
+        "value": "BSN",
+        "long_name": "Bachelor of Science in Nursing (syn: Bachelor of Nursing)",
+        "concept_code": "C71350"
+      },
+      {
+        "value": "BN",
+        "long_name": "Bachelor of Science in Nursing (syn: Bachelor of Nursing)",
+        "concept_code": "C71350"
+      },
+      {
+        "value": "BFA",
+        "long_name": "Bachelor of Fine Arts",
+        "concept_code": "C71349"
+      },
+      {
+        "value": "BEd",
+        "long_name": "Bachelor of Education",
+        "concept_code": "C71348"
+      },
+      {
+        "value": "BEng",
+        "long_name": "Bachelor of Engineering",
+        "concept_code": "C71347"
+      },
+      {
+        "value": "BE",
+        "long_name": "Bachelor of Engineering",
+        "concept_code": "C71347"
+      },
+      {
+        "value": "BBA",
+        "long_name": "Bachelor of Business Administration",
+        "concept_code": "C71346"
+      },
+      {
+        "value": "BA",
+        "long_name": "Bachelor of Arts",
+        "concept_code": null
+      },
+      {
+        "value": "AS",
+        "long_name": "Associate of Science",
+        "concept_code": "C71344"
+      },
+      {
+        "value": "AE",
+        "long_name": "Associate of Engineering",
+        "concept_code": "C71343"
+      },
+      {
+        "value": "ABA",
+        "long_name": "Associate of Business Administration",
+        "concept_code": "C71342"
+      },
+      {
+        "value": "AB",
+        "long_name": "Associates Degree",
+        "concept_code": "C71340"
+      },
+      {
+        "value": "AAS",
+        "long_name": "Associate of Applied Science",
+        "concept_code": "C71341"
+      },
+      {
+        "value": "AA",
+        "long_name": "Associates Degree",
+        "concept_code": "C71340"
+      },
+      {
+        "value": "MSN",
+        "long_name": "Master of Science in Nursing",
+        "concept_code": "C71374"
+      },
+      {
+        "value": "MSL",
+        "long_name": "Master of Science in Law",
+        "concept_code": "C71381"
+      },
+      {
+        "value": "MS",
+        "long_name": "Masters of Science",
+        "concept_code": null
+      },
+      {
+        "value": "MPH",
+        "long_name": "Masters of Public Health",
+        "concept_code": null
+      },
+      {
+        "value": "MPA",
+        "long_name": "Master of Public Administration",
+        "concept_code": "C71373"
+      },
+      {
+        "value": "MME",
+        "long_name": "Master of Mechanical Engineering",
+        "concept_code": "C71372"
+      },
+      {
+        "value": "MFA",
+        "long_name": "Master of Fine Arts",
+        "concept_code": "C71371"
+      },
+      {
+        "value": "MEE",
+        "long_name": "Master of Electrical Engineering",
+        "concept_code": "C71370"
+      },
+      {
+        "value": "MEd",
+        "long_name": "Master of Education",
+        "concept_code": "C71369"
+      },
+      {
+        "value": "ME",
+        "long_name": "Master of Engineering",
+        "concept_code": "C71368"
+      },
+      {
+        "value": "MDI",
+        "long_name": "Master of Divinity",
+        "concept_code": "C71367"
+      },
+      {
+        "value": "MCE",
+        "long_name": "Master of Civil Engineering",
+        "concept_code": "C71366"
+      },
+      {
+        "value": "MA",
+        "long_name": "Master of Arts",
+        "concept_code": "C71364"
+      },
+      {
+        "value": "LLM",
+        "long_name": "Master of Law",
+        "concept_code": "C71363"
+      },
+      {
+        "value": "JD",
+        "long_name": "Doctor of Law",
+        "concept_code": "C71361"
+      },
+      {
+        "value": "EdD",
+        "long_name": "Doctor of Education",
+        "concept_code": "C71359"
+      },
+      {
+        "value": "DSW",
+        "long_name": "Doctor of Social Work",
+        "concept_code": "C71360"
+      },
+      {
+        "value": "ThD",
+        "long_name": "Doctor of Theology",
+        "concept_code": "C71380"
+      },
+      {
+        "value": "ScD",
+        "long_name": "Doctor of Science",
+        "concept_code": null
+      },
+      {
+        "value": "PhE",
+        "long_name": "Doctor of Engineering",
+        "concept_code": "C71378"
+      },
+      {
+        "value": "MT",
+        "long_name": "Master of Theology",
+        "concept_code": "C71377"
+      },
+      {
+        "value": "MSW",
+        "long_name": "Master of Social Work",
+        "concept_code": "C71376"
+      },
+      {
+        "value": "AM",
+        "long_name": "Master of Arts",
+        "concept_code": "C71364"
+      },
+      {
+        "value": "PharmD",
+        "long_name": "Doctor of Pharmacy",
+        "concept_code": null
+      },
+      {
+        "value": "OD",
+        "long_name": "Doctor of Optometry",
+        "concept_code": "C39384"
+      },
+      {
+        "value": "ND",
+        "long_name": "Naturopathic Doctor",
+        "concept_code": "C39473"
+      },
+      {
+        "value": "MS",
+        "long_name": "Master of Science",
+        "concept_code": "C39452"
+      },
+      {
+        "value": "MPH",
+        "long_name": "Master of Public Health",
+        "concept_code": "C39451"
+      },
+      {
+        "value": "MHSA",
+        "long_name": "Master of Health Services Administration",
+        "concept_code": "C39450"
+      },
+      {
+        "value": "MBA",
+        "long_name": "Master of Business Administration",
+        "concept_code": "C39449"
+      },
+      {
+        "value": "DrPH",
+        "long_name": "Doctor of Public Health",
+        "concept_code": "C39390"
+      },
+      {
+        "value": "DPM",
+        "long_name": "Doctor of Podiatric Medicine",
+        "concept_code": "C39389"
+      },
+      {
+        "value": "DDS",
+        "long_name": "Doctor of Dental Surgery",
+        "concept_code": "C39382"
+      },
+      {
+        "value": "DVM",
+        "long_name": "Doctor of Veterinary Medicine",
+        "concept_code": null
+      },
+      {
+        "value": "PhD",
+        "long_name": "Doctor of Philosophy",
+        "concept_code": null
+      }
+    ]
+  },
+  "2690165": {
+    "CRDC Name": "Family Member Relationship",
+    "permissible_values": [
+      {
+        "value": "Mother",
+        "long_name": "Mother",
+        "concept_code": "C25189"
+      },
+      {
+        "value": "Half Sister",
+        "long_name": "Half Sister",
+        "concept_code": "C71403"
+      },
+      {
+        "value": "Half Brother",
+        "long_name": "Half Brother",
+        "concept_code": "C71402"
+      },
+      {
+        "value": "Father",
+        "long_name": "Father",
+        "concept_code": "C25174"
+      },
+      {
+        "value": "Grandparent",
+        "long_name": "Grandparent",
+        "concept_code": "C71385"
+      },
+      {
+        "value": "Parent",
+        "long_name": "Parent",
+        "concept_code": "C42709"
+      },
+      {
+        "value": "Uncle",
+        "long_name": "Uncle",
+        "concept_code": "C71404"
+      },
+      {
+        "value": "Nephew",
+        "long_name": "Nephew",
+        "concept_code": "C71409"
+      },
+      {
+        "value": "Aunt",
+        "long_name": "Aunt",
+        "concept_code": "C71405"
+      },
+      {
+        "value": "Niece",
+        "long_name": "Niece",
+        "concept_code": "C71408"
+      },
+      {
+        "value": "Domestic Partner",
+        "long_name": "Domestic Partnership",
+        "concept_code": "C53262"
+      },
+      {
+        "value": "Ward",
+        "long_name": "Ward",
+        "concept_code": "C71413"
+      },
+      {
+        "value": "Half Sibling",
+        "long_name": "Half Sibling",
+        "concept_code": "C71391"
+      },
+      {
+        "value": "Grandfather",
+        "long_name": "Grandfather",
+        "concept_code": "C71387"
+      },
+      {
+        "value": "Grandchild",
+        "long_name": "Grandchild",
+        "concept_code": "C71397"
+      },
+      {
+        "value": "Spouse",
+        "long_name": "Spouse",
+        "concept_code": "C62649"
+      },
+      {
+        "value": "Son-in-law",
+        "long_name": "Son-in-law",
+        "concept_code": "C71400"
+      },
+      {
+        "value": "Brother-in-law",
+        "long_name": "Brother-in-law",
+        "concept_code": "C71406"
+      },
+      {
+        "value": "Daughter-in-law",
+        "long_name": "Daughter-in-law",
+        "concept_code": "C71401"
+      },
+      {
+        "value": "Sister-in-law",
+        "long_name": "Sister-in-law",
+        "concept_code": "C71407"
+      },
+      {
+        "value": "Cousin",
+        "long_name": "Cousin",
+        "concept_code": "C71410"
+      },
+      {
+        "value": "First Cousin",
+        "long_name": "First Cousin",
+        "concept_code": "C71411"
+      },
+      {
+        "value": "First Cousin Once Removed",
+        "long_name": "First Cousin Once Removed",
+        "concept_code": "C71412"
+      },
+      {
+        "value": "Father-in-law",
+        "long_name": "Father-in-law",
+        "concept_code": "C68640"
+      },
+      {
+        "value": "Mother-in-law",
+        "long_name": "Mother-in-law",
+        "concept_code": "C68639"
+      },
+      {
+        "value": "Legal Guardian",
+        "long_name": "Guardian",
+        "concept_code": "C51828"
+      },
+      {
+        "value": "Grandmother",
+        "long_name": "Grandmother",
+        "concept_code": "C71386"
+      },
+      {
+        "value": "Sibling",
+        "long_name": "Sibling",
+        "concept_code": "C25204"
+      },
+      {
+        "value": "Husband",
+        "long_name": "Husband",
+        "concept_code": "C71588"
+      },
+      {
+        "value": "Wife",
+        "long_name": "Wife",
+        "concept_code": "C71587"
+      },
+      {
+        "value": "Sister",
+        "long_name": "Sister",
+        "concept_code": "C25680"
+      },
+      {
+        "value": "Brother",
+        "long_name": "Brother",
+        "concept_code": "C25289"
+      },
+      {
+        "value": "None",
+        "long_name": "None at all",
+        "concept_code": "C41132"
+      },
+      {
+        "value": "Daughter",
+        "long_name": "Daughter",
+        "concept_code": "C25165"
+      },
+      {
+        "value": "Son",
+        "long_name": "Son",
+        "concept_code": "C25205"
+      },
+      {
+        "value": "Granddaughter",
+        "long_name": "Granddaughter",
+        "concept_code": "C71399"
+      },
+      {
+        "value": "Grandson",
+        "long_name": "Grandson",
+        "concept_code": "C71398"
+      },
+      {
+        "value": "Adopted Daughter",
+        "long_name": "Adopted Daughter",
+        "concept_code": "C166131"
+      },
+      {
+        "value": "Adopted Son",
+        "long_name": "Adopted Son",
+        "concept_code": "C166132"
+      },
+      {
+        "value": "Adopted Brother",
+        "long_name": "Adopted Brother",
+        "concept_code": "C166195"
+      },
+      {
+        "value": "Adoptive Father",
+        "long_name": "Adoptive Father",
+        "concept_code": "C166133"
+      },
+      {
+        "value": "Adoptive Mother",
+        "long_name": "Adoptive Mother",
+        "concept_code": "C166134"
+      },
+      {
+        "value": "Adopted Sister",
+        "long_name": "Adopted Sister",
+        "concept_code": "C166196"
+      },
+      {
+        "value": "Female Cousin",
+        "long_name": "Female Cousin",
+        "concept_code": "C165786"
+      },
+      {
+        "value": "Foster Brother",
+        "long_name": "Foster Brother",
+        "concept_code": "C165788"
+      },
+      {
+        "value": "Foster Daughter",
+        "long_name": "Foster Daughter",
+        "concept_code": "C165790"
+      },
+      {
+        "value": "Foster Father",
+        "long_name": "Foster Father",
+        "concept_code": "C165792"
+      },
+      {
+        "value": "Foster Mother",
+        "long_name": "Foster Mother",
+        "concept_code": "C165793"
+      },
+      {
+        "value": "Foster Sister",
+        "long_name": "Foster Sister",
+        "concept_code": "C165794"
+      },
+      {
+        "value": "Foster Son",
+        "long_name": "Foster Son",
+        "concept_code": "C165795"
+      },
+      {
+        "value": "Fraternal Twin Brother",
+        "long_name": "Fraternal Twin Brother",
+        "concept_code": "C165796"
+      },
+      {
+        "value": "Fraternal Twin Sibling",
+        "long_name": "Fraternal Twin",
+        "concept_code": "C73428"
+      },
+      {
+        "value": "Fraternal Twin Sister",
+        "long_name": "Fraternal Twin Sister",
+        "concept_code": "C165797"
+      },
+      {
+        "value": "Full Brother",
+        "long_name": "Full Brother",
+        "concept_code": "C111201"
+      },
+      {
+        "value": "Full Sister",
+        "long_name": "Full Sister",
+        "concept_code": "C111202"
+      },
+      {
+        "value": "Grand Nephew",
+        "long_name": "Great Nephew",
+        "concept_code": "C165798"
+      },
+      {
+        "value": "Grand Niece",
+        "long_name": "Great Niece",
+        "concept_code": "C165846"
+      },
+      {
+        "value": "Great Grandchild",
+        "long_name": "Great Grandchild",
+        "concept_code": "C165847"
+      },
+      {
+        "value": "Identical Twin Brother",
+        "long_name": "Identical Twin Brother",
+        "concept_code": "C165848"
+      },
+      {
+        "value": "Identical Twin Sister",
+        "long_name": "Identical Twin Sister",
+        "concept_code": "C165849"
+      },
+      {
+        "value": "Male Cousin",
+        "long_name": "Male Cousin",
+        "concept_code": "C165850"
+      },
+      {
+        "value": "Biological Maternal Aunt",
+        "long_name": "Biological Maternal Aunt",
+        "concept_code": "C96575"
+      },
+      {
+        "value": "Biological Maternal Cousin",
+        "long_name": "Biological Maternal Cousin",
+        "concept_code": "C96576"
+      },
+      {
+        "value": "Maternal First Cousin Once Removed",
+        "long_name": "Maternal First Cousin Once Removed",
+        "concept_code": "C165851"
+      },
+      {
+        "value": "Biological Maternal Grandfather",
+        "long_name": "Biological Maternal Grandfather",
+        "concept_code": "C96577"
+      },
+      {
+        "value": "Biological Maternal Grandmother",
+        "long_name": "Biological Maternal Grandmother",
+        "concept_code": "C96578"
+      },
+      {
+        "value": "Biological Maternal Grandparent",
+        "long_name": "Maternal Biological Grandparent",
+        "concept_code": "C111248"
+      },
+      {
+        "value": "Maternal Great Aunt",
+        "long_name": "Maternal Great Aunt",
+        "concept_code": "C165853"
+      },
+      {
+        "value": "Maternal Great Grandparent",
+        "long_name": "Maternal Great Grandparent",
+        "concept_code": "C166127"
+      },
+      {
+        "value": "Maternal Great Uncle",
+        "long_name": "Maternal Great Uncle",
+        "concept_code": "C165854"
+      },
+      {
+        "value": "Maternal Half Sibling",
+        "long_name": "Maternal Half Sibling",
+        "concept_code": "C166112"
+      },
+      {
+        "value": "Biological Maternal Uncle",
+        "long_name": "Biological Maternal Uncle",
+        "concept_code": "C96579"
+      },
+      {
+        "value": "Biological Brother",
+        "long_name": "Biological Brother",
+        "concept_code": "C96570"
+      },
+      {
+        "value": "Biological Child",
+        "long_name": "Offspring",
+        "concept_code": "C42708"
+      },
+      {
+        "value": "Biological Daughter",
+        "long_name": "Biological Daughter",
+        "concept_code": "C150887"
+      },
+      {
+        "value": "Biological Father",
+        "long_name": "Biological Father",
+        "concept_code": "C96572"
+      },
+      {
+        "value": "Biological Grandchild",
+        "long_name": "Biological Grandchild",
+        "concept_code": "C100805"
+      },
+      {
+        "value": "Biological Grandfather",
+        "long_name": "Biological Grandfather",
+        "concept_code": "C96573"
+      },
+      {
+        "value": "Biological Grandmother",
+        "long_name": "Biological Grandmother",
+        "concept_code": "C96574"
+      },
+      {
+        "value": "Biological Grandparent",
+        "long_name": "Biological Grandparent",
+        "concept_code": "C100806"
+      },
+      {
+        "value": "Biological Mother",
+        "long_name": "Biological Mother",
+        "concept_code": "C96580"
+      },
+      {
+        "value": "Biological Parent",
+        "long_name": "Biological Parent",
+        "concept_code": "C166114"
+      },
+      {
+        "value": "Biological Sibling",
+        "long_name": "Biological Sibling",
+        "concept_code": "C100809"
+      },
+      {
+        "value": "Biological Sister",
+        "long_name": "Biological Sister",
+        "concept_code": "C96586"
+      },
+      {
+        "value": "Biological Son",
+        "long_name": "Biological Son",
+        "concept_code": "C150888"
+      },
+      {
+        "value": "Biological Niece",
+        "long_name": "Biological Niece",
+        "concept_code": "C166115"
+      },
+      {
+        "value": "Biological Paternal Aunt",
+        "long_name": "Biological Paternal Aunt",
+        "concept_code": "C96581"
+      },
+      {
+        "value": "Biological Paternal Cousin",
+        "long_name": "Biological Paternal Cousin",
+        "concept_code": "C96582"
+      },
+      {
+        "value": "Paternal First Cousin Once Removed",
+        "long_name": "Paternal First Cousin Once Removed",
+        "concept_code": "C165852"
+      },
+      {
+        "value": "Biological Paternal Grandfather",
+        "long_name": "Biological Paternal Grandfather",
+        "concept_code": "C96583"
+      },
+      {
+        "value": "Biological Paternal Grandmother",
+        "long_name": "Biological Paternal Grandmother",
+        "concept_code": "C96584"
+      },
+      {
+        "value": "Biological Paternal Grandparent",
+        "long_name": "Paternal Biological Grandparent",
+        "concept_code": "C111286"
+      },
+      {
+        "value": "Paternal Great Aunt",
+        "long_name": "Paternal Great Aunt",
+        "concept_code": "C165856"
+      },
+      {
+        "value": "Paternal Great Grandparent",
+        "long_name": "Paternal Great Grandparent",
+        "concept_code": "C166128"
+      },
+      {
+        "value": "Paternal Great Uncle",
+        "long_name": "Paternal Great Uncle",
+        "concept_code": "C165857"
+      },
+      {
+        "value": "Paternal Half Sibling",
+        "long_name": "Paternal Half Sibling",
+        "concept_code": "C166113"
+      },
+      {
+        "value": "Biological Paternal Uncle",
+        "long_name": "Biological Paternal Uncle",
+        "concept_code": "C96585"
+      },
+      {
+        "value": "Step Child",
+        "long_name": "Step Child",
+        "concept_code": "C166117"
+      },
+      {
+        "value": "Step Sibling",
+        "long_name": "Step Sibling",
+        "concept_code": "C166118"
+      },
+      {
+        "value": "Stepbrother",
+        "long_name": "Stepbrother",
+        "concept_code": "C166119"
+      },
+      {
+        "value": "Stepdaughter",
+        "long_name": "Stepdaughter",
+        "concept_code": "C166123"
+      },
+      {
+        "value": "Stepfather",
+        "long_name": "Step Father",
+        "concept_code": "C154851"
+      },
+      {
+        "value": "Stepmother",
+        "long_name": "Stepmother",
+        "concept_code": "C132450"
+      },
+      {
+        "value": "Stepsister",
+        "long_name": "Stepsister",
+        "concept_code": "C166124"
+      },
+      {
+        "value": "Stepson",
+        "long_name": "Stepson",
+        "concept_code": "C166125"
+      },
+      {
+        "value": "Twin Sibling",
+        "long_name": "Twin",
+        "concept_code": "C73427"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Biological Nephew",
+        "long_name": "Biological Nephew",
+        "concept_code": "C201470"
+      },
+      {
+        "value": "Paternal Half Sister",
+        "long_name": "Half-sister with Father as Common Parent",
+        "concept_code": "C96657"
+      },
+      {
+        "value": "Paternal Half Brother",
+        "long_name": "Half-brother with Father as Common Parent",
+        "concept_code": "C96655"
+      },
+      {
+        "value": "Maternal Half Sister",
+        "long_name": "Half-sister with Mother as Common Parent",
+        "concept_code": "C96658"
+      },
+      {
+        "value": "Maternal Half Brother",
+        "long_name": "Half-brother with Mother as Common Parent",
+        "concept_code": "C96656"
+      }
+    ]
+  },
+  "2847330": {
+    "CRDC Name": "Vital Status",
+    "permissible_values": [
+      {
+        "value": "Unspecified",
+        "long_name": "Unspecified",
+        "concept_code": "C38046"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Dead",
+        "long_name": "Death",
+        "concept_code": "C28554"
+      },
+      {
+        "value": "Alive",
+        "long_name": "Alive",
+        "concept_code": "C37987"
+      },
+      {
+        "value": "Not reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      }
+    ]
+  },
+  "4783274": {
+    "CRDC Name": "Primary Cause of Death",
+    "permissible_values": [
+      {
+        "value": "Thrombosis",
+        "long_name": "Thrombosis",
+        "concept_code": "C26891"
+      },
+      {
+        "value": "Infection",
+        "long_name": "Infection",
+        "concept_code": "C26726"
+      },
+      {
+        "value": "VOD",
+        "long_name": "Veno-Occlusive Disease",
+        "concept_code": "C8301"
+      },
+      {
+        "value": "Toxicity",
+        "long_name": "Toxicity",
+        "concept_code": "C27990"
+      },
+      {
+        "value": "Hemorrhage",
+        "long_name": "Hemorrhage",
+        "concept_code": "C26791"
+      },
+      {
+        "value": "Graft Versus Host Disease",
+        "long_name": "Graft Versus Host Disease",
+        "concept_code": "C3063"
+      },
+      {
+        "value": "APL Differentiation Syndrome",
+        "long_name": "APL Differentiation Syndrome",
+        "concept_code": "C78597"
+      },
+      {
+        "value": "Accidental death",
+        "long_name": "Accident Death",
+        "concept_code": "C34340:C28554"
+      },
+      {
+        "value": "Acute GVHD",
+        "long_name": "Acute Graft Versus Host Disease",
+        "concept_code": "C4980"
+      },
+      {
+        "value": "Adult Respiratory Distress Syndrome (ARDS)",
+        "long_name": "Adult Respiratory Distress Syndrome",
+        "concept_code": "C3353"
+      },
+      {
+        "value": "Aspiration Pneumonia",
+        "long_name": "Aspiration Pneumonia",
+        "concept_code": "C34932"
+      },
+      {
+        "value": "Bacterial infection",
+        "long_name": "Bacterial Infection",
+        "concept_code": "C2890"
+      },
+      {
+        "value": "BCNU IP",
+        "long_name": "Carmustine Interstitial Pneumonia",
+        "concept_code": "C349:C27006"
+      },
+      {
+        "value": "Cardiac failure",
+        "long_name": "Heart Failure",
+        "concept_code": "C50577"
+      },
+      {
+        "value": "Cardiopulmonary Arrest",
+        "long_name": "Cardiopulmonary Arrest",
+        "concept_code": "C50483"
+      },
+      {
+        "value": "Cardiovascular accident",
+        "long_name": "Cerebrovascular Accident",
+        "concept_code": "C3390"
+      },
+      {
+        "value": "Cardiovascular Disorder",
+        "long_name": "Cardiovascular Disorder",
+        "concept_code": "C2931"
+      },
+      {
+        "value": "Central nervous system(CNS) failure",
+        "long_name": "Central Nervous System Failure",
+        "concept_code": "C12438:C25745"
+      },
+      {
+        "value": "Chronic GVHD",
+        "long_name": "Chronic Graft Versus Host Disease",
+        "concept_code": "C4981"
+      },
+      {
+        "value": "Chronic liver disease",
+        "long_name": "Stigmata of Chronic Liver Disease",
+        "concept_code": "C82996"
+      },
+      {
+        "value": "Chronic Obstructive Pulmonary Disease",
+        "long_name": "Chronic Obstructive Pulmonary Disease",
+        "concept_code": "C3199"
+      },
+      {
+        "value": "Congestive Heart Failure",
+        "long_name": "Congestive heart failure",
+        "concept_code": "C3080"
+      },
+      {
+        "value": "Coronary artery disease (atherosclerosis)",
+        "long_name": "Coronary Disease",
+        "concept_code": "C26732"
+      },
+      {
+        "value": "Dementia (including Alzheimer's disease)",
+        "long_name": "Dementia",
+        "concept_code": "C4786"
+      },
+      {
+        "value": "Diabetes Mellitus",
+        "long_name": "Diabetes Mellitus",
+        "concept_code": "C2985"
+      },
+      {
+        "value": "Disseminated intravascular coagulation (DIC)",
+        "long_name": "DIC",
+        "concept_code": "C2992"
+      },
+      {
+        "value": "Failure to Thrive",
+        "long_name": "Failure to Thrive",
+        "concept_code": "C107587"
+      },
+      {
+        "value": "Fungal infection",
+        "long_name": "Fungal Infection",
+        "concept_code": "C3245"
+      },
+      {
+        "value": "Gastrointestinal (GI) failure (not liver)",
+        "long_name": "Gastrointestinal Failure",
+        "concept_code": "C13359:C25745"
+      },
+      {
+        "value": "Gastrointestinal hemorrhage",
+        "long_name": "Gastrointestinal Hemorrhage",
+        "concept_code": "C13359:C26791"
+      },
+      {
+        "value": "Graft rejection or failure",
+        "long_name": "Graft Rejection",
+        "concept_code": "C75570"
+      },
+      {
+        "value": "Hemorrhage, not otherwise specified",
+        "long_name": "Hemorrhage Not Otherwise Specified",
+        "concept_code": "C26791:C19594"
+      },
+      {
+        "value": "Hemorrhagic cystitis",
+        "long_name": "Hemorrhage Cystitis",
+        "concept_code": "C26791:C26738"
+      },
+      {
+        "value": "Hepatitis",
+        "long_name": "Hepatitis",
+        "concept_code": "C3095"
+      },
+      {
+        "value": "Herpes",
+        "long_name": "Herpes",
+        "concept_code": "C35620"
+      },
+      {
+        "value": "HIV/AIDS",
+        "long_name": "Human Immunodeficiency Virus And/Or Acquired Immunodeficiency Syndrome",
+        "concept_code": "C14219:C48928:C2851"
+      },
+      {
+        "value": "Infection, organism not identified",
+        "long_name": "Infection Organism Not Identified",
+        "concept_code": "C26726:C14250:C48661"
+      },
+      {
+        "value": "Influenza",
+        "long_name": "Influenza",
+        "concept_code": "C53482"
+      },
+      {
+        "value": "Interstitial Pneumonia (IP) NOS",
+        "long_name": "Not Otherwise Specified Interstitial Pneumonia",
+        "concept_code": "C19594:C27006"
+      },
+      {
+        "value": "Intracranial hemorrhage",
+        "long_name": "Intracranial Hemorrhage",
+        "concept_code": "C50438"
+      },
+      {
+        "value": "IPS, idiopathic",
+        "long_name": "Idiopathic Pneumonia Syndrome Idiopathic",
+        "concept_code": "C62590:C28242"
+      },
+      {
+        "value": "IPS, viral, cytomegalovirus(CMV)",
+        "long_name": "Idiopathic Pneumonia Syndrome Viral Cytomegalovirus",
+        "concept_code": "C62590:C27985:C14196"
+      },
+      {
+        "value": "IPS, viral, other",
+        "long_name": "Idiopathic Pneumonia Syndrome Viral Other",
+        "concept_code": "C62590:C27985:C17649"
+      },
+      {
+        "value": "Liver failure (not VOD)",
+        "long_name": "Liver Failure",
+        "concept_code": "C12392:C25745"
+      },
+      {
+        "value": "Multiple Organ Failure",
+        "long_name": "Multiple Organ Failure",
+        "concept_code": "C75568"
+      },
+      {
+        "value": "Myocardial infarction",
+        "long_name": "Myocardial infarction",
+        "concept_code": "C27996"
+      },
+      {
+        "value": "Natural causes",
+        "long_name": "Natural Cause of Death",
+        "concept_code": "C85060:C81239"
+      },
+      {
+        "value": "Non-protocol cancer therapy",
+        "long_name": "Non-Protocol Cancer Treatment",
+        "concept_code": "C25590:C16212"
+      },
+      {
+        "value": "Organ failure, not otherwise specified",
+        "long_name": "Organ Failure Not Otherwise Specified",
+        "concept_code": "C13018:C25745:C19594"
+      },
+      {
+        "value": "Other cause",
+        "long_name": "Other Reason",
+        "concept_code": "C17649:C25638"
+      },
+      {
+        "value": "Parkinson's Disease",
+        "long_name": "Parkinson's Disease",
+        "concept_code": "C26845"
+      },
+      {
+        "value": "Persistence or recurrence of underlying disease",
+        "long_name": "Persistent Disease Or Recurrent Disease",
+        "concept_code": "C90169:C37998:C38155"
+      },
+      {
+        "value": "Pneumonia NOS",
+        "long_name": "Not Otherwise Specified Pneumonia",
+        "concept_code": "C19594:C3333"
+      },
+      {
+        "value": "Prior malignancy",
+        "long_name": "Prior Malignant Neoplasm",
+        "concept_code": "C25629:C9305"
+      },
+      {
+        "value": "Protozoal infection",
+        "long_name": "Protozoal Infection",
+        "concept_code": "C34953"
+      },
+      {
+        "value": "Pulmonary Embolism",
+        "long_name": "Pulmonary Embolism",
+        "concept_code": "C50713"
+      },
+      {
+        "value": "Pulmonary failure",
+        "long_name": "Pulmonary Failure",
+        "concept_code": "C13304:C25745"
+      },
+      {
+        "value": "Pulmonary hemorrhage",
+        "long_name": "Pulmonary Hemorrhage",
+        "concept_code": "C13304:C26791"
+      },
+      {
+        "value": "Radiation IP",
+        "long_name": "Radiation Therapy Interstitial Pneumonia",
+        "concept_code": "C15313:C27006"
+      },
+      {
+        "value": "Recurrence/persistence/progression of disease reported for first HSCT",
+        "long_name": "Recurrence Persistent PD",
+        "concept_code": "C3352:C43623:C35571"
+      },
+      {
+        "value": "Renal failure",
+        "long_name": "Renal Failure",
+        "concept_code": "C4376"
+      },
+      {
+        "value": "Respiratory failure",
+        "long_name": "Respiratory Failure",
+        "concept_code": "C26872"
+      },
+      {
+        "value": "Sepsis",
+        "long_name": "Septicemia",
+        "concept_code": "C3364"
+      },
+      {
+        "value": "Suicide",
+        "long_name": "Suicide",
+        "concept_code": "C3394"
+      },
+      {
+        "value": "Thromboembolic",
+        "long_name": "Thromboembolism",
+        "concept_code": "C28195"
+      },
+      {
+        "value": "Thrombotic thrombocytopenic purpura (HUS/TTP)",
+        "long_name": "Thrombocytopenic Purpura",
+        "concept_code": "C26870"
+      },
+      {
+        "value": "Unclassified infection / Infection NOS",
+        "long_name": "Not Otherwise Specified Unclassified Infection",
+        "concept_code": "C19594:C64486:C26726"
+      },
+      {
+        "value": "Vascular, not otherwise specified",
+        "long_name": "Vascular Not Otherwise Specified",
+        "concept_code": "C13311:C19594"
+      },
+      {
+        "value": "Veno-occlusive disease (VOD) / sinusodial obstruction syndrome (SOS)",
+        "long_name": "Hepatic Veno-Occlusive Disease",
+        "concept_code": "C26793"
+      },
+      {
+        "value": "Viral infection",
+        "long_name": "Viral Infection",
+        "concept_code": "C3439"
+      },
+      {
+        "value": "Drug Related",
+        "long_name": "Drug Toxicity",
+        "concept_code": "C27955"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Adverse Event",
+        "long_name": "Adverse Event",
+        "concept_code": "C41331"
+      },
+      {
+        "value": "Cardiac Disease",
+        "long_name": "Heart Disorder",
+        "concept_code": "C3079"
+      },
+      {
+        "value": "Immunotherapy-Related",
+        "long_name": "Immunotherapy-Related",
+        "concept_code": "C168874"
+      },
+      {
+        "value": "Pulmonary Disease",
+        "long_name": "Lung Disorder",
+        "concept_code": "C3198"
+      },
+      {
+        "value": "Surgical Complication",
+        "long_name": "Surgical Complication",
+        "concept_code": "C164157"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Infection, NOS",
+        "long_name": "Infection Not Otherwise Specified",
+        "concept_code": "C128320:C19594"
+      },
+      {
+        "value": "Sinusoidal Obstruction Syndrome",
+        "long_name": "Hepatic Veno-Occlusive Disease",
+        "concept_code": "C26793"
+      },
+      {
+        "value": "Unacceptable Toxicity",
+        "long_name": "Unacceptable Toxicity",
+        "concept_code": "C199267"
+      },
+      {
+        "value": "Cancer Related",
+        "long_name": "Cancer-Related Death",
+        "concept_code": "C156427"
+      },
+      {
+        "value": "Not Cancer Related",
+        "long_name": "Non-Cancer Related Death",
+        "concept_code": "C156428"
+      },
+      {
+        "value": "Spinal Muscular Atrophy",
+        "long_name": "Spinal Muscular Atrophy",
+        "concept_code": "C85075"
+      },
+      {
+        "value": "Renal Disorder, NOS",
+        "long_name": "Renal Disorder",
+        "concept_code": "C3149"
+      },
+      {
+        "value": "End-stage Renal Disease",
+        "long_name": "Chronic Kidney Disease, Stage 5",
+        "concept_code": "C9439"
+      },
+      {
+        "value": "Second Malignancy",
+        "long_name": "Second Primary Malignant Neoplasm",
+        "concept_code": "C95606"
+      }
+    ]
+  },
+  "6273393": {
+    "CRDC Name": "Sequencing Library Strategy",
+    "permissible_values": [
+      {
+        "value": "Other",
+        "long_name": "Other Library strategy",
+        "concept_code": "C17649"
+      },
+      {
+        "value": "WXS",
+        "long_name": "WXS",
+        "concept_code": "C101295"
+      },
+      {
+        "value": "WGS",
+        "long_name": "Whole Genome Sequencing",
+        "concept_code": "C101294"
+      },
+      {
+        "value": "CLONE",
+        "long_name": "CLONE",
+        "concept_code": "C204814"
+      },
+      {
+        "value": "CLONEEND",
+        "long_name": "CLONEEND",
+        "concept_code": "C204815"
+      },
+      {
+        "value": "ChIP-Seq",
+        "long_name": "ChIP-Seq",
+        "concept_code": "C106049"
+      },
+      {
+        "value": "ChIA-PET",
+        "long_name": "ChIA-PET",
+        "concept_code": "C172845"
+      },
+      {
+        "value": "Bisulfite-Seq",
+        "long_name": "Bisulfite-Seq",
+        "concept_code": "C106054"
+      },
+      {
+        "value": "ATAC-Seq",
+        "long_name": "ATAC-seq",
+        "concept_code": "C156056"
+      },
+      {
+        "value": "AMPLICON",
+        "long_name": "AMPLICON",
+        "concept_code": "C204813"
+      },
+      {
+        "value": "WGA",
+        "long_name": "WGA",
+        "concept_code": "C19590"
+      },
+      {
+        "value": "WCS",
+        "long_name": "WCS",
+        "concept_code": "C204831"
+      },
+      {
+        "value": "Tn-Seq",
+        "long_name": "Tn-Seq",
+        "concept_code": "C204830"
+      },
+      {
+        "value": "Tethered Chromatin Conformation Capture",
+        "long_name": "Tethered Chromatin Conformation Capture",
+        "concept_code": "C204829"
+      },
+      {
+        "value": "Targeted-Capture",
+        "long_name": "Targeted-Capture",
+        "concept_code": "C204828"
+      },
+      {
+        "value": "Synthetic-Long-Read",
+        "long_name": "Synthetic-Long-Read",
+        "concept_code": "C204827"
+      },
+      {
+        "value": "ssRNA-seq",
+        "long_name": "ssRNA-seq",
+        "concept_code": "C172859"
+      },
+      {
+        "value": "SELEX",
+        "long_name": "SELEX",
+        "concept_code": "C204826"
+      },
+      {
+        "value": "RIP-Seq",
+        "long_name": "RIP-Seq",
+        "concept_code": "C204825"
+      },
+      {
+        "value": "RAD-Seq",
+        "long_name": "RAD-Seq",
+        "concept_code": "C204824"
+      },
+      {
+        "value": "POOLCLONE",
+        "long_name": "POOLCLONE",
+        "concept_code": "C204823"
+      },
+      {
+        "value": "ncRNA-Seq",
+        "long_name": "ncRNA-Seq",
+        "concept_code": "C172858"
+      },
+      {
+        "value": "MRE-Seq",
+        "long_name": "MRE-Seq",
+        "concept_code": "C204822"
+      },
+      {
+        "value": "MNase-Seq",
+        "long_name": "MNase-Seq",
+        "concept_code": "C106056"
+      },
+      {
+        "value": "miRNA-Seq",
+        "long_name": "miRNA-Seq",
+        "concept_code": "C156057"
+      },
+      {
+        "value": "MeDIP-Seq",
+        "long_name": "MeDIP-Seq",
+        "concept_code": "C204821"
+      },
+      {
+        "value": "MBD-Seq",
+        "long_name": "MBD-Seq",
+        "concept_code": "C204820"
+      },
+      {
+        "value": "Hi-C",
+        "long_name": "Hi-C",
+        "concept_code": "C204819"
+      },
+      {
+        "value": "FL-cDNA",
+        "long_name": "FL-cDNA",
+        "concept_code": "C204817"
+      },
+      {
+        "value": "FINISHING",
+        "long_name": "FINISHING",
+        "concept_code": "C204818"
+      },
+      {
+        "value": "FAIRE-seq",
+        "long_name": "FAIRE-Seq",
+        "concept_code": "C106051"
+      },
+      {
+        "value": "EST",
+        "long_name": "EST",
+        "concept_code": "C16208"
+      },
+      {
+        "value": "DNase-Hypersensitivity",
+        "long_name": "DNase-Hypersensitivity",
+        "concept_code": "C106052"
+      },
+      {
+        "value": "CTS",
+        "long_name": "CTS",
+        "concept_code": "C204816"
+      },
+      {
+        "value": "snATAC-Seq",
+        "long_name": "Single Nucleus ATAC-Seq",
+        "concept_code": "C198496"
+      },
+      {
+        "value": "scMultiome",
+        "long_name": "Single-cell Multiome Analysis",
+        "concept_code": "C205123"
+      },
+      {
+        "value": "Spatial-tx",
+        "long_name": "Spatial Transcriptome Analysis",
+        "concept_code": "C205121"
+      },
+      {
+        "value": "scRNA-Seq",
+        "long_name": "Single Cell RNA Sequencing",
+        "concept_code": "C171152"
+      },
+      {
+        "value": "mRNA-Seq",
+        "long_name": "Messenger RNA Nucleic Acid Sequencing",
+        "concept_code": "C129432"
+      },
+      {
+        "value": "Bulk RNA-Seq",
+        "long_name": "Bulk RNA Sequencing",
+        "concept_code": "C219552"
+      },
+      {
+        "value": "scDNA-Seq",
+        "long_name": "Single Cell DNA Sequencing",
+        "concept_code": "C223894"
+      }
+    ]
+  },
+  "6352164": {
+    "CRDC Name": "Sequencing Equipment Model",
+    "permissible_values": [
+      {
+        "value": "Ion Torrent Proton",
+        "long_name": "Ion Torrent Proton",
+        "concept_code": null
+      },
+      {
+        "value": "Ion Torrent PGM",
+        "long_name": "Ion Torrent PGM",
+        "concept_code": null
+      },
+      {
+        "value": "PacBio RS II",
+        "long_name": "PacBio RS II",
+        "concept_code": null
+      },
+      {
+        "value": "PacBio RS",
+        "long_name": "PacBio RS",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS 20",
+        "long_name": "454 GS 20",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS",
+        "long_name": "454 GS",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq 550",
+        "long_name": "Illumina NextSeq 550",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq 500",
+        "long_name": "Illumina NextSeq 500",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina MiSeq",
+        "long_name": "Illumina MiSeq",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina MiniSeq",
+        "long_name": "Illumina MiniSeq",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 4000",
+        "long_name": "Illumina HiSeq 4000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 3000",
+        "long_name": "Illumina HiSeq 3000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 2500",
+        "long_name": "Illumina HiSeq 2500",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 2000",
+        "long_name": "Illumina HiSeq 2000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 1500",
+        "long_name": "Illumina HiSeq 1500",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq 1000",
+        "long_name": "Illumina HiSeq 1000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiScanSQ",
+        "long_name": "Illumina HiScanSQ",
+        "concept_code": null
+      },
+      {
+        "value": "BGISEQ-500",
+        "long_name": "BGISEQ-500",
+        "concept_code": null
+      },
+      {
+        "value": "PromethION",
+        "long_name": "PromethION",
+        "concept_code": null
+      },
+      {
+        "value": "MinION",
+        "long_name": "MinION",
+        "concept_code": null
+      },
+      {
+        "value": "GridION",
+        "long_name": "GridION",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3730xL Genetic Analyzer",
+        "long_name": "AB 3730xL Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3730 Genetic Analyzer",
+        "long_name": "AB 3730 Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3500xL Genetic Analyzer",
+        "long_name": "AB 3500xL Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3500 Genetic Analyzer",
+        "long_name": "AB 3500 Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3130xL Genetic Analyzer",
+        "long_name": "AB 3130xL Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 3130 Genetic Analyzer",
+        "long_name": "AB 3130 Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 310 Genetic Analyzer",
+        "long_name": "AB 310 Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "Ion Torrent S5",
+        "long_name": "Ion Torrent S5",
+        "concept_code": null
+      },
+      {
+        "value": "Ion Torrent S5 XL",
+        "long_name": "Ion Torrent S5 XL",
+        "concept_code": null
+      },
+      {
+        "value": "Helicos HeliScope",
+        "long_name": "HeliScope",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Genome Analyzer II",
+        "long_name": "Illumina Genome Analyzer II",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Genome Analyzer IIx",
+        "long_name": "Illumina Genome Analyzer IIx",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Genome Analyzer",
+        "long_name": "Illumina Genome Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS Junior",
+        "long_name": "454 GS Junior",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS FLX Titanium",
+        "long_name": "454 GS FLX Titanium",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS FLX+",
+        "long_name": "454 GS FLX+",
+        "concept_code": null
+      },
+      {
+        "value": "454 GS FLX",
+        "long_name": "454 GS FLX",
+        "concept_code": null
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Other",
+        "long_name": "Other",
+        "concept_code": "C17649"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Illumina NovaSeq",
+        "long_name": "Illumina NovaSeq",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq",
+        "long_name": "Illumina NextSeq",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq X Five",
+        "long_name": "Illumina HiSeq X Five",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina HiSeq X Ten",
+        "long_name": "Illumina HiSeq X Ten",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina iSeq 100",
+        "long_name": "Illumina iSeq 100",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD System",
+        "long_name": "AB SOLiD System",
+        "concept_code": null
+      },
+      {
+        "value": "DNBSEQ-G400",
+        "long_name": "DNBSEQ-G400",
+        "concept_code": null
+      },
+      {
+        "value": "DNBSEQ-T7",
+        "long_name": "DNBSEQ-T7",
+        "concept_code": null
+      },
+      {
+        "value": "MGISEQ-2000RS",
+        "long_name": "MGISEQ-2000RS",
+        "concept_code": null
+      },
+      {
+        "value": "PacBio Sequel",
+        "long_name": "PacBio Sequel",
+        "concept_code": null
+      },
+      {
+        "value": "PacBio Sequel II",
+        "long_name": "PacBio Sequel II",
+        "concept_code": null
+      },
+      {
+        "value": "DNBSEQ-G50",
+        "long_name": "DNBSEQ-G50",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD 3 Plus System",
+        "long_name": "AB SOLiD 3 Plus System",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD 4hq System",
+        "long_name": "AB SOLiD 4hq System",
+        "concept_code": null
+      },
+      {
+        "value": "AB 5500xl Genetic Analyzer",
+        "long_name": "AB 5500xl Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB 5500x-Wl Genetic Analyzer",
+        "long_name": "AB 5500x-Wl Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD PI System",
+        "long_name": "AB SOLiD PI System",
+        "concept_code": null
+      },
+      {
+        "value": "AB 5500 Genetic Analyzer",
+        "long_name": "AB 5500 Genetic Analyzer",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NovaSeq 6000",
+        "long_name": "Illumina NovaSeq 6000",
+        "concept_code": null
+      },
+      {
+        "value": "Ultima Genomics UG100",
+        "long_name": "Ultima Genomics UG100",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq 2500",
+        "long_name": "Illumina NextSeq 2500",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NovaSeq X Plus",
+        "long_name": "Illumina NovaSeq X Plus",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD 2",
+        "long_name": "AB SOLiD 2",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD 4",
+        "long_name": "AB SOLiD 4",
+        "concept_code": null
+      },
+      {
+        "value": "AB SOLiD 3",
+        "long_name": "AB SOLiD 3",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq 2000",
+        "long_name": "Illumina NextSeq 2000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NextSeq 1000",
+        "long_name": "Illumina NextSeq 1000",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Methylation Epic v2",
+        "long_name": "Illumina Methylation Epic v2",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Methylation Epic",
+        "long_name": "Illumina Methylation Epic",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Human Methylation 450",
+        "long_name": "Illumina Human Methylation 450",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina Human Methylation 27",
+        "long_name": "Illumina Human Methylation 27",
+        "concept_code": null
+      },
+      {
+        "value": "GeneChip U133A",
+        "long_name": "GeneChip U133A",
+        "concept_code": null
+      },
+      {
+        "value": "GeneChip U133 Plus 2.0",
+        "long_name": "GeneChip U133 Plus 2.0",
+        "concept_code": null
+      },
+      {
+        "value": "Affymetrix SNP 6.0",
+        "long_name": "Affymetrix SNP 6.0",
+        "concept_code": null
+      },
+      {
+        "value": "Illumina NovaSeq S4",
+        "long_name": "Illumina NovaSeq S4",
+        "concept_code": null
+      }
+    ]
+  },
+  "7058656": {
+    "CRDC Name": "Tumor Focality",
+    "permissible_values": [
+      {
+        "value": "Multifocal",
+        "long_name": "Multifocal Lesion",
+        "concept_code": "C36180"
+      },
+      {
+        "value": "Unifocal",
+        "long_name": "Unifocal Lesion",
+        "concept_code": "C48616"
+      }
+    ]
+  },
+  "7572817": {
+    "CRDC Name": "Sex at Birth",
+    "permissible_values": [
+      {
+        "value": "Male",
+        "long_name": "Male",
+        "concept_code": "C20197"
+      },
+      {
+        "value": "Female",
+        "long_name": "Female",
+        "concept_code": "C16576"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      }
+    ]
+  },
+  "8028962": {
+    "CRDC Name": "Specimen Preservation Method",
+    "permissible_values": [
+      {
+        "value": "Fresh",
+        "long_name": "Fresh Specimen",
+        "concept_code": "C84517"
+      },
+      {
+        "value": "Fresh Dissociated and Single Cell Sorted into Plates",
+        "long_name": "Fresh Dissociated Tissue Preparation, Single Cell Sorted into Plates",
+        "concept_code": "C185406"
+      },
+      {
+        "value": "Fresh Dissociated and Single Cell Sorted",
+        "long_name": "Fresh Dissociated Tissue Preparation, Single Cell Sorted",
+        "concept_code": "C185405"
+      },
+      {
+        "value": "Fresh Dissociated",
+        "long_name": "Fresh Dissociated Tissue Preparation",
+        "concept_code": "C185404"
+      },
+      {
+        "value": "Cryopreserved",
+        "long_name": "Cryopreservation",
+        "concept_code": "C16475"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Frozen",
+        "long_name": "Frozen Specimen",
+        "concept_code": "C70717"
+      },
+      {
+        "value": "Snap Frozen",
+        "long_name": "Quick Freeze",
+        "concept_code": "C63521"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Cytospin Slide",
+        "long_name": "Cytospin Slide",
+        "concept_code": "C115350"
+      },
+      {
+        "value": "Refrigerated Vacuum Chamber",
+        "long_name": "Refrigerated Vacuum Chamber",
+        "concept_code": "C185340"
+      },
+      {
+        "value": "Refrigerated",
+        "long_name": "Refrigerated",
+        "concept_code": "C70718"
+      },
+      {
+        "value": "Fixation",
+        "long_name": "Fixation",
+        "concept_code": "C25219"
+      }
+    ]
+  },
+  "8028966": {
+    "CRDC Name": "Specimen Laterality",
+    "permissible_values": [
+      {
+        "value": "Not Specified",
+        "long_name": "Unspecified",
+        "concept_code": "C38046"
+      },
+      {
+        "value": "Midline",
+        "long_name": "Midline",
+        "concept_code": "C81170"
+      },
+      {
+        "value": "Bilateral",
+        "long_name": "Bilateral",
+        "concept_code": "C13332"
+      },
+      {
+        "value": "Left",
+        "long_name": "Left",
+        "concept_code": "C25229"
+      },
+      {
+        "value": "Right",
+        "long_name": "Right",
+        "concept_code": "C25228"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      }
+    ]
+  },
+  "11325685": {
+    "CRDC Name": "Tumor Grade",
+    "permissible_values": [
+      {
+        "value": "GB Borderline",
+        "long_name": "Grade B",
+        "concept_code": "C113729"
+      },
+      {
+        "value": "GX Grade Cannot Be Assessed",
+        "long_name": "Grade X",
+        "concept_code": "C113730"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "G3 High Grade",
+        "long_name": "Grade 3",
+        "concept_code": "C28079"
+      },
+      {
+        "value": "G2 Intermediate Grade",
+        "long_name": "Grade 2",
+        "concept_code": "C28078"
+      },
+      {
+        "value": "G1 Low Grade",
+        "long_name": "Grade 1",
+        "concept_code": "C28077"
+      },
+      {
+        "value": "G4 Anaplastic",
+        "long_name": "Grade 4",
+        "concept_code": "C28082"
+      }
+    ]
+  },
+  "11326261": {
+    "CRDC Name": "ICD-O-3 Morphology Code",
+    "permissible_values": [
+      {
+        "value": "http://www.iacr.com.fr/index.php?option=com_content&view=category&layout=blog&id=100&Itemid=577",
+        "long_name": "International Classification of Diseases for Oncology, Third Edition",
+        "concept_code": "C87061"
+      }
+    ]
+  },
+  "11387114": {
+    "CRDC Name": "Data File Compression Status",
+    "permissible_values": [
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Compressed",
+        "long_name": "Compressed File",
+        "concept_code": "C190416"
+      },
+      {
+        "value": "Uncompressed",
+        "long_name": "Uncompressed File",
+        "concept_code": "C190381"
+      }
+    ]
+  },
+  "11416926": {
+    "CRDC Name": "Data File Format",
+    "permissible_values": [
+      {
+        "value": "ADF",
+        "long_name": "Array Design Format",
+        "concept_code": "C172213"
+      },
+      {
+        "value": "AVI",
+        "long_name": "AVI Format",
+        "concept_code": "C190162"
+      },
+      {
+        "value": "BAI",
+        "long_name": "BAI File",
+        "concept_code": "C190163"
+      },
+      {
+        "value": "BAM",
+        "long_name": "Binary Alignment Map",
+        "concept_code": "C153249"
+      },
+      {
+        "value": "BED",
+        "long_name": "BED Format",
+        "concept_code": "C153367"
+      },
+      {
+        "value": "bedgraph",
+        "long_name": "Bedgraph Format",
+        "concept_code": "C190165"
+      },
+      {
+        "value": "bigBed",
+        "long_name": "BigBed Format",
+        "concept_code": "C190166"
+      },
+      {
+        "value": "bigWig",
+        "long_name": "BigWig Format",
+        "concept_code": "C190167"
+      },
+      {
+        "value": "Binary Format",
+        "long_name": "Binary Format",
+        "concept_code": "C190168"
+      },
+      {
+        "value": "BCR Biotab",
+        "long_name": "BCR Biotab Format",
+        "concept_code": "C190164"
+      },
+      {
+        "value": "BIOM",
+        "long_name": "BIOM Format",
+        "concept_code": "C190169"
+      },
+      {
+        "value": "CRAM",
+        "long_name": "CRAM Format",
+        "concept_code": "C190170"
+      },
+      {
+        "value": "CSV",
+        "long_name": "Comma Separated Values Format",
+        "concept_code": "C182456"
+      },
+      {
+        "value": "DOCX",
+        "long_name": "DOCX Format",
+        "concept_code": "C190171"
+      },
+      {
+        "value": "DSV",
+        "long_name": "DSV Format",
+        "concept_code": "C190172"
+      },
+      {
+        "value": "FASTA",
+        "long_name": "FASTA Format",
+        "concept_code": "C47845"
+      },
+      {
+        "value": "FASTQ",
+        "long_name": "Investigation Description Format",
+        "concept_code": "C172212"
+      },
+      {
+        "value": "GCT/Res Format",
+        "long_name": "GCT/RES Format",
+        "concept_code": "C190173"
+      },
+      {
+        "value": "DICOM",
+        "long_name": "DICOM",
+        "concept_code": "C49059"
+      },
+      {
+        "value": "GenBank Format",
+        "long_name": "GenBank Format",
+        "concept_code": "C190174"
+      },
+      {
+        "value": "GFF3",
+        "long_name": "General Feature Format Version 3",
+        "concept_code": "C190175"
+      },
+      {
+        "value": "GPR",
+        "long_name": "GenePix Results Format",
+        "concept_code": "C190176"
+      },
+      {
+        "value": "GTF",
+        "long_name": "GTF Format",
+        "concept_code": "C190177"
+      },
+      {
+        "value": "HDF5",
+        "long_name": "Hierarchical Data Format 5",
+        "concept_code": "C184763"
+      },
+      {
+        "value": "HTML",
+        "long_name": "Hypertext Markup Language",
+        "concept_code": "C142380"
+      },
+      {
+        "value": "GZIP Format",
+        "long_name": "Gzip File Format",
+        "concept_code": "C80220"
+      },
+      {
+        "value": "MAGE-TAB",
+        "long_name": "MAGE-TAB",
+        "concept_code": "C82937"
+      },
+      {
+        "value": "MAT",
+        "long_name": "MAT Format",
+        "concept_code": "C190178"
+      },
+      {
+        "value": "MPEG-4",
+        "long_name": "MP4 Format",
+        "concept_code": "C190180"
+      },
+      {
+        "value": "mzML",
+        "long_name": "Mass Spectrometry Markup Language",
+        "concept_code": "C190181"
+      },
+      {
+        "value": "mzXML",
+        "long_name": "Mass Spectrometry Extensible Markup Language",
+        "concept_code": "C47924"
+      },
+      {
+        "value": "NIFTI Format",
+        "long_name": "NIfTI Format",
+        "concept_code": "C190183"
+      },
+      {
+        "value": "MATLAB Script",
+        "long_name": "MATLAB Script File",
+        "concept_code": "C190179"
+      },
+      {
+        "value": "OME-TIFF",
+        "long_name": "Open Microscopy Environment Tagged Image File Format",
+        "concept_code": "C181618"
+      },
+      {
+        "value": "PDF",
+        "long_name": "Portable Document Format",
+        "concept_code": "C63805"
+      },
+      {
+        "value": "Plain Text Data Format",
+        "long_name": "Plain Text Data Format",
+        "concept_code": "C85873"
+      },
+      {
+        "value": "PNG",
+        "long_name": "Portable Network Graphics",
+        "concept_code": "C85437"
+      },
+      {
+        "value": "R Markdown",
+        "long_name": "R Markdown Format",
+        "concept_code": "C190187"
+      },
+      {
+        "value": "SDRF",
+        "long_name": "Sample and Data Relationship Format",
+        "concept_code": "C172211"
+      },
+      {
+        "value": "Sequence Record Format",
+        "long_name": "Sequence Record Format",
+        "concept_code": "C190188"
+      },
+      {
+        "value": "SVG",
+        "long_name": "Scalable Vector Graphics",
+        "concept_code": "C85435"
+      },
+      {
+        "value": "Python Script Format",
+        "long_name": "Python Script Format",
+        "concept_code": "C190184"
+      },
+      {
+        "value": "SVS",
+        "long_name": "Spectral View Settings Format",
+        "concept_code": "C172214"
+      },
+      {
+        "value": "TAR",
+        "long_name": "TAR Format",
+        "concept_code": "C190189"
+      },
+      {
+        "value": "Thermo RAW",
+        "long_name": "Thermo RAW Format",
+        "concept_code": "C190190"
+      },
+      {
+        "value": "TSV",
+        "long_name": "Tab-Separated Value Format",
+        "concept_code": "C164049"
+      },
+      {
+        "value": "TXT",
+        "long_name": "Plain Text Data Format",
+        "concept_code": "C85873"
+      },
+      {
+        "value": "VCF",
+        "long_name": "Variant Call File Format",
+        "concept_code": "C172216"
+      },
+      {
+        "value": "XLS",
+        "long_name": "XLS Format",
+        "concept_code": "C190191"
+      },
+      {
+        "value": "XLSX",
+        "long_name": "Excel Open XML Format",
+        "concept_code": "C164050"
+      },
+      {
+        "value": "XML",
+        "long_name": "Extensible Markup Language",
+        "concept_code": "C45967"
+      },
+      {
+        "value": "TIFF",
+        "long_name": "TIFF",
+        "concept_code": "C70631"
+      },
+      {
+        "value": "YAML",
+        "long_name": "YAML Language",
+        "concept_code": "C190193"
+      },
+      {
+        "value": "ZIP",
+        "long_name": "ZIP Format",
+        "concept_code": "C190192"
+      },
+      {
+        "value": "IDAT",
+        "long_name": "IDAT Format",
+        "concept_code": "C184762"
+      },
+      {
+        "value": "IDF",
+        "long_name": "Investigation Description Format",
+        "concept_code": "C172212"
+      },
+      {
+        "value": "JPEG",
+        "long_name": "JPEG",
+        "concept_code": "C48230"
+      },
+      {
+        "value": "JPEG 2000",
+        "long_name": "JPEG 2000 Format",
+        "concept_code": "C184768"
+      },
+      {
+        "value": "JSON",
+        "long_name": "JSON Format",
+        "concept_code": "C184769"
+      },
+      {
+        "value": "MAF",
+        "long_name": "Mutation Annotation Format",
+        "concept_code": "C172215"
+      },
+      {
+        "value": "CEL",
+        "long_name": "Affymetrix CEL Format",
+        "concept_code": "C191737"
+      },
+      {
+        "value": "CRAI",
+        "long_name": "CRAI File",
+        "concept_code": "C192224"
+      },
+      {
+        "value": "MEX",
+        "long_name": "MEX Format",
+        "concept_code": "C184778"
+      },
+      {
+        "value": "mzIdentML",
+        "long_name": "mzIdentML",
+        "concept_code": "C201788"
+      },
+      {
+        "value": "mtx",
+        "long_name": "mtx",
+        "concept_code": "C201789"
+      },
+      {
+        "value": "BEDPE Format",
+        "long_name": "BEDPE Format",
+        "concept_code": "C184749"
+      },
+      {
+        "value": "HIC",
+        "long_name": "HIC File Format",
+        "concept_code": "C203672"
+      },
+      {
+        "value": "gVCF",
+        "long_name": "Genomic Variant Call Format",
+        "concept_code": "C204352"
+      },
+      {
+        "value": "HTSeq Count",
+        "long_name": "HTSeq-Count Output Format",
+        "concept_code": "C205749"
+      },
+      {
+        "value": "TBI",
+        "long_name": "TBI Format",
+        "concept_code": "C184806"
+      },
+      {
+        "value": "RTF",
+        "long_name": "Rich Text Format",
+        "concept_code": "C209896"
+      },
+      {
+        "value": "SEG",
+        "long_name": "Segmented Data Format",
+        "concept_code": "C209892"
+      },
+      {
+        "value": "PED",
+        "long_name": "Pedigree File Format",
+        "concept_code": "C209891"
+      },
+      {
+        "value": "cdf",
+        "long_name": "Affymetrix Probe Sets Library File",
+        "concept_code": "C209894"
+      },
+      {
+        "value": "DICT",
+        "long_name": "HET Group Dictionary Entry Format",
+        "concept_code": "C209890"
+      },
+      {
+        "value": "CNS",
+        "long_name": "Cytoscape Input File Format",
+        "concept_code": "C209889"
+      },
+      {
+        "value": "idpDB",
+        "long_name": "IDPicker File Format",
+        "concept_code": "C209893"
+      },
+      {
+        "value": "DOC",
+        "long_name": "DOC Format",
+        "concept_code": "C210442"
+      },
+      {
+        "value": "SAS",
+        "long_name": "Statistical Analysis System File Format",
+        "concept_code": "C219045"
+      },
+      {
+        "value": "SPSS",
+        "long_name": "SPSS File Format",
+        "concept_code": "C219046"
+      },
+      {
+        "value": "STATA",
+        "long_name": "STATA Statistical Software for Data Science",
+        "concept_code": "C219047"
+      },
+      {
+        "value": "SAS binary",
+        "long_name": "SAS Binary Format",
+        "concept_code": "C219048"
+      },
+      {
+        "value": "QPTIFF",
+        "long_name": "QP Tagged Image File Format",
+        "concept_code": "C222390"
+      },
+      {
+        "value": "Parquet",
+        "long_name": "Parquet Format",
+        "concept_code": "C223247"
+      },
+      {
+        "value": "PZFX",
+        "long_name": "GraphPad Prism XML File Format",
+        "concept_code": "C224011"
+      },
+      {
+        "value": "PRISM",
+        "long_name": "GraphPad Prism Project File Format",
+        "concept_code": "C224010"
+      },
+      {
+        "value": "PDT",
+        "long_name": "Pro Tools Session File Legacy Format",
+        "concept_code": "C224007"
+      },
+      {
+        "value": "GIF",
+        "long_name": "Graphics Interchange Format",
+        "concept_code": "C224006"
+      },
+      {
+        "value": "ODT",
+        "long_name": "OpenDocument Text Format",
+        "concept_code": "C224005"
+      },
+      {
+        "value": "ODS",
+        "long_name": "OpenDocument Spreadsheet Format",
+        "concept_code": "C224004"
+      },
+      {
+        "value": "EMF",
+        "long_name": "Enhanced Metafile Format",
+        "concept_code": "C224003"
+      },
+      {
+        "value": "MCD",
+        "long_name": "MCD Format",
+        "concept_code": "C224107"
+      },
+      {
+        "value": "rdata",
+        "long_name": "RDA Format",
+        "concept_code": "C224809"
+      },
+      {
+        "value": "rds",
+        "long_name": "R Data Serialization",
+        "concept_code": "C209895"
+      },
+      {
+        "value": "R File Format",
+        "long_name": "R Format",
+        "concept_code": "C190186"
+      },
+      {
+        "value": "im3",
+        "long_name": "IM3 Format",
+        "concept_code": "C225395"
+      },
+      {
+        "value": "BAS",
+        "long_name": "BAM Statistics File",
+        "concept_code": "C228146"
+      }
+    ]
+  },
+  "11475057": {
+    "CRDC Name": "Data File Checksum Type",
+    "permissible_values": [
+      {
+        "value": "md5sum",
+        "long_name": "MD5 Checksum",
+        "concept_code": "C171276"
+      },
+      {
+        "value": "sha1",
+        "long_name": "Secure Hash Algorithm-1",
+        "concept_code": "C80225"
+      },
+      {
+        "value": "sha256",
+        "long_name": "Secure Hash Algorithm-256",
+        "concept_code": "C80226"
+      }
+    ]
+  },
+  "12137353": {
+    "CRDC Name": "DICOM Modality Type",
+    "permissible_values": [
+      {
+        "value": "OP",
+        "long_name": "Ophthalmic Photography",
+        "concept_code": "C190559"
+      },
+      {
+        "value": "OT",
+        "long_name": "Other",
+        "concept_code": "C17649"
+      },
+      {
+        "value": "PR",
+        "long_name": "Presentation State",
+        "concept_code": "C190587"
+      },
+      {
+        "value": "PT",
+        "long_name": "PET scan",
+        "concept_code": "C17007"
+      },
+      {
+        "value": "PX",
+        "long_name": "Panoramic X-Ray",
+        "concept_code": "C150663"
+      },
+      {
+        "value": "RF",
+        "long_name": "Radio Fluoroscopy",
+        "concept_code": "C16588"
+      },
+      {
+        "value": "RG",
+        "long_name": "Radiographic imaging",
+        "concept_code": "C38101"
+      },
+      {
+        "value": "RTDOSE",
+        "long_name": "Radiotherapy Dose",
+        "concept_code": "C190594"
+      },
+      {
+        "value": "RTIMAGE",
+        "long_name": "Radiotherapy Image",
+        "concept_code": "C60727"
+      },
+      {
+        "value": "RTPLAN",
+        "long_name": "Radiotherapy Plan",
+        "concept_code": "C190595"
+      },
+      {
+        "value": "RTRECORD",
+        "long_name": "RT Treatment Record",
+        "concept_code": "C190604"
+      },
+      {
+        "value": "RTSTRUCT",
+        "long_name": "Radiotherapy Structure Set",
+        "concept_code": "C190605"
+      },
+      {
+        "value": "SM",
+        "long_name": "Slide Microscopy",
+        "concept_code": "C190609"
+      },
+      {
+        "value": "SMR",
+        "long_name": "Stereometric Relationship",
+        "concept_code": "C190610"
+      },
+      {
+        "value": "SR",
+        "long_name": "SR Document",
+        "concept_code": "C190611"
+      },
+      {
+        "value": "ST",
+        "long_name": "Single-photon emission computed",
+        "concept_code": "C17203"
+      },
+      {
+        "value": "TG",
+        "long_name": "Thermal Tomography",
+        "concept_code": "C190616"
+      },
+      {
+        "value": "BI",
+        "long_name": "Biomagnetic Imaging",
+        "concept_code": "C190517"
+      },
+      {
+        "value": "AS",
+        "long_name": "Angioscopy",
+        "concept_code": "C190510"
+      },
+      {
+        "value": "AU",
+        "long_name": "Audio",
+        "concept_code": "C190513"
+      },
+      {
+        "value": "CD",
+        "long_name": "Color flow Doppler",
+        "concept_code": "C190518"
+      },
+      {
+        "value": "CF",
+        "long_name": "Cinefluorography (retired)",
+        "concept_code": null
+      },
+      {
+        "value": "CP",
+        "long_name": "Culposcopy",
+        "concept_code": "C16451"
+      },
+      {
+        "value": "CR",
+        "long_name": "Computed Radiography",
+        "concept_code": "C190521"
+      },
+      {
+        "value": "US",
+        "long_name": "Ultrasound",
+        "concept_code": "C17230"
+      },
+      {
+        "value": "VF",
+        "long_name": "Videofluorography (retired)",
+        "concept_code": null
+      },
+      {
+        "value": "XA",
+        "long_name": "X-Ray Angiography",
+        "concept_code": "C20080"
+      },
+      {
+        "value": "XC",
+        "long_name": "External-camera Photography",
+        "concept_code": "C190619"
+      },
+      {
+        "value": "CS",
+        "long_name": "Cystoscopy",
+        "concept_code": "C16482"
+      },
+      {
+        "value": "CT",
+        "long_name": "COMPUTED TOMOGRAPHY",
+        "concept_code": "C17204"
+      },
+      {
+        "value": "DD",
+        "long_name": "Duplex Doppler",
+        "concept_code": "C190534"
+      },
+      {
+        "value": "DF",
+        "long_name": "Digital fluoroscopy (retired)",
+        "concept_code": null
+      },
+      {
+        "value": "DG",
+        "long_name": "Diaphanography",
+        "concept_code": "C18151"
+      },
+      {
+        "value": "DM",
+        "long_name": "Digital microscopy",
+        "concept_code": "C190537"
+      },
+      {
+        "value": "DS",
+        "long_name": "Digital Subtraction Angiography (retired)",
+        "concept_code": null
+      },
+      {
+        "value": "DX",
+        "long_name": "Digital Radiography",
+        "concept_code": "C18001"
+      },
+      {
+        "value": "EC",
+        "long_name": "ECHOCARDIOGRAPHY",
+        "concept_code": "C16525"
+      },
+      {
+        "value": "EPS",
+        "long_name": "Cardiac Electrophysiology",
+        "concept_code": "C80414"
+      },
+      {
+        "value": "ES",
+        "long_name": "Endoscopy",
+        "concept_code": "C16546"
+      },
+      {
+        "value": "FA",
+        "long_name": "Fluorescein angiography",
+        "concept_code": "C190541"
+      },
+      {
+        "value": "FS",
+        "long_name": "Fundoscopy",
+        "concept_code": "C120698"
+      },
+      {
+        "value": "GM",
+        "long_name": "General Microscopy",
+        "concept_code": "C16853"
+      },
+      {
+        "value": "HC",
+        "long_name": "Hard Copy",
+        "concept_code": "C190542"
+      },
+      {
+        "value": "HD",
+        "long_name": "Hemodynamic Waveform",
+        "concept_code": "C190544"
+      },
+      {
+        "value": "IO",
+        "long_name": "Intra-oral Radiography",
+        "concept_code": "C190548"
+      },
+      {
+        "value": "IVUS",
+        "long_name": "Intravascular Ultrasound",
+        "concept_code": "C99535"
+      },
+      {
+        "value": "KO",
+        "long_name": "Key Object Selection",
+        "concept_code": "C190552"
+      },
+      {
+        "value": "LP",
+        "long_name": "Laparoscopy",
+        "concept_code": "C16969"
+      },
+      {
+        "value": "LS",
+        "long_name": "Laser surface scan",
+        "concept_code": "C190554"
+      },
+      {
+        "value": "MA",
+        "long_name": "Magnetic resonance angiography",
+        "concept_code": "C190557"
+      },
+      {
+        "value": "MG",
+        "long_name": "Mammography",
+        "concept_code": "C16818"
+      },
+      {
+        "value": "MR",
+        "long_name": "Magnetic Resonance",
+        "concept_code": "C16809"
+      },
+      {
+        "value": "MS",
+        "long_name": "Magnetic Resonance Spectroscopy",
+        "concept_code": null
+      },
+      {
+        "value": "AR",
+        "long_name": "Autorefraction",
+        "concept_code": "C176330"
+      },
+      {
+        "value": "ASMT",
+        "long_name": "Content Assessment Result",
+        "concept_code": "C190511"
+      },
+      {
+        "value": "BDUS",
+        "long_name": "Ultrasound Bone Densitometry",
+        "concept_code": "C190516"
+      },
+      {
+        "value": "BMD",
+        "long_name": "Bone Mineral Densitometry",
+        "concept_code": "C190514"
+      },
+      {
+        "value": "CTPROTOCOL",
+        "long_name": "CT Protocol",
+        "concept_code": "C190533"
+      },
+      {
+        "value": "DMS",
+        "long_name": "Dermoscopy",
+        "concept_code": "C116478"
+      },
+      {
+        "value": "DOC",
+        "long_name": "Document",
+        "concept_code": "C19498"
+      },
+      {
+        "value": "EEG",
+        "long_name": "Electroencephalography",
+        "concept_code": "C38054"
+      },
+      {
+        "value": "EMG",
+        "long_name": "Electromyography",
+        "concept_code": "C38056"
+      },
+      {
+        "value": "EOG",
+        "long_name": "Electrooculography",
+        "concept_code": "C190539"
+      },
+      {
+        "value": "FID",
+        "long_name": "Fiducial Marker",
+        "concept_code": "C82602"
+      },
+      {
+        "value": "IOL",
+        "long_name": "Intraocular Lens Power Calculation",
+        "concept_code": "C190549"
+      },
+      {
+        "value": "IVOCT",
+        "long_name": "Intravascular Optical Coherence Tomography",
+        "concept_code": "C190550"
+      },
+      {
+        "value": "KER",
+        "long_name": "Keratometry",
+        "concept_code": "C190551"
+      },
+      {
+        "value": "LEN",
+        "long_name": "Lensometry",
+        "concept_code": "C190553"
+      },
+      {
+        "value": "M3D",
+        "long_name": "Model for 3D Manufacturing",
+        "concept_code": "C190555"
+      },
+      {
+        "value": "OAM",
+        "long_name": "Ophthalmic Axial Measurement",
+        "concept_code": "C190558"
+      },
+      {
+        "value": "OCT",
+        "long_name": "Optical Coherence Tomography",
+        "concept_code": "C20828"
+      },
+      {
+        "value": "OPM",
+        "long_name": "Ophthalmic Mapping",
+        "concept_code": "C190560"
+      },
+      {
+        "value": "OPT",
+        "long_name": "Ophthalmic Tomography",
+        "concept_code": "C190561"
+      },
+      {
+        "value": "OPTBSV",
+        "long_name": "Ophthalmic Tomography B-Scan Volume Analysis",
+        "concept_code": "C190562"
+      },
+      {
+        "value": "OPTENF",
+        "long_name": "En-face Optical Coherence Tomography",
+        "concept_code": "C190563"
+      },
+      {
+        "value": "OPV",
+        "long_name": "Static Perimetry",
+        "concept_code": "C174334"
+      },
+      {
+        "value": "OSS",
+        "long_name": "Optical Surface Scanner",
+        "concept_code": "C190564"
+      },
+      {
+        "value": "PLAN",
+        "long_name": "Planned",
+        "concept_code": "C25619"
+      },
+      {
+        "value": "POS",
+        "long_name": "Body Position Sensor",
+        "concept_code": "C190586"
+      },
+      {
+        "value": "REG",
+        "long_name": "Image Registration",
+        "concept_code": "C80145"
+      },
+      {
+        "value": "RESP",
+        "long_name": "Respiratory Waveform",
+        "concept_code": "C190589"
+      },
+      {
+        "value": "RWV",
+        "long_name": "Real World Value Mapping",
+        "concept_code": "C190606"
+      },
+      {
+        "value": "SEG",
+        "long_name": "Image Segmentation",
+        "concept_code": "C80146"
+      },
+      {
+        "value": "SRF",
+        "long_name": "Subjective Refraction",
+        "concept_code": "C190612"
+      },
+      {
+        "value": "STAIN",
+        "long_name": "Automated Slide Stainer",
+        "concept_code": "C190614"
+      },
+      {
+        "value": "TEXTUREMAP",
+        "long_name": "Texture Map",
+        "concept_code": "C190615"
+      },
+      {
+        "value": "VA",
+        "long_name": "Visual Acuity",
+        "concept_code": "C87149"
+      },
+      {
+        "value": "ECG",
+        "long_name": "Electrocardiography",
+        "concept_code": "C38053"
+      },
+      {
+        "value": "NM",
+        "long_name": "Radionuclide Imaging",
+        "concept_code": "C62667"
+      }
+    ]
+  },
+  "12373576": {
+    "CRDC Name": "Experimental Strategy",
+    "permissible_values": [
+      {
+        "value": "RNA Sequencing",
+        "long_name": "Whole Transcriptome Sequencing",
+        "concept_code": "C124261"
+      },
+      {
+        "value": "Radiology",
+        "long_name": "Radiology",
+        "concept_code": "C17059"
+      },
+      {
+        "value": "DNA Sequencing",
+        "long_name": "DNA Sequencing",
+        "concept_code": "C153598"
+      },
+      {
+        "value": "Methylation Analysis",
+        "long_name": "Methylation Analysis",
+        "concept_code": "C190764"
+      },
+      {
+        "value": "LC-MS/MS",
+        "long_name": "Liquid Chromatography/Tandem Mass Spectrometry",
+        "concept_code": "C122168"
+      },
+      {
+        "value": "Pathology",
+        "long_name": "Pathology",
+        "concept_code": "C18189"
+      },
+      {
+        "value": "Multigene Expression Assay",
+        "long_name": "Multiplex Gene Expression Panel Assay",
+        "concept_code": "C210244"
+      },
+      {
+        "value": "Immunofluorescence",
+        "long_name": "Immunofluorescent Staining Method",
+        "concept_code": "C142337"
+      },
+      {
+        "value": "Quantitative Immunofluorescence",
+        "long_name": "Quantitative Immunofluorescence",
+        "concept_code": "C221816"
+      }
+    ]
+  },
+  "12445832": {
+    "CRDC Name": "Specimen Material Category",
+    "permissible_values": [
+      {
+        "value": "Blood",
+        "long_name": "Blood",
+        "concept_code": "C12434"
+      },
+      {
+        "value": "Ascites",
+        "long_name": "Ascites",
+        "concept_code": "C2885"
+      },
+      {
+        "value": "Bone Marrow",
+        "long_name": "Bone Marrow",
+        "concept_code": "C12431"
+      },
+      {
+        "value": "Cells",
+        "long_name": "Cell",
+        "concept_code": "C12508"
+      },
+      {
+        "value": "Stool",
+        "long_name": "Feces",
+        "concept_code": "C13234"
+      },
+      {
+        "value": "Body Fluid or Substance",
+        "long_name": "Body Fluid or Substance",
+        "concept_code": "C13236"
+      },
+      {
+        "value": "Sputum",
+        "long_name": "Sputum",
+        "concept_code": "C13278"
+      },
+      {
+        "value": "Urine",
+        "long_name": "Urine",
+        "concept_code": "C13283"
+      },
+      {
+        "value": "Tissue",
+        "long_name": "Tissue",
+        "concept_code": "C12801"
+      },
+      {
+        "value": "Mouth Rinse",
+        "long_name": "Mouth Rinse Specimen",
+        "concept_code": "C198712"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Xenograft",
+        "long_name": "Xenograft",
+        "concept_code": "C12932"
+      },
+      {
+        "value": "Skin",
+        "long_name": "Skin",
+        "concept_code": "C12470"
+      },
+      {
+        "value": "Saliva",
+        "long_name": "Saliva",
+        "concept_code": "C13275"
+      },
+      {
+        "value": "RNA",
+        "long_name": "Ribonucleic Acid",
+        "concept_code": "C812"
+      },
+      {
+        "value": "DNA",
+        "long_name": "DNA",
+        "concept_code": "C449"
+      },
+      {
+        "value": "Central Nervous System",
+        "long_name": "Central Nervous System",
+        "concept_code": "C12438"
+      },
+      {
+        "value": "Cell Line",
+        "long_name": "Cell Line",
+        "concept_code": "C16403"
+      }
+    ]
+  },
+  "12447172": {
+    "CRDC Name": "Last Known Disease Status",
+    "permissible_values": [
+      {
+        "value": "Biochemical evidence of disease without structural correlate",
+        "long_name": "Biochemical Evidence of Disease without Structural Correlate",
+        "concept_code": "C165197"
+      },
+      {
+        "value": "Tumor Free",
+        "long_name": "Tumor Free",
+        "concept_code": "C156848"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "With Tumor",
+        "long_name": "With Tumor",
+        "concept_code": "C156849"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Allowed To Collect",
+        "long_name": "Not Allowed To Collect",
+        "concept_code": "C141478"
+      },
+      {
+        "value": "Distant Metastasis",
+        "long_name": "Distant Metastasis",
+        "concept_code": "C18206"
+      },
+      {
+        "value": "Localized Disease",
+        "long_name": "Localized Disease",
+        "concept_code": "C36162"
+      },
+      {
+        "value": "Regional Disease",
+        "long_name": "Regional Disease",
+        "concept_code": "C41844"
+      },
+      {
+        "value": "New Tumor Event",
+        "long_name": "New Tumor Event",
+        "concept_code": "C200667"
+      }
+    ]
+  },
+  "12922545": {
+    "CRDC Name": "Tumor Classification",
+    "permissible_values": [
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Metastatic",
+        "long_name": "Metastatic Neoplasm",
+        "concept_code": "C3261"
+      },
+      {
+        "value": "Primary",
+        "long_name": "Primary Neoplasm",
+        "concept_code": "C8509"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Xenograft",
+        "long_name": "Xenograft",
+        "concept_code": "C12932"
+      },
+      {
+        "value": "Synchronous Primary",
+        "long_name": "Malignant Neoplasm of Multiple Primary Sites",
+        "concept_code": "C35427"
+      },
+      {
+        "value": "Recurrent",
+        "long_name": "Recurrent Neoplasm",
+        "concept_code": "C4798"
+      },
+      {
+        "value": "Progression",
+        "long_name": "Progressive Disease",
+        "concept_code": "C35571"
+      },
+      {
+        "value": "Prior Primary",
+        "long_name": "Recurrent Disease, Primary Site",
+        "concept_code": "C55072"
+      },
+      {
+        "value": "Premalignant",
+        "long_name": "Premalignant Neoplasm",
+        "concept_code": "C36032"
+      }
+    ]
+  },
+  "13381490": {
+    "CRDC Name": "Disease Response Criteria System",
+    "permissible_values": [
+      {
+        "value": "Choi",
+        "long_name": "Choi Response Criteria in the Evaluation of Gastrointestinal Stromal Tumors",
+        "concept_code": "C122394"
+      },
+      {
+        "value": "mRECIST",
+        "long_name": "Modified RECIST Byrne Mesothelioma 2004 Oncology Response Criteria",
+        "concept_code": "C126031"
+      },
+      {
+        "value": "PERCIST",
+        "long_name": "PET Response Criteria in Solid Tumors",
+        "concept_code": "C126039"
+      },
+      {
+        "value": "RECIST",
+        "long_name": "Response Evaluation Criteria in Solid Tumors",
+        "concept_code": "C49164"
+      },
+      {
+        "value": "WHO",
+        "long_name": "World Health Organization",
+        "concept_code": "C75419"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "iRANO",
+        "long_name": "Immunotherapy Response Assessment in Neuro-Oncology Criteria",
+        "concept_code": "C131131"
+      },
+      {
+        "value": "RANO",
+        "long_name": "Response Assessment in Neuro-Oncology Criteria",
+        "concept_code": "C114879"
+      },
+      {
+        "value": "Modified MacDonald",
+        "long_name": "Modified Macdonald Tumor Response Criteria",
+        "concept_code": "C198862"
+      },
+      {
+        "value": "RAPNO",
+        "long_name": "RAPNO Tumor Response Criteria",
+        "concept_code": "C198863"
+      },
+      {
+        "value": "INRC, Park 2017",
+        "long_name": "International Neuroblastoma Response Criteria, Park 2017",
+        "concept_code": "C198864"
+      },
+      {
+        "value": "INRC, Brodeur 1993",
+        "long_name": "International Neuroblastoma Response Criteria, Brodeur 1993",
+        "concept_code": "C198865"
+      },
+      {
+        "value": "iRECIST",
+        "long_name": "Immune-Modified Response Evaluation Criteria in Solid Tumors",
+        "concept_code": "C136711"
+      }
+    ]
+  },
+  "13383448": {
+    "CRDC Name": "Disease Response",
+    "permissible_values": [
+      {
+        "value": "Partial Response",
+        "long_name": "Partial Remission",
+        "concept_code": "C18058"
+      },
+      {
+        "value": "Stable Disease",
+        "long_name": "Stable Disease",
+        "concept_code": "C18213"
+      },
+      {
+        "value": "Progressive Disease",
+        "long_name": "Progressive Disease",
+        "concept_code": "C35571"
+      },
+      {
+        "value": "No Evidence of Disease",
+        "long_name": "No Evidence of Disease",
+        "concept_code": "C40413"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Evaluable",
+        "long_name": "Not Evaluable",
+        "concept_code": "C62222"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "No Response",
+        "long_name": "No Response",
+        "concept_code": "C123600"
+      },
+      {
+        "value": "Persistent Disease",
+        "long_name": "Persistent Disease",
+        "concept_code": "C90169"
+      },
+      {
+        "value": "Less than Partial Response",
+        "long_name": "Less than Partial Clinical Response",
+        "concept_code": "C151961"
+      },
+      {
+        "value": "Too Early",
+        "long_name": "Too Early to be Assessed",
+        "concept_code": "C222061"
+      },
+      {
+        "value": "Not Assessed",
+        "long_name": "NOT ASSESSED",
+        "concept_code": "C139527"
+      },
+      {
+        "value": "Complete Response",
+        "long_name": "Complete Remission",
+        "concept_code": "C4870"
+      }
+    ]
+  },
+  "13529783": {
+    "CRDC Name": "Disease Progression or Recurrence Indicator",
+    "permissible_values": [
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Allowed to Collect",
+        "long_name": "Not Allowed To Collect",
+        "concept_code": "C141478"
+      },
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Censored",
+        "long_name": "Censored Data",
+        "concept_code": "C207035"
+      }
+    ]
+  },
+  "14688604": {
+    "CRDC Name": "Specimen Tumor or Normal Category",
+    "permissible_values": [
+      {
+        "value": "Peritumoral",
+        "long_name": "Peritumoral",
+        "concept_code": "C119010"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Tumor",
+        "long_name": "Tumor Tissue Sample",
+        "concept_code": "C18009"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Normal",
+        "long_name": "Normal Tissue Sample",
+        "concept_code": "C162623"
+      }
+    ]
+  },
+  "14713318": {
+    "CRDC Name": "Treatment or Therapy Indicator",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      },
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      }
+    ]
+  },
+  "14737565": {
+    "CRDC Name": "Treatment Type",
+    "permissible_values": [
+      {
+        "value": "Targeted Molecular Therapy",
+        "long_name": "Targeted Molecular Therapy",
+        "concept_code": "C76243"
+      },
+      {
+        "value": "Immunotherapy",
+        "long_name": "Immunotherapy",
+        "concept_code": "C15262"
+      },
+      {
+        "value": "Hormone Therapy",
+        "long_name": "Endocrine Therapy",
+        "concept_code": "C15445"
+      },
+      {
+        "value": "Chemotherapy",
+        "long_name": "Chemotherapy",
+        "concept_code": "C15632"
+      },
+      {
+        "value": "External Beam Radiation Therapy",
+        "long_name": "External Beam Radiation Therapy",
+        "concept_code": "C15751"
+      },
+      {
+        "value": "Stereotactic Radiosurgery",
+        "long_name": "Stereotactic Radiosurgery",
+        "concept_code": "C15358"
+      },
+      {
+        "value": "Surgical Procedure",
+        "long_name": "Surgical Procedure",
+        "concept_code": "C15329"
+      },
+      {
+        "value": "Stereotactic Body Radiation Therapy",
+        "long_name": "Stereotactic Body Radiation Therapy",
+        "concept_code": "C118286"
+      },
+      {
+        "value": "Proton Beam Radiation Therapy",
+        "long_name": "Proton Beam Radiation Therapy",
+        "concept_code": "C66897"
+      },
+      {
+        "value": "Intensity-Modulated Radiation Therapy",
+        "long_name": "IMRT",
+        "concept_code": "C16135"
+      },
+      {
+        "value": "Low-Dose Rate Brachytherapy",
+        "long_name": "Low-Dose Rate Brachytherapy",
+        "concept_code": "C85254"
+      },
+      {
+        "value": "High-Dose Rate Brachytherapy",
+        "long_name": "High-Dose Rate Brachytherapy",
+        "concept_code": "C15651"
+      },
+      {
+        "value": "3-Dimensional Conformal Radiation Therapy",
+        "long_name": "3-Dimensional Conformal Radiation Therapy",
+        "concept_code": "C16035"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Radiofrequency Ablation",
+        "long_name": "Radiofrequency Ablation",
+        "concept_code": "C15666"
+      },
+      {
+        "value": "Concurrent Chemoradiation",
+        "long_name": "Concurrent Chemoradiation",
+        "concept_code": "C141342"
+      },
+      {
+        "value": "Pharmacotherapy",
+        "long_name": "Pharmacotherapy",
+        "concept_code": "C15986"
+      },
+      {
+        "value": "Allogeneic Hematopoietic Stem Cell Transplantation",
+        "long_name": "Allogeneic Hematopoietic Stem Cell Transplantation",
+        "concept_code": "C46089"
+      },
+      {
+        "value": "Autologous Stem Cell Transplantation",
+        "long_name": "Autologous Stem Cell Transplantation",
+        "concept_code": "C16039"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Conventional Radiotherapy",
+        "long_name": "Conventional Radiotherapy",
+        "concept_code": "C165189"
+      },
+      {
+        "value": "Radiation Therapy",
+        "long_name": "Radiation Therapy",
+        "concept_code": "C15313"
+      },
+      {
+        "value": "Radiopharmaceutical",
+        "long_name": "Radiopharmaceutical Therapy",
+        "concept_code": "C192439"
+      },
+      {
+        "value": "Photon Beam Radiation Therapy",
+        "long_name": "Photon Beam Radiation Therapy",
+        "concept_code": "C104914"
+      },
+      {
+        "value": "Brachytherapy",
+        "long_name": "Internal Radiation Therapy",
+        "concept_code": "C15195"
+      },
+      {
+        "value": "Cellular Therapy",
+        "long_name": "Cellular Therapy",
+        "concept_code": "C70601"
+      },
+      {
+        "value": "Stem Cell Transplant",
+        "long_name": "Hematopoietic Cell Transplantation",
+        "concept_code": "C15431"
+      },
+      {
+        "value": "Electron Beam Radiation Therapy",
+        "long_name": "Electron Beam Therapy",
+        "concept_code": "C15650"
+      },
+      {
+        "value": "Organ Transplantation",
+        "long_name": "Organ Transplantation",
+        "concept_code": "C15289"
+      },
+      {
+        "value": "Palliative Care",
+        "long_name": "Palliative",
+        "concept_code": "C15292"
+      },
+      {
+        "value": "Oncolytic Virus Therapy",
+        "long_name": "Oncolytic Virus Therapy",
+        "concept_code": "C62713"
+      },
+      {
+        "value": "Vaccine Therapy",
+        "long_name": "Vaccine Therapy",
+        "concept_code": "C15347"
+      },
+      {
+        "value": "Conditioning Therapy",
+        "long_name": "Transplant Conditioning",
+        "concept_code": "C64468"
+      },
+      {
+        "value": "Immunosuppressive Therapy/GVHD Prophylaxis for Transplant",
+        "long_name": "Immunosuppressive Therapy Graft Versus Host Disease Prophylaxis/Therapy",
+        "concept_code": "C15261:C15448"
+      },
+      {
+        "value": "Post-Transplant Salvage Therapy",
+        "long_name": "Post-transplant Salvage Therapy",
+        "concept_code": "C227640"
+      },
+      {
+        "value": "Ablation Therapy",
+        "long_name": "Ablation Therapy",
+        "concept_code": "C20985"
+      },
+      {
+        "value": "Targeted Therapy",
+        "long_name": "Targeted Therapy",
+        "concept_code": "C93352"
+      }
+    ]
+  },
+  "14742451": {
+    "CRDC Name": "Disease\u00a0Progression or Recurrence Type",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Regional",
+        "long_name": "Regional Disease",
+        "concept_code": "C41844"
+      },
+      {
+        "value": "Local",
+        "long_name": "Localized Disease",
+        "concept_code": "C36162"
+      },
+      {
+        "value": "Biochemical",
+        "long_name": "Biochemical Evidence of Disease",
+        "concept_code": "C165196"
+      },
+      {
+        "value": "Distant",
+        "long_name": "Distant Metastasis",
+        "concept_code": "C18206"
+      },
+      {
+        "value": "Locoregional",
+        "long_name": "Locoregional Disease",
+        "concept_code": "C207902"
+      }
+    ]
+  },
+  "14824731": {
+    "CRDC Name": "Data Category",
+    "permissible_values": [
+      {
+        "value": "Clinical",
+        "long_name": "Clinical Data",
+        "concept_code": "C15783"
+      },
+      {
+        "value": "Biospecimen",
+        "long_name": "Biospecimen",
+        "concept_code": "C70699"
+      },
+      {
+        "value": "Genomic Structural Variation",
+        "long_name": "Cytogenetic Abnormality",
+        "concept_code": "C2950"
+      },
+      {
+        "value": "Archive",
+        "long_name": "Archive",
+        "concept_code": "C156018"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Quality Control",
+        "long_name": "Quality Control",
+        "concept_code": "C15311"
+      },
+      {
+        "value": "Proteomic Profile",
+        "long_name": "Proteomic Profile",
+        "concept_code": "C97139"
+      },
+      {
+        "value": "Protein Expression",
+        "long_name": "Protein Expression",
+        "concept_code": "C18966"
+      },
+      {
+        "value": "Population Science",
+        "long_name": "Population Science Data",
+        "concept_code": "C211500"
+      },
+      {
+        "value": "Microarray",
+        "long_name": "Microarray Data",
+        "concept_code": "C211504"
+      },
+      {
+        "value": "Methylation Analysis",
+        "long_name": "Methylation Analysis",
+        "concept_code": "C190764"
+      },
+      {
+        "value": "Mass Spectrometry",
+        "long_name": "Mass Spectrometry Data",
+        "concept_code": "C211501"
+      },
+      {
+        "value": "Copy Number Variation",
+        "long_name": "Copy Number Variation Assessment",
+        "concept_code": "C181330"
+      },
+      {
+        "value": "Clinical Measure Instrument",
+        "long_name": "Clinical Assessment Tool",
+        "concept_code": "C20993"
+      },
+      {
+        "value": "Chromatin",
+        "long_name": "Chromatin",
+        "concept_code": "C13201"
+      },
+      {
+        "value": "Transcriptome Profiling",
+        "long_name": "Transcriptomics",
+        "concept_code": "C153189"
+      },
+      {
+        "value": "Radiology Imaging",
+        "long_name": "Image File",
+        "concept_code": "C175246"
+      },
+      {
+        "value": "Pathology Imaging",
+        "long_name": "Slide Image",
+        "concept_code": "C165215"
+      },
+      {
+        "value": "Sequence Data",
+        "long_name": "Sequencing Data",
+        "concept_code": "C153329"
+      },
+      {
+        "value": "Supplemental",
+        "long_name": "Supplemental Data File",
+        "concept_code": "C175247"
+      },
+      {
+        "value": "Publication",
+        "long_name": "Scientific Publication",
+        "concept_code": "C19026"
+      },
+      {
+        "value": "Image Annotation",
+        "long_name": "Image Annotation",
+        "concept_code": "C211970"
+      },
+      {
+        "value": "Proteomics",
+        "long_name": "Proteomics Profile",
+        "concept_code": "C20085"
+      },
+      {
+        "value": "Imaging",
+        "long_name": "Imaging Technique",
+        "concept_code": "C17369"
+      },
+      {
+        "value": "Genomics",
+        "long_name": "Genomics",
+        "concept_code": "C84343"
+      },
+      {
+        "value": "Gene Expression Analysis",
+        "long_name": "Gene Expression Analysis",
+        "concept_code": "C63479"
+      },
+      {
+        "value": "Nanotechnology",
+        "long_name": "Nanotechnology",
+        "concept_code": "C18478"
+      }
+    ]
+  },
+  "14857681": {
+    "CRDC Name": "Method of Diagnosis",
+    "permissible_values": [
+      {
+        "value": "Enucleation",
+        "long_name": "Enucleation",
+        "concept_code": "C48601"
+      },
+      {
+        "value": "Dilation and Curettage",
+        "long_name": "Dilation and Curettage",
+        "concept_code": "C15226"
+      },
+      {
+        "value": "Diagnostic Imaging",
+        "long_name": "Diagnostic Imaging",
+        "concept_code": "C16502"
+      },
+      {
+        "value": "Tumor Debulking",
+        "long_name": "Debulking",
+        "concept_code": "C15749"
+      },
+      {
+        "value": "Cystoscopy",
+        "long_name": "Cystoscopy",
+        "concept_code": "C16482"
+      },
+      {
+        "value": "Core Biopsy",
+        "long_name": "Core Biopsy",
+        "concept_code": "C15680"
+      },
+      {
+        "value": "Bone Marrow Aspirate",
+        "long_name": "Bone Marrow Aspirate",
+        "concept_code": "C133261"
+      },
+      {
+        "value": "Blood Sample",
+        "long_name": "Blood Sample",
+        "concept_code": "C17610"
+      },
+      {
+        "value": "Biopsy",
+        "long_name": "Biopsy",
+        "concept_code": "C15189"
+      },
+      {
+        "value": "Autopsy",
+        "long_name": "Autopsy",
+        "concept_code": "C25153"
+      },
+      {
+        "value": "Pap Smear",
+        "long_name": "Papanicolaou Smear Procedure",
+        "concept_code": "C17348"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Magnetic Resonance Imaging Study File",
+        "long_name": "Magnetic Resonance Imaging",
+        "concept_code": "C16809"
+      },
+      {
+        "value": "Laparotomy",
+        "long_name": "Laparotomy",
+        "concept_code": "C15266"
+      },
+      {
+        "value": "Laparoscopy",
+        "long_name": "Laparoscopy",
+        "concept_code": "C16969"
+      },
+      {
+        "value": "Incisional Biopsy",
+        "long_name": "Incisional Biopsy",
+        "concept_code": "C15386"
+      },
+      {
+        "value": "Imaging Technique",
+        "long_name": "Imaging",
+        "concept_code": "C17369"
+      },
+      {
+        "value": "Histopathology",
+        "long_name": "Histopathology",
+        "concept_code": "C18190"
+      },
+      {
+        "value": "Fine Needle Aspiration",
+        "long_name": "Fine-Needle Aspiration",
+        "concept_code": "C15361"
+      },
+      {
+        "value": "Excisional Biopsy",
+        "long_name": "Excisional Biopsy",
+        "concept_code": "C15385"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Ultrasound Guided Biopsy",
+        "long_name": "Ultrasound-guided Biopsy",
+        "concept_code": "C93022"
+      },
+      {
+        "value": "Ultrasound Imaging",
+        "long_name": "Ultrasonography",
+        "concept_code": "C17230"
+      },
+      {
+        "value": "Thoracentesis",
+        "long_name": "Thoracentesis",
+        "concept_code": "C15392"
+      },
+      {
+        "value": "Surgical Resection",
+        "long_name": "Resection (including complete excisional biospy)",
+        "concept_code": "C158758"
+      },
+      {
+        "value": "Physical Examination",
+        "long_name": "Physical Examination",
+        "concept_code": "C20989"
+      },
+      {
+        "value": "Pathologic Review",
+        "long_name": "Pathologic Examination",
+        "concept_code": "C125006"
+      }
+    ]
+  },
+  "15063661": {
+    "CRDC Name": "Analyte Type",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Protein",
+        "long_name": "Protein",
+        "concept_code": "C17021"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "mRNA",
+        "long_name": "Messenger RNA",
+        "concept_code": "C813"
+      },
+      {
+        "value": "miRNA",
+        "long_name": "MicroRNA",
+        "concept_code": "C25966"
+      },
+      {
+        "value": "DNA",
+        "long_name": "DNA",
+        "concept_code": "C449"
+      },
+      {
+        "value": "cfDNA",
+        "long_name": "Circulating cell-free DNA",
+        "concept_code": "C128274"
+      },
+      {
+        "value": "Nucleic RNA",
+        "long_name": "Nucleic RNA Sample",
+        "concept_code": "C174108"
+      },
+      {
+        "value": "Total RNA",
+        "long_name": "Total RNA",
+        "concept_code": "C163995"
+      },
+      {
+        "value": "RNA",
+        "long_name": "RNA Specimen",
+        "concept_code": "C198568"
+      },
+      {
+        "value": "ctDNA",
+        "long_name": "Circulating Tumor-Derived DNA",
+        "concept_code": "C113243"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not applicable",
+        "concept_code": "C48660"
+      }
+    ]
+  },
+  "15114329": {
+    "CRDC Name": "BSA UCUM Unit of Measure",
+    "permissible_values": [
+      {
+        "value": "m2",
+        "long_name": "Square Meter",
+        "concept_code": "C42569"
+      },
+      {
+        "value": "cm2",
+        "long_name": "Square Centimeter",
+        "concept_code": "C48460"
+      },
+      {
+        "value": "[ft_i]2",
+        "long_name": "Square Foot",
+        "concept_code": "C48461"
+      },
+      {
+        "value": "[in_i]2",
+        "long_name": "Square Inch",
+        "concept_code": "C68871"
+      },
+      {
+        "value": "cm",
+        "long_name": "Centimeter",
+        "concept_code": "C49668"
+      },
+      {
+        "value": "mm",
+        "long_name": "Millimeter",
+        "concept_code": "C28251"
+      }
+    ]
+  },
+  "15115495": {
+    "CRDC Name": "Specimen Procurement Method",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Needle Biopsy",
+        "long_name": "Needle Biopsy",
+        "concept_code": "C15190"
+      },
+      {
+        "value": "Excisional Biopsy",
+        "long_name": "Excisional Biopsy",
+        "concept_code": "C15385"
+      },
+      {
+        "value": "Blood Draw",
+        "long_name": "Blood Sample",
+        "concept_code": "C17610"
+      },
+      {
+        "value": "Tumor Resection",
+        "long_name": "Tumor Resection",
+        "concept_code": "C164212"
+      },
+      {
+        "value": "Surgical Resection",
+        "long_name": "Resection",
+        "concept_code": "C158758"
+      },
+      {
+        "value": "Incisional Biopsy",
+        "long_name": "Incisional Biopsy",
+        "concept_code": "C15386"
+      },
+      {
+        "value": "Bone Marrow Aspiration",
+        "long_name": "Bone Marrow Aspiration",
+        "concept_code": "C15644"
+      },
+      {
+        "value": "Other",
+        "long_name": "Other",
+        "concept_code": "C17649"
+      },
+      {
+        "value": "Aspiration",
+        "long_name": "Aspiration",
+        "concept_code": "C15631"
+      }
+    ]
+  },
+  "15157293": {
+    "CRDC Name": "Disease Laterality",
+    "permissible_values": [
+      {
+        "value": "Not Specified",
+        "long_name": "Unspecified",
+        "concept_code": "C38046"
+      },
+      {
+        "value": "Midline",
+        "long_name": "Midline",
+        "concept_code": "C81170"
+      },
+      {
+        "value": "Bilateral",
+        "long_name": "Bilateral",
+        "concept_code": "C13332"
+      },
+      {
+        "value": "Left",
+        "long_name": "Left",
+        "concept_code": "C25229"
+      },
+      {
+        "value": "Right",
+        "long_name": "Right",
+        "concept_code": "C25228"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      }
+    ]
+  },
+  "15157297": {
+    "CRDC Name": "Residual Disease Status",
+    "permissible_values": [
+      {
+        "value": "R0",
+        "long_name": "R0",
+        "concept_code": "C139578"
+      },
+      {
+        "value": "RX",
+        "long_name": "RX",
+        "concept_code": "C139581"
+      },
+      {
+        "value": "R2",
+        "long_name": "R2",
+        "concept_code": "C139580"
+      },
+      {
+        "value": "R1",
+        "long_name": "R1",
+        "concept_code": "C139579"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      }
+    ]
+  },
+  "15157426": {
+    "CRDC Name": "Treatment Prior to Specimen Collection Indicator",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      },
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      }
+    ]
+  },
+  "15157467": {
+    "CRDC Name": "Treatment Intent Type",
+    "permissible_values": [
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Prevention",
+        "long_name": "Preventive Intervention",
+        "concept_code": "C15843"
+      },
+      {
+        "value": "Palliative",
+        "long_name": "Palliative therapy",
+        "concept_code": "C15292"
+      },
+      {
+        "value": "Neoadjuvant",
+        "long_name": "Neoadjuvant",
+        "concept_code": "C15665"
+      },
+      {
+        "value": "Maintenance",
+        "long_name": "Maintenance Therapy",
+        "concept_code": "C15688"
+      },
+      {
+        "value": "Curative",
+        "long_name": "Curative treatment",
+        "concept_code": "C185614"
+      },
+      {
+        "value": "Adjuvant",
+        "long_name": "Adjuvant Therapy",
+        "concept_code": "C15675"
+      }
+    ]
+  },
+  "15179918": {
+    "CRDC Name": "Best Overall Response",
+    "permissible_values": [
+      {
+        "value": "Partial Response",
+        "long_name": "Partial Remission",
+        "concept_code": "C18058"
+      },
+      {
+        "value": "Stable Disease",
+        "long_name": "Stable Disease",
+        "concept_code": "C18213"
+      },
+      {
+        "value": "Progressive Disease",
+        "long_name": "Progressive Disease",
+        "concept_code": "C35571"
+      },
+      {
+        "value": "No Evidence of Disease",
+        "long_name": "No Evidence of Disease",
+        "concept_code": "C40413"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Evaluable",
+        "long_name": "Not Evaluable",
+        "concept_code": "C62222"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "No Response",
+        "long_name": "No Response",
+        "concept_code": "C123600"
+      },
+      {
+        "value": "Persistent Disease",
+        "long_name": "Persistent Disease",
+        "concept_code": "C90169"
+      },
+      {
+        "value": "Less than Partial Response",
+        "long_name": "Less than Partial Clinical Response",
+        "concept_code": "C151961"
+      },
+      {
+        "value": "Too Early",
+        "long_name": "Too Early to be Assessed",
+        "concept_code": "C222061"
+      },
+      {
+        "value": "Not Assessed",
+        "long_name": "NOT ASSESSED",
+        "concept_code": "C139527"
+      },
+      {
+        "value": "Complete Response",
+        "long_name": "Complete Remission",
+        "concept_code": "C4870"
+      }
+    ]
+  },
+  "15354920": {
+    "CRDC Name": "Age 90 or Older",
+    "permissible_values": [
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      }
+    ]
+  },
+  "15753203": {
+    "CRDC Name": "Environmental Exposure Type",
+    "permissible_values": [
+      {
+        "value": "Tobacco Related Exposure",
+        "long_name": "Tobacco Related Exposure",
+        "concept_code": "C44456"
+      },
+      {
+        "value": "Asbestos Exposure",
+        "long_name": "Asbestos Exposure",
+        "concept_code": "C55816"
+      },
+      {
+        "value": "Marijuana Smoke Exposure",
+        "long_name": "Marijuana Smoke Exposure",
+        "concept_code": "C164091"
+      },
+      {
+        "value": "Respirable Crystalline Silica Exposure",
+        "long_name": "Respirable Crystalline Silica Exposure",
+        "concept_code": "C177575"
+      },
+      {
+        "value": "Radon Exposure",
+        "long_name": "Radon Exposure",
+        "concept_code": "C177573"
+      },
+      {
+        "value": "Wood Dust Exposure",
+        "long_name": "Wood Dust Exposure",
+        "concept_code": "C174115"
+      },
+      {
+        "value": "Smoke Exposure",
+        "long_name": "Smoke Exposure",
+        "concept_code": "C164057"
+      },
+      {
+        "value": "Chemical Exposure",
+        "long_name": "Chemical Exposure",
+        "concept_code": "C36290"
+      },
+      {
+        "value": "Radiation Exposure",
+        "long_name": "Radiation Exposure",
+        "concept_code": "C61398"
+      },
+      {
+        "value": "Smokeless Tobacco Exposure",
+        "long_name": "Smokeless Tobacco Exposure",
+        "concept_code": "C189768"
+      }
+    ]
+  },
+  "15998677": {
+    "CRDC Name": "Prior Malignancy",
+    "permissible_values": [
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      },
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not Applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Not Allowed to Collect",
+        "long_name": "Not Allowed To Collect",
+        "concept_code": "C141478"
+      }
+    ]
+  },
+  "16002760": {
+    "CRDC Name": "Funding Agency Organization Name",
+    "permissible_values": [
+      {
+        "value": "Division of Cancer Control and Population Sciences",
+        "long_name": "Division of Cancer Control and Population Sciences",
+        "concept_code": "C19217"
+      },
+      {
+        "value": "Department of Defense",
+        "long_name": "Department of Defense",
+        "concept_code": "C19225"
+      },
+      {
+        "value": "Food and Drug Administration",
+        "long_name": "Food and Drug Administration",
+        "concept_code": "C17237"
+      },
+      {
+        "value": "Foundation Medicine Inc",
+        "long_name": "Foundation Medicine Inc",
+        "concept_code": "C133726"
+      },
+      {
+        "value": "National Cancer Institute",
+        "long_name": "National Cancer Institute",
+        "concept_code": "C19202"
+      },
+      {
+        "value": "National Institutes of Health",
+        "long_name": "National Institutes of Health",
+        "concept_code": "C16895"
+      },
+      {
+        "value": "National Library of Medicine",
+        "long_name": "National Library of Medicine",
+        "concept_code": "C82620"
+      },
+      {
+        "value": "NCI Center for Cancer Research",
+        "long_name": "NCI Center for Cancer Research",
+        "concept_code": "C20160"
+      },
+      {
+        "value": "Purdue University Center for Cancer Research",
+        "long_name": "Purdue University Center for Cancer Research",
+        "concept_code": "C39502"
+      },
+      {
+        "value": "UNC Lineberger Comprehensive Cancer Center",
+        "long_name": "UNC Lineberger Comprehensive Cancer Center",
+        "concept_code": "C39554"
+      },
+      {
+        "value": "Georgetown Lombardi Comprehensive Cancer Center",
+        "long_name": "Georgetown Lombardi Comprehensive Cancer Center",
+        "concept_code": "C39530"
+      },
+      {
+        "value": "National Clinical Trials Network",
+        "long_name": "National Clinical Trials Network (NCI)",
+        "concept_code": "C217039"
+      },
+      {
+        "value": "Proteogenomic Translational Research Centers",
+        "long_name": "Proteogenomic Translational Research Center",
+        "concept_code": "C217040"
+      },
+      {
+        "value": "Evelyn H. Lauder Founder\u2019s Fund for Metastatic Breast Cancer Research",
+        "long_name": "Evelyn H. Lauder Founder\u2019s Fund for Metastatic Breast Cancer Research",
+        "concept_code": "C217035"
+      },
+      {
+        "value": "Center for Inherited Disease Research",
+        "long_name": "Center for Inherited Disease Research",
+        "concept_code": "C217036"
+      },
+      {
+        "value": "Transplant Recipients International Organization",
+        "long_name": "Transplant Recipients International Organization",
+        "concept_code": "C217041"
+      },
+      {
+        "value": "Multiple Myeloma Research Foundation",
+        "long_name": "Multiple Myeloma Research Foundation",
+        "concept_code": "C217038"
+      },
+      {
+        "value": "Leukemia and Lymphoma Society",
+        "long_name": "Leukemia and Lymphoma Society",
+        "concept_code": "C217037"
+      },
+      {
+        "value": "Center for Biomedical Informatics and Information Technology",
+        "long_name": "Center for Biomedical Informatics and Information Technology",
+        "concept_code": "C82329"
+      },
+      {
+        "value": "Knight Cancer Institute",
+        "long_name": "Knight Cancer Institute",
+        "concept_code": "C39343"
+      },
+      {
+        "value": "Broad Institute",
+        "long_name": "Broad Institute",
+        "concept_code": "C158521"
+      }
+    ]
+  },
+  "16065939": {
+    "CRDC Name": "Manufacturer Name",
+    "permissible_values": [
+      {
+        "value": "454 Life Sciences",
+        "long_name": "454 Life Sciences",
+        "concept_code": "C215814"
+      },
+      {
+        "value": "Affymetrix",
+        "long_name": "Affymetrix",
+        "concept_code": "C123894"
+      },
+      {
+        "value": "Agilent",
+        "long_name": "Agilent",
+        "concept_code": "C215815"
+      },
+      {
+        "value": "Applied Biosystems",
+        "long_name": "Applied Biosystems",
+        "concept_code": "C215816"
+      },
+      {
+        "value": "BGI Group",
+        "long_name": "BGI Group",
+        "concept_code": "C215817"
+      },
+      {
+        "value": "Complete Genomics",
+        "long_name": "Complete Genomics",
+        "concept_code": "C215818"
+      },
+      {
+        "value": "Helicos",
+        "long_name": "Helicos",
+        "concept_code": "C215819"
+      },
+      {
+        "value": "Illumina",
+        "long_name": "Illumina",
+        "concept_code": "C215820"
+      },
+      {
+        "value": "MGI",
+        "long_name": "MGI",
+        "concept_code": "C215821"
+      },
+      {
+        "value": "Oxford Nanopore Technologies",
+        "long_name": "Oxford Nanopore Technologies",
+        "concept_code": "C215822"
+      },
+      {
+        "value": "Pacific Biosciences",
+        "long_name": "Pacific Biosciences",
+        "concept_code": "C215823"
+      },
+      {
+        "value": "SCIEX",
+        "long_name": "SCIEX\u00a0",
+        "concept_code": "C215824"
+      },
+      {
+        "value": "Thermo Fisher",
+        "long_name": "Thermo Fisher",
+        "concept_code": "C215825"
+      },
+      {
+        "value": "Ultima Genomics",
+        "long_name": "Ultima Genomics",
+        "concept_code": "C215826"
+      },
+      {
+        "value": "Siemens Healthineers",
+        "long_name": "Siemens Healthineers",
+        "concept_code": "C200140"
+      },
+      {
+        "value": "Philips",
+        "long_name": "Philips",
+        "concept_code": "C217152"
+      },
+      {
+        "value": "Toshiba",
+        "long_name": "Toshiba",
+        "concept_code": "C217154"
+      },
+      {
+        "value": "General Electric",
+        "long_name": "General Electric",
+        "concept_code": "C217153"
+      },
+      {
+        "value": "Leica Biosystems",
+        "long_name": "Leica Biosystems",
+        "concept_code": "C226779"
+      },
+      {
+        "value": "Fluidigm",
+        "long_name": "Standard BioTools",
+        "concept_code": "C227388"
+      },
+      {
+        "value": "Twist",
+        "long_name": "Twist Bioscience",
+        "concept_code": "C227418"
+      },
+      {
+        "value": "Integrated DNA Technologies",
+        "long_name": "Integrated DNA Technologies",
+        "concept_code": "C227417"
+      },
+      {
+        "value": "New England Biolabs",
+        "long_name": "New England Biolabs",
+        "concept_code": "C227416"
+      }
+    ]
+  },
+  "16066660": {
+    "CRDC Name": "Family Member with Cancer History",
+    "permissible_values": [
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Yes",
+        "long_name": "Yes",
+        "concept_code": "C49488"
+      },
+      {
+        "value": "No",
+        "long_name": "No",
+        "concept_code": "C49487"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      }
+    ]
+  },
+  "16072578": {
+    "CRDC Name": "Equipment Model",
+    "permissible_values": [
+      {
+        "value": "5977C single quadrupole MSD",
+        "long_name": "5977C single quadrupole MSD",
+        "concept_code": null
+      },
+      {
+        "value": "Q Exactive HF",
+        "long_name": "Q Exactive HF",
+        "concept_code": null
+      },
+      {
+        "value": "Q Exactive",
+        "long_name": "Q Exactive",
+        "concept_code": null
+      },
+      {
+        "value": "Orbitrap Fusion Lumos",
+        "long_name": "Orbitrap Fusion Lumos",
+        "concept_code": null
+      },
+      {
+        "value": "Orbitrap Fusion",
+        "long_name": "Orbitrap Fusion",
+        "concept_code": null
+      },
+      {
+        "value": "Orbitrap Exploris\\u2122 480",
+        "long_name": "Orbitrap Exploris\\u2122 480",
+        "concept_code": null
+      },
+      {
+        "value": "LTQ Velos ETD",
+        "long_name": "LTQ Velos ETD",
+        "concept_code": null
+      },
+      {
+        "value": "LTQ Orbitrap Velos ion trap",
+        "long_name": "LTQ Orbitrap Velos ion trap",
+        "concept_code": null
+      },
+      {
+        "value": "LTQ Orbitrap Elite",
+        "long_name": "LTQ Orbitrap Elite",
+        "concept_code": null
+      },
+      {
+        "value": "TripleTOF 6600",
+        "long_name": "TripleTOF 6600",
+        "concept_code": null
+      },
+      {
+        "value": "TripleTOF 5600",
+        "long_name": "TripleTOF 5600",
+        "concept_code": null
+      },
+      {
+        "value": "Q-Exactive HCD",
+        "long_name": "Q-Exactive HCD",
+        "concept_code": null
+      },
+      {
+        "value": "Q Exactive Plus",
+        "long_name": "Q Exactive Plus",
+        "concept_code": null
+      },
+      {
+        "value": "Q Exactive Hybrid Quadrupole-Orbitrap",
+        "long_name": "Q Exactive Hybrid Quadrupole-Orbitrap",
+        "concept_code": null
+      },
+      {
+        "value": "Q Exactive HF-X",
+        "long_name": "Q Exactive HF-X",
+        "concept_code": null
+      },
+      {
+        "value": "LTQ Orbitrap Velos",
+        "long_name": "LTQ Orbitrap Velos",
+        "concept_code": null
+      },
+      {
+        "value": "Bond MAX",
+        "long_name": "Bond MAX",
+        "concept_code": null
+      },
+      {
+        "value": "Bond RX",
+        "long_name": "Bond RX",
+        "concept_code": null
+      },
+      {
+        "value": "Helios CyTOF XT",
+        "long_name": "Helios CyTOF XT",
+        "concept_code": null
+      },
+      {
+        "value": "Helios CyTOF",
+        "long_name": "Helios CyTOF",
+        "concept_code": null
+      }
+    ]
+  },
+  "16306751": {
+    "CRDC Name": "Specimen Preservation Temperature",
+    "permissible_values": [
+      {
+        "value": "25 Degrees C",
+        "long_name": "25 Degrees Celsius",
+        "concept_code": "C185333"
+      },
+      {
+        "value": "4 Degrees C",
+        "long_name": "4 Degrees Celsius",
+        "concept_code": "C185332"
+      },
+      {
+        "value": "-80 Degrees C",
+        "long_name": "Minus 80 Degrees Celsius",
+        "concept_code": "C185336"
+      },
+      {
+        "value": "-20 Degrees C",
+        "long_name": "Minus 20 Degrees Celsius",
+        "concept_code": "C185334"
+      },
+      {
+        "value": "Ambient Temperature",
+        "long_name": "Specimen at Room Temperature",
+        "concept_code": "C70719"
+      },
+      {
+        "value": "-150 degrees C",
+        "long_name": "Minus 150 Degrees Celsius",
+        "concept_code": "C185337"
+      },
+      {
+        "value": "-70 degrees C",
+        "long_name": "Minus 70 Degrees Celsius",
+        "concept_code": "C185335"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      }
+    ]
+  },
+  "16323957": {
+    "CRDC Name": "Specimen Preservation Medium",
+    "permissible_values": [
+      {
+        "value": "Desiccant",
+        "long_name": "Desiccant",
+        "concept_code": "C219695"
+      },
+      {
+        "value": "EDTA",
+        "long_name": "Edetic Acid",
+        "concept_code": "C61742"
+      },
+      {
+        "value": "FFPE",
+        "long_name": "Formalin-Fixed Paraffin-Embedded",
+        "concept_code": "C143028"
+      },
+      {
+        "value": "Formalin Fixed - Buffered",
+        "long_name": "Buffered Formalin Fixation",
+        "concept_code": "C185403"
+      },
+      {
+        "value": "Formalin Fixed - Unbuffered",
+        "long_name": "Unbuffered Formalin Fixation",
+        "concept_code": "C185402"
+      },
+      {
+        "value": "Formalin Fixed Tissue",
+        "long_name": "Formalin-Fixed Tissue",
+        "concept_code": "C200862"
+      },
+      {
+        "value": "Glutaraldehyde",
+        "long_name": "Glutaraldehyde",
+        "concept_code": "C80930"
+      },
+      {
+        "value": "RNALater",
+        "long_name": "RNALater",
+        "concept_code": "C63348"
+      },
+      {
+        "value": "TRIzol",
+        "long_name": "Phenol and Guanidine Isothiocyanate Solution",
+        "concept_code": "C213680"
+      },
+      {
+        "value": "OCT",
+        "long_name": "Optimal Cutting Temperature Compound",
+        "concept_code": "C63523"
+      },
+      {
+        "value": "Paraffin Block",
+        "long_name": "Paraffin Embedded Tissue",
+        "concept_code": "C19597"
+      },
+      {
+        "value": "Isopentane",
+        "long_name": "Isopentane",
+        "concept_code": "C63387"
+      },
+      {
+        "value": "Not Applicable",
+        "long_name": "Not applicable",
+        "concept_code": "C48660"
+      },
+      {
+        "value": "Not Reported",
+        "long_name": "Not Reported",
+        "concept_code": "C43234"
+      },
+      {
+        "value": "Unknown",
+        "long_name": "Unknown",
+        "concept_code": "C17998"
+      },
+      {
+        "value": "Liquid Nitrogen Vapor",
+        "long_name": "Liquid Nitrogen Vapor",
+        "concept_code": "C174159"
+      },
+      {
+        "value": "Liquid Nitrogen",
+        "long_name": "Liquid Nitrogen",
+        "concept_code": "C68796"
+      }
+    ]
+  }
+}

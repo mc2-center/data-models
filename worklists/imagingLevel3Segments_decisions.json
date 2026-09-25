@@ -1,0 +1,50 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 3 Segments",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node representing image segmentation mask information. Best NCIT match is Imaging Procedure. OBI:0003333 (computed image data set) is a closer OBI alternative."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel3Segments_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Image Parameter file",
+    "ontology_identifier": "NCIT:C17146",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17146",
+    "label": "Computer Program",
+    "description": "A set of coded instructions, which a computer follows in processing data, performing an operation, or solving a logical problem, upon execution of the program.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for a parameter file. Computer Program (NCIT:C17146) is the closest available match for algorithm/software configuration files. This is a partial match."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "Image Number of Objects",
+    "ontology_identifier": "NCIT:C25337",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25337",
+    "label": "Number",
+    "description": "A numeral or string of numerals expressing value, quantity, or identification.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for number of image objects/cells. NCIT:C25337 Number is the best available parent concept representing a count of entities. Partial match."
+    }
+  }
+]

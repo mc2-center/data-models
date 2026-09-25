@@ -1,4 +1,4 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
 Commercial,Software which you have to pay to access.,,,FALSE,,Tool Cost,,,,,,,,
-Free of Charge,,,,FALSE,,Tool Cost,,,,,,,,
-Free of Charge (With Restrictions),,,,FALSE,,Tool Cost,,,,,,,,
+Free of Charge,The resource can be used at no monetary cost.,,,FALSE,,Tool Cost,,,,,,,,
+Free of Charge (With Restrictions),"The resource can be used at no monetary cost, but with some conditions (e.g., limited to academic/non-commercial use).",,,FALSE,,Tool Cost,,,,,,,,

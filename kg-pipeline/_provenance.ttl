@@ -1,0 +1,14 @@
+@prefix cckp: <https://w3id.org/mc2-center/cckp-portal/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cckp:kgBuild_0ca803b3cb47451c83e9cbdd0be7fdf390413136 a void:Dataset,
+        prov:Activity ;
+    void:dataDump <s3://app-prod-neptune-neptunedatabucketb8719d9a-jfo3bsfisgfn/cckp/2026-09-15/> ;
+    prov:generatedAtTime "2026-09-15T23:03:33.061890+00:00"^^xsd:dateTime ;
+    prov:used <https://github.com/mc2-center/data-models/commit/0ca803b3cb47451c83e9cbdd0be7fdf390413136> ;
+    cckp:gitCommit "0ca803b3cb47451c83e9cbdd0be7fdf390413136" ;
+    cckp:gitRef "aws-upload-pipeline" ;
+    cckp:portal "cckp" .
+

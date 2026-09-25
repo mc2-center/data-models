@@ -1,0 +1,83 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Metastatic Neoplasm",
+    "ontology_identifier": "NCIT:C3261",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3261",
+    "label": "Metastatic Neoplasm",
+    "description": "A malignant tumor that has spread from its original site of growth to another anatomic location.",
+    "verification": {"verdict": "match", "note": "NCIT:C3261 Metastatic Neoplasm; exact label match."}
+  },
+  {
+    "row_index": 1,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 2,
+    "term": "Not Otherwise Specified",
+    "ontology_identifier": "NCIT:C19594",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19594",
+    "label": "Not Otherwise Specified",
+    "description": "Not characterized in any other way.",
+    "verification": {"verdict": "match", "note": "NCIT:C19594 Not Otherwise Specified; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 4,
+    "term": "Premalignant Neoplasm",
+    "ontology_identifier": "NCIT:C36032",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C36032",
+    "label": "Premalignant Condition",
+    "description": "A lesion or cellular condition with the potential to develop into cancer.",
+    "verification": {"verdict": "partial", "note": "NCIT:C36032 Premalignant Condition; label uses 'Condition' vs 'Neoplasm' but is the standard NCIT term for pre-malignant lesions. Best available match."}
+  },
+  {
+    "row_index": 5,
+    "term": "Primary Neoplasm",
+    "ontology_identifier": "NCIT:C8509",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C8509",
+    "label": "Primary Neoplasm",
+    "description": "A neoplasm at the original site of growth.",
+    "verification": {"verdict": "match", "note": "NCIT:C8509 Primary Neoplasm; exact label match."}
+  },
+  {
+    "row_index": 6,
+    "term": "Recurrent Neoplasm",
+    "ontology_identifier": "NCIT:C4798",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C4798",
+    "label": "Recurrent Neoplasm",
+    "description": "A lesion that has reappeared at the original site of a neoplasm after a period of remission.",
+    "verification": {"verdict": "match", "note": "NCIT:C4798 Recurrent Neoplasm; exact label match."}
+  },
+  {
+    "row_index": 7,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 8,
+    "term": "Xenograft",
+    "ontology_identifier": "NCIT:C156443",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156443",
+    "label": "Cell Line-Derived Xenograft",
+    "description": "A biospecimen derived from the culturing of a derived cell line in a non-human organism.",
+    "verification": {"verdict": "partial", "note": "NCIT:C156443 Cell Line-Derived Xenograft; label is more specific than the plain 'Xenograft' term, but this is the only NCIT biospecimen-class xenograft term and correctly falls under the Biospecimen hierarchy. Flag for review — a more generic 'Xenograft' biospecimen term may exist."}
+  }
+]}

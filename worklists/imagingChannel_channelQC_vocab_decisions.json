@@ -1,0 +1,20 @@
+{"decisions": [
+  {
+    "row_index": 1,
+    "term": "No - Channel Failed QC",
+    "ontology_identifier": "NCIT:C49487",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49487",
+    "label": "No",
+    "description": "The non-affirmative response to a question.",
+    "verification": {"verdict": "partial", "note": "NCIT:C49487 No; label is 'No' while the term is 'No - Channel Failed QC' (a more specific negative qualifier with QC reason appended). NCIT:C49487 is the appropriate base negative qualifier term, paired with NCIT:C49488 Yes (already used for row 0)."}
+  },
+  {
+    "row_index": 0,
+    "term": "Yes",
+    "ontology_identifier": "NCIT:C49488",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49488",
+    "label": "Yes",
+    "description": "The affirmative response to a question.",
+    "verification": {"verdict": "match", "note": "NCIT:C49488 Yes; exact match for affirmative QC indicator (channel passed QC = Yes)."}
+  }
+]}

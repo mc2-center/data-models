@@ -1,0 +1,335 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier, exact label match."}
+  },
+  {
+    "row_index": 1,
+    "term": "T0",
+    "ontology_identifier": "NCIT:C48719",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48719",
+    "label": "T0 TNM Finding",
+    "description": "",
+    "verification": {"verdict": "match", "note": "NCIT:C48719 T0 TNM Finding; exact concept match. Description already exists in CSV."}
+  },
+  {
+    "row_index": 2,
+    "term": "T1",
+    "ontology_identifier": "NCIT:C48720",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48720",
+    "label": "T1 TNM Finding",
+    "description": "A clinical and/or pathologic primary tumor TNM finding indicating that the cancer is limited to the site of growth.",
+    "verification": {"verdict": "match", "note": "NCIT:C48720 T1 TNM Finding; exact label match, direct child of Generic Primary Tumor TNM Finding (C48885)."}
+  },
+  {
+    "row_index": 3,
+    "term": "T1a",
+    "ontology_identifier": "NCIT:C48721",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48721",
+    "label": "T1a TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1a depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48721 T1a TNM Finding; exact label match, child of T1 TNM Finding."}
+  },
+  {
+    "row_index": 4,
+    "term": "T1a1",
+    "ontology_identifier": "NCIT:C188292",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188292",
+    "label": "T1a1 Stage Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1a1 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188292 T1a1 Stage Finding; direct child of T1a TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 5,
+    "term": "T1a2",
+    "ontology_identifier": "NCIT:C188293",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188293",
+    "label": "T1a2 Stage Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1a2 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188293 T1a2 Stage Finding; direct child of T1a TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 6,
+    "term": "T1b",
+    "ontology_identifier": "NCIT:C48722",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48722",
+    "label": "T1b TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1b depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48722 T1b TNM Finding; exact label match, child of T1 TNM Finding."}
+  },
+  {
+    "row_index": 7,
+    "term": "T1b1",
+    "ontology_identifier": "NCIT:C188294",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188294",
+    "label": "T1b1 TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1b1 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188294 T1b1 TNM Finding; direct child of T1b TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 8,
+    "term": "T1b2",
+    "ontology_identifier": "NCIT:C188295",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188295",
+    "label": "T1b2 TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1b2 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188295 T1b2 TNM Finding; direct child of T1b TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 9,
+    "term": "T1c",
+    "ontology_identifier": "NCIT:C48723",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48723",
+    "label": "T1c TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor limited to the site of growth; the specific definition of T1c depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48723 T1c TNM Finding; exact label match, child of T1 TNM Finding."}
+  },
+  {
+    "row_index": 10,
+    "term": "T1mi",
+    "ontology_identifier": "NCIT:C95805",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95805",
+    "label": "T1mi TNM Finding",
+    "description": "A term that refers to a TNM finding of a primary tumor limited to the site of growth and indicates microinvasion only.",
+    "verification": {"verdict": "match", "note": "NCIT:C95805 T1mi TNM Finding; exact label match, child of T1 TNM Finding."}
+  },
+  {
+    "row_index": 11,
+    "term": "T2",
+    "ontology_identifier": "NCIT:C48724",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48724",
+    "label": "T2 TNM Finding",
+    "description": "A general term that refers to a TNM finding of primary tumor growth beyond the level of in situ cancer, minimal subepithelial invasion, or minimal greatest diameter; the specific definition depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48724 T2 TNM Finding; exact label match, direct child of Generic Primary Tumor TNM Finding."}
+  },
+  {
+    "row_index": 12,
+    "term": "T2a",
+    "ontology_identifier": "NCIT:C48725",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48725",
+    "label": "T2a TNM Finding",
+    "description": "A general term that refers to a TNM finding of primary tumor growth beyond the level of in situ cancer; the specific definition of T2a depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48725 T2a TNM Finding; exact label match, child of T2 TNM Finding."}
+  },
+  {
+    "row_index": 13,
+    "term": "T2a1",
+    "ontology_identifier": "NCIT:C188296",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188296",
+    "label": "T2a1 TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor; the specific definition of T2a1 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188296 T2a1 TNM Finding; direct child of T2a TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 14,
+    "term": "T2a2",
+    "ontology_identifier": "NCIT:C188297",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188297",
+    "label": "T2a2 TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor; the specific definition of T2a2 depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188297 T2a2 TNM Finding; direct child of T2a TNM Finding, correct concept."}
+  },
+  {
+    "row_index": 15,
+    "term": "T2b",
+    "ontology_identifier": "NCIT:C48726",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48726",
+    "label": "T2b TNM Finding",
+    "description": "A general term that refers to a TNM finding of primary tumor growth beyond the level of in situ cancer; the specific definition of T2b depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48726 T2b TNM Finding; exact label match, child of T2 TNM Finding."}
+  },
+  {
+    "row_index": 16,
+    "term": "T2c",
+    "ontology_identifier": "NCIT:C48727",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48727",
+    "label": "T2c TNM Finding",
+    "description": "A general term that refers to a TNM finding of primary tumor growth beyond the level of in situ cancer; the specific definition of T2c depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48727 T2c TNM Finding; exact label match, child of T2 TNM Finding."}
+  },
+  {
+    "row_index": 17,
+    "term": "T2d",
+    "ontology_identifier": "NCIT:C148411",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C148411",
+    "label": "T2d TNM Finding",
+    "description": "A TNM stage finding term for ophthalmic sites melanoma staging, indicating tumor size category 2 with specific extension or caruncular criteria.",
+    "verification": {"verdict": "partial", "note": "NCIT:C148411 T2d TNM Finding; exact label match, but definition is ophthalmic/melanoma specific — no generic T2d exists. Best available match."}
+  },
+  {
+    "row_index": 18,
+    "term": "T3",
+    "ontology_identifier": "NCIT:C48728",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48728",
+    "label": "T3 TNM Finding",
+    "description": "A clinical and/or pathologic primary tumor TNM finding usually indicating that the cancer is locally invasive, without infiltration of adjacent structures.",
+    "verification": {"verdict": "match", "note": "NCIT:C48728 T3 TNM Finding; exact label match, direct child of Generic Primary Tumor TNM Finding."}
+  },
+  {
+    "row_index": 19,
+    "term": "T3a",
+    "ontology_identifier": "NCIT:C48729",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48729",
+    "label": "T3a TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor usually indicating that the cancer is locally invasive; the specific definition of T3a depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48729 T3a TNM Finding; exact label match, child of T3 TNM Finding."}
+  },
+  {
+    "row_index": 20,
+    "term": "T3b",
+    "ontology_identifier": "NCIT:C48730",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48730",
+    "label": "T3b TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor usually indicating that the cancer is locally invasive; the specific definition of T3b depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48730 T3b TNM Finding; exact label match, child of T3 TNM Finding."}
+  },
+  {
+    "row_index": 21,
+    "term": "T3c",
+    "ontology_identifier": "NCIT:C48731",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48731",
+    "label": "T3c TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor usually indicating that the cancer is locally invasive; the specific definition of T3c depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48731 T3c TNM Finding; exact label match, child of T3 TNM Finding."}
+  },
+  {
+    "row_index": 22,
+    "term": "T3d",
+    "ontology_identifier": "NCIT:C148412",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C148412",
+    "label": "T3d TNM Finding",
+    "description": "A TNM finding term for melanoma or retinoblastoma staging, indicating tumor size category 3 with ciliary body involvement, specific conjunctival extension, or scleral invasion criteria.",
+    "verification": {"verdict": "partial", "note": "NCIT:C148412 T3d TNM Finding; exact label match, but definition is ophthalmic/retinoblastoma specific — no generic T3d exists. Best available match."}
+  },
+  {
+    "row_index": 23,
+    "term": "T4",
+    "ontology_identifier": "NCIT:C48732",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48732",
+    "label": "T4 TNM Finding",
+    "description": "A clinical and/or pathologic primary tumor TNM finding indicating direct invasion of adjacent structures by cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48732 T4 TNM Finding; exact label match, direct child of Generic Primary Tumor TNM Finding."}
+  },
+  {
+    "row_index": 24,
+    "term": "T4a",
+    "ontology_identifier": "NCIT:C48733",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48733",
+    "label": "T4a TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor with direct invasion of adjacent structures; the specific definition of T4a depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48733 T4a TNM Finding; exact label match, child of T4 TNM Finding."}
+  },
+  {
+    "row_index": 25,
+    "term": "T4b",
+    "ontology_identifier": "NCIT:C48734",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48734",
+    "label": "T4b TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor with direct invasion of adjacent structures; the specific definition of T4b depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48734 T4b TNM Finding; exact label match, child of T4 TNM Finding."}
+  },
+  {
+    "row_index": 26,
+    "term": "T4c",
+    "ontology_identifier": "NCIT:C48735",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48735",
+    "label": "T4c TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor with direct invasion of adjacent structures; the specific definition of T4c depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48735 T4c TNM Finding; exact label match, child of T4 TNM Finding."}
+  },
+  {
+    "row_index": 27,
+    "term": "T4d",
+    "ontology_identifier": "NCIT:C48736",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48736",
+    "label": "T4d TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor with direct invasion of adjacent structures; the specific definition of T4d depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C48736 T4d TNM Finding; exact label match, child of T4 TNM Finding."}
+  },
+  {
+    "row_index": 28,
+    "term": "T4e",
+    "ontology_identifier": "NCIT:C188298",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C188298",
+    "label": "T4e TNM Finding",
+    "description": "A general term that refers to a TNM finding of a primary tumor with direct invasion of adjacent structures; the specific definition of T4e depends on the type of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C188298 T4e TNM Finding; exact label match, child of T4 TNM Finding."}
+  },
+  {
+    "row_index": 29,
+    "term": "T5",
+    "ontology_identifier": "NCIT:C132010",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C132010",
+    "label": "T5 TNM Finding",
+    "description": "An antiquated primary tumor finding term that refers to colorectal cancer which has spread by direct extension beyond the immediately adjacent organs or tissues (AJCC 1st Ed.).",
+    "verification": {"verdict": "partial", "note": "NCIT:C132010 T5 TNM Finding; exact label match, but this is colorectal-specific and antiquated. It is the only T5 term in NCIT."}
+  },
+  {
+    "row_index": 30,
+    "term": "Ta",
+    "ontology_identifier": "NCIT:C96025",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C96025",
+    "label": "pTa TNM Finding",
+    "description": "A term that refers to a TNM finding of a primary, non-invasive papillary carcinoma.",
+    "verification": {"verdict": "partial", "note": "NCIT:C96025 pTa TNM Finding; the NCIT term has pathologic 'p' prefix while the vocab term 'Ta' is clinical/generic. No generic Ta class exists in NCIT — pTa is the only Ta-type term available."}
+  },
+  {
+    "row_index": 31,
+    "term": "Tis",
+    "ontology_identifier": "NCIT:C48738",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48738",
+    "label": "pTis TNM Finding",
+    "description": "A pathologic primary tumor TNM finding indicating carcinoma in situ.",
+    "verification": {"verdict": "partial", "note": "NCIT:C48738 pTis TNM Finding; no generic clinical Tis class exists in NCIT — only the pathologic pTis parent class. This is the closest concept."}
+  },
+  {
+    "row_index": 32,
+    "term": "Tis (DCIS)",
+    "ontology_identifier": "NCIT:C139414",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C139414",
+    "label": "Breast Cancer pTis (DCIS) TNM Finding v8",
+    "description": "Breast cancer with a finding of ductal carcinoma in situ.",
+    "verification": {"verdict": "partial", "note": "NCIT:C139414 is breast-cancer specific and pathologic; no generic Tis(DCIS) class exists in NCIT. Best available match for this TNM stage designation."}
+  },
+  {
+    "row_index": 33,
+    "term": "Tis (LCIS)",
+    "ontology_identifier": "NCIT:C48976",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48976",
+    "label": "Breast Cancer pTis (LCIS) TNM Finding v6 and v7",
+    "description": "Breast cancer with a finding of lobular carcinoma in situ (per AJCC 6th and 7th editions; LCIS was removed from TNM staging in the 8th edition).",
+    "verification": {"verdict": "partial", "note": "NCIT:C48976 is breast-specific and references older AJCC editions (LCIS was removed from v8 staging). Best available match for Tis(LCIS)."}
+  },
+  {
+    "row_index": 34,
+    "term": "Tis (Paget's)",
+    "ontology_identifier": "NCIT:C139415",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C139415",
+    "label": "Breast Cancer pTis (Paget) TNM Finding v8",
+    "description": "Paget disease of the nipple not associated with invasive carcinoma and/or carcinoma in situ in the underlying breast parenchyma.",
+    "verification": {"verdict": "partial", "note": "NCIT:C139415 is breast-cancer specific and pathologic; no generic Tis(Paget's) class exists in NCIT. Best available match."}
+  },
+  {
+    "row_index": 35,
+    "term": "TX",
+    "ontology_identifier": "NCIT:C48737",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48737",
+    "label": "TX TNM Finding",
+    "description": "A primary tumor TNM finding indicating that the status of the primary tumor cannot be assessed.",
+    "verification": {"verdict": "match", "note": "NCIT:C48737 TX TNM Finding; exact label match, direct child of Generic Primary Tumor TNM Finding."}
+  },
+  {
+    "row_index": 36,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier, exact label match."}
+  }
+]}

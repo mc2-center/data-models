@@ -1,0 +1,16 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/resource_topic.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Biology	Biology	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16345	semapv:ManualMappingCuration
+Chemistry	Chemistry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16414	semapv:ManualMappingCuration
+Computer Science	Computer Science	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18141	semapv:ManualMappingCuration
+Ecology	Ecology	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16526	semapv:ManualMappingCuration
+Educational Technology	Educational Technology	skos:exactMatch	http://id.nlm.nih.gov/mesh/D018961	semapv:ManualMappingCuration
+Environmental Science	Environmental Science	skos:exactMatch	http://id.nlm.nih.gov/mesh/D000079265	semapv:ManualMappingCuration
+Genetics	Genetics	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16624	semapv:ManualMappingCuration
+Patient Advocacy	Patient Advocacy	skos:exactMatch	http://id.nlm.nih.gov/mesh/D010344	semapv:ManualMappingCuration
+Systems Biology	Systems Biology	skos:exactMatch	http://purl.obolibrary.org/obo/OMIT_0024179	semapv:ManualMappingCuration
+Training Material	Training Material	skos:exactMatch	http://edamontology.org/data_3669	semapv:ManualMappingCuration

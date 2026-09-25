@@ -1,0 +1,12 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_entity_role.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Contributor	Contributor	skos:exactMatch	http://purl.org/dc/terms/contributor	semapv:ManualMappingCuration
+Developer	Developer	skos:exactMatch	https://credit.niso.org/contributor-roles/software	semapv:ManualMappingCuration
+Documentor	Documentor	skos:exactMatch	http://purl.obolibrary.org/obo/CRO_0000091	semapv:ManualMappingCuration
+Maintainer	Maintainer	skos:exactMatch	https://schema.org/maintainer	semapv:ManualMappingCuration
+Primary Contact	Primary Contact	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C127533	semapv:ManualMappingCuration
+Provider	Provider	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000947	semapv:ManualMappingCuration

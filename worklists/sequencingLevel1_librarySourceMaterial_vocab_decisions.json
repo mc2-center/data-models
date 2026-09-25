@@ -1,0 +1,29 @@
+{"decisions": [
+  {
+    "row_index": 3,
+    "term": "Single-nuclei",
+    "ontology_identifier": "NCIT:C178227",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178227",
+    "label": "Single Nucleus Specimen",
+    "description": "A biospecimen that contains the contents of a single nucleus.",
+    "verification": {"verdict": "partial", "note": "NCIT:C178227 Single Nucleus Specimen; label adds 'Specimen' but describes the correct source material concept — isolated single-nucleus content used as source for library preparation. Best available NCIT match."}
+  },
+  {
+    "row_index": 4,
+    "term": "Single-cells",
+    "ontology_identifier": "NCIT:C178226",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178226",
+    "label": "Single Cell Specimen",
+    "description": "A biospecimen that contains the contents of a single cell.",
+    "verification": {"verdict": "partial", "note": "NCIT:C178226 Single Cell Specimen; label adds 'Specimen' but describes the correct source material concept — single-cell content used as source for library preparation. Best available NCIT match."}
+  },
+  {
+    "row_index": 5,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  }
+]}

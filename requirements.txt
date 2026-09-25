@@ -1,5 +1,4 @@
-synapseclient>=4.8.0
-schematicpy>=25.8.1
+synapseclient>=4.13.0
 pandas
 PyYAML
 google-api-python-client

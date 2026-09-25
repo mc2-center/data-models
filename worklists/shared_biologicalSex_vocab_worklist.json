@@ -1,0 +1,152 @@
+[
+  {
+    "row_index": 0,
+    "term": "Decline to answer",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Don't know",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 2,
+    "term": "Female",
+    "existing_description": "An individual who belongs to the sex that normally produces ova.",
+    "existing_ontology_identifier": "NCIT:C16576",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16576",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 3,
+    "term": "Intersex",
+    "existing_description": "Refers to an individual who was born with genitalia and/or secondary sexual characteristics of indeterminate sex, or which combine features of both sexes.",
+    "existing_ontology_identifier": "NCIT:C45908",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C45908",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 4,
+    "term": "Male",
+    "existing_description": "An individual who belongs to the sex that normally produces sperm.",
+    "existing_ontology_identifier": "NCIT:C20197",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C20197",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 5,
+    "term": "None of these describe me",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 6,
+    "term": "Prefer not to answer",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 7,
+    "term": "Unknown",
+    "existing_description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "existing_ontology_identifier": "NCIT:C17998",
+    "existing_ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "needs": [],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity.",
+    "status": "already_complete"
+  },
+  {
+    "row_index": 8,
+    "term": "X",
+    "existing_description": "",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url",
+      "description"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Shared metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  }
+]

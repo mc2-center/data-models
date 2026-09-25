@@ -1,4 +1,6 @@
 import json
+import os
+import re
 from os.path import getsize, isfile, join
 
 import pandas as pd
@@ -9,6 +11,7 @@ import yaml
 # Data models to display on the documentation site: filename -> page title
 DATA_MODELS = {
     "dataset": "Dataset",
+    "dataCatalog": "Data Catalog",
     "sharingPlans": "Dataset Sharing Plan",
     "education": "Education Resource",
     "file": "File",
@@ -74,6 +77,7 @@ COLS_TO_RENDER = [
     "Format",
     "Regex Pattern",
     "Standard Terms",
+    "CDE",
     "Examples",
 ]
 
@@ -84,6 +88,13 @@ SCHEMA_DIR = "json_schemas"
 ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
+NO_DESCRIPTION_PLACEHOLDER = "No description provided"
+
+# table-reader's `data_path` is "modules" (mkdocs.yml), so cleaned CV copies
+# live under modules/ too - a single cache dir, keyed by source path, since
+# one CV file (e.g. shared/tumorType.csv) commonly backs several models'
+# valid-values pages and shouldn't be rewritten once per model.
+VALID_VALUES_CACHE_DIR = join("modules", ".valid_values_cache")
 
 
 # --- Helper Functions ---
@@ -99,6 +110,35 @@ def _format_technical_column(col: pd.Series, escape_backslashes: bool = False) -
     if escape_backslashes:
         col = col.str.replace(r"\\", r"\\\\", regex=True)
     return col.replace("", "_None_")
+
+
+CDE_TAG_RE = re.compile(r"^(CDE|CRDC_CDE):(\S+)$")
+
+# The only verified-working public endpoint for a caDSR CDE record - see
+# plans/crdc_cde_integration.md: the friendlier-looking "Deep Link" caDSR UI
+# pattern was tested there and found broken (always redirects to a generic
+# landing page). This REST endpoint returns raw XML/JSON, not a formatted
+# page, but it's real and resolvable - confirmed live against known-good
+# CDE ids (88, 12445832). Both CDE: and CRDC_CDE: tags share the same caDSR
+# public-id numbering, so one template covers both.
+CADSR_DATAELEMENT_URL = "https://cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/DataElement"
+
+
+def _extract_cde_tags(properties: str) -> str:
+    """Pull just the CDE:/CRDC_CDE: caDSR mappings out of a Properties cell,
+    which also carries non-CDE markers (primary_key, foreign_key, DUO: CV
+    codes) that don't belong in a "CDE" column, and render each as a
+    markdown link to its real caDSR record (a raw-data REST response, not a
+    formatted page - see CADSR_DATAELEMENT_URL)."""
+    if not properties:
+        return ""
+    tags = [t.strip() for t in properties.split(",")]
+    links = []
+    for t in tags:
+        m = CDE_TAG_RE.match(t)
+        if m:
+            links.append(f"[{t}]({CADSR_DATAELEMENT_URL}/{m.group(2)})")
+    return ", ".join(links)
 
 
 def _get_model_attributes(model: str) -> list:
@@ -181,7 +221,7 @@ def generate_linked_table(model: str):
 
     table = pd.DataFrame({"Attribute": _get_model_attributes(model)})
     table = table.merge(
-        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern"]],
+        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern", "Properties"]],
         left_on="Attribute",
         right_index=True,
         how="left",
@@ -191,6 +231,14 @@ def generate_linked_table(model: str):
     table["Required"] = table["Required"].apply(
         lambda v: "True" if str(v).strip() == "True" else "False"
     )
+
+    # Every attribute currently has a real Description, but guard against a
+    # future gap rendering as a blank cell rather than being explicit about it.
+    table["Description"] = table["Description"].apply(lambda d: d.strip() or NO_DESCRIPTION_PLACEHOLDER)
+
+    # Surface each attribute's caDSR CDE mapping(s), if any (see
+    # _extract_cde_tags - Properties also carries non-CDE markers).
+    table["CDE"] = table["Properties"].apply(_extract_cde_tags)
 
     # Add the Example column and rename it to Examples, if example data
     # exists for this model. Some newer modules don't yet have curated
@@ -227,6 +275,29 @@ def generate_linked_table(model: str):
     table[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
+def _cleaned_valid_values_src(valid_values_src: str) -> str:
+    """Write a copy of a CV file with blank Description cells replaced by
+    NO_DESCRIPTION_PLACEHOLDER, and return the path (relative to modules/,
+    the table-reader plugin's data_path) to use in place of the raw source.
+
+    Without this, a blank Description cell reaches mkdocs-table-reader-
+    plugin's read_csv() with no `keep_default_na=False`, so pandas parses
+    it as NaN and it renders as a literal "nan" in the built table - and
+    even with that flag, blank would just render as an empty cell, not the
+    explicit placeholder text the docs should show. Cached by source path
+    (not per-model), since one CV file often backs several models' pages.
+    """
+    os.makedirs(VALID_VALUES_CACHE_DIR, exist_ok=True)
+    cached_name = valid_values_src.replace("/", "__")
+    cached_path = join(VALID_VALUES_CACHE_DIR, cached_name)
+
+    df = pd.read_csv(join("modules", valid_values_src), quoting=1, dtype=str, keep_default_na=False)
+    df["Description"] = df["Description"].apply(lambda d: d.strip() or NO_DESCRIPTION_PLACEHOLDER)
+    df.to_csv(cached_path, index=False)
+
+    return join(".valid_values_cache", cached_name)
+
+
 def generate_valid_values_markdown(model: str):
     """Generate docs page for standard terms of the given data model.
 
@@ -247,7 +318,7 @@ def generate_valid_values_markdown(model: str):
         # of standard terms.
         for attribute in mapping.get(model, {}):
             name = attribute.get("name")
-            valid_values_src = attribute.get("src")
+            valid_values_src = _cleaned_valid_values_src(attribute.get("src"))
 
             md.write(f"## Attribute: `{name}`\n\n")
             md.write(
@@ -256,7 +327,7 @@ def generate_valid_values_markdown(model: str):
             md.write(
                 "{{ read_csv('"
                 + valid_values_src
-                + "', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}\n\n"
+                + "', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], keep_default_na=False, tablefmt='html') }}\n\n"
             )
             md.write("</div>\n\n\n")
 
