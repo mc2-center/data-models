@@ -60548,7 +60548,7 @@
         {
             "@id": "bts:DataUseCodes",
             "@type": "rdfs:Class",
-            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
+            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
             "rdfs:label": "DataUseCodes",
             "rdfs:subClassOf": [
                 {
@@ -110863,7 +110863,7 @@
         {
             "@id": "bts:DSPDataUseCodes",
             "@type": "rdfs:Class",
-            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes",
+            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
             "rdfs:label": "DSPDataUseCodes",
             "rdfs:subClassOf": [
                 {

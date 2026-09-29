@@ -106,7 +106,9 @@ downstream auto-loader.
 It has its own README, `Makefile`, and Python environment (isolated from
 this repo's root `requirements.txt`). See
 **[`kg-pipeline/README.md`](./kg-pipeline/README.md)** for setup, the full
-command reference, and design rationale.
+command reference, and design rationale, and the
+[knowledge graph design page](https://mc2-center.github.io/data-models/knowledge-graph/)
+for the layer-by-layer build and validation design.
 
 ## Folder Structure
 
