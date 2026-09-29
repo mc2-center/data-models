@@ -151,7 +151,11 @@ def aws_s3_ls(prefix, region, recursive=False):
     if result.returncode == 1 and not result.stdout.strip() and not result.stderr.strip():
         return ""
     if result.returncode != 0:
-        raise subprocess.CalledProcessError(result.returncode, result.args, result.stdout, result.stderr)
+        # Surface the CLI's own message - it's what says *why* (expired or
+        # invalid credentials, AccessDenied, NoSuchBucket), where the exit
+        # code alone (e.g. 254) doesn't.
+        detail = result.stderr.strip() or result.stdout.strip() or "no output"
+        raise SystemExit(f"`aws s3 {' '.join(args)}` failed (exit {result.returncode}): {detail}")
     return result.stdout
 
 
