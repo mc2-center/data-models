@@ -497,12 +497,14 @@ running those scripts directly against real Synapse needs credentials).
   date-partitioned prefix in the SageBrain Neptune S3 bucket. Before
   uploading, it parses every file about to land under `data/` with rdflib
   and counts its triples, refusing the deposit if any file parses to zero
-  triples; this manifest carries that total (`void:triples`), the snapshot
+  triples; this manifest carries the number of distinct triples across
+  those files (`void:triples`, what Neptune holds once loaded), the snapshot
   date (`cckp:snapshotDate`) and the deposit time (`cckp:depositedAtTime`)
   in addition to the build-time fields every manifest has, and its
   `void:dataDump` points at `{prefix}/data/`, the actual load path. It
   refuses to touch a date that already holds a snapshot unless
-  `--allow-overwrite` is given, then replaces the entire `data/` load path
+  `--allow-overwrite` is given (`make upload-sagebrain-s3
+  UPLOAD_ARGS=--allow-overwrite`), then replaces the entire `data/` load path
   in one unfiltered `aws s3 sync --delete` (rather than adding files on
   top of a stale deposit) and checks the result is Turtle-only — every
   key ends in `.ttl` and the object count matches what was staged — before

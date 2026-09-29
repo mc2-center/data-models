@@ -84,7 +84,7 @@ make update-coverage-baseline  # after intentionally curating a CV or accepting 
 make publish-portal-kg     # upload data/raw|harmonized|rdf -> the public portal Synapse staging location
 make manifest              # regenerate just data/rdf/manifest.ttl (see build_manifest.py) - already part of full-kg
 make deploy-kg             # upload data/rdf/cckp_kg_full.ttl + manifest.ttl -> their distribution folder (syn77443315) for other systems to pull from
-make upload-sagebrain-s3   # publish schema/*.ttl + cckp_kg_full.ttl + manifest.ttl (with a triple count, snapshot date and deposit time) -> the SageBrain Neptune S3 bucket, refusing an occupied date unless --allow-overwrite (requires SAGEBRAIN_BUCKET + aws CLI)
+make upload-sagebrain-s3   # publish schema/*.ttl + cckp_kg_full.ttl + manifest.ttl (with a triple count, snapshot date and deposit time) -> the SageBrain Neptune S3 bucket, refusing an occupied date unless `UPLOAD_ARGS=--allow-overwrite` (prod bucket unless SAGEBRAIN_BUCKET overrides it; needs the aws CLI)
 make all                   # schema + extract + harmonize + triples + validate
 make test                  # pytest test/ (fixture-based, no live Synapse access needed)
 

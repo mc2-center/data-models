@@ -63,10 +63,12 @@ cckp_portal.shacl.ttl, since both reach the identical graph in Neptune.
 Before anything is uploaded, every file about to land under data/ (the
 schema/*.ttl files and cckp_kg_full.ttl - not _provenance.ttl, which is a
 copy of the manifest itself) is parsed with rdflib and its triples
-counted, matching nf-osi/kg-pipeline's own "Verify snapshot" step. A file
+counted, like nf-osi/kg-pipeline's own "Verify snapshot" step. A file
 that parses to zero triples aborts the deposit (SystemExit) rather than
-publishing a snapshot Neptune would silently under-load. The total feeds
-manifest.ttl's void:triples, and void:dataDump points at `{prefix}/data/`
+publishing a snapshot Neptune would silently under-load. manifest.ttl's
+void:triples is the number of distinct triples across those files (they
+overlap - cckp_kg_full.ttl already merges the schema), which is what
+Neptune holds once the snapshot is loaded, and void:dataDump points at `{prefix}/data/`
 - the actual Neptune load path - not the bare `{prefix}/`.
 
 Deliberately absent from that manifest, even here: nf-osi's `buildRunId`,
@@ -83,8 +85,8 @@ Requires the `aws` CLI on PATH and these already-built inputs:
     make full-kg    (data/rdf/cckp_kg_full.ttl)
 
 Usage:
-    export SAGEBRAIN_BUCKET=<bucket-name>       # required - no default; see
-                                                  # sagebrain-infra for the real value
+    export SAGEBRAIN_BUCKET=<bucket-name>       # optional - defaults to the
+                                                  # prod bucket (SAGEBRAIN_BUCKET below)
     export SAGEBRAIN_PORTAL=cckp                 # optional, default: cckp
     export AWS_REGION=us-east-1                  # optional, default: us-east-1
     python scripts/upload_sagebrain_s3.py
@@ -153,17 +155,6 @@ def aws_s3_ls(prefix, region, recursive=False):
     return result.stdout
 
 
-def count_triples(path):
-    """Triples in one Turtle file, via rdflib - mirrors nf-osi/kg-pipeline's
-    "Verify snapshot" step, which streams every file under the snapshot's
-    data/ and refuses to deposit one that parses to zero triples. The files
-    here are small enough (largest is ~340k triples) to parse into a Graph
-    outright rather than streaming."""
-    g = rdflib.Graph()
-    g.parse(path, format="turtle")
-    return len(g)
-
-
 def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_root=".",
            dry_run_dir=None, allow_overwrite=False):
     if not os.path.isfile(FULL_KG_PATH):
@@ -175,6 +166,14 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
         raise SystemExit("the `aws` CLI is not on PATH - install/configure it first")
 
     date = date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # The loader keys a snapshot's named graph off this YYYY-MM-DD path
+    # segment, and the manifest types it xsd:date - refuse anything else
+    # before touching S3, as nf-osi's "Resolve snapshot date" step does.
+    try:
+        if datetime.strptime(date, "%Y-%m-%d").strftime("%Y-%m-%d") != date:
+            raise ValueError
+    except ValueError:
+        raise SystemExit(f"--date {date!r} is not a YYYY-MM-DD date") from None
     prefix = s3_prefix(bucket, portal, date)
 
     # Guard 1: the date must be free unless overwriting is opt-in, since
@@ -194,16 +193,24 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
     # the manifest, so the count can be embedded in it, and before any
     # upload, so a zero-triple file aborts the whole deposit rather than
     # publishing a snapshot Neptune would silently under-load.
+    #
+    # void:triples is the number of *distinct* triples across those files,
+    # not the per-file sum nf-osi's verify step uses: cckp_kg_full.ttl
+    # already merges mc2_model.ttl and cckp_portal.ttl, and Neptune loads
+    # the snapshot into one named graph as a set, so a per-file sum would
+    # overstate what's loaded.
     data_files = [*schema_ttls, FULL_KG_PATH]
-    total_triples = 0
+    union = rdflib.Graph()
     print("Counting triples under data/:")
     for path in data_files:
-        n = count_triples(path)
-        if not n:
+        g = rdflib.Graph()
+        g.parse(path, format="turtle")
+        if not len(g):
             raise SystemExit(f"{path} parsed to zero triples - refusing to deposit")
-        total_triples += n
-        print(f"  {path}: {n:,}")
-    print(f"  total: {total_triples:,}")
+        union += g
+        print(f"  {path}: {len(g):,}")
+    total_triples = len(union)
+    print(f"  distinct total: {total_triples:,}")
 
     commit_sha, branch = git_info()
     deposited_at = datetime.now(timezone.utc)
@@ -225,6 +232,9 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
 
     if dry_run_dir is not None:
         mirror_root = os.path.join(dry_run_dir, portal, date)
+        # Start from an empty mirror, the local analogue of sync --delete,
+        # so files left by an earlier dry run don't linger in the rehearsal.
+        shutil.rmtree(mirror_root, ignore_errors=True)
         for relative_path, src in staged.items():
             dest = os.path.join(mirror_root, "data", relative_path)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
@@ -266,8 +276,14 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
         raise SystemExit(
             f"non-Turtle objects under {prefix}/data/ - the bulk loader would fail the whole snapshot: {stray}"
         )
-    if len(keys) != len(staged):
-        raise SystemExit(f"{prefix}/data/ holds {len(keys)} objects, expected {len(staged)}")
+    # Compare exact keys, not just the count: one stray .ttl from another
+    # writer plus one missing staged file would otherwise balance out.
+    key_root = prefix.split("/", 3)[3] + "/data/"  # "<portal>/<date>/data/"
+    expected_keys = {key_root + relative_path for relative_path in staged}
+    if set(keys) != expected_keys or len(keys) != len(expected_keys):
+        missing = sorted(expected_keys - set(keys))
+        unexpected = sorted(set(keys) - expected_keys)
+        raise SystemExit(f"{prefix}/data/ doesn't match what was staged - missing: {missing}, unexpected: {unexpected}")
     print(f"{len(keys)} Turtle object(s) under {prefix}/data/")
 
     # Sentinel last: writing manifest.ttl is what triggers the Neptune load.
@@ -280,7 +296,7 @@ def upload(bucket, portal, region, repo_url=DEFAULT_REPO_URL, date=None, tmp_roo
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--bucket", default=os.environ.get("SAGEBRAIN_BUCKET", SAGEBRAIN_BUCKET),
-                         help="SageBrain Neptune S3 bucket name (env: SAGEBRAIN_BUCKET, required)")
+                         help="SageBrain Neptune S3 bucket name (env: SAGEBRAIN_BUCKET; default: the prod bucket, %(default)s)")
     parser.add_argument("--portal", default=os.environ.get("SAGEBRAIN_PORTAL", DEFAULT_PORTAL),
                          help="Portal-scoped S3 prefix segment (env: SAGEBRAIN_PORTAL, default: %(default)s)")
     parser.add_argument("--region", default=os.environ.get("AWS_REGION", DEFAULT_REGION),

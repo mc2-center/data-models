@@ -9,9 +9,9 @@ import upload_sagebrain_s3 as up
 CCKP = build_manifest.CCKP
 VOID = rdflib.Namespace("http://rdfs.org/ns/void#")
 
-# One real triple - not a comment-only placeholder. count_triples() now
-# parses every file it's about to place under data/ and refuses one that
-# parses to zero triples, so a fixture has to actually carry a triple to
+# One real triple - not a comment-only placeholder. upload() parses every
+# file it's about to place under data/ and refuses one that parses to zero
+# triples, so a fixture has to actually carry a triple to
 # stand in for a built schema/graph file.
 MINIMAL_TURTLE = "<urn:example:s> <urn:example:p> <urn:example:o> .\n"
 
@@ -47,11 +47,14 @@ def _rig_aws(monkeypatch, occupied=False, recursive_listing=None):
         calls.append(("run", args))
         if args[0] == "sync":
             src_dir = args[1].rstrip("/")
+            # Real `aws s3 ls --recursive` prints keys relative to the
+            # bucket ("<portal>/<date>/data/..."), not to the sync source.
+            key_root = args[2].split("/", 3)[3]
             keys = []
             for root, _, files in os.walk(src_dir):
                 for name in files:
                     rel = os.path.relpath(os.path.join(root, name), src_dir)
-                    keys.append(rel.replace(os.sep, "/"))
+                    keys.append(key_root + rel.replace(os.sep, "/"))
             state["listing"] = "\n".join(f"2026-09-29 00:00:00 100 {key}" for key in keys)
 
     monkeypatch.setattr(up, "aws_s3_ls", fake_ls)
@@ -194,9 +197,9 @@ def test_upload_refuses_when_the_object_count_does_not_match_what_was_staged(tmp
     monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
     monkeypatch.setattr(up, "git_info", lambda: (None, None))
     # Only one key reported back, but 3 files were staged (schema + rdf + _provenance.ttl).
-    calls = _rig_aws(monkeypatch, recursive_listing="2026-09-15 00:00:00 10 data/schema/mc2_model.ttl")
+    calls = _rig_aws(monkeypatch, recursive_listing="2026-09-15 00:00:00 10 cckp/2026-09-15/data/schema/mc2_model.ttl")
 
-    with pytest.raises(SystemExit, match="holds 1 objects, expected 3"):
+    with pytest.raises(SystemExit, match="doesn't match what was staged"):
         up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
 
     assert not any(call[0] == "run" and call[1][0] == "cp" for call in calls)
@@ -275,5 +278,78 @@ def test_aws_s3_ls_raises_on_a_real_failure(monkeypatch):
     import subprocess
     monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(
         a[0], 255, "", "An error occurred (AccessDenied)"))
+    with pytest.raises(subprocess.CalledProcessError):
+        up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1")
+
+
+def test_upload_void_triples_counts_distinct_triples_across_overlapping_files(tmp_path, monkeypatch):
+    # cckp_kg_full.ttl already merges the schema, so a schema triple appears
+    # in two files - Neptune stores it once, and void:triples must too.
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH, content=MINIMAL_TURTLE + "<urn:a> <urn:b> <urn:c> .\n")
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    _rig_aws(monkeypatch)
+
+    up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+
+    g = rdflib.Graph()
+    g.parse(tmp_path / "manifest.ttl", format="turtle")
+    assert next(g.objects(None, VOID.triples)) == rdflib.Literal(2, datatype=rdflib.XSD.integer)
+
+
+@pytest.mark.parametrize("bad_date", ["2026-9-15", "20260915", "2026-02-30", "latest"])
+def test_upload_refuses_a_malformed_date_before_touching_s3(tmp_path, monkeypatch, bad_date):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    calls = _rig_aws(monkeypatch)
+
+    with pytest.raises(SystemExit, match="YYYY-MM-DD"):
+        up.upload("some-bucket", "cckp", "us-east-1", date=bad_date, tmp_root=str(tmp_path))
+    assert calls == []
+
+
+def test_upload_refuses_a_stray_ttl_that_balances_a_missing_staged_file(tmp_path, monkeypatch):
+    # Same object count as staged, but one expected key is missing and an
+    # unexpected .ttl took its place - a count-only check would pass this.
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    listing = "\n".join(f"2026-09-15 00:00:00 10 cckp/2026-09-15/data/{key}" for key in
+                        ["schema/mc2_model.ttl", "rdf/cckp_kg_full.ttl", "rdf/stale_from_last_run.ttl"])
+    calls = _rig_aws(monkeypatch, recursive_listing=listing)
+
+    with pytest.raises(SystemExit, match="unexpected: \\['cckp/2026-09-15/data/rdf/stale_from_last_run.ttl'\\]"):
+        up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+    assert not any(call[0] == "run" and call[1][0] == "cp" for call in calls)
+
+
+def test_dry_run_clears_files_left_by_an_earlier_dry_run(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    mirror = tmp_path / "mirror"
+    stale = mirror / "cckp" / "2026-09-15" / "data" / "rdf" / "dropped_since.ttl"
+    _write(str(stale))
+
+    up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path),
+              dry_run_dir=str(mirror))
+
+    assert not stale.exists()
+    assert (mirror / "cckp" / "2026-09-15" / "data" / "rdf" / "cckp_kg_full.ttl").exists()
+
+
+def test_aws_s3_ls_raises_on_exit_1_with_an_error_message(monkeypatch):
+    # Exit 1 alone means "nothing under the prefix"; exit 1 *with* stderr
+    # is a real failure and must not read as a free date.
+    import subprocess
+    monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(
+        a[0], 1, "", "Could not connect to the endpoint URL"))
     with pytest.raises(subprocess.CalledProcessError):
         up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1")
