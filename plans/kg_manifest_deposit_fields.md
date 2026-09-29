@@ -276,7 +276,38 @@ byte-identical.
   manifest reports `void:triples 396485`, and an rdflib sum over the
   mirrored `data/**/*.ttl` (excluding `_provenance.ttl`) is also 396,485.
   `void:dataDump` ends in `/data/`, and the snapshot date is `2026-09-29`.
-- `void:triples` sums the triples in each file, as nf's verify step does.
-  Neptune stores RDF as a set, so triples that appear in two files (for
-  example, schema triples also merged into `cckp_kg_full.ttl`) are stored
-  once. The loaded count can therefore be lower than the manifest's.
+- The first version of `void:triples` summed per-file counts, as nf's
+  verify step does. That overcounts here, because `cckp_kg_full.ttl`
+  already merges `mc2_model.ttl` and `cckp_portal.ttl`. The pre-PR review
+  changed it to count distinct triples across the deposited files; see
+  that section below.
+
+### Pre-PR review fixes (2026-09-29)
+The review found no path that uploads `manifest.ttl` without passing every
+guard, and found that `sync --delete` is always scoped to `{prefix}/data/`.
+Its findings and what was done:
+
+1. **Medium: `void:triples` double-counted.** The schema files are also
+   merged into `cckp_kg_full.ttl`. It now counts distinct triples across
+   the deposited files, which is what Neptune stores. The dry run gives
+   363,253; the per-file sum was 396,485. An independent rdflib union
+   agrees.
+2. **Medium: `--date` wasn't validated.** Anything that isn't a real
+   YYYY-MM-DD date is now refused before any S3 call.
+3. **Low: the docs called `SAGEBRAIN_BUCKET` required, but it defaults to
+   the prod bucket.** The default is deliberate, from an earlier commit
+   that added "default SAGEBRAIN_BUCKET". The docstring, CLI help,
+   Makefile, README and CLAUDE.md now say it deposits to prod by default.
+   Also added `UPLOAD_ARGS` to `make upload-sagebrain-s3`, so
+   `--allow-overwrite`, `--date` and `--dry-run` can be passed through make.
+4. **Low: the post-sync check compared only suffixes and the count.** It
+   now compares exact keys against the staged set.
+5. **Low: dry runs left files from earlier runs in the mirror.** The
+   mirror directory is now cleared first.
+6. **Low: exit 1 with stderr had no test.** It still fails safe, and a
+   test now covers it.
+
+The test fake for `aws s3 ls --recursive` returned keys relative to the
+sync source. The real CLI returns bucket-relative keys
+(`<portal>/<date>/data/...`), so the fake was changed to match. 184 tests
+pass.

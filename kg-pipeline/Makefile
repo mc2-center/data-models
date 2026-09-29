@@ -280,18 +280,17 @@ deploy-kg:
 # Local equivalent of nf-osi/kg-pipeline's upload-sagebrain-s3.yml: publish
 # schema/*.ttl + data/rdf/cckp_kg_full.ttl (+ manifest.ttl trigger) to the
 # SageBrain Neptune S3 bucket, using whatever AWS credentials your shell
-# already has configured - no CI/OIDC involved. Requires SAGEBRAIN_BUCKET
-# (no default - see scripts/upload_sagebrain_s3.py's docstring) and the
-# `aws` CLI on PATH. Own opt-in target, not part of `all`/`full-kg`/
+# already has configured - no CI/OIDC involved. Deposits to the prod bucket
+# unless SAGEBRAIN_BUCKET overrides it, and needs the `aws` CLI on PATH. Own opt-in target, not part of `all`/`full-kg`/
 # `deploy-kg` - a separate publish destination, same as publish-portal-kg
 # and deploy-kg are separate from each other.
 #
 # Refuses to replace an existing snapshot for today's date unless passed
-# --allow-overwrite (edit this target's command, or call the script
-# directly for that flag); a sync --delete then replaces the whole load
+# --allow-overwrite (`make upload-sagebrain-s3 UPLOAD_ARGS=--allow-overwrite`;
+# UPLOAD_ARGS also takes --date/--dry-run); a sync --delete then replaces the whole load
 # path in one go rather than adding files on top of a stale deposit.
 upload-sagebrain-s3:
-	$(PYTHON) scripts/upload_sagebrain_s3.py
+	$(PYTHON) scripts/upload_sagebrain_s3.py $(UPLOAD_ARGS)
 
 test:
 	pytest test/
