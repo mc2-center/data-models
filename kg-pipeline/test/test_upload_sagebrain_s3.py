@@ -1,14 +1,62 @@
 import os
 
 import pytest
+import rdflib
 
+import build_manifest
 import upload_sagebrain_s3 as up
 
+CCKP = build_manifest.CCKP
+VOID = rdflib.Namespace("http://rdfs.org/ns/void#")
 
-def _write(path, content="# fake turtle\n"):
+# One real triple - not a comment-only placeholder. count_triples() now
+# parses every file it's about to place under data/ and refuses one that
+# parses to zero triples, so a fixture has to actually carry a triple to
+# stand in for a built schema/graph file.
+MINIMAL_TURTLE = "<urn:example:s> <urn:example:p> <urn:example:o> .\n"
+
+
+def _write(path, content=MINIMAL_TURTLE):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w") as f:
         f.write(content)
+
+
+def _rig_aws(monkeypatch, occupied=False, recursive_listing=None):
+    """Fake aws_s3_ls/run_aws that never shell out for real, recording
+    every call (in order) as (kind, ...) tuples for assertions.
+
+    `occupied` controls the non-recursive `ls {prefix}/` guard-1 check.
+    `run_aws("sync", ...)` walks its real local source directory (still on
+    disk at call time, inside upload()'s own tempfile.TemporaryDirectory
+    block) and remembers that file list, so the guard-3 `ls --recursive`
+    call reports back exactly what was "uploaded" - unless
+    `recursive_listing` is given to simulate a corrupted/stray load path
+    instead.
+    """
+    calls = []
+    state = {"listing": ""}
+
+    def fake_ls(prefix, region, recursive=False):
+        calls.append(("ls", recursive, prefix))
+        if recursive:
+            return recursive_listing if recursive_listing is not None else state["listing"]
+        return "PRE data/\n" if occupied else ""
+
+    def fake_run(*args, region):
+        calls.append(("run", args))
+        if args[0] == "sync":
+            src_dir = args[1].rstrip("/")
+            keys = []
+            for root, _, files in os.walk(src_dir):
+                for name in files:
+                    rel = os.path.relpath(os.path.join(root, name), src_dir)
+                    keys.append(rel.replace(os.sep, "/"))
+            state["listing"] = "\n".join(f"2026-09-29 00:00:00 100 {key}" for key in keys)
+
+    monkeypatch.setattr(up, "aws_s3_ls", fake_ls)
+    monkeypatch.setattr(up, "run_aws", fake_run)
+    return calls
 
 
 def test_upload_refuses_when_full_kg_missing(tmp_path, monkeypatch):
@@ -33,27 +81,87 @@ def test_upload_refuses_when_aws_cli_missing(tmp_path, monkeypatch):
         up.upload("some-bucket", "cckp", "us-east-1")
 
 
-def test_upload_uploads_schema_rdf_provenance_then_manifest_last(tmp_path, monkeypatch):
+def test_upload_refuses_when_a_data_file_parses_to_zero_triples(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl", content="# just a comment, no triples\n")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    _rig_aws(monkeypatch)
+    with pytest.raises(SystemExit, match="parsed to zero triples"):
+        up.upload("some-bucket", "cckp", "us-east-1")
+
+
+def test_upload_refuses_when_the_date_is_already_occupied(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    calls = _rig_aws(monkeypatch, occupied=True)
+    with pytest.raises(SystemExit, match="already holds a snapshot"):
+        up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+    # Refused before ever staging/syncing anything.
+    assert not any(call[0] == "run" for call in calls)
+
+
+def test_upload_allow_overwrite_proceeds_despite_an_occupied_date(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    calls = _rig_aws(monkeypatch, occupied=True)
+
+    prefix = up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path),
+                        allow_overwrite=True)
+
+    assert prefix == "s3://some-bucket/cckp/2026-09-15"
+    # The occupied-date ls is skipped entirely when overwriting is allowed.
+    assert not any(call[0] == "ls" and call[1] is False for call in calls)
+    assert any(call[0] == "run" and call[1][0] == "cp" for call in calls)
+
+
+def test_upload_dry_run_proceeds_regardless_of_an_occupied_date(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    calls = _rig_aws(monkeypatch, occupied=True)
+
+    dry_run_dir = tmp_path / "mirror"
+    prefix = up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path),
+                        dry_run_dir=str(dry_run_dir))
+
+    assert prefix == "s3://some-bucket/cckp/2026-09-15"
+    assert calls == []  # dry run never calls aws at all, occupied or not
+
+
+def test_upload_sync_targets_data_with_delete_then_cp_uploads_manifest_last(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     _write(up.FULL_KG_PATH)
     _write("schema/mc2_model.ttl")
     _write("schema/cckp_portal.ttl")
     monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
     monkeypatch.setattr(up, "git_info", lambda: (None, None))
-
-    calls = []
-    monkeypatch.setattr(up.subprocess, "run", lambda cmd, check: calls.append(cmd))
+    calls = _rig_aws(monkeypatch)
 
     prefix = up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
 
     assert prefix == "s3://some-bucket/cckp/2026-09-15"
-    # cmd shape: ["aws", "s3", "cp", src, dst, "--region", region]
-    dests = [cmd[4] for cmd in calls]
-    assert dests[0] == f"{prefix}/data/schema/cckp_portal.ttl"
-    assert dests[1] == f"{prefix}/data/schema/mc2_model.ttl"
-    assert dests[2] == f"{prefix}/data/rdf/cckp_kg_full.ttl"
-    assert dests[3] == f"{prefix}/data/_provenance.ttl"
-    assert dests[-1] == f"{prefix}/manifest.ttl"  # sentinel uploaded last
+    kinds = [call[0] for call in calls]
+    # Call order: occupied-date ls, sync, post-sync ls --recursive, then cp
+    # manifest.ttl last - matching nf-osi's own deposit-sagebrain.yml order.
+    assert kinds == ["ls", "run", "ls", "run"]
+    assert calls[0] == ("ls", False, f"{prefix}/")
+    sync_call = calls[1][1]
+    assert sync_call[0] == "sync"
+    assert sync_call[1].endswith(os.sep + "data" + os.sep) or sync_call[1].endswith("/data/")
+    assert sync_call[2] == f"{prefix}/data/"
+    assert "--delete" in sync_call
+    assert calls[2] == ("ls", True, f"{prefix}/data/")
+    cp_call = calls[3][1]
+    assert cp_call[0] == "cp"
+    assert cp_call[2] == f"{prefix}/manifest.ttl"
 
     assert os.path.isfile(tmp_path / "manifest.ttl")
     assert os.path.isfile(tmp_path / "_provenance.ttl")
@@ -62,7 +170,69 @@ def test_upload_uploads_schema_rdf_provenance_then_manifest_last(tmp_path, monke
     with open(tmp_path / "_provenance.ttl") as f:
         provenance_content = f.read()
     assert manifest_content == provenance_content
-    assert f"{prefix}/" in manifest_content  # void:dataDump points at this build's prefix
+    assert f"{prefix}/data/" in manifest_content  # void:dataDump points at the load path, not the bare prefix
+
+
+def test_upload_refuses_when_load_path_has_a_stray_non_ttl_key_and_never_uploads_manifest(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    calls = _rig_aws(monkeypatch, recursive_listing="2026-09-15 00:00:00 10 data/schema/README.md")
+
+    with pytest.raises(SystemExit, match="non-Turtle objects"):
+        up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+
+    assert not any(call[0] == "run" and call[1][0] == "cp" for call in calls)
+
+
+def test_upload_refuses_when_the_object_count_does_not_match_what_was_staged(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    # Only one key reported back, but 3 files were staged (schema + rdf + _provenance.ttl).
+    calls = _rig_aws(monkeypatch, recursive_listing="2026-09-15 00:00:00 10 data/schema/mc2_model.ttl")
+
+    with pytest.raises(SystemExit, match="holds 1 objects, expected 3"):
+        up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+
+    assert not any(call[0] == "run" and call[1][0] == "cp" for call in calls)
+
+
+def test_upload_refuses_when_the_load_path_is_empty_after_the_sync(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH)
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    calls = _rig_aws(monkeypatch, recursive_listing="")
+
+    with pytest.raises(SystemExit, match="is empty after the upload"):
+        up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+
+    assert not any(call[0] == "run" and call[1][0] == "cp" for call in calls)
+
+
+def test_upload_manifest_triple_count_matches_the_placed_data_files(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    _write(up.FULL_KG_PATH, content="<urn:a> <urn:b> <urn:c> .\n<urn:a> <urn:b> <urn:d> .\n")
+    _write("schema/mc2_model.ttl")
+    monkeypatch.setattr(up.shutil, "which", lambda _: "/usr/bin/aws")
+    monkeypatch.setattr(up, "git_info", lambda: (None, None))
+    _rig_aws(monkeypatch)
+
+    up.upload("some-bucket", "cckp", "us-east-1", date="2026-09-15", tmp_root=str(tmp_path))
+
+    g = rdflib.Graph()
+    g.parse(tmp_path / "manifest.ttl", format="turtle")
+    activity = next(g.subjects(rdflib.RDF.type, VOID.Dataset))
+    # 1 triple in schema/mc2_model.ttl + 2 in cckp_kg_full.ttl = 3.
+    assert (activity, VOID.triples, rdflib.Literal(3, datatype=rdflib.XSD.integer)) in g
+    assert (activity, CCKP.snapshotDate, rdflib.Literal("2026-09-15", datatype=rdflib.XSD.date)) in g
+    assert next(g.objects(activity, CCKP.depositedAtTime), None) is not None
 
 
 def test_dry_run_mirrors_the_upload_layout_locally_without_aws(tmp_path, monkeypatch):
@@ -87,3 +257,23 @@ def test_dry_run_mirrors_the_upload_layout_locally_without_aws(tmp_path, monkeyp
     assert (mirrored / "data" / "rdf" / "cckp_kg_full.ttl").is_file()
     assert (mirrored / "data" / "_provenance.ttl").is_file()
     assert (mirrored / "manifest.ttl").is_file()
+
+
+@pytest.mark.parametrize("returncode, stdout, stderr, expected", [
+    (0, "PRE data/\n", "", "PRE data/\n"),
+    # `aws s3 ls` on a prefix with no objects exits 1 and prints nothing -
+    # that must read as "date is free", not crash the first deposit.
+    (1, "", "", ""),
+])
+def test_aws_s3_ls_treats_an_empty_prefix_as_empty_not_an_error(monkeypatch, returncode, stdout, stderr, expected):
+    import subprocess
+    monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(a[0], returncode, stdout, stderr))
+    assert up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1") == expected
+
+
+def test_aws_s3_ls_raises_on_a_real_failure(monkeypatch):
+    import subprocess
+    monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(
+        a[0], 255, "", "An error occurred (AccessDenied)"))
+    with pytest.raises(subprocess.CalledProcessError):
+        up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1")
