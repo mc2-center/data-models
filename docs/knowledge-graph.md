@@ -162,7 +162,7 @@ flowchart LR
 | **SCDM federation** | Institution/consortium/investigator links to cross-portal `sagecdm:Organization`/`Program`/`Person` | `make link-scdm` (`scripts/link_scdm.py`) | `data/rdf/scdm_links.ttl`, folded into `make full-kg` |
 | **Ontology-crosswalk federation** | The same tumor-type/tissue concept, also anchored in MONDO/UBERON, for federated queries against a sagebrain-anchored graph | `make link-ontology-crosswalk` (`scripts/link_ontology_crosswalk.py`), gated on human-reviewed crosswalk rows | `data/rdf/ontology_crosswalk_links.ttl`, folded into `make full-kg` |
 | **MC2 assay-metadata KG** (access-controlled) | Biospecimen/Individual/Model-level facts about the files inside a Dataset, linked into sagebrain-model's own classes | separate `make extract-mc2-assay`/`triples-mc2-assay`/`link-sagebrain` targets, never part of `make all` | `data/mc2_assay/rdf/mc2_assay_kg.ttl`, `sagebrain_links.ttl` — gitignored, private Synapse staging only |
-| **Manifest** | What commit/build produced a given graph, and where it was published | `make manifest` (`scripts/build_manifest.py`), folded into `make full-kg` | `data/rdf/manifest.ttl` |
+| **Manifest** | What commit/build produced a given graph, and where it was published — plus, for a SageBrain deposit, its triple count, snapshot date and deposit time | `make manifest` (`scripts/build_manifest.py`), folded into `make full-kg`; `scripts/upload_sagebrain_s3.py` adds the deposit-time fields | `data/rdf/manifest.ttl` |
 
 Several of these are separate files on purpose, not a missed merge step:
 `data/rdf/` is deliberately several files, not one, because they're
@@ -494,9 +494,24 @@ running those scripts directly against real Synapse needs credentials).
   `schema/*.ttl` + `cckp_kg_full.ttl` + `manifest.ttl` (written twice — once
   as the top-level trigger sentinel, once as `data/_provenance.ttl` so its
   own PROV/VOID triples land in the graph) to a portal-scoped,
-  date-partitioned prefix in the SageBrain Neptune S3 bucket. No CI/OIDC —
-  whatever AWS credentials the shell already has; `--dry-run` mirrors the
-  same layout locally with no bucket or credentials needed.
+  date-partitioned prefix in the SageBrain Neptune S3 bucket. Before
+  uploading, it parses every file about to land under `data/` with rdflib
+  and counts its triples, refusing the deposit if any file parses to zero
+  triples; this manifest carries the number of distinct triples across
+  those files (`void:triples`, what Neptune holds once loaded), the snapshot
+  date (`cckp:snapshotDate`) and the deposit time (`cckp:depositedAtTime`)
+  in addition to the build-time fields every manifest has, and its
+  `void:dataDump` points at `{prefix}/data/`, the actual load path. It
+  refuses to touch a date that already holds a snapshot unless
+  `--allow-overwrite` is given (`make upload-sagebrain-s3
+  UPLOAD_ARGS=--allow-overwrite`), then replaces the entire `data/` load path
+  in one unfiltered `aws s3 sync --delete` (rather than adding files on
+  top of a stale deposit) and checks the result is Turtle-only — every
+  key ends in `.ttl` and the object count matches what was staged — before
+  uploading `manifest.ttl` as the trigger sentinel. No CI/OIDC — whatever
+  AWS credentials the shell already has; `--dry-run` mirrors the same
+  layout locally with no bucket or credentials needed, and skips the
+  occupied-date check entirely.
 - **`make publish-mc2-assay`** (`--profile mc2-assay`) — the access-controlled
   tree's own staging path (`syn76957723`). Before every upload it resolves
   the target's *effective* ACL (its own, or its nearest ACL-owning

@@ -18,7 +18,18 @@ callers pass two different kinds of dump location, both valid IRIs:
 publishes to (SYNAPSE_NS in build_triples.py - same canonical-IRI policy
 used for instance data, not a second identifier minted for this file
 either); scripts/upload_sagebrain_s3.py passes the date-partitioned S3
-prefix it just uploaded to instead.
+prefix it just uploaded to instead, plus three deposit-time fields that
+only a real deposit has: a triple count, a snapshot date, and a deposit
+timestamp (`void:triples`/`cckp:snapshotDate`/`cckp:depositedAtTime` -
+see build_manifest()'s own docstring).
+
+Deliberately absent, even for the SageBrain deposit path: nf-osi/kg-pipeline's
+`buildRunId`, `depositRunId`, `wasAssociatedWith` and `depositedBy` all name
+a GitHub Actions run that built or deposited the graph. This pipeline's
+deposit is a local script invocation (`upload_sagebrain_s3.py`, run by
+hand or from a local `make upload-sagebrain-s3`), not a CI job, so there is
+no such run to point at - inventing one would be a fake provenance claim,
+so these fields are left out rather than filled with a placeholder.
 
 Usage:
     python scripts/build_manifest.py [--data-dump IRI] [--portal NAME] [--out data/rdf/manifest.ttl]
@@ -60,10 +71,24 @@ def git_info(cwd=None):
 
 
 def build_manifest(data_dump, build_time=None, portal=DEFAULT_PORTAL, repo_url=DEFAULT_REPO_URL,
-                    commit_sha=None, branch=None):
+                    commit_sha=None, branch=None, triples=None, snapshot_date=None, deposited_at=None):
     """Pure builder - commit_sha/branch are taken as given (including both
     None for "no git metadata available"), never auto-detected here. See
-    main() below for the CLI's own git_info() call."""
+    main() below for the CLI's own git_info() call.
+
+    triples/snapshot_date/deposited_at are optional and each emitted only
+    when given - they mirror nf-osi/kg-pipeline's deposit-time fields
+    (void:triples, nf:snapshotDate, nf:depositedAtTime) in this pipeline's
+    own cckp: namespace, the same way cckp:gitCommit/cckp:gitRef mirror
+    nf:gitCommit/nf:gitRef. `make manifest`, the build-only local manifest,
+    never has a triple count or deposit time to pass and leaves them out;
+    only scripts/upload_sagebrain_s3.py supplies them, after it has counted
+    the files it's about to place under data/ and is about to deposit them.
+
+    Deliberately NOT mirrored here (see this module's docstring): nf's
+    buildRunId, depositRunId, wasAssociatedWith and depositedBy all name a
+    GitHub Actions run, and this pipeline's deposit is a local script
+    invocation with no such run to point at."""
     build_time = build_time or datetime.now(timezone.utc)
 
     g = rdflib.Graph()
@@ -83,6 +108,12 @@ def build_manifest(data_dump, build_time=None, portal=DEFAULT_PORTAL, repo_url=D
         g.add((activity, PROV.used, rdflib.URIRef(f"{repo_url}/commit/{commit_sha}")))
     if branch:
         g.add((activity, CCKP.gitRef, rdflib.Literal(branch)))
+    if snapshot_date:
+        g.add((activity, CCKP.snapshotDate, rdflib.Literal(snapshot_date, datatype=XSD.date)))
+    if deposited_at:
+        g.add((activity, CCKP.depositedAtTime, rdflib.Literal(deposited_at.isoformat(), datatype=XSD.dateTime)))
+    if triples is not None:
+        g.add((activity, VOID.triples, rdflib.Literal(triples, datatype=XSD.integer)))
     g.add((activity, VOID.dataDump, rdflib.URIRef(data_dump)))
     return g
 

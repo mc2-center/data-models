@@ -42,7 +42,7 @@ make schema               # regenerate schema/*.ttl from schema/*.linkml.yaml
 make all                  # schema + extract (needs Synapse credentials) + harmonize + triples + validate
 make full-kg              # combined-kg + SCDM/ontology-crosswalk federation -> data/rdf/cckp_kg_full.ttl
 make deploy-kg            # upload cckp_kg_full.ttl + manifest.ttl -> its Synapse distribution folder
-make upload-sagebrain-s3  # local equivalent of nf-osi/kg-pipeline's Neptune S3 upload (needs SAGEBRAIN_BUCKET + aws CLI)
+make upload-sagebrain-s3  # local equivalent of nf-osi/kg-pipeline's Neptune S3 upload (prod bucket by default, SAGEBRAIN_BUCKET overrides; needs aws CLI)
 make test                 # pytest test/ - no live Synapse access needed
 ```
 
@@ -72,7 +72,7 @@ Each domain lives in `modules/<domain>/`:
 - **Stage 5**: SHACL shape validation + `queries/*.rq` sanity checks
 - **Stage 6**: `manifest.ttl` - a small PROV/VOID statement about the build (git commit, timestamp, where the graph was published), used as a lightweight trigger file by a downstream Neptune auto-loader instead of polling the much larger merged graph
 - Optional stages: Data Catalog annotations, SCDM (Sage Common Data Model) federation, MC2 assay-metadata KG (access-controlled, linked into `sagebrain-model`)
-- Publish paths: Synapse (`make publish-portal-kg`, `make deploy-kg`) and a local-runnable SageBrain Neptune S3 upload (`make upload-sagebrain-s3`, needs `SAGEBRAIN_BUCKET` + the `aws` CLI - no CI/OIDC; `--dry-run` mirrors the upload locally without either)
+- Publish paths: Synapse (`make publish-portal-kg`, `make deploy-kg`) and a local-runnable SageBrain Neptune S3 upload (`make upload-sagebrain-s3`, deposits to the prod bucket unless `SAGEBRAIN_BUCKET` overrides it, needs the `aws` CLI - no CI/OIDC; `--dry-run` mirrors the upload locally without either)
 
 Instance IRIs use Synapse's own canonical form (`https://www.synapse.org/Synapse:synNNN...`) for any row with a real Synapse entity id, rather than minting a second identifier - see `mint_iri()` in `scripts/build_triples.py`. Everything else keeps the placeholder `w3id.org/mc2-center/cckp-portal/data/{Class}/{id}` namespace.
 
@@ -85,8 +85,9 @@ PRs to main must have exactly one semantic label: `major`, `minor`, `patch`, or 
 | Workflow | Trigger | What it does |
 |----------|---------|--------------|
 | `build-docs.yml` | Push to main | Builds MkDocs site → GitHub Pages |
+| `docs-check.yml` | PR events | Runs `mkdocs build --strict` (no deploy) |
 | `pr-check.yml` | PR events | Validates semantic label |
 | `google-sheet-sync.yml` | Scheduled/manual | Syncs RFC Google Sheets to a CSV branch |
 | `create-release.yml` | Manual trigger | Creates GitHub release with version bump |
 
-No CI currently validates `make all` (root model) or `kg-pipeline/`'s build/tests on PRs (the old `build-jsonld.yml` was removed as obsolete; nothing replaced it) - run them locally before pushing model or kg-pipeline changes.
+No CI currently validates `make all` (root model) or `kg-pipeline/`'s build/tests on PRs (the old `build-jsonld.yml` was removed as obsolete; nothing replaced it) - run them locally before pushing model or kg-pipeline changes. `docs-check.yml` covers the docs site build itself.
