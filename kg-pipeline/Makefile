@@ -163,6 +163,12 @@ link-ontology-crosswalk:
 # shared its harmonize run - hence the separate --out-dir below (same reason
 # harmonize-mc2-assay uses its own data/mc2_assay/harmonized/, just staying
 # in the public data/ tree here since this data is public, unlike mc2_assay).
+# Its SSSOM output gets its own mappings/sssom/datacatalog/ for the same
+# reason: several of its enums share a file name with the portal pass's
+# (species.sssom.tsv), and a shared directory let whichever pass ran last
+# overwrite the other's mappings. harmonize-mc2-assay writes to the
+# gitignored data/mc2_assay/sssom/, since its rows record which values
+# occur in access-controlled data.
 
 extract-datacatalog:
 	$(PYTHON) scripts/extract_datacatalog.py --out-dir data/raw --data-sources data_sources.yaml
@@ -171,7 +177,7 @@ harmonize-datacatalog:
 	$(PYTHON) scripts/harmonize.py \
 		--schema schema/mc2_model.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
-		--raw-dir data/raw --out-dir data/harmonized/datacatalog --sssom-dir mappings/sssom \
+		--raw-dir data/raw --out-dir data/harmonized/datacatalog --sssom-dir mappings/sssom/datacatalog \
 		--classes "DataCatalog"
 
 triples-datacatalog:
@@ -326,7 +332,7 @@ harmonize-mc2-assay:
 	$(PYTHON) scripts/harmonize.py \
 		--schema schema/mc2_model.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
-		--raw-dir data/mc2_assay/raw --out-dir data/mc2_assay/harmonized --sssom-dir mappings/sssom \
+		--raw-dir data/mc2_assay/raw --out-dir data/mc2_assay/harmonized --sssom-dir data/mc2_assay/sssom \
 		--classes $(MC2_ASSAY_CLASSES)
 
 triples-mc2-assay:

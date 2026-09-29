@@ -5,4 +5,3 @@
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 subject_id	subject_label	predicate_id	object_id	mapping_justification
 CC BY-NC 3.0	CC BY-NC 3.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-NC-3.0.html	semapv:ManualMappingCuration
-CC-BY 4.0	CC-BY 4.0	skos:exactMatch	https://spdx.org/licenses/CC-BY-4.0.html	semapv:ManualMappingCuration

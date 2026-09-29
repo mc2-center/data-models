@@ -278,7 +278,11 @@ kg-pipeline/
                                 source + VENDORED.md (see "Additional
                                 pipeline stages" above)
     sagecdm.ttl               - generated via `make sagecdm-schema`
-  mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed)
+  mappings/sssom/*.sssom.tsv - harmonization crosswalks (generated, committed) from
+                                `make harmonize`; `make harmonize-datacatalog` writes its own
+                                to mappings/sssom/datacatalog/ so same-named enums (species)
+                                don't overwrite each other. `make harmonize-mc2-assay` writes
+                                to the gitignored data/mc2_assay/sssom/ (access-controlled source).
   mappings/crosswalks/*.sssom.tsv - supplementary MONDO/UBERON federation
                                 crosswalks (generated, committed, never
                                 consumed by harmonize.py). Ships a `reviewed`

@@ -397,7 +397,10 @@ nothing in its CV — passed through unresolved, never dropped) and
 Url` isn't a valid CURIE/URL — treated as "no mapping," not a fake IRI).
 Every value that *did* resolve is also written to a standard SSSOM file,
 `mappings/sssom/{enum}.sssom.tsv` — a reviewable, portable byproduct of the
-join against the CVs, not the primary curation artifact.
+join against the CVs, not the primary curation artifact. The DataCatalog
+pass writes its own to `mappings/sssom/datacatalog/`, and the
+access-controlled MC2 assay pass to the gitignored `data/mc2_assay/sssom/`,
+so passes that share an enum name never overwrite each other's mappings.
 
 A coverage gate, not a fixed threshold: `make validate` compares each
 field's unmapped-value count against a checked-in ratchet baseline
