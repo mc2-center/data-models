@@ -177,7 +177,7 @@ harmonize-datacatalog:
 	$(PYTHON) scripts/harmonize.py \
 		--schema schema/mc2_model.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
-		--raw-dir data/raw --out-dir data/harmonized/datacatalog --sssom-dir mappings/sssom/datacatalog \
+		--raw-dir data/raw --out-dir data/harmonized/datacatalog --sssom-dir mappings/sssom/datacatalog --sssom-set-id-prefix datacatalog/ \
 		--classes "DataCatalog"
 
 triples-datacatalog:
@@ -332,7 +332,7 @@ harmonize-mc2-assay:
 	$(PYTHON) scripts/harmonize.py \
 		--schema schema/mc2_model.linkml.yaml \
 		--mapping $(MAPPING) --modules-dir $(MODULES_DIR) \
-		--raw-dir data/mc2_assay/raw --out-dir data/mc2_assay/harmonized --sssom-dir data/mc2_assay/sssom \
+		--raw-dir data/mc2_assay/raw --out-dir data/mc2_assay/harmonized --sssom-dir data/mc2_assay/sssom --sssom-set-id-prefix mc2-assay/ \
 		--classes $(MC2_ASSAY_CLASSES)
 
 triples-mc2-assay:

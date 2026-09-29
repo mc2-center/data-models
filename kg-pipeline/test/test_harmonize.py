@@ -62,3 +62,15 @@ def test_grant_consortium_has_no_mc2_enum_and_passes_through_untracked(harmonize
 
     unmapped = harmonized_dir["unmapped_rows"]
     assert not any(r["table"] == "Grant" and r["field"] == "consortium" for r in unmapped)
+
+
+def test_write_sssom_namespaces_mapping_set_id_per_pass(tmp_path):
+    # Two passes writing a same-named enum file must not claim one
+    # mapping_set_id - SSSOM treats that id as globally unique.
+    import harmonize
+    rows = [("Human", "NCIT:C14225", "http://purl.obolibrary.org/obo/NCIT_C14225")]
+    portal = harmonize.write_sssom(str(tmp_path / "portal"), "Species Enum", rows)
+    catalog = harmonize.write_sssom(str(tmp_path / "dc"), "species Enum", rows, set_id_prefix="datacatalog/")
+    ids = [next(l for l in open(p) if l.startswith("# mapping_set_id:")).split(": ", 1)[1].strip() for p in (portal, catalog)]
+    assert ids == ["https://w3id.org/mc2-center/cckp-portal/mappings/species.sssom.tsv",
+                   "https://w3id.org/mc2-center/cckp-portal/mappings/datacatalog/species.sssom.tsv"]
