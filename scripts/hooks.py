@@ -90,6 +90,7 @@ ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
 NO_DESCRIPTION_PLACEHOLDER = "No description provided"
+NO_ONTOLOGY_PLACEHOLDER = "Not available"
 
 # table-reader's `data_path` is "modules" (mkdocs.yml), so cleaned CV copies
 # live under modules/ too - a single cache dir, keyed by source path, since
@@ -306,11 +307,12 @@ def generate_linked_table(model: str):
 
 def _ontology_link(row) -> str:
     """The term's Ontology Identifier as a link to its Ontology Url, the ID
-    alone if it has no URL, or blank if the term has no ontology mapping."""
+    alone if it has no URL, or NO_ONTOLOGY_PLACEHOLDER if the term has no
+    ontology mapping."""
     ident = (row.get("Ontology Identifier") or "").strip()
     url = (row.get("Ontology Url") or "").strip()
     if not ident:
-        return ""
+        return NO_ONTOLOGY_PLACEHOLDER
     if not url.startswith(("http://", "https://")):
         return html.escape(ident)
     return f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">{html.escape(ident)}</a>'
