@@ -1,9 +1,11 @@
 /* Wide or long tables scroll inside a box no taller than the window, so the
    horizontal scrollbar is always on screen instead of below the table's last
    row. Material wraps every content table in .md-typeset__scrollwrap. */
-.md-typeset__scrollwrap {
-  max-height: 75vh;
-  overflow: auto;
+@media screen {
+  .md-typeset__scrollwrap {
+    max-height: 75vh;
+    overflow: auto;
+  }
 }
 
 /* Keep the header row visible while scrolling down inside that box.
@@ -35,7 +37,21 @@
 .md-typeset__scrollwrap::-webkit-scrollbar-track {
   background-color: var(--md-default-fg-color--lightest);
 }
-.md-typeset__scrollwrap {
-  scrollbar-width: auto;
-  scrollbar-color: var(--md-default-fg-color--lighter) var(--md-default-fg-color--lightest);
+/* Standard properties only where ::-webkit-scrollbar is unsupported
+   (Firefox): since Chrome 121, a non-auto scrollbar-color makes Chrome ignore
+   the ::-webkit-scrollbar rules above, which are what keep macOS from hiding
+   the scrollbars. */
+@supports not selector(::-webkit-scrollbar) {
+  .md-typeset__scrollwrap {
+    scrollbar-width: auto;
+    scrollbar-color: var(--md-default-fg-color--lighter) var(--md-default-fg-color--lightest);
+  }
+}
+
+/* Print every row: the on-screen height cap would cut long tables off. */
+@media print {
+  .md-typeset__scrollwrap {
+    max-height: none;
+    overflow: visible;
+  }
 }
