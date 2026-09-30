@@ -3,6 +3,7 @@
 .Rapp.history
 
 venv/
+.venv-docs/
 
 # Session Data files
 .RData
