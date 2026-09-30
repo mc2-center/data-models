@@ -42,6 +42,12 @@ Data Models:
       - Visium RNA Level 2: model/visiumRNALevel2.md
       - Visium RNA Level 3: model/visiumRNALevel3.md
       - Visium RNA Level 4: model/visiumRNALevel4.md
-Knowledge Graph: knowledge-graph.md
+Knowledge Graph:
+  - knowledge-graph/index.md
+  - knowledge-graph/model.md
+  - knowledge-graph/build.md
+  - knowledge-graph/publishing.md
+  - knowledge-graph/querying.md
+  - knowledge-graph/federation.md
 Standard Terms: {}
 Contributing to the Data Model: contributing.md
