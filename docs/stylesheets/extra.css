@@ -6,7 +6,15 @@
   overflow: auto;
 }
 
-/* Keep the header row visible while scrolling down inside that box. */
+/* Keep the header row visible while scrolling down inside that box.
+   Material gives the table itself overflow:auto, which makes the table the
+   sticky header's scroll container - and the table never scrolls, so the
+   header would scroll away with it. Let the scroll box be the only
+   scrolling ancestor. */
+.md-typeset__scrollwrap .md-typeset__table,
+.md-typeset__scrollwrap table:not([class]) {
+  overflow: visible;
+}
 .md-typeset__scrollwrap thead th {
   position: sticky;
   top: 0;
