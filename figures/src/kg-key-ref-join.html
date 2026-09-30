@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="output" content="docs/assets/knowledge-graph/kg-key-ref-join.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e293b;
+    --arrow: #7b8794;
+    --float-text: #7b8794;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: transparent; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .figure {
+    position: relative;
+    width: 850px;
+    height: 260px;
+    margin: 20px;
+  }
+  .card {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 130px;
+    border-radius: 8px;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 22px;
+  }
+  .card h3 {
+    margin: 0 0 10px 0;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .card p {
+    margin: 0;
+    color: #cbd3de;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+  .arrow-label {
+    position: absolute;
+    top: 48px;
+    width: 220px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--float-text);
+  }
+  .note {
+    position: absolute;
+    top: 190px;
+    left: 0;
+    width: 850px;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--float-text);
+    text-align: center;
+  }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
+</style>
+</head>
+<body>
+  <div class="figure">
+    <svg width="800" height="260">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--arrow)" />
+        </marker>
+      </defs>
+      <line x1="300" y1="100" x2="516" y2="100" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+    </svg>
+
+    <div class="card" style="left:0px;">
+      <h3>Dataset</h3>
+      <p>grant number: CA209891</p>
+    </div>
+    <div class="arrow-label" style="left:290px; width:240px;">grant reference</div>
+    <div class="card" style="left:520px;">
+      <h3>Grant</h3>
+      <p>grant number: CA209891</p>
+    </div>
+
+    <div class="note">matched on the Grant's own number; unmatched values stay as text</div>
+  </div>
+</body>
+</html>
