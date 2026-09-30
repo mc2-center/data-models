@@ -1,0 +1,57 @@
+/* Wide or long tables scroll inside a box no taller than the window, so the
+   horizontal scrollbar is always on screen instead of below the table's last
+   row. Material wraps every content table in .md-typeset__scrollwrap. */
+@media screen {
+  .md-typeset__scrollwrap {
+    max-height: 75vh;
+    overflow: auto;
+  }
+}
+
+/* Keep the header row visible while scrolling down inside that box.
+   Material gives the table itself overflow:auto, which makes the table the
+   sticky header's scroll container - and the table never scrolls, so the
+   header would scroll away with it. Let the scroll box be the only
+   scrolling ancestor. */
+.md-typeset__scrollwrap .md-typeset__table,
+.md-typeset__scrollwrap table:not([class]) {
+  overflow: visible;
+}
+.md-typeset__scrollwrap thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--md-default-bg-color);
+}
+
+/* Always draw the scrollbars (macOS otherwise hides them until you scroll),
+   so it's obvious a table scrolls sideways. */
+.md-typeset__scrollwrap::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.md-typeset__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+}
+.md-typeset__scrollwrap::-webkit-scrollbar-track {
+  background-color: var(--md-default-fg-color--lightest);
+}
+/* Standard properties only where ::-webkit-scrollbar is unsupported
+   (Firefox): since Chrome 121, a non-auto scrollbar-color makes Chrome ignore
+   the ::-webkit-scrollbar rules above, which are what keep macOS from hiding
+   the scrollbars. */
+@supports not selector(::-webkit-scrollbar) {
+  .md-typeset__scrollwrap {
+    scrollbar-width: auto;
+    scrollbar-color: var(--md-default-fg-color--lighter) var(--md-default-fg-color--lightest);
+  }
+}
+
+/* Print every row: the on-screen height cap would cut long tables off. */
+@media print {
+  .md-typeset__scrollwrap {
+    max-height: none;
+    overflow: visible;
+  }
+}

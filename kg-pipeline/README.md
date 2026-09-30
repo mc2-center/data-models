@@ -14,7 +14,7 @@ hand-authored OWL ontology + RML/Java. See
 [`plans/kg_pipeline_architecture_decisions.md`](../plans/kg_pipeline_architecture_decisions.md)
 for the full design rationale, including why LinkML/rdflib/Makefile were
 chosen over nf-osi's Dagster + RML/Java stack, and
-[`../docs/knowledge-graph.md`](../docs/knowledge-graph.md) for the guide to
+[`../docs/knowledge-graph/index.md`](../docs/knowledge-graph/index.md) for the guide to
 what this pipeline builds and how its layers fit together.
 
 ## Architecture

@@ -1,3 +1,4 @@
+import html
 import json
 import os
 import re
@@ -89,6 +90,7 @@ ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
 NO_DESCRIPTION_PLACEHOLDER = "No description provided"
+NO_ONTOLOGY_PLACEHOLDER = "Not available"
 
 # table-reader's `data_path` is "modules" (mkdocs.yml), so cleaned CV copies
 # live under modules/ too - a single cache dir, keyed by source path, since
@@ -303,9 +305,24 @@ def generate_linked_table(model: str):
     table[COLS_TO_RENDER].to_csv(reference_file, index=False)
 
 
+def _ontology_link(row) -> str:
+    """The term's Ontology Identifier as a link to its Ontology Url, the ID
+    alone if it has no URL, or NO_ONTOLOGY_PLACEHOLDER if the term has no
+    ontology mapping."""
+    ident = (row.get("Ontology Identifier") or "").strip()
+    url = (row.get("Ontology Url") or "").strip()
+    if not ident:
+        return NO_ONTOLOGY_PLACEHOLDER
+    if not url.startswith(("http://", "https://")):
+        return html.escape(ident)
+    return f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">{html.escape(ident)}</a>'
+
+
 def _cleaned_valid_values_src(valid_values_src: str) -> str:
-    """Write a copy of a CV file with blank Description cells replaced by
-    NO_DESCRIPTION_PLACEHOLDER, and return the path (relative to modules/,
+    """Write the Standard Terms table for a CV file - Valid Value,
+    Description (blank cells replaced by NO_DESCRIPTION_PLACEHOLDER) and
+    Ontology (a link to the term's ontology entry, when it has one) - and
+    return the path (relative to modules/,
     the table-reader plugin's data_path) to use in place of the raw source.
 
     Without this, a blank Description cell reaches mkdocs-table-reader-
@@ -321,7 +338,14 @@ def _cleaned_valid_values_src(valid_values_src: str) -> str:
 
     df = pd.read_csv(join("modules", valid_values_src), quoting=1, dtype=str, keep_default_na=False)
     df["Description"] = df["Description"].apply(lambda d: d.strip() or NO_DESCRIPTION_PLACEHOLDER)
-    df.to_csv(cached_path, index=False)
+    # The page renders this as raw HTML (tablefmt='unsafehtml', so the
+    # Ontology links below aren't escaped), so escape every cell's text here.
+    out = pd.DataFrame({
+        "Valid Value": df["Attribute"].map(html.escape),
+        "Description": df["Description"].map(html.escape),
+        "Ontology": df.apply(_ontology_link, axis=1),
+    })
+    out.to_csv(cached_path, index=False)
 
     return join(".valid_values_cache", cached_name)
 
@@ -349,15 +373,15 @@ def generate_valid_values_markdown(model: str):
             valid_values_src = _cleaned_valid_values_src(attribute.get("src"))
 
             md.write(f"## Attribute: `{name}`\n\n")
-            md.write(
-                '<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">\n\n'
-            )
+            # The table's scroll box (height capped to the window, so both
+            # scrollbars stay reachable) comes from docs/stylesheets/extra.css.
+            # 'unsafehtml' so the Ontology column's links render; every
+            # cell is escaped in _cleaned_valid_values_src().
             md.write(
                 "{{ read_csv('"
                 + valid_values_src
-                + "', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], keep_default_na=False, tablefmt='html') }}\n\n"
+                + "', keep_default_na=False, tablefmt='unsafehtml') }}\n\n\n"
             )
-            md.write("</div>\n\n\n")
 
 
 # --- MkDocs event hooks ---

@@ -61,6 +61,9 @@ plugins:
 hooks:
   - scripts/hooks.py
 
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - pymdownx.details

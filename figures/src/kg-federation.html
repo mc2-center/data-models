@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="output" content="docs/assets/knowledge-graph/kg-federation.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e293b;
+    --gold: #c2a772;
+    --arrow: #7b8794;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: transparent; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .figure {
+    position: relative;
+    width: 1180px;
+    height: 250px;
+    margin: 20px;
+  }
+  .card {
+    position: absolute;
+    top: 20px;
+    width: 340px;
+    height: 130px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .card h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .card p {
+    margin: 0;
+    color: #cbd3de;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+  .id-node {
+    position: absolute;
+    top: 40px;
+    left: 440px;
+    width: 300px;
+    height: 90px;
+    border-radius: 45px;
+    background: var(--white);
+    border: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+  .chip {
+    position: absolute;
+    top: 160px;
+    left: 330px;
+    width: 520px;
+    text-align: center;
+  }
+  .chip span {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 20px;
+  }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
+</style>
+</head>
+<body>
+  <div class="figure">
+    <svg width="1180" height="250">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--arrow)" />
+        </marker>
+      </defs>
+      <line x1="340" y1="85" x2="436" y2="85" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="840" y1="85" x2="744" y2="85" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="590" y1="130" x2="590" y2="158" stroke="var(--arrow)" stroke-width="2.5" />
+    </svg>
+
+    <div class="card" style="left:0px;">
+      <h3>CCKP graph</h3>
+      <p>Dataset facts</p>
+    </div>
+    <div class="id-node">Shared Synapse ID</div>
+    <div class="card" style="left:840px;">
+      <h3>governanceDUO graph</h3>
+      <p>access facts</p>
+    </div>
+
+    <div class="chip"><span>Same ID, separate owners &mdash; CCKP never asserts governance types</span></div>
+  </div>
+</body>
+</html>

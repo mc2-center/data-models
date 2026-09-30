@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="output" content="docs/assets/knowledge-graph/kg-deposit-sequence.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e293b;
+    --orange: #f2994a;
+    --arrow: #7b8794;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: transparent; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .figure {
+    position: relative;
+    width: 1600px;
+    height: 230px;
+    margin: 20px;
+  }
+  .stage {
+    position: absolute;
+    top: 30px;
+    width: 230px;
+    height: 170px;
+    border-radius: 8px;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 14px;
+    border-top: 5px solid transparent;
+  }
+  .stage.guard {
+    border-top: 5px solid var(--orange);
+  }
+  .stage h3 {
+    margin: 0 0 10px 0;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .stage p {
+    margin: 0;
+    color: #cbd3de;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+  .guard-tag {
+    /* In the flow, not absolute: a tall description then pushes the whole
+       stack down together instead of pulling the title up into the tag. */
+    margin: 0 0 6px 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
+</style>
+</head>
+<body>
+  <div class="figure">
+    <svg width="1600" height="230">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--arrow)" />
+        </marker>
+      </defs>
+      <line x1="230" y1="115" x2="270" y2="115" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="500" y1="115" x2="540" y2="115" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="770" y1="115" x2="810" y2="115" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="1040" y1="115" x2="1080" y2="115" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="1310" y1="115" x2="1350" y2="115" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+    </svg>
+
+    <div class="stage guard" style="left:0px;">
+      <div class="guard-tag">guard</div>
+      <h3>Date is free?</h3>
+      <p>stops if the date already has a snapshot, unless overwrite is on</p>
+    </div>
+    <div class="stage guard" style="left:270px;">
+      <div class="guard-tag">guard</div>
+      <h3>Count triples</h3>
+      <p>stops on a zero-triple file</p>
+    </div>
+    <div class="stage" style="left:540px;">
+      <h3>Sync data (replace)</h3>
+      <p>aws s3 sync --delete</p>
+    </div>
+    <div class="stage guard" style="left:810px;">
+      <div class="guard-tag">guard</div>
+      <h3>Check load path</h3>
+      <p>stops unless every object is Turtle and matches what was staged</p>
+    </div>
+    <div class="stage" style="left:1080px;">
+      <h3>Upload manifest (trigger)</h3>
+      <p>manifest.ttl</p>
+    </div>
+    <div class="stage" style="left:1350px;">
+      <h3>Neptune loads</h3>
+      <p>auto-loader picks it up</p>
+    </div>
+  </div>
+</body>
+</html>
