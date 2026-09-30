@@ -277,8 +277,8 @@ def test_aws_s3_ls_treats_an_empty_prefix_as_empty_not_an_error(monkeypatch, ret
 def test_aws_s3_ls_raises_on_a_real_failure(monkeypatch):
     import subprocess
     monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(
-        a[0], 255, "", "An error occurred (AccessDenied)"))
-    with pytest.raises(subprocess.CalledProcessError):
+        a[0], 254, "", "An error occurred (InvalidToken) when calling the ListObjectsV2 operation"))
+    with pytest.raises(SystemExit, match=r"failed \(exit 254\): An error occurred \(InvalidToken\)"):
         up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1")
 
 
@@ -351,5 +351,5 @@ def test_aws_s3_ls_raises_on_exit_1_with_an_error_message(monkeypatch):
     import subprocess
     monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(
         a[0], 1, "", "Could not connect to the endpoint URL"))
-    with pytest.raises(subprocess.CalledProcessError):
+    with pytest.raises(SystemExit, match="Could not connect to the endpoint URL"):
         up.aws_s3_ls("s3://bucket/cckp/2026-09-29/", region="us-east-1")

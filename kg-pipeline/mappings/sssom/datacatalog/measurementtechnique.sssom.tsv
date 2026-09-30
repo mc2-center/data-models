@@ -1,0 +1,128 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/datacatalog/measurementtechnique.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+10-cell RNA Sequencing	10-cell RNA Sequencing	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/30894605	semapv:ManualMappingCuration
+3D electron microscopy	3D electron microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16854	semapv:ManualMappingCuration
+AMPLICON	AMPLICON	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0003747	semapv:ManualMappingCuration
+ATAC-Seq	ATAC-Seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156056	semapv:ManualMappingCuration
+ATAC-seq	ATAC-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156056	semapv:ManualMappingCuration
+Antitumor Drug Screening Assay	Antitumor Drug Screening Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C15229	semapv:ManualMappingCuration
+Apoptosis Assay	Apoptosis Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_0001182	semapv:ManualMappingCuration
+Artificial Intelligence	Artificial Intelligence	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16309	semapv:ManualMappingCuration
+Barcode-Seq	Barcode-Seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008655	semapv:ManualMappingCuration
+CODEX	CODEX	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C181931	semapv:ManualMappingCuration
+CUT&RUN	CUT&RUN	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009973	semapv:ManualMappingCuration
+Cell Culture	Cell Culture	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16396	semapv:ManualMappingCuration
+Cell Proliferation Assay	Cell Proliferation Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C116553	semapv:ManualMappingCuration
+ChIP-Seq	ChIP-Seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C106048	semapv:ManualMappingCuration
+ChIP-seq	ChIP-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C106048	semapv:ManualMappingCuration
+Clinical Study	Clinical Study	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C71104	semapv:ManualMappingCuration
+Co-Immunoprecipitation	Co-Immunoprecipitation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19830	semapv:ManualMappingCuration
+Co-culture Assay	Co-culture Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/4032528	semapv:ManualMappingCuration
+Confocal Microscopy	Confocal Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17753	semapv:ManualMappingCuration
+DNA Gene-Expression Microarray	DNA Gene-Expression Microarray	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C93207	semapv:ManualMappingCuration
+DNA Sequencing	DNA Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C153598	semapv:ManualMappingCuration
+Data Integration	Data Integration	skos:exactMatch	http://purl.obolibrary.org/obo/T4FS_0000487	semapv:ManualMappingCuration
+ELISA	ELISA	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16553	semapv:ManualMappingCuration
+Electron Microscopy	Electron Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16854	semapv:ManualMappingCuration
+FISH	FISH	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17563	semapv:ManualMappingCuration
+Flow Cytometry	Flow Cytometry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16585	semapv:ManualMappingCuration
+Fluorescence Activated Cell Sorting	Fluorescence Activated Cell Sorting	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17353	semapv:ManualMappingCuration
+Fluorescence Imaging	Fluorescence Imaging	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C116489	semapv:ManualMappingCuration
+Fluorescence In Situ Hybridization	Fluorescence In Situ Hybridization	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17563	semapv:ManualMappingCuration
+Fluorescence Microscopy	Fluorescence Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16856	semapv:ManualMappingCuration
+Gene Set Enrichment Analysis	Gene Set Enrichment Analysis	skos:exactMatch	http://purl.obolibrary.org/obo/OBCS_0000147	semapv:ManualMappingCuration
+HI-C	HI-C	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007693	semapv:ManualMappingCuration
+Hematoxylin and Eosin Staining Method	Hematoxylin and Eosin Staining Method	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C23011	semapv:ManualMappingCuration
+Hi-C	Hi-C	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007693	semapv:ManualMappingCuration
+Hydrogels	Hydrogels	skos:exactMatch	http://purl.obolibrary.org/obo/ENVO_01001562	semapv:ManualMappingCuration
+Imaging	Imaging	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17369	semapv:ManualMappingCuration
+Immunofluorescent Staining Method	Immunofluorescent Staining Method	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C142337	semapv:ManualMappingCuration
+Immunohistochemistry Staining Method	Immunohistochemistry Staining Method	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C23020	semapv:ManualMappingCuration
+Immunoprecipitation	Immunoprecipitation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16724	semapv:ManualMappingCuration
+Immunotherapy	Immunotherapy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C15262	semapv:ManualMappingCuration
+In Situ Hybridization	In Situ Hybridization	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17562	semapv:ManualMappingCuration
+Invasion Assay	Invasion Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16216	semapv:ManualMappingCuration
+Mass Spectrometry	Mass Spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17156	semapv:ManualMappingCuration
+Mathematical Modeling	Mathematical Modeling	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16870	semapv:ManualMappingCuration
+Micro-CT	Micro-CT	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/28419369	semapv:ManualMappingCuration
+Microfluidics	Microfluidics	skos:exactMatch	http://id.nlm.nih.gov/mesh/D046210	semapv:ManualMappingCuration
+Microscopy	Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18216	semapv:ManualMappingCuration
+Migration Assay	Migration Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19425	semapv:ManualMappingCuration
+Modeling	Modeling	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16063	semapv:ManualMappingCuration
+Multiplexed Immunofluorescence	Multiplexed Immunofluorescence	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C181928	semapv:ManualMappingCuration
+Multiscale Light Sheet Microscopy	Multiscale Light Sheet Microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0003098	semapv:ManualMappingCuration
+Murine Model	Murine Model	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C94604	semapv:ManualMappingCuration
+Next Generation Sequencing	Next Generation Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C101293	semapv:ManualMappingCuration
+Organoid	Organoid	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C172259	semapv:ManualMappingCuration
+PCR	PCR	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17003	semapv:ManualMappingCuration
+Patient Derived Xenograft	Patient Derived Xenograft	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C122936	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Proteomics Assay	Proteomics Assay	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0003781	semapv:ManualMappingCuration
+Proximity Ligation Assay	Proximity Ligation Assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156754	semapv:ManualMappingCuration
+Pull-Down Assay	Pull-Down Assay	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/28667618	semapv:ManualMappingCuration
+RIP	RIP	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0005033	semapv:ManualMappingCuration
+RNA Sequencing	RNA Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C124261	semapv:ManualMappingCuration
+RNA-seq	RNA-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C124261	semapv:ManualMappingCuration
+RPPA	RPPA	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C120659	semapv:ManualMappingCuration
+RT-qPCR	RT-qPCR	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000462	semapv:ManualMappingCuration
+SDS-PAGE	SDS-PAGE	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0010936	semapv:ManualMappingCuration
+SNP array	SNP array	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C116151	semapv:ManualMappingCuration
+Single Cell DNA Sequencing	Single Cell DNA Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C223894	semapv:ManualMappingCuration
+Single Cell RNA-Sequencing	Single Cell RNA-Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C171152	semapv:ManualMappingCuration
+Size Exclusion Chromatography	Size Exclusion Chromatography	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16433	semapv:ManualMappingCuration
+Surface Plasmon Resonance	Surface Plasmon Resonance	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18117	semapv:ManualMappingCuration
+Survival Analysis	Survival Analysis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53372	semapv:ManualMappingCuration
+Synthesis	Synthesis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C61408	semapv:ManualMappingCuration
+T cell receptor repertoire sequencing	T cell receptor repertoire sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C189102	semapv:ManualMappingCuration
+TUNEL assay	TUNEL assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19815	semapv:ManualMappingCuration
+Tissue Microarray	Tissue Microarray	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19922	semapv:ManualMappingCuration
+Transwell Assay	Transwell Assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0020015	semapv:ManualMappingCuration
+Viral Transduction	Viral Transduction	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C142787	semapv:ManualMappingCuration
+Western Blotting	Western Blotting	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16357	semapv:ManualMappingCuration
+Whole Exome Sequencing	Whole Exome Sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C101295	semapv:ManualMappingCuration
+Wound-Healing Assay	Wound-Healing Assay	skos:exactMatch	http://purl.obolibrary.org/obo/ECO_0001099	semapv:ManualMappingCuration
+Xenograft	Xenograft	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C12932	semapv:ManualMappingCuration
+atomic force microscopy	atomic force microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17754	semapv:ManualMappingCuration
+bisulfite sequencing	bisulfite sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C106054	semapv:ManualMappingCuration
+cell proliferation	cell proliferation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C116553	semapv:ManualMappingCuration
+cell viability assay	cell viability assay	skos:exactMatch	http://purl.obolibrary.org/obo/ERO_000132	semapv:ManualMappingCuration
+clinical data	clinical data	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C71104	semapv:ManualMappingCuration
+confocal microscopy	confocal microscopy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17753	semapv:ManualMappingCuration
+flow cytometry	flow cytometry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16585	semapv:ManualMappingCuration
+fluorescence microscopy assay	fluorescence microscopy assay	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16856	semapv:ManualMappingCuration
+genotyping	genotyping	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C45447	semapv:ManualMappingCuration
+high content screen	high content screen	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0007550	semapv:ManualMappingCuration
+high frequency ultrasound	high frequency ultrasound	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17230	semapv:ManualMappingCuration
+immunoassay	immunoassay	skos:exactMatch	http://purl.obolibrary.org/obo/MMO_0000098	semapv:ManualMappingCuration
+immunocytochemistry	immunocytochemistry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17731	semapv:ManualMappingCuration
+immunofluorescence	immunofluorescence	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17370	semapv:ManualMappingCuration
+immunohistochemistry	immunohistochemistry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C23020	semapv:ManualMappingCuration
+liquid chromatography/mass spectrometry	liquid chromatography/mass spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C18475	semapv:ManualMappingCuration
+liquid chromatography/tandem mass spectrometry	liquid chromatography/tandem mass spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0000701	semapv:ManualMappingCuration
+live imaging	live imaging	skos:exactMatch	http://purl.obolibrary.org/obo/CHMO_0001074	semapv:ManualMappingCuration
+mass spectrometry	mass spectrometry	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17156	semapv:ManualMappingCuration
+methylation array	methylation array	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C165222	semapv:ManualMappingCuration
+miRNA array	miRNA array	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0001335	semapv:ManualMappingCuration
+miRNA-seq	miRNA-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C156057	semapv:ManualMappingCuration
+next-generation sequencing	next-generation sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C101293	semapv:ManualMappingCuration
+polymerase chain reaction	polymerase chain reaction	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17003	semapv:ManualMappingCuration
+positron emission tomography	positron emission tomography	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17007	semapv:ManualMappingCuration
+qPCR	qPCR	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C51962	semapv:ManualMappingCuration
+quantitative PCR	quantitative PCR	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C51962	semapv:ManualMappingCuration
+reporter gene assay	reporter gene assay	skos:exactMatch	http://www.bioassayontology.org/bao#BAO_0003006	semapv:ManualMappingCuration
+ribo-seq	ribo-seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0008891	semapv:ManualMappingCuration
+shRNA	shRNA	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C123893	semapv:ManualMappingCuration
+siRNA	siRNA	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C2191	semapv:ManualMappingCuration
+single cell ATAC-seq	single cell ATAC-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C179458	semapv:ManualMappingCuration
+single-cell RNA-seq	single-cell RNA-seq	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C171152	semapv:ManualMappingCuration
+single-nucleus RNA-seq	single-nucleus RNA-seq	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009809	semapv:ManualMappingCuration
+smFISH	smFISH	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0009918	semapv:ManualMappingCuration
+survival	survival	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53372	semapv:ManualMappingCuration
+ultra high-performance liquid chromatography/tandem mass spectrometry	ultra high-performance liquid chromatography/tandem mass spectrometry	skos:exactMatch	https://pubmed.ncbi.nlm.nih.gov/20061193/	semapv:ManualMappingCuration
+western blot	western blot	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16357	semapv:ManualMappingCuration
+whole exome sequencing	whole exome sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C101295	semapv:ManualMappingCuration
+whole genome sequencing	whole genome sequencing	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C101294	semapv:ManualMappingCuration

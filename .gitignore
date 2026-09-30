@@ -71,6 +71,7 @@ kg-pipeline/data/rdf/*
 kg-pipeline/data/mc2_assay/raw/*
 kg-pipeline/data/mc2_assay/harmonized/*
 kg-pipeline/data/mc2_assay/rdf/*
+kg-pipeline/data/mc2_assay/sssom/
 !kg-pipeline/data/mc2_assay/raw/.gitkeep
 !kg-pipeline/data/mc2_assay/harmonized/.gitkeep
 !kg-pipeline/data/mc2_assay/rdf/.gitkeep

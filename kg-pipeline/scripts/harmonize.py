@@ -180,13 +180,16 @@ def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, 
         writer.writerows(rows)
 
 
-def write_sssom(sssom_dir, enum_name, rows):
+def write_sssom(sssom_dir, enum_name, rows, set_id_prefix=""):
+    """set_id_prefix namespaces mapping_set_id per harmonize pass (e.g.
+    "datacatalog/"), so two passes' same-named enum files don't both claim
+    one mapping_set_id - SSSOM treats that id as globally unique."""
     os.makedirs(sssom_dir, exist_ok=True)
     fname = enum_name.replace(" Enum", "").strip().lower().replace(" ", "_") + ".sssom.tsv"
     path = os.path.join(sssom_dir, fname)
     with open(path, "w", newline="") as f:
         f.write(f"# curie_map:\n#   skos: http://www.w3.org/2004/02/skos/core#\n#   semapv: https://w3id.org/semapv/vocab/\n")
-        f.write(f"# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/{fname}\n")
+        f.write(f"# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/{set_id_prefix}{fname}\n")
         f.write("# license: https://creativecommons.org/publicdomain/zero/1.0/\n")
         writer = csv.writer(f, delimiter="\t")
         writer.writerow(["subject_id", "subject_label", "predicate_id", "object_id", "mapping_justification"])
@@ -203,6 +206,9 @@ def main():
     parser.add_argument("--raw-dir", required=True)
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--sssom-dir", required=True)
+    parser.add_argument("--sssom-set-id-prefix", default="",
+                        help="Prefix for each SSSOM file's mapping_set_id path, e.g. 'datacatalog/' "
+                             "(default: none - the main portal pass)")
     parser.add_argument("--classes", nargs="+", default=DEFAULT_CLASS_ORDER,
                          help=f"Schema classes to harmonize (default: {' '.join(DEFAULT_CLASS_ORDER)}) - "
                               "the MC2 assay-metadata pipeline passes its own class list here")
@@ -243,7 +249,7 @@ def main():
     print(f"{len(unmapped_rows)} unresolved value(s) logged to {unmapped_path}")
 
     for enum_name, rows in sssom_rows.items():
-        path = write_sssom(args.sssom_dir, enum_name, rows)
+        path = write_sssom(args.sssom_dir, enum_name, rows, set_id_prefix=args.sssom_set_id_prefix)
         print(f"{enum_name}: {len(rows)} resolved term(s) -> {path}")
 
 
