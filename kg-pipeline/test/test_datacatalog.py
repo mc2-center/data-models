@@ -189,8 +189,7 @@ def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_pat
     # and resolves to the real SPDX term already curated in
     # modules/shared/license.csv. dataCatalogDataUseModifiers has no
     # schema.org equivalent, so it's cckp-namespaced; "Pending Annotation"
-    # is a real DUO CV term with no ontology mapping (by design), so it gets
-    # a literal but no *Term edge.
+    # isn't a DUO term, so it gets a literal but no *Term edge.
     assert (subject, SCHEMA.license, rdflib.Literal("CC-BY 4.0")) in g
     assert (subject, CCKP.dataCatalogLicenseTerm,
             rdflib.URIRef("https://spdx.org/licenses/CC-BY-4.0.html")) in g
@@ -223,3 +222,25 @@ def test_ill_typed_datacatalog_value_kept_plain_and_reported(tmp_path, capsys):
     assert len(year_values) == 1 and year_values[0].datatype == rdflib.XSD.float
     assert not year_values[0].ill_typed
     assert "DataCatalog: kept 1 ill-typed individualCount value(s) as plain literals (expected xsd:float)" in capsys.readouterr().out
+
+
+def test_datacatalog_duo_curies_get_term_edges(tmp_path):
+    # dataCatalogDataUseModifiers has no CV, so DUO CURIEs are linked straight
+    # to their DUO IRIs; DUOPlus codes and Pending Annotation stay literal-only.
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, [], class_order=["DataCatalog"]
+    )
+    out_path = tmp_path / "DataCatalog_harmonized.csv"
+    harmonize.harmonize_table(
+        "DataCatalog", str(FIXTURES_DIR / "DataCatalog.csv"), str(out_path), field_lookups, [], defaultdict(set),
+    )
+    df = pd.read_csv(out_path, dtype=str, keep_default_na=False)
+    df["dataCatalogDataUseModifiers"] = "DUO:0000042|DUOPlus3|Pending Annotation"
+    df.to_csv(out_path, index=False)
+
+    g, _ = build_datacatalog_triples.build_datacatalog_graph(str(tmp_path), SCHEMA_PATH)
+    subject = build_triples.mint_iri("Dataset", "syn_dc_1")
+    terms = set(g.objects(subject, CCKP.dataCatalogDataUseModifiersTerm))
+    assert terms == {rdflib.URIRef("http://purl.obolibrary.org/obo/DUO_0000042")}
+    literals = set(g.objects(subject, CCKP.dataCatalogDataUseModifiers))
+    assert literals == {rdflib.Literal(v) for v in ("DUO:0000042", "DUOPlus3", "Pending Annotation")}

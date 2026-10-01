@@ -26,11 +26,15 @@ consistency with how cckp_portal's own Dataset.doi is already handled.
 CV-backed fields (license, measurementTechnique, Species, funder, dataType,
 accessType, downloadType, manifestation) additionally emit a resolved
 cckp:{field}Term edge to the real ontology IRI, mirroring build_triples.py's
-own {field}Term convention for its Dataset class.
+own {field}Term convention for its Dataset class. dataCatalogDataUseModifiers
+has no CV (a DUO list would pull DUO's conditional fields into the schema),
+so its values that are DUO CURIEs get the same edge directly
+(CURIE_TERM_FIELDS).
 """
 
 import argparse
 import os
+import re
 from collections import defaultdict
 import sys
 
@@ -43,6 +47,13 @@ from build_triples import (  # noqa: E402
     get_schema_metadata, load_prefixes, mint_iri, read_harmonized, report_ill_typed,
     typed_literal, xsd_datatype,
 )
+
+# Fields without a CV whose values may be ontology CURIEs: values matching the
+# pattern get a cckp:{field}Term edge, the rest stay literal-only (DUOPlus*
+# and "Pending Annotation" are not DUO terms).
+CURIE_TERM_FIELDS = {
+    "dataCatalogDataUseModifiers": re.compile(r"^DUO:\d{7}$"),
+}
 
 CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
 SCHEMA = rdflib.Namespace("https://schema.org/")
@@ -134,6 +145,15 @@ def build_datacatalog_graph(harmonized_dir, mc2_schema_path):
                     if not entry:
                         continue
                     expanded = expand_curie_or_url(entry, mc2_prefixes)
+                    if expanded:
+                        g.add((subject, term_predicate, rdflib.URIRef(expanded)))
+                        n_triples_by_predicate_kind["term"] += 1
+            elif field in CURIE_TERM_FIELDS:
+                term_predicate = CCKP[field_slug(f"{field}Term")]
+                for v in values:
+                    if not CURIE_TERM_FIELDS[field].match(v):
+                        continue
+                    expanded = expand_curie_or_url(v, mc2_prefixes)
                     if expanded:
                         g.add((subject, term_predicate, rdflib.URIRef(expanded)))
                         n_triples_by_predicate_kind["term"] += 1
