@@ -8,7 +8,7 @@ Plan: `mc2-center-dcc/plans/data_models_cde_alignment.md`. Work is on branch `cd
 |---|---|---|
 | DM-1 Species enforcement | Done | Cause: curator folds names that differ only in case/spacing into one class label. DataCatalog's `species` (not required) shadowed shared `Species`. The same collision affected `studyId`/`Study_id`, `grantNumber`/`Grant Number`, `contributor`/the Tool Entity Role value `Contributor`, and `license`/`License`. Owner chose to merge where the concepts match: `species` → `Species`, `grantNumber` → `GrantView Key`. `Study_id` values are study codes, not Synapse IDs, so `studyId` → `dataCatalogStudyId`. There is no shared Contributor attribute, so `contributor` → `dataCatalogContributor`. `extract_datacatalog.py` maps the live Synapse keys onto the new names. |
 | DM-2 license → License | Done | |
-| DM-3 SPDX licenses | Done | `tool/tool_license.csv` moved to `shared/license.csv`; legacy tokens recorded as Nonpreferred Terms; `studyLicense.csv` retired. **Open:** curator to confirm `CC_BY_NC` → `CC-BY-NC-4.0` (the old CV, and a live alias, said 3.0). |
+| DM-3 SPDX licenses | Done | `tool/tool_license.csv` moved to `shared/license.csv`; legacy tokens recorded as Nonpreferred Terms; `studyLicense.csv` retired. `CC_BY_NC` → `CC-BY-NC-4.0` confirmed by the owner, although the old CV said 3.0. |
 | DM-4 No-grant sentinel | Done | `Grant Number`: `^(CA\d{6}\|Affiliated/Non-Grant Associated)$`. `GrantView Key` left unanchored, `(CA\d{6}\|Affiliated/Non-Grant Associated)`, because it takes comma-separated lists in one string cell. |
 | DM-5 ImagingChannel, template flags | Done | `scripts/check_template_list.py` compares `DATA` against `IsTemplate`. `Collection` is excluded (owner decision): it is not a portal table or manifest. The suspected Makefile `all_valid_values.csv` argument bug didn't exist; it was a misread of the terminal output. |
 | DM-6 Drop 10x prefix | Done | Stale `json_schemas/10xVisium*.json` removed. |
@@ -22,6 +22,7 @@ Plan: `mc2-center-dcc/plans/data_models_cde_alignment.md`. Work is on branch `cd
 
 ## Additional changes not in the plan
 
+- `qc_model/qc_attribute_mapping.csv` was checked and kept. `mc2-center-dcc/portal_tables/union_qc.py` reads it (`-p`) to merge duplicate portal-table rows. It lists every column of the PublicationView, DatasetView, ToolView and EducationalResource templates, and the consolidated attributes keep their 13.1.0 aggregation.
 - `templates/*.csv` still had pre-consolidation headers. Added `scripts/build_templates.py` and a `make templates` target; `make all` now runs it. All 33 templates were regenerated.
 - `Makefile` targets marked `.PHONY`, since a `templates/` directory exists.
 

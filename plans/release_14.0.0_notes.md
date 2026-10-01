@@ -96,7 +96,7 @@ These sample/assay-template fields dropped their closed `shared/*.csv` picklist 
 |---|---|
 | `CC0` | `CC0-1.0` |
 | `CC_BY` | `CC-BY-4.0` |
-| `CC_BY_NC` | `CC-BY-NC-4.0` *(a second Nonpreferred Term, `CC BY-NC 3.0`, is also recorded on this row — the version curators used earlier pointed at 3.0; please confirm 4.0 is correct going forward)* |
+| `CC_BY_NC` | `CC-BY-NC-4.0` |
 | `CC_BY_ND` | `CC-BY-ND-4.0` |
 | `CC_BY_SA` | `CC-BY-SA-4.0` |
 | `CC_BY_NC_ND` | `CC-BY-NC-ND-4.0` |
@@ -132,7 +132,7 @@ The following JSON Schemas are new in this release (none existed at `13.1.0`): `
 
 - Model generation has moved off `schematicpy` (removed from `requirements.txt`) onto `synapseclient[curator]>=4.13.0`. `convert_model_to_jsonld.py` now calls `synapseclient.extensions.curator` directly.
 - `make all` now runs `collate → convert → generate-json → templates`; the new `make templates` target writes `templates/*.csv` from the model. Previously it only ran `collate → generate-json` and never actually regenerated `mc2.model.jsonld` — anyone relying on `make all` to keep `mc2.model.jsonld` current on the prior release was getting a stale file; that's fixed here.
-- `qc_model/mc2_qc.model.csv` and `.jsonld`, and the `make qc` target, have been removed (this path called an already-broken `schematic schema convert` invocation and was not functional before this change).
+- `qc_model/mc2_qc.model.csv` and `.jsonld`, and the `make qc` target, have been removed. `qc_model/qc_attribute_mapping.csv` stays; it configures how portal-table QC merges duplicate rows.
 - The Data Curator App configuration (`dca_config/`) and related docs references have been removed, as the DCA is deprecated.
 - New verification scripts: `scripts/check_json_schemas.py` and `scripts/check_template_list.py`.
 
