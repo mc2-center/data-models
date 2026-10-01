@@ -40,8 +40,8 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Consent For Portal Display | Yes |
 | Portal Display | TRUE |
 | Person View | Public Profile View |
-| Person Grant Number | CA202177, CA304599 |
-| Person Consortium Name | HTAN, PDMC |
+| GrantView Key | CA202177, CA304599 |
+| Consortium Key | program.htan, program.pdmc |
 | Person Publications | 25700473, 31245678 |
 | Person Datasets | GSE12345, DOI:10.1000/sampledataset |
 | Person Tools | R Studio, Python, Jupyter Notebook |

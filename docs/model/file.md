@@ -34,11 +34,11 @@ The table below includes sample values to demonstrate proper attribute usage.
 | File Description | CSV file containing gene expression data for breast cancer samples |
 | File Design | CSV (Comma-separated values) |
 | File Url | [https://www.example.com/files/breast_cancer_expression_data.csv](https://www.example.com/files/breast_cancer_expression_data.csv) |
-| File Assay | RNA Sequencing |
+| Assay | RNA Sequencing |
 | File Level | Level 3: Processed summary data, like gene expression counts or coverage statistics (e.g., CSV files) |
-| File Species | Human |
-| File Tumor Type | Breast Carcinoma |
-| File Tissue | Breast |
+| Species | Human |
+| Tumor Type | Breast Carcinoma |
+| Tissue | Breast |
 | File View | List View |
 | FileView_id | FileView_789012 |
 | File Format | CSV |

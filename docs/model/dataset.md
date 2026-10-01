@@ -32,13 +32,14 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Dataset Alias | GSE56789 |
 | Dataset Description | This dataset contains RNA sequencing data from 200 lung cancer samples, including gene expression profiles and patient clinical data. It is designed to study differential gene expression and mutation burden across tumor stages. |
 | Dataset Url | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789 |
-| Dataset Assay | RNA Sequencing |
-| Dataset Species | Homo sapiens |
-| Dataset Tumor Type | Glioblastoma |
-| Dataset Tissue | Lung |
+| Assay | RNA Sequencing |
+| Species | Human |
+| Tumor Type | Glioblastoma |
+| Tissue | Lung |
 | Dataset File Formats | CSV, PDF |
-| Dataset Grant Number | CA209971 |
-| Dataset Pubmed Id | Not applicable |
+| Dataset Data Use Codes | DUO:0000042 |
+| GrantView Key | CA209971 |
+| PublicationView Key | 12345678 |
 | Dataset View | Table |
 | DatasetView_id | DatasetView_12345 |
 

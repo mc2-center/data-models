@@ -38,8 +38,8 @@ It is important to note that where these examples can generally guide you on the
 | Grant Theme Name | Cancer Genomics, Precision Medicine |
 | Grant Institution Name | Stanford University |
 | Grant Institution Alias | Stanford |
-| Grant Investigator | Dr. John Smith |
-| Grant Consortium Name | HTAN |
+| Investigator | Dr. John Smith |
+| Consortium Key | program.htan |
 | GrantView_id | GV12345 |
 | Grant Synapse Team | Team: Project Management, Permission: Edit |
 | Grant Synapse Project | Synapse_ID: syn123456789, Grant_Name: NIH Brain Initiative Grant |
