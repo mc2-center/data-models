@@ -507,6 +507,8 @@ def postprocess_schema_files(
         Values for that property) - callers may want to log/report this.
 
     Raises:
+        ValueError: if two CSV attributes share a class label but have
+            different Valid Values.
         EnumDisplayLabelError: if any enum value across any of the files has
             no resolvable display name. Files whose enums all resolved
             cleanly are still written; only the offending (schema, key,
@@ -514,6 +516,18 @@ def postprocess_schema_files(
             squashed.
     """
     maps = build_enum_maps(model_csv_path, jsonld_path)
+    if maps.csv.colliding_attributes:
+        # Attributes whose names share a class label but whose Valid Values
+        # differ can't be told apart in a generated schema, so neither one's
+        # casing can be trusted.
+        details = "\n".join(
+            f"  {label}: {', '.join(names)}"
+            for label, names in sorted(maps.csv.colliding_attributes.items())
+        )
+        raise ValueError(
+            "Attributes in the model CSV collapse to the same class label but "
+            "have different Valid Values; rename one of each pair:\n" + details
+        )
 
     all_errors: List[Tuple[str, str, str]] = []
     all_fallback_used: List[Tuple[str, str, str]] = []

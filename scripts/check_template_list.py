@@ -61,7 +61,7 @@ def main() -> int:
     template_labels = get_template_labels(modules_glob)
 
     missing_from_data = (template_labels - data_set) - set(EXCLUDED)
-    extra_in_data = data_set - template_labels
+    extra_in_data = (data_set - template_labels) - set(EXCLUDED)
 
     print(f"Makefile DATA entries: {len(data_set)}")
     print(f"IsTemplate-derived labels: {len(template_labels)}")

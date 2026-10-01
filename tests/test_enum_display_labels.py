@@ -332,3 +332,18 @@ def test_casing_collision_each_property_keeps_its_own_casing(tmp_path):
     assert schema["properties"]["PropA"]["enum"] == ["No", "Yes"]
     # ...and PropB gets its *own* (lowercase) casing, not PropA's.
     assert schema["properties"]["PropB"]["enum"] == ["no", "yes"]
+
+
+def test_postprocess_refuses_colliding_attributes(tmp_path):
+    # "Prop A" and "prop A" share a class label but have different Valid
+    # Values, so their generated schemas can't be told apart.
+    csv_path = _write_csv(
+        tmp_path,
+        [_csv_row("Prop A", "No, Yes"), _csv_row("prop A", "Maybe")],
+    )
+    jsonld_path = _write_jsonld(tmp_path, [])
+    schema_path = _write_schema(
+        tmp_path, "Example", {"properties": {"PropA": {"enum": ["No"]}}, "required": []}
+    )
+    with pytest.raises(ValueError, match="PropA"):
+        postprocess_schema_files([str(schema_path)], csv_path, jsonld_path)
