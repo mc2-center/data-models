@@ -23,7 +23,7 @@ get a cckp:-namespaced predicate, same as everywhere else in this pipeline.
 `doi` reuses build_triples.py's own external_iri()/doiIri templating
 convention directly, rather than a schema:identifier predicate, for
 consistency with how cckp_portal's own Dataset.doi is already handled.
-CV-backed fields (license, measurementTechnique, species, funder, dataType,
+CV-backed fields (license, measurementTechnique, Species, funder, dataType,
 accessType, downloadType, manifestation) additionally emit a resolved
 cckp:{field}Term edge to the real ontology IRI, mirroring build_triples.py's
 own {field}Term convention for its Dataset class.
@@ -56,7 +56,10 @@ SCHEMA_ORG_FIELDS = {
     # local name, which stays "license" on the right.
     "dataCatalogLicense": "license",
     "creator": "creator",
-    "contributor": "contributor",
+    # dataCatalogContributor: renamed (DM-1) from "contributor" to avoid a
+    # class-label collision with the Tool Entity Role CV's "Contributor"
+    # valid value - the schema.org local name is unaffected, still "contributor".
+    "dataCatalogContributor": "contributor",
     "keywords": "keywords",
     "citation": "citation",
     "measurementTechnique": "measurementTechnique",

@@ -33,11 +33,23 @@ presented/downloaded, so `find_dataset_entity_ids()` carries it through and
 
 Known annotation keys read (see modules/dataCatalog/annotationProperty.csv
 for what each means) - every one of these was deliberately named to match
-its live Synapse annotation key exactly, except `dataUseModifiers`/`license`,
-which the schema renamed to `dataCatalogDataUseModifiers`/`dataCatalogLicense`
-to disambiguate from the model's generic attributes of the same name used
-elsewhere - SCHEMA_FIELD_RENAMES below renames just those two at CSV-write
-time, so no key-renaming table is needed for the rest (unlike
+its live Synapse annotation key exactly, except `dataUseModifiers`/`license`/
+`species`/`grantNumber`/`contributor`, which the schema renamed to
+`dataCatalogDataUseModifiers`/`dataCatalogLicense`/`Species`/`GrantView Key`/
+`dataCatalogContributor` - the first two to disambiguate from the model's
+generic attributes of the same name used elsewhere, the last three because
+DM-1 (see plans/) merged DataCatalog's own `species`/`grantNumber` attributes
+into the shared `Species`/`GrantView Key` attributes (collision: curator
+folds same-class-label attributes together, so the dataCatalog-only
+definition was silently losing to the shared one) and renamed `contributor`
+to avoid colliding with the Tool Entity Role CV's `Contributor` valid value.
+`studyId` was NOT merged into `Study Key` despite the apparent name overlap:
+Study_id values are human-readable grant/study codes (e.g.
+STUDY_2024_OBESITY_EXERCISE, see docs/model/study.md), not Synapse ids, while
+this live annotation is genuinely `^syn\\d{7,8}$` - the two are semantically
+different identifiers that happen to look related, so `studyId` stays its
+own DataCatalog-only attribute. SCHEMA_FIELD_RENAMES below renames all five
+at CSV-write time, so no key-renaming table is needed for the rest (unlike
 extract_mc2_assay_metadata.py's File-annotation PascalCase -> "Title Case"
 mapping). Keys seen on real entities but NOT in this list are
 administrative/technical noise (`entityType`, `newKey`, `Component`) or this
@@ -60,8 +72,11 @@ LIST_DELIMITER = "|"
 
 # Matches modules/dataCatalog/annotationProperty.csv's DataCatalog class
 # DependsOn list, minus DataCatalog_id (set explicitly from datasetId below)
-# and GrantView Key/Study Key/DatasetView Key (pre-existing FK placeholders
-# not sourced from these entity annotations - left for a separate join).
+# and Study Key/DatasetView Key (FK placeholders not sourced from these
+# entity annotations - left for a separate join). GrantView Key is NOT in
+# that same boat post-DM-1: the live `grantNumber` annotation is written out
+# under the GrantView Key column name (SCHEMA_FIELD_RENAMES), so that column
+# IS populated from these entity annotations, unlike Study Key/DatasetView Key.
 KNOWN_ATTRIBUTES = [
     "studyId", "portal", "community", "description", "contributor", "keywords",
     "individualCount", "link", "croissant_s3_file_object", "accessType",
@@ -119,15 +134,28 @@ MULTIVALUED_ATTRIBUTES = {
     "species", "subject", "countryOfOrigin", "externalRepositoryUri",
 }
 
-# modules/dataCatalog/annotationProperty.csv renamed these two attributes
-# (to disambiguate from the model's generic dataUseModifiers/license
-# attributes used elsewhere) without renaming the underlying live Synapse
-# annotation key - so the raw key above is still what's read from Synapse,
-# but the output CSV column must use the schema's field name, since
-# harmonize.py/build_datacatalog_triples.py key off schema/mc2_model.linkml.yaml.
+# modules/dataCatalog/annotationProperty.csv renamed these attributes
+# without renaming the underlying live Synapse annotation key - so the raw
+# key above is still what's read from Synapse, but the output CSV column
+# must use the schema's field name, since harmonize.py/build_datacatalog_
+# triples.py key off schema/mc2_model.linkml.yaml. `dataUseModifiers`/
+# `license` were renamed to disambiguate from the model's generic attributes
+# of the same name used elsewhere. `species`/`grantNumber` were merged
+# (DM-1) into the shared `Species`/`GrantView Key` attributes - a class-label
+# collision (curator strips spaces/underscores and capitalizes words to form
+# a class label; dataCatalog's own camelCase `species`/`grantNumber` rows
+# collided with the shared `Species`/`GrantView Key` rows, and the
+# dataCatalog-only definition - e.g. not Required - was silently winning).
+# `contributor` was renamed to `dataCatalogContributor` to avoid a separate
+# collision with the Tool Entity Role CV's `Contributor` valid value.
+# `studyId` is deliberately NOT here - see the module docstring for why it
+# was not merged into `Study Key`.
 SCHEMA_FIELD_RENAMES = {
     "dataUseModifiers": "dataCatalogDataUseModifiers",
     "license": "dataCatalogLicense",
+    "species": "Species",
+    "grantNumber": "GrantView Key",
+    "contributor": "dataCatalogContributor",
 }
 
 
