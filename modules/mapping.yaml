@@ -54,7 +54,7 @@ dataCatalog:
 - name: funder
   src: consortium/consortium_funding_agency.csv
 - name: dataCatalogLicense
-  src: shared/studyLicense.csv
+  src: shared/license.csv
 - name: measurementTechnique
   src: shared/assay.csv
 - name: species
@@ -225,7 +225,7 @@ shared:
 - name: Tumor Type
   src: shared/tumorType.csv
 - name: License
-  src: tool/tool_license.csv
+  src: shared/license.csv
 study:
 - name: Study Deidentification Method Type
   src: shared/deIdMethod.csv

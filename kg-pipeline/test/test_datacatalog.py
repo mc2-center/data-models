@@ -164,7 +164,7 @@ def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_pat
     # dataCatalogLicense still maps to the real schema.org "license" property
     # (SCHEMA_ORG_FIELDS is keyed by the schema field name, not "license"),
     # and resolves to the real SPDX term already curated in
-    # modules/shared/studyLicense.csv. dataCatalogDataUseModifiers has no
+    # modules/shared/license.csv. dataCatalogDataUseModifiers has no
     # schema.org equivalent, so it's cckp-namespaced; "Pending Annotation"
     # is a real DUO CV term with no ontology mapping (by design), so it gets
     # a literal but no *Term edge.
