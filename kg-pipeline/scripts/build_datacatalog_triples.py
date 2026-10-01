@@ -56,9 +56,7 @@ SCHEMA_ORG_FIELDS = {
     # local name, which stays "license" on the right.
     "dataCatalogLicense": "license",
     "creator": "creator",
-    # dataCatalogContributor: renamed (DM-1) from "contributor" to avoid a
-    # class-label collision with the Tool Entity Role CV's "Contributor"
-    # valid value - the schema.org local name is unaffected, still "contributor".
+    # Same for dataCatalogContributor (live key and schema.org name: contributor).
     "dataCatalogContributor": "contributor",
     "keywords": "keywords",
     "citation": "citation",

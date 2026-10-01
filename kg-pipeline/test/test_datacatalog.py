@@ -87,17 +87,10 @@ def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema
     assert "dataUseModifiers" not in row
 
 
-def test_extract_datacatalog_rows_renames_dm1_merged_and_disambiguated_attributes(monkeypatch):
-    # Regression test: DM-1 merged DataCatalog's species/grantNumber
-    # attributes into the shared Species/GrantView Key attributes (a class-
-    # label collision with curator), and renamed contributor to
-    # dataCatalogContributor (a collision with the Tool Entity Role CV's
-    # Contributor valid value). The live Synapse annotation keys are
-    # unaffected - still species/grantNumber/contributor - so
-    # extract_datacatalog.py must write the CSV under the new schema field
-    # names, same as the license/dataUseModifiers rename above. studyId is
-    # deliberately NOT renamed (not merged into Study Key - see module
-    # docstring).
+def test_extract_datacatalog_rows_renames_collision_attributes(monkeypatch):
+    # Live keys species/grantNumber/contributor/studyId are written under the
+    # model's attribute names, which differ to avoid curator class-label
+    # collisions (species/Species are one class label).
     monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
         "syn1": {
             "species": ["Mus musculus"], "grantNumber": ["CA209975"],
@@ -108,7 +101,8 @@ def test_extract_datacatalog_rows_renames_dm1_merged_and_disambiguated_attribute
     assert row["Species"] == "Mus musculus"
     assert row["GrantView Key"] == "CA209975"
     assert row["dataCatalogContributor"] == "Jane Doe"
-    assert row["studyId"] == "syn7315805"
+    assert row["dataCatalogStudyId"] == "syn7315805"
+    assert "studyId" not in row
     assert "species" not in row
     assert "grantNumber" not in row
     assert "contributor" not in row
@@ -126,9 +120,7 @@ def test_extract_datacatalog_rows_reads_known_keys_only(monkeypatch):
     row = rows[0]
     assert row["DataCatalog_id"] == "syn1"
     assert row["title"] == "A Dataset"
-    # live Synapse annotation key stays "species"; DM-1 merged the model
-    # field into the shared "Species" attribute, so the output CSV column
-    # (keyed by SCHEMA_FIELD_RENAMES) uses the schema's field name instead.
+    # live key "species" is written under the shared "Species" attribute.
     assert row["Species"] == "Homo sapiens"
     assert "species" not in row
     assert row["creator"] == "Jane Doe|John Smith"  # multivalued
