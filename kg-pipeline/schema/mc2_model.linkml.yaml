@@ -211,7 +211,7 @@ classes:
     - Dataset Url
     - Dataset Doi
     - Dataset File Formats
-    - Data Use Codes
+    - Dataset Data Use Codes
   Educational Resource:
     description: Manifest for describing educational resources.
     tree_root: true
@@ -1757,7 +1757,7 @@ slots:
     description: List of data use ontology (DUO) terms that are true for dataset, which describes the
       allowable scope and terms for data use. Omit property if not applicable/unknown.
     multivalued: true
-    range: dataCatalogDataUseModifiers Enum
+    pattern: ^(DUO:\d{7}|DUOPlus\d+|Pending Annotation)$
   datePublished:
     description: Date data were published/available on Synapse.
     range: float
@@ -1839,6 +1839,12 @@ slots:
       separated.
     multivalued: true
     range: Dataset File Formats Enum
+  Dataset Data Use Codes:
+    description: 'DUO code(s) describing the consent permissions for the dataset, i.e. the purposes for
+      which its data may be used. Provide multiple values as a comma-separated list. Code definitions:
+      https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes'
+    multivalued: true
+    pattern: ^(DUO:\d{7}|DUOPlus\d+|Pending Annotation)$
   DatasetView_id:
     description: Unique ID associated with this Dataset View entry, used as a key for record linking and
       updates. Unless otherwise directed, this value should be equivalent to Dataset Alias. For externally
@@ -6525,126 +6531,6 @@ enums:
         description: Zambia
       ZW:
         description: Zimbabwe
-  dataCatalogDataUseModifiers Enum:
-    permissible_values:
-      Pending Annotation:
-        description: Data Use Codes have not yet been provided or documented for this resource.
-      DUO:0000042:
-        description: This data use permission indicates that use is allowed for general research use for
-          any research purpose.
-        meaning: DUO:0000042
-      DUO:0000027:
-        description: This data use modifier indicates that use is limited to use within an approved project.
-        meaning: DUO:0000027
-      DUO:0000016:
-        description: This data use modifier indicates that use is limited to genetic studies only (i.e.,
-          studies that include genotype research alone or both genotype and phenotype research, but not
-          phenotype research exclusively)
-        meaning: DUO:0000016
-      DUO:0000029:
-        description: This data use modifier indicates that the requestor must return derived/enriched
-          data to the database/resource.
-        meaning: DUO:0000029
-      DUO:0000043:
-        description: This data use modifier indicates that use is allowed for clinical use and care.
-        meaning: DUO:0000043
-      DUO:0000015:
-        description: This data use modifier indicates that use does not allow methods development research
-          (e.g., development of software or algorithms).
-        meaning: DUO:0000015
-      DUO:0000004:
-        description: This data use permission indicates there is no restriction on use.
-        meaning: DUO:0000004
-      DUO:0000045:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          organizations.
-        meaning: DUO:0000045
-      DUO:0000017:
-        description: Data use modifiers indicate additional conditions for use.
-        meaning: DUO:0000017
-      DUO:0000011:
-        description: This data use permission indicates that use of the data is limited to the study of
-          population origins or ancestry.
-        meaning: DUO:0000011
-      DUO:0000046:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          use.
-        meaning: DUO:0000046
-      DUO:0000018:
-        description: This data use modifier indicates that use of the data is limited to not-for-profit
-          organizations and not-for-profit use, non-commercial use.
-        meaning: DUO:0000018
-      DUO:0000044:
-        description: This data use modifier indicates use for purposes of population, origin, or ancestry
-          research is prohibited.
-        meaning: DUO:0000044
-      DUO:0000021:
-        description: This data use modifier indicates that the requestor must provide documentation of
-          local IRB/ERB approval.
-        meaning: DUO:0000021
-      DUO:0000006:
-        description: This data use permission indicates that use is allowed for health/medical/biomedical
-          purposes; does not include the study of population origins or ancestry.
-        meaning: DUO:0000006
-      DUO:0000019:
-        description: This data use modifier indicates that requestor agrees to make results of studies
-          using the data available to the larger scientific community.
-        meaning: DUO:0000019
-      DUO:0000026:
-        description: This data use modifier indicates that use is limited to use by approved users. If
-          providing this term, please describe the restrictions in column userSpecificRestriction.
-        meaning: DUO:0000026
-      DUO:0000020:
-        description: This data use modifier indicates that the requestor must agree to collaboration with
-          the primary study investigator(s). If providing this term, please note the contact email in
-          column collaborationRequired.
-        meaning: DUO:0000020
-      DUO:0000012:
-        description: This data use modifier indicates that use is limited to studies of a certain research
-          type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.
-        meaning: DUO:0000012
-      DUO:0000025:
-        description: This data use modifier indicates that use is approved for a specific number of months.
-          If providing this term, please provide the number of months in column timeLimitOnUse.
-        meaning: DUO:0000025
-      DUO:0000024:
-        description: This data use modifier indicates that requestor agrees not to publish results of
-          studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.
-        meaning: DUO:0000024
-      DUO:0000028:
-        description: This data use modifier indicates that use is limited to use within an approved institution.
-          If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.
-        meaning: DUO:0000028
-      DUO:0000022:
-        description: This data use modifier indicates that use is limited to within a specific geographic
-          region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.
-        meaning: DUO:0000022
-      DUO:0000007:
-        description: This data use permission indicates that use is allowed provided it is related to
-          the specified disease. If providing this term, please provide the disease MONDO ID(s) in column
-          diseaseSpecificResearch.
-        meaning: DUO:0000007
-      DUOPlus1:
-        description: Source geography is relevant to governance decisions. If providing this term, please
-          provide the applicable country code(s) in column sourceGeography
-      DUOPlus2:
-        description: Study population is relevant to governance decisions. If providing this term, please
-          provide the applicable population type(s) in column populationType.
-      DUOPlus3:
-        description: Data deidentification is relevant to governance decisions. If providing this term,
-          please provide the applicable deidentification type(s) in column deidentificationType.
-      DUOPlus4:
-        description: A data permission designation is associated with the Study. If providing this term,
-          please provide the applicable permission type(s) in column dataPermission.
-      DUOPlus5:
-        description: A data tier designation is associated with the Study. If providing this term, please
-          provide the applicable data tier designation(s) in column dataTier.
-      DUOPlus6:
-        description: A license is associated with the Study. If providing this term, please provide the
-          applicable license in column license.
-      DUOPlus7:
-        description: Attribution conditions are associated with this Study. If providing this term, please
-          provide the attribution statement in column attribution.
   funder Enum:
     permissible_values:
       Division of Cancer Control and Population Sciences:

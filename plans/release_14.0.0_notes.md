@@ -24,7 +24,7 @@ These per-entity attributes were retired in favor of a single shared attribute, 
 | `Species` | `Biospecimen Species`, `Dataset Species`, `File Species`, `Model Species`, DataCatalog's `species` |
 | `Tissue` | `Dataset Tissue`, `File Tissue`, `Publication Tissue` |
 | `Tumor Type` | `Dataset Tumor Type`, `File Tumor Type`, `Publication Tumor Type` |
-| `Data Use Codes` | `Dataset Data Use Codes`, `File Data Use Codes`, `Study Data Use Codes` |
+| `Data Use Codes` | `File Data Use Codes`, `Study Data Use Codes` (Dataset View keeps its own `Dataset Data Use Codes`; see [Other schema changes](#other-schema-changes)) |
 | `License` | `Resource License` (Educational Resource), `Tool License`, Study's `license`/`DUOPlus6` |
 | `Investigator` | `Grant Investigator`, `Project Investigator`, `Study Investigator` |
 | `Sex` | `Biospecimen Sex`, `Individual Sex`, `Model Sex` |
@@ -126,6 +126,7 @@ The following JSON Schemas are new in this release (none existed at `13.1.0`): `
 
 - **Enum values in generated JSON Schemas are now display labels**, not squashed class labels — e.g. `RNA Sequencing` rather than `RNASequencing`. Property *keys* are still class labels (no spaces); only the enum *values* were affected.
 - **`Species` is now required** wherever a template includes it, including `DataCatalog` and `File View` (previously not required on `DataCatalog`'s own definition).
+- **Conditional DUO fields are limited to file-level schemas**, plus Study and DataDSP. Selecting codes such as `DUO:0000007` there still adds the follow-up fields (`Disease Specific Research`, ...). Dataset View's `Dataset Data Use Codes` and DataCatalog's `dataCatalogDataUseModifiers` no longer use the controlled list, so they don't pull those fields in. Each value must still look like a DUO code (`DUO:0000042`, `DUOPlus3`) or be `Pending Annotation`.
 - **`Grant Number` / `GrantView Key`** now accept `Affiliated/Non-Grant Associated` in addition to the `CA\d{6}` pattern, for records not tied to a specific grant.
 
 ## Tooling

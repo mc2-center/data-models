@@ -32449,107 +32449,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:PendingAnnotation"
-                },
-                {
-                    "@id": "bts:DUO:0000042"
-                },
-                {
-                    "@id": "bts:DUO:0000027"
-                },
-                {
-                    "@id": "bts:DUO:0000016"
-                },
-                {
-                    "@id": "bts:DUO:0000029"
-                },
-                {
-                    "@id": "bts:DUO:0000043"
-                },
-                {
-                    "@id": "bts:DUO:0000015"
-                },
-                {
-                    "@id": "bts:DUO:0000004"
-                },
-                {
-                    "@id": "bts:DUO:0000045"
-                },
-                {
-                    "@id": "bts:DUO:0000017"
-                },
-                {
-                    "@id": "bts:DUO:0000011"
-                },
-                {
-                    "@id": "bts:DUO:0000046"
-                },
-                {
-                    "@id": "bts:DUO:0000018"
-                },
-                {
-                    "@id": "bts:DUO:0000044"
-                },
-                {
-                    "@id": "bts:DUO:0000021"
-                },
-                {
-                    "@id": "bts:DUO:0000006"
-                },
-                {
-                    "@id": "bts:DUO:0000019"
-                },
-                {
-                    "@id": "bts:DUO:0000026"
-                },
-                {
-                    "@id": "bts:DUO:0000020"
-                },
-                {
-                    "@id": "bts:DUO:0000012"
-                },
-                {
-                    "@id": "bts:DUO:0000025"
-                },
-                {
-                    "@id": "bts:DUO:0000024"
-                },
-                {
-                    "@id": "bts:DUO:0000028"
-                },
-                {
-                    "@id": "bts:DUO:0000022"
-                },
-                {
-                    "@id": "bts:DUO:0000007"
-                },
-                {
-                    "@id": "bts:DUOPlus1"
-                },
-                {
-                    "@id": "bts:DUOPlus2"
-                },
-                {
-                    "@id": "bts:DUOPlus3"
-                },
-                {
-                    "@id": "bts:DUOPlus4"
-                },
-                {
-                    "@id": "bts:DUOPlus5"
-                },
-                {
-                    "@id": "bts:DUOPlus6"
-                },
-                {
-                    "@id": "bts:DUOPlus7"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string_list",
             "sms:displayName": "dataCatalogDataUseModifiers",
+            "sms:pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -41761,987 +41664,6 @@
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "ZW",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PendingAnnotation",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PendingAnnotation",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                },
-                {
-                    "@id": "bts:DatasetFileFormats"
-                },
-                {
-                    "@id": "bts:Tissue"
-                },
-                {
-                    "@id": "bts:DSPDatasetTissue"
-                },
-                {
-                    "@id": "bts:Manifestation"
-                },
-                {
-                    "@id": "bts:TumorType"
-                },
-                {
-                    "@id": "bts:DSPDatasetTumorType"
-                },
-                {
-                    "@id": "bts:MeasurementTechnique"
-                },
-                {
-                    "@id": "bts:Assay"
-                },
-                {
-                    "@id": "bts:DSPDatasetAssay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Pending Annotation",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000042",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000042",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000042",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000027",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000027",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000027",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000016",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000016",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000016",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000029",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000029",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000029",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000043",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000043",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000043",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000015",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000015",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000015",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000004",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000004",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000004",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000045",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000045",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000045",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000017",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000017",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000017",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000011",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000011",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000011",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000046",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000046",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000046",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000018",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000018",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000018",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000044",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000044",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000044",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000021",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000021",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000021",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000006",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000006",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000006",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000019",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DUO:0000019",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "DUO:0000019",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000026",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that use is limited to use by approved users.",
-            "rdfs:label": "DUO:0000026",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000026",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:UserSpecificRestriction"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000020",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).",
-            "rdfs:label": "DUO:0000020",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000020",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:CollaborationRequired"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000012",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that use is limited to studies of a certain research type.",
-            "rdfs:label": "DUO:0000012",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000012",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:ResearchSpecificRestrictions"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000025",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that use is approved for a specific number of months.",
-            "rdfs:label": "DUO:0000025",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000025",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:TimeLimitOnUse"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000024",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.",
-            "rdfs:label": "DUO:0000024",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000024",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:PublicationMoratorium"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000028",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that use is limited to use within an approved institution.",
-            "rdfs:label": "DUO:0000028",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000028",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:InstitutionSpecificRestriction"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000022",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use modifier indicates that use is limited to within a specific geographic region.",
-            "rdfs:label": "DUO:0000022",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000022",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:GeographicalRestriction"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUO:0000007",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "This data use permission indicates that use is allowed provided it is related to the specified disease.",
-            "rdfs:label": "DUO:0000007",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUO:0000007",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:DiseaseSpecificResearch"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus1",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Source geography is relevant to governance decisions.",
-            "rdfs:label": "DUOPlus1",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus1",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:SourceGeography"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus2",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Study population is relevant to governance decisions.",
-            "rdfs:label": "DUOPlus2",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus2",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:PopulationType"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus3",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Data deidentification is relevant to governance decisions.",
-            "rdfs:label": "DUOPlus3",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus3",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:DeidentificationType"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus4",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A data permission designation is associated with the Study.",
-            "rdfs:label": "DUOPlus4",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus4",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:DataPermission"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus5",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A data tier designation is associated with the Study.",
-            "rdfs:label": "DUOPlus5",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus5",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:DataTier"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus6",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A license is associated with the Study.",
-            "rdfs:label": "DUOPlus6",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus6",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:License"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DUOPlus7",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Attribution conditions are associated with this Study.",
-            "rdfs:label": "DUOPlus7",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataCatalogDataUseModifiers"
-                },
-                {
-                    "@id": "bts:DataUseCodes"
-                },
-                {
-                    "@id": "bts:DataUseModifiers"
-                },
-                {
-                    "@id": "bts:DSPDataUseCodes"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:columnType": "string",
-            "sms:displayName": "DUOPlus7",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Attribution"
-                }
-            ],
             "sms:validationRules": []
         },
         {
@@ -54844,6 +53766,57 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:PendingAnnotation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PendingAnnotation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                },
+                {
+                    "@id": "bts:DatasetFileFormats"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:DSPDatasetTissue"
+                },
+                {
+                    "@id": "bts:Manifestation"
+                },
+                {
+                    "@id": "bts:TumorType"
+                },
+                {
+                    "@id": "bts:DSPDatasetTumorType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Pending Annotation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:PermeabilityAssay",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -65651,7 +64624,7 @@
                     "@id": "bts:DatasetFileFormats"
                 },
                 {
-                    "@id": "bts:DataUseCodes"
+                    "@id": "bts:DatasetDataUseCodes"
                 }
             ],
             "sms:validationRules": []
@@ -67449,10 +66422,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:DataUseCodes",
+            "@id": "bts:DatasetDataUseCodes",
             "@type": "rdfs:Class",
-            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
-            "rdfs:label": "DataUseCodes",
+            "rdfs:comment": "DUO code(s) describing the consent permissions for the dataset, i.e. the purposes for which its data may be used. Provide multiple values as a comma-separated list. Code definitions: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
+            "rdfs:label": "DatasetDataUseCodes",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -67461,107 +66434,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:PendingAnnotation"
-                },
-                {
-                    "@id": "bts:DUO:0000042"
-                },
-                {
-                    "@id": "bts:DUO:0000027"
-                },
-                {
-                    "@id": "bts:DUO:0000016"
-                },
-                {
-                    "@id": "bts:DUO:0000029"
-                },
-                {
-                    "@id": "bts:DUO:0000043"
-                },
-                {
-                    "@id": "bts:DUO:0000015"
-                },
-                {
-                    "@id": "bts:DUO:0000004"
-                },
-                {
-                    "@id": "bts:DUO:0000045"
-                },
-                {
-                    "@id": "bts:DUO:0000017"
-                },
-                {
-                    "@id": "bts:DUO:0000011"
-                },
-                {
-                    "@id": "bts:DUO:0000046"
-                },
-                {
-                    "@id": "bts:DUO:0000018"
-                },
-                {
-                    "@id": "bts:DUO:0000044"
-                },
-                {
-                    "@id": "bts:DUO:0000021"
-                },
-                {
-                    "@id": "bts:DUO:0000006"
-                },
-                {
-                    "@id": "bts:DUO:0000019"
-                },
-                {
-                    "@id": "bts:DUO:0000026"
-                },
-                {
-                    "@id": "bts:DUO:0000020"
-                },
-                {
-                    "@id": "bts:DUO:0000012"
-                },
-                {
-                    "@id": "bts:DUO:0000025"
-                },
-                {
-                    "@id": "bts:DUO:0000024"
-                },
-                {
-                    "@id": "bts:DUO:0000028"
-                },
-                {
-                    "@id": "bts:DUO:0000022"
-                },
-                {
-                    "@id": "bts:DUO:0000007"
-                },
-                {
-                    "@id": "bts:DUOPlus1"
-                },
-                {
-                    "@id": "bts:DUOPlus2"
-                },
-                {
-                    "@id": "bts:DUOPlus3"
-                },
-                {
-                    "@id": "bts:DUOPlus4"
-                },
-                {
-                    "@id": "bts:DUOPlus5"
-                },
-                {
-                    "@id": "bts:DUOPlus6"
-                },
-                {
-                    "@id": "bts:DUOPlus7"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string_list",
-            "sms:displayName": "Data Use Codes",
+            "sms:displayName": "Dataset Data Use Codes",
+            "sms:pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -76176,6 +75052,123 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string",
             "sms:displayName": "File Assay Category",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DataUseCodes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
+            "rdfs:label": "DataUseCodes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:PendingAnnotation"
+                },
+                {
+                    "@id": "bts:DUO:0000042"
+                },
+                {
+                    "@id": "bts:DUO:0000027"
+                },
+                {
+                    "@id": "bts:DUO:0000016"
+                },
+                {
+                    "@id": "bts:DUO:0000029"
+                },
+                {
+                    "@id": "bts:DUO:0000043"
+                },
+                {
+                    "@id": "bts:DUO:0000015"
+                },
+                {
+                    "@id": "bts:DUO:0000004"
+                },
+                {
+                    "@id": "bts:DUO:0000045"
+                },
+                {
+                    "@id": "bts:DUO:0000017"
+                },
+                {
+                    "@id": "bts:DUO:0000011"
+                },
+                {
+                    "@id": "bts:DUO:0000046"
+                },
+                {
+                    "@id": "bts:DUO:0000018"
+                },
+                {
+                    "@id": "bts:DUO:0000044"
+                },
+                {
+                    "@id": "bts:DUO:0000021"
+                },
+                {
+                    "@id": "bts:DUO:0000006"
+                },
+                {
+                    "@id": "bts:DUO:0000019"
+                },
+                {
+                    "@id": "bts:DUO:0000026"
+                },
+                {
+                    "@id": "bts:DUO:0000020"
+                },
+                {
+                    "@id": "bts:DUO:0000012"
+                },
+                {
+                    "@id": "bts:DUO:0000025"
+                },
+                {
+                    "@id": "bts:DUO:0000024"
+                },
+                {
+                    "@id": "bts:DUO:0000028"
+                },
+                {
+                    "@id": "bts:DUO:0000022"
+                },
+                {
+                    "@id": "bts:DUO:0000007"
+                },
+                {
+                    "@id": "bts:DUOPlus1"
+                },
+                {
+                    "@id": "bts:DUOPlus2"
+                },
+                {
+                    "@id": "bts:DUOPlus3"
+                },
+                {
+                    "@id": "bts:DUOPlus4"
+                },
+                {
+                    "@id": "bts:DUOPlus5"
+                },
+                {
+                    "@id": "bts:DUOPlus6"
+                },
+                {
+                    "@id": "bts:DUOPlus7"
+                }
+            ],
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string_list",
+            "sms:displayName": "Data Use Codes",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -102691,6 +101684,840 @@
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Feature barcoding",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000042",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000042",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000042",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000027",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000027",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000027",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000016",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000016",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000016",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000029",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000029",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000029",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000043",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000043",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000043",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000015",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000015",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000015",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000004",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000004",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000004",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000045",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000045",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000045",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000017",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000017",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000017",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000011",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000011",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000011",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000046",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000046",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000046",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000018",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000018",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000018",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000044",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000044",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000044",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000021",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000021",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000021",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000006",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000006",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000006",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000019",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DUO:0000019",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "DUO:0000019",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000026",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that use is limited to use by approved users.",
+            "rdfs:label": "DUO:0000026",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000026",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:UserSpecificRestriction"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000020",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).",
+            "rdfs:label": "DUO:0000020",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000020",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:CollaborationRequired"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000012",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that use is limited to studies of a certain research type.",
+            "rdfs:label": "DUO:0000012",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000012",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:ResearchSpecificRestrictions"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000025",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that use is approved for a specific number of months.",
+            "rdfs:label": "DUO:0000025",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000025",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:TimeLimitOnUse"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000024",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.",
+            "rdfs:label": "DUO:0000024",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000024",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:PublicationMoratorium"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000028",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that use is limited to use within an approved institution.",
+            "rdfs:label": "DUO:0000028",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000028",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:InstitutionSpecificRestriction"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000022",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use modifier indicates that use is limited to within a specific geographic region.",
+            "rdfs:label": "DUO:0000022",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000022",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:GeographicalRestriction"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUO:0000007",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This data use permission indicates that use is allowed provided it is related to the specified disease.",
+            "rdfs:label": "DUO:0000007",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUO:0000007",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:DiseaseSpecificResearch"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus1",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Source geography is relevant to governance decisions.",
+            "rdfs:label": "DUOPlus1",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus1",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SourceGeography"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Study population is relevant to governance decisions.",
+            "rdfs:label": "DUOPlus2",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus2",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:PopulationType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Data deidentification is relevant to governance decisions.",
+            "rdfs:label": "DUOPlus3",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus3",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:DeidentificationType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus4",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A data permission designation is associated with the Study.",
+            "rdfs:label": "DUOPlus4",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus4",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:DataPermission"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus5",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A data tier designation is associated with the Study.",
+            "rdfs:label": "DUOPlus5",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus5",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:DataTier"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus6",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A license is associated with the Study.",
+            "rdfs:label": "DUOPlus6",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus6",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:License"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DUOPlus7",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Attribution conditions are associated with this Study.",
+            "rdfs:label": "DUOPlus7",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataUseCodes"
+                },
+                {
+                    "@id": "bts:DataUseModifiers"
+                },
+                {
+                    "@id": "bts:DSPDataUseCodes"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:columnType": "string",
+            "sms:displayName": "DUOPlus7",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Attribution"
+                }
+            ],
             "sms:validationRules": []
         },
         {

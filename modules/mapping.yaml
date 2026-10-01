@@ -63,8 +63,6 @@ dataCatalog:
   src: dataCatalog/dataCatalog_data_type.csv
 - name: manifestation
   src: shared/tumorType.csv
-- name: dataCatalogDataUseModifiers
-  src: shared/duo.csv
 education:
 - name: Resource Topic
   src: education/ed_topic.csv
