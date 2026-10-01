@@ -1,7 +1,9 @@
 CSV := mc2.model.csv
 DATA := DataDSP Study FileView PublicationView GrantView ToolView EducationalResource DatasetView DataCatalog Biospecimen Model Individual SequencingLevel1 SequencingLevel2 SequencingLevel3 SequencingRNALevel1 ImagingChannel ImagingLevel1 ImagingLevel2 ImagingLevel3Image ImagingLevel3Segments ImagingLevel4 NanoStringGeoMxAuxiliaryFiles NanoStringGeoMxDSPImaging NanoStringGeoMxDSPLevel1 NanoStringGeoMxDSPLevel2 NanoStringGeoMxDSPLevel3 NanoStringGeoMXROISegmentAnnotation VisiumAuxiliaryFiles VisiumRNALevel1 VisiumRNALevel2 VisiumRNALevel3 VisiumRNALevel4 PersonView ProjectView Consortium Institution Theme
 
-all: collate convert generate-json
+.PHONY: all collate convert generate-json templates
+
+all: collate convert generate-json templates
 
 collate:
 	@echo "Collating module components..."
@@ -14,3 +16,6 @@ convert:
 
 generate-json:
 	python create_json_from_model.py ${DATA}
+
+templates:
+	python scripts/build_templates.py
