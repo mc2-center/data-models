@@ -87,6 +87,27 @@ def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema
     assert "dataUseModifiers" not in row
 
 
+def test_extract_datacatalog_rows_renames_collision_attributes(monkeypatch):
+    # Live keys species/grantNumber/contributor/studyId are written under the
+    # model's attribute names, which differ to avoid curator class-label
+    # collisions (species/Species are one class label).
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
+        "syn1": {
+            "species": ["Mus musculus"], "grantNumber": ["CA209975"],
+            "contributor": ["Jane Doe"], "studyId": ["syn7315805"],
+        },
+    }))
+    row = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})[0]
+    assert row["Species"] == "Mus musculus"
+    assert row["GrantView Key"] == "CA209975"
+    assert row["dataCatalogContributor"] == "Jane Doe"
+    assert row["dataCatalogStudyId"] == "syn7315805"
+    assert "studyId" not in row
+    assert "species" not in row
+    assert "grantNumber" not in row
+    assert "contributor" not in row
+
+
 def test_extract_datacatalog_rows_reads_known_keys_only(monkeypatch):
     monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
         "syn1": {
@@ -99,7 +120,9 @@ def test_extract_datacatalog_rows_reads_known_keys_only(monkeypatch):
     row = rows[0]
     assert row["DataCatalog_id"] == "syn1"
     assert row["title"] == "A Dataset"
-    assert row["species"] == "Homo sapiens"
+    # live key "species" is written under the shared "Species" attribute.
+    assert row["Species"] == "Homo sapiens"
+    assert "species" not in row
     assert row["creator"] == "Jane Doe|John Smith"  # multivalued
     assert "entityType" not in row
     assert "newKey" not in row
@@ -164,7 +187,7 @@ def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_pat
     # dataCatalogLicense still maps to the real schema.org "license" property
     # (SCHEMA_ORG_FIELDS is keyed by the schema field name, not "license"),
     # and resolves to the real SPDX term already curated in
-    # modules/shared/studyLicense.csv. dataCatalogDataUseModifiers has no
+    # modules/shared/license.csv. dataCatalogDataUseModifiers has no
     # schema.org equivalent, so it's cckp-namespaced; "Pending Annotation"
     # is a real DUO CV term with no ontology mapping (by design), so it gets
     # a literal but no *Term edge.

@@ -31,7 +31,7 @@ The platform supports the documentation and upload of a variety of resource type
 | **Imaging**               | Multiplexed and single-channel imaging data, from raw images through channel, segmentation, and summary statistic levels. |
 | **NanoString GeoMx**      | Digital Spatial Profiler (DSP) spatial transcriptomics data, including ROI/segment annotations and processed expression levels. |
 | **Sequencing**            | Bulk and single-cell sequencing data, including RNA-specific library metadata and processed matrices.  |
-| **10x Visium**            | 10x Genomics Visium spatial transcriptomics data, from slide/capture-area metadata through processed levels. |
+| **Visium**                | 10x Genomics Visium spatial transcriptomics data, from slide/capture-area metadata through processed levels. |
 
 By documenting your resources here, you make your work more discoverable, reproducible, and impactful.
 

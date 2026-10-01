@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-Data models and controlled vocabularies for the [Cancer Complexity Knowledge Portal](https://cancercomplexity.synapse.org/) (CCKP). The model is maintained as CSV files in domain-specific `modules/`, collated into `mc2.model.csv`, and converted to JSON-LD/JSON Schema via `synapseclient.extensions.curator` (the actively-maintained successor to [schematicpy](https://pypi.org/project/schematicpy/), which Sage Bionetworks has announced will be retired by end of 2026) for use by the [Data Curator App](https://dca.app.sagebionetworks.org/).
+Data models and controlled vocabularies for the [Cancer Complexity Knowledge Portal](https://cancercomplexity.synapse.org/) (CCKP). The model is maintained as CSV files in domain-specific `modules/`, collated into `mc2.model.csv`, and converted to JSON-LD/JSON Schema via `synapseclient.extensions.curator` (the actively-maintained successor to [schematicpy](https://pypi.org/project/schematicpy/), which Sage Bionetworks has announced will be retired by end of 2026), registered in Synapse to validate portal tables and curation manifests.
 
 A second subsystem, `kg-pipeline/`, converts this model (plus live CCKP portal data pulled from Synapse) into an RDF knowledge graph - its own LinkML schema, an extract → harmonize → map-to-RDF → validate build, and publish paths to Synapse and (optionally) a SageBrain Neptune S3 bucket. It has its own README, Makefile, and Python environment - see "kg-pipeline (knowledge graph)" under Architecture below.
 

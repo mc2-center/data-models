@@ -284,7 +284,7 @@ def spdx_search(query, spdx_licenses, rows=3):
 # CURIE prefix (lowercased, as cv_ontology_hints returns it) -> the registry
 # backend that actually resolves it. Driven entirely by what the CV's own
 # existing curation already committed to (e.g. institution_name.csv already
-# has real `ROR:...` Ontology Identifier values; tool_license.csv has real
+# has real `ROR:...` Ontology Identifier values; shared/license.csv has real
 # `SPDX:...` ones) - not a guess about the field name or file path. Adding a
 # future non-OLS registry (e.g. a NIH grant-mechanism glossary once some CV
 # starts using an `NIHGRANT:`-style prefix) is one dict entry here plus one

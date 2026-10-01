@@ -1,12 +1,12 @@
-A **10x Visium RNA Level 2** entry documents the alignment workflow outputs downstream of a 10x Visium RNA Level 1 file. This level captures the SAM tags used for the unique molecular identifier (UMI) and spatial barcode fields, a link to the spatial barcode whitelist file, whether hard trimming was applied, and the genomic reference, genome annotation, and workflow version used to perform the alignment.
+A **Visium RNA Level 2** entry documents the alignment workflow outputs downstream of a Visium RNA Level 1 file. This level captures the SAM tags used for the unique molecular identifier (UMI) and spatial barcode fields, a link to the spatial barcode whitelist file, whether hard trimming was applied, and the genomic reference, genome annotation, and workflow version used to perform the alignment.
 
 Level 2 entries make explicit how raw spatial reads were mapped and tagged with their spatial barcodes, preserving the technical details needed to reproduce or audit the alignment step before expression quantification.
 
-## Why You Should Contribute 10x Visium RNA Level 2 Entries
+## Why You Should Contribute Visium RNA Level 2 Entries
 
-Contributing 10x Visium RNA Level 2 entries ensures that the alignment and barcode-tagging workflow applied to spatial sequencing reads is documented with enough detail for others to reproduce or evaluate the analysis shared through the CCKP.
+Contributing Visium RNA Level 2 entries ensures that the alignment and barcode-tagging workflow applied to spatial sequencing reads is documented with enough detail for others to reproduce or evaluate the analysis shared through the CCKP.
 
-### Who Should Be Contributing 10x Visium RNA Level 2 Entries?
+### Who Should Be Contributing Visium RNA Level 2 Entries?
 
 1. **Computational Genomics Analysts** – Record alignment tags, genomic reference, and workflow versions used to process spatial reads.
 2. **Bioinformatics Pipeline Developers** – Document the spatial barcode whitelist and trimming parameters applied during alignment.

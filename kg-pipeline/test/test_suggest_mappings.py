@@ -11,7 +11,7 @@ def test_choose_registry_reads_dominant_prefix_not_src_path():
 
 
 def test_choose_registry_spdx_hint_uses_spdx():
-    assert suggest_mappings.choose_registry(["spdx"], src="tool/tool_license.csv") == "spdx"
+    assert suggest_mappings.choose_registry(["spdx"], src="shared/license.csv") == "spdx"
 
 
 def test_choose_registry_defaults_to_ols_for_real_ols_ontologies():

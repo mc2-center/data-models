@@ -1,0 +1,88 @@
+{
+  "$id": "http://example.com/Consortium",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Consortium information",
+  "properties": {
+    "ConsortiumDescription": {
+      "description": "Description of research consortium",
+      "title": "Consortium Description",
+      "type": "string"
+    },
+    "ConsortiumDisplayName": {
+      "description": "Human readable display name of research consortium (e.g. Sage Bionetworks, CSBC, PS-ON, etc.)",
+      "title": "Consortium Display Name",
+      "type": "string"
+    },
+    "ConsortiumFullName": {
+      "description": "Full name of research consortium. (e.g. Cancer Systems Biology Consortium).",
+      "title": "Consortium Full Name",
+      "type": "string"
+    },
+    "ConsortiumFundingAgency": {
+      "description": "Funding agency of research consortium",
+      "enum": [
+        "Broad Institute",
+        "Center for Biomedical Informatics and Information Technology",
+        "Center for Inherited Disease Research",
+        "Department of Defense",
+        "Division of Cancer Control and Population Sciences",
+        "Evelyn H. Lauder Founder’s Fund for Metastatic Breast Cancer Research",
+        "Food and Drug Administration",
+        "Foundation Medicine Inc",
+        "Georgetown Lombardi Comprehensive Cancer Center",
+        "Knight Cancer Institute",
+        "Leukemia and Lymphoma Society",
+        "Multiple Myeloma Research Foundation",
+        "NCI Center for Cancer Research",
+        "National Cancer Institute",
+        "National Clinical Trials Network",
+        "National Institutes of Health",
+        "National Library of Medicine",
+        "Proteogenomic Translational Research Centers",
+        "Purdue University Center for Cancer Research",
+        "Transplant Recipients International Organization",
+        "UNC Lineberger Comprehensive Cancer Center"
+      ],
+      "title": "Consortium Funding Agency"
+    },
+    "ConsortiumId": {
+      "description": "Unique ID associated with a consortium, used as a key for record linking and updates.",
+      "enum": [
+        "program.ccbir",
+        "program.csbc",
+        "program.htan",
+        "program.icbp",
+        "program.metnet",
+        "program.nci",
+        "program.nci-clinical-and-translational-exploratory-developmental-studies",
+        "program.pdmc",
+        "program.ps-on",
+        "program.sage-bionetworks",
+        "program.tec"
+      ],
+      "title": "Consortium_id"
+    },
+    "ConsortiumName": {
+      "description": "Machine readable name of the research consortium. (e.g. sage_bionetworks, csbc_pson, etc.)",
+      "title": "Consortium Name",
+      "type": "string"
+    },
+    "Website": {
+      "description": "Website of research consortium",
+      "format": "uri",
+      "title": "Website",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ConsortiumDescription",
+    "ConsortiumDisplayName",
+    "ConsortiumFullName",
+    "ConsortiumFundingAgency",
+    "ConsortiumId",
+    "ConsortiumName",
+    "Website"
+  ],
+  "title": "Consortium",
+  "type": "object"
+}

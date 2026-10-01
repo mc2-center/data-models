@@ -33,11 +33,15 @@ presented/downloaded, so `find_dataset_entity_ids()` carries it through and
 
 Known annotation keys read (see modules/dataCatalog/annotationProperty.csv
 for what each means) - every one of these was deliberately named to match
-its live Synapse annotation key exactly, except `dataUseModifiers`/`license`,
-which the schema renamed to `dataCatalogDataUseModifiers`/`dataCatalogLicense`
-to disambiguate from the model's generic attributes of the same name used
-elsewhere - SCHEMA_FIELD_RENAMES below renames just those two at CSV-write
-time, so no key-renaming table is needed for the rest (unlike
+its live Synapse annotation key exactly, except the keys in
+SCHEMA_FIELD_RENAMES below, whose model attribute names differ from the live
+key: either to stay distinct from a shared attribute with a different meaning
+(`dataCatalogLicense`, `dataCatalogStudyId`, ...), or because the live key is
+the shared attribute itself (`species` -> `Species`, `grantNumber` ->
+`GrantView Key`). Curator derives one class label per name with spaces,
+underscores and case folded away, so two model attributes like `species` and
+`Species` would be merged into one. SCHEMA_FIELD_RENAMES renames these
+at CSV-write time, so no key-renaming table is needed for the rest (unlike
 extract_mc2_assay_metadata.py's File-annotation PascalCase -> "Title Case"
 mapping). Keys seen on real entities but NOT in this list are
 administrative/technical noise (`entityType`, `newKey`, `Component`) or this
@@ -60,8 +64,9 @@ LIST_DELIMITER = "|"
 
 # Matches modules/dataCatalog/annotationProperty.csv's DataCatalog class
 # DependsOn list, minus DataCatalog_id (set explicitly from datasetId below)
-# and GrantView Key/Study Key/DatasetView Key (pre-existing FK placeholders
-# not sourced from these entity annotations - left for a separate join).
+# and Study Key/DatasetView Key (FK placeholders not sourced from these
+# entity annotations - left for a separate join). GrantView Key is populated,
+# from the live `grantNumber` key (see SCHEMA_FIELD_RENAMES).
 KNOWN_ATTRIBUTES = [
     "studyId", "portal", "community", "description", "contributor", "keywords",
     "individualCount", "link", "croissant_s3_file_object", "accessType",
@@ -119,15 +124,17 @@ MULTIVALUED_ATTRIBUTES = {
     "species", "subject", "countryOfOrigin", "externalRepositoryUri",
 }
 
-# modules/dataCatalog/annotationProperty.csv renamed these two attributes
-# (to disambiguate from the model's generic dataUseModifiers/license
-# attributes used elsewhere) without renaming the underlying live Synapse
-# annotation key - so the raw key above is still what's read from Synapse,
-# but the output CSV column must use the schema's field name, since
-# harmonize.py/build_datacatalog_triples.py key off schema/mc2_model.linkml.yaml.
+# Live Synapse annotation key -> model attribute name, where they differ (see
+# the module docstring). The raw key is what's read from Synapse; the output
+# CSV column uses the model's name, since harmonize.py/build_datacatalog_
+# triples.py key off schema/mc2_model.linkml.yaml.
 SCHEMA_FIELD_RENAMES = {
     "dataUseModifiers": "dataCatalogDataUseModifiers",
     "license": "dataCatalogLicense",
+    "species": "Species",
+    "grantNumber": "GrantView Key",
+    "contributor": "dataCatalogContributor",
+    "studyId": "dataCatalogStudyId",
 }
 
 

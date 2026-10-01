@@ -64,7 +64,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 
 ## STILL UNRESOLVED — needs manual review
 
-- `SPDX` (327 row(s)) — no clean Ontology Url match and no fallback known.
+- `SPDX` (325 row(s)) — no clean Ontology Url match and no fallback known.
 
 ## Already declared in the schema (left untouched)
 
