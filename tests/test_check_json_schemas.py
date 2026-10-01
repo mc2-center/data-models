@@ -201,21 +201,19 @@ def test_leading_digit_fails(tmp_path):
 
 
 # ---------------------------------------------------------------------------
-# Rule: enum values must be in display form
+# Rule: enum values must exactly match the attribute's CSV Valid Values
 # ---------------------------------------------------------------------------
 
 
 def test_enum_display_form_pass(tmp_path):
-    csv_path = _write_csv(tmp_path, [_row("Example", is_template="True")])
-    jsonld_path = _write_jsonld(
+    csv_path = _write_csv(
         tmp_path,
         [
-            _node("Example", "Example"),
-            _node("Species", "Species", range_includes=["Human", "NotApplicable"]),
-            _node("Human", "Human"),
-            _node("NotApplicable", "Not Applicable"),
+            _row("Example", is_template="True"),
+            _row("Species", valid_values="Human, Not Applicable"),
         ],
     )
+    jsonld_path = _write_jsonld(tmp_path, [_node("Example", "Example")])
     schema_path = _write_schema(
         tmp_path,
         "Example",
@@ -233,16 +231,14 @@ def test_enum_display_form_pass(tmp_path):
 
 
 def test_enum_not_display_form_fails(tmp_path):
-    csv_path = _write_csv(tmp_path, [_row("Example", is_template="True")])
-    jsonld_path = _write_jsonld(
+    csv_path = _write_csv(
         tmp_path,
         [
-            _node("Example", "Example"),
-            _node("Species", "Species", range_includes=["Human", "NotApplicable"]),
-            _node("Human", "Human"),
-            _node("NotApplicable", "Not Applicable"),
+            _row("Example", is_template="True"),
+            _row("Species", valid_values="Human, Not Applicable"),
         ],
     )
+    jsonld_path = _write_jsonld(tmp_path, [_node("Example", "Example")])
     # Squashed class label "NotApplicable" left in the enum instead of being
     # rewritten to its display name "Not Applicable".
     schema_path = _write_schema(
@@ -261,6 +257,69 @@ def test_enum_not_display_form_fails(tmp_path):
     enum_failures = [f for f in failures if f.rule == "enum_not_display_form"]
     assert len(enum_failures) == 1
     assert "NotApplicable" in enum_failures[0].detail
+
+
+def test_enum_casing_collision_pass(tmp_path):
+    # Two attributes whose Valid Values differ only by case ("No"/"no") both
+    # collapse to the class label "No" under curator's first-letter-only
+    # normalization. Each schema's enum must match its *own* attribute's
+    # casing exactly.
+    csv_path = _write_csv(
+        tmp_path,
+        [
+            _row("Example", is_template="True"),
+            _row("Prop A", valid_values="No, Yes"),
+            _row("Prop B", valid_values="no, yes"),
+        ],
+    )
+    jsonld_path = _write_jsonld(tmp_path, [_node("Example", "Example")])
+    schema_path = _write_schema(
+        tmp_path,
+        "Example",
+        {
+            "title": "Example",
+            "properties": {
+                "PropA": {"enum": ["No", "Yes"], "title": "Prop A"},
+                "PropB": {"enum": ["no", "yes"], "title": "Prop B"},
+            },
+            "required": [],
+        },
+    )
+
+    failures = run_checks([schema_path], csv_path, jsonld_path)
+    assert "enum_not_display_form" not in _rules(failures)
+
+
+def test_enum_casing_collision_fails_with_wrong_case(tmp_path):
+    csv_path = _write_csv(
+        tmp_path,
+        [
+            _row("Example", is_template="True"),
+            _row("Prop A", valid_values="No, Yes"),
+            _row("Prop B", valid_values="no, yes"),
+        ],
+    )
+    jsonld_path = _write_jsonld(tmp_path, [_node("Example", "Example")])
+    # PropB wrongly carries PropA's casing ("No"/"Yes") instead of its own
+    # ("no"/"yes") - the exact bug a JSON-LD-node-keyed (or any
+    # cross-property) lookup can produce.
+    schema_path = _write_schema(
+        tmp_path,
+        "Example",
+        {
+            "title": "Example",
+            "properties": {
+                "PropA": {"enum": ["No", "Yes"], "title": "Prop A"},
+                "PropB": {"enum": ["No", "Yes"], "title": "Prop B"},
+            },
+            "required": [],
+        },
+    )
+
+    failures = run_checks([schema_path], csv_path, jsonld_path)
+    enum_failures = [f for f in failures if f.rule == "enum_not_display_form"]
+    assert len(enum_failures) == 1
+    assert "PropB" in enum_failures[0].detail
 
 
 # ---------------------------------------------------------------------------

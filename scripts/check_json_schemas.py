@@ -9,10 +9,15 @@ files) against ``mc2.model.csv`` and ``mc2.model.jsonld`` for:
   2. No property key contains a space.
   3. No property key, and no schema filename/``title``/``$id`` name, starts
      with a digit.
-  4. Every enum value is in display form: it must equal one of the display
-     names (Valid Values) of the property it belongs to, using the same
-     per-property JSON-LD lookup as the enum-display-label post-processing
-     step (``scripts/enum_display_labels.py``).
+  4. Every enum's set of values matches its attribute's CSV ``Valid Values``
+     exactly (set equality, case-sensitive) - using the same per-attribute,
+     CSV-primary/JSON-LD-fallback lookup as the enum-display-label
+     post-processing step (``scripts/enum_display_labels.py``). Comparing
+     against each attribute's own Valid Values (rather than a value's
+     display name anywhere in the model) is what catches casing collisions:
+     curator's class-label algorithm only normalizes the first letter, so
+     e.g. the CV value "No" and the ISO 639-1 language code "no" collapse to
+     the same class label and could otherwise be silently swapped.
   5. ``required`` includes every attribute of that template which is
      ``Required == true`` (case-insensitive) in ``mc2.model.csv``. A
      template's attributes are the ``sms:requiresDependency`` list of its
@@ -44,8 +49,9 @@ from typing import Any, Dict, List, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts.enum_display_labels import (
-    JsonLdMaps,
-    build_jsonld_maps,
+    EnumMaps,
+    build_enum_maps,
+    get_valid_display_values,
     iter_properties_blocks,
     load_jsonld_graph,
     strip_prefix,
@@ -144,39 +150,72 @@ def _id_name(schema_id: Optional[str]) -> Optional[str]:
     return schema_id.rsplit("/", 1)[-1]
 
 
+def _format_values(values: List[str], limit: int = 8) -> List[str]:
+    values = list(values)
+    if len(values) <= limit:
+        return values
+    return values[:limit] + [f"... (+{len(values) - limit} more)"]
+
+
 def check_enum_display_form(
-    schema_name: str, schema: dict, maps: JsonLdMaps
+    schema_name: str, schema: dict, maps: EnumMaps
 ) -> List[Failure]:
+    """Check every enum's values against its attribute's CSV Valid Values.
+
+    A property's own top-level declaration (``properties.<Key>.enum`` /
+    ``.items.enum``) must match its attribute's Valid Values *exactly* (set
+    equality) - this is what catches a casing/wrong-value bug like "No" vs
+    "no" even when every individual value still looks plausible. An enum
+    occurrence nested inside a conditional-dependency branch
+    (``allOf``/``if``/``then``/etc.) is instead checked as a subset: those
+    branches legitimately narrow a property to a handful of its values on
+    purpose (e.g. "DataUseCodes includes DUO:0000007"), so only values
+    foreign to the attribute's Valid Values are flagged there, not omissions.
+    """
     failures = []
-    for key, container, field_name in walk_enum_containers(schema):
-        property_map = maps.property_value_maps.get(key or "")
-        if property_map is None:
+    for key, container, field_name, in_conditional in walk_enum_containers(schema):
+        valid_map = get_valid_display_values(key, maps)
+        if valid_map is None:
             failures.append(
                 Failure(
                     rule="enum_not_display_form",
                     schema=schema_name,
                     detail=(
-                        f"property '{key}' has an enum but no matching "
-                        "property (with schema:rangeIncludes) was found in "
-                        "mc2.model.jsonld; cannot verify its enum values are "
-                        "in display form"
+                        f"property '{key}' has an enum but no attribute Valid "
+                        "Values were found for it in mc2.model.csv (nor, as a "
+                        "fallback, a schema:rangeIncludes range in "
+                        "mc2.model.jsonld); cannot verify its enum values"
                     ),
                 )
             )
             continue
-        valid_display_names = set(property_map.values())
-        for value in container[field_name]:
-            if value not in valid_display_names:
-                failures.append(
-                    Failure(
-                        rule="enum_not_display_form",
-                        schema=schema_name,
-                        detail=(
-                            f"property '{key}' enum value '{value}' is not "
-                            "one of its valid display names"
-                        ),
-                    )
-                )
+
+        expected = set(valid_map.values())
+        actual = set(container[field_name])
+
+        unexpected = sorted(actual - expected)
+        missing = sorted(expected - actual) if not in_conditional else []
+        if not unexpected and not missing:
+            continue
+
+        details = []
+        if unexpected:
+            details.append(
+                f"has values not in its attribute's Valid Values: "
+                f"{_format_values(unexpected)}"
+            )
+        if missing:
+            details.append(
+                f"is missing values from its attribute's Valid Values: "
+                f"{_format_values(missing)}"
+            )
+        failures.append(
+            Failure(
+                rule="enum_not_display_form",
+                schema=schema_name,
+                detail=f"property '{key}' enum " + "; ".join(details),
+            )
+        )
     return failures
 
 
@@ -258,7 +297,7 @@ def check_required_completeness(
 
 def check_schema_file(
     path: str,
-    maps: JsonLdMaps,
+    maps: EnumMaps,
     label_index: Dict[str, dict],
     required_by_display_name: Dict[str, bool],
 ) -> List[Failure]:
@@ -279,7 +318,7 @@ def check_schema_file(
 def run_checks(
     schema_paths: List[str], model_csv: str, model_jsonld: str
 ) -> List[Failure]:
-    maps = build_jsonld_maps(model_jsonld)
+    maps = build_enum_maps(model_csv, model_jsonld)
     graph = load_jsonld_graph(model_jsonld)
     label_index = _build_label_index(graph)
     required_by_display_name = _load_required_by_display_name(model_csv)
