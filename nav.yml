@@ -36,7 +36,7 @@ Data Models:
       - Sequencing Level 2: model/sequencingLevel2.md
       - Sequencing Level 3: model/sequencingLevel3.md
       - Sequencing RNA Level 1: model/sequencingRNALevel1.md
-  - 10x Visium Data Model:
+  - Visium Data Model:
       - Visium Auxiliary Files: model/visiumRNAAux.md
       - Visium RNA Level 1: model/visiumRNALevel1.md
       - Visium RNA Level 2: model/visiumRNALevel2.md

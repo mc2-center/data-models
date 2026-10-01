@@ -40,11 +40,11 @@ DATA_MODELS = {
     "sequencingLevel2": "Sequencing Level 2",
     "sequencingLevel3": "Sequencing Level 3",
     "sequencingRNALevel1": "Sequencing RNA Level 1",
-    "visiumRNAAux": "10x Visium Auxiliary Files",
-    "visiumRNALevel1": "10x Visium RNA Level 1",
-    "visiumRNALevel2": "10x Visium RNA Level 2",
-    "visiumRNALevel3": "10x Visium RNA Level 3",
-    "visiumRNALevel4": "10x Visium RNA Level 4",
+    "visiumRNAAux": "Visium Auxiliary Files",
+    "visiumRNALevel1": "Visium RNA Level 1",
+    "visiumRNALevel2": "Visium RNA Level 2",
+    "visiumRNALevel3": "Visium RNA Level 3",
+    "visiumRNALevel4": "Visium RNA Level 4",
 }
 
 # Each model's exported JSON Schema is the authoritative list of which
