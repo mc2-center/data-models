@@ -200,8 +200,6 @@ shared:
   src: shared/sourceGeography.csv
 - name: deidentificationType
   src: shared/deIdMethod.csv
-- name: license
-  src: shared/studyLicense.csv
 - name: dataPermission
   src: shared/dataPermission.csv
 - name: dataTier
