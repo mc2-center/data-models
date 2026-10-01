@@ -1,6 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
 Grant Name,Name of the grant,,,True,,,string,,,,,,
-Grant Number,"Number of the grant (i.e. ""CA------"" format)",,,True,CRDC_CDE:16002823,,string,,^CA\d{6}$,,,,
+Grant Number,"Number of the grant (i.e. ""CA------"" format)",,,True,CRDC_CDE:16002823,,string,,^(CA\d{6}|Affiliated/Non-Grant Associated)$,,,,
 Grant Abstract,Abstract for the grant,,,True,,,string,,,,,,
 Grant Type,Type of grant,"R01, R21, R37, U01, U24, U54",,True,,,string,,,,,,
 Grant View,The denormalized manifest for grant submission.,,"GrantView_id, Grant Name, Grant Number, Grant Abstract, Grant Type, Grant Theme Name, Grant Institution Name, Grant Institution Alias, Institution Key, Investigator, PersonView Key, Consortium Key, Grant Start Date, Grant End Date, NIH RePORTER Link, Duration of Funding, Embargo End Date, Grant Synapse Team, Grant Synapse Project",,,,,,,,,True,
