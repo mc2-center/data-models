@@ -57,8 +57,6 @@ dataCatalog:
   src: shared/license.csv
 - name: measurementTechnique
   src: shared/assay.csv
-- name: species
-  src: shared/dataset_species.csv
 - name: downloadType
   src: dataCatalog/dataCatalog_download_type.csv
 - name: dataType
