@@ -35,12 +35,12 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Publication Keywords | Cancer Pathways, Inflammation, Tumor Microenvironment |
 | Publication Authors | Dr. Sarah Johnson, Dr. Michael Lee, Prof. Amanda Carter |
 | Publication Abstract | This study investigates inflammatory pathways and their impact on tumor progression and metastasis. |
-| Publication Assay | RNA Sequencing, In Vivo Bioluminescence |
-| Publication Tumor Type | Lung Cancer, Breast Cancer |
-| Publication Tissue | Lung, Breast |
+| Assay | RNA Sequencing, In Vivo Bioluminescence |
+| Tumor Type | Lung Carcinoma, Breast Carcinoma |
+| Tissue | Lung, Breast |
 | Publication Accessibility | Open Access |
 | Publication View | Online |
-| Publication Grant Number | CA302123, CA301987 |
+| GrantView Key | CA302123, CA301987 |
 | Publication Dataset Alias | GSE45678, DOI:10.1000/exampledataset |
 | PublicationView_id | PublicationView_45678 |
 

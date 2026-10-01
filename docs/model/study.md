@@ -35,7 +35,7 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Study | Biology |
 | Study Name | Effects of Diet and Exercise on Obesity |
 | Study Description | Analysis of Cardiovascular Response during Exercise |
-| Study Investigator | Dr. Jane Doe, PhD in Nutrition Science, University of Texas |
+| Investigator | Dr. Jane Doe, PhD in Nutrition Science, University of Texas |
 | Study_id | STUDY_2024_OBESITY_EXERCISE |
 | Study Number of Participants | 5000 |
 | Study Number of Samples | 120 |
@@ -44,18 +44,27 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Study Deidentification Method Software | Safe Harbor Privacy Software |
 | Study dbGaP Accession Id | phs000424.v7.p2 |
 | Study Project Identifier | syn12345678 |
-| Study Data Use Codes | DUO:0000021, DUO:0000019, DUO:0000006 |
+| Data Use Codes | DUO:0000021, DUO:0000019, DUO:0000006 |
 
 
 ## Data Use Ontology (DUO) Implementation
 
-MC<sup>2</sup> Center uses the [Data Use Ontology (DUO)](https://github.com/EBISPOT/DUO) to record the consent permissions and use restrictions that apply to a Study's data and materials. DUO terms are defined once, in the shared vocabulary (`modules/shared/annotationProperty.csv` and `modules/shared/duo.csv`), and are reused by any attribute that needs to describe data use — currently, `Study Data Use Codes` is that attribute for Study entries.
+MC<sup>2</sup> Center uses the [Data Use Ontology (DUO)](https://github.com/EBISPOT/DUO) to record the consent permissions and use restrictions that apply to data and materials. DUO terms are defined once, in the shared vocabulary (`modules/shared/annotationProperty.csv` and `modules/shared/duo.csv`). Full definitions for every term are on the [Shared Standard Terms page](../valid_values/shared.md#attribute-data-use-codes).
 
-`Study Data Use Codes` is a multi-select, string-list attribute. Its valid values are almost all real DUO term CURIEs (e.g. `DUO:0000006`, `DUO:0000021`), plus a `Pending Annotation` placeholder for studies that have not yet been reviewed for data use restrictions. Full definitions for every valid DUO term are documented on the [Study Standard Terms page](../valid_values/study.md#attribute-study-data-use-codes).
+Which attribute records DUO codes depends on the template:
+
+| Template | Attribute | Controlled list and companion fields? |
+|---|---|---|
+| Study, File View, and the file-level assay templates (Imaging, Sequencing, NanoString GeoMx, Visium) | `Data Use Codes` | Yes |
+| DataDSP | `DSP Data Use Codes` | Yes |
+| Dataset View | `Dataset Data Use Codes` | No |
+| DataCatalog | `dataCatalogDataUseModifiers` | No |
+
+All four are multi-select, string-list attributes. Most values are real DUO term CURIEs (e.g. `DUO:0000006`, `DUO:0000021`), plus a `Pending Annotation` placeholder for records that have not yet been reviewed for data use restrictions. The Dataset View and DataCatalog attributes have no controlled list, so they never add companion fields; each value must still look like a DUO code (`DUO:0000042`, `DUOPlus3`) or be `Pending Annotation`.
 
 ### DUOPlus terms: Sage Bionetworks extensions to DUO
 
-DUO does not have terms for a few governance concepts this model needs to track (deidentification method, data tier, license, etc.), so Sage Bionetworks defined seven extension terms, `DUOPlus1` through `DUOPlus7`, that this model reuses as valid values for `Study Data Use Codes` alongside the real DUO terms:
+DUO does not have terms for a few governance concepts this model needs to track (deidentification method, data tier, license, etc.), so Sage Bionetworks defined seven extension terms, `DUOPlus1` through `DUOPlus7`, that this model uses alongside the real DUO terms:
 
 | DUOPlus Term | Governance Concept | Companion Field |
 |---|---|---|
@@ -64,14 +73,14 @@ DUO does not have terms for a few governance concepts this model needs to track 
 | DUOPlus3 | Data deidentification | `deidentificationType` |
 | DUOPlus4 | Data permission | `dataPermission` |
 | DUOPlus5 | Data tier | `dataTier` |
-| DUOPlus6 | License | `license` |
+| DUOPlus6 | License | `License` |
 | DUOPlus7 | Attribution | `attribution` |
 
 ### How conditionally required fields are surfaced
 
-Most DUO terms (e.g. `DUO:0000042`/General Research Use, `DUO:0000006`/Health or Medical or Biomedical Research) are self-contained labels — selecting one doesn't require anything else. A subset of terms, however, indicate that additional detail must be provided alongside the code. For these terms, the model links the code to a **companion field**: a separate attribute where the contributor records that detail. Selecting the code makes its companion field conditionally required; all other companion fields remain optional.
+Most DUO terms (e.g. `DUO:0000042`/General Research Use, `DUO:0000006`/Health or Medical or Biomedical Research) are self-contained labels — selecting one doesn't require anything else. A subset of terms, however, indicate that additional detail must be provided alongside the code. For these terms, the model links the code to a **companion field**: a separate attribute where the contributor records that detail. In the templates whose DUO attribute uses the controlled list (see the table above), selecting the code makes its companion field conditionally required; all other companion fields remain optional.
 
-This conditional relationship is declared directly in `modules/shared/annotationProperty.csv`: each of these DUO/DUOPlus terms also appears there as its own `Attribute` row, and that row's `DependsOn` column names the companion field it requires. When the model is compiled to JSON Schema, each of these rows becomes an `if`/`then` rule on `Study Data Use Codes` — e.g. `StudyDataUseCodes` containing `DUO:0000026` requires `UserSpecificRestriction` to be filled in. `json_schemas/Study.json` currently has 15 such rules, one for each DUO/DUOPlus term listed below:
+This conditional relationship is declared directly in `modules/shared/annotationProperty.csv`: each of these DUO/DUOPlus terms also appears there as its own `Attribute` row, and that row's `DependsOn` column names the companion field it requires. When the model is compiled to JSON Schema, each of these rows becomes an `if`/`then` rule on the DUO attribute — e.g. `DataUseCodes` containing `DUO:0000026` requires `UserSpecificRestriction` to be filled in. `json_schemas/Study.json` has 14 such rules, one for each term below except `DUOPlus6`: Study always includes `License`, so it needs no rule.
 
 | DUO Term | Meaning | Companion Field (conditionally required) |
 |---|---|---|
@@ -83,9 +92,9 @@ This conditional relationship is declared directly in `modules/shared/annotation
 | DUO:0000025 | Time limit on use | `timeLimitOnUse` (number of months) |
 | DUO:0000026 | User-specific restriction | `userSpecificRestriction` |
 | DUO:0000028 | Institution-specific restriction | `institutionSpecificRestriction` (ROR ID) |
-| DUOPlus1–DUOPlus7 | Sage Bionetworks DUOPlus governance extensions (see table above) | `sourceGeography`, `populationType`, `deidentificationType`, `dataPermission`, `dataTier`, `license`, `attribution` |
+| DUOPlus1–DUOPlus7 | Sage Bionetworks DUOPlus governance extensions (see table above) | `sourceGeography`, `populationType`, `deidentificationType`, `dataPermission`, `dataTier`, `License`, `attribution` |
 
-For example, a Study entry with `Study Data Use Codes` set to `DUO:0000024, DUO:0000022` must also provide values for `publicationMoratorium` (the moratorium end date) and `geographicalRestriction` (the applicable country code(s)) — but can leave every other companion field blank, since none of the other DUO/DUOPlus terms were selected.
+For example, a Study entry with `Data Use Codes` set to `DUO:0000024, DUO:0000022` must also provide values for `publicationMoratorium` (the moratorium end date) and `geographicalRestriction` (the applicable country code(s)) — but can leave every other companion field blank, since none of the other DUO/DUOPlus terms were selected.
 
 
 ## Full Field Reference

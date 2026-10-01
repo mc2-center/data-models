@@ -1,0 +1,65 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Decline to answer",
+    "ontology_identifier": "NCIT:C51024",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C51024",
+    "label": "Response Declined",
+    "description": "Used to indicate when a respondent makes a decision to not answer a question.",
+    "verification": {"verdict": "partial", "note": "NCIT:C51024 Response Declined; 'Decline to answer' is functionally equivalent — the respondent chose not to answer. Label differs but concept matches."}
+  },
+  {
+    "row_index": 1,
+    "term": "Don't know",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "partial", "note": "NCIT:C17998 Unknown; 'Don't know' expresses uncertainty about one's own biological sex — closest standard NCIT qualifier. No dedicated 'Don't know' term found in NCIT."}
+  },
+  {
+    "row_index": 2,
+    "term": "Female",
+    "ontology_identifier": "NCIT:C16576",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16576",
+    "label": "Female",
+    "description": "An individual who belongs to the sex that normally produces ova.",
+    "verification": {"verdict": "match", "note": "NCIT:C16576 Female; exact label match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Intersex",
+    "ontology_identifier": "NCIT:C45908",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C45908",
+    "label": "Intersex",
+    "description": "Refers to an individual who was born with genitalia and/or secondary sexual characteristics of indeterminate sex, or which combine features of both sexes.",
+    "verification": {"verdict": "match", "note": "NCIT:C45908 Intersex; exact label match, appropriate for a biological sex vocabulary."}
+  },
+  {
+    "row_index": 4,
+    "term": "Male",
+    "ontology_identifier": "NCIT:C20197",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C20197",
+    "label": "Male",
+    "description": "An individual who belongs to the sex that normally produces sperm.",
+    "verification": {"verdict": "match", "note": "NCIT:C20197 Male; exact label match."}
+  },
+  {
+    "row_index": 6,
+    "term": "Prefer not to answer",
+    "ontology_identifier": "NCIT:C132222",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C132222",
+    "label": "Prefer Not to Answer",
+    "description": "A response indicating that an individual prefers or preferred not to answer.",
+    "verification": {"verdict": "match", "note": "NCIT:C132222 Prefer Not to Answer; exact label match."}
+  },
+  {
+    "row_index": 7,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  }
+]}

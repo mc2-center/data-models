@@ -1,0 +1,212 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/organization
+name: sage-cdm-organization
+title: Sage CDM ORGANIZATION
+description: >-
+  ORGANIZATION represents an institution, company, funder, or other organizational entity
+  that participates in Sage research — as a maintainer of a portal, an affiliation for a
+  person, a contributor to a study, or a funding source.
+
+  ORGANIZATION is a thin wrapper around the Research Organization Registry (ROR), which is
+  the external source of truth. Sage is a USER of ROR, not a maintainer of organizational
+  metadata. Do not add slots for detailed address, geographic hierarchy, subsidiary
+  structure, or organizational history — those live in ROR and resolve via ror_id.
+
+  Reference slots contributed by this file (defined here so the import graph stays acyclic):
+  funding_source, primary_affiliation, contributing_organizations.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788158562/Entity+ORGANIZATION
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+  schema: http://schema.org/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - base_entity
+
+enums:
+
+  OrganizationTypeEnum:
+    title: Organization Type
+    description: >-
+      The type of organization, cached from ROR's classification. Values are ROR's own
+      organization types.
+    comments:
+      - >-
+        A type, not a role. Organizations of type funder fund programs, but that fact is
+        captured in the relationship, not on the organization.
+    permissible_values:
+      education:
+        description: Universities, colleges, and other degree-granting institutions.
+      healthcare:
+        description: Hospitals, clinics, and health systems.
+      company:
+        description: For-profit companies.
+      archive:
+        description: Archives, libraries, and repositories.
+      nonprofit:
+        description: Non-profit organizations, including Sage Bionetworks itself.
+      government:
+        description: Government agencies and institutes, including the NIH institutes.
+      facility:
+        description: Research facilities, instruments, and core facilities.
+      funder:
+        description: >-
+          Funding organizations. Per ROR's 2023 unification of the Crossref Funder Registry,
+          funders are ORGANIZATION records rather than a separate FUNDER entity.
+      other:
+        description: Anything ROR classifies outside the categories above.
+
+slots:
+
+  ror_id:
+    title: ROR ID
+    description: >-
+      The organization's ROR identifier. This is the external source of truth for the
+      organization across the scholarly ecosystem — once populated, ROR owns location,
+      aliases, funder identifiers, and organizational hierarchy.
+    range: uri
+    pattern: '^https://ror\.org/0[a-hj-km-np-tv-z0-9]{6}[0-9]{2}$'
+    exact_mappings:
+      - schema:identifier
+    comments:
+      - Enter the full ROR URL, not the bare ID, and never a GRID ID.
+      - >-
+        Strongly recommended even though optional. Kept optional because some small labs,
+        informal groups, and brand-new organizations legitimately are not in ROR, and
+        requiring it would exclude them. If an organization warrants inclusion, ROR is
+        community-governed and accepts submissions.
+
+  acronym:
+    title: Acronym
+    description: >-
+      The organization's commonly-used acronym or short name, cached from ROR's acronyms
+      list for local convenience and searchability.
+    range: string
+    exact_mappings:
+      - schema:alternateName
+    comments:
+      - >-
+        Single-valued by design. ROR stores a list; the CDM caches only the single most
+        commonly-used value, matching how Sage staff actually refer to organizations day to
+        day (JAX, NIA, NIH). Consumers needing the full list resolve via ror_id.
+      - >-
+        Not a campus code, a department abbreviation, or a funding mechanism such as U01.
+      - >-
+        Not every organization has one in common use — Sage Bionetworks does not. Leave
+        blank rather than inventing one.
+
+  type:
+    title: Type
+    description: The type of organization, cached from ROR's classification.
+    range: OrganizationTypeEnum
+    exact_mappings:
+      - dcterms:type
+
+  country:
+    title: Country
+    description: >-
+      The country the organization is primarily based in, cached from ROR, as an ISO 3166-1
+      alpha-2 two-letter code.
+    range: string
+    pattern: '^[A-Z]{2}$'
+    comments:
+      - Never a full country name, and never a region, state, or city.
+
+  # --- Reference slots targeting Organization -------------------------------
+  funding_source:
+    title: Funding Source
+    description: >-
+      The organization(s) providing financial support. Funders are ORGANIZATION records with
+      ROR identifiers, not free-text names.
+    range: Organization
+    multivalued: true
+    inlined: false
+    slot_uri: dcterms:contributor
+    comments:
+      - >-
+        Not a grant number, not a funding mechanism such as U01 or R01, not a program
+        officer, and not a funding announcement number.
+      - >-
+        Grant-level detail (grant number, mechanism, PI, dates) belongs on a future GRANT
+        entity, not here. This slot tracks funding organizations only.
+      - >-
+        Maps to Crossref/DataCite `funder`; the ROR identifier travels with the referenced
+        ORGANIZATION.
+
+  primary_affiliation:
+    title: Primary Affiliation
+    description: Reference to a person's primary institutional affiliation.
+    range: Organization
+    inlined: false
+    exact_mappings:
+      - schema:affiliation
+    comments:
+      - Never a free-text institution name — reuse ORGANIZATION rather than redefining it.
+
+  contributing_organizations:
+    title: Contributing Organizations
+    description: >-
+      The organizations that contribute data, personnel, or resources to a study. Used for
+      institutional attribution and cross-program collaboration mapping.
+    range: Organization
+    multivalued: true
+    inlined: false
+    slot_uri: dcterms:contributor
+    comments:
+      - >-
+        Not funders — funding is tracked at the program and project level via
+        funding_source. Not individual people.
+      - >-
+        If a study is contributed to by five institutions in a formal collaboration, all
+        five belong here.
+
+classes:
+
+  Organization:
+    title: ORGANIZATION
+    description: >-
+      An institution, company, funder, or other organizational entity that participates in
+      Sage research. A thin cache over ROR — name, acronym, type, and country are cached
+      values, and ror_id is the durable link back to the source of truth.
+    is_a: BaseEntity
+    slots:
+      - name
+      - ror_id
+      - acronym
+      - type
+      - country
+    slot_usage:
+      id:
+        description: >-
+          Stable machine identifier for the organization within the CDM. A short lowercase
+          string prefixed with `org.`, derived from a short recognizable name.
+        pattern: '^org\.[a-z0-9]+(-[a-z0-9]+)*$'
+        examples:
+          - value: org.sage-bionetworks
+          - value: org.jax
+          - value: org.nih-nia
+        comments:
+          - Never the ROR ID — that belongs in ror_id.
+      name:
+        description: >-
+          The display name of the organization, cached from ROR. If a ROR record exists this
+          should match ROR's primary name; when ROR updates a name, refresh the cache here.
+          If no ROR record exists, use the name as it appears in official documentation.
+        examples:
+          - value: Sage Bionetworks
+          - value: The Jackson Laboratory
+          - value: National Institute on Aging
+        comments:
+          - Never an acronym — that goes in acronym. Never a regional or divisional variant.
+    comments:
+      - >-
+        No description or status slots, by design (2026-07-21). Consistent with the
+        thin-wrapper principle: the name is usually sufficient identification, and ROR holds
+        descriptive metadata and lifecycle information.

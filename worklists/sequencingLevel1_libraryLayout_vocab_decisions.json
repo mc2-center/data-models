@@ -1,0 +1,20 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Paired-end",
+    "ontology_identifier": "NCIT:C150423",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C150423",
+    "label": "Paired-End Sequencing",
+    "description": "A DNA sequencing strategy where a single read is initiated from each end of a DNA fragment.",
+    "verification": {"verdict": "partial", "note": "NCIT:C150423 Paired-End Sequencing; label describes the sequencing technique rather than the library layout property, but this is the NCIT term that captures paired-end as a library/sequencing design. Best available match for the 'Paired-end' NGS Library Layout value."}
+  },
+  {
+    "row_index": 1,
+    "term": "Single-indexed",
+    "ontology_identifier": "NCIT:C165444",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C165444",
+    "label": "Single-indexed Sequencing",
+    "description": "An indexed sequencing method that includes one index read.",
+    "verification": {"verdict": "partial", "note": "NCIT:C165444 Single-indexed Sequencing; label adds 'Sequencing' qualifier. In this context 'Single-indexed' refers to a library with a single barcode/index rather than dual-indexed, which NCIT:C165444 correctly describes. Best available match."}
+  }
+]}

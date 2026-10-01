@@ -1,0 +1,16 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/grant_theme_name.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Drug Resistance/Sensitivity	Drug Resistance/Sensitivity	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16523	semapv:ManualMappingCuration
+Epigenetics	Epigenetics	skos:exactMatch	http://edamontology.org/topic_3295	semapv:ManualMappingCuration
+Evolution	Evolution	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C16565	semapv:ManualMappingCuration
+Heterogeneity	Heterogeneity	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C28359	semapv:ManualMappingCuration
+Immunotherapy	Immunotherapy	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C15262	semapv:ManualMappingCuration
+Metabolism	Metabolism	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19536	semapv:ManualMappingCuration
+Metastasis	Metastasis	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19151	semapv:ManualMappingCuration
+Microenvironment	Microenvironment	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C94498	semapv:ManualMappingCuration
+Tumor Progression	Tumor Progression	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C17609	semapv:ManualMappingCuration
+Tumor-Immune	Tumor-Immune	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C19095	semapv:ManualMappingCuration

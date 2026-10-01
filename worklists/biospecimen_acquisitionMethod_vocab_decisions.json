@@ -1,0 +1,155 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Autopsy",
+    "ontology_identifier": "NCIT:C25153",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25153",
+    "label": "Autopsy",
+    "description": "A postmortem examination of the body that includes an examination of the internal organs and structures after dissection to determine the cause of death and the nature of pathological changes.",
+    "verification": {"verdict": "match", "note": "NCIT:C25153 Autopsy; exact label match for the biospecimen acquisition method."}
+  },
+  {
+    "row_index": 1,
+    "term": "Biopsy",
+    "ontology_identifier": "NCIT:C15189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15189",
+    "label": "Biopsy Procedure",
+    "description": "The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.",
+    "verification": {"verdict": "partial", "note": "NCIT:C15189 Biopsy Procedure; label adds 'Procedure' but is the correct parent class for all biopsy acquisition methods."}
+  },
+  {
+    "row_index": 2,
+    "term": "Blood draw",
+    "ontology_identifier": "NCIT:C28221",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28221",
+    "label": "Phlebotomy",
+    "description": "The collection of blood from a vein, most commonly via needle venipuncture.",
+    "verification": {"verdict": "partial", "note": "NCIT:C28221 Phlebotomy; label differs (phlebotomy is the formal clinical term for blood draw) but the concept is equivalent."}
+  },
+  {
+    "row_index": 3,
+    "term": "Core needle biopsy",
+    "ontology_identifier": "NCIT:C15680",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15680",
+    "label": "Core Biopsy",
+    "description": "The removal of a tissue sample using a needle with a relatively large diameter, for microscopic examination.",
+    "verification": {"verdict": "partial", "note": "NCIT:C15680 Core Biopsy; label omits 'needle' but the definition explicitly describes a needle-based procedure and is equivalent to 'core needle biopsy'."}
+  },
+  {
+    "row_index": 4,
+    "term": "Excisional Biopsy",
+    "ontology_identifier": "NCIT:C15385",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15385",
+    "label": "Excisional Biopsy",
+    "description": "A surgical procedure in which an entire lesion is removed for microscopic examination.",
+    "verification": {"verdict": "match", "note": "NCIT:C15385 Excisional Biopsy; exact label match."}
+  },
+  {
+    "row_index": 5,
+    "term": "Fine needle aspirate",
+    "ontology_identifier": "NCIT:C15361",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15361",
+    "label": "Fine-Needle Aspiration",
+    "description": "The removal of tissue or fluid with a thin needle for examination under a microscope.",
+    "verification": {"verdict": "partial", "note": "NCIT:C15361 Fine-Needle Aspiration; label uses 'aspiration' vs 'aspirate' and hyphenates 'Fine-Needle', but the concept is identical."}
+  },
+  {
+    "row_index": 6,
+    "term": "Forceps Biopsy",
+    "ontology_identifier": "NCIT:C177206",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C177206",
+    "label": "Forceps Biopsy",
+    "description": "The removal of a tissue sample using a specially-designed endoscope consisting of a slender flexible forceps with movable cup-shaped jaws.",
+    "verification": {"verdict": "match", "note": "NCIT:C177206 Forceps Biopsy; exact label match."}
+  },
+  {
+    "row_index": 7,
+    "term": "Incisional Biopsy",
+    "ontology_identifier": "NCIT:C15386",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15386",
+    "label": "Incisional Biopsy",
+    "description": "A surgical procedure in which part of a lesion is removed for microscopic examination.",
+    "verification": {"verdict": "match", "note": "NCIT:C15386 Incisional Biopsy; exact label match."}
+  },
+  {
+    "row_index": 8,
+    "term": "Lymphadenectomy (regional nodes)",
+    "ontology_identifier": "NCIT:C15275",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15275",
+    "label": "Lymphadenectomy",
+    "description": "Surgical removal of lymph nodes, usually done to assess the spread of cancer.",
+    "verification": {"verdict": "partial", "note": "NCIT:C15275 Lymphadenectomy; label omits '(regional nodes)' qualifier but is the correct procedure class. The parenthetical specifies scope within the data model."}
+  },
+  {
+    "row_index": 9,
+    "term": "Not applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier, exact match."}
+  },
+  {
+    "row_index": 10,
+    "term": "Not reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier, exact match."}
+  },
+  {
+    "row_index": 13,
+    "term": "Pancreaticoduodenectomy",
+    "ontology_identifier": "NCIT:C51933",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C51933",
+    "label": "Pancreaticoduodenectomy",
+    "description": "Surgical excision of all or part of the pancreas and duodenum.",
+    "verification": {"verdict": "match", "note": "NCIT:C51933 Pancreaticoduodenectomy; exact label match."}
+  },
+  {
+    "row_index": 14,
+    "term": "Punch biopsy",
+    "ontology_identifier": "NCIT:C28743",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28743",
+    "label": "Punch Biopsy",
+    "description": "Removal of a disk of skin tissue, for microscopic examination, using a punch.",
+    "verification": {"verdict": "match", "note": "NCIT:C28743 Punch Biopsy; exact label match (case-insensitive)."}
+  },
+  {
+    "row_index": 16,
+    "term": "Sentinel node biopsy",
+    "ontology_identifier": "NCIT:C15667",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15667",
+    "label": "Sentinel Lymph Node Biopsy",
+    "description": "Surgical removal and examination of the sentinel node, the lymph node which is first in receiving the lymphatic drainage of a specified anatomic location and is most likely to be affected by the lymphatic spread of cancer.",
+    "verification": {"verdict": "partial", "note": "NCIT:C15667 Sentinel Lymph Node Biopsy; label expands 'node' to 'Lymph Node' but is the correct and only NCIT term for this procedure."}
+  },
+  {
+    "row_index": 17,
+    "term": "Shave biopsy",
+    "ontology_identifier": "NCIT:C15387",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C15387",
+    "label": "Shave Biopsy",
+    "description": "Removal skin tissue, for microscopic examination, using a blade oriented in the horizontal plane of the skin surface.",
+    "verification": {"verdict": "match", "note": "NCIT:C15387 Shave Biopsy; exact label match (case-insensitive)."}
+  },
+  {
+    "row_index": 18,
+    "term": "Surgical Resection",
+    "ontology_identifier": "NCIT:C158758",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C158758",
+    "label": "Resection",
+    "description": "The surgical removal of all or part of an organ or tissue structure that may include a lesion.",
+    "verification": {"verdict": "partial", "note": "NCIT:C158758 Resection; label drops 'Surgical' but is a surgical procedure by definition and is the best available NCIT match for surgical resection as a biospecimen acquisition method."}
+  },
+  {
+    "row_index": 19,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier, exact match."}
+  }
+]}

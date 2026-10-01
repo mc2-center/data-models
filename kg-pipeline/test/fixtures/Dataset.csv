@@ -1,0 +1,3 @@
+datasetId,datasetName,datasetAlias,tumorType,assay,grantNumber,pubMedId
+syn_ds_1,Test Dataset One,ds-alias-1,Cutaneous Melanoma,16S Ribosomal Gene Sequencing Assay,CA999999,
+syn_ds_2,Test Dataset Two,ds-alias-2,Completely Made Up Tumor Type,16S Ribosomal Gene Sequencing Assay,CA999999,12345678

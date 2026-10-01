@@ -1,0 +1,56 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Yes",
+    "ontology_identifier": "NCIT:C49488",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49488",
+    "label": "Yes",
+    "description": "The affirmative response to a question.",
+    "verification": {"verdict": "match", "note": "NCIT:C49488 Yes; standard NCIT affirmative qualifier."}
+  },
+  {
+    "row_index": 1,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 2,
+    "term": "Not Reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "Not provided or available.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 3,
+    "term": "Not Applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 5,
+    "term": "No",
+    "ontology_identifier": "NCIT:C49487",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49487",
+    "label": "No",
+    "description": "The non-affirmative response to a question.",
+    "verification": {"verdict": "match", "note": "NCIT:C49487 No; standard NCIT negative qualifier, paired with NCIT:C49488 Yes."}
+  },
+  {
+    "row_index": 6,
+    "term": "Censored",
+    "ontology_identifier": "NCIT:C118962",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C118962",
+    "label": "Clinical Trial Censoring",
+    "description": "When information on time-to-event is not available due to loss to follow-up or non-occurrence of outcome event before the trial end.",
+    "verification": {"verdict": "partial", "note": "NCIT:C118962 Clinical Trial Censoring; label differs ('Clinical Trial Censoring' vs 'Censored') but correctly describes the censoring concept in survival analysis — individuals for whom the recurrence event was not observed during the study period. Review recommended."}
+  }
+]}

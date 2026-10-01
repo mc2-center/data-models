@@ -1,0 +1,9 @@
+# name: no_untyped_people
+# expect: empty
+# description: Test fixture query - every ex:Person subject must have an ex:name.
+PREFIX ex: <http://example.org/>
+
+SELECT ?p WHERE {
+  ?p a ex:Person .
+  FILTER NOT EXISTS { ?p ex:name ?n }
+}

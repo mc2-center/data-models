@@ -1,0 +1,160 @@
+{
+  "$id": "http://example.com/PersonView",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "The denormalized manifest for person submission.",
+  "properties": {
+    "AlternativeNames": {
+      "description": "Other ways the individual's name is displayed. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Alternative Names",
+      "type": "array"
+    },
+    "ChairRoles": {
+      "description": "Committee or working group chair role(s) the individual fulfilled (current and former). Multiple values permitted, comma separated.",
+      "items": {
+        "enum": [
+          "Annual Meeting",
+          "None",
+          "Steering Committee",
+          "Working Group"
+        ],
+        "type": "string"
+      },
+      "title": "Chair Roles",
+      "type": "array"
+    },
+    "ConsentForPortalDisplay": {
+      "description": "Consent from individual to display Person information in the CCKP",
+      "enum": [
+        "No",
+        "Yes"
+      ],
+      "title": "Consent For Portal Display"
+    },
+    "ConsortiumKey": {
+      "description": "Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",
+      "title": "Consortium Key",
+      "type": "string"
+    },
+    "Email": {
+      "description": "Email address of the individual",
+      "title": "Email",
+      "type": "string"
+    },
+    "GrantViewKey": {
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "(CA\\d{6}|Affiliated/Non-Grant Associated)",
+      "title": "GrantView Key",
+      "type": "string"
+    },
+    "InstitutionKey": {
+      "description": "Unique Institution_id foreign key(s) that group the resource with other components, as part of the same institution-associated grants. Please provide multiple values as a comma-separated list.",
+      "title": "Institution Key",
+      "type": "string"
+    },
+    "LastKnownInstitution": {
+      "description": "Last known institutional affiliation of the individual.",
+      "title": "Last Known Institution",
+      "type": "string"
+    },
+    "Name": {
+      "description": "Name of the individual",
+      "title": "Name",
+      "type": "string"
+    },
+    "OrcidId": {
+      "description": "Unique identifier (ORCID ID) of the individual",
+      "pattern": "\\d{4}\\-\\d{4}\\-\\d{4}\\-\\d{3}(\\d|X)",
+      "title": "Orcid Id",
+      "type": "string"
+    },
+    "PersonDatasets": {
+      "description": "A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the person. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Person Datasets",
+      "type": "array"
+    },
+    "PersonEducationalResources": {
+      "description": "A list of educational resource identifiers associated with the person. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Person Educational Resources",
+      "type": "array"
+    },
+    "PersonPublications": {
+      "description": "A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Person Publications",
+      "type": "array"
+    },
+    "PersonTools": {
+      "description": "A list of the tool names associated with the person. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Person Tools",
+      "type": "array"
+    },
+    "PersonViewId": {
+      "description": "A unique primary key that enables record updates using schematic.",
+      "title": "PersonView_id",
+      "type": "string"
+    },
+    "PortalDisplay": {
+      "description": "Display content in CCKP",
+      "enum": [
+        "FALSE",
+        "TRUE"
+      ],
+      "title": "Portal Display"
+    },
+    "SynapseProfileId": {
+      "description": "Unique identifier (Synapse Profile ID) of the individual. See identifer in the url of the synapse profile page.",
+      "title": "Synapse Profile Id",
+      "type": "string"
+    },
+    "Url": {
+      "description": "URL, e.g., individual's home page address",
+      "format": "uri",
+      "title": "Url",
+      "type": "string"
+    },
+    "WorkingGroupParticipation": {
+      "description": "CSBC/PSON working group(s) of which the individual is a member (current and former). Multiple values permitted, comma separated.",
+      "items": {
+        "enum": [
+          "Cancer Metabolism",
+          "Cell and Tissue Mechanics",
+          "Education and Outreach",
+          "Image Analysis",
+          "Navigating Cancer with Science and Art",
+          "None",
+          "Patient Advocacy Working Group",
+          "Protein-Protein Interactions",
+          "Resource and Data Sharing"
+        ],
+        "type": "string"
+      },
+      "title": "Working Group Participation",
+      "type": "array"
+    }
+  },
+  "required": [
+    "ChairRoles",
+    "ConsentForPortalDisplay",
+    "LastKnownInstitution",
+    "Name",
+    "PersonViewId",
+    "PortalDisplay",
+    "WorkingGroupParticipation"
+  ],
+  "title": "PersonView",
+  "type": "object"
+}

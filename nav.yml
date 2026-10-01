@@ -11,6 +11,7 @@ Data Models:
       - Person: model/person.md
   - Resource Sharing Data Model:
       - Dataset: model/dataset.md
+      - Data Catalog: model/dataCatalog.md
       - Dataset Sharing Plan: model/DataDSP.md
       - Education Resource: model/education.md
       - File: model/file.md
@@ -35,11 +36,18 @@ Data Models:
       - Sequencing Level 2: model/sequencingLevel2.md
       - Sequencing Level 3: model/sequencingLevel3.md
       - Sequencing RNA Level 1: model/sequencingRNALevel1.md
-  - 10x Visium Data Model:
+  - Visium Data Model:
       - Visium Auxiliary Files: model/visiumRNAAux.md
       - Visium RNA Level 1: model/visiumRNALevel1.md
       - Visium RNA Level 2: model/visiumRNALevel2.md
       - Visium RNA Level 3: model/visiumRNALevel3.md
       - Visium RNA Level 4: model/visiumRNALevel4.md
+Knowledge Graph:
+  - knowledge-graph/index.md
+  - knowledge-graph/model.md
+  - knowledge-graph/build.md
+  - knowledge-graph/publishing.md
+  - knowledge-graph/querying.md
+  - knowledge-graph/federation.md
 Standard Terms: {}
 Contributing to the Data Model: contributing.md

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="output" content="docs/assets/knowledge-graph/kg-layers.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --sage-blue: #1a7dbb;
+    --navy: #1e293b;
+    --teal-dark: #264653;
+    --green: #3dbd8d;
+    --orange: #f2994a;
+    --gold: #c2a772;
+    --slate: #5c7080;
+    --arrow: #7b8794;
+    --muted-fill: #f4f6f9;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: transparent; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    width: fit-content;
+    padding: 20px;
+  }
+  .row {
+    display: flex;
+    align-items: flex-start;
+  }
+  .tiles {
+    display: flex;
+    gap: 16px;
+    width: 1248px;
+  }
+  .tile {
+    width: 300px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--white);
+  }
+  .tile h2 {
+    margin: 0 0 12px 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 54px;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  .tile p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+  /* Sage blue darkened just enough for white 17px body text to clear 4.5:1
+     (#1a7dbb is 4.47:1; #1a7ab7 is 4.65:1). */
+  .t-schema { background: #1a7ab7; }
+  .t-portal { background: var(--teal-dark); }
+  .t-enrich { background: var(--green); color: var(--navy); }
+  .t-fed { background: var(--orange); color: var(--navy); }
+
+  .dashed-tile {
+    width: 300px;
+    min-height: 200px;
+    margin-left: 40px;
+    border: 2.5px dashed #b7c0c9;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--muted-fill);
+  }
+  .dashed-tile h2 {
+    margin: 0 0 8px 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .dashed-tile .sub {
+    display: block;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--slate);
+    margin-bottom: 14px;
+  }
+  .dashed-tile p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--navy);
+  }
+
+  .bracket-wrap {
+    width: 1248px;
+    margin-top: 6px;
+  }
+  .chip-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+  }
+  .chip {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="figure">
+    <div class="row">
+      <div class="tiles">
+        <div class="tile t-schema">
+          <h2>Schema</h2>
+          <span class="pill">the model and portal schema</span>
+          <p>Attribute definitions and controlled vocabularies</p>
+        </div>
+        <div class="tile t-portal">
+          <h2>Portal graph</h2>
+          <span class="pill">one node per portal record</span>
+          <p>Datasets, tools, publications, and the other core portal types</p>
+        </div>
+        <div class="tile t-enrich">
+          <h2>Enrichment</h2>
+          <span class="pill">ontology terms, Biolink typing, Data Catalog annotations</span>
+          <p>Controlled-vocabulary values resolved to real ontology terms</p>
+        </div>
+        <div class="tile t-fed">
+          <h2>Federation</h2>
+          <span class="pill">SCDM and MONDO/UBERON links</span>
+          <p>Edges to Sage's common data model and shared ontology terms</p>
+        </div>
+      </div>
+      <div class="dashed-tile">
+        <h2>Assay metadata graph</h2>
+        <span class="sub">access-controlled, published separately</span>
+        <p>Its own linked graph, joined in through sagebrain-model</p>
+      </div>
+    </div>
+    <div class="bracket-wrap">
+      <svg width="1248" height="34" viewBox="0 0 1248 34">
+        <path d="M 4 4 L 4 18 L 1244 18 L 1244 4" stroke="var(--arrow)" stroke-width="2.5" fill="none" />
+        <line x1="624" y1="18" x2="624" y2="30" stroke="var(--arrow)" stroke-width="2.5" />
+      </svg>
+      <div class="chip-row">
+        <span class="chip">Deposited to SageBrain Neptune</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

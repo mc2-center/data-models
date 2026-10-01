@@ -1,0 +1,246 @@
+"""Fixture-based tests for the Data Catalog stage (native Synapse Dataset
+entity annotations - see plans/datacatalog_kg_integration.md). A distinct
+schema pass (mc2_model.linkml.yaml directly, the DataCatalog class) and its
+own fixture, so this is self-contained rather than reusing
+test/conftest.py's session fixtures - mirrors test_mc2_assay_file_view.py's
+own pattern."""
+
+from collections import defaultdict
+from pathlib import Path
+
+import build_datacatalog_triples
+import build_triples
+import extract_datacatalog
+import harmonize
+import pandas as pd
+import rdflib
+
+KG_PIPELINE_DIR = Path(__file__).resolve().parent.parent
+SCHEMA_PATH = str(KG_PIPELINE_DIR / "schema" / "mc2_model.linkml.yaml")
+MAPPING_PATH = str(KG_PIPELINE_DIR.parent / "modules" / "mapping.yaml")
+MODULES_DIR = str(KG_PIPELINE_DIR.parent / "modules")
+FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures"
+
+CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
+SCHEMA = rdflib.Namespace("https://schema.org/")
+
+
+def test_annotation_value_scalar_takes_first_value_only():
+    ann = {"title": ["A Dataset Title"], "empty": []}
+    assert extract_datacatalog.annotation_value(ann, "title", multivalued=False) == "A Dataset Title"
+    assert extract_datacatalog.annotation_value(ann, "empty", multivalued=False) == ""
+    assert extract_datacatalog.annotation_value(ann, "missing", multivalued=False) == ""
+
+
+def test_annotation_value_multivalued_joins_with_pipe_delimiter():
+    ann = {"keywords": ["Pancreas", "C57BL/6"]}
+    assert extract_datacatalog.annotation_value(ann, "keywords", multivalued=True) == "Pancreas|C57BL/6"
+
+
+def test_find_dataset_entity_ids_deduplicates_and_warns_on_mismatch(capsys, monkeypatch):
+    df = pd.DataFrame({
+        "datasetId": ["syn1", "syn1", "syn2", "syn3"],
+        "downloadType": ["Synapse Indexed", "Synapse Indexed", "Synapse Hosted", "Synapse Indexed"],
+        "downloadSynId": ["syn1", "syn1", "syn2", "syn_MISMATCH"],
+    })
+    # Table.query(...) is a classmethod-style call (no Table instance needed) -
+    # stand in for it directly rather than faking a `syn` object, since this
+    # code no longer goes through syn.tableQuery(...).
+    monkeypatch.setattr(extract_datacatalog.Table, "query", staticmethod(lambda **kwargs: df))
+    result = extract_datacatalog.find_dataset_entity_ids(None, dataset_table_id="synTEST")
+    # deduplicated, datasetId used even on mismatch, table's own downloadType carried through
+    assert result == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted", "syn3": "Synapse Indexed"}
+    assert "WARNING" in capsys.readouterr().out
+
+
+def _fake_dataset_model(annotations_by_id):
+    """Stand-in for synapseclient.models.Dataset - Dataset(id=...).get(...)
+    now replaces syn.get_annotations(...), so the fake mirrors that shape
+    instead of a `syn` object with a get_annotations() method."""
+
+    class _FakeDataset:
+        def __init__(self, id):  # noqa: A002 - matches the real Dataset(id=...) constructor
+            self._id = id
+            self.annotations = None
+
+        def get(self, synapse_client=None):
+            self.annotations = annotations_by_id[self._id]
+            return self
+
+    return _FakeDataset
+
+
+def test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names(monkeypatch):
+    # Regression test: modules/dataCatalog/annotationProperty.csv renamed
+    # these two attributes to dataCatalogLicense/dataCatalogDataUseModifiers,
+    # but the live Synapse annotation keys are still license/dataUseModifiers.
+    # extract_datacatalog.py must write the CSV under the renamed schema
+    # field names, or harmonize.py/build_datacatalog_triples.py (which key
+    # off schema/mc2_model.linkml.yaml) silently find nothing.
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
+        "syn1": {"license": ["CC-BY 4.0"], "dataUseModifiers": ["Pending Annotation"]},
+    }))
+    row = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})[0]
+    assert row["dataCatalogLicense"] == "CC-BY 4.0"
+    assert row["dataCatalogDataUseModifiers"] == "Pending Annotation"
+    assert "license" not in row
+    assert "dataUseModifiers" not in row
+
+
+def test_extract_datacatalog_rows_renames_collision_attributes(monkeypatch):
+    # Live keys species/grantNumber/contributor/studyId are written under the
+    # model's attribute names, which differ to avoid curator class-label
+    # collisions (species/Species are one class label).
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
+        "syn1": {
+            "species": ["Mus musculus"], "grantNumber": ["CA209975"],
+            "contributor": ["Jane Doe"], "studyId": ["syn7315805"],
+        },
+    }))
+    row = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})[0]
+    assert row["Species"] == "Mus musculus"
+    assert row["GrantView Key"] == "CA209975"
+    assert row["dataCatalogContributor"] == "Jane Doe"
+    assert row["dataCatalogStudyId"] == "syn7315805"
+    assert "studyId" not in row
+    assert "species" not in row
+    assert "grantNumber" not in row
+    assert "contributor" not in row
+
+
+def test_extract_datacatalog_rows_reads_known_keys_only(monkeypatch):
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
+        "syn1": {
+            "title": ["A Dataset"], "species": ["Homo sapiens"], "creator": ["Jane Doe", "John Smith"],
+            "entityType": ["dataset"], "newKey": [""], "Component": ["Dataset"],  # noise, must be ignored
+        },
+    }))
+    rows = extract_datacatalog.extract_datacatalog_rows(None, {"syn1": "Synapse Indexed"})
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["DataCatalog_id"] == "syn1"
+    assert row["title"] == "A Dataset"
+    # live key "species" is written under the shared "Species" attribute.
+    assert row["Species"] == "Homo sapiens"
+    assert "species" not in row
+    assert row["creator"] == "Jane Doe|John Smith"  # multivalued
+    assert "entityType" not in row
+    assert "newKey" not in row
+    assert "Component" not in row
+
+
+def test_extract_datacatalog_rows_uses_table_download_type_not_entity_annotation(monkeypatch):
+    # Regression test: the entity's own native `downloadType` annotation was
+    # found live (2026-09-14) to disagree with the CCKP Dataset table's
+    # curated downloadType column on 959/966 rows (mostly blank or stuck at
+    # "Synapse Hosted" on the entity, vs the table's real "Synapse Indexed"
+    # for most rows) - the table's value is what the portal actually uses,
+    # so it must win regardless of what the entity annotation says.
+    monkeypatch.setattr(extract_datacatalog, "Dataset", _fake_dataset_model({
+        "syn1": {"downloadType": ["Synapse Hosted"]},
+        "syn2": {},  # entity has no downloadType annotation at all
+    }))
+    rows = extract_datacatalog.extract_datacatalog_rows(
+        None, {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
+    )
+    by_id = {r["DataCatalog_id"]: r["downloadType"] for r in rows}
+    assert by_id == {"syn1": "Synapse Indexed", "syn2": "Synapse Hosted"}
+
+
+def test_datacatalog_harmonizes_and_merges_onto_existing_dataset_subject(tmp_path):
+    malformed_rows = []
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, malformed_rows, class_order=["DataCatalog"]
+    )
+    unmapped_rows, sssom_rows = [], defaultdict(set)
+    out_path = tmp_path / "DataCatalog_harmonized.csv"
+    harmonize.harmonize_table(
+        "DataCatalog", str(FIXTURES_DIR / "DataCatalog.csv"), str(out_path), field_lookups, unmapped_rows, sssom_rows,
+    )
+
+    g, stats = build_datacatalog_triples.build_datacatalog_graph(str(tmp_path), SCHEMA_PATH)
+    assert stats["schema"] > 0
+    assert stats["cckp"] > 0
+    assert stats["term"] > 0
+    assert stats["doi"] == 1
+
+    # Same subject IRI build_triples.py's own Dataset class pass would use for
+    # this datasetId - this script must enrich it, not mint a separate node.
+    subject = build_triples.mint_iri("Dataset", "syn_dc_1")
+    assert (subject, SCHEMA.name, rdflib.Literal("Test Dataset Title")) in g
+    assert (subject, SCHEMA.creator, rdflib.Literal("Jane Doe")) in g
+    assert (subject, SCHEMA.creator, rdflib.Literal("John Smith")) in g
+    assert (subject, CCKP.doiIri, rdflib.URIRef("https://doi.org/10.1234/test.doi")) in g
+    # "Mus musculus" and "Meningioma" are real, already-curated NCIT mappings
+    # in the committed modules/ CV CSVs (confirmed live before writing this
+    # test, not guessed).
+    assert (subject, CCKP.speciesTerm,
+            rdflib.URIRef("http://purl.obolibrary.org/obo/NCIT_C14238")) in g
+    assert (subject, CCKP.manifestationTerm,
+            rdflib.URIRef("http://purl.obolibrary.org/obo/NCIT_C3230")) in g
+    # accessType has no real ontology equivalent (confirmed non-mappable,
+    # like Publication/Tool.accessibility) - literal present, no *Term edge.
+    assert (subject, CCKP.accessType, rdflib.Literal("Open Access")) in g
+    assert (subject, CCKP.accessTypeTerm, None) not in g
+    # Regression coverage for the dataCatalogLicense/dataCatalogDataUseModifiers
+    # rename (see test_extract_datacatalog_rows_renames_license_and_datausemodifiers_to_schema_field_names):
+    # dataCatalogLicense still maps to the real schema.org "license" property
+    # (SCHEMA_ORG_FIELDS is keyed by the schema field name, not "license"),
+    # and resolves to the real SPDX term already curated in
+    # modules/shared/license.csv. dataCatalogDataUseModifiers has no
+    # schema.org equivalent, so it's cckp-namespaced; "Pending Annotation"
+    # isn't a DUO term, so it gets a literal but no *Term edge.
+    assert (subject, SCHEMA.license, rdflib.Literal("CC-BY 4.0")) in g
+    assert (subject, CCKP.dataCatalogLicenseTerm,
+            rdflib.URIRef("https://spdx.org/licenses/CC-BY-4.0.html")) in g
+    assert (subject, CCKP.dataCatalogDataUseModifiers, rdflib.Literal("Pending Annotation")) in g
+    assert (subject, CCKP.dataCatalogDataUseModifiersTerm, None) not in g
+
+
+def test_ill_typed_datacatalog_value_kept_plain_and_reported(tmp_path, capsys):
+    # rdflib flags "unknown"^^xsd:float ill_typed rather than raising, so the
+    # stage must detect it itself: keep it as a plain literal and report it,
+    # never ship an ill-typed literal.
+    malformed_rows = []
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, malformed_rows, class_order=["DataCatalog"]
+    )
+    out_path = tmp_path / "DataCatalog_harmonized.csv"
+    harmonize.harmonize_table(
+        "DataCatalog", str(FIXTURES_DIR / "DataCatalog.csv"), str(out_path), field_lookups, [], defaultdict(set),
+    )
+    df = pd.read_csv(out_path, dtype=str, keep_default_na=False)
+    df["individualCount"] = "unknown"
+    df["yearProcessed"] = "2021"
+    df.to_csv(out_path, index=False)
+
+    g, _ = build_datacatalog_triples.build_datacatalog_graph(str(tmp_path), SCHEMA_PATH)
+    subject = build_triples.mint_iri("Dataset", "syn_dc_1")
+    count_values = list(g.objects(subject, CCKP.individualCount))
+    assert count_values == [rdflib.Literal("unknown")]
+    year_values = list(g.objects(subject, CCKP.yearProcessed))
+    assert len(year_values) == 1 and year_values[0].datatype == rdflib.XSD.float
+    assert not year_values[0].ill_typed
+    assert "DataCatalog: kept 1 ill-typed individualCount value(s) as plain literals (expected xsd:float)" in capsys.readouterr().out
+
+
+def test_datacatalog_duo_curies_get_term_edges(tmp_path):
+    # dataCatalogDataUseModifiers has no CV, so DUO CURIEs are linked straight
+    # to their DUO IRIs; DUOPlus codes and Pending Annotation stay literal-only.
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, [], class_order=["DataCatalog"]
+    )
+    out_path = tmp_path / "DataCatalog_harmonized.csv"
+    harmonize.harmonize_table(
+        "DataCatalog", str(FIXTURES_DIR / "DataCatalog.csv"), str(out_path), field_lookups, [], defaultdict(set),
+    )
+    df = pd.read_csv(out_path, dtype=str, keep_default_na=False)
+    df["dataCatalogDataUseModifiers"] = "DUO:0000042|DUOPlus3|Pending Annotation"
+    df.to_csv(out_path, index=False)
+
+    g, _ = build_datacatalog_triples.build_datacatalog_graph(str(tmp_path), SCHEMA_PATH)
+    subject = build_triples.mint_iri("Dataset", "syn_dc_1")
+    terms = set(g.objects(subject, CCKP.dataCatalogDataUseModifiersTerm))
+    assert terms == {rdflib.URIRef("http://purl.obolibrary.org/obo/DUO_0000042")}
+    literals = set(g.objects(subject, CCKP.dataCatalogDataUseModifiers))
+    assert literals == {rdflib.Literal(v) for v in ("DUO:0000042", "DUOPlus3", "Pending Annotation")}

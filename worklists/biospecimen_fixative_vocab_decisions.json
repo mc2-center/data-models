@@ -1,0 +1,191 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Acetone",
+    "ontology_identifier": "NCIT:C29807",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C29807",
+    "label": "Acetone",
+    "description": "A colorless, volatile, flammable organic solvent used as a fixative and dehydration agent for biological tissues.",
+    "verification": {"verdict": "match", "note": "NCIT:C29807 Acetone; exact label match. Used as a tissue fixative in histology."}
+  },
+  {
+    "row_index": 1,
+    "term": "Alcohol",
+    "ontology_identifier": "NCIT:C2190",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C2190",
+    "label": "Alcohol",
+    "description": "A volatile liquid that kills organisms by denaturing their proteins; used as a disinfectant and tissue fixative.",
+    "verification": {"verdict": "partial", "note": "NCIT:C2190 Alcohol; exact label match but definition is primarily pharmacological. As a fixative, 'Alcohol' typically refers to ethanol. Best available NCIT match."}
+  },
+  {
+    "row_index": 2,
+    "term": "Formalin",
+    "ontology_identifier": "NCIT:C29744",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C29744",
+    "label": "Formaldehyde",
+    "description": "A colorless gas readily soluble in water; formalin (10% formaldehyde solution) is widely used as a tissue fixative and preservative.",
+    "verification": {"verdict": "partial", "note": "NCIT:C29744 Formaldehyde; formalin is a 10% aqueous solution of formaldehyde. NCIT definition explicitly states 'formalin, a 10% solution of formaldehyde in water, is used as a disinfectant and to preserve biological specimens.' Best available NCIT match."}
+  },
+  {
+    "row_index": 3,
+    "term": "Glutaraldehyde",
+    "ontology_identifier": "NCIT:C80930",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C80930",
+    "label": "Glutaral",
+    "description": "A water-soluble oily liquid containing two aldehyde groups, used as a disinfectant and as a fixative for biological tissues.",
+    "verification": {"verdict": "partial", "note": "NCIT:C80930 Glutaral; 'Glutaral' is the NCIT preferred label for glutaraldehyde. Definition explicitly mentions use as a fixative for biological tissues."}
+  },
+  {
+    "row_index": 6,
+    "term": "Saline",
+    "ontology_identifier": "NCIT:C821",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C821",
+    "label": "Saline",
+    "description": "A solution of salt and water; saline usually refers to normal or physiological saline, which is an aqueous solution containing 0.9% sodium chloride.",
+    "verification": {"verdict": "match", "note": "NCIT:C821 Saline; exact label match for physiological saline solution used in specimen collection."}
+  },
+  {
+    "row_index": 7,
+    "term": "95% Ethanol",
+    "ontology_identifier": "NCIT:C185110",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185110",
+    "label": "95% Ethyl Alcohol",
+    "description": "An aqueous dilution of ethanol containing 95% ethanol by volume, which may be used as a solvent, disinfectant or fixative.",
+    "verification": {"verdict": "partial", "note": "NCIT:C185110 95% Ethyl Alcohol; label uses 'Ethyl Alcohol' vs 'Ethanol' and the definition explicitly includes use as a fixative. Best match for 95% Ethanol."}
+  },
+  {
+    "row_index": 11,
+    "term": "Carbodiimide",
+    "ontology_identifier": "NCIT:C185111",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185111",
+    "label": "Carbodiimide",
+    "description": "A group of reagents that crosslinks amines and carboxylates, used as a fixative and in peptide conjugation.",
+    "verification": {"verdict": "match", "note": "NCIT:C185111 Carbodiimide; exact label match. Definition explicitly mentions use as a fixative."}
+  },
+  {
+    "row_index": 12,
+    "term": "Dimethylacetamide",
+    "ontology_identifier": "NCIT:C29274",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C29274",
+    "label": "N,N-Dimethylacetamide",
+    "description": "A dipolar aprotic solvent and reagent used in the production of fibers and pharmaceuticals, and as a non-aldehyde fixative.",
+    "verification": {"verdict": "partial", "note": "NCIT:C29274 N,N-Dimethylacetamide; label has 'N,N-' prefix vs plain 'Dimethylacetamide'. Definition explicitly mentions use as a non-aldehyde fixative."}
+  },
+  {
+    "row_index": 14,
+    "term": "PAXgene Tissue",
+    "ontology_identifier": "NCIT:C185113",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185113",
+    "label": "PAXgene Tissue System",
+    "description": "A proprietary system comprised of a formalin-free tissue fixative and stabilizing reagent designed to preserve tissue structures without damaging biomolecules.",
+    "verification": {"verdict": "partial", "note": "NCIT:C185113 PAXgene Tissue System; label adds 'System' but is the correct NCIT term for the PAXgene Tissue fixative reagent used in biospecimen preservation."}
+  },
+  {
+    "row_index": 16,
+    "term": "Not applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier, exact match."}
+  },
+  {
+    "row_index": 19,
+    "term": "Carnoy's Solution",
+    "ontology_identifier": "NCIT:C178534",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178534",
+    "label": "Carnoy's Solution",
+    "description": "A denaturing fixative consisting of ethanol, chloroform and glacial acetic acid in a 6:3:1 ratio, particularly effective for the preservation of nuclei and in retaining glycogen.",
+    "verification": {"verdict": "match", "note": "NCIT:C178534 Carnoy's Solution; exact label match."}
+  },
+  {
+    "row_index": 4,
+    "term": "OCT media",
+    "ontology_identifier": "NCIT:C63523",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C63523",
+    "label": "Optimal Cutting Temperature Compound",
+    "description": "A solution of water soluble glycols and resins that provide a specimen support matrix for cryostat sectioning at temperatures of -10 degrees C and below.",
+    "verification": {"verdict": "partial", "note": "NCIT:C63523 Optimal Cutting Temperature Compound; 'OCT media' is the common shorthand for the Optimal Cutting Temperature Compound, a cryosection embedding medium. The definition correctly describes the compound used for tissue cryosectioning."}
+  },
+  {
+    "row_index": 5,
+    "term": "RNAlater",
+    "ontology_identifier": "NCIT:C63348",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C63348",
+    "label": "RNALater",
+    "description": "Trade name for an aqueous, non-toxic tissue storage reagent that rapidly permeates tissues to stabilize and protect cellular RNA.",
+    "verification": {"verdict": "match", "note": "NCIT:C63348 RNALater; exact match for the RNA stabilization reagent used as a fixative/preservative. Label capitalizes 'L' differently but is the same product."}
+  },
+  {
+    "row_index": 8,
+    "term": "NP40 Lysis Buffer",
+    "ontology_identifier": "NCIT:C178573",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178573",
+    "label": "NP40 Lysis Buffer",
+    "description": "A detergent-based cell lysis buffer suitable for total protein extraction that helps retain the protein structure and function for enzyme assays or immunoassays.",
+    "verification": {"verdict": "match", "note": "NCIT:C178573 NP40 Lysis Buffer; exact label match."}
+  },
+  {
+    "row_index": 9,
+    "term": "Not recorded",
+    "ontology_identifier": "NCIT:C185193",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C185193",
+    "label": "Not Recorded",
+    "description": "The information was not captured or stored.",
+    "verification": {"verdict": "match", "note": "NCIT:C185193 Not Recorded; exact label match for a missing value reason indicating data was not captured."}
+  },
+  {
+    "row_index": 13,
+    "term": "Para-benzoquinone",
+    "ontology_identifier": "NCIT:C95317",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95317",
+    "label": "p-Benzoquinone",
+    "description": "A benzoquinone compound used as a tissue crosslinking fixative.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95317 p-Benzoquinone; 'p-' is the standard chemical abbreviation for 'para-', so p-Benzoquinone and Para-benzoquinone are the same compound. NCIT has no definition for this term but the chemical identity is confirmed."}
+  },
+  {
+    "row_index": 15,
+    "term": "TCL Lysis Buffer",
+    "ontology_identifier": "NCIT:C178572",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178572",
+    "label": "Buffer TCL",
+    "description": "A proprietary buffer containing RNase inhibitors designed for cell lysis and the extraction and collection of mRNA from cell samples.",
+    "verification": {"verdict": "partial", "note": "NCIT:C178572 Buffer TCL; label word order inverted (Buffer TCL vs TCL Lysis Buffer) but is the same reagent — a proprietary buffer for cell lysis and mRNA extraction."}
+  },
+  {
+    "row_index": 18,
+    "term": "CryoStor",
+    "ontology_identifier": "NCIT:C178539",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178539",
+    "label": "Biological Cryopreservation Medium",
+    "description": "A serum- and protein-free cryopreservation medium for biological specimens that minimizes cellular damage following freezing and thawing.",
+    "verification": {"verdict": "partial", "note": "NCIT:C178539 Biological Cryopreservation Medium; CryoStor is a branded serum-free cryopreservation medium and falls within this NCIT class. The NCIT term is a generic class, not brand-specific. Best available match."}
+  },
+  {
+    "row_index": 21,
+    "term": "Other",
+    "ontology_identifier": "NCIT:C17649",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17649",
+    "label": "Other",
+    "description": "Different than the one(s) previously specified or mentioned.",
+    "verification": {"verdict": "match", "note": "NCIT:C17649 Other; standard NCIT general qualifier, exact label match."}
+  },
+  {
+    "row_index": 22,
+    "term": "None",
+    "ontology_identifier": "NCIT:C41132",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C41132",
+    "label": "None",
+    "description": "No person or thing, nobody, not any.",
+    "verification": {"verdict": "match", "note": "NCIT:C41132 None; standard NCIT general qualifier, exact label match."}
+  },
+  {
+    "row_index": 23,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier, exact match."}
+  }
+]}

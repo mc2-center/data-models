@@ -1,0 +1,170 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Channel",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node for channel-level metadata attributes in imaging. Imaging Procedure is the best available NCIT parent class."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingChannel_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "Channel Identifier",
+    "ontology_identifier": "NCIT:C25364",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25364",
+    "label": "Identifier",
+    "description": "A sequence of characters used to identify, name, or characterize an entity.",
+    "verification": {
+      "verdict": "match",
+      "note": "Identifier (NCIT:C25364) is a direct match for the channel identifier that must match the OME-XML/TIFF header."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Channel Name",
+    "ontology_identifier": "NCIT:C42614",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42614",
+    "label": "Name",
+    "description": "The words or language units by which a thing is known.",
+    "verification": {
+      "verdict": "match",
+      "note": "Name (NCIT:C42614) is a direct match for the channel name that must match the OME-XML/TIFF header."
+    }
+  },
+  {
+    "row_index": 9,
+    "term": "Channel Antibody Name",
+    "ontology_identifier": "NCIT:C178970",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C178970",
+    "label": "Reagent Name",
+    "description": "The name of a reagent used in a laboratory experiment.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Reagent Name (NCIT:C178970) is a close match for antibody name. The parent of ChIP-Seq Antibody Name (NCIT:C177613). Partial match as it is more general than an antibody-specific name."
+    }
+  },
+  {
+    "row_index": 10,
+    "term": "Channel Resource ID",
+    "ontology_identifier": "NCIT:C224810",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C224810",
+    "label": "Research Resource Identifier",
+    "description": "A persistent and unique identifier for referencing a research resource. Examples of resources include antibodies, cell lines, core facilities, and organisms.",
+    "verification": {
+      "verdict": "match",
+      "note": "Research Resource Identifier is a direct match for the Channel Resource ID field (e.g. RRID: AB_394606)."
+    }
+  },
+  {
+    "row_index": 11,
+    "term": "Channel Fluorophore",
+    "ontology_identifier": "NCIT:C503",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C503",
+    "label": "Fluorochrome Dye",
+    "description": "A class of dyes when excited by light of certain wavelengths, emit photons and become fluorescent. Fluorescence gives fluorochromes imaging characteristics and are used to label or stain biological structures.",
+    "verification": {
+      "verdict": "match",
+      "note": "Fluorochrome Dye (NCIT:C503) is a direct match for the fluorescent dye label (e.g. Alexa Fluor 488) used in the imaging channel."
+    }
+  },
+  {
+    "row_index": 13,
+    "term": "Channel Antibody Lot",
+    "ontology_identifier": "NCIT:C112406",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C112406",
+    "label": "Reagent Lot Number",
+    "description": "The lot number of the reagent.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reagent Lot Number (NCIT:C112406) is a direct match for the lot number of the antibody from the vendor."
+    }
+  },
+  {
+    "row_index": 14,
+    "term": "Channel Antibody Vendor",
+    "ontology_identifier": "NCIT:C25392",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25392",
+    "label": "Manufacturer",
+    "description": "A person, enterprise, or entity that produces finished goods.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Manufacturer (NCIT:C25392) is the closest NCIT match for antibody vendor/supplier. Partial match as vendor encompasses both manufacturer and distributor."
+    }
+  },
+  {
+    "row_index": 15,
+    "term": "Channel Antibody Catalog Number",
+    "ontology_identifier": "NCIT:C99286",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C99286",
+    "label": "Catalog Number",
+    "description": "The identifier assigned to a product, usually in the list of products published by a reseller or manufacturer.",
+    "verification": {
+      "verdict": "match",
+      "note": "Catalog Number (NCIT:C99286) is a direct match for the antibody catalog number."
+    }
+  },
+  {
+    "row_index": 16,
+    "term": "Channel Excitation Wavelength",
+    "ontology_identifier": "NCIT:C204095",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204095",
+    "label": "Excitation Wavelength",
+    "description": "The electromagnetic radiation wavelength that causes peak excitation of a chemical compound.",
+    "verification": {
+      "verdict": "match",
+      "note": "Excitation Wavelength (NCIT:C204095) is a direct match for the center/peak of the excitation spectrum (nm)."
+    }
+  },
+  {
+    "row_index": 17,
+    "term": "Channel Emission Wavelength",
+    "ontology_identifier": "NCIT:C204101",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204101",
+    "label": "Emission Wavelength",
+    "description": "The wavelength with the maximum peak in an emission spectrum.",
+    "verification": {
+      "verdict": "match",
+      "note": "Emission Wavelength (NCIT:C204101) is a direct match for the center/peak of the emission spectrum (nm)."
+    }
+  },
+  {
+    "row_index": 20,
+    "term": "Channel Metal Symbol",
+    "ontology_identifier": "NCIT:C1940",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C1940",
+    "label": "Element",
+    "description": "A substance that cannot be separated into simpler substances by chemical means; all atoms of an element have the same number of protons.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for element symbol/abbreviation. Element (NCIT:C1940) represents the concept of a chemical element. Partial match for the metal element abbreviation (e.g. La, Nd)."
+    }
+  },
+  {
+    "row_index": 21,
+    "term": "Channel Metal Isotope",
+    "ontology_identifier": "NCIT:C47933",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C47933",
+    "label": "Isotope",
+    "description": "A form of a chemical element containing a specific number of neutrons and a specific atomic mass.",
+    "verification": {
+      "verdict": "match",
+      "note": "Isotope (NCIT:C47933) is a direct match for the element mass number/isotope of the metal used in mass cytometry channels."
+    }
+  }
+]

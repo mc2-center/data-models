@@ -1,0 +1,13 @@
+# name: person_display_name_cardinality
+# expect: empty
+# description: Every sagecdm:Person should have exactly one display_name -
+#   catches link_scdm.py's name-merge logic (_find_or_mint_person())
+#   updating a stub in place via a plain add() instead of a replacing
+#   set(), which would leave both the sparse and fuller name attached to
+#   the same subject.
+PREFIX sagecdm: <https://sage-bionetworks.github.io/SageCommonDataModel/>
+
+SELECT ?person (COUNT(?name) AS ?n) WHERE {
+  ?person a sagecdm:Person ;
+          sagecdm:display_name ?name .
+} GROUP BY ?person HAVING (?n != 1)

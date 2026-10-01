@@ -1,4 +1,7 @@
+import html
 import json
+import os
+import re
 from os.path import getsize, isfile, join
 
 import pandas as pd
@@ -9,6 +12,7 @@ import yaml
 # Data models to display on the documentation site: filename -> page title
 DATA_MODELS = {
     "dataset": "Dataset",
+    "dataCatalog": "Data Catalog",
     "sharingPlans": "Dataset Sharing Plan",
     "education": "Education Resource",
     "file": "File",
@@ -36,11 +40,11 @@ DATA_MODELS = {
     "sequencingLevel2": "Sequencing Level 2",
     "sequencingLevel3": "Sequencing Level 3",
     "sequencingRNALevel1": "Sequencing RNA Level 1",
-    "visiumRNAAux": "10x Visium Auxiliary Files",
-    "visiumRNALevel1": "10x Visium RNA Level 1",
-    "visiumRNALevel2": "10x Visium RNA Level 2",
-    "visiumRNALevel3": "10x Visium RNA Level 3",
-    "visiumRNALevel4": "10x Visium RNA Level 4",
+    "visiumRNAAux": "Visium Auxiliary Files",
+    "visiumRNALevel1": "Visium RNA Level 1",
+    "visiumRNALevel2": "Visium RNA Level 2",
+    "visiumRNALevel3": "Visium RNA Level 3",
+    "visiumRNALevel4": "Visium RNA Level 4",
 }
 
 # Each model's exported JSON Schema is the authoritative list of which
@@ -74,6 +78,7 @@ COLS_TO_RENDER = [
     "Format",
     "Regex Pattern",
     "Standard Terms",
+    "CDE",
     "Examples",
 ]
 
@@ -84,6 +89,14 @@ SCHEMA_DIR = "json_schemas"
 ANNOTATIONS_FILENAME = "annotationProperty.csv"
 EXAMPLE_FILENAME = "exampleColumn.csv"
 REFERENCE_FILENAME = "reference.csv"
+NO_DESCRIPTION_PLACEHOLDER = "No description provided"
+NO_ONTOLOGY_PLACEHOLDER = "Not available"
+
+# table-reader's `data_path` is "modules" (mkdocs.yml), so cleaned CV copies
+# live under modules/ too - a single cache dir, keyed by source path, since
+# one CV file (e.g. shared/tumorType.csv) commonly backs several models'
+# valid-values pages and shouldn't be rewritten once per model.
+VALID_VALUES_CACHE_DIR = join("modules", ".valid_values_cache")
 
 
 # --- Helper Functions ---
@@ -99,6 +112,35 @@ def _format_technical_column(col: pd.Series, escape_backslashes: bool = False) -
     if escape_backslashes:
         col = col.str.replace(r"\\", r"\\\\", regex=True)
     return col.replace("", "_None_")
+
+
+CDE_TAG_RE = re.compile(r"^(CDE|CRDC_CDE):(\S+)$")
+
+# The only verified-working public endpoint for a caDSR CDE record - see
+# plans/crdc_cde_integration.md: the friendlier-looking "Deep Link" caDSR UI
+# pattern was tested there and found broken (always redirects to a generic
+# landing page). This REST endpoint returns raw XML/JSON, not a formatted
+# page, but it's real and resolvable - confirmed live against known-good
+# CDE ids (88, 12445832). Both CDE: and CRDC_CDE: tags share the same caDSR
+# public-id numbering, so one template covers both.
+CADSR_DATAELEMENT_URL = "https://cadsrapi.cancer.gov/rad/NCIAPI.v1_0:NciApiRad/DataElement"
+
+
+def _extract_cde_tags(properties: str) -> str:
+    """Pull just the CDE:/CRDC_CDE: caDSR mappings out of a Properties cell,
+    which also carries non-CDE markers (primary_key, foreign_key, DUO: CV
+    codes) that don't belong in a "CDE" column, and render each as a
+    markdown link to its real caDSR record (a raw-data REST response, not a
+    formatted page - see CADSR_DATAELEMENT_URL)."""
+    if not properties:
+        return ""
+    tags = [t.strip() for t in properties.split(",")]
+    links = []
+    for t in tags:
+        m = CDE_TAG_RE.match(t)
+        if m:
+            links.append(f"[{t}]({CADSR_DATAELEMENT_URL}/{m.group(2)})")
+    return ", ".join(links)
 
 
 def _get_model_attributes(model: str) -> list:
@@ -155,6 +197,30 @@ def _load_attribute_owners() -> dict:
     }
 
 
+def _extra_vocab_owners() -> dict:
+    """mapping.yaml top-level keys that own attributes, aren't one of the
+    data-model pages in DATA_MODELS, but are still linked to from a data
+    model's valid-values column (e.g. "shared" - cross-model vocab like
+    Assay/Tissue/Tumor Type, referenced via DependsOn from many models but
+    with no page of its own otherwise). These need a standalone valid-values
+    page too, or the "View" link _create_markdown_link() builds for them
+    points nowhere. A key that owns attributes but that no model page ever
+    references (e.g. "consortium", "institution", "project" - each only
+    self-referenced by its own non-page root manifest attribute) doesn't
+    need one.
+
+    Returns {mapping.yaml key: human-readable nav title}.
+    """
+    owners = _load_attribute_owners()
+    referenced = set()
+    for model in DATA_MODELS:
+        for attribute in _get_model_attributes(model):
+            owner = owners.get(attribute)
+            if owner and owner not in DATA_MODELS:
+                referenced.add(owner)
+    return {key: key[0].upper() + key[1:] for key in referenced}
+
+
 # --- Core logic functions ---
 def generate_linked_table(model: str):
     """Generate CSV with linked attributes to list of valid values.
@@ -181,7 +247,7 @@ def generate_linked_table(model: str):
 
     table = pd.DataFrame({"Attribute": _get_model_attributes(model)})
     table = table.merge(
-        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern"]],
+        model_df[["Description", "Required", "Valid Values", "columnType", "Format", "Pattern", "Properties"]],
         left_on="Attribute",
         right_index=True,
         how="left",
@@ -191,6 +257,14 @@ def generate_linked_table(model: str):
     table["Required"] = table["Required"].apply(
         lambda v: "True" if str(v).strip() == "True" else "False"
     )
+
+    # Every attribute currently has a real Description, but guard against a
+    # future gap rendering as a blank cell rather than being explicit about it.
+    table["Description"] = table["Description"].apply(lambda d: d.strip() or NO_DESCRIPTION_PLACEHOLDER)
+
+    # Surface each attribute's caDSR CDE mapping(s), if any (see
+    # _extract_cde_tags - Properties also carries non-CDE markers).
+    table["CDE"] = table["Properties"].apply(_extract_cde_tags)
 
     # Add the Example column and rename it to Examples, if example data
     # exists for this model. Some newer modules don't yet have curated
@@ -207,14 +281,18 @@ def generate_linked_table(model: str):
     table["Examples"] = table["Examples"].fillna("")
 
     # If an attribute has a list of standard terms, link to its anchor on
-    # whichever model's valid-values page actually owns it.
+    # whichever model's valid-values page actually owns it. An attribute can
+    # have Valid Values without a mapping.yaml owner (the list is inline in
+    # annotationProperty.csv rather than backed by a CV file) - there's no
+    # valid-values page for those to link to, so render "None" rather than a
+    # dead link.
     attribute_owners = _load_attribute_owners()
     table["Standard Terms"] = table.apply(
         lambda row: (
             _create_markdown_link(
-                row["Attribute"], attribute_owners.get(row["Attribute"], model), text="View"
+                row["Attribute"], attribute_owners[row["Attribute"]], text="View"
             )
-            if row["Valid Values"]
+            if row["Attribute"] in attribute_owners
             else "None"
         ),
         axis=1,
@@ -225,6 +303,51 @@ def generate_linked_table(model: str):
     table["Format"] = _format_technical_column(table["Format"])
     table["Regex Pattern"] = _format_technical_column(table["Regex Pattern"], escape_backslashes=True)
     table[COLS_TO_RENDER].to_csv(reference_file, index=False)
+
+
+def _ontology_link(row) -> str:
+    """The term's Ontology Identifier as a link to its Ontology Url, the ID
+    alone if it has no URL, or NO_ONTOLOGY_PLACEHOLDER if the term has no
+    ontology mapping."""
+    ident = (row.get("Ontology Identifier") or "").strip()
+    url = (row.get("Ontology Url") or "").strip()
+    if not ident:
+        return NO_ONTOLOGY_PLACEHOLDER
+    if not url.startswith(("http://", "https://")):
+        return html.escape(ident)
+    return f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">{html.escape(ident)}</a>'
+
+
+def _cleaned_valid_values_src(valid_values_src: str) -> str:
+    """Write the Standard Terms table for a CV file - Valid Value,
+    Description (blank cells replaced by NO_DESCRIPTION_PLACEHOLDER) and
+    Ontology (a link to the term's ontology entry, when it has one) - and
+    return the path (relative to modules/,
+    the table-reader plugin's data_path) to use in place of the raw source.
+
+    Without this, a blank Description cell reaches mkdocs-table-reader-
+    plugin's read_csv() with no `keep_default_na=False`, so pandas parses
+    it as NaN and it renders as a literal "nan" in the built table - and
+    even with that flag, blank would just render as an empty cell, not the
+    explicit placeholder text the docs should show. Cached by source path
+    (not per-model), since one CV file often backs several models' pages.
+    """
+    os.makedirs(VALID_VALUES_CACHE_DIR, exist_ok=True)
+    cached_name = valid_values_src.replace("/", "__")
+    cached_path = join(VALID_VALUES_CACHE_DIR, cached_name)
+
+    df = pd.read_csv(join("modules", valid_values_src), quoting=1, dtype=str, keep_default_na=False)
+    df["Description"] = df["Description"].apply(lambda d: d.strip() or NO_DESCRIPTION_PLACEHOLDER)
+    # The page renders this as raw HTML (tablefmt='unsafehtml', so the
+    # Ontology links below aren't escaped), so escape every cell's text here.
+    out = pd.DataFrame({
+        "Valid Value": df["Attribute"].map(html.escape),
+        "Description": df["Description"].map(html.escape),
+        "Ontology": df.apply(_ontology_link, axis=1),
+    })
+    out.to_csv(cached_path, index=False)
+
+    return join(".valid_values_cache", cached_name)
 
 
 def generate_valid_values_markdown(model: str):
@@ -247,18 +370,18 @@ def generate_valid_values_markdown(model: str):
         # of standard terms.
         for attribute in mapping.get(model, {}):
             name = attribute.get("name")
-            valid_values_src = attribute.get("src")
+            valid_values_src = _cleaned_valid_values_src(attribute.get("src"))
 
             md.write(f"## Attribute: `{name}`\n\n")
-            md.write(
-                '<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">\n\n'
-            )
+            # The table's scroll box (height capped to the window, so both
+            # scrollbars stay reachable) comes from docs/stylesheets/extra.css.
+            # 'unsafehtml' so the Ontology column's links render; every
+            # cell is escaped in _cleaned_valid_values_src().
             md.write(
                 "{{ read_csv('"
                 + valid_values_src
-                + "', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}\n\n"
+                + "', keep_default_na=False, tablefmt='unsafehtml') }}\n\n\n"
             )
-            md.write("</div>\n\n\n")
 
 
 # --- MkDocs event hooks ---
@@ -272,6 +395,13 @@ def on_pre_build(config):
     for model in DATA_MODELS:
         generate_linked_table(model)
         generate_valid_values_markdown(model)
+
+    # Cross-model vocab keys (e.g. "shared") aren't data models themselves -
+    # no linked table/reference.csv, since there's no template to render one
+    # for - but still need their own valid-values page, since data-model
+    # pages link "View" for these attributes to it (see _extra_vocab_owners).
+    for key in _extra_vocab_owners():
+        generate_valid_values_markdown(key)
 
 
 def on_files(_, config):
@@ -295,6 +425,14 @@ def on_files(_, config):
     # if the docs page exists and has contents.
     for model, page_title in DATA_MODELS.items():
         docs_page = join("valid_values", f"{model}.md")
+        if isfile(join("docs", docs_page)) and getsize(join("docs", docs_page)) > 0:
+            config["nav"]["Standard Terms"]["Terms by model"].append(
+                {page_title: docs_page}
+            )
+
+    # Cross-model vocab pages (e.g. "Shared") go after the per-model entries.
+    for key, page_title in _extra_vocab_owners().items():
+        docs_page = join("valid_values", f"{key}.md")
         if isfile(join("docs", docs_page)) and getsize(join("docs", docs_page)) > 0:
             config["nav"]["Standard Terms"]["Terms by model"].append(
                 {page_title: docs_page}

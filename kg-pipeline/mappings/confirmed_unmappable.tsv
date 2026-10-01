@@ -1,0 +1,37 @@
+table	field	value	reason
+Publication	accessibility	Open Access	checked NCIT/DUO/EDAM live via OLS4 - no external vocabulary term for publication access-policy categories
+Publication	accessibility	Restricted Access	checked NCIT/DUO/EDAM live via OLS4 - no external vocabulary term for publication access-policy categories
+Tool	accessibility	Open Access	checked NCIT/DUO/EDAM live via OLS4 - no external vocabulary term for software access-policy categories
+Tool	accessibility	Open Access (With Restrictions)	checked NCIT/DUO/EDAM live via OLS4 - no external vocabulary term for software access-policy categories
+Tool	accessibility	Restricted Access	checked NCIT/DUO/EDAM live via OLS4 - no external vocabulary term for software access-policy categories
+Tool	cost	Commercial	checked NCIT live via OLS4 - no software-cost-category concept
+Tool	cost	Free of Charge	checked NCIT live via OLS4 - no software-cost-category concept
+Tool	cost	Free of Charge (With Restrictions)	checked NCIT live via OLS4 - no software-cost-category concept
+Tool	license	Not licensed	checked SPDX - not a real SPDX license identifier; SPDX defines NOASSERTION/NONE as reserved expression keywords, not URL-bearing license pages
+Publication	tumorType	Pan-Cancer	checked NCIT/MONDO live via OLS4 - a multi-tumor-type study-scope descriptor, not itself a disease/tumor-type concept
+Publication	tumorType	Pan-cancer	checked NCIT/MONDO live via OLS4 - a multi-tumor-type study-scope descriptor, not itself a disease/tumor-type concept
+Dataset	tumorType	Pan-Cancer	checked NCIT/MONDO live via OLS4 - a multi-tumor-type study-scope descriptor, not itself a disease/tumor-type concept
+Dataset	tumorType	Pan-cancer	checked NCIT/MONDO live via OLS4 - a multi-tumor-type study-scope descriptor, not itself a disease/tumor-type concept
+Grant	theme	Computational Model Development	checked NCIT/EDAM live via OLS4 - compound/methodological concept, no single matching term
+Grant	theme	Computational Resource	checked NCIT/EDAM live via OLS4 - compound/methodological concept, no single matching term
+Grant	theme	Experimental Model Development	checked NCIT/EDAM live via OLS4 - compound/methodological concept, no single matching term
+Grant	theme	Mechano-genetics	checked NCIT/EDAM live via OLS4 - niche/emerging term, not indexed in any checked ontology
+Grant	theme	Mechano-resistance	checked NCIT/EDAM live via OLS4 - niche/emerging term, not indexed in any checked ontology
+Grant	theme	Method/Assay Development	checked NCIT/EDAM live via OLS4 - compound/methodological concept, no single matching term
+Grant	theme	Oncogenic Stress	checked NCIT/EDAM live via OLS4 - niche/emerging term, not indexed in any checked ontology
+Grant	theme	Platform Development	checked NCIT/EDAM live via OLS4 - compound/methodological concept, no single matching term
+Grant	grantType	R01	checked NCIT live via OLS4 - only category-level "Research Projects, R-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	grantType	R21	checked NCIT live via OLS4 - only category-level "Research Projects, R-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	grantType	R37	checked NCIT live via OLS4 - only category-level "Research Projects, R-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	grantType	U01	checked NCIT live via OLS4 - only category-level "Cooperative Agreements, U-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	grantType	U24	checked NCIT live via OLS4 - only category-level "Cooperative Agreements, U-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	grantType	U54	checked NCIT live via OLS4 - only category-level "Cooperative Agreements, U-Series" exists, too coarse to stand in for a specific NIH activity code
+Grant	consortium	CCBIR	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	CSBC	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	ICBP	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	MetNet	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	NCI	checked NCIT/ROR live - acronym for the funding agency itself, not a distinct registrable consortium concept
+Grant	consortium	NCI Clinical and Translational Exploratory/Developmental Studies	checked NCIT/ROR live - NCI-internal program name, not a registered organization or NCIT concept
+Grant	consortium	PDMC	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	PS-ON	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept
+Grant	consortium	TEC	checked NCIT/ROR live - NCI-internal program acronym, not a registered organization or NCIT concept

@@ -1,0 +1,7 @@
+linkml>=1.11.1
+pandas
+pyshacl
+pytest
+PyYAML
+rdflib
+synapseclient>=4.13.0

@@ -1,6 +1,6 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-cm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-mm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-µm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-nm,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
-Å,,,,FALSE,,Imaging Level 2,,HTAN,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"cm","A length unit which is equal to one hundredth of a meter or 10^[-2] m.","","","FALSE","","Imaging Level 2","","HTAN","","","UO:0000015","http://purl.obolibrary.org/obo/UO_0000015","",""
+"mm","A length unit which is equal to one thousandth of a meter or 10^[-3] m.","","","FALSE","","Imaging Level 2","","HTAN","","","UO:0000016","http://purl.obolibrary.org/obo/UO_0000016","",""
+"µm","A length unit which is equal to one millionth of a meter or 10^[-6] m.","","","FALSE","","Imaging Level 2","","HTAN","","","UO:0000017","http://purl.obolibrary.org/obo/UO_0000017","",""
+"nm","A length unit which is equal to one billionth of a meter or 10^[-9] m.","","","FALSE","","Imaging Level 2","","HTAN","","","UO:0000018","http://purl.obolibrary.org/obo/UO_0000018","",""
+"Å","A length unit which is equal to 10^[-10] m.","","","FALSE","","Imaging Level 2","","HTAN","","","UO:0000019","http://purl.obolibrary.org/obo/UO_0000019","",""

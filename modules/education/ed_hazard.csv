@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Flashing,,,,FALSE,,Resource Access Hazard,,OER,,,,,,
-Motion,,,,FALSE,,Resource Access Hazard,,OER,,,,,,
-Simulation,,,,FALSE,,Resource Access Hazard,,OER,,,,,,
-Sound,,,,FALSE,,Resource Access Hazard,,OER,,,,,,
+Flashing,Indicates the educational resource contains flashing or strobing visual effects that may pose a seizure risk for photosensitive users.,,,FALSE,,Resource Access Hazard,,OER,,,,,,
+Motion,"Indicates the educational resource contains motion effects (e.g., panning, zooming, or animated movement) that may cause discomfort or disorientation for motion-sensitive users.",,,FALSE,,Resource Access Hazard,,OER,,,,,,
+Simulation,Indicates the educational resource contains simulated or virtual environments that may pose a hazard for users sensitive to simulated motion or visual effects.,,,FALSE,,Resource Access Hazard,,OER,,,,,,
+Sound,"Indicates the educational resource contains audio content, including unexpected or startling sounds, that may pose a hazard for users with sound sensitivities.",,,FALSE,,Resource Access Hazard,,OER,,,,,,

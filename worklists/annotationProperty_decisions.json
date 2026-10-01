@@ -1,0 +1,191 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Biospecimen",
+    "ontology_identifier": "NCIT:C70699",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C70699",
+    "label": "Biospecimen",
+    "description": "Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions.",
+    "verification": {"verdict": "partial", "note": "NCIT:C70699 represents the biospecimen entity concept; the row is a metadata schema node, but this is the canonical reference term for the biospecimen domain."}
+  },
+  {
+    "row_index": 1,
+    "term": "Biospecimen_id",
+    "ontology_identifier": "NCIT:C166393",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C166393",
+    "label": "Specimen Identifier",
+    "description": "A unique string of characters used to identify a specimen.",
+    "verification": {"verdict": "match", "note": "NCIT:C166393 exactly matches a unique specimen identifier. Existing description adds format-specific detail (ModelKey-Bxxx pattern)."}
+  },
+  {
+    "row_index": 2,
+    "term": "Biospecimen Type Category",
+    "ontology_identifier": "NCIT:C70713",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C70713",
+    "label": "Biospecimen Type",
+    "description": "The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes.",
+    "verification": {"verdict": "partial", "note": "No exact NCIT term for 'Biospecimen Type Category'. NCIT:C70713 'Biospecimen Type' is the closest available. This field represents a higher-level grouping (e.g., Tissue, Blood, Fluid) rather than the fine-grained type. Human review recommended."}
+  },
+  {
+    "row_index": 3,
+    "term": "Biospecimen Type",
+    "ontology_identifier": "NCIT:C70713",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C70713",
+    "label": "Biospecimen Type",
+    "description": "The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes.",
+    "verification": {"verdict": "match", "note": "NCIT:C70713 label and definition match exactly. Existing description 'The type of biospecimen' is consistent."}
+  },
+  {
+    "row_index": 5,
+    "term": "Biospecimen Sex",
+    "ontology_identifier": "NCIT:C28421",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28421",
+    "label": "Sex",
+    "description": "The biological sex designation of an individual based on reproductive anatomy, chromosomes, hormones, and related characteristics.",
+    "verification": {"verdict": "match", "note": "NCIT:C28421 'Sex' captures biological sex of specimen donor. Existing description 'Biological sex associated with the specimen donor' is consistent with the NCIT definition."}
+  },
+  {
+    "row_index": 6,
+    "term": "Biospecimen Age at Collection",
+    "ontology_identifier": "NCIT:C202854",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202854",
+    "label": "Age at Specimen Collection",
+    "description": "Age of a subject when a specimen was collected.",
+    "verification": {"verdict": "match", "note": "NCIT:C202854 exactly matches. Existing description adds instruction about the unit field."}
+  },
+  {
+    "row_index": 9,
+    "term": "Biospecimen Tumor Subtype",
+    "ontology_identifier": "NCIT:C19790",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19790",
+    "label": "Histologic Subtype",
+    "description": "The classification of tumors based on their histology.",
+    "verification": {"verdict": "partial", "note": "NCIT:C19790 'Histologic Subtype' is the closest available match. The existing description is more verbose and mentions ICD-O framing; histologic subtype covers the core concept. Human review recommended."}
+  },
+  {
+    "row_index": 10,
+    "term": "Biospecimen Tumor Grade",
+    "ontology_identifier": "NCIT:C18000",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18000",
+    "label": "Histologic Grade",
+    "description": "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type.",
+    "verification": {"verdict": "match", "note": "NCIT:C18000 'Histologic Grade' closely matches. Existing description 'Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness' is consistent."}
+  },
+  {
+    "row_index": 14,
+    "term": "Biospecimen Anatomic Site",
+    "ontology_identifier": "NCIT:C171435",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C171435",
+    "label": "Specimen Anatomic Site",
+    "description": "The anatomic site from which a biospecimen was obtained.",
+    "verification": {"verdict": "match", "note": "NCIT:C171435 matches exactly. Existing description frames it as the primary disease site, which is a common proxy for collection site."}
+  },
+  {
+    "row_index": 15,
+    "term": "Biospecimen Site of Resection or Biopsy",
+    "ontology_identifier": "NCIT:C156421",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156421",
+    "label": "Site of Resection or Biopsy",
+    "description": "The anatomic site from which a biopsy sample, or other tissue, was removed.",
+    "verification": {"verdict": "match", "note": "NCIT:C156421 label and definition match exactly."}
+  },
+  {
+    "row_index": 16,
+    "term": "Biospecimen Site of Origin",
+    "ontology_identifier": "NCIT:C158874",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C158874",
+    "label": "Primary Site of Disease",
+    "description": "The anatomic location where a disease of interest originated.",
+    "verification": {"verdict": "partial", "note": "NCIT:C158874 'Primary Site of Disease' aligns with the spirit of site of origin of malignant disease. The NCIT term is classified as a Record/Description rather than a Property; human review recommended."}
+  },
+  {
+    "row_index": 17,
+    "term": "Biospecimen Timepoint Type",
+    "ontology_identifier": "NCIT:C198201",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C198201",
+    "label": "Timepoint Event Category",
+    "description": "The classification or description of an event observed or recorded during a clinical encounter where a treatment is administered, a sample is collected for laboratory or molecular analysis, or follow-up information is gathered.",
+    "verification": {"verdict": "match", "note": "NCIT:C198201 aligns well with the field's purpose of labeling clinical events (Baseline, End of Treatment, etc.) associated with specimen collection."}
+  },
+  {
+    "row_index": 19,
+    "term": "Biospecimen Therapeutic Agent",
+    "ontology_identifier": "NCIT:C1909",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C1909",
+    "label": "Pharmacologic Substance",
+    "description": "Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity used to prevent, diagnose, treat, or relieve symptoms of a disease.",
+    "verification": {"verdict": "partial", "note": "NCIT:C1909 'Pharmacologic Substance' represents the concept of a therapeutic agent/drug. The field records text identification of agents used in a treatment regimen. No more specific 'Therapeutic Agent name' property term was found in NCIT. Human review recommended."}
+  },
+  {
+    "row_index": 20,
+    "term": "Biospecimen Tumor Morphology",
+    "ontology_identifier": "NCIT:C176985",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C176985",
+    "label": "Histology ICD-O Morphology Code",
+    "description": "Codes for the histologic type of the tumor being reported using ICD-O.",
+    "verification": {"verdict": "match", "note": "NCIT:C176985 exactly matches the ICD-O morphology coding concept described in the existing description."}
+  },
+  {
+    "row_index": 21,
+    "term": "Biospecimen Fixative",
+    "ontology_identifier": "NCIT:C498",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C498",
+    "label": "Fixative",
+    "description": "A compound that preserves tissues and cells for microscopic study.",
+    "verification": {"verdict": "match", "note": "NCIT:C498 definition 'A compound that preserves tissues and cells for microscopic study' matches existing description exactly."}
+  },
+  {
+    "row_index": 26,
+    "term": "Biospecimen BioSample Identifier",
+    "ontology_identifier": "NCIT:C175889",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C175889",
+    "label": "BioSample Accession Number",
+    "description": "An alphanumeric identifier assigned to biological materials submitted to NCBI archives, used to generate or associate data.",
+    "verification": {"verdict": "match", "note": "NCIT:C175889 'BioSample Accession Number' matches exactly — the existing description specifies SAMN accession numbers for NCBI BioSample."}
+  },
+  {
+    "row_index": 28,
+    "term": "Biospecimen Stain",
+    "ontology_identifier": "NCIT:C23010",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C23010",
+    "label": "Staining Method",
+    "description": "A method that uses dye, reagent, or other material to produce coloration in tissues or microorganisms for microscopic examination.",
+    "verification": {"verdict": "partial", "note": "NCIT:C23010 'Staining Method' is a procedure class. The field records the name of the stain used (a method identifier), so this is a reasonable match at the method concept level. Human review recommended."}
+  },
+  {
+    "row_index": 30,
+    "term": "Biospecimen Last Known Disease Status",
+    "ontology_identifier": "NCIT:C191938",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C191938",
+    "label": "Last Known Disease Status",
+    "description": "The most recently documented condition or state with regards to a disease of interest.",
+    "verification": {"verdict": "match", "note": "NCIT:C191938 label and definition exactly match the field purpose."}
+  },
+  {
+    "row_index": 31,
+    "term": "Biospecimen Known Metastasis Sites",
+    "ontology_identifier": "NCIT:C172233",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172233",
+    "label": "Site of Metastasis",
+    "description": "The anatomical location where metastasis was detected.",
+    "verification": {"verdict": "match", "note": "NCIT:C172233 matches the concept. The field allows multiple values (comma-separated), while NCIT:C172233 is singular; the semantics align."}
+  },
+  {
+    "row_index": 32,
+    "term": "Biospecimen Primary Site",
+    "ontology_identifier": "NCIT:C179451",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C179451",
+    "label": "Primary Tumor Site",
+    "description": "The anatomic location of a primary tumor.",
+    "verification": {"verdict": "match", "note": "NCIT:C179451 matches. Existing description 'Primary site in the body associated with the primary diagnosis' is consistent."}
+  },
+  {
+    "row_index": 34,
+    "term": "Biospecimen Treatment Response",
+    "ontology_identifier": "NCIT:C50995",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C50995",
+    "label": "Disease Response",
+    "description": "The molecular/pathological and/or clinical changes that result from treatment, including eradication of detectable disease, stabilization of disease, or disease progression.",
+    "verification": {"verdict": "match", "note": "NCIT:C50995 aligns well. The existing description frames it as treatment response of a model/patient from which the specimen was derived, consistent with the concept."}
+  }
+]}

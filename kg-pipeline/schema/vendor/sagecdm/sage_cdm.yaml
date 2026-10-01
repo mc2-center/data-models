@@ -1,0 +1,82 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/sage_cdm
+name: sage-cdm
+title: Sage Common Data Model
+description: >-
+  Umbrella schema for the Sage Common Data Model. Imports every base class, mixin, and
+  Phase 1 entity class so that generators, validators, and downstream consumers have a
+  single entry point.
+
+  Import this file (not the individual entity files) when you want the whole model. Import
+  an individual entity file when you want just that class and its dependencies.
+
+  Phase 1 entities: ORGANIZATION, PERSON, PROGRAM, PROJECT, STUDY.
+  Not yet implemented: PORTAL (SCDM-2), and the role-assignment relationship connecting
+  PERSON to PROGRAM / PROJECT / STUDY.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4237754409/Sage+Common+Data+Model+CDM
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4788846642/CDM+Modeling+Principles
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - props
+  - mixins
+  - base_entity
+  - organization
+  - person
+  - program
+  - project
+  - study
+
+classes:
+
+  Portfolio:
+    title: PORTFOLIO
+    description: >-
+      A container holding a set of CDM records. Not a CDM entity — it exists so that a
+      collection of records can be serialized, exchanged, and validated as one document,
+      and so cross-record references can be checked for resolvability.
+    tree_root: true
+    attributes:
+      organizations:
+        title: Organizations
+        description: ORGANIZATION records in this document.
+        range: Organization
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      persons:
+        title: Persons
+        description: PERSON records in this document.
+        range: Person
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      programs:
+        title: Programs
+        description: PROGRAM records in this document.
+        range: Program
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      projects:
+        title: Projects
+        description: PROJECT records in this document.
+        range: Project
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      studies:
+        title: Studies
+        description: STUDY records in this document.
+        range: Study
+        multivalued: true
+        inlined: true
+        inlined_as_list: true

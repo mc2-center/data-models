@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Curriculum/Instruction,,,,FALSE,,Resource Intended Use,,OER,,,,,,
-Assessment,,,,FALSE,,Resource Intended Use,,OER,,,,,,
-Professional Development,,,,FALSE,,Resource Intended Use,,OER,,,,,,
-Other,,,,FALSE,,Resource Intended Use,,OER,,,,,,
+Curriculum/Instruction,A structured course of study or instructional material intended for use in classroom teaching or curriculum-based instruction.,,,FALSE,,Resource Intended Use,,OER,,,MESH:D003479,http://id.nlm.nih.gov/mesh/D003479,,
+Assessment,"The process of evaluating or measuring the value, significance, or extent of a learner's knowledge, skills, or performance.",,,FALSE,,Resource Intended Use,,OER,,,NCIT:C25217,http://purl.obolibrary.org/obo/NCIT_C25217,C25217,
+Professional Development,"Resources intended to support ongoing training, skill-building, or continuing education for professionals in a given field.",,,FALSE,,Resource Intended Use,,OER,,,,,,
+Other,Different than the one(s) previously specified or mentioned.,,,FALSE,,Resource Intended Use,,OER,,,NCIT:C17649,http://purl.obolibrary.org/obo/NCIT_C17649,C17649,

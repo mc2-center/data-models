@@ -1,0 +1,95 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/grant_institution_name.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Albert Einstein College of Medicine	Albert Einstein College of Medicine	skos:exactMatch	https://ror.org/05cf8a891	semapv:ManualMappingCuration
+Arizona State University	Arizona State University	skos:exactMatch	https://ror.org/03efmqc40	semapv:ManualMappingCuration
+Auburn University	Auburn University	skos:exactMatch	https://ror.org/02v80fc35	semapv:ManualMappingCuration
+Barrow Neurological Institute	Barrow Neurological Institute	skos:exactMatch	https://ror.org/01fwrsq33	semapv:ManualMappingCuration
+Baylor College Of Medicine	Baylor College Of Medicine	skos:exactMatch	https://ror.org/02pttbw34	semapv:ManualMappingCuration
+Beckman Research Institute of City of Hope	Beckman Research Institute of City of Hope	skos:exactMatch	https://ror.org/05fazth07	semapv:ManualMappingCuration
+Beth Israel Deaconess Hospital	Beth Israel Deaconess Hospital	skos:exactMatch	https://ror.org/02cpjkp59	semapv:ManualMappingCuration
+Boston Medical Center	Boston Medical Center	skos:exactMatch	https://ror.org/010b9wj87	semapv:ManualMappingCuration
+Boston University	Boston University	skos:exactMatch	https://ror.org/05qwgg493	semapv:ManualMappingCuration
+Brigham and Womens Hospital	Brigham and Womens Hospital	skos:exactMatch	https://ror.org/04b6nzv94	semapv:ManualMappingCuration
+California Institute of Technology	California Institute of Technology	skos:exactMatch	https://ror.org/05dxps055	semapv:ManualMappingCuration
+Childrens Hospital of Philadelphia	Childrens Hospital of Philadelphia	skos:exactMatch	https://ror.org/01z7r7q48	semapv:ManualMappingCuration
+City Of Hope	City Of Hope	skos:exactMatch	https://ror.org/00w6g5w60	semapv:ManualMappingCuration
+Clemson University	Clemson University	skos:exactMatch	https://ror.org/037s24f05	semapv:ManualMappingCuration
+Cleveland Clinic	Cleveland Clinic	skos:exactMatch	https://ror.org/03xjacd83	semapv:ManualMappingCuration
+Cold Spring Harbor Laboratory	Cold Spring Harbor Laboratory	skos:exactMatch	https://ror.org/02qz8b764	semapv:ManualMappingCuration
+Columbia University	Columbia University	skos:exactMatch	https://ror.org/00hj8s172	semapv:ManualMappingCuration
+Cornell University	Cornell University	skos:exactMatch	https://ror.org/05bnh6r87	semapv:ManualMappingCuration
+Dana-Farber Cancer Institute	Dana-Farber Cancer Institute	skos:exactMatch	https://ror.org/02jzgtq86	semapv:ManualMappingCuration
+Dartmouth College	Dartmouth College	skos:exactMatch	https://ror.org/049s0rh22	semapv:ManualMappingCuration
+Duke University	Duke University	skos:exactMatch	https://ror.org/00py81415	semapv:ManualMappingCuration
+Emory University	Emory University	skos:exactMatch	https://ror.org/03czfpz43	semapv:ManualMappingCuration
+Georgia Institute of Technology	Georgia Institute of Technology	skos:exactMatch	https://ror.org/01zkghx44	semapv:ManualMappingCuration
+Harvard Medical School	Harvard Medical School	skos:exactMatch	https://ror.org/03vek6s52	semapv:ManualMappingCuration
+Harvard University	Harvard University	skos:exactMatch	https://ror.org/03vek6s52	semapv:ManualMappingCuration
+Hebrew University of Jerusalem	Hebrew University of Jerusalem	skos:exactMatch	https://ror.org/03qxff017	semapv:ManualMappingCuration
+Houston Methodist	Houston Methodist	skos:exactMatch	https://ror.org/027zt9171	semapv:ManualMappingCuration
+Indiana University	Indiana University	skos:exactMatch	https://ror.org/01kg8sb98	semapv:ManualMappingCuration
+Institute for Systems Biology	Institute for Systems Biology	skos:exactMatch	https://ror.org/02tpgw303	semapv:ManualMappingCuration
+Jackson Laboratory	Jackson Laboratory	skos:exactMatch	https://ror.org/021sy4w91	semapv:ManualMappingCuration
+Johns Hopkins University	Johns Hopkins University	skos:exactMatch	https://ror.org/00za53h95	semapv:ManualMappingCuration
+Massachusetts General Hospital	Massachusetts General Hospital	skos:exactMatch	https://ror.org/002pd6e78	semapv:ManualMappingCuration
+Massachusetts Institute of Technology	Massachusetts Institute of Technology	skos:exactMatch	https://ror.org/042nb2s44	semapv:ManualMappingCuration
+Mayo Clinic	Mayo Clinic	skos:exactMatch	https://ror.org/02qp3tb03	semapv:ManualMappingCuration
+Memorial Sloan Kettering Cancer Center	Memorial Sloan Kettering Cancer Center	skos:exactMatch	https://ror.org/02yrq0923	semapv:ManualMappingCuration
+Moffitt Cancer Center	Moffitt Cancer Center	skos:exactMatch	https://ror.org/01xf75524	semapv:ManualMappingCuration
+New York University	New York University	skos:exactMatch	https://ror.org/0190ak572	semapv:ManualMappingCuration
+Northeastern University	Northeastern University	skos:exactMatch	https://ror.org/04t5xt781	semapv:ManualMappingCuration
+Northwestern University	Northwestern University	skos:exactMatch	https://ror.org/000e0be47	semapv:ManualMappingCuration
+Oregon Health & Science University	Oregon Health & Science University	skos:exactMatch	https://ror.org/009avj582	semapv:ManualMappingCuration
+Pacific Northwest National Laboratory	Pacific Northwest National Laboratory	skos:exactMatch	https://ror.org/05h992307	semapv:ManualMappingCuration
+Purdue University	Purdue University	skos:exactMatch	https://ror.org/02dqehb95	semapv:ManualMappingCuration
+Rockefeller University	Rockefeller University	skos:exactMatch	https://ror.org/0420db125	semapv:ManualMappingCuration
+Sage Bionetworks	Sage Bionetworks	skos:exactMatch	https://ror.org/049ncjx51	semapv:ManualMappingCuration
+Salk Institute for Biological Studies	Salk Institute for Biological Studies	skos:exactMatch	https://ror.org/03xez1567	semapv:ManualMappingCuration
+St. Jude Children's Hospital	St. Jude Children's Hospital	skos:exactMatch	https://ror.org/02r3e0967	semapv:ManualMappingCuration
+Stanford University	Stanford University	skos:exactMatch	https://ror.org/00f54p054	semapv:ManualMappingCuration
+Stony Brook University	Stony Brook University	skos:exactMatch	https://ror.org/05qghxh33	semapv:ManualMappingCuration
+The University of Texas Health Science Center at San Antonio	The University of Texas Health Science Center at San Antonio	skos:exactMatch	https://ror.org/02f6dcw23	semapv:ManualMappingCuration
+Tufts University Medford	Tufts University Medford	skos:exactMatch	https://ror.org/05wvpxv85	semapv:ManualMappingCuration
+University of Alabama at Birmingham	University of Alabama at Birmingham	skos:exactMatch	https://ror.org/008s83205	semapv:ManualMappingCuration
+University of Arizona	University of Arizona	skos:exactMatch	https://ror.org/03m2x1q45	semapv:ManualMappingCuration
+University of Arkansas at Fayetteville	University of Arkansas at Fayetteville	skos:exactMatch	https://ror.org/05jbt9m15	semapv:ManualMappingCuration
+University of California; Berkeley	University of California; Berkeley	skos:exactMatch	https://ror.org/01an7q238	semapv:ManualMappingCuration
+University of California; Irvine	University of California; Irvine	skos:exactMatch	https://ror.org/04gyf1771	semapv:ManualMappingCuration
+University of California; Los Angeles	University of California; Los Angeles	skos:exactMatch	https://ror.org/046rm7j60	semapv:ManualMappingCuration
+University of California; San Diego	University of California; San Diego	skos:exactMatch	https://ror.org/0168r3w48	semapv:ManualMappingCuration
+University of California; San Francisco	University of California; San Francisco	skos:exactMatch	https://ror.org/043mz5j54	semapv:ManualMappingCuration
+University of Chicago	University of Chicago	skos:exactMatch	https://ror.org/024mw5h28	semapv:ManualMappingCuration
+University of Chicago Medical Center	University of Chicago Medical Center	skos:exactMatch	https://ror.org/0076kfe04	semapv:ManualMappingCuration
+University of Colorado Denver	University of Colorado Denver	skos:exactMatch	https://ror.org/02hh7en24	semapv:ManualMappingCuration
+University of Delaware	University of Delaware	skos:exactMatch	https://ror.org/01sbq1a82	semapv:ManualMappingCuration
+University of Florida	University of Florida	skos:exactMatch	https://ror.org/02y3ad647	semapv:ManualMappingCuration
+University of Illinois	University of Illinois	skos:exactMatch	https://ror.org/047426m28	semapv:ManualMappingCuration
+University of Illinois at Chicago	University of Illinois at Chicago	skos:exactMatch	https://ror.org/02mpq6x41	semapv:ManualMappingCuration
+University of Massachusetts Medical School	University of Massachusetts Medical School	skos:exactMatch	https://ror.org/0464eyp60	semapv:ManualMappingCuration
+University of Miami	University of Miami	skos:exactMatch	https://ror.org/02dgjyy92	semapv:ManualMappingCuration
+University of Michigan	University of Michigan	skos:exactMatch	https://ror.org/00jmfr291	semapv:ManualMappingCuration
+University of Minnesota	University of Minnesota	skos:exactMatch	https://ror.org/017zqws13	semapv:ManualMappingCuration
+University of Nevada Reno	University of Nevada Reno	skos:exactMatch	https://ror.org/01keh0577	semapv:ManualMappingCuration
+University of New South Wales	University of New South Wales	skos:exactMatch	https://ror.org/03r8z3t63	semapv:ManualMappingCuration
+University of North Carolina at Chapel Hill	University of North Carolina at Chapel Hill	skos:exactMatch	https://ror.org/0130frc33	semapv:ManualMappingCuration
+University of Pennsylvania	University of Pennsylvania	skos:exactMatch	https://ror.org/00b30xv10	semapv:ManualMappingCuration
+University of Pittsburgh	University of Pittsburgh	skos:exactMatch	https://ror.org/01an3r305	semapv:ManualMappingCuration
+University of Southern California	University of Southern California	skos:exactMatch	https://ror.org/03taz7m60	semapv:ManualMappingCuration
+University of Texas MD Anderson Cancer Center	University of Texas MD Anderson Cancer Center	skos:exactMatch	https://ror.org/04twxam07	semapv:ManualMappingCuration
+University of Texas Southwestern Medical Center	University of Texas Southwestern Medical Center	skos:exactMatch	https://ror.org/05byvp690	semapv:ManualMappingCuration
+University of Texas at Austin	University of Texas at Austin	skos:exactMatch	https://ror.org/00hj54h04	semapv:ManualMappingCuration
+University of Utah	University of Utah	skos:exactMatch	https://ror.org/03r0ha626	semapv:ManualMappingCuration
+University of Virginia	University of Virginia	skos:exactMatch	https://ror.org/0153tk833	semapv:ManualMappingCuration
+University of Washington	University of Washington	skos:exactMatch	https://ror.org/00cvxb145	semapv:ManualMappingCuration
+University of Wisconsin-Madison	University of Wisconsin-Madison	skos:exactMatch	https://ror.org/01y2jtd41	semapv:ManualMappingCuration
+Vanderbilt University	Vanderbilt University	skos:exactMatch	https://ror.org/02vm5rt34	semapv:ManualMappingCuration
+Virginia Polytechnic Institute	Virginia Polytechnic Institute	skos:exactMatch	https://ror.org/02smfhw86	semapv:ManualMappingCuration
+Wake Forest	Wake Forest	skos:exactMatch	https://ror.org/0207ad724	semapv:ManualMappingCuration
+Washington University in St. Louis	Washington University in St. Louis	skos:exactMatch	https://ror.org/01yc7t268	semapv:ManualMappingCuration
+Weill Cornell Medicine	Weill Cornell Medicine	skos:exactMatch	https://ror.org/02r109517	semapv:ManualMappingCuration
+Wistar Institute	Wistar Institute	skos:exactMatch	https://ror.org/04wncat98	semapv:ManualMappingCuration
+Yale University	Yale University	skos:exactMatch	https://ror.org/03v76x132	semapv:ManualMappingCuration

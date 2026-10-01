@@ -1,0 +1,94 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_input_data.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Biological Model Name	Biological Model Name	skos:exactMatch	http://edamontology.org/data_1170	semapv:ManualMappingCuration
+Cell Line Name	Cell Line Name	skos:exactMatch	http://edamontology.org/data_2316	semapv:ManualMappingCuration
+Cell Migration Track Image	Cell Migration Track Image	skos:exactMatch	http://edamontology.org/data_3449	semapv:ManualMappingCuration
+Cell Type Identifier	Cell Type Identifier	skos:exactMatch	http://edamontology.org/data_2655	semapv:ManualMappingCuration
+Cell Type Name	Cell Type Name	skos:exactMatch	http://edamontology.org/data_2892	semapv:ManualMappingCuration
+Chromosome Name	Chromosome Name	skos:exactMatch	http://edamontology.org/data_0987	semapv:ManualMappingCuration
+Chromosome Report	Chromosome Report	skos:exactMatch	http://edamontology.org/data_0919	semapv:ManualMappingCuration
+Clustered Expression Profiles	Clustered Expression Profiles	skos:exactMatch	http://edamontology.org/data_3768	semapv:ManualMappingCuration
+Codon Number	Codon Number	skos:exactMatch	http://edamontology.org/data_2216	semapv:ManualMappingCuration
+Comparison Matrix	Comparison Matrix	skos:exactMatch	http://edamontology.org/data_0874	semapv:ManualMappingCuration
+Compound Identifier	Compound Identifier	skos:exactMatch	http://edamontology.org/data_1086	semapv:ManualMappingCuration
+Count Matrix	Count Matrix	skos:exactMatch	http://edamontology.org/data_3917	semapv:ManualMappingCuration
+DNA Sequence	DNA Sequence	skos:exactMatch	http://edamontology.org/data_3494	semapv:ManualMappingCuration
+Data Index	Data Index	skos:exactMatch	http://edamontology.org/data_0955	semapv:ManualMappingCuration
+Data Reference	Data Reference	skos:exactMatch	http://edamontology.org/data_2093	semapv:ManualMappingCuration
+Database Search Results	Database Search Results	skos:exactMatch	http://edamontology.org/data_2080	semapv:ManualMappingCuration
+Drug Name	Drug Name	skos:exactMatch	http://edamontology.org/data_2899	semapv:ManualMappingCuration
+Drug Report	Drug Report	skos:exactMatch	http://edamontology.org/data_1696	semapv:ManualMappingCuration
+Electronic Health Record	Electronic Health Record	skos:exactMatch	http://edamontology.org/data_3861	semapv:ManualMappingCuration
+Enzyme Kinetics Data	Enzyme Kinetics Data	skos:exactMatch	http://edamontology.org/data_2024	semapv:ManualMappingCuration
+Experimental Measurement	Experimental Measurement	skos:exactMatch	http://edamontology.org/data_3108	semapv:ManualMappingCuration
+Expression Data	Expression Data	skos:exactMatch	http://edamontology.org/data_2603	semapv:ManualMappingCuration
+Gene Expression Matrix	Gene Expression Matrix	skos:exactMatch	http://edamontology.org/data_3112	semapv:ManualMappingCuration
+Gene Expression Profile	Gene Expression Profile	skos:exactMatch	http://edamontology.org/data_0928	semapv:ManualMappingCuration
+Gene ID	Gene ID	skos:exactMatch	http://edamontology.org/data_2295	semapv:ManualMappingCuration
+Gene ID (NCBI)	Gene ID (NCBI)	skos:exactMatch	http://edamontology.org/data_1027	semapv:ManualMappingCuration
+Gene Name	Gene Name	skos:exactMatch	http://edamontology.org/data_2299	semapv:ManualMappingCuration
+Gene Symbol	Gene Symbol	skos:exactMatch	http://edamontology.org/data_1026	semapv:ManualMappingCuration
+Genotype/Phenotype Report	Genotype/Phenotype Report	skos:exactMatch	http://edamontology.org/data_0920	semapv:ManualMappingCuration
+Hidden Markov Model	Hidden Markov Model	skos:exactMatch	http://edamontology.org/data_1364	semapv:ManualMappingCuration
+Hierarchy	Hierarchy	skos:exactMatch	http://edamontology.org/data_2589	semapv:ManualMappingCuration
+Histogram	Histogram	skos:exactMatch	http://edamontology.org/data_3905	semapv:ManualMappingCuration
+Identifier	Identifier	skos:exactMatch	http://edamontology.org/data_0842	semapv:ManualMappingCuration
+Image	Image	skos:exactMatch	http://edamontology.org/data_2968	semapv:ManualMappingCuration
+Image Metadata	Image Metadata	skos:exactMatch	http://edamontology.org/data_3546	semapv:ManualMappingCuration
+Kinetic Model	Kinetic Model	skos:exactMatch	http://edamontology.org/data_3241	semapv:ManualMappingCuration
+MRI Image	MRI Image	skos:exactMatch	http://edamontology.org/data_3442	semapv:ManualMappingCuration
+Map Data	Map Data	skos:exactMatch	http://edamontology.org/data_2019	semapv:ManualMappingCuration
+Mass Spectrometry Data	Mass Spectrometry Data	skos:exactMatch	http://edamontology.org/data_2536	semapv:ManualMappingCuration
+Mass Spectrum	Mass Spectrum	skos:exactMatch	http://edamontology.org/data_0943	semapv:ManualMappingCuration
+Mathematical Model	Mathematical Model	skos:exactMatch	http://edamontology.org/data_0950	semapv:ManualMappingCuration
+Matrix	Matrix	skos:exactMatch	http://edamontology.org/data_2082	semapv:ManualMappingCuration
+Molecular Simulation Data	Molecular Simulation Data	skos:exactMatch	http://edamontology.org/data_3842	semapv:ManualMappingCuration
+Molecule Identifier	Molecule Identifier	skos:exactMatch	http://edamontology.org/data_0982	semapv:ManualMappingCuration
+Morphology Parameter	Morphology Parameter	skos:exactMatch	http://edamontology.org/data_3723	semapv:ManualMappingCuration
+Mutation ID	Mutation ID	skos:exactMatch	http://edamontology.org/data_2209	semapv:ManualMappingCuration
+Ontology Data	Ontology Data	skos:exactMatch	http://edamontology.org/data_2353	semapv:ManualMappingCuration
+Ontology Mapping	Ontology Mapping	skos:exactMatch	http://edamontology.org/data_3509	semapv:ManualMappingCuration
+Ontology Term	Ontology Term	skos:exactMatch	http://edamontology.org/data_0966	semapv:ManualMappingCuration
+P-Value	P-Value	skos:exactMatch	http://edamontology.org/data_1669	semapv:ManualMappingCuration
+Pathway Or Network	Pathway Or Network	skos:exactMatch	http://edamontology.org/data_2600	semapv:ManualMappingCuration
+Peptide Identification	Peptide Identification	skos:exactMatch	http://edamontology.org/data_0945	semapv:ManualMappingCuration
+Peptide Property	Peptide Property	skos:exactMatch	http://edamontology.org/data_2979	semapv:ManualMappingCuration
+Phenotype Name	Phenotype Name	skos:exactMatch	http://edamontology.org/data_3275	semapv:ManualMappingCuration
+Phylogenetic Data	Phylogenetic Data	skos:exactMatch	http://edamontology.org/data_2523	semapv:ManualMappingCuration
+Phylogenetic Tree	Phylogenetic Tree	skos:exactMatch	http://edamontology.org/data_0872	semapv:ManualMappingCuration
+Plain Text	Plain Text	skos:exactMatch	http://edamontology.org/data_3671	semapv:ManualMappingCuration
+Plot	Plot	skos:exactMatch	http://edamontology.org/data_2884	semapv:ManualMappingCuration
+Position-Specific Scoring Matrix	Position-Specific Scoring Matrix	skos:exactMatch	http://edamontology.org/data_2854	semapv:ManualMappingCuration
+Protein Interaction Data	Protein Interaction Data	skos:exactMatch	http://edamontology.org/data_0906	semapv:ManualMappingCuration
+Protein Property	Protein Property	skos:exactMatch	http://edamontology.org/data_0897	semapv:ManualMappingCuration
+Protein Sequence	Protein Sequence	skos:exactMatch	http://edamontology.org/data_2976	semapv:ManualMappingCuration
+Protein Structure Report	Protein Structure Report	skos:exactMatch	http://edamontology.org/data_1537	semapv:ManualMappingCuration
+RNA Sequence	RNA Sequence	skos:exactMatch	http://edamontology.org/data_3495	semapv:ManualMappingCuration
+Raw Image	Raw Image	skos:exactMatch	http://edamontology.org/data_3424	semapv:ManualMappingCuration
+Reaction Data	Reaction Data	skos:exactMatch	http://edamontology.org/data_2978	semapv:ManualMappingCuration
+RefSeq Accession	RefSeq Accession	skos:exactMatch	http://edamontology.org/data_1098	semapv:ManualMappingCuration
+Report	Report	skos:exactMatch	http://edamontology.org/data_2048	semapv:ManualMappingCuration
+Resource Metadata	Resource Metadata	skos:exactMatch	http://edamontology.org/data_2337	semapv:ManualMappingCuration
+Sample Annotation	Sample Annotation	skos:exactMatch	http://edamontology.org/data_3113	semapv:ManualMappingCuration
+Sample ID	Sample ID	skos:exactMatch	http://edamontology.org/data_3273	semapv:ManualMappingCuration
+Score	Score	skos:exactMatch	http://edamontology.org/data_1772	semapv:ManualMappingCuration
+Sequence	Sequence	skos:exactMatch	http://edamontology.org/data_2044	semapv:ManualMappingCuration
+Sequence Alignment	Sequence Alignment	skos:exactMatch	http://edamontology.org/data_0863	semapv:ManualMappingCuration
+Sequence Features	Sequence Features	skos:exactMatch	http://edamontology.org/data_1255	semapv:ManualMappingCuration
+Sequence Record	Sequence Record	skos:exactMatch	http://edamontology.org/data_0849	semapv:ManualMappingCuration
+Sequence Report	Sequence Report	skos:exactMatch	http://edamontology.org/data_2955	semapv:ManualMappingCuration
+Sequence Search Results	Sequence Search Results	skos:exactMatch	http://edamontology.org/data_0857	semapv:ManualMappingCuration
+Sequence Set	Sequence Set	skos:exactMatch	http://edamontology.org/data_0850	semapv:ManualMappingCuration
+Sequence Signature Data	Sequence Signature Data	skos:exactMatch	http://edamontology.org/data_0860	semapv:ManualMappingCuration
+Sequence Similarity	Sequence Similarity	skos:exactMatch	http://edamontology.org/data_1413	semapv:ManualMappingCuration
+Sequence Variations	Sequence Variations	skos:exactMatch	http://edamontology.org/data_3498	semapv:ManualMappingCuration
+Simulation	Simulation	skos:exactMatch	http://edamontology.org/data_3869	semapv:ManualMappingCuration
+Structure	Structure	skos:exactMatch	http://edamontology.org/data_0883	semapv:ManualMappingCuration
+Text Data	Text Data	skos:exactMatch	http://edamontology.org/data_2526	semapv:ManualMappingCuration
+Training Material	Training Material	skos:exactMatch	http://edamontology.org/data_3669	semapv:ManualMappingCuration
+Trajectory Data	Trajectory Data	skos:exactMatch	http://edamontology.org/data_3870	semapv:ManualMappingCuration
+Transcription Factor Name	Transcription Factor Name	skos:exactMatch	http://edamontology.org/data_2755	semapv:ManualMappingCuration

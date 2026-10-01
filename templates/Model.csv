@@ -1,2 +1,2 @@
-Component,Model_id,Study Key,Individual Key,Model Age,Model Age Unit,Model Sex,Model Disease Type,Model Primary Diagnosis,Model Primary Site,Model Site of Origin,Model Tumor Subtype,Model Species,Model Type,Model Method,Model Source,Model Acquisition Type,Model Graft Source,Model Genotype,Model Treatment Type,Model Therapeutic Agent,Model Days to Treatment,Model Treatment Response
-Model,,,,,,,,,,,,,,,,,,,,,,
+Component,Model_id,Study Key,Individual Key,Model Age,Model Age Unit,Sex,Disease Type,Primary Diagnosis,Primary Site,Site of Origin,Tumor Subtype,Species,Model Type,Model Method,Model Source,Model Acquisition Type,Model Graft Source,Model Genotype,Treatment Type,Therapeutic Agent,Days to Treatment,Treatment Response,Treatment Anatomic Site
+Model,,,,,,,,,,,,,,,,,,,,,,,

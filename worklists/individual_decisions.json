@@ -1,0 +1,302 @@
+[
+  {
+    "row_index": 0,
+    "term": "Individual",
+    "ontology_identifier": "NCIT:C16960",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C16960",
+    "label": "Patient",
+    "description": "A person who receives medical attention, care, or treatment, or who is registered with medical professional or institution with the purpose to receive medical care when necessary.",
+    "verification": {
+      "verdict": "partial",
+      "note": "The 'Individual' entity in this context refers to human subjects (patients) from whom biospecimens were collected, or model organisms. NCIT:C29847 'Patient' is the best match for the human subject side of this concept. Partial because the entity also covers non-human model organisms."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "Individual_id",
+    "ontology_identifier": "NCIT:C166393",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C166393",
+    "label": "Specimen Identifier",
+    "description": "A unique string of characters used to identify a specimen.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C166393 'Specimen Identifier' is the best available term for a unique individual record identifier. The concept (unique alphanumeric identifier for a biological entity in a study) maps well as a partial match."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "Individual Known Metastasis Sites",
+    "ontology_identifier": "NCIT:C172233",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172233",
+    "label": "Site of Metastasis",
+    "description": "The anatomic location of the distant metastasis of a cancer.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C172233 'Site of Metastasis' directly matches the concept of the anatomic site(s) of metastasis associated with the patient's malignant disease."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Individual Last Known Disease Status",
+    "ontology_identifier": "NCIT:C191938",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C191938",
+    "label": "Last Known Disease Status",
+    "description": "The last known condition or state of disease.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C191938 'Last Known Disease Status' directly matches the concept of the last known status of an individual."
+    }
+  },
+  {
+    "row_index": 4,
+    "term": "Individual Sex",
+    "ontology_identifier": "NCIT:C28421",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C28421",
+    "label": "Biological Sex",
+    "description": "The assemblage of physical properties or characteristics of an organism that defines it as male or female, or having both male and female characteristics.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C28421 'Biological Sex' directly matches the biological sex associated with the specimen donor."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "Individual Disease Type",
+    "ontology_identifier": "NCIT:C164326",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C164326",
+    "label": "Concurrent Disease Type",
+    "description": "The classification and naming of comorbid conditions.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C164326 'Concurrent Disease Type' is the closest available NCIT term for categorizing a disease by type. The individual attribute records the type of tumor associated with the specimen, which is a related but more specific concept."
+    }
+  },
+  {
+    "row_index": 6,
+    "term": "Individual Primary Diagnosis",
+    "ontology_identifier": "NCIT:C202033",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202033",
+    "label": "Primary Diagnosis",
+    "description": "The patient's condition which is the main reason for evaluation and treatment.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C202033 'Primary Diagnosis' directly matches the concept of the patient's histologic diagnosis as the main reason for evaluation and treatment."
+    }
+  },
+  {
+    "row_index": 7,
+    "term": "Individual Primary Site",
+    "ontology_identifier": "NCIT:C179451",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C179451",
+    "label": "Primary Tumor Site",
+    "description": "The location of the primary tumor in the body.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C179451 'Primary Tumor Site' directly matches the concept of the primary site in the body associated with the primary diagnosis."
+    }
+  },
+  {
+    "row_index": 8,
+    "term": "Individual Tumor Subtype",
+    "ontology_identifier": "NCIT:C19790",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19790",
+    "label": "Histologic Subtype",
+    "description": "A subtype of the overall histologic classification of a tumor based on histologic, molecular, or genetic characteristics.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C19790 'Histologic Subtype' matches the concept of the tumor subtype related to histological determination."
+    }
+  },
+  {
+    "row_index": 9,
+    "term": "Individual Tumor Grade",
+    "ontology_identifier": "NCIT:C18000",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18000",
+    "label": "Histologic Grade",
+    "description": "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C18000 'Histologic Grade' directly matches the concept of the degree of abnormality of cancer cells as a numeric value to express aggressiveness."
+    }
+  },
+  {
+    "row_index": 10,
+    "term": "Individual Site of Origin",
+    "ontology_identifier": "NCIT:C158874",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C158874",
+    "label": "Primary Site of Disease",
+    "description": "The anatomic site in which the cancer originates.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C158874 'Primary Site of Disease' directly matches the concept of the anatomic site of origin of the patient's malignant disease."
+    }
+  },
+  {
+    "row_index": 11,
+    "term": "Individual Age at Diagnosis",
+    "ontology_identifier": "NCIT:C156420",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156420",
+    "label": "Age at Diagnosis",
+    "description": "The age of an individual at the time of initial pathologic diagnosis.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C156420 'Age at Diagnosis' directly matches the concept of the individual's age at the time of diagnosis, expressed in years."
+    }
+  },
+  {
+    "row_index": 12,
+    "term": "Individual Gender",
+    "ontology_identifier": "NCIT:C17357",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17357",
+    "label": "Gender",
+    "description": "Characteristics of people that are socially constructed, including norms, behaviors, and roles based on sex. As a social construct, gender varies from society to society and can change over time. (Adapted from WHO.)",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C17357 'Gender' directly matches the concept of text designations that identify gender as a societal construct."
+    }
+  },
+  {
+    "row_index": 14,
+    "term": "Individual Days to Last Followup",
+    "ontology_identifier": "NCIT:C181065",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181065",
+    "label": "Number of Days Between Index Date and Last Follow Up",
+    "description": "The number of days between an index date and the date of last follow up.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C181065 'Number of Days Between Index Date and Last Follow Up' directly matches the concept of the number of days between the index date and last follow-up."
+    }
+  },
+  {
+    "row_index": 15,
+    "term": "Individual Primary Tumor Stage",
+    "ontology_identifier": "NCIT:C48885",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48885",
+    "label": "Generic Primary Tumor TNM Finding",
+    "description": "A finding about one or more characteristics of cancer, following the rules of the TNM AJCC classification system as they pertain to staging of the primary tumor.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C48885 'Generic Primary Tumor TNM Finding' is the best available generic term for the primary tumor stage (T stage in TNM) from clinical assessment. The field records the extent of the primary cancer prior to treatment."
+    }
+  },
+  {
+    "row_index": 16,
+    "term": "Individual Tumor Lymph Node Stage",
+    "ontology_identifier": "NCIT:C48884",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48884",
+    "label": "Generic Regional Lymph Nodes TNM Finding",
+    "description": "A finding about one or more characteristics of cancer, following the rules of the TNM AJCC classification system as they pertain to staging of the regional lymph nodes.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C48884 'Generic Regional Lymph Nodes TNM Finding' is the best available generic term for lymph node stage (N stage in TNM). The field records the extent of regional lymph node involvement from clinical assessment."
+    }
+  },
+  {
+    "row_index": 17,
+    "term": "Individual Days To Recurrence",
+    "ontology_identifier": "NCIT:C181062",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181062",
+    "label": "Number of Days Between Index Date and Disease Recurrence",
+    "description": "The number of days between an index date and the date disease recurrence was observed or diagnosed.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C181062 'Number of Days Between Index Date and Disease Recurrence' directly matches the concept of the number of days between the index date and the date the patient's disease recurred."
+    }
+  },
+  {
+    "row_index": 18,
+    "term": "Individual Days to Last Known Disease Status",
+    "ontology_identifier": "NCIT:C181066",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181066",
+    "label": "Number of Days Between Index Date and Last Known Disease Status",
+    "description": "The number of days between an index date and the date for the last known disease status update.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C181066 'Number of Days Between Index Date and Last Known Disease Status' directly matches the concept of the time interval from the date of last follow up to the date of initial pathologic diagnosis."
+    }
+  },
+  {
+    "row_index": 19,
+    "term": "Individual Treatment Type",
+    "ontology_identifier": "NCIT:C25218",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25218",
+    "label": "Clinical Intervention or Procedure",
+    "description": "An activity that produces an effect, or that is intended to alter the course of a disease in a patient or population. This is a general term that encompasses the medical, social, behavioral, and environmental acts that can have preventive, therapeutic, or palliative effects.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C25218 'Clinical Intervention or Procedure' is the best available match for a treatment type field. No specific 'treatment type' NCIT class exists as a direct match."
+    }
+  },
+  {
+    "row_index": 20,
+    "term": "Individual Days to Treatment",
+    "ontology_identifier": "NCIT:C181073",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181073",
+    "label": "Number of Days Between Index Date and Treatment Start",
+    "description": "The number of days between an index date and the date treatment was started.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C181073 'Number of Days Between Index Date and Treatment Start' directly matches the concept of the number of days between the index date and the date treatment started."
+    }
+  },
+  {
+    "row_index": 21,
+    "term": "Individual Therapeutic Agent",
+    "ontology_identifier": "NCIT:C1909",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C1909",
+    "label": "Pharmacologic Substance",
+    "description": "Any substance used in the treatment, prevention, or diagnosis of disease or used to otherwise enhance physical or mental well-being.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Reused from biospecimen mapping. NCIT:C1909 'Pharmacologic Substance' is a partial match for the concept of individual agent(s) used as part of a treatment regimen. The field records text identification of agents."
+    }
+  },
+  {
+    "row_index": 22,
+    "term": "Individual Metastasis Stage",
+    "ontology_identifier": "NCIT:C48883",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48883",
+    "label": "Generic Distant Metastasis TNM Finding",
+    "description": "A finding about one or more characteristics of cancer, following the rules of the TNM AJCC classification system as they pertain to distant metastases.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C48883 'Generic Distant Metastasis TNM Finding' is the best available generic term for metastasis stage (M stage in TNM). The field records the extent of distant metastasis from clinical assessment."
+    }
+  },
+  {
+    "row_index": 23,
+    "term": "Individual Recurrence Status",
+    "ontology_identifier": "NCIT:C159899",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C159899",
+    "label": "Was a New Tumor Event Present After Initial Treatment Question",
+    "description": "A question about whether a new tumor was present after the initial treatment.",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C159899 'Was a New Tumor Event Present After Initial Treatment Question' covers the concept of whether a patient had a new tumor event after initial treatment. The Individual field is a Yes/No/Unknown indicator for this concept. Partial because this is a 'Question' class not an attribute class."
+    }
+  },
+  {
+    "row_index": 24,
+    "term": "Individual Treatment Response",
+    "ontology_identifier": "NCIT:C50995",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C50995",
+    "label": "Disease Response",
+    "description": "The response of a tumor or patient to the treatment being administered.",
+    "verification": {
+      "verdict": "match",
+      "note": "Reused from biospecimen mapping. NCIT:C50995 'Disease Response' directly matches the concept of the patient's final outcome after treatment was administered."
+    }
+  },
+  {
+    "row_index": 25,
+    "term": "Individual Vital Status",
+    "ontology_identifier": "NCIT:C25717",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25717",
+    "label": "Vital Status",
+    "description": "The state or condition of being living or deceased; also includes the case where the vital status is unknown.",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C25717 'Vital Status' directly matches the concept of the patient's current vital status (living/deceased)."
+    }
+  }
+]

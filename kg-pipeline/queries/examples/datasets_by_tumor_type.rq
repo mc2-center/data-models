@@ -1,0 +1,14 @@
+# name: datasets_by_tumor_type
+# description: Datasets tagged with a specific ontology-resolved tumor type
+#   (here, breast carcinoma - NCIT:C4872), with their DOI - a real biomedical
+#   search question, answered via the resolved ontology term rather than a
+#   free-text guess at how "breast cancer" happens to be spelled in the
+#   source data. Swap the NCIT IRI to search a different tumor type.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+
+SELECT ?dataset ?name ?doi WHERE {
+  ?dataset a cckp:Dataset ;
+           cckp:tumorTypeTerm <http://purl.obolibrary.org/obo/NCIT_C4872> ;
+           cckp:datasetName ?name .
+  OPTIONAL { ?dataset cckp:doi ?doi }
+}

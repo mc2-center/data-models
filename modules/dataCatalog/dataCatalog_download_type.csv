@@ -1,0 +1,3 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+Synapse Hosted,The dataset's files are stored directly in Synapse.,,,FALSE,,downloadType,,Sage,,,,,,No ontology equivalent - a Synapse-specific hosting concept (confirmed non-mappable via live NCIT/EDAM lookup)
+Synapse Indexed,The dataset's files are indexed by a Synapse Dataset entity but stored/served elsewhere.,,,FALSE,,downloadType,,Sage,,,,,,No ontology equivalent - a Synapse-specific hosting concept (confirmed non-mappable via live NCIT/EDAM lookup)

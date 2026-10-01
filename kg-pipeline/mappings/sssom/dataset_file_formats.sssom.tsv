@@ -1,0 +1,50 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/dataset_file_formats.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+AVI	AVI	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190162	semapv:ManualMappingCuration
+BAM	BAM	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C153249	semapv:ManualMappingCuration
+BED	BED	skos:exactMatch	http://edamontology.org/format_3003	semapv:ManualMappingCuration
+BIGWIG	BIGWIG	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190167	semapv:ManualMappingCuration
+CHP	CHP	skos:exactMatch	http://edamontology.org/format_1644	semapv:ManualMappingCuration
+CSV	CSV	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C182456	semapv:ManualMappingCuration
+FASTA	FASTA	skos:exactMatch	http://edamontology.org/format_1929	semapv:ManualMappingCuration
+FASTQ	FASTQ	skos:exactMatch	http://www.ebi.ac.uk/efo/EFO_0004155	semapv:ManualMappingCuration
+FCS	FCS	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000327	semapv:ManualMappingCuration
+GTF	GTF	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190177	semapv:ManualMappingCuration
+GZIP Format	GZIP Format	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C80220	semapv:ManualMappingCuration
+H5	H5	skos:exactMatch	http://edamontology.org/format_3590	semapv:ManualMappingCuration
+H5AD	H5AD	skos:exactMatch	http://edamontology.org/format_3590	semapv:ManualMappingCuration
+IDAT	IDAT	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C184762	semapv:ManualMappingCuration
+JPG	JPG	skos:exactMatch	http://edamontology.org/format_3579	semapv:ManualMappingCuration
+JSON	JSON	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C184769	semapv:ManualMappingCuration
+MAT	MAT	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190178	semapv:ManualMappingCuration
+MGF	MGF	skos:exactMatch	http://edamontology.org/format_3651	semapv:ManualMappingCuration
+MTX	MTX	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C201789	semapv:ManualMappingCuration
+PDF	PDF	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C63805	semapv:ManualMappingCuration
+PKL	PKL	skos:exactMatch	http://edamontology.org/format_4002	semapv:ManualMappingCuration
+PNG	PNG	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C85437	semapv:ManualMappingCuration
+Pending Annotation	Pending Annotation	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C53470	semapv:ManualMappingCuration
+Python Script	Python Script	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190184	semapv:ManualMappingCuration
+RAW	RAW	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190190	semapv:ManualMappingCuration
+RDS	RDS	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C209895	semapv:ManualMappingCuration
+SRA	SRA	skos:exactMatch	http://edamontology.org/format_3698	semapv:ManualMappingCuration
+SVS	SVS	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C162692	semapv:ManualMappingCuration
+TAR Format	TAR Format	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190189	semapv:ManualMappingCuration
+TIFF	TIFF	skos:exactMatch	http://edamontology.org/format_3591	semapv:ManualMappingCuration
+TSV	TSV	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C164049	semapv:ManualMappingCuration
+TXT	TXT	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C85873	semapv:ManualMappingCuration
+Unspecified	Unspecified	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C38046	semapv:ManualMappingCuration
+WIG	WIG	skos:exactMatch	http://edamontology.org/format_3005	semapv:ManualMappingCuration
+XML	XML	skos:exactMatch	http://edamontology.org/format_2332	semapv:ManualMappingCuration
+ZIP	ZIP	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190192	semapv:ManualMappingCuration
+bed12	bed12	skos:exactMatch	http://edamontology.org/format_3586	semapv:ManualMappingCuration
+bedgraph	bedgraph	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190165	semapv:ManualMappingCuration
+cel	cel	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C191737	semapv:ManualMappingCuration
+docx	docx	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C190171	semapv:ManualMappingCuration
+mzIdentML	mzIdentML	skos:exactMatch	http://edamontology.org/format_3247	semapv:ManualMappingCuration
+mzXML	mzXML	skos:exactMatch	http://edamontology.org/format_3654	semapv:ManualMappingCuration
+rcc	rcc	skos:exactMatch	http://edamontology.org/format_3580	semapv:ManualMappingCuration
+xlsx	xlsx	skos:exactMatch	http://purl.obolibrary.org/obo/NCIT_C164050	semapv:ManualMappingCuration

@@ -1,0 +1,14 @@
+# name: datacatalog_merge_lands_on_real_datasets
+# expect: empty
+# description: build_datacatalog_triples.py enriches existing cckp:Dataset
+#   subjects rather than minting separate nodes - any subject carrying a
+#   Data Catalog-only field like schema:measurementTechnique should also
+#   be typed cckp:Dataset. Catches the merge landing on the wrong subject
+#   IRI (e.g. a datasetId that no longer matches the portal table).
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?subject WHERE {
+  ?subject schema:measurementTechnique ?technique .
+  FILTER NOT EXISTS { ?subject a cckp:Dataset }
+}

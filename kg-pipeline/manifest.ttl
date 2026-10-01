@@ -1,0 +1,17 @@
+@prefix cckp: <https://w3id.org/mc2-center/cckp-portal/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cckp:kgBuild_9f3b91341fc7e92878aed42cca91342deb15d66f a void:Dataset,
+        prov:Activity ;
+    void:dataDump <s3://app-prod-neptune-neptunedatabucketb8719d9a-jfo3bsfisgfn/cckp/2026-09-29/data/> ;
+    void:triples 360370 ;
+    prov:generatedAtTime "2026-09-29T22:28:24.489809+00:00"^^xsd:dateTime ;
+    prov:used <https://github.com/mc2-center/data-models/commit/9f3b91341fc7e92878aed42cca91342deb15d66f> ;
+    cckp:depositedAtTime "2026-09-29T22:28:24.489374+00:00"^^xsd:dateTime ;
+    cckp:gitCommit "9f3b91341fc7e92878aed42cca91342deb15d66f" ;
+    cckp:gitRef "cde-model-revisions" ;
+    cckp:portal "cckp" ;
+    cckp:snapshotDate "2026-09-29"^^xsd:date .
+

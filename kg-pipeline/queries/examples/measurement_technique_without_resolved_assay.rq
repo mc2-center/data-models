@@ -1,0 +1,15 @@
+# name: measurement_technique_without_resolved_assay
+# description: Datasets carrying a native Synapse Data Catalog
+#   measurementTechnique annotation but no resolved ontology term on the
+#   portal's own Assay field - a curation-gap finder blending two
+#   provenance tiers (DataCatalog vs. the base portal harmonization) to
+#   surface real candidates for scripts/suggest_mappings.py, rather than
+#   just counting unmapped values in isolation.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?dataset ?technique WHERE {
+  ?dataset a cckp:Dataset ;
+           schema:measurementTechnique ?technique .
+  FILTER NOT EXISTS { ?dataset cckp:assayTerm ?assayTerm }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="output" content="docs/assets/knowledge-graph/kg-build-pipeline.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e293b;
+    --arrow: #7b8794;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: transparent; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .figure {
+    position: relative;
+    width: 1560px;
+    height: 170px;
+    margin: 20px;
+  }
+  .stage {
+    position: absolute;
+    top: 0;
+    width: 210px;
+    height: 130px;
+    border-radius: 8px;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 14px;
+  }
+  .stage h3 {
+    margin: 0 0 10px 0;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .stage p {
+    margin: 0;
+    color: #cbd3de;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  svg { position: absolute; left: 0; top: 0; overflow: visible; }
+</style>
+</head>
+<body>
+  <div class="figure">
+    <svg width="1560" height="170">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--arrow)" />
+        </marker>
+      </defs>
+      <line x1="210" y1="65" x2="270" y2="65" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="480" y1="65" x2="540" y2="65" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="750" y1="65" x2="810" y2="65" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="1020" y1="65" x2="1080" y2="65" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+      <line x1="1290" y1="65" x2="1350" y2="65" stroke="var(--arrow)" stroke-width="2.5" marker-end="url(#arrow)" />
+    </svg>
+
+    <div class="stage" style="left:0px;">
+      <h3>Extract</h3>
+      <p>make extract</p>
+    </div>
+    <div class="stage" style="left:270px;">
+      <h3>Harmonize</h3>
+      <p>make harmonize</p>
+    </div>
+    <div class="stage" style="left:540px;">
+      <h3>Build triples</h3>
+      <p>make triples</p>
+    </div>
+    <div class="stage" style="left:810px;">
+      <h3>Validate</h3>
+      <p>make validate</p>
+    </div>
+    <div class="stage" style="left:1080px;">
+      <h3>Link, merge and check</h3>
+      <p>make full-kg</p>
+    </div>
+    <div class="stage" style="left:1350px;">
+      <h3>Publish</h3>
+      <p>make deploy-kg</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# name: biolink_dual_typing_is_consistent
+# expect: empty
+# description: Every instance of the 5 classes build_triples.py's
+#   BIOLINK_TYPE dual-types (Dataset/Publication/Tool/Grant/
+#   EducationalResource) should also carry its mapped biolink:{Class} type -
+#   catches a regression where the second rdf:type triple silently stops
+#   being emitted for one class.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX biolink: <https://w3id.org/biolink/vocab/>
+
+SELECT ?subject ?cckpType WHERE {
+  VALUES (?cckpType ?biolinkType) {
+    (cckp:Dataset biolink:Dataset)
+    (cckp:Publication biolink:Publication)
+    (cckp:Tool biolink:InformationContentEntity)
+    (cckp:Grant biolink:AdministrativeEntity)
+    (cckp:EducationalResource biolink:InformationContentEntity)
+  }
+  ?subject a ?cckpType .
+  FILTER NOT EXISTS { ?subject a ?biolinkType }
+}

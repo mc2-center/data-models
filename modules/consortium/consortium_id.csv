@@ -1,0 +1,12 @@
+Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
+program.ccbir,,,,FALSE,,Program Id,,Sage,,,,,,CCBIR
+program.csbc,,,,FALSE,,Program Id,,Sage,,,,,,CSBC
+program.htan,,,,FALSE,,Program Id,,Sage,,,,,,HTAN
+program.icbp,,,,FALSE,,Program Id,,Sage,,,,,,ICBP
+program.metnet,,,,FALSE,,Program Id,,Sage,,,,,,MetNet
+program.nci,,,,FALSE,,Program Id,,Sage,,,,,,NCI
+program.nci-clinical-and-translational-exploratory-developmental-studies,,,,FALSE,,Program Id,,Sage,,,,,,NCI Clinical and Translational Exploratory/Developmental Studies
+program.pdmc,,,,FALSE,,Program Id,,Sage,,,,,,PDMC
+program.ps-on,,,,FALSE,,Program Id,,Sage,,,,,,PS-ON
+program.sage-bionetworks,,,,FALSE,,Program Id,,Sage,,,,,,Sage Bionetworks
+program.tec,,,,FALSE,,Program Id,,Sage,,,,,,TEC

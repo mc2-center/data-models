@@ -1,7 +1,7 @@
-﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Genomic DNA,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
-Metagenomic,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
-Metatranscriptomic,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
-Not Reported,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
-Transcriptome,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
-Viral RNA,,,,,,,,GC Data Model v6.0.2/Genomic Info/library_source_material,,,,,,
+"Attribute","Description","Valid Values","DependsOn","Required","Properties","Parent","DependsOn Component","Source","Validation Rules","Nonpreferred Terms","Ontology Identifier","Ontology Url","NCIt Code","Notes"
+"Genomic DNA","The DNA that is part of the normal chromosomal complement of an organism.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C95940","http://purl.obolibrary.org/obo/NCIT_C95940","C95940",""
+"Metagenomic","Derived from or associated with material collected from an environmental sample.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C201925","http://purl.obolibrary.org/obo/NCIT_C201925","C201925",""
+"Metatranscriptomic","Derived from or associated with transcripts from an environmental sample.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C201926","http://purl.obolibrary.org/obo/NCIT_C201926","C201926",""
+"Not Reported","Not provided or available.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C43234","http://purl.obolibrary.org/obo/NCIT_C43234","C43234",""
+"Transcriptome","The complete set of RNA transcripts that are produced by the genome, under specific circumstances or in a specific cell.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C153194","http://purl.obolibrary.org/obo/NCIT_C153194","C153194",""
+"Viral RNA","The RNA that originates from a virus.","","","","","","","GC Data Model v6.0.2/Genomic Info/library_source_material","","","NCIT:C204811","http://purl.obolibrary.org/obo/NCIT_C204811","C204811",""

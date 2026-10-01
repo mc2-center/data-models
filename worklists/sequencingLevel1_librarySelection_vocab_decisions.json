@@ -1,0 +1,146 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "5-methylcytidine antibody",
+    "ontology_identifier": "NCIT:C204821",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204821",
+    "label": "Methylated DNA Immunoprecipitation Sequencing",
+    "description": "A library selection method using an antibody that specifically recognizes 5-methylcytidine to immunoprecipitate methylated DNA fragments, enriching for methylated genomic regions.",
+    "verification": {"verdict": "partial", "note": "NCIT:C204821 Methylated DNA Immunoprecipitation Sequencing (MeDIP-Seq); the selection method (anti-5mC antibody enrichment) is the same as MeDIP. NCIT frames it as the full sequencing procedure rather than just the selection step."}
+  },
+  {
+    "row_index": 4,
+    "term": "cDNA oligo_dT",
+    "ontology_identifier": "NCIT:C201929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "label": "Oligo-dT Primer",
+    "description": "A library selection method using oligo-dT primers to select for polyadenylated mRNA during cDNA synthesis, enriching for mature eukaryotic transcripts.",
+    "verification": {"verdict": "partial", "note": "NCIT:C201929 Oligo-dT Primer; the selection method uses oligo-dT to capture poly(A)+ RNA. The NCIT term describes the primer itself rather than the selection workflow; concept is directly relevant."}
+  },
+  {
+    "row_index": 5,
+    "term": "cDNA random priming",
+    "ontology_identifier": "NCIT:C201930",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201930",
+    "label": "Random Primer",
+    "description": "A library selection method using random-sequence oligonucleotides to prime cDNA synthesis, allowing unbiased coverage of RNA transcripts including non-polyadenylated species.",
+    "verification": {"verdict": "partial", "note": "NCIT:C201930 Random Primer; cDNA random priming uses random hexamers for priming. The NCIT term describes the primer type itself rather than the selection method; concept is directly relevant."}
+  },
+  {
+    "row_index": 10,
+    "term": "Poly-T Enrichment",
+    "ontology_identifier": "NCIT:C201929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "label": "Oligo-dT Primer",
+    "description": "A library selection method using poly-T (oligo-dT) oligonucleotides to capture polyadenylated mRNA, enriching for mature eukaryotic transcripts with poly(A) tails.",
+    "verification": {"verdict": "partial", "note": "NCIT:C201929 Oligo-dT Primer; Poly-T Enrichment describes bead-based poly-T capture of poly(A)+ RNA, the same molecular principle as oligo-dT priming. The NCIT term describes the primer/probe type; no dedicated 'poly-T enrichment' NCIT class exists."}
+  },
+  {
+    "row_index": 11,
+    "term": "ChIP",
+    "ontology_identifier": "NCIT:C106048",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C106048",
+    "label": "Chromatin Immunoprecipitation",
+    "description": "A molecular biology technique that uses antibodies to selectively enrich for specific protein-bound DNA fragments from cross-linked chromatin, allowing identification of genomic regions associated with specific proteins.",
+    "verification": {"verdict": "match", "note": "NCIT:C106048 Chromatin Immunoprecipitation; confirmed as direct parent of ChIP-Seq (NCIT:C106049) in OLS search; exact concept match for ChIP as a library selection method."}
+  },
+  {
+    "row_index": 15,
+    "term": "Not applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 19,
+    "term": "MDA",
+    "ontology_identifier": "NCIT:C19590",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19590",
+    "label": "Whole Genome Amplification",
+    "description": "Multiple displacement amplification (MDA), a library selection method that uses phi29 polymerase with random primers to amplify the entire genome from minute quantities of DNA.",
+    "verification": {"verdict": "partial", "note": "NCIT:C19590 Whole Genome Amplification; MDA (Multiple Displacement Amplification) is a specific whole genome amplification technique. NCIT:C19590 is the parent class; no dedicated MDA subclass found in NCIT."}
+  },
+  {
+    "row_index": 23,
+    "term": "Oligo-dT",
+    "ontology_identifier": "NCIT:C201929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "label": "Oligo-dT Primer",
+    "description": "DNA primers consisting of 12-18 deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs, used to select for and prime reverse transcription of polyadenylated transcripts.",
+    "verification": {"verdict": "match", "note": "NCIT:C201929 Oligo-dT Primer; exact label match (case-insensitive); used in rtPrimer and librarySelection context with the same concept."}
+  },
+  {
+    "row_index": 24,
+    "term": "Other",
+    "ontology_identifier": "NCIT:C17649",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17649",
+    "label": "Other",
+    "description": "Different than the one(s) previously specified or mentioned.",
+    "verification": {"verdict": "match", "note": "NCIT:C17649 Other; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 26,
+    "term": "PCR",
+    "ontology_identifier": "NCIT:C17003",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17003",
+    "label": "Polymerase Chain Reaction",
+    "description": "A method for amplifying a DNA base sequence using multiple rounds of heat denaturation and annealing of oligonucleotide primers in the presence of a heat-stable polymerase, used as a library selection strategy to amplify target sequences.",
+    "verification": {"verdict": "match", "note": "NCIT:C17003 Polymerase Chain Reaction; confirmed as direct ancestor of RT-PCR and Real-Time PCR in OLS search; exact concept match for PCR as a library selection method."}
+  },
+  {
+    "row_index": 28,
+    "term": "RACE",
+    "ontology_identifier": "NCIT:C180698",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C180698",
+    "label": "Rapid Amplification of cDNA Ends",
+    "description": "A molecular technique used to determine the 5' or 3' ends of mRNA transcripts by reverse transcription followed by PCR amplification of regions between a known internal sequence and the unknown transcript end.",
+    "verification": {"verdict": "match", "note": "NCIT:C180698 Rapid Amplification of cDNA Ends; exact concept match; RACE is the common abbreviation for this method."}
+  },
+  {
+    "row_index": 29,
+    "term": "Random",
+    "ontology_identifier": "NCIT:C201930",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201930",
+    "label": "Random Primer",
+    "description": "Short oligonucleotides of random sequence that anneal throughout RNA or DNA templates and are used to prime reverse transcription or amplification without sequence bias.",
+    "verification": {"verdict": "match", "note": "NCIT:C201930 Random Primer; exact concept match for random priming as a library selection strategy."}
+  },
+  {
+    "row_index": 30,
+    "term": "Random PCR",
+    "ontology_identifier": "NCIT:C17003",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17003",
+    "label": "Polymerase Chain Reaction",
+    "description": "PCR amplification using random primers to generate unbiased amplification of genomic DNA or cDNA without requiring prior knowledge of target sequences.",
+    "verification": {"verdict": "partial", "note": "NCIT:C17003 Polymerase Chain Reaction; Random PCR uses random primers for amplification. No dedicated NCIT class for random-primer PCR; the generic PCR class (C17003) is the closest match."}
+  },
+  {
+    "row_index": 31,
+    "term": "Reduced Representation",
+    "ontology_identifier": "NCIT:C167284",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C167284",
+    "label": "Reduced-Representation Bisulfite Sequencing",
+    "description": "A library selection method that uses restriction enzymes to reduce genome complexity by enriching for CpG-dense restriction fragments before bisulfite conversion and sequencing.",
+    "verification": {"verdict": "partial", "note": "NCIT:C167284 Reduced-Representation Bisulfite Sequencing (RRBS); the NCIT term describes the complete method (selection + bisulfite + sequencing), while 'Reduced Representation' as a library selection refers only to the size-selection/restriction step. No generic 'Reduced Representation' class found in NCIT."}
+  },
+  {
+    "row_index": 34,
+    "term": "RT-PCR",
+    "ontology_identifier": "NCIT:C18136",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18136",
+    "label": "Reverse Transcriptase-Polymerase Chain Reaction",
+    "description": "A laboratory procedure in which an RNA strand is first reverse-transcribed into a complementary DNA strand, which is then amplified by PCR; used as a library selection strategy for RNA-derived libraries.",
+    "verification": {"verdict": "match", "note": "NCIT:C18136 Reverse Transcriptase-Polymerase Chain Reaction; confirmed in OLS search as direct parent of qRT-PCR; exact concept match for RT-PCR."}
+  },
+  {
+    "row_index": 37,
+    "term": "Unspecified",
+    "ontology_identifier": "NCIT:C38046",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38046",
+    "label": "Unspecified",
+    "description": "Not precisely or fully identified.",
+    "verification": {"verdict": "match", "note": "NCIT:C38046 Unspecified; standard NCIT general qualifier."}
+  }
+]}

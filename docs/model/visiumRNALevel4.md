@@ -1,12 +1,12 @@
-A **10x Visium RNA Level 4** entry documents further-processed data built from a 10x Visium RNA Level 3 output, capturing the generic workflow type and workflow parameters used to derive higher-order analysis products (e.g., spatial clustering, differential expression, or other downstream spatial analyses) from the per-spot summary data.
+A **Visium RNA Level 4** entry documents further-processed data built from a Visium RNA Level 3 output, capturing the generic workflow type and workflow parameters used to derive higher-order analysis products (e.g., spatial clustering, differential expression, or other downstream spatial analyses) from the per-spot summary data.
 
 As the most highly processed level in the Visium cluster, Level 4 entries emphasize workflow provenance, ensuring that the analysis choices behind a derived spatial result remain traceable back through Level 3, Level 2, and Level 1 to the original tissue and sequencing run.
 
-## Why You Should Contribute 10x Visium RNA Level 4 Entries
+## Why You Should Contribute Visium RNA Level 4 Entries
 
-Contributing 10x Visium RNA Level 4 entries ensures that downstream spatial analysis outputs remain traceable to the workflow and parameters that produced them, supporting reproducibility for results shared through the CCKP.
+Contributing Visium RNA Level 4 entries ensures that downstream spatial analysis outputs remain traceable to the workflow and parameters that produced them, supporting reproducibility for results shared through the CCKP.
 
-### Who Should Be Contributing 10x Visium RNA Level 4 Entries?
+### Who Should Be Contributing Visium RNA Level 4 Entries?
 
 1. **Computational Genomics Analysts** – Document the workflow type and parameters used to generate derived spatial analysis products.
 2. **Spatial Biology Researchers** – Confirm that derived results are correctly linked back to the Level 3 data they were built from.

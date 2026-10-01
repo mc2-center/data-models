@@ -1,0 +1,68 @@
+{
+  "$id": "http://example.com/ProjectView",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "The denormalized manifest for project submission.",
+  "properties": {
+    "ConsortiumKey": {
+      "description": "Unique Consortium_id foreign key(s) that group the resource with other components, as part of the same consortium-associated grants. Please provide multiple values as a comma-separated list.",
+      "title": "Consortium Key",
+      "type": "string"
+    },
+    "GrantViewKey": {
+      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "(CA\\d{6}|Affiliated/Non-Grant Associated)",
+      "title": "GrantView Key",
+      "type": "string"
+    },
+    "Investigator": {
+      "description": "Investigator(s) associated with this record. Provide either the investigator's free-text name or a PersonView_id reference (see PersonView Key) -- both forms are acceptable. Multiple values permitted, comma separated.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Investigator",
+      "type": "array"
+    },
+    "PersonViewKey": {
+      "description": "Unique PersonView_id foreign key(s) that group the resource with other components, as part of the same person-associated studies. Please provide multiple values as a comma-separated list.",
+      "title": "PersonView Key",
+      "type": "string"
+    },
+    "ProjectDescription": {
+      "description": "Description of the project",
+      "title": "Project Description",
+      "type": "string"
+    },
+    "ProjectName": {
+      "description": "Name of the project",
+      "title": "Project Name",
+      "type": "string"
+    },
+    "ProjectShortName": {
+      "description": "An acronym or abbreviated form of the title used to refer to an organ-, site- or disease-specific data collection within a broad framework of goals under which related studies or other research activities are grouped.",
+      "title": "Project Short Name",
+      "type": "string"
+    },
+    "ProjectType": {
+      "description": "Type of project",
+      "enum": [
+        "Core",
+        "Project"
+      ],
+      "title": "Project Type"
+    },
+    "ProjectViewId": {
+      "description": "Unique row identifier, used as a primary key for record updates.",
+      "title": "ProjectView_id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Investigator",
+    "ProjectDescription",
+    "ProjectName",
+    "ProjectType",
+    "ProjectViewId"
+  ],
+  "title": "ProjectView",
+  "type": "object"
+}

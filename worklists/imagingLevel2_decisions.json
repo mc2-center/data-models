@@ -1,0 +1,254 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 2",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node representing raw and pre-processed image data; best NCIT match is Imaging Procedure as the general class. OBI:0003327 (image data set) is an alternative cross-reference."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel2_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "Image Objective",
+    "ontology_identifier": "NCIT:C181921",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181921",
+    "label": "Lens Numerical Aperture",
+    "description": "A number that characterizes the range of angles over which the objective lens can accept or emit light.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for objective lens identifier. Lens Numerical Aperture is closely related to objective lens properties. This is a partial match used as the best available option."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "Image Nominal Magnification",
+    "ontology_identifier": "NCIT:C74298",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C74298",
+    "label": "Field of View",
+    "description": "The area or angular extent of the observable world as seen from a particular viewpoint.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for nominal magnification. NCIT:C74298 Field of View is related but not identical. CDE:7788940 is noted in the existing model. Searching for a better magnification term."
+    }
+  },
+  {
+    "row_index": 4,
+    "term": "Image Lense Aperture",
+    "ontology_identifier": "NCIT:C181921",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181921",
+    "label": "Lens Numerical Aperture",
+    "description": "A number that characterizes the range of angles over which the objective lens can accept or emit light.",
+    "verification": {
+      "verdict": "match",
+      "note": "Lens Numerical Aperture is a direct match for the numerical aperture of the lens."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "Image Working Distance",
+    "ontology_identifier": "NCIT:C181922",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181922",
+    "label": "Working Distance",
+    "description": "The distance between the front end of the objective lens and the specimen surface when the specimen is in focus.",
+    "verification": {
+      "verdict": "match",
+      "note": "Working Distance is a direct match for the working distance of the lens."
+    }
+  },
+  {
+    "row_index": 6,
+    "term": "Image Working Distance Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the working distance (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 7,
+    "term": "Image Immersion Type",
+    "ontology_identifier": "NCIT:C182013",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C182013",
+    "label": "Immersion Medium",
+    "description": "A fluid used to fill the space between a microscope's objective lens and the coverslip. It is used to increase the effective numerical aperture of the lens.",
+    "verification": {
+      "verdict": "match",
+      "note": "Immersion Medium is a direct match for the immersion medium / immersion type attribute."
+    }
+  },
+  {
+    "row_index": 11,
+    "term": "Image FOV Index",
+    "ontology_identifier": "NCIT:C74298",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C74298",
+    "label": "Field of View",
+    "description": "The area or angular extent of the observable world as seen from a particular viewpoint.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for FOV index. Field of View (NCIT:C74298) is the parent concept. Index represents the sequence ordering of FOV."
+    }
+  },
+  {
+    "row_index": 12,
+    "term": "Image FOV Size X",
+    "ontology_identifier": "NCIT:C74298",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C74298",
+    "label": "Field of View",
+    "description": "The area or angular extent of the observable world as seen from a particular viewpoint.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for FOV X dimension. Field of View (NCIT:C74298) is the parent concept; the X dimension is a sub-property."
+    }
+  },
+  {
+    "row_index": 13,
+    "term": "Image FOV Size X Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the FOV X dimension (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 14,
+    "term": "Image FOV Size Y",
+    "ontology_identifier": "NCIT:C74298",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C74298",
+    "label": "Field of View",
+    "description": "The area or angular extent of the observable world as seen from a particular viewpoint.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for FOV Y dimension. Field of View (NCIT:C74298) is the parent concept; the Y dimension is a sub-property."
+    }
+  },
+  {
+    "row_index": 15,
+    "term": "Image FOV Size Y Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the FOV Y dimension (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 17,
+    "term": "Image Identifier",
+    "ontology_identifier": "NCIT:C25364",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C25364",
+    "label": "Identifier",
+    "description": "A sequence of characters used to identify, name, or characterize an entity.",
+    "verification": {
+      "verdict": "match",
+      "note": "Identifier (NCIT:C25364) is a direct match for the unique internal image identifier."
+    }
+  },
+  {
+    "row_index": 19,
+    "term": "Image Physical Size X",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for physical pixel size X. Unit of Length (NCIT:C42578) represents the dimensional measurement concept. This is a partial match."
+    }
+  },
+  {
+    "row_index": 20,
+    "term": "Image Physical Size X Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the physical pixel size X (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 21,
+    "term": "Image Physical Size Y",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for physical pixel size Y. Unit of Length (NCIT:C42578) represents the dimensional measurement concept. Partial match."
+    }
+  },
+  {
+    "row_index": 22,
+    "term": "Image Physical Size Y Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the physical pixel size Y (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 23,
+    "term": "Image Physical Size Z",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "partial",
+      "note": "No exact NCIT term for physical pixel size Z. Unit of Length (NCIT:C42578) represents the dimensional measurement concept. Partial match."
+    }
+  },
+  {
+    "row_index": 24,
+    "term": "Image Physical Size Z Unit",
+    "ontology_identifier": "NCIT:C42578",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C42578",
+    "label": "Unit of Length",
+    "description": "An indication of the type of unit of measure being used to express a length or distance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Unit of Length is a direct match for the units of the physical pixel size Z (e.g. microns)."
+    }
+  },
+  {
+    "row_index": 25,
+    "term": "Image Pixels BigEndian",
+    "ontology_identifier": "NCIT:C181703",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181703",
+    "label": "Big Endian Byte Order",
+    "description": "A binary number consisting of multiple bytes in which the most significant bit is encoded first with the remaining bytes encoded in decreasing order of significance.",
+    "verification": {
+      "verdict": "match",
+      "note": "Big Endian Byte Order is a direct match for the Image Pixels BigEndian boolean attribute indicating byte order."
+    }
+  }
+]

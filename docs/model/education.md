@@ -41,7 +41,7 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Resource Origin Institution | Smithsonian Institution |
 | Resource Language | en |
 | Resource Contributors | John Smith, Jane Doe, XYZ Corporation |
-| Resource Grant Number | CA217655 |
+| GrantView Key | CA217655 |
 | EducationalResource_id | ER_4567 |
 
 

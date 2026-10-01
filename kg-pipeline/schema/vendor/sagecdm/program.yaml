@@ -1,0 +1,105 @@
+id: https://sage-bionetworks.github.io/SageCommonDataModel/program
+name: sage-cdm-program
+title: Sage CDM PROGRAM
+description: >-
+  PROGRAM represents a research program at Sage Bionetworks — a coherent organizational and
+  scientific initiative that typically spans multiple studies, is supported by one or more
+  funders, and is often (but not always) surfaced through a portal. Examples: AMP-AD,
+  AMP-ALS, CLASSIC, Exceptional Longevity, MODEL-AD, NF-OSI, TREAT-AD.
+
+  Reference slots contributed by this file: program.
+
+license: Apache-2.0
+see_also:
+  - https://sagebionetworks.jira.com/wiki/spaces/CDO/pages/4547575986/Entity+PROGRAM
+
+prefixes:
+  sagecdm: https://sage-bionetworks.github.io/SageCommonDataModel/
+  linkml: https://w3id.org/linkml/
+  dcterms: http://purl.org/dc/terms/
+default_prefix: sagecdm
+default_range: string
+
+imports:
+  - linkml:types
+  - base_entity
+  - organization
+
+slots:
+
+  # --- Reference slots targeting Program ------------------------------------
+  program:
+    title: Program
+    description: The parent program this entity belongs to.
+    range: Program
+    inlined: false
+    slot_uri: dcterms:isPartOf
+    comments:
+      - >-
+        Not a portal, not a funder, and not a grant number.
+      - >-
+        Exactly one program per project or study. Work that genuinely spans programs is
+        modelled as separate records per program, which keeps attribution unambiguous.
+
+classes:
+
+  Program:
+    title: PROGRAM
+    description: >-
+      A research program at Sage Bionetworks. A program contains one or more studies, may be
+      surfaced on one or more portals, and may adopt one or more data standards.
+    is_a: BaseEntity
+    slots:
+      - name
+      - description
+      - status
+      - funding_source
+    slot_usage:
+      id:
+        description: >-
+          Stable machine identifier for the program. A short lowercase string prefixed with
+          `program.`, using hyphens for multi-word program names.
+        pattern: '^program\.[a-z0-9]+(-[a-z0-9]+)*$'
+        examples:
+          - value: program.amp-ad
+          - value: program.nf-osi
+          - value: program.exceptional-longevity
+        comments:
+          - >-
+            Never a Sage Finance Program Code. Finance codes are tracked in the
+            Source-to-CDM mapping as an upstream identifier that maps TO this id, keeping
+            CDM identity independent of Finance system conventions.
+      name:
+        description: >-
+          Human-readable display name for the program, as it appears in official
+          documentation and grant materials.
+        examples:
+          - value: AMP-AD
+        comments:
+          - >-
+            Never a portal name — ELITE, ARK, and CCKP are portals, not programs. Never a
+            funder name. An acronym only where the program is universally referred to by it.
+      description:
+        description: >-
+          One-paragraph plain-language description of the program's mission, scientific
+          focus, and community. 2-4 sentences.
+      status:
+        description: Current lifecycle state of the program.
+        examples:
+          - value: active
+      funding_source:
+        description: >-
+          The organization(s) funding this program. Multiple funders per program is common —
+          AMP programs typically combine industry, NIH, and foundation partners.
+    comments:
+      - >-
+        No start_date or end_date in Phase 1 (2026-07-21). Lifecycle is captured via status.
+        Actual dates require deciding which date is meant (data contribution start? grant
+        award? RFA release?) and do not unblock any priority query.
+      - >-
+        No website_url in Phase 1 (2026-07-21). Program websites overlap with portal URLs
+        and add complexity for questionable value.
+      - >-
+        The PROGRAM-to-PORTAL relationship is deliberately absent. Whether it is a slot on
+        PROGRAM or a separate PROGRAM_MAPPING table is an open modelling question awaiting
+        DMG sign-off; adding a slot now would prejudge it and create migration debt.

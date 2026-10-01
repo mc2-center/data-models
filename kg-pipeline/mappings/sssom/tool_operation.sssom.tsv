@@ -1,0 +1,109 @@
+# curie_map:
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+# mapping_set_id: https://w3id.org/mc2-center/cckp-portal/mappings/tool_operation.sssom.tsv
+# license: https://creativecommons.org/publicdomain/zero/1.0/
+subject_id	subject_label	predicate_id	object_id	mapping_justification
+Agent-Based Cell Modelling	Agent-Based Cell Modelling	skos:exactMatch	http://purl.obolibrary.org/obo/MAMO_0000024	semapv:ManualMappingCuration
+Aggregation	Aggregation	skos:exactMatch	http://edamontology.org/operation_3436	semapv:ManualMappingCuration
+Allele Frequency Distribution Analysis	Allele Frequency Distribution Analysis	skos:exactMatch	http://edamontology.org/operation_0554	semapv:ManualMappingCuration
+Analysis	Analysis	skos:exactMatch	http://edamontology.org/operation_2945	semapv:ManualMappingCuration
+Annotation	Annotation	skos:exactMatch	http://edamontology.org/operation_0226	semapv:ManualMappingCuration
+Box-Whisker Plot Plotting	Box-Whisker Plot Plotting	skos:exactMatch	http://edamontology.org/operation_2943	semapv:ManualMappingCuration
+Calculation	Calculation	skos:exactMatch	http://edamontology.org/operation_3438	semapv:ManualMappingCuration
+Cell Migration Analysis	Cell Migration Analysis	skos:exactMatch	http://edamontology.org/operation_3446	semapv:ManualMappingCuration
+Classification	Classification	skos:exactMatch	http://edamontology.org/operation_2990	semapv:ManualMappingCuration
+Clustering	Clustering	skos:exactMatch	http://edamontology.org/operation_3432	semapv:ManualMappingCuration
+Clustering Profile Plotting	Clustering Profile Plotting	skos:exactMatch	http://edamontology.org/operation_2935	semapv:ManualMappingCuration
+Conversion	Conversion	skos:exactMatch	http://edamontology.org/operation_3434	semapv:ManualMappingCuration
+Copy Number Variation Detection	Copy Number Variation Detection	skos:exactMatch	http://edamontology.org/operation_3961	semapv:ManualMappingCuration
+Correlation	Correlation	skos:exactMatch	http://edamontology.org/operation_3465	semapv:ManualMappingCuration
+DNA Barcoding	DNA Barcoding	skos:exactMatch	http://edamontology.org/operation_3200	semapv:ManualMappingCuration
+Data Handling	Data Handling	skos:exactMatch	http://edamontology.org/operation_2409	semapv:ManualMappingCuration
+Data Retrieval	Data Retrieval	skos:exactMatch	http://edamontology.org/operation_2422	semapv:ManualMappingCuration
+Database Search	Database Search	skos:exactMatch	http://edamontology.org/operation_2421	semapv:ManualMappingCuration
+De Novo Sequencing	De Novo Sequencing	skos:exactMatch	http://edamontology.org/operation_3644	semapv:ManualMappingCuration
+Demultiplexing	Demultiplexing	skos:exactMatch	http://edamontology.org/operation_3933	semapv:ManualMappingCuration
+Differential Gene Expression Profiling	Differential Gene Expression Profiling	skos:exactMatch	http://edamontology.org/operation_3223	semapv:ManualMappingCuration
+Differential Protein Expression Profiling	Differential Protein Expression Profiling	skos:exactMatch	http://edamontology.org/operation_3741	semapv:ManualMappingCuration
+Dimensionality Reduction	Dimensionality Reduction	skos:exactMatch	http://edamontology.org/operation_3935	semapv:ManualMappingCuration
+Enrichment Analysis	Enrichment Analysis	skos:exactMatch	http://edamontology.org/operation_3501	semapv:ManualMappingCuration
+Expression Analysis	Expression Analysis	skos:exactMatch	http://edamontology.org/operation_2495	semapv:ManualMappingCuration
+Expression Correlation Analysis	Expression Correlation Analysis	skos:exactMatch	http://edamontology.org/operation_3463	semapv:ManualMappingCuration
+Expression Data Visualisation	Expression Data Visualisation	skos:exactMatch	http://edamontology.org/operation_0571	semapv:ManualMappingCuration
+Expression Profile Clustering	Expression Profile Clustering	skos:exactMatch	http://edamontology.org/operation_0313	semapv:ManualMappingCuration
+Expression Profile Comparison	Expression Profile Comparison	skos:exactMatch	http://edamontology.org/operation_0315	semapv:ManualMappingCuration
+Functional Clustering	Functional Clustering	skos:exactMatch	http://edamontology.org/operation_3459	semapv:ManualMappingCuration
+Gene Expression Profiling	Gene Expression Profiling	skos:exactMatch	http://edamontology.org/operation_0314	semapv:ManualMappingCuration
+Gene Methylation Analysis	Gene Methylation Analysis	skos:exactMatch	http://edamontology.org/operation_3207	semapv:ManualMappingCuration
+Gene Regulatory Network Analysis	Gene Regulatory Network Analysis	skos:exactMatch	http://edamontology.org/operation_1781	semapv:ManualMappingCuration
+Gene Regulatory Network Prediction	Gene Regulatory Network Prediction	skos:exactMatch	http://edamontology.org/operation_2437	semapv:ManualMappingCuration
+Gene-Set Enrichment Analysis	Gene-Set Enrichment Analysis	skos:exactMatch	http://edamontology.org/operation_2436	semapv:ManualMappingCuration
+Genetic Mapping	Genetic Mapping	skos:exactMatch	http://edamontology.org/operation_0282	semapv:ManualMappingCuration
+Genetic Variation Analysis	Genetic Variation Analysis	skos:exactMatch	http://edamontology.org/operation_3197	semapv:ManualMappingCuration
+Genome Annotation	Genome Annotation	skos:exactMatch	http://edamontology.org/operation_0362	semapv:ManualMappingCuration
+Genome Visualisation	Genome Visualisation	skos:exactMatch	http://edamontology.org/operation_3208	semapv:ManualMappingCuration
+Genotyping	Genotyping	skos:exactMatch	http://edamontology.org/operation_3196	semapv:ManualMappingCuration
+Heat Map Generation	Heat Map Generation	skos:exactMatch	http://edamontology.org/operation_0531	semapv:ManualMappingCuration
+Image Analysis	Image Analysis	skos:exactMatch	http://edamontology.org/operation_3443	semapv:ManualMappingCuration
+Imputation	Imputation	skos:exactMatch	http://edamontology.org/operation_3557	semapv:ManualMappingCuration
+Incident Curve Plotting	Incident Curve Plotting	skos:exactMatch	http://edamontology.org/operation_3503	semapv:ManualMappingCuration
+Mapping	Mapping	skos:exactMatch	http://edamontology.org/operation_2429	semapv:ManualMappingCuration
+Metabolic Pathway Prediction	Metabolic Pathway Prediction	skos:exactMatch	http://edamontology.org/operation_3929	semapv:ManualMappingCuration
+Microscope Image Visualisation	Microscope Image Visualisation	skos:exactMatch	http://edamontology.org/operation_3552	semapv:ManualMappingCuration
+Modelling and Simulation	Modelling and Simulation	skos:exactMatch	http://edamontology.org/operation_2426	semapv:ManualMappingCuration
+Molecular Dynamics	Molecular Dynamics	skos:exactMatch	http://edamontology.org/operation_2476	semapv:ManualMappingCuration
+Network Analysis	Network Analysis	skos:exactMatch	http://edamontology.org/operation_3927	semapv:ManualMappingCuration
+Network Visualisation	Network Visualisation	skos:exactMatch	http://edamontology.org/operation_3925	semapv:ManualMappingCuration
+Nucleic Acid Sequence Analysis	Nucleic Acid Sequence Analysis	skos:exactMatch	http://edamontology.org/operation_2478	semapv:ManualMappingCuration
+Nucleosome Position Prediction	Nucleosome Position Prediction	skos:exactMatch	http://edamontology.org/operation_0432	semapv:ManualMappingCuration
+Ontology Visualisation	Ontology Visualisation	skos:exactMatch	http://edamontology.org/operation_3559	semapv:ManualMappingCuration
+Pathway Analysis	Pathway Analysis	skos:exactMatch	http://edamontology.org/operation_3928	semapv:ManualMappingCuration
+Pathway Modelling	Pathway Modelling	skos:exactMatch	http://edamontology.org/operation_3660	semapv:ManualMappingCuration
+Peak Calling	Peak Calling	skos:exactMatch	http://edamontology.org/operation_3222	semapv:ManualMappingCuration
+Phylogenetic Analysis	Phylogenetic Analysis	skos:exactMatch	http://edamontology.org/operation_0324	semapv:ManualMappingCuration
+Prediction and Recognition	Prediction and Recognition	skos:exactMatch	http://edamontology.org/operation_2423	semapv:ManualMappingCuration
+Principal Component Analysis	Principal Component Analysis	skos:exactMatch	http://edamontology.org/operation_3960	semapv:ManualMappingCuration
+Protein Comparison	Protein Comparison	skos:exactMatch	http://edamontology.org/operation_2997	semapv:ManualMappingCuration
+Protein Function Comparison	Protein Function Comparison	skos:exactMatch	http://edamontology.org/operation_1778	semapv:ManualMappingCuration
+Protein Function Prediction	Protein Function Prediction	skos:exactMatch	http://edamontology.org/operation_1777	semapv:ManualMappingCuration
+Protein Identification	Protein Identification	skos:exactMatch	http://edamontology.org/operation_3767	semapv:ManualMappingCuration
+Protein Interaction Network Analysis	Protein Interaction Network Analysis	skos:exactMatch	http://edamontology.org/operation_0276	semapv:ManualMappingCuration
+Protein Quantification	Protein Quantification	skos:exactMatch	http://edamontology.org/operation_3630	semapv:ManualMappingCuration
+Protein-Protein Interaction Analysis	Protein-Protein Interaction Analysis	skos:exactMatch	http://edamontology.org/operation_2949	semapv:ManualMappingCuration
+Quantification	Quantification	skos:exactMatch	http://edamontology.org/operation_3799	semapv:ManualMappingCuration
+Query and Retrieval	Query and Retrieval	skos:exactMatch	http://edamontology.org/operation_0224	semapv:ManualMappingCuration
+RNA Secondary Structure Prediction	RNA Secondary Structure Prediction	skos:exactMatch	http://edamontology.org/operation_0278	semapv:ManualMappingCuration
+RNA-Seq Analysis	RNA-Seq Analysis	skos:exactMatch	http://edamontology.org/operation_3680	semapv:ManualMappingCuration
+RNA-Seq Quantification	RNA-Seq Quantification	skos:exactMatch	http://edamontology.org/operation_3800	semapv:ManualMappingCuration
+Regression Analysis	Regression Analysis	skos:exactMatch	http://edamontology.org/operation_3659	semapv:ManualMappingCuration
+SNP Annotation	SNP Annotation	skos:exactMatch	http://edamontology.org/operation_3661	semapv:ManualMappingCuration
+SNP Detection	SNP Detection	skos:exactMatch	http://edamontology.org/operation_0484	semapv:ManualMappingCuration
+Scatter Plot Plotting	Scatter Plot Plotting	skos:exactMatch	http://edamontology.org/operation_2940	semapv:ManualMappingCuration
+Sequence Alignment Analysis	Sequence Alignment Analysis	skos:exactMatch	http://edamontology.org/operation_0258	semapv:ManualMappingCuration
+Sequence Alignment Comparison	Sequence Alignment Comparison	skos:exactMatch	http://edamontology.org/operation_0259	semapv:ManualMappingCuration
+Sequence Analysis	Sequence Analysis	skos:exactMatch	http://edamontology.org/operation_2403	semapv:ManualMappingCuration
+Sequence Annotation	Sequence Annotation	skos:exactMatch	http://edamontology.org/operation_0361	semapv:ManualMappingCuration
+Sequence Cluster Visualisation	Sequence Cluster Visualisation	skos:exactMatch	http://edamontology.org/operation_0566	semapv:ManualMappingCuration
+Sequence Clustering	Sequence Clustering	skos:exactMatch	http://edamontology.org/operation_0291	semapv:ManualMappingCuration
+Sequence Comparison	Sequence Comparison	skos:exactMatch	http://edamontology.org/operation_2451	semapv:ManualMappingCuration
+Sequence Composition Calculation	Sequence Composition Calculation	skos:exactMatch	http://edamontology.org/operation_0236	semapv:ManualMappingCuration
+Sequence Editing	Sequence Editing	skos:exactMatch	http://edamontology.org/operation_0231	semapv:ManualMappingCuration
+Sequence File Editing	Sequence File Editing	skos:exactMatch	http://edamontology.org/operation_2121	semapv:ManualMappingCuration
+Sequencing Quality Control	Sequencing Quality Control	skos:exactMatch	http://edamontology.org/operation_3218	semapv:ManualMappingCuration
+Simulated Gene Expression Data Generation	Simulated Gene Expression Data Generation	skos:exactMatch	http://edamontology.org/operation_3566	semapv:ManualMappingCuration
+Sorting	Sorting	skos:exactMatch	http://edamontology.org/operation_3802	semapv:ManualMappingCuration
+Standardisation and Normalisation	Standardisation and Normalisation	skos:exactMatch	http://edamontology.org/operation_3435	semapv:ManualMappingCuration
+Statistical Calculation	Statistical Calculation	skos:exactMatch	http://edamontology.org/operation_2238	semapv:ManualMappingCuration
+Statistical Inference	Statistical Inference	skos:exactMatch	http://edamontology.org/operation_3658	semapv:ManualMappingCuration
+Statistical Modelling	Statistical Modelling	skos:exactMatch	http://edamontology.org/operation_3664	semapv:ManualMappingCuration
+Structural Variation Detection	Structural Variation Detection	skos:exactMatch	http://edamontology.org/operation_3228	semapv:ManualMappingCuration
+Structure Analysis	Structure Analysis	skos:exactMatch	http://edamontology.org/operation_2480	semapv:ManualMappingCuration
+Text Mining	Text Mining	skos:exactMatch	http://edamontology.org/operation_0306	semapv:ManualMappingCuration
+Tissue Modelling	Tissue Modelling	skos:exactMatch	http://edamontology.org/operation_2426	semapv:ManualMappingCuration
+Validation	Validation	skos:exactMatch	http://edamontology.org/operation_2428	semapv:ManualMappingCuration
+Variant Calling	Variant Calling	skos:exactMatch	http://edamontology.org/operation_3227	semapv:ManualMappingCuration
+Variant Classification	Variant Classification	skos:exactMatch	http://edamontology.org/operation_3225	semapv:ManualMappingCuration
+Variant Effect Prediction	Variant Effect Prediction	skos:exactMatch	http://edamontology.org/operation_0331	semapv:ManualMappingCuration
+Visualisation	Visualisation	skos:exactMatch	http://edamontology.org/operation_0337	semapv:ManualMappingCuration
+scRNA-Seq Analysis	scRNA-Seq Analysis	skos:exactMatch	http://edamontology.org/operation_3680	semapv:ManualMappingCuration

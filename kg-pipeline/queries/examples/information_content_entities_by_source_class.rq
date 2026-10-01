@@ -1,0 +1,20 @@
+# name: information_content_entities_by_source_class
+# description: Every resource typed biolink:InformationContentEntity - CCKP
+#   Tools and EducationalResources are structurally distinct portal classes
+#   with no shared cckp: predicate (a tool's name lives in cckp:toolName,
+#   an educational resource's in cckp:title), but a consumer that only
+#   knows Biolink (e.g. a federated query spanning this graph and another
+#   Biolink-typed portal) can enumerate "generic content resources" in one
+#   pattern instead of a per-class UNION. Demonstrates the actual payoff of
+#   build_triples.py's Biolink dual-typing.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX biolink: <https://w3id.org/biolink/vocab/>
+
+SELECT ?resource ?sourceClass ?label WHERE {
+  ?resource a biolink:InformationContentEntity ;
+            a ?sourceClass .
+  VALUES ?sourceClass { cckp:Tool cckp:EducationalResource }
+  OPTIONAL { ?resource cckp:toolName ?toolName }
+  OPTIONAL { ?resource cckp:title ?eduTitle }
+  BIND(COALESCE(?toolName, ?eduTitle) AS ?label)
+}

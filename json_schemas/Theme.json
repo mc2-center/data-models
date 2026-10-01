@@ -1,0 +1,29 @@
+{
+  "$id": "http://example.com/Theme",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Themes associated with resources derived from consortia activities",
+  "properties": {
+    "ThemeDescription": {
+      "description": "Description of the research theme.",
+      "title": "Theme Description",
+      "type": "string"
+    },
+    "ThemeDisplayName": {
+      "description": "Human readable display name of the research theme. (e.g. Computational Resource, Drug Resistance/Sensitivity)",
+      "title": "Theme Display Name",
+      "type": "string"
+    },
+    "ThemeName": {
+      "description": "Machine readable name of the research theme. (e.g. compuational_resource, drug_resistance_sensitivity).",
+      "title": "Theme Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ThemeDescription",
+    "ThemeDisplayName",
+    "ThemeName"
+  ],
+  "title": "Theme",
+  "type": "object"
+}

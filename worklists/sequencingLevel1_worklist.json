@@ -1,0 +1,325 @@
+[
+  {
+    "row_index": 0,
+    "term": "Sequencing Level 1",
+    "existing_description": "Unaligned/unprocessed sequencing data",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "SequencingLevel1_id",
+    "existing_description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: primary_key."
+  },
+  {
+    "row_index": 2,
+    "term": "NGS Sequencing Coverage",
+    "existing_description": "Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11556322."
+  },
+  {
+    "row_index": 3,
+    "term": "NGS Read Length",
+    "existing_description": "The average length of the sequencing reads. Can be integer, null",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:12426615."
+  },
+  {
+    "row_index": 4,
+    "term": "NGS Library Selection Method",
+    "existing_description": "How nucleic acid molecules are isolated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:6347743."
+  },
+  {
+    "row_index": 5,
+    "term": "NGS Library Strategy",
+    "existing_description": "The assay associated with the nucleic acid library (e.g., RNA-Seq, ChIP-Seq)",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:6273393."
+  },
+  {
+    "row_index": 6,
+    "term": "NGS Library Source Material",
+    "existing_description": "The type of source material being sequenced.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:15235975."
+  },
+  {
+    "row_index": 7,
+    "term": "NGS Library Layout",
+    "existing_description": "Text description of the library layout, one of Paired-end or Single.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11527735."
+  },
+  {
+    "row_index": 8,
+    "term": "NGS Library Preparation Kit Name",
+    "existing_description": "Name of Library Preparation Kit. String",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "NGS Library Preparation Kit Vendor",
+    "existing_description": "Vendor of Library Preparation Kit. String",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "NGS Library Preparation Kit Version",
+    "existing_description": "Version of Library Preparation Kit. String",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 11,
+    "term": "NGS Sequencing Platform",
+    "existing_description": "A platform is an object aggregate that is the set of instruments and software needed to perform a process [OBI_0000050]. Specific model of the sequencing instrument.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:6352164."
+  },
+  {
+    "row_index": 12,
+    "term": "NGS Sequencing Design Description",
+    "existing_description": "Free-form description of the methods used to create the sequencing library; a brief 'materials and methods' section.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11529028."
+  },
+  {
+    "row_index": 13,
+    "term": "NGS Read Indicator",
+    "existing_description": "Indicate if this is Read 1 (R1), Read 2 (R2), Index Reads (I1), or Other",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 14,
+    "term": "NGS Library Preparation Days from Index",
+    "existing_description": "Number of days between sample for assay was received in lab and the libraries were prepared for sequencing [number]. If not applicable please enter 'Not Applicable'",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 15,
+    "term": "NGS Sequencing Library Construction Days from Index",
+    "existing_description": "Number of days between sample for assay was received in lab and day of sequencing library construction [number]. If not applicable please enter 'Not Applicable'",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 16,
+    "term": "NGS Unique Bases",
+    "existing_description": "Count of unique basecalls present in the data.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 17,
+    "term": "NGS Raw Reads",
+    "existing_description": "Reads not yet analyzed in any way to be used for data analysis. The number of reads that pass filter from the flow cell represented in the FASTQ file.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11529035."
+  },
+  {
+    "row_index": 18,
+    "term": "NGS Library Source Molecule",
+    "existing_description": "The source of nucleic acids represented in the sequencing library.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Sequencinglevel1 metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:15235981."
+  }
+]

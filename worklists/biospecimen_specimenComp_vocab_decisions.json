@@ -1,0 +1,173 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Additional Primary",
+    "ontology_identifier": "NCIT:C95606",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C95606",
+    "label": "Second Primary Malignant Neoplasm",
+    "description": "A primary malignant neoplasm in a patient who has been already diagnosed with a primary malignant neoplasm in another anatomic site.",
+    "verification": {"verdict": "partial", "note": "NCIT:C95606 Second Primary Malignant Neoplasm; 'Additional Primary' means a second or subsequent primary tumor — distinct from a recurrence or metastasis. The NCIT term captures this concept. Label differs (Additional Primary vs Second Primary Malignant Neoplasm) but is the correct concept."}
+  },
+  {
+    "row_index": 1,
+    "term": "Atypia or hyperplasia",
+    "ontology_identifier": "NCIT:C36032",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C36032",
+    "label": "Premalignant Condition",
+    "description": "A pathological process that precedes and often leads to the development of cancer.",
+    "verification": {"verdict": "partial", "note": "NCIT:C36032 Premalignant Condition; atypia and hyperplasia are abnormal cell growth states that precede malignancy. The NCIT premalignant condition class is a reasonable umbrella, though not an exact label match."}
+  },
+  {
+    "row_index": 2,
+    "term": "Local recurrence",
+    "ontology_identifier": "NCIT:C38155",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38155",
+    "label": "Recurrent Disease",
+    "description": "The return of a disease after a period of remission.",
+    "verification": {"verdict": "partial", "note": "NCIT:C38155 Recurrent Disease; 'Local recurrence' is a specific form of recurrent disease occurring at or near the original site. NCIT:C38155 is the generic recurrence concept — the most appropriate available term."}
+  },
+  {
+    "row_index": 3,
+    "term": "Metastatic",
+    "ontology_identifier": "NCIT:C3261",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C3261",
+    "label": "Metastatic Neoplasm",
+    "description": "A tumor that has spread from its original site of growth to another anatomic site.",
+    "verification": {"verdict": "partial", "note": "NCIT:C3261 Metastatic Neoplasm; 'Metastatic' as a specimen composition type refers to tumor material from a metastatic site. The NCIT term describes the neoplasm concept, not a specimen composition qualifier per se, but is the best available match."}
+  },
+  {
+    "row_index": 4,
+    "term": "Normal",
+    "ontology_identifier": "NCIT:C162623",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C162623",
+    "label": "Normal Tissue Sample",
+    "description": "Tissue sample with cellular composition and architectural patterns expected for the particular anatomic site in which it belongs; no evidence of abnormal cellular infiltrates or tumor mass formation.",
+    "verification": {"verdict": "partial", "note": "NCIT:C162623 Normal Tissue Sample; correct concept for a normal (non-tumor) specimen. Label adds 'Tissue Sample' qualifier but the sense matches."}
+  },
+  {
+    "row_index": 5,
+    "term": "Normal adjacent",
+    "ontology_identifier": "NCIT:C164032",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C164032",
+    "label": "Tumor-Adjacent Normal Specimen",
+    "description": "A specimen comprised of morphologically normal tissue collected from the area immediately surrounding a tumor in an experimental subject.",
+    "verification": {"verdict": "match", "note": "NCIT:C164032 Tumor-Adjacent Normal Specimen; exact concept for normal tissue adjacent to a tumor."}
+  },
+  {
+    "row_index": 14,
+    "term": "Tissue",
+    "ontology_identifier": "NCIT:C19697",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19697",
+    "label": "Tissue Sample",
+    "description": "A piece of tissue removed from an organism for examination, analysis, or propagation.",
+    "verification": {"verdict": "partial", "note": "NCIT:C19697 Tissue Sample; 'Tissue' as a specimen composition term means a tissue specimen (as opposed to cell line, blood, etc.). The NCIT term adds 'Sample' qualifier. Best available generic tissue specimen class."}
+  },
+  {
+    "row_index": 7,
+    "term": "NOS",
+    "ontology_identifier": "NCIT:C19594",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C19594",
+    "label": "Not Otherwise Specified",
+    "description": "Not more specifically or particularly described than the stated category.",
+    "verification": {"verdict": "match", "note": "NCIT:C19594 Not Otherwise Specified; standard NCIT qualifier for NOS."}
+  },
+  {
+    "row_index": 8,
+    "term": "Not applicable",
+    "ontology_identifier": "NCIT:C48660",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C48660",
+    "label": "Not Applicable",
+    "description": "Determination of a value is not relevant in the current context.",
+    "verification": {"verdict": "match", "note": "NCIT:C48660 Not Applicable; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 9,
+    "term": "Not reported",
+    "ontology_identifier": "NCIT:C43234",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C43234",
+    "label": "Not Reported",
+    "description": "An indication that the required information was not provided.",
+    "verification": {"verdict": "match", "note": "NCIT:C43234 Not Reported; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 10,
+    "term": "Premalignant",
+    "ontology_identifier": "NCIT:C36032",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C36032",
+    "label": "Premalignant Condition",
+    "description": "A pathological process that precedes and often leads to the development of cancer.",
+    "verification": {"verdict": "match", "note": "NCIT:C36032 Premalignant Condition; label adds 'Condition' but the concept matches — tissue from a premalignant state."}
+  },
+  {
+    "row_index": 11,
+    "term": "Premalignant - in situ",
+    "ontology_identifier": "NCIT:C2917",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C2917",
+    "label": "Carcinoma In Situ",
+    "description": "A neoplasm in which the malignant cells are confined to the epithelium of origin, without invasion of the basement membrane.",
+    "verification": {"verdict": "partial", "note": "NCIT:C2917 Carcinoma In Situ; 'Premalignant - in situ' refers to in situ lesions (confined to site of origin without invasion). The NCIT term is carcinoma-specific (not covering all premalignant in situ conditions) but is the most appropriate available concept."}
+  },
+  {
+    "row_index": 12,
+    "term": "Primary",
+    "ontology_identifier": "NCIT:C8509",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C8509",
+    "label": "Primary Neoplasm",
+    "description": "A tumor at the original site at which it arose.",
+    "verification": {"verdict": "partial", "note": "NCIT:C8509 Primary Neoplasm; 'Primary' as a specimen composition type means the specimen is from the original primary tumor site. The NCIT term describes the neoplasm concept, not a composition qualifier, but is the best match."}
+  },
+  {
+    "row_index": 13,
+    "term": "Recurrent",
+    "ontology_identifier": "NCIT:C38155",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C38155",
+    "label": "Recurrent Disease",
+    "description": "The return of a disease after a period of remission.",
+    "verification": {"verdict": "partial", "note": "NCIT:C38155 Recurrent Disease; 'Recurrent' as specimen composition means tissue from a disease recurrence. Best available NCIT match."}
+  },
+  {
+    "row_index": 15,
+    "term": "Tumor post-adjuvant therapy",
+    "ontology_identifier": "NCIT:C156444",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156444",
+    "label": "Post Neoadjuvant Therapy Sample",
+    "description": "A specimen derived from a subject after treatment with a neoadjuvant therapeutic.",
+    "verification": {"verdict": "partial", "note": "NCIT:C156444 Post Neoadjuvant Therapy Sample; the term says 'adjuvant' while the NCIT label says 'neoadjuvant' — both refer to specimens collected after therapy, but adjuvant therapy is given post-surgery while neoadjuvant is pre-surgery. Best available post-therapy specimen class."}
+  },
+  {
+    "row_index": 16,
+    "term": "Tumor post-neoadjuvant therapy",
+    "ontology_identifier": "NCIT:C156444",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156444",
+    "label": "Post Neoadjuvant Therapy Sample",
+    "description": "A specimen derived from a subject after treatment with a neoadjuvant therapeutic.",
+    "verification": {"verdict": "match", "note": "NCIT:C156444 Post Neoadjuvant Therapy Sample; exact concept for a tumor specimen collected after neoadjuvant therapy."}
+  },
+  {
+    "row_index": 17,
+    "term": "Tumor post-therapy",
+    "ontology_identifier": "NCIT:C156444",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156444",
+    "label": "Post Neoadjuvant Therapy Sample",
+    "description": "A specimen derived from a subject after treatment with a neoadjuvant therapeutic.",
+    "verification": {"verdict": "partial", "note": "NCIT:C156444 Post Neoadjuvant Therapy Sample; 'Tumor post-therapy' is the most generic form (any therapy). The NCIT term is neoadjuvant-specific. Best available post-therapy specimen class."}
+  },
+  {
+    "row_index": 19,
+    "term": "Unknown",
+    "ontology_identifier": "NCIT:C17998",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17998",
+    "label": "Unknown",
+    "description": "Not known, observed, recorded, or reported as unknown by the data contributor.",
+    "verification": {"verdict": "match", "note": "NCIT:C17998 Unknown; standard NCIT qualifier."}
+  },
+  {
+    "row_index": 20,
+    "term": "Xenograft",
+    "ontology_identifier": "NCIT:C156443",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156443",
+    "label": "Cell Line-Derived Xenograft",
+    "description": "A transplantation of cancer cells derived from an established cancer cell line into an immunodeficient mouse.",
+    "verification": {"verdict": "partial", "note": "NCIT:C156443 Cell Line-Derived Xenograft; 'Xenograft' is a broader term for any foreign tissue transplant, while NCIT:C156443 is specifically cell line-derived xenograft. Best available NCIT match for xenograft specimens."}
+  }
+]}

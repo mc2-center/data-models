@@ -217,7 +217,7 @@
     "ChannelPassedQC": {
       "description": "Identify stains that did not pass QC but are included in the dataset.",
       "enum": [
-        "No-ChannelFailedQC",
+        "No - Channel Failed QC",
         "Yes"
       ],
       "title": "Channel Passed QC"

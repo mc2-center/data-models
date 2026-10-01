@@ -1,0 +1,19 @@
+# name: program_output_rollup
+# description: Per-SCDM-Program breakdown of Dataset/Publication/Tool output
+#   counts, via the cckp:consortiumRef federation edges link_scdm.py mints -
+#   a cross-silo funding-and-output question the base portal tables alone
+#   can't answer without this crosswalk layer. Written as a single join +
+#   VALUES rather than 3 independent OPTIONALs: an earlier draft with 3
+#   OPTIONALs in one query effectively hung against the full ~330k-triple
+#   graph (rdflib's engine handles multiple independent OPTIONALs very
+#   badly at this size) - this form runs in well under a second.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+PREFIX sagecdm: <https://sage-bionetworks.github.io/SageCommonDataModel/>
+
+SELECT ?programName ?type (COUNT(?s) AS ?n) WHERE {
+  ?program a sagecdm:Program ;
+           sagecdm:name ?programName .
+  ?s cckp:consortiumRef ?program ;
+     a ?type .
+  VALUES ?type { cckp:Dataset cckp:Publication cckp:Tool }
+} GROUP BY ?programName ?type ORDER BY ?programName ?type

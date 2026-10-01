@@ -1,0 +1,11 @@
+{"decisions": [
+  {
+    "row_index": 4,
+    "term": "Other",
+    "ontology_identifier": "NCIT:C17649",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17649",
+    "label": "Other",
+    "description": "Different than the one(s) previously specified or mentioned.",
+    "verification": {"verdict": "match", "note": "NCIT:C17649 Other; standard NCIT general qualifier, exact label match."}
+  }
+]}

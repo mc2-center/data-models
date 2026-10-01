@@ -33,13 +33,13 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Tool Entity Type | Organization |
 | Tool Input Data | DNA Sequence |
 | Tool Output Data | Gene ID (NCBI): NM_001282392.1 |
-| Tool Grant Number | CA209975 |
+| GrantView Key | CA209975 |
 | Tool Documentation Url | https://docs.example.com/tool-guide.html |
 | Tool Operating System | Windows, MacOS |
 | Tool Version | 3.2.1 |
 | Tool View | Detail View |
-| Tool Pubmed Id | 26760201 |
-| Tool License | Apache-2.0 |
+| PublicationView Key | 26760201 |
+| License | Apache-2.0 |
 
 
 ## Full Field Reference

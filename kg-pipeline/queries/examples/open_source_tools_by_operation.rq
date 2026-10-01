@@ -1,0 +1,18 @@
+# name: open_source_tools_by_operation
+# description: Open-source Tools (license in a small allowlist) that perform
+#   a specific bioinformatics operation (here, "Variant Calling") - the tool
+#   discovery question "what can I actually use/fork for X" a researcher asks
+#   before committing to a dependency. Swap the cckp:operation value to
+#   search a different task. Deliberately does NOT also filter by
+#   Tool.datasetsRef (species/dataset the tool was demonstrated on) - that
+#   join is populated on only 2 of 349 Tools, too sparse to filter through.
+PREFIX cckp: <https://w3id.org/mc2-center/cckp-portal/>
+
+SELECT ?tool ?name ?license ?homepage WHERE {
+  ?tool a cckp:Tool ;
+        cckp:toolName ?name ;
+        cckp:license ?license ;
+        cckp:operation "Variant Calling" .
+  OPTIONAL { ?tool cckp:homepage ?homepage }
+  FILTER(?license IN ("MIT", "Apache-2.0", "BSD-3-Clause", "GPL-3.0"))
+}

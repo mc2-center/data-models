@@ -1,0 +1,182 @@
+[
+  {
+    "row_index": 0,
+    "term": "Sequencing Level 1",
+    "ontology_identifier": "OBI:0600047",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0600047",
+    "label": "sequencing assay",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "OBI:0600047 'sequencing assay' is the best parent class for a sequencing Level 1 schema node representing unaligned/unprocessed sequencing data. No ontology term exists specifically for 'Level 1 sequencing data'."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "SequencingLevel1_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C49189 'Primary Key' is defined as 'the attribute selected as being most important for uniquely identifying a body of information'. Matches the use as a unique row identifier / primary key."
+    }
+  },
+  {
+    "row_index": 2,
+    "term": "NGS Sequencing Coverage",
+    "ontology_identifier": "OBI:0001618",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0001618",
+    "label": "average depth of sequence coverage",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "OBI:0001618 'average depth of sequence coverage' directly matches the concept of sequencing coverage depth."
+    }
+  },
+  {
+    "row_index": 3,
+    "term": "NGS Read Length",
+    "ontology_identifier": "OBI:0002479",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0002479",
+    "label": "sequence read length measurement datum",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "OBI:0002479 'sequence read length measurement datum' is defined as 'a measurement datum that is the result of the measurement of the number of bases in a DNA or RNA sequence', matching average read length."
+    }
+  },
+  {
+    "row_index": 4,
+    "term": "NGS Library Selection Method",
+    "ontology_identifier": "NCIT:C175894",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C175894",
+    "label": "Sequencing Library Read Layout Indicator",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "No direct ontology term found for 'library selection method'. NCIT:C175894 is closest related NCIT term for library sequencing attributes. Partial match used as best available."
+    }
+  },
+  {
+    "row_index": 5,
+    "term": "NGS Library Strategy",
+    "ontology_identifier": "NCIT:C177618",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C177618",
+    "label": "Library Sequencing",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C177618 'Library Sequencing' is defined as 'the method used to determine the order of purines and pyrimidines in a nucleic acid-based sequencing library'. Partial match — the strategy attribute describes assay type (e.g. RNA-Seq, ChIP-Seq), while this term describes the sequencing method applied to a library."
+    }
+  },
+  {
+    "row_index": 6,
+    "term": "NGS Library Source Material",
+    "ontology_identifier": "NCIT:C175895",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C175895",
+    "label": "Sequencing Library Source Indicator",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C175895 'Sequencing Library Source Indicator' is defined as 'specifies the type of material that was the source of the nucleotide sequencing library'. Direct match."
+    }
+  },
+  {
+    "row_index": 7,
+    "term": "NGS Library Layout",
+    "ontology_identifier": "NCIT:C175894",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C175894",
+    "label": "Sequencing Library Read Layout Indicator",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C175894 'Sequencing Library Read Layout Indicator' is defined as 'specifies what read strategy or method was used for sequencing and analysis of a nucleotide library'. Directly matches library layout (paired-end vs single)."
+    }
+  },
+  {
+    "row_index": 8,
+    "term": "NGS Library Preparation Kit Name",
+    "ontology_identifier": "NCIT:C182085",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C182085",
+    "label": "Sequencing Library Preparation Kit Name",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C182085 'Sequencing Library Preparation Kit Name' is defined as 'the name for the nucleotide sequencing library kit'. Exact match."
+    }
+  },
+  {
+    "row_index": 9,
+    "term": "NGS Library Preparation Kit Vendor",
+    "ontology_identifier": "NCIT:C182086",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C182086",
+    "label": "Sequencing Library Preparation Kit Vendor Name",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C182086 'Sequencing Library Preparation Kit Vendor Name' is defined as 'the vendor name for the nucleotide sequencing library kit'. Exact match."
+    }
+  },
+  {
+    "row_index": 10,
+    "term": "NGS Library Preparation Kit Version",
+    "ontology_identifier": "NCIT:C182087",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C182087",
+    "label": "Sequencing Library Preparation Kit Version",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C182087 'Sequencing Library Preparation Kit Version' is defined as 'the version for the nucleotide sequencing library kit'. Exact match."
+    }
+  },
+  {
+    "row_index": 11,
+    "term": "NGS Sequencing Platform",
+    "ontology_identifier": "NCIT:C172274",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172274",
+    "label": "Sequencing Platform Name",
+    "description": "",
+    "verification": {
+      "verdict": "match",
+      "note": "NCIT:C172274 'Sequencing Platform Name' is defined as 'the name of the technology platform used to perform nucleic acid sequencing'. Direct match for sequencing platform/instrument."
+    }
+  },
+  {
+    "row_index": 14,
+    "term": "NGS Library Preparation Days from Index",
+    "ontology_identifier": "NCIT:C181071",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C181071",
+    "label": "Number of Days Between Index Date and Specimen Collection",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C181071 is the closest available term for 'days from index' concepts. No specific term found for library preparation days from index; this term describes days from index to specimen collection rather than library preparation."
+    }
+  },
+  {
+    "row_index": 17,
+    "term": "NGS Raw Reads",
+    "ontology_identifier": "OBI:0600047",
+    "ontology_url": "http://purl.obolibrary.org/obo/OBI_0600047",
+    "label": "sequencing assay",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "No specific OLS term found for 'raw reads count'. OBI:0600047 is the closest parent concept. Row noted as partial match only."
+    }
+  },
+  {
+    "row_index": 18,
+    "term": "NGS Library Source Molecule",
+    "ontology_identifier": "NCIT:C175895",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C175895",
+    "label": "Sequencing Library Source Indicator",
+    "description": "",
+    "verification": {
+      "verdict": "partial",
+      "note": "NCIT:C175895 'Sequencing Library Source Indicator' covers source material type; no term specifically for 'source molecule' (DNA/RNA/cDNA distinction). Partial match."
+    }
+  }
+]

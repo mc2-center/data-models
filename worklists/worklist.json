@@ -1,0 +1,631 @@
+[
+  {
+    "row_index": 0,
+    "term": "Biospecimen",
+    "existing_description": "Metadata attributes for describing a tissue or tumor sample",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 1,
+    "term": "Biospecimen_id",
+    "existing_description": "Unique row identifier, used as a primary key for record updates. This should terminate in ModelKey-Bxxx or IndividualKey-Bxxx format, unless directed otherwise.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:15100774, primary_key."
+  },
+  {
+    "row_index": 2,
+    "term": "Biospecimen Type Category",
+    "existing_description": "The general category of this biospecimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11253427."
+  },
+  {
+    "row_index": 3,
+    "term": "Biospecimen Type",
+    "existing_description": "The type of biospecimen",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 4,
+    "term": "Biospecimen Species",
+    "existing_description": "The species from which the biospecimen originates",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 5,
+    "term": "Biospecimen Sex",
+    "existing_description": "Biological sex associated with the specimen donor",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:7572817."
+  },
+  {
+    "row_index": 6,
+    "term": "Biospecimen Age at Collection",
+    "existing_description": "Age at the time the biospecimen was collected. Please provide the unit in field Biospecimen Age at Collection Unit.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14473376."
+  },
+  {
+    "row_index": 7,
+    "term": "Biospecimen Age at Collection Unit",
+    "existing_description": "Unit associated with age at the time the biospecimen was collected.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 8,
+    "term": "Biospecimen Disease Type",
+    "existing_description": "The type of tumor associated with the specimen. Multiple values permitted, comma separated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 9,
+    "term": "Biospecimen Tumor Subtype",
+    "existing_description": "The subtype related to the scientific determination and investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms of tissue growth resulting from uncontrolled cell proliferation.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 10,
+    "term": "Biospecimen Tumor Grade",
+    "existing_description": "Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:11325685."
+  },
+  {
+    "row_index": 11,
+    "term": "Biospecimen Composition",
+    "existing_description": "The text term used to describe the type(s) of tissue contained in the biospecimen. Multiple values permitted, comma separated.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:12922545."
+  },
+  {
+    "row_index": 12,
+    "term": "Biospecimen Tumor Status",
+    "existing_description": "Normal or Tumor Sample Pathology Indicator",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14688604."
+  },
+  {
+    "row_index": 13,
+    "term": "Biospecimen Preservation Method",
+    "existing_description": "Text term that represents the method used to preserve the sample.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:8028962."
+  },
+  {
+    "row_index": 14,
+    "term": "Biospecimen Anatomic Site",
+    "existing_description": "Text term that represents the name of the primary disease site of the submitted tumor sample.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14156279."
+  },
+  {
+    "row_index": 15,
+    "term": "Biospecimen Site of Resection or Biopsy",
+    "existing_description": "The text term used to describe the anatomic site of the resection or biopsy of the patient's malignant disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:0000006."
+  },
+  {
+    "row_index": 16,
+    "term": "Biospecimen Site of Origin",
+    "existing_description": "The text term used to describe the anatomic site of origin, of the patient's malignant disease.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:0000004."
+  },
+  {
+    "row_index": 17,
+    "term": "Biospecimen Timepoint Type",
+    "existing_description": "Label to identify an event associated with the collection of the biospecimen (e.g. Baseline, End of Treatment, Overall survival, Final). Use Biospecimen Timepoint Offset to indicate the number of post-event days that elapsed before the biospecimen was collected. NO PHI/PII INFORMATION IS ALLOWED.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 18,
+    "term": "Biospecimen Collection Site",
+    "existing_description": "The health care site at which the biospecimen sample was collected.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 19,
+    "term": "Biospecimen Therapeutic Agent",
+    "existing_description": "Text identification of the individual agent(s) used as part of a treatment regimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13579886."
+  },
+  {
+    "row_index": 20,
+    "term": "Biospecimen Tumor Morphology",
+    "existing_description": "Morphology code from the third edition of the International Classification of Diseases for Oncology, published in 2000, and used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:0000003."
+  },
+  {
+    "row_index": 21,
+    "term": "Biospecimen Fixative",
+    "existing_description": "The name of the compound that preserves tissues and cells in this sample for microscopic study.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:0065078."
+  },
+  {
+    "row_index": 22,
+    "term": "Biospecimen Embedding Medium",
+    "existing_description": "The name of the material that infiltrates and supports the specimen and preserves its shape and structure for sectioning and microscopy.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:8037927."
+  },
+  {
+    "row_index": 23,
+    "term": "Biospecimen Acquisition Method",
+    "existing_description": "Records the method of acquisition or source for the specimen under consideration",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 24,
+    "term": "Biospecimen Description",
+    "existing_description": "A description of the biospecimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14688604."
+  },
+  {
+    "row_index": 25,
+    "term": "Biospecimen Pathology",
+    "existing_description": "The pathology identifier associated with the biospecimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 26,
+    "term": "Biospecimen BioSample Identifier",
+    "existing_description": "BioSample (SAMN) accession number corresponding to the source of this biospecimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 27,
+    "term": "Parent Biospecimen Key",
+    "existing_description": "Biospecimen Key identifer of a biospecimen from which this sample was derived. Do not use this field to reference the source model or individual.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 28,
+    "term": "Biospecimen Stain",
+    "existing_description": "Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:8120269."
+  },
+  {
+    "row_index": 29,
+    "term": "Biospecimen Timepoint Offset",
+    "existing_description": "The number of days that elapsed before the biospecimen was collected, relative to the event described by Biospecimen Timepoint Type. Floating point values are allowed.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 30,
+    "term": "Biospecimen Last Known Disease Status",
+    "existing_description": "Text term that describes the last known status of an individual associated with this specimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 31,
+    "term": "Biospecimen Known Metastasis Sites",
+    "existing_description": "The text term(s) used to describe the anatomic site(s) of metastasis associated with the malignant disease of the individual or model.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 32,
+    "term": "Biospecimen Primary Site",
+    "existing_description": "Primary site in the body associated with the primary diagnosis.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity."
+  },
+  {
+    "row_index": 33,
+    "term": "Biospecimen Primary Diagnosis",
+    "existing_description": "Text term used to describe the histologic diagnosis relevant to the model system, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14714127."
+  },
+  {
+    "row_index": 34,
+    "term": "Biospecimen Treatment Response",
+    "existing_description": "Text term that describes the treatment response of a model or patient from which this specimen was derived.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:13383448."
+  },
+  {
+    "row_index": 35,
+    "term": "Biospecimen Incidence Type",
+    "existing_description": "Text term describing a change in disease status associated with the collection of this specimen.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:0002002."
+  },
+  {
+    "row_index": 36,
+    "term": "Biospecimen Treatment Type",
+    "existing_description": "Text term that describes the kind of treatment administered.",
+    "existing_ontology_identifier": "",
+    "existing_ontology_url": "",
+    "needs": [
+      "ontology_identifier",
+      "ontology_url"
+    ],
+    "suggested_ontologies": [
+      "NCIT",
+      "OBI",
+      "UBERON"
+    ],
+    "context": "This is a data model attribute (property/field) in the Biospecimen metadata schema. The term represents a named property used to describe a biospecimen or its associated entity. Existing property identifiers: CDE:14737565."
+  }
+]

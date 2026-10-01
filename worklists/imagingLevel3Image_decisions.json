@@ -1,0 +1,26 @@
+[
+  {
+    "row_index": 0,
+    "term": "Imaging Level 3 Image",
+    "ontology_identifier": "NCIT:C17369",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17369",
+    "label": "Imaging Procedure",
+    "description": "Any technology or method that aids in the visualization of any biological process, cell, tissue or organ for use in screening, diagnosis, surgical procedures or therapy.",
+    "verification": {
+      "verdict": "partial",
+      "note": "Schema node representing quality controlled or co-registered image data. Best NCIT match is Imaging Procedure as the general class. OBI:0003333 (computed image data set) is a closer match from OBI but NCIT is preferred."
+    }
+  },
+  {
+    "row_index": 1,
+    "term": "ImagingLevel3Image_id",
+    "ontology_identifier": "NCIT:C49189",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C49189",
+    "label": "Primary Key",
+    "description": "The attribute selected as being most important for uniquely identifying a body of information (an entity, object or record).",
+    "verification": {
+      "verdict": "match",
+      "note": "Primary Key is a direct match for a unique row identifier used as a primary key for record updates."
+    }
+  }
+]

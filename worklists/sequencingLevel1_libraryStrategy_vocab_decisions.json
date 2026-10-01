@@ -1,0 +1,236 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "AMPLICON",
+    "ontology_identifier": "NCIT:C204813",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204813",
+    "label": "Amplicon Sequencing",
+    "description": "A method for targeted DNA sequencing that uses oligonucleotide primers to amplify regions of interest, followed by next-generation sequencing for deep coverage of the region.",
+    "verification": {"verdict": "match", "note": "NCIT:C204813 Amplicon Sequencing; exact concept match for AMPLICON library strategy."}
+  },
+  {
+    "row_index": 1,
+    "term": "ATAC-seq",
+    "ontology_identifier": "NCIT:C156056",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156056",
+    "label": "ATAC-Seq",
+    "description": "A molecular genetic technique that identifies accessible, or open, chromatin regions in a sample using Tn5 transposase, which preferentially inserts sequencing adaptors into accessible chromatin.",
+    "verification": {"verdict": "match", "note": "NCIT:C156056 ATAC-Seq; exact label match (case-insensitive)."}
+  },
+  {
+    "row_index": 2,
+    "term": "Bisulfite-Seq",
+    "ontology_identifier": "NCIT:C106054",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C106054",
+    "label": "Bisulfite Sequencing",
+    "description": "A molecular genetic technique that uses bisulfite to convert unmethylated cytosine residues to uracil residues, followed by sequencing to distinguish methylated from unmethylated cytosine.",
+    "verification": {"verdict": "match", "note": "NCIT:C106054 Bisulfite Sequencing; exact concept match for Bisulfite-Seq."}
+  },
+  {
+    "row_index": 3,
+    "term": "ChIA-PET",
+    "ontology_identifier": "NCIT:C172845",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172845",
+    "label": "Chromatin Interaction Analysis with Paired-End Tag",
+    "description": "A molecular genetic technique that combines chromatin immunoprecipitation with paired-end tag DNA sequencing to identify the nucleotide sequences for the binding sites occupied by DNA-associated proteins in a sample.",
+    "verification": {"verdict": "match", "note": "NCIT:C172845 Chromatin Interaction Analysis with Paired-End Tag; ChIA-PET is the abbreviation for this method."}
+  },
+  {
+    "row_index": 4,
+    "term": "ChIP-Seq",
+    "ontology_identifier": "NCIT:C106049",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C106049",
+    "label": "ChIP-Seq",
+    "description": "A molecular genetic technique that uses chromatin immunoprecipitation (ChIP) to isolate protein-associated DNA sequences, which are then subjected to next-generation sequencing.",
+    "verification": {"verdict": "match", "note": "NCIT:C106049 ChIP-Seq; exact label match."}
+  },
+  {
+    "row_index": 8,
+    "term": "Spatial-tx",
+    "ontology_identifier": "NCIT:C205121",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C205121",
+    "label": "Spatial Transcriptome Analysis",
+    "description": "A method that measures and maps gene expression in a biological sample while preserving the spatial context of the cells.",
+    "verification": {"verdict": "partial", "note": "NCIT:C205121 Spatial Transcriptome Analysis; Spatial-tx refers to spatial transcriptomics sequencing; the NCIT term is the parent concept for this library strategy class."}
+  },
+  {
+    "row_index": 9,
+    "term": "snATAC-Seq",
+    "ontology_identifier": "NCIT:C198496",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C198496",
+    "label": "Single Nucleus ATAC-Seq",
+    "description": "A molecular genetic technique where DNA is harvested from a single cell nucleus and subjected to ATAC-seq to isolate and sequence regions rich in open chromatin.",
+    "verification": {"verdict": "match", "note": "NCIT:C198496 Single Nucleus ATAC-Seq; exact concept match for snATAC-Seq."}
+  },
+  {
+    "row_index": 10,
+    "term": "DNase-Hypersensitivity",
+    "ontology_identifier": "NCIT:C106052",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C106052",
+    "label": "DNase-Seq",
+    "description": "A molecular genetic technique where genome-wide sequencing is performed on DNA regions that are super sensitive to cleavage by DNase I to identify putative DNA regulatory sequences.",
+    "verification": {"verdict": "partial", "note": "NCIT:C106052 DNase-Seq; the vocab term 'DNase-Hypersensitivity' and NCIT label 'DNase-Seq' refer to the same technique. The vocabulary uses the older EBI SRA term for DNase I hypersensitive site sequencing."}
+  },
+  {
+    "row_index": 12,
+    "term": "EST",
+    "ontology_identifier": "NCIT:C18155",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C18155",
+    "label": "Expressed Sequence Tag",
+    "description": "Single-pass reads of 200-800 bp obtained from randomly selected clones from cDNA libraries, representing a snapshot of the genes expressed in a given tissue and/or at a given developmental stage for a given organism.",
+    "verification": {"verdict": "partial", "note": "NCIT:C18155 Expressed Sequence Tag; as a library strategy, EST refers to generating expressed sequence tags from a cDNA library. The NCIT term describes the resulting molecular marker rather than the sequencing strategy itself."}
+  },
+  {
+    "row_index": 13,
+    "term": "FAIRE-seq",
+    "ontology_identifier": "NCIT:C106051",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C106051",
+    "label": "FAIRE-Seq",
+    "description": "A molecular genetic technique that depletes a biological sample of nucleosomal DNA using formaldehyde-assisted isolation, then subjects the non-nucleosome-associated regulatory DNA to next-generation sequencing.",
+    "verification": {"verdict": "match", "note": "NCIT:C106051 FAIRE-Seq; exact label match (case-insensitive)."}
+  },
+  {
+    "row_index": 16,
+    "term": "Hi-C",
+    "ontology_identifier": "NCIT:C204819",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204819",
+    "label": "Hi-C Sequencing",
+    "description": "A DNA sequencing strategy designed to detect genome-wide chromatin interactions in the nucleus, based on Chromosome Conformation Capture with biotin-labeled ligation junctions.",
+    "verification": {"verdict": "match", "note": "NCIT:C204819 Hi-C Sequencing; exact concept match for Hi-C library strategy."}
+  },
+  {
+    "row_index": 17,
+    "term": "MBD-Seq",
+    "ontology_identifier": "NCIT:C204820",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204820",
+    "label": "Methyl-binding Domain Sequencing",
+    "description": "A strategy to obtain DNA sequences from methylated sites by capturing methylated fragments with a protein with high affinity for double-stranded DNA harboring methylated CpGs, followed by sequencing.",
+    "verification": {"verdict": "match", "note": "NCIT:C204820 Methyl-binding Domain Sequencing; exact concept match for MBD-Seq."}
+  },
+  {
+    "row_index": 18,
+    "term": "MeDIP-Seq",
+    "ontology_identifier": "NCIT:C204821",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204821",
+    "label": "Methylated DNA Immunoprecipitation Sequencing",
+    "description": "A strategy to obtain DNA sequences from methylated sites by immunoprecipitating methylated fragments with a monoclonal antibody that specifically recognizes 5-methylcytidine, followed by sequencing.",
+    "verification": {"verdict": "match", "note": "NCIT:C204821 Methylated DNA Immunoprecipitation Sequencing; exact concept match for MeDIP-Seq."}
+  },
+  {
+    "row_index": 19,
+    "term": "miRNA-Seq",
+    "ontology_identifier": "NCIT:C156057",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C156057",
+    "label": "MicroRNA Sequencing",
+    "description": "A next-generation sequencing-based procedure that can identify and quantify the microRNA sequences present in a biological sample.",
+    "verification": {"verdict": "match", "note": "NCIT:C156057 MicroRNA Sequencing; exact concept match for miRNA-Seq."}
+  },
+  {
+    "row_index": 22,
+    "term": "ncRNA-Seq",
+    "ontology_identifier": "NCIT:C172858",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C172858",
+    "label": "Non-Coding RNA Sequencing",
+    "description": "A molecular genetic technique that can determine the RNA sequences for all or part of the population of small and large non-protein coding RNA transcripts in a sample.",
+    "verification": {"verdict": "match", "note": "NCIT:C172858 Non-Coding RNA Sequencing; exact concept match for ncRNA-Seq."}
+  },
+  {
+    "row_index": 23,
+    "term": "Other",
+    "ontology_identifier": "NCIT:C17649",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C17649",
+    "label": "Other",
+    "description": "Different than the one(s) previously specified or mentioned.",
+    "verification": {"verdict": "match", "note": "NCIT:C17649 Other; standard NCIT general qualifier."}
+  },
+  {
+    "row_index": 25,
+    "term": "RAD-Seq",
+    "ontology_identifier": "NCIT:C204824",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204824",
+    "label": "Restriction-site Associated DNA Sequencing",
+    "description": "A type of genome-wide sampling sequencing that reduces the complexity of the genome by subsampling only at specific sites defined by restriction enzymes.",
+    "verification": {"verdict": "match", "note": "NCIT:C204824 Restriction-site Associated DNA Sequencing; exact concept match for RAD-Seq."}
+  },
+  {
+    "row_index": 26,
+    "term": "RIP-Seq",
+    "ontology_identifier": "NCIT:C204825",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204825",
+    "label": "Direct Sequencing of RNA Immunoprecipitates",
+    "description": "A method to recover and sequence interaction sites between RNA and specific RNA-binding proteins, using immunoprecipitation with antibodies targeted to the protein of interest followed by sequencing.",
+    "verification": {"verdict": "partial", "note": "NCIT:C204825 Direct Sequencing of RNA Immunoprecipitates; the NCIT label differs from the common abbreviation RIP-Seq but describes the same technique."}
+  },
+  {
+    "row_index": 27,
+    "term": "RNA-Seq",
+    "ontology_identifier": "NCIT:C124261",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C124261",
+    "label": "Whole Transcriptome Sequencing",
+    "description": "A procedure that can determine the nucleotide sequence for all of the RNA transcripts in an individual.",
+    "verification": {"verdict": "partial", "note": "NCIT:C124261 Whole Transcriptome Sequencing; RNA-Seq as a library strategy typically refers to bulk mRNA/transcriptome sequencing. No dedicated NCIT 'RNA-Seq' class exists; this is the closest generic concept."}
+  },
+  {
+    "row_index": 28,
+    "term": "SELEX",
+    "ontology_identifier": "NCIT:C204826",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204826",
+    "label": "Systematic Evolution of Ligands by Exponential Enrichment",
+    "description": "A method for isolating single-stranded DNAs or RNAs (aptamers) with high-affinity to a target molecule from a large library with random sequences through iterative rounds of selection and amplification.",
+    "verification": {"verdict": "partial", "note": "NCIT:C204826 Systematic Evolution of Ligands by Exponential Enrichment; SELEX is the selection technique; as a library strategy it refers to sequencing of SELEX-selected nucleic acid pools. The NCIT term matches the method but is not framed as a sequencing strategy."}
+  },
+  {
+    "row_index": 29,
+    "term": "DNA-Seq",
+    "ontology_identifier": "NCIT:C153598",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C153598",
+    "label": "DNA Sequencing",
+    "description": "The determination of the sequence of purine and pyrimidine bases in a strand of DNA.",
+    "verification": {"verdict": "match", "note": "NCIT:C153598 DNA Sequencing; exact concept match for generic DNA-Seq library strategy."}
+  },
+  {
+    "row_index": 32,
+    "term": "Targeted-Capture",
+    "ontology_identifier": "NCIT:C130177",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C130177",
+    "label": "Next Generation Targeted Sequencing",
+    "description": "A technique that determines the nucleotide sequence of a pre-specified region of DNA or RNA by using primers that are specific for that region.",
+    "verification": {"verdict": "partial", "note": "NCIT:C130177 Next Generation Targeted Sequencing; Targeted-Capture specifically uses capture probes (hybridization) rather than primers, but this is the closest NCIT concept for targeted sequencing of specific genomic regions."}
+  },
+  {
+    "row_index": 33,
+    "term": "Tethered Chromatin Conformation Capture",
+    "ontology_identifier": "NCIT:C204829",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204829",
+    "label": "Tethered Chromatin Conformation Capture Sequencing",
+    "description": "A method for genome-wide mapping of chromatin interactions, similar to Hi-C sequencing except that the ligations are performed on a solid substrate rather than in solution, enhancing the signal-to-noise ratio.",
+    "verification": {"verdict": "match", "note": "NCIT:C204829 Tethered Chromatin Conformation Capture Sequencing; exact concept match."}
+  },
+  {
+    "row_index": 34,
+    "term": "Tn-Seq",
+    "ontology_identifier": "NCIT:C204830",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C204830",
+    "label": "Transposon Sequencing",
+    "description": "A method for accurately determining quantitative genetic interactions on a genome-wide scale in microorganisms, based on a saturated transposon insertion library followed by sequencing of flanking regions.",
+    "verification": {"verdict": "match", "note": "NCIT:C204830 Transposon Sequencing; exact concept match for Tn-Seq."}
+  },
+  {
+    "row_index": 37,
+    "term": "WGS",
+    "ontology_identifier": "NCIT:C101294",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C101294",
+    "label": "Whole Genome Sequencing",
+    "description": "A procedure that can determine the DNA sequence for nearly the entire genome of an individual.",
+    "verification": {"verdict": "match", "note": "NCIT:C101294 Whole Genome Sequencing; exact concept match for WGS."}
+  },
+  {
+    "row_index": 38,
+    "term": "WXS",
+    "ontology_identifier": "NCIT:C101295",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C101295",
+    "label": "Whole Exome Sequencing",
+    "description": "A procedure that can determine the DNA sequence for all of the exons in an individual.",
+    "verification": {"verdict": "match", "note": "NCIT:C101295 Whole Exome Sequencing; exact concept match for WXS."}
+  }
+]}

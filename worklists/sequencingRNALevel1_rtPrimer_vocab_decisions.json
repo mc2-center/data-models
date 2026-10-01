@@ -1,0 +1,38 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "Oligo-dT",
+    "ontology_identifier": "NCIT:C201929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "label": "Oligo-dT Primer",
+    "description": "DNA primers consisting of 12-18 deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.",
+    "verification": {"verdict": "match", "note": "NCIT:C201929 Oligo-dT Primer; exact label match."}
+  },
+  {
+    "row_index": 1,
+    "term": "Poly-dT",
+    "ontology_identifier": "NCIT:C201929",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201929",
+    "label": "Oligo-dT Primer",
+    "description": "DNA primers consisting of deoxythymidines that anneal to the poly(A) tails of eukaryotic mRNAs and are used to prime reverse transcription.",
+    "verification": {"verdict": "partial", "note": "Poly-dT (polydeoxythymidine) is functionally equivalent to Oligo-dT; NCIT:C201929 is the best available match. Label differs slightly."}
+  },
+  {
+    "row_index": 2,
+    "term": "Feature barcoding",
+    "ontology_identifier": "NCIT:C202255",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202255",
+    "label": "Feature Barcoding",
+    "description": "A technology platform that uses oligonucleotide barcodes to simultaneously measure gene expression and other cellular features (surface proteins, T/B cell receptors, CRISPR perturbations) at single-cell resolution.",
+    "verification": {"verdict": "match", "note": "NCIT:C202255 Feature Barcoding; exact label match (case-insensitive). Feature barcoding is used as an RT primer type in single-cell multimodal sequencing."}
+  },
+  {
+    "row_index": 3,
+    "term": "Random",
+    "ontology_identifier": "NCIT:C201930",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C201930",
+    "label": "Random Primer",
+    "description": "Short oligonucleotides of random sequence that anneal throughout the length of RNA templates and are used to prime reverse transcription.",
+    "verification": {"verdict": "match", "note": "NCIT:C201930 Random Primer; exact match for random priming in reverse transcription."}
+  }
+]}

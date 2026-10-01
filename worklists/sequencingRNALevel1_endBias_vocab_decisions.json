@@ -1,0 +1,29 @@
+{"decisions": [
+  {
+    "row_index": 0,
+    "term": "3 Prime",
+    "ontology_identifier": "NCIT:C202270",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202270",
+    "label": "3'-End Bias",
+    "description": "An artifact of cDNA amplification and cloning where the 3' end of transcripts is over-represented in the final sample or library.",
+    "verification": {"verdict": "partial", "note": "NCIT:C202270 3'-End Bias; the label uses the full term name while the vocab value '3 Prime' is an abbreviated form. The NCIT term is the parent concept for End Bias type '3 Prime'. Correct concept — the vocabulary value names the bias type, the NCIT term IS that bias type."}
+  },
+  {
+    "row_index": 1,
+    "term": "5 Prime",
+    "ontology_identifier": "NCIT:C202271",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202271",
+    "label": "5'-End Bias",
+    "description": "An artifact of cDNA amplification and cloning where the 5' end of transcripts is over-represented in the final sample or library.",
+    "verification": {"verdict": "partial", "note": "NCIT:C202271 5'-End Bias; same rationale as 3 Prime. Correct concept, abbreviated vocab label vs full NCIT label."}
+  },
+  {
+    "row_index": 2,
+    "term": "Full Length Transcript",
+    "ontology_identifier": "NCIT:C202272",
+    "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C202272",
+    "label": "Full-Length Transcript",
+    "description": "A cDNA molecule that spans the entire length of an RNA transcript, from its 5' end to its 3' end.",
+    "verification": {"verdict": "match", "note": "NCIT:C202272 Full-Length Transcript; the definition matches the end bias concept of capturing full transcript coverage (as opposed to 3' or 5' biased sequencing). Minor label punctuation difference."}
+  }
+]}

@@ -1,5 +1,5 @@
 ﻿Attribute,Description,Valid Values,DependsOn,Required,Properties,Parent,DependsOn Component,Source,Validation Rules,Nonpreferred Terms,Ontology Identifier,Ontology Url,NCIt Code,Notes
-Manual,,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,,,,
-Semiautomatic,,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,,,,
-Automatic,,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,,,,
-Not Applicable,,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,,,,
+Manual,"Of or related to the hands; reference to a method, process, task, or activity being done by hand (as opposed as being performed with the assistance of automation or other supportive means).",,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,NCIT:C63513,http://purl.obolibrary.org/obo/NCIT_C63513,C63513,
+Semiautomatic,Of or related to a method or process performed using a combination of manual and automatic means.,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,NCIT:C172484,http://purl.obolibrary.org/obo/NCIT_C172484,C172484,
+Automatic,Operating with minimal human intervention; independent of external control.,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,NCIT:C70669,http://purl.obolibrary.org/obo/NCIT_C70669,C70669,
+Not Applicable,Determination of a value is not relevant in the current context.,,,FALSE,,Study Deidentification Method Type,,CDS v5.0.4/Image-de_identification_method_type,,,NCIT:C48660,http://purl.obolibrary.org/obo/NCIT_C48660,C48660,
