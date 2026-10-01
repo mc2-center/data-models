@@ -1,0 +1,3891 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Versioned history of the MC2 Center data models.">
+      
+      
+      
+      
+        <link rel="prev" href="../sharingPlans/">
+      
+      
+        <link rel="next" href="../file/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Education Resource - MC2 Center Data Models Explorer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attribute-resource-topic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-header__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MC2 Center Data Models Explorer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Education Resource
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/biospecimen/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Data Models
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../knowledge-graph/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Knowledge Graph
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../all_terms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Standard Terms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing to the Data Model
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-nav__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    MC2 Center Data Models Explorer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sample Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/biospecimen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biospecimen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/individual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Individual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administrative Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administrative Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/grant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/person/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Person
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Sharing Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resource Sharing Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/dataCatalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/DataDSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Sharing Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/education/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Education Resource
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/publication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Imaging Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingChannel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Channel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingLevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingLevel3Image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 3 (Image)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingLevel3Segments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 3 (Segments)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/imagingLevel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NanoString GeoMx Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NanoString GeoMx Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxAux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx Auxiliary Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxImaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx Imaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxLevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxLevel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx Level 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/geomxRoi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoMx ROI Segment Annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sequencing Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/sequencingLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/sequencingLevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/sequencingLevel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Level 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/sequencingRNALevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing RNA Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium Data Model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visium Data Model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/visiumRNAAux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium Auxiliary Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/visiumRNALevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/visiumRNALevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/visiumRNALevel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/visiumRNALevel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../knowledge-graph/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge Graph
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-graph/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model and identifiers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-graph/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-graph/publishing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing and deposit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-graph/querying/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Querying the graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-graph/federation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Federation and sagebrain-model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Terms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Standard Terms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms by model
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terms by model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataCatalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharingPlans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Sharing Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Education Resource
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Education Resource
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Topic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-activity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Activity Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Primary Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-intended-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Intended Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Primary Audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-educational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Educational Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-media-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Media Accessibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-access-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Access Hazard
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../person/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Person
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biospecimen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biospecimen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../individual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Individual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagingChannel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Channel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagingLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagingLevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagingLevel3Segments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 3 (Segments)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagingLevel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imaging Level 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geomxLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NanoString GeoMx Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequencingLevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequencingLevel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing Level 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequencingRNALevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sequencing RNA Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visiumRNALevel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visiumRNALevel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visiumRNALevel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visium RNA Level 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing to the Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Topic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-activity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Activity Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Primary Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-intended-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Intended Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Primary Audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-educational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Educational Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-media-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Media Accessibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-access-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute: Resource Access Hazard
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Education Resource</h1>
+
+<h2 id="attribute-resource-topic">Attribute: <code>Resource Topic</code><a class="headerlink" href="#attribute-resource-topic" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value                    </th><th>Description                                                                                                                                                                                                                                             </th><th>Ontology                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>Computational Model Development</td><td>The construction and refinement of mathematical, statistical, or computational models used to simulate, predict, or analyze biological or clinical phenomena.                                                                                           </td><td>Not available                                                                                        </td></tr>
+<tr><td>Computational Resource         </td><td>Software tools, algorithms, databases, or computing infrastructure developed or used to support computational research and data analysis.                                                                                                               </td><td>Not available                                                                                        </td></tr>
+<tr><td>Diversity/Equity/Inclusion     </td><td>Efforts and practices that promote fair representation, equal opportunity, and inclusion of individuals from diverse backgrounds, identities, and abilities within research and educational communities.                                                </td><td><a href="http://id.nlm.nih.gov/mesh/D000092783" target="_blank" rel="noopener">MESH:D000092783</a>   </td></tr>
+<tr><td>Drug Resistance/Sensitivity    </td><td>The diminished or absent response of cancer cells or tumors to a therapeutic agent (resistance), or their degree of susceptibility to being affected or killed by that agent (sensitivity).                                                             </td><td>Not available                                                                                        </td></tr>
+<tr><td>Epigenetics                    </td><td>The study of heritable changes in gene expression or cellular phenotype caused by mechanisms other than alterations in the underlying DNA sequence, such as DNA methylation and histone modification.                                                   </td><td><a href="http://edamontology.org/topic_3295" target="_blank" rel="noopener">EDAM:3295</a>            </td></tr>
+<tr><td>Evolution                      </td><td>The process by which populations of organisms change over successive generations through mechanisms such as mutation, genetic drift, and natural selection.                                                                                             </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16565" target="_blank" rel="noopener">NCIT:C16565</a>  </td></tr>
+<tr><td>Experimental Model Development </td><td>The design, generation, and validation of laboratory-based systems, such as cell lines, organoids, or animal models, used to study disease biology or evaluate therapeutic interventions.                                                               </td><td>Not available                                                                                        </td></tr>
+<tr><td>Heterogeneity                  </td><td>The quality or state of consisting of elements that are not of the same kind or nature, such as variability among cells, tissues, or tumors within a biological system.                                                                                 </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C28359" target="_blank" rel="noopener">NCIT:C28359</a>  </td></tr>
+<tr><td>Immunotherapy                  </td><td>Therapy designed to induce, enhance, or suppress changes in a patient&#x27;s immune status in order to treat disease, such as cancer.                                                                                                                   </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C15262" target="_blank" rel="noopener">NCIT:C15262</a>  </td></tr>
+<tr><td>Mechano-genetics               </td><td>The study of how mechanical forces and the physical properties of cells and tissues influence gene expression and genetic regulation.                                                                                                                   </td><td>Not available                                                                                        </td></tr>
+<tr><td>Mechano-resistance             </td><td>The study of how mechanical properties of, or forces acting on, cells and tissues contribute to resistance against therapeutic agents or other stressors.                                                                                               </td><td>Not available                                                                                        </td></tr>
+<tr><td>Metabolism                     </td><td>The organic biochemical processes within a cell or organism that are necessary to sustain life, encompassing both anabolic (biosynthetic) and catabolic (degradative) reactions.                                                                        </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C19536" target="_blank" rel="noopener">NCIT:C19536</a>  </td></tr>
+<tr><td>Metastasis                     </td><td>The spread of cancer cells from the primary tumor site to other parts of the body, forming secondary tumors that share characteristics of the original neoplasm.                                                                                        </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C19151" target="_blank" rel="noopener">NCIT:C19151</a>  </td></tr>
+<tr><td>Method/Assay Development       </td><td>The design, optimization, and validation of new experimental techniques, protocols, or assays for measuring biological or clinical phenomena.                                                                                                           </td><td>Not available                                                                                        </td></tr>
+<tr><td>Microenvironment               </td><td>The cellular and molecular environment surrounding a tumor or biological system, including neighboring cells, blood vessels, immune cells, signaling molecules, and the extracellular matrix, that influences its growth and behavior.                  </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C94498" target="_blank" rel="noopener">NCIT:C94498</a>  </td></tr>
+<tr><td>Oncogenic Stress               </td><td>Cellular stress arising from the activation of oncogenes or dysregulated growth signaling, which can trigger protective responses such as senescence or apoptosis.                                                                                      </td><td>Not available                                                                                        </td></tr>
+<tr><td>Other                          </td><td>A resource topic that does not fit within any of the other defined categories.                                                                                                                                                                          </td><td>Not available                                                                                        </td></tr>
+<tr><td>Outreach                       </td><td>Activities and programs designed to engage, inform, or provide resources to communities, patients, or the public outside of a research institution&#x27;s core scientific work.                                                                         </td><td>Not available                                                                                        </td></tr>
+<tr><td>Platform Development           </td><td>The creation and refinement of technological, computational, or experimental platforms and infrastructure that support research workflows or data generation.                                                                                           </td><td>Not available                                                                                        </td></tr>
+<tr><td>Training Material              </td><td>A document or other resource, such as a tutorial, course, or teaching module, designed for learning, educational, or training purposes.                                                                                                                 </td><td><a href="http://edamontology.org/data_3669" target="_blank" rel="noopener">EDAM:3669</a>             </td></tr>
+<tr><td>Tumor Progression              </td><td>A pathologic process in which molecular alterations result in a more aggressive cytologic and phenotypic profile and clinical course of a neoplasm over time.                                                                                           </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C17609" target="_blank" rel="noopener">NCIT:C17609</a>  </td></tr>
+<tr><td>Tumor-Immune                   </td><td>The study of the interactions between the immune system and tumor cells, including immune surveillance, immune evasion, and immune-based responses to cancer.                                                                                           </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C19095" target="_blank" rel="noopener">NCIT:C19095</a>  </td></tr>
+<tr><td>Computer Science               </td><td>The study of the structure, theory, and application of computational systems, algorithms, and information processing using mathematical, logical, and empirical methods.                                                                                </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C18141" target="_blank" rel="noopener">NCIT:C18141</a>  </td></tr>
+<tr><td>Environmental Science          </td><td>The interdisciplinary scientific study of external biotic and abiotic factors to which an organism is exposed, and their effects on health and ecosystems.                                                                                              </td><td><a href="http://id.nlm.nih.gov/mesh/D000079265" target="_blank" rel="noopener">MESH:D000079265</a>   </td></tr>
+<tr><td>Information Science            </td><td>The field of knowledge, theory, and technology concerned with the collection, organization, storage, retrieval, and dissemination of facts and data, including aspects of communication, publishing, and informatics.                                   </td><td><a href="http://id.nlm.nih.gov/mesh/D007254" target="_blank" rel="noopener">MESH:D007254</a>         </td></tr>
+<tr><td>Educational Technology         </td><td>The systematic identification, development, organization, and use of educational resources, tools, and equipment, including audiovisual and digital aids, to support teaching and learning.                                                             </td><td><a href="http://id.nlm.nih.gov/mesh/D018961" target="_blank" rel="noopener">MESH:D018961</a>         </td></tr>
+<tr><td>Anatomy/Physiology             </td><td>The study of the structure of living organisms and their parts (anatomy) together with the functions and mechanisms of those structures (physiology).                                                                                                   </td><td>Not available                                                                                        </td></tr>
+<tr><td>Biology                        </td><td>The scientific study of living organisms, including their structure, function, growth, evolution, and interactions with their environment.                                                                                                              </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16345" target="_blank" rel="noopener">NCIT:C16345</a>  </td></tr>
+<tr><td>Ecology                        </td><td>The branch of biology concerned with the relationships between organisms and their environment.                                                                                                                                                         </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16526" target="_blank" rel="noopener">NCIT:C16526</a>  </td></tr>
+<tr><td>Genetics                       </td><td>The branch of biology that deals with heredity, especially the mechanisms of hereditary transmission and the variation of inherited characteristics among similar or related organisms.                                                                 </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16624" target="_blank" rel="noopener">NCIT:C16624</a>  </td></tr>
+<tr><td>Nutrition                      </td><td>The processes by which an organism consumes and utilizes food, water, and other nourishment necessary to sustain its life processes.                                                                                                                    </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C28294" target="_blank" rel="noopener">NCIT:C28294</a>  </td></tr>
+<tr><td>Measurement and Data           </td><td>An educational topic area covering skills and concepts related to measuring quantities and to collecting, representing, and interpreting data.                                                                                                          </td><td>Not available                                                                                        </td></tr>
+<tr><td>Statistics and Probability     </td><td>The application of statistical methods and probability theory to describe, summarize, and draw inferences from data.                                                                                                                                    </td><td><a href="http://edamontology.org/topic_2269" target="_blank" rel="noopener">EDAM:2269</a>            </td></tr>
+<tr><td>Chemistry                      </td><td>The scientific study of the composition, structure, properties, and reactions of matter, especially atomic and molecular systems.                                                                                                                       </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16414" target="_blank" rel="noopener">NCIT:C16414</a>  </td></tr>
+<tr><td>Physics                        </td><td>The scientific study of matter, energy, and the fundamental forces and laws governing their interactions and behavior in nature.                                                                                                                        </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C16989" target="_blank" rel="noopener">NCIT:C16989</a>  </td></tr>
+<tr><td>Systems Biology                </td><td>An interdisciplinary field that studies complex interactions within biological systems using a holistic approach, integrating computational and mathematical modeling with experimental data to understand emergent properties of the system as a whole.</td><td><a href="http://purl.obolibrary.org/obo/OMIT_0024179" target="_blank" rel="noopener">OMIT:0024179</a></td></tr>
+<tr><td>Patient Advocacy               </td><td>Efforts to promote, protect, and represent the rights, needs, and interests of patients, often through education, support services, or engagement in research and health policy processes.                                                              </td><td><a href="http://id.nlm.nih.gov/mesh/D010344" target="_blank" rel="noopener">MESH:D010344</a>         </td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-activity-type">Attribute: <code>Resource Activity Type</code><a class="headerlink" href="#attribute-resource-activity-type" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value               </th><th>Description                                                                                                                                                                                                          </th><th>Ontology                                                                                               </th></tr>
+</thead>
+<tbody>
+<tr><td>Activity/Lab              </td><td>A hands-on exercise or laboratory-based activity in which learners actively perform tasks, experiments, or procedures to apply and reinforce concepts.                                                               </td><td>Not available                                                                                          </td></tr>
+<tr><td>Assessment                </td><td>A resource used to evaluate learner understanding or performance, such as a quiz, test, or other measurement of academic achievement.                                                                                </td><td><a href="http://id.nlm.nih.gov/mesh/D004521" target="_blank" rel="noopener">MESH:D004521</a>           </td></tr>
+<tr><td>Case Study                </td><td>A detailed, narrative-based educational resource examining a specific real-world example, scenario, or problem to illustrate concepts or promote analytical and critical-thinking skills.                            </td><td>Not available                                                                                          </td></tr>
+<tr><td>Data Set                  </td><td>A structured collection of related data records provided as an educational resource for analysis, exploration, or hands-on learning exercises.                                                                       </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C47824" target="_blank" rel="noopener">NCIT:C47824</a>    </td></tr>
+<tr><td>Diagram/Illustration      </td><td>A visual representation, such as a diagram, chart, or illustration, used to depict concepts, structures, or processes for instructional purposes.                                                                    </td><td><a href="https://w3id.org/evorao/Image" target="_blank" rel="noopener">EVORAO:Image</a>                </td></tr>
+<tr><td>Full Course               </td><td>A complete, self-contained sequence of instructional materials and activities covering a full subject or curriculum, typically spanning a full academic term.                                                        </td><td>Not available                                                                                          </td></tr>
+<tr><td>Game                      </td><td>An interactive, rule-based activity designed to engage learners and teach or reinforce concepts through play.                                                                                                        </td><td>Not available                                                                                          </td></tr>
+<tr><td>Homework/Assignment       </td><td>Work or tasks assigned to learners for completion outside of the primary instructional setting, used to reinforce or extend learning.                                                                                </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C89269" target="_blank" rel="noopener">NCIT:C89269</a>    </td></tr>
+<tr><td>Interactive               </td><td>A resource that requires active learner participation or response, such as a clickable simulation, interactive exercise, or dynamic multimedia element.                                                              </td><td>Not available                                                                                          </td></tr>
+<tr><td>Lecture                   </td><td>A recorded or transcribed instructional talk delivered to an audience or class, typically used to present or explain subject matter.                                                                                 </td><td><a href="http://id.nlm.nih.gov/mesh/D019531" target="_blank" rel="noopener">MESH:D019531</a>           </td></tr>
+<tr><td>Lecture Notes             </td><td>Written notes, outlines, or summaries prepared for or derived from a lecture, used to supplement or review instructional content.                                                                                    </td><td><a href="http://id.nlm.nih.gov/mesh/D019528" target="_blank" rel="noopener">MESH:D019528</a>           </td></tr>
+<tr><td>Lesson                    </td><td>A single, discrete unit of instruction focused on a specific topic or set of learning objectives.                                                                                                                    </td><td>Not available                                                                                          </td></tr>
+<tr><td>Lesson Plan               </td><td>A structured outline prepared by an instructor detailing the objectives, activities, materials, and assessment methods for a lesson.                                                                                 </td><td>Not available                                                                                          </td></tr>
+<tr><td>Module                    </td><td>A self-contained segment of instructional content covering a specific topic, often combined with other modules to form a larger course or curriculum.                                                                </td><td>Not available                                                                                          </td></tr>
+<tr><td>Primary Source            </td><td>An original document, artifact, or firsthand record (such as a letter, dataset, or historical artifact) created at the time of the event or phenomenon under study, used as direct evidence for learning or research.</td><td>Not available                                                                                          </td></tr>
+<tr><td>Reading                   </td><td>A text-based resource, such as an article, excerpt, or book chapter, assigned for learners to read as part of instructional content.                                                                                 </td><td>Not available                                                                                          </td></tr>
+<tr><td>Simulation                </td><td>An interactive model or representation of a real-world process, system, or scenario that allows learners to explore and experiment in a controlled, simulated environment.                                           </td><td>Not available                                                                                          </td></tr>
+<tr><td>Student Guide             </td><td>A resource providing learners with instructions, guidance, or supplementary information to support their use of a course or activity.                                                                                </td><td>Not available                                                                                          </td></tr>
+<tr><td>Syllabus                  </td><td>A document describing the material, structure, objectives, and requirements covered in a course.                                                                                                                     </td><td><a href="https://schema.org/Syllabus" target="_blank" rel="noopener">schema:Syllabus</a>               </td></tr>
+<tr><td>Teaching/Learning Strategy</td><td>An instructional method, technique, or procedure used by educators to facilitate teaching or by learners to facilitate learning of new material.                                                                     </td><td><a href="http://purl.obolibrary.org/obo/OCCO_00000030" target="_blank" rel="noopener">OCCO:00000030</a></td></tr>
+<tr><td>Textbook                  </td><td>A book intended for use in the study of a specific subject, providing a systematic presentation of its principles and essential knowledge.                                                                           </td><td><a href="http://id.nlm.nih.gov/mesh/D022923" target="_blank" rel="noopener">MESH:D022923</a>           </td></tr>
+<tr><td>Unit of Study             </td><td>A cohesive set of lessons or learning materials organized around a specific topic or theme, typically spanning several class sessions.                                                                               </td><td>Not available                                                                                          </td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-primary-format">Attribute: <code>Resource Primary Format</code><a class="headerlink" href="#attribute-resource-primary-format" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value      </th><th>Description                                                                                                                    </th><th>Ontology                                                                                           </th></tr>
+</thead>
+<tbody>
+<tr><td>Audio            </td><td>A file representing sound recordings or audio tracks.                                                                          </td><td><a href="https://w3id.org/evorao/Audio" target="_blank" rel="noopener">EVORAO:Audio</a>            </td></tr>
+<tr><td>Braille/BNF      </td><td>Content formatted in Braille or Braille-ready format (BRF) for tactile reading by individuals who are blind or have low vision.</td><td>Not available                                                                                      </td></tr>
+<tr><td>Downloadable docs</td><td>Documents (e.g., PDF, Word) provided as downloadable files for offline viewing or use.                                         </td><td>Not available                                                                                      </td></tr>
+<tr><td>eBook            </td><td>A digital book formatted for reading on an e-reader, tablet, computer, or other electronic device.                             </td><td>Not available                                                                                      </td></tr>
+<tr><td>Graphics/Photos  </td><td>Static visual content, such as illustrations, diagrams, or photographs.                                                        </td><td>Not available                                                                                      </td></tr>
+<tr><td>Interactive      </td><td>Content that requires or invites active user engagement, such as simulations, games, or interactive multimedia exercises.      </td><td>Not available                                                                                      </td></tr>
+<tr><td>Mobile           </td><td>A computer program or software application designed to run on a mobile device such as a phone or tablet.                       </td><td><a href="http://purl.obolibrary.org/obo/GSSO_003578" target="_blank" rel="noopener">GSSO:003578</a></td></tr>
+<tr><td>Text/HTML        </td><td>Content delivered as plain text or as HTML web pages viewable in a web browser.                                                </td><td>Not available                                                                                      </td></tr>
+<tr><td>Video            </td><td>The storing or preserving of video images to be displayed later.                                                               </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C91063" target="_blank" rel="noopener">NCIT:C91063</a></td></tr>
+<tr><td>Other            </td><td>Different than the one(s) previously specified or mentioned.                                                                   </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C17649" target="_blank" rel="noopener">NCIT:C17649</a></td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-intended-use">Attribute: <code>Resource Intended Use</code><a class="headerlink" href="#attribute-resource-intended-use" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value             </th><th>Description                                                                                                                     </th><th>Ontology                                                                                           </th></tr>
+</thead>
+<tbody>
+<tr><td>Curriculum/Instruction  </td><td>A structured course of study or instructional material intended for use in classroom teaching or curriculum-based instruction.  </td><td><a href="http://id.nlm.nih.gov/mesh/D003479" target="_blank" rel="noopener">MESH:D003479</a>       </td></tr>
+<tr><td>Assessment              </td><td>The process of evaluating or measuring the value, significance, or extent of a learner&#x27;s knowledge, skills, or performance.</td><td><a href="http://purl.obolibrary.org/obo/NCIT_C25217" target="_blank" rel="noopener">NCIT:C25217</a></td></tr>
+<tr><td>Professional Development</td><td>Resources intended to support ongoing training, skill-building, or continuing education for professionals in a given field.     </td><td>Not available                                                                                      </td></tr>
+<tr><td>Other                   </td><td>Different than the one(s) previously specified or mentioned.                                                                    </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C17649" target="_blank" rel="noopener">NCIT:C17649</a></td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-primary-audience">Attribute: <code>Resource Primary Audience</code><a class="headerlink" href="#attribute-resource-primary-audience" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value     </th><th>Description                                                                                                                     </th><th>Ontology                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>Student         </td><td>A person who is enrolled in an educational institution.                                                                         </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C75561" target="_blank" rel="noopener">NCIT:C75561</a>  </td></tr>
+<tr><td>Teacher         </td><td>One who instructs or educates others.                                                                                           </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C102873" target="_blank" rel="noopener">NCIT:C102873</a></td></tr>
+<tr><td>Administrator   </td><td>An individual responsible for the operational, managerial, or administrative oversight of an educational institution or program.</td><td><a href="http://snomed.info/id/84914008" target="_blank" rel="noopener">SNOMED:84914008</a>          </td></tr>
+<tr><td>Parent          </td><td>A mother or a father; an immediate progenitor.                                                                                  </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C42709" target="_blank" rel="noopener">NCIT:C42709</a>  </td></tr>
+<tr><td>Professor       </td><td>A courtesy title for a teacher of the highest academic rank in a college or university.                                         </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C69170" target="_blank" rel="noopener">NCIT:C69170</a>  </td></tr>
+<tr><td>General Audience</td><td>The broad general public, without restriction to a specific educational role, age group, or professional background.            </td><td>Not available                                                                                        </td></tr>
+<tr><td>Other           </td><td>Different than the one(s) previously specified or mentioned.                                                                    </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C17649" target="_blank" rel="noopener">NCIT:C17649</a>  </td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-educational-level">Attribute: <code>Resource Educational Level</code><a class="headerlink" href="#attribute-resource-educational-level" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value                       </th><th>Description                                                                                                                                                                                 </th><th>Ontology                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>Preschool                         </td><td>An educational institution for children that precedes kindergarten.                                                                                                                         </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C147937" target="_blank" rel="noopener">NCIT:C147937</a></td></tr>
+<tr><td>Lower Primary                     </td><td>The earlier years of primary (elementary) education, typically encompassing the first few grades of primary school.                                                                         </td><td>Not available                                                                                        </td></tr>
+<tr><td>Upper Primary                     </td><td>The later years of primary (elementary) education, typically encompassing the grades preceding the transition to middle or secondary school.                                                </td><td>Not available                                                                                        </td></tr>
+<tr><td>Middle School                     </td><td>The educational level between primary/elementary school and high school, typically covering grades 6 through 8.                                                                             </td><td>Not available                                                                                        </td></tr>
+<tr><td>High School                       </td><td>A secondary school that usually includes grades 9 through 12.                                                                                                                               </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C89278" target="_blank" rel="noopener">NCIT:C89278</a>  </td></tr>
+<tr><td>Community College / Lower Division</td><td>A two-year postsecondary institution offering associate degrees and lower-division (freshman and sophomore level) undergraduate coursework.                                                 </td><td><a href="http://snomed.info/id/224870001" target="_blank" rel="noopener">SNOMED:224870001</a>        </td></tr>
+<tr><td>College / Upper Division          </td><td>A four-year postsecondary institution, or the upper-division (junior and senior level) undergraduate coursework within one.                                                                 </td><td>Not available                                                                                        </td></tr>
+<tr><td>Graduate / Profession             </td><td>Studies beyond the bachelor&#x27;s degree at an institution having graduate or professional programs, undertaken to prepare for entrance into a specific field or to obtain a higher degree.</td><td><a href="http://id.nlm.nih.gov/mesh/D004500" target="_blank" rel="noopener">MESH:D004500</a>         </td></tr>
+<tr><td>Career / Technical                </td><td>Educational programs focused on career-specific or technical/vocational skills that prepare students for direct entry into a trade or occupation.                                           </td><td>Not available                                                                                        </td></tr>
+<tr><td>Adult Education                   </td><td>Educational programs and instructional resources designed for adult learners pursuing education outside the traditional K-12 or college-age system.                                         </td><td><a href="http://snomed.info/id/161125007" target="_blank" rel="noopener">SNOMED:161125007</a>        </td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-language">Attribute: <code>Resource Language</code><a class="headerlink" href="#attribute-resource-language" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                                                     </th><th>Ontology     </th></tr>
+</thead>
+<tbody>
+<tr><td>aa           </td><td>Afar                                                                            </td><td>Not available</td></tr>
+<tr><td>ab           </td><td>Abkhazian                                                                       </td><td>Not available</td></tr>
+<tr><td>ae           </td><td>Avestan                                                                         </td><td>Not available</td></tr>
+<tr><td>af           </td><td>Afrikaans                                                                       </td><td>Not available</td></tr>
+<tr><td>ak           </td><td>Akan                                                                            </td><td>Not available</td></tr>
+<tr><td>am           </td><td>Amharic                                                                         </td><td>Not available</td></tr>
+<tr><td>an           </td><td>Aragonese                                                                       </td><td>Not available</td></tr>
+<tr><td>ar           </td><td>Arabic                                                                          </td><td>Not available</td></tr>
+<tr><td>as           </td><td>Assamese                                                                        </td><td>Not available</td></tr>
+<tr><td>av           </td><td>Avaric                                                                          </td><td>Not available</td></tr>
+<tr><td>ay           </td><td>Aymara                                                                          </td><td>Not available</td></tr>
+<tr><td>az           </td><td>Azerbaijani                                                                     </td><td>Not available</td></tr>
+<tr><td>ba           </td><td>Bashkir                                                                         </td><td>Not available</td></tr>
+<tr><td>be           </td><td>Belarusian                                                                      </td><td>Not available</td></tr>
+<tr><td>bg           </td><td>Bulgarian                                                                       </td><td>Not available</td></tr>
+<tr><td>bh           </td><td>Bihari languages                                                                </td><td>Not available</td></tr>
+<tr><td>bi           </td><td>Bislama                                                                         </td><td>Not available</td></tr>
+<tr><td>bm           </td><td>Bambara                                                                         </td><td>Not available</td></tr>
+<tr><td>bn           </td><td>Bengali                                                                         </td><td>Not available</td></tr>
+<tr><td>bo           </td><td>Tibetan                                                                         </td><td>Not available</td></tr>
+<tr><td>br           </td><td>Breton                                                                          </td><td>Not available</td></tr>
+<tr><td>bs           </td><td>Bosnian                                                                         </td><td>Not available</td></tr>
+<tr><td>ca           </td><td>Catalan                                                                         </td><td>Not available</td></tr>
+<tr><td>ca           </td><td>Valencian                                                                       </td><td>Not available</td></tr>
+<tr><td>ce           </td><td>Chechen                                                                         </td><td>Not available</td></tr>
+<tr><td>ch           </td><td>Chamorro                                                                        </td><td>Not available</td></tr>
+<tr><td>co           </td><td>Corsican                                                                        </td><td>Not available</td></tr>
+<tr><td>cr           </td><td>Cree                                                                            </td><td>Not available</td></tr>
+<tr><td>cs           </td><td>Czech                                                                           </td><td>Not available</td></tr>
+<tr><td>cu           </td><td>Church Slavic, Old Slavonic, Old Church Slavonic, Old Bulgarian, Church Slavonic</td><td>Not available</td></tr>
+<tr><td>cv           </td><td>Chuvash                                                                         </td><td>Not available</td></tr>
+<tr><td>cy           </td><td>Welsh                                                                           </td><td>Not available</td></tr>
+<tr><td>da           </td><td>Danish                                                                          </td><td>Not available</td></tr>
+<tr><td>de           </td><td>German                                                                          </td><td>Not available</td></tr>
+<tr><td>dv           </td><td>Dhivehi, Divehi                                                                 </td><td>Not available</td></tr>
+<tr><td>dv           </td><td>Maldivian                                                                       </td><td>Not available</td></tr>
+<tr><td>dz           </td><td>Dzongkha                                                                        </td><td>Not available</td></tr>
+<tr><td>ee           </td><td>Ewe                                                                             </td><td>Not available</td></tr>
+<tr><td>el           </td><td>Greek, Modern (1453-)                                                           </td><td>Not available</td></tr>
+<tr><td>en           </td><td>English                                                                         </td><td>Not available</td></tr>
+<tr><td>eo           </td><td>Esperanto                                                                       </td><td>Not available</td></tr>
+<tr><td>es           </td><td>Spanish, Castilian                                                              </td><td>Not available</td></tr>
+<tr><td>et           </td><td>Estonian                                                                        </td><td>Not available</td></tr>
+<tr><td>eu           </td><td>Basque                                                                          </td><td>Not available</td></tr>
+<tr><td>fa           </td><td>Persian                                                                         </td><td>Not available</td></tr>
+<tr><td>ff           </td><td>Fulah                                                                           </td><td>Not available</td></tr>
+<tr><td>fi           </td><td>Finnish                                                                         </td><td>Not available</td></tr>
+<tr><td>fj           </td><td>Fijian                                                                          </td><td>Not available</td></tr>
+<tr><td>fo           </td><td>Faroese                                                                         </td><td>Not available</td></tr>
+<tr><td>fr           </td><td>French                                                                          </td><td>Not available</td></tr>
+<tr><td>fy           </td><td>Western Frisian                                                                 </td><td>Not available</td></tr>
+<tr><td>ga           </td><td>Irish                                                                           </td><td>Not available</td></tr>
+<tr><td>gd           </td><td>Gaelic, Scottish Gaelic                                                         </td><td>Not available</td></tr>
+<tr><td>gl           </td><td>Galician                                                                        </td><td>Not available</td></tr>
+<tr><td>gn           </td><td>Guarani                                                                         </td><td>Not available</td></tr>
+<tr><td>gu           </td><td>Gujarati                                                                        </td><td>Not available</td></tr>
+<tr><td>gv           </td><td>Manx                                                                            </td><td>Not available</td></tr>
+<tr><td>ha           </td><td>Hausa                                                                           </td><td>Not available</td></tr>
+<tr><td>he           </td><td>Hebrew                                                                          </td><td>Not available</td></tr>
+<tr><td>hi           </td><td>Hindi                                                                           </td><td>Not available</td></tr>
+<tr><td>ho           </td><td>Hiri Motu                                                                       </td><td>Not available</td></tr>
+<tr><td>hr           </td><td>Croatian                                                                        </td><td>Not available</td></tr>
+<tr><td>ht           </td><td>Haitian, Haitian Creole                                                         </td><td>Not available</td></tr>
+<tr><td>hu           </td><td>Hungarian                                                                       </td><td>Not available</td></tr>
+<tr><td>hy           </td><td>Armenian                                                                        </td><td>Not available</td></tr>
+<tr><td>hz           </td><td>Herero                                                                          </td><td>Not available</td></tr>
+<tr><td>ia           </td><td>Interlingua (International Auxiliary Language Association)                      </td><td>Not available</td></tr>
+<tr><td>id           </td><td>Indonesian                                                                      </td><td>Not available</td></tr>
+<tr><td>ie           </td><td>Interlingue, Occidental                                                         </td><td>Not available</td></tr>
+<tr><td>ig           </td><td>Igbo                                                                            </td><td>Not available</td></tr>
+<tr><td>ii           </td><td>Nuosu, Sichuan Yi                                                               </td><td>Not available</td></tr>
+<tr><td>ik           </td><td>Inupiaq                                                                         </td><td>Not available</td></tr>
+<tr><td>io           </td><td>Ido                                                                             </td><td>Not available</td></tr>
+<tr><td>is           </td><td>Icelandic                                                                       </td><td>Not available</td></tr>
+<tr><td>it           </td><td>Italian                                                                         </td><td>Not available</td></tr>
+<tr><td>iu           </td><td>Inuktitut                                                                       </td><td>Not available</td></tr>
+<tr><td>ja           </td><td>Japanese                                                                        </td><td>Not available</td></tr>
+<tr><td>jv           </td><td>Javanese                                                                        </td><td>Not available</td></tr>
+<tr><td>ka           </td><td>Georgian                                                                        </td><td>Not available</td></tr>
+<tr><td>kg           </td><td>Kongo                                                                           </td><td>Not available</td></tr>
+<tr><td>ki           </td><td>Gikuyu, Kikuyu                                                                  </td><td>Not available</td></tr>
+<tr><td>kj           </td><td>Kuanyama, Kwanyama                                                              </td><td>Not available</td></tr>
+<tr><td>kk           </td><td>Kazakh                                                                          </td><td>Not available</td></tr>
+<tr><td>kl           </td><td>Greenlandic, Kalaallisut                                                        </td><td>Not available</td></tr>
+<tr><td>km           </td><td>Central Khmer                                                                   </td><td>Not available</td></tr>
+<tr><td>kn           </td><td>Kannada                                                                         </td><td>Not available</td></tr>
+<tr><td>ko           </td><td>Korean                                                                          </td><td>Not available</td></tr>
+<tr><td>kr           </td><td>Kanuri                                                                          </td><td>Not available</td></tr>
+<tr><td>ks           </td><td>Kashmiri                                                                        </td><td>Not available</td></tr>
+<tr><td>ku           </td><td>Kurdish                                                                         </td><td>Not available</td></tr>
+<tr><td>kv           </td><td>Komi                                                                            </td><td>Not available</td></tr>
+<tr><td>kw           </td><td>Cornish                                                                         </td><td>Not available</td></tr>
+<tr><td>ky           </td><td>Kirghiz, Kyrgyz                                                                 </td><td>Not available</td></tr>
+<tr><td>la           </td><td>Latin                                                                           </td><td>Not available</td></tr>
+<tr><td>lb           </td><td>Letzeburgesch, Luxembourgish                                                    </td><td>Not available</td></tr>
+<tr><td>lg           </td><td>Ganda                                                                           </td><td>Not available</td></tr>
+<tr><td>li           </td><td>Limburgan, Limburgish, Limburger                                                </td><td>Not available</td></tr>
+<tr><td>ln           </td><td>Lingala                                                                         </td><td>Not available</td></tr>
+<tr><td>lo           </td><td>Lao                                                                             </td><td>Not available</td></tr>
+<tr><td>lt           </td><td>Lithuanian                                                                      </td><td>Not available</td></tr>
+<tr><td>lu           </td><td>Luba-Katanga                                                                    </td><td>Not available</td></tr>
+<tr><td>lv           </td><td>Latvian                                                                         </td><td>Not available</td></tr>
+<tr><td>mg           </td><td>Malagasy                                                                        </td><td>Not available</td></tr>
+<tr><td>mh           </td><td>Marshallese                                                                     </td><td>Not available</td></tr>
+<tr><td>mi           </td><td>Maori                                                                           </td><td>Not available</td></tr>
+<tr><td>mk           </td><td>Macedonian                                                                      </td><td>Not available</td></tr>
+<tr><td>ml           </td><td>Malayalam                                                                       </td><td>Not available</td></tr>
+<tr><td>mn           </td><td>Mongolian                                                                       </td><td>Not available</td></tr>
+<tr><td>mr           </td><td>Marathi                                                                         </td><td>Not available</td></tr>
+<tr><td>ms           </td><td>Malay                                                                           </td><td>Not available</td></tr>
+<tr><td>mt           </td><td>Maltese                                                                         </td><td>Not available</td></tr>
+<tr><td>my           </td><td>Burmese                                                                         </td><td>Not available</td></tr>
+<tr><td>na           </td><td>Nauru                                                                           </td><td>Not available</td></tr>
+<tr><td>nb           </td><td>Bokmål, Norwegian, Norwegian Bokmål                                             </td><td>Not available</td></tr>
+<tr><td>nd           </td><td>Ndebele, North, North Ndebele                                                   </td><td>Not available</td></tr>
+<tr><td>ne           </td><td>Nepali                                                                          </td><td>Not available</td></tr>
+<tr><td>ng           </td><td>Ndonga                                                                          </td><td>Not available</td></tr>
+<tr><td>nl           </td><td>Dutch, Flemish                                                                  </td><td>Not available</td></tr>
+<tr><td>nn           </td><td>Norwegian Nynorsk, Nynorsk, Norwegian                                           </td><td>Not available</td></tr>
+<tr><td>no           </td><td>Norwegian                                                                       </td><td>Not available</td></tr>
+<tr><td>nr           </td><td>South Ndebele                                                                   </td><td>Not available</td></tr>
+<tr><td>nv           </td><td>Navaho, Navajo                                                                  </td><td>Not available</td></tr>
+<tr><td>ny           </td><td>Chewa, Chichewa, Nyanja                                                         </td><td>Not available</td></tr>
+<tr><td>oc           </td><td>Occitan (post 1500)                                                             </td><td>Not available</td></tr>
+<tr><td>oj           </td><td>Ojibwa                                                                          </td><td>Not available</td></tr>
+<tr><td>om           </td><td>Oromo                                                                           </td><td>Not available</td></tr>
+<tr><td>or           </td><td>Oriya                                                                           </td><td>Not available</td></tr>
+<tr><td>os           </td><td>Ossetian, Ossetic                                                               </td><td>Not available</td></tr>
+<tr><td>pa           </td><td>Panjabi                                                                         </td><td>Not available</td></tr>
+<tr><td>pi           </td><td>Pali                                                                            </td><td>Not available</td></tr>
+<tr><td>pl           </td><td>Polish                                                                          </td><td>Not available</td></tr>
+<tr><td>ps           </td><td>Pashto, Pushto                                                                  </td><td>Not available</td></tr>
+<tr><td>pt           </td><td>Portuguese                                                                      </td><td>Not available</td></tr>
+<tr><td>qu           </td><td>Quechua                                                                         </td><td>Not available</td></tr>
+<tr><td>rm           </td><td>Romansh                                                                         </td><td>Not available</td></tr>
+<tr><td>rn           </td><td>Rundi                                                                           </td><td>Not available</td></tr>
+<tr><td>ro           </td><td>Romanian, Moldavian, Moldovan                                                   </td><td>Not available</td></tr>
+<tr><td>ru           </td><td>Russian                                                                         </td><td>Not available</td></tr>
+<tr><td>rw           </td><td>Kinyarwanda                                                                     </td><td>Not available</td></tr>
+<tr><td>sa           </td><td>Sanskrit                                                                        </td><td>Not available</td></tr>
+<tr><td>sc           </td><td>Sardinian                                                                       </td><td>Not available</td></tr>
+<tr><td>sd           </td><td>Sindhi                                                                          </td><td>Not available</td></tr>
+<tr><td>se           </td><td>Northern Sami                                                                   </td><td>Not available</td></tr>
+<tr><td>sg           </td><td>Sango                                                                           </td><td>Not available</td></tr>
+<tr><td>si           </td><td>Sinhala, Sinhalese                                                              </td><td>Not available</td></tr>
+<tr><td>sk           </td><td>Slovak                                                                          </td><td>Not available</td></tr>
+<tr><td>sl           </td><td>Slovenian                                                                       </td><td>Not available</td></tr>
+<tr><td>sm           </td><td>Samoan                                                                          </td><td>Not available</td></tr>
+<tr><td>sn           </td><td>Shona                                                                           </td><td>Not available</td></tr>
+<tr><td>so           </td><td>Somali                                                                          </td><td>Not available</td></tr>
+<tr><td>sq           </td><td>Albanian                                                                        </td><td>Not available</td></tr>
+<tr><td>sr           </td><td>Serbian                                                                         </td><td>Not available</td></tr>
+<tr><td>ss           </td><td>Swati                                                                           </td><td>Not available</td></tr>
+<tr><td>st           </td><td>Sotho, Southern                                                                 </td><td>Not available</td></tr>
+<tr><td>su           </td><td>Sundanese                                                                       </td><td>Not available</td></tr>
+<tr><td>sv           </td><td>Swedish                                                                         </td><td>Not available</td></tr>
+<tr><td>sw           </td><td>Swahili                                                                         </td><td>Not available</td></tr>
+<tr><td>ta           </td><td>Tamil                                                                           </td><td>Not available</td></tr>
+<tr><td>te           </td><td>Telugu                                                                          </td><td>Not available</td></tr>
+<tr><td>tg           </td><td>Tajik                                                                           </td><td>Not available</td></tr>
+<tr><td>th           </td><td>Thai                                                                            </td><td>Not available</td></tr>
+<tr><td>ti           </td><td>Tigrinya                                                                        </td><td>Not available</td></tr>
+<tr><td>tk           </td><td>Turkmen                                                                         </td><td>Not available</td></tr>
+<tr><td>tl           </td><td>Tagalog                                                                         </td><td>Not available</td></tr>
+<tr><td>tn           </td><td>Tswana                                                                          </td><td>Not available</td></tr>
+<tr><td>to           </td><td>Tonga (Tonga Islands)                                                           </td><td>Not available</td></tr>
+<tr><td>tr           </td><td>Turkish                                                                         </td><td>Not available</td></tr>
+<tr><td>ts           </td><td>Tsonga                                                                          </td><td>Not available</td></tr>
+<tr><td>tt           </td><td>Tatar                                                                           </td><td>Not available</td></tr>
+<tr><td>tw           </td><td>Twi                                                                             </td><td>Not available</td></tr>
+<tr><td>ty           </td><td>Tahitian                                                                        </td><td>Not available</td></tr>
+<tr><td>ug           </td><td>Uighur, Uyghur                                                                  </td><td>Not available</td></tr>
+<tr><td>uk           </td><td>Ukrainian                                                                       </td><td>Not available</td></tr>
+<tr><td>ur           </td><td>Urdu                                                                            </td><td>Not available</td></tr>
+<tr><td>uz           </td><td>Uzbek                                                                           </td><td>Not available</td></tr>
+<tr><td>ve           </td><td>Venda                                                                           </td><td>Not available</td></tr>
+<tr><td>vi           </td><td>Vietnamese                                                                      </td><td>Not available</td></tr>
+<tr><td>vo           </td><td>Volapük                                                                         </td><td>Not available</td></tr>
+<tr><td>wa           </td><td>Walloon                                                                         </td><td>Not available</td></tr>
+<tr><td>wo           </td><td>Wolof                                                                           </td><td>Not available</td></tr>
+<tr><td>xh           </td><td>Xhosa                                                                           </td><td>Not available</td></tr>
+<tr><td>yi           </td><td>Yiddish                                                                         </td><td>Not available</td></tr>
+<tr><td>yo           </td><td>Yoruba                                                                          </td><td>Not available</td></tr>
+<tr><td>za           </td><td>Chuang, Zhuang                                                                  </td><td>Not available</td></tr>
+<tr><td>zh           </td><td>Chinese                                                                         </td><td>Not available</td></tr>
+<tr><td>zu           </td><td>Zulu                                                                            </td><td>Not available</td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-media-accessibility">Attribute: <code>Resource Media Accessibility</code><a class="headerlink" href="#attribute-resource-media-accessibility" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value             </th><th>Description                                                                                                                                                                                                                                </th><th>Ontology                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>Alternative Text        </td><td>A text alternative provided for non-text content (such as images), allowing assistive technologies like screen readers to convey the content&#x27;s meaning to users who cannot see it.                                                    </td><td>Not available                                                                                        </td></tr>
+<tr><td>Audio Description       </td><td>An additional narration track that describes important visual information in video content (actions, scenes, on-screen text) for users who are blind or have low vision.                                                                   </td><td>Not available                                                                                        </td></tr>
+<tr><td>Braille                 </td><td>Indicates the resource, or a version of it, is available in Braille, a tactile writing system that enables reading by touch for people who are blind or have low vision.                                                                   </td><td>Not available                                                                                        </td></tr>
+<tr><td>Captions                </td><td>A synchronized, on-screen text display of spoken dialogue and other audio content within a video, providing an optional transcript of the audio for viewers who are deaf or hard of hearing.                                               </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C185118" target="_blank" rel="noopener">NCIT:C185118</a></td></tr>
+<tr><td>ChemML                  </td><td>An XML-based markup format (analogous to Chemical Markup Language) used to encode chemical formulas and notation in an accessible, machine-readable form for assistive technologies.                                                       </td><td><a href="http://edamontology.org/format_4023" target="_blank" rel="noopener">EDAM:format_4023</a>    </td></tr>
+<tr><td>Described Math          </td><td>A text-based or audio description of mathematical notation and expressions, provided as an alternative to visual math formulas for users who use screen readers or other assistive technology.                                             </td><td>Not available                                                                                        </td></tr>
+<tr><td>Display Transformability</td><td>Indicates that the resource&#x27;s visual presentation (e.g., text size, color, spacing, layout) can be modified or resized by the user without loss of content or functionality, supporting users with low vision or reading disabilities.</td><td>Not available                                                                                        </td></tr>
+<tr><td>Haptic                  </td><td>Indicates that the resource provides touch-based (haptic) feedback, such as vibration, force, or tactile cues, as an alternative or supplement to visual or auditory information.                                                          </td><td><a href="http://id.nlm.nih.gov/mesh/D000089862" target="_blank" rel="noopener">MESH:D000089862</a>   </td></tr>
+<tr><td>High Contrast           </td><td>Indicates that a high-contrast display option (e.g., strongly differentiated foreground/background colors) is available to improve readability for users with low vision.                                                                  </td><td>Not available                                                                                        </td></tr>
+<tr><td>Large Print             </td><td>Indicates that the resource, or a version of it, is available in a large-print format with enlarged text to improve readability for users with low vision.                                                                                 </td><td>Not available                                                                                        </td></tr>
+<tr><td>Latex                   </td><td>Indicates that mathematical or scientific content is encoded using LaTeX, a document preparation and markup system, allowing accessible rendering of complex notation.                                                                     </td><td><a href="http://www.ebi.ac.uk/swo/data/SWO_3000025" target="_blank" rel="noopener">SWO:3000025</a>   </td></tr>
+<tr><td>Long Description        </td><td>A detailed textual description provided for complex non-text content (such as charts, graphs, or images) that cannot be adequately conveyed through brief alternative text alone.                                                          </td><td>Not available                                                                                        </td></tr>
+<tr><td>MathML                  </td><td>An XML-based markup language for describing mathematical notation and expressions, capturing both structure and content to enable accessible rendering of formulas in web documents.                                                       </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C71609" target="_blank" rel="noopener">NCIT:C71609</a>  </td></tr>
+<tr><td>Nemeth Braille          </td><td>A specialized Braille code used to represent mathematical and scientific notation, enabling readers who are blind or have low vision to access complex math content.                                                                       </td><td>Not available                                                                                        </td></tr>
+<tr><td>Sign Language           </td><td>A system of hand gestures, facial expressions, and body movements used for communication, provided here as a video-based interpretation of content for users who are deaf or hard of hearing.                                              </td><td><a href="http://purl.obolibrary.org/obo/NCIT_C51278" target="_blank" rel="noopener">NCIT:C51278</a>  </td></tr>
+<tr><td>Structural Navigation   </td><td>Indicates that the resource is structured with navigational markup (such as headings, landmarks, or lists) that allows assistive technology users to move efficiently between sections of content.                                         </td><td>Not available                                                                                        </td></tr>
+<tr><td>Tactile Graphics        </td><td>Raised or textured versions of images, diagrams, or graphics that can be explored by touch, enabling users who are blind or have low vision to perceive visual information.                                                                </td><td>Not available                                                                                        </td></tr>
+<tr><td>Text Transcript         </td><td>A full text version of the spoken and relevant non-speech audio content of a media resource, allowing users to read the content instead of, or in addition to, listening to it.                                                            </td><td>Not available                                                                                        </td></tr>
+</tbody>
+</table>
+
+<h2 id="attribute-resource-access-hazard">Attribute: <code>Resource Access Hazard</code><a class="headerlink" href="#attribute-resource-access-hazard" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                                                                                                                                                      </th><th>Ontology     </th></tr>
+</thead>
+<tbody>
+<tr><td>Flashing     </td><td>Indicates the educational resource contains flashing or strobing visual effects that may pose a seizure risk for photosensitive users.                                           </td><td>Not available</td></tr>
+<tr><td>Motion       </td><td>Indicates the educational resource contains motion effects (e.g., panning, zooming, or animated movement) that may cause discomfort or disorientation for motion-sensitive users.</td><td>Not available</td></tr>
+<tr><td>Simulation   </td><td>Indicates the educational resource contains simulated or virtual environments that may pose a hazard for users sensitive to simulated motion or visual effects.                  </td><td>Not available</td></tr>
+<tr><td>Sound        </td><td>Indicates the educational resource contains audio content, including unexpected or startling sounds, that may pose a hazard for users with sound sensitivities.                  </td><td>Not available</td></tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
