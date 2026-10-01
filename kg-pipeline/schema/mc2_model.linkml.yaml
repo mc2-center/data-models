@@ -156,11 +156,11 @@ classes:
     - GrantView Key
     - Study Key
     - DatasetView Key
-    - studyId
+    - dataCatalogStudyId
     - portal
     - community
     - description
-    - contributor
+    - dataCatalogContributor
     - keywords
     - individualCount
     - link
@@ -174,12 +174,11 @@ classes:
     - dataCatalogDataUseModifiers
     - datePublished
     - funder
-    - grantNumber
     - includedInDataCatalog
     - dataCatalogLicense
     - measurementTechnique
     - dataType
-    - species
+    - Species
     - subject
     - title
     - citation
@@ -1231,17 +1230,17 @@ classes:
     - Tool Entity Name
     - Tool Entity Type
     - Tool Entity Role
-  10x Visium Auxiliary Files:
+  Visium Auxiliary Files:
     description: Auxiliary data associated with spot/slide analysis (aligned Images, quality control files,
       etc)  from Spatial Transcriptomics.
     tree_root: true
     slots:
-    - 10xVisiumAuxiliaryFiles_id
+    - VisiumAuxiliaryFiles_id
     - Filename
-    - 10xVisiumRNALevel1 Key
-    - 10xVisiumRNALevel2 Key
-    - 10xVisiumRNALevel3 Key
-    - 10xVisiumRNALevel4 Key
+    - VisiumRNALevel1 Key
+    - VisiumRNALevel2 Key
+    - VisiumRNALevel3 Key
+    - VisiumRNALevel4 Key
     - Biospecimen Key
     - Study Key
     - DatasetView Key
@@ -1269,10 +1268,11 @@ classes:
     - Visium Capture Area
     - Workflow Version
     - Workflow Link
-  10x Visium RNA Level 1:
+  Visium RNA Level 1:
     description: Files contain raw RNA-seq data associated with spot/slide data.
+    tree_root: true
     slots:
-    - 10xVisiumRNALevel1_id
+    - VisiumRNALevel1_id
     - Filename
     - Biospecimen Key
     - Study Key
@@ -1313,13 +1313,13 @@ classes:
     - Visium Permeabilization Time
     - NGS RNA RIN
     - NGS RNA DV200
-  10x Visium RNA Level 2:
+  Visium RNA Level 2:
     description: Alignment workflows downstream of Spatial Transcriptomics RNA-seq Level 1.
     tree_root: true
     slots:
-    - 10xVisiumRNALevel2_id
+    - VisiumRNALevel2_id
     - Filename
-    - 10xVisiumRNALevel1 Key
+    - VisiumRNALevel1 Key
     - Biospecimen Key
     - Study Key
     - DatasetView Key
@@ -1352,15 +1352,15 @@ classes:
     - Genome Annotation URL
     - Visium Run ID
     - Visium Capture Area
-  10x Visium RNA Level 3:
+  Visium RNA Level 3:
     description: Processed data files based on Spatial Transcriptomics RNA-seq Level 2 and Spatial Transcriptomics
       Auxiliary files.
     tree_root: true
     slots:
-    - 10xVisiumRNALevel3_id
+    - VisiumRNALevel3_id
     - Filename
-    - 10xVisiumRNALevel2 Key
-    - 10xVisiumAuxiliaryFiles Key
+    - VisiumRNALevel2 Key
+    - VisiumAuxiliaryFiles Key
     - Biospecimen Key
     - Study Key
     - DatasetView Key
@@ -1394,13 +1394,13 @@ classes:
     - Visium Proportion Reads Mapped
     - Visium Proportion Reads Mapped to Transcriptome
     - Visium Median UMI Counts per Spot
-  10x Visium RNA Level 4:
+  Visium RNA Level 4:
     description: Processed data files based on Spatial Transcriptomics RNA-seq Level 3.
     tree_root: true
     slots:
-    - 10xVisiumRNALevel4_id
+    - VisiumRNALevel4_id
     - Filename
-    - 10xVisiumRNALevel3 Key
+    - VisiumRNALevel3 Key
     - Biospecimen Key
     - Study Key
     - DatasetView Key
@@ -1681,7 +1681,7 @@ slots:
     description: The Sage Bionetworks project or initiative with which the dataset is associated.
   description:
     description: A text description of the dataset. Can be identifical to Dataset Description.
-  contributor:
+  dataCatalogContributor:
     description: Organization(s), insitution(s), or person(s) that generated and/or deposited the data
       in Synapse. Can be identical to Grant Institution Name.
     multivalued: true
@@ -1702,15 +1702,11 @@ slots:
     description: A Synapse url where the croissant file associated with this dataset is stored.
     comments:
     - 'schematic Format: uri'
-  studyId:
+  dataCatalogStudyId:
     description: The Synapse ID of the Project associated with this dataset's grant. Populated as a native
       Synapse annotation directly on the Dataset entity; distinct from this repo's own Study_id/Study
       Key.
     pattern: ^syn\d{7,8}$
-  grantNumber:
-    description: Grant number associated with the dataset, as annotated directly on the Synapse Dataset
-      entity. Can be identical to Dataset Grant Number.
-    pattern: ^CA\d{6}$
   downloadType:
     description: Hosting type for the dataset's files, as annotated directly on the Synapse Dataset entity
       (distinct from the CCKP portal's own DatasetView.downloadType column).
@@ -1786,11 +1782,6 @@ slots:
       variants). Aligned with modules/shared/mc2_iconTag_map_3-4-25.csv's label taxonomy.
     multivalued: true
     range: dataType Enum
-  species:
-    description: Species of the organism(s) from which the data were generated. Omit property if not applicable,
-      such as for data like compounds or other non-biological data. Can be identical to Dataset Species.
-    multivalued: true
-    range: species Enum
   subject:
     description: Applicable subject term(s) for dataset cataloging - in practice, a free-text model-system/specimen
       descriptor (e.g. C57BL/6, NOD SCID), not a Library of Congress Subject Heading.
@@ -2214,7 +2205,7 @@ slots:
   Grant Number:
     description: Number of the grant (i.e. "CA------" format)
     required: true
-    pattern: ^CA\d{6}$
+    pattern: ^(CA\d{6}|Affiliated/Non-Grant Associated)$
     exact_mappings:
     - CRDC_CDE:16002823
   Grant Abstract:
@@ -3021,7 +3012,7 @@ slots:
   Data Use Codes:
     description: 'DUO code - A data item that is used to indicate consent permissions for datasets and/or
       materials, and relates to the purposes for which datasets and/or material might be removed, stored
-      or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes'
+      or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes'
     multivalued: true
     range: Data Use Codes Enum
     annotations:
@@ -3059,7 +3050,7 @@ slots:
     description: Unique GrantView_id foreign key(s) that group the resource with other components, as
       part of the same grant-associated collection. Please provide multiple values as a comma-separated
       list.
-    pattern: CA\d{6}
+    pattern: (CA\d{6}|Affiliated/Non-Grant Associated)
     annotations:
       foreign_key: true
   DatasetView Key:
@@ -3185,29 +3176,29 @@ slots:
       same Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
-  10xVisiumRNALevel1 Key:
-    description: Unique 10xVisiumRNALevel1_id foreign key(s) that link metadata entries as part of the
-      same Dataset. Please provide multiple values as a comma-separate list.
+  VisiumRNALevel1 Key:
+    description: Unique VisiumRNALevel1_id foreign key(s) that link metadata entries as part of the same
+      Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
-  10xVisiumRNALevel2 Key:
-    description: Unique 10xVisiumRNALevel2_id foreign key(s) that link metadata entries as part of the
-      same Dataset. Please provide multiple values as a comma-separate list.
+  VisiumRNALevel2 Key:
+    description: Unique VisiumRNALevel2_id foreign key(s) that link metadata entries as part of the same
+      Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
-  10xVisiumRNALevel3 Key:
-    description: Unique 10xVisiumRNALevel3_id foreign key(s) that link metadata entries as part of the
-      same Dataset. Please provide multiple values as a comma-separate list.
+  VisiumRNALevel3 Key:
+    description: Unique VisiumRNALevel3_id foreign key(s) that link metadata entries as part of the same
+      Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
-  10xVisiumRNALevel4 Key:
-    description: Unique 10xVisiumRNALevel4_id foreign key(s) that link metadata entries as part of the
-      same Dataset. Please provide multiple values as a comma-separate list.
+  VisiumRNALevel4 Key:
+    description: Unique VisiumRNALevel4_id foreign key(s) that link metadata entries as part of the same
+      Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
-  10xVisiumAuxiliaryFiles Key:
-    description: Unique 10xVisiumAuxiliaryFiles_id foreign key(s) that link metadata entries as part of
-      the same Dataset. Please provide multiple values as a comma-separate list.
+  VisiumAuxiliaryFiles Key:
+    description: Unique VisiumAuxiliaryFiles_id foreign key(s) that link metadata entries as part of the
+      same Dataset. Please provide multiple values as a comma-separate list.
     annotations:
       foreign_key: true
   Filename:
@@ -3305,11 +3296,6 @@ slots:
     description: The tier of data access associated with the access requirement. Equivalent to DUOPlus5.
     multivalued: true
     range: dataTier Enum
-  license:
-    description: The license under which the data associated with the access requirement is shared. Equivalent
-      to DUOPlus6.
-    multivalued: true
-    range: license Enum
   attribution:
     description: The attribution statement for the data associated with the access requirement. Equivalent
       to DUOPlus7.
@@ -3403,7 +3389,7 @@ slots:
     description: A license is associated with the Study.
     comments:
     - 'schematic DependsOn (conditional requirement on sibling attributes, not represented as a LinkML
-      rule): license'
+      rule): License'
   DUOPlus7:
     description: Attribution conditions are associated with this Study.
     comments:
@@ -3646,7 +3632,7 @@ slots:
   DSP Data Use Codes:
     description: 'DUO code - A data item that is used to indicate consent permissions for datasets and/or
       materials, and relates to the purposes for which datasets and/or material might be removed, stored
-      or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/study/#attribute-study-data-use-codes'
+      or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes'
     multivalued: true
     range: DSP Data Use Codes Enum
   Study Name:
@@ -3932,13 +3918,13 @@ slots:
     required: true
     comments:
     - 'schematic Format: uri'
-  10xVisiumAuxiliaryFiles_id:
+  VisiumAuxiliaryFiles_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
     required: true
     pattern: ^syn\d{7,8}$
     identifier: true
-  10xVisiumRNALevel1_id:
+  VisiumRNALevel1_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
     required: true
@@ -4006,7 +3992,7 @@ slots:
     range: float
     comments:
     - 'Source: HTAN'
-  10xVisiumRNALevel2_id:
+  VisiumRNALevel2_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
     required: true
@@ -4035,7 +4021,7 @@ slots:
     range: Visium Applied Hard Trimming Enum
     comments:
     - 'Source: HTAN'
-  10xVisiumRNALevel3_id:
+  VisiumRNALevel3_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
     required: true
@@ -4085,7 +4071,7 @@ slots:
     range: float
     comments:
     - 'Source: HTAN'
-  10xVisiumRNALevel4_id:
+  VisiumRNALevel4_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
     required: true
@@ -6764,37 +6750,988 @@ enums:
         meaning: NCIT:C158521
   dataCatalogLicense Enum:
     permissible_values:
-      CC0:
-        description: Creative Commons Zero license, allowing for the free use of the data.
-      CC_BY:
-        description: Creative Commons Attribution license, requiring attribution to the original source.
+      AAL:
+        description: Attribution Assurance License
+        meaning: SPDX:AAL
+      ADSL:
+        description: Amazon Digital Services License
+        meaning: SPDX:ADSL
+      AFL-1.1:
+        description: Academic Free License v1.1
+        meaning: SPDX:AFL-1.1
+      AFL-1.2:
+        description: Academic Free License v1.2
+        meaning: SPDX:AFL-1.2
+      AFL-2.0:
+        description: Academic Free License v2.0
+        meaning: SPDX:AFL-2.0
+      AFL-2.1:
+        description: Academic Free License v2.1
+        meaning: SPDX:AFL-2.1
+      AFL-3.0:
+        description: Academic Free License v3.0
+        meaning: SPDX:AFL-3.0
+      AGPL-1.0:
+        description: Affero General Public License v1.0
+        meaning: SPDX:AGPL-1.0
+      AGPL-3.0:
+        description: GNU Affero General Public License v3.0
+        meaning: SPDX:AGPL-3.0
+      AMDPLPA:
+        description: AMD's plpa_map.c License
+        meaning: SPDX:AMDPLPA
+      AML:
+        description: Apple MIT License
+        meaning: SPDX:AML
+      AMPAS:
+        description: Academy of Motion Picture Arts and Sciences BSD
+        meaning: SPDX:AMPAS
+      ANTLR-PD:
+        description: ANTLR Software Rights Notice
+        meaning: SPDX:ANTLR-PD
+      APAFML:
+        description: Adobe Postscript AFM License
+        meaning: SPDX:APAFML
+      APL-1.0:
+        description: Adaptive Public License 1.0
+        meaning: SPDX:APL-1.0
+      APSL-1.0:
+        description: Apple Public Source License 1.0
+        meaning: SPDX:APSL-1.0
+      APSL-1.1:
+        description: Apple Public Source License 1.1
+        meaning: SPDX:APSL-1.1
+      APSL-1.2:
+        description: Apple Public Source License 1.2
+        meaning: SPDX:APSL-1.2
+      APSL-2.0:
+        description: Apple Public Source License 2.0
+        meaning: SPDX:APSL-2.0
+      Abstyles:
+        description: Abstyles License
+        meaning: SPDX:Abstyles
+      Adobe-2006:
+        description: Adobe Systems Incorporated Source Code License Agreement
+        meaning: SPDX:Adobe-2006
+      Adobe-Glyph:
+        description: Adobe Glyph List License
+        meaning: SPDX:Adobe-Glyph
+      Afmparse:
+        description: Afmparse License
+        meaning: SPDX:Afmparse
+      Aladdin:
+        description: Aladdin Free Public License
+        meaning: SPDX:Aladdin
+      Apache-1.0:
+        description: Apache License 1.0
+        meaning: SPDX:Apache-1.0
+      Apache-1.1:
+        description: Apache License 1.1
+        meaning: SPDX:Apache-1.1
+      Apache-2.0:
+        description: Apache License 2.0
+        meaning: SPDX:Apache-2.0
+      Artistic-1.0:
+        description: Artistic License 1.0
+        meaning: SPDX:Artistic-1.0
+      Artistic-1.0-Perl:
+        description: Artistic License 1.0 (Perl)
+        meaning: SPDX:Artistic-1.0-Perl
+      Artistic-1.0-cl8:
+        description: Artistic License 1.0 w/clause 8
+        meaning: SPDX:Artistic-1.0-cl8
+      Artistic-2.0:
+        description: Artistic License 2.0
+        meaning: SPDX:Artistic-2.0
+      BSD-2-Clause:
+        description: BSD 2-Clause "Simplified" License
+        meaning: SPDX:BSD-2-Clause
+      BSD-2-Clause-FreeBSD:
+        description: BSD 2-Clause FreeBSD License
+        meaning: SPDX:BSD-2-Clause-FreeBSD
+      BSD-2-Clause-NetBSD:
+        description: BSD 2-Clause NetBSD License
+        meaning: SPDX:BSD-2-Clause-NetBSD
+      BSD-3-Clause:
+        description: BSD 3-Clause "New" or "Revised" License
+        meaning: SPDX:BSD-3-Clause
+      BSD-3-Clause-Attribution:
+        description: BSD with attribution
+        meaning: SPDX:BSD-3-Clause-Attribution
+      BSD-3-Clause-Clear:
+        description: BSD 3-Clause Clear License
+        meaning: SPDX:BSD-3-Clause-Clear
+      BSD-3-Clause-LBNL:
+        description: Lawrence Berkeley National Labs BSD variant license
+        meaning: SPDX:BSD-3-Clause-LBNL
+      BSD-3-Clause-No-Nuclear-License:
+        description: BSD 3-Clause No Nuclear License
+        meaning: SPDX:BSD-3-Clause-No-Nuclear-License
+      BSD-3-Clause-No-Nuclear-License-2014:
+        description: BSD 3-Clause No Nuclear License 2014
+        meaning: SPDX:BSD-3-Clause-No-Nuclear-License-2014
+      BSD-3-Clause-No-Nuclear-Warranty:
+        description: BSD 3-Clause No Nuclear Warranty
+        meaning: SPDX:BSD-3-Clause-No-Nuclear-Warranty
+      BSD-4-Clause:
+        description: BSD 4-Clause "Original" or "Old" License
+        meaning: SPDX:BSD-4-Clause
+      BSD-4-Clause-UC:
+        description: BSD-4-Clause (University of California-Specific)
+        meaning: SPDX:BSD-4-Clause-UC
+      BSD-Protection:
+        description: BSD Protection License
+        meaning: SPDX:BSD-Protection
+      BSD-Source-Code:
+        description: BSD Source Code Attribution
+        meaning: SPDX:BSD-Source-Code
+      BSD-style:
+        description: A license similar in structure and permissiveness to the BSD license family, but
+          not itself a registered SPDX license identifier (e.g. a project-specific or lightly modified
+          variant).
+        meaning: SPDX:BSD-style
+      BSL-1.0:
+        description: Boost Software License 1.0
+        meaning: SPDX:BSL-1.0
+      Bahyph:
+        description: Bahyph License
+        meaning: SPDX:Bahyph
+      Barr:
+        description: Barr License
+        meaning: SPDX:Barr
+      Beerware:
+        description: Beerware License
+        meaning: SPDX:Beerware
+      BitTorrent-1.0:
+        description: BitTorrent Open Source License v1.0
+        meaning: SPDX:BitTorrent-1.0
+      BitTorrent-1.1:
+        description: BitTorrent Open Source License v1.1
+        meaning: SPDX:BitTorrent-1.1
+      Borceux:
+        description: Borceux license
+        meaning: SPDX:Borceux
+      CATOSL-1.1:
+        description: Computer Associates Trusted Open Source License 1.1
+        meaning: SPDX:CATOSL-1.1
+      CC-BY-1.0:
+        description: Creative Commons Attribution 1.0 Generic
+        meaning: SPDX:CC-BY-1.0
+      CC-BY-2.0:
+        description: Creative Commons Attribution 2.0 Generic
+        meaning: SPDX:CC-BY-2.0
+      CC-BY-2.5:
+        description: Creative Commons Attribution 2.5 Generic
+        meaning: SPDX:CC-BY-2.5
+      CC-BY-3.0:
+        description: Creative Commons Attribution 3.0 Unported
+        meaning: SPDX:CC-BY-3.0
+      CC-BY-4.0:
+        description: Creative Commons Attribution 4.0 International
         meaning: SPDX:CC-BY-4.0
-      CC_BY_NC:
-        description: Creative Commons Attribution-NonCommercial license, allowing for non-commercial use
-          with attribution.
+      CC-BY-NC-1.0:
+        description: Creative Commons Attribution Non Commercial 1.0 Generic
+        meaning: SPDX:CC-BY-NC-1.0
+      CC-BY-NC-2.0:
+        description: Creative Commons Attribution Non Commercial 2.0 Generic
+        meaning: SPDX:CC-BY-NC-2.0
+      CC-BY-NC-2.5:
+        description: Creative Commons Attribution Non Commercial 2.5 Generic
+        meaning: SPDX:CC-BY-NC-2.5
+      CC-BY-NC-3.0:
+        description: Creative Commons Attribution Non Commercial 3.0 Unported
         meaning: SPDX:CC-BY-NC-3.0
-      CC_BY_ND:
-        description: Creative Commons Attribution-NoDerivatives license, allowing for redistribution with
-          attribution but no modifications.
-      CC_BY_SA:
-        description: Creative Commons Attribution-ShareAlike license, allowing for modifications with
-          attribution and sharing under the same license.
-      CC_BY_NC_ND:
-        description: Creative Commons Attribution-NonCommercial-NoDerivatives license, allowing for non-commercial
-          use with attribution but no modifications.
-      CC_BY_NC_SA:
-        description: Creative Commons Attribution-NonCommercial-ShareAlike license, allowing for non-commercial
-          modifications with attribution and sharing under the same license.
-      Apache_2:
-        description: Apache License 2.0, a permissive license allowing for use, modification, and distribution.
+      CC-BY-NC-4.0:
+        description: Creative Commons Attribution Non Commercial 4.0 International
+        meaning: SPDX:CC-BY-NC-4.0
+      CC-BY-NC-ND-1.0:
+        description: Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic
+        meaning: SPDX:CC-BY-NC-ND-1.0
+      CC-BY-NC-ND-2.0:
+        description: Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic
+        meaning: SPDX:CC-BY-NC-ND-2.0
+      CC-BY-NC-ND-2.5:
+        description: Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic
+        meaning: SPDX:CC-BY-NC-ND-2.5
+      CC-BY-NC-ND-3.0:
+        description: Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported
+        meaning: SPDX:CC-BY-NC-ND-3.0
+      CC-BY-NC-ND-4.0:
+        description: Creative Commons Attribution Non Commercial No Derivatives 4.0 International
+        meaning: SPDX:CC-BY-NC-ND-4.0
+      CC-BY-NC-SA-1.0:
+        description: Creative Commons Attribution Non Commercial Share Alike 1.0 Generic
+        meaning: SPDX:CC-BY-NC-SA-1.0
+      CC-BY-NC-SA-2.0:
+        description: Creative Commons Attribution Non Commercial Share Alike 2.0 Generic
+        meaning: SPDX:CC-BY-NC-SA-2.0
+      CC-BY-NC-SA-2.5:
+        description: Creative Commons Attribution Non Commercial Share Alike 2.5 Generic
+        meaning: SPDX:CC-BY-NC-SA-2.5
+      CC-BY-NC-SA-3.0:
+        description: Creative Commons Attribution Non Commercial Share Alike 3.0 Unported
+        meaning: SPDX:CC-BY-NC-SA-3.0
+      CC-BY-NC-SA-4.0:
+        description: Creative Commons Attribution Non Commercial Share Alike 4.0 International
+        meaning: SPDX:CC-BY-NC-SA-4.0
+      CC-BY-ND-1.0:
+        description: Creative Commons Attribution No Derivatives 1.0 Generic
+        meaning: SPDX:CC-BY-ND-1.0
+      CC-BY-ND-2.0:
+        description: Creative Commons Attribution No Derivatives 2.0 Generic
+        meaning: SPDX:CC-BY-ND-2.0
+      CC-BY-ND-2.5:
+        description: Creative Commons Attribution No Derivatives 2.5 Generic
+        meaning: SPDX:CC-BY-ND-2.5
+      CC-BY-ND-3.0:
+        description: Creative Commons Attribution No Derivatives 3.0 Unported
+        meaning: SPDX:CC-BY-ND-3.0
+      CC-BY-ND-4.0:
+        description: Creative Commons Attribution No Derivatives 4.0 International
+        meaning: SPDX:CC-BY-ND-4.0
+      CC-BY-SA-1.0:
+        description: Creative Commons Attribution Share Alike 1.0 Generic
+        meaning: SPDX:CC-BY-SA-1.0
+      CC-BY-SA-2.0:
+        description: Creative Commons Attribution Share Alike 2.0 Generic
+        meaning: SPDX:CC-BY-SA-2.0
+      CC-BY-SA-2.5:
+        description: Creative Commons Attribution Share Alike 2.5 Generic
+        meaning: SPDX:CC-BY-SA-2.5
+      CC-BY-SA-3.0:
+        description: Creative Commons Attribution Share Alike 3.0 Unported
+        meaning: SPDX:CC-BY-SA-3.0
+      CC-BY-SA-4.0:
+        description: Creative Commons Attribution Share Alike 4.0 International
+        meaning: SPDX:CC-BY-SA-4.0
+      CC0-1.0:
+        description: Creative Commons Zero v1.0 Universal
+        meaning: SPDX:CC0-1.0
+      CDDL-1.0:
+        description: Common Development and Distribution License 1.0
+        meaning: SPDX:CDDL-1.0
+      CDDL-1.1:
+        description: Common Development and Distribution License 1.1
+        meaning: SPDX:CDDL-1.1
+      CECILL-1.0:
+        description: CeCILL Free Software License Agreement v1.0
+        meaning: SPDX:CECILL-1.0
+      CECILL-1.1:
+        description: CeCILL Free Software License Agreement v1.1
+        meaning: SPDX:CECILL-1.1
+      CECILL-2.0:
+        description: CeCILL Free Software License Agreement v2.0
+        meaning: SPDX:CECILL-2.0
+      CECILL-2.1:
+        description: CeCILL Free Software License Agreement v2.1
+        meaning: SPDX:CECILL-2.1
+      CECILL-B:
+        description: CeCILL-B Free Software License Agreement
+        meaning: SPDX:CECILL-B
+      CECILL-C:
+        description: CeCILL-C Free Software License Agreement
+        meaning: SPDX:CECILL-C
+      CNRI-Jython:
+        description: CNRI Jython License
+        meaning: SPDX:CNRI-Jython
+      CNRI-Python:
+        description: CNRI Python License
+        meaning: SPDX:CNRI-Python
+      CNRI-Python-GPL-Compatible:
+        description: CNRI Python Open Source GPL Compatible License Agreement
+        meaning: SPDX:CNRI-Python-GPL-Compatible
+      CPAL-1.0:
+        description: Common Public Attribution License 1.0
+        meaning: SPDX:CPAL-1.0
+      CPL-1.0:
+        description: Common Public License 1.0
+        meaning: SPDX:CPL-1.0
+      CPOL-1.02:
+        description: Code Project Open License 1.02
+        meaning: SPDX:CPOL-1.02
+      CUA-OPL-1.0:
+        description: CUA Office Public License v1.0
+        meaning: SPDX:CUA-OPL-1.0
+      Caldera:
+        description: Caldera License
+        meaning: SPDX:Caldera
+      ClArtistic:
+        description: Clarified Artistic License
+        meaning: SPDX:ClArtistic
+      Condor-1.1:
+        description: Condor Public License v1.1
+        meaning: SPDX:Condor-1.1
+      Crossword:
+        description: Crossword License
+        meaning: SPDX:Crossword
+      CrystalStacker:
+        description: CrystalStacker License
+        meaning: SPDX:CrystalStacker
+      Cube:
+        description: Cube License
+        meaning: SPDX:Cube
+      D-FSL-1.0:
+        description: Deutsche Freie Software Lizenz
+        meaning: SPDX:D-FSL-1.0
+      DOC:
+        description: DOC License
+        meaning: SPDX:DOC
+      DSDP:
+        description: DSDP License
+        meaning: SPDX:DSDP
+      Dotseqn:
+        description: Dotseqn License
+        meaning: SPDX:Dotseqn
+      ECL-1.0:
+        description: Educational Community License v1.0
+        meaning: SPDX:ECL-1.0
+      ECL-2.0:
+        description: Educational Community License v2.0
+        meaning: SPDX:ECL-2.0
+      EFL-1.0:
+        description: Eiffel Forum License v1.0
+        meaning: SPDX:EFL-1.0
+      EFL-2.0:
+        description: Eiffel Forum License v2.0
+        meaning: SPDX:EFL-2.0
+      EPL-1.0:
+        description: Eclipse Public License 1.0
+        meaning: SPDX:EPL-1.0
+      EUDatagrid:
+        description: EU DataGrid Software License
+        meaning: SPDX:EUDatagrid
+      EUPL-1.0:
+        description: European Union Public License 1.0
+        meaning: SPDX:EUPL-1.0
+      EUPL-1.1:
+        description: European Union Public License 1.1
+        meaning: SPDX:EUPL-1.1
+      Entessa:
+        description: Entessa Public License v1.0
+        meaning: SPDX:Entessa
+      ErlPL-1.1:
+        description: Erlang Public License v1.1
+        meaning: SPDX:ErlPL-1.1
+      Eurosym:
+        description: Eurosym License
+        meaning: SPDX:Eurosym
+      FSFAP:
+        description: FSF All Permissive License
+        meaning: SPDX:FSFAP
+      FSFUL:
+        description: FSF Unlimited License
+        meaning: SPDX:FSFUL
+      FSFULLR:
+        description: FSF Unlimited License (with License Retention)
+        meaning: SPDX:FSFULLR
+      FTL:
+        description: Freetype Project License
+        meaning: SPDX:FTL
+      Fair:
+        description: Fair License
+        meaning: SPDX:Fair
+      Frameworx-1.0:
+        description: Frameworx Open License 1.0
+        meaning: SPDX:Frameworx-1.0
+      FreeImage:
+        description: FreeImage Public License v1.0
+        meaning: SPDX:FreeImage
+      Freeware:
+        description: Software made available to use at no monetary cost, without necessarily granting
+          the rights to modify, redistribute, or access the source code that an open-source license would.
+        meaning: SPDX:Freeware
+      GFDL-1.1:
+        description: GNU Free Documentation License v1.1
+        meaning: SPDX:GFDL-1.1
+      GFDL-1.2:
+        description: GNU Free Documentation License v1.2
+        meaning: SPDX:GFDL-1.2
+      GFDL-1.3:
+        description: GNU Free Documentation License v1.3
+        meaning: SPDX:GFDL-1.3
+      GL2PS:
+        description: GL2PS License
+        meaning: SPDX:GL2PS
+      GPL-1.0:
+        description: GNU General Public License v1.0 only
+        meaning: SPDX:GPL-1.0
+      GPL-2.0:
+        description: GNU General Public License v2.0 only
+        meaning: SPDX:GPL-2.0
+      GPL-3.0:
+        description: GNU General Public License v3.0 only
+        meaning: SPDX:GPL-3.0
+      Giftware:
+        description: Giftware License
+        meaning: SPDX:Giftware
+      Glide:
+        description: 3dfx Glide License
+        meaning: SPDX:Glide
+      Glulxe:
+        description: Glulxe License
+        meaning: SPDX:Glulxe
+      HPND:
+        description: Historical Permission Notice and Disclaimer
+        meaning: SPDX:HPND
+      HaskellReport:
+        description: Haskell Language Report License
+        meaning: SPDX:HaskellReport
+      IBM-pibs:
+        description: IBM PowerPC Initialization and Boot Software
+        meaning: SPDX:IBM-pibs
+      ICU:
+        description: ICU License
+        meaning: SPDX:ICU
+      IJG:
+        description: Independent JPEG Group License
+        meaning: SPDX:IJG
+      IPA:
+        description: IPA Font License
+        meaning: SPDX:IPA
+      IPL-1.0:
+        description: IBM Public License v1.0
+        meaning: SPDX:IPL-1.0
+      ISC:
+        description: ISC License
+        meaning: SPDX:ISC
+      ImageMagick:
+        description: ImageMagick License
+        meaning: SPDX:ImageMagick
+      Imlib2:
+        description: Imlib2 License
+        meaning: SPDX:Imlib2
+      Info-ZIP:
+        description: Info-ZIP License
+        meaning: SPDX:Info-ZIP
+      Intel:
+        description: Intel Open Source License
+        meaning: SPDX:Intel
+      Intel-ACPI:
+        description: Intel ACPI Software License Agreement
+        meaning: SPDX:Intel-ACPI
+      Interbase-1.0:
+        description: Interbase Public License v1.0
+        meaning: SPDX:Interbase-1.0
+      JSON:
+        description: JSON License
+        meaning: SPDX:JSON
+      JasPer-2.0:
+        description: JasPer License
+        meaning: SPDX:JasPer-2.0
+      LAL-1.2:
+        description: Licence Art Libre 1.2
+        meaning: SPDX:LAL-1.2
+      LAL-1.3:
+        description: Licence Art Libre 1.3
+        meaning: SPDX:LAL-1.3
+      LGPL-2.0:
+        description: GNU Library General Public License v2 only
+        meaning: SPDX:LGPL-2.0
+      LGPL-2.1:
+        description: GNU Lesser General Public License v2.1 only
+        meaning: SPDX:LGPL-2.1
+      LGPL-3.0:
+        description: GNU Lesser General Public License v3.0 only
+        meaning: SPDX:LGPL-3.0
+      LGPLLR:
+        description: Lesser General Public License For Linguistic Resources
+        meaning: SPDX:LGPLLR
+      LPL-1.0:
+        description: Lucent Public License Version 1.0
+        meaning: SPDX:LPL-1.0
+      LPL-1.02:
+        description: Lucent Public License v1.02
+        meaning: SPDX:LPL-1.02
+      LPPL-1.0:
+        description: LaTeX Project Public License v1.0
+        meaning: SPDX:LPPL-1.0
+      LPPL-1.1:
+        description: LaTeX Project Public License v1.1
+        meaning: SPDX:LPPL-1.1
+      LPPL-1.2:
+        description: LaTeX Project Public License v1.2
+        meaning: SPDX:LPPL-1.2
+      LPPL-1.3a:
+        description: LaTeX Project Public License v1.3a
+        meaning: SPDX:LPPL-1.3a
+      LPPL-1.3c:
+        description: LaTeX Project Public License v1.3c
+        meaning: SPDX:LPPL-1.3c
+      Latex2e:
+        description: Latex2e License
+        meaning: SPDX:Latex2e
+      Leptonica:
+        description: Leptonica License
+        meaning: SPDX:Leptonica
+      LiLiQ-P-1.1:
+        description: Licence Libre du Québec – Permissive version 1.1
+        meaning: SPDX:LiLiQ-P-1.1
+      LiLiQ-R-1.1:
+        description: Licence Libre du Québec – Réciprocité version 1.1
+        meaning: SPDX:LiLiQ-R-1.1
+      LiLiQ-Rplus-1.1:
+        description: Licence Libre du Québec – Réciprocité forte version 1.1
+        meaning: SPDX:LiLiQ-Rplus-1.1
+      Libpng:
+        description: libpng License
+        meaning: SPDX:Libpng
       MIT:
-        description: MIT License, a permissive license allowing for use, modification, and distribution.
-      GPL_3:
-        description: GNU General Public License v3.0, a copyleft license requiring derivative works to
-          be licensed under the same terms.
-      BSD_3_Clause:
-        description: BSD 3-Clause License, a permissive license allowing for use, modification, and distribution
-          with attribution.
+        description: MIT License
+        meaning: SPDX:MIT
+      MIT-CMU:
+        description: CMU License
+        meaning: SPDX:MIT-CMU
+      MIT-advertising:
+        description: Enlightenment License (e16)
+        meaning: SPDX:MIT-advertising
+      MIT-enna:
+        description: enna License
+        meaning: SPDX:MIT-enna
+      MIT-feh:
+        description: feh License
+        meaning: SPDX:MIT-feh
+      MITNFA:
+        description: MIT +no-false-attribs license
+        meaning: SPDX:MITNFA
+      MPL-1.0:
+        description: Mozilla Public License 1.0
+        meaning: SPDX:MPL-1.0
+      MPL-1.1:
+        description: Mozilla Public License 1.1
+        meaning: SPDX:MPL-1.1
+      MPL-2.0:
+        description: Mozilla Public License 2.0
+        meaning: SPDX:MPL-2.0
+      MPL-2.0-no-copyleft-exception:
+        description: Mozilla Public License 2.0 (no copyleft exception)
+        meaning: SPDX:MPL-2.0-no-copyleft-exception
+      MS-PL:
+        description: Microsoft Public License
+        meaning: SPDX:MS-PL
+      MS-RL:
+        description: Microsoft Reciprocal License
+        meaning: SPDX:MS-RL
+      MTLL:
+        description: Matrix Template Library License
+        meaning: SPDX:MTLL
+      MakeIndex:
+        description: MakeIndex License
+        meaning: SPDX:MakeIndex
+      MirOS:
+        description: The MirOS Licence
+        meaning: SPDX:MirOS
+      Motosoto:
+        description: Motosoto License
+        meaning: SPDX:Motosoto
+      Multics:
+        description: Multics License
+        meaning: SPDX:Multics
+      Mup:
+        description: Mup License
+        meaning: SPDX:Mup
+      NASA-1.3:
+        description: NASA Open Source Agreement 1.3
+        meaning: SPDX:NASA-1.3
+      NBPL-1.0:
+        description: Net Boolean Public License v1
+        meaning: SPDX:NBPL-1.0
+      NCSA:
+        description: University of Illinois/NCSA Open Source License
+        meaning: SPDX:NCSA
+      NGPL:
+        description: Nethack General Public License
+        meaning: SPDX:NGPL
+      NLOD-1.0:
+        description: Norwegian Licence for Open Government Data (NLOD) 1.0
+        meaning: SPDX:NLOD-1.0
+      NLPL:
+        description: No Limit Public License
+        meaning: SPDX:NLPL
+      NOSL:
+        description: Netizen Open Source License
+        meaning: SPDX:NOSL
+      NPL-1.0:
+        description: Netscape Public License v1.0
+        meaning: SPDX:NPL-1.0
+      NPL-1.1:
+        description: Netscape Public License v1.1
+        meaning: SPDX:NPL-1.1
+      NPOSL-3.0:
+        description: Non-Profit Open Software License 3.0
+        meaning: SPDX:NPOSL-3.0
+      NRL:
+        description: NRL License
+        meaning: SPDX:NRL
+      NTP:
+        description: NTP License
+        meaning: SPDX:NTP
+      Naumen:
+        description: Naumen Public License
+        meaning: SPDX:Naumen
+      NetCDF:
+        description: NetCDF license
+        meaning: SPDX:NetCDF
+      Newsletr:
+        description: Newsletr License
+        meaning: SPDX:Newsletr
+      Nokia:
+        description: Nokia Open Source License
+        meaning: SPDX:Nokia
+      Not licensed:
+        description: No license has been specified or applied to the resource, so no usage rights beyond
+          default copyright protections can be assumed.
+      Noweb:
+        description: Noweb License
+        meaning: SPDX:Noweb
+      Nunit:
+        description: Nunit License
+        meaning: SPDX:Nunit
+      OCCT-PL:
+        description: Open CASCADE Technology Public License
+        meaning: SPDX:OCCT-PL
+      OCLC-2.0:
+        description: OCLC Research Public License 2.0
+        meaning: SPDX:OCLC-2.0
+      ODbL-1.0:
+        description: Open Data Commons Open Database License v1.0
+        meaning: SPDX:ODbL-1.0
+      OFL-1.0:
+        description: SIL Open Font License 1.0
+        meaning: SPDX:OFL-1.0
+      OFL-1.1:
+        description: SIL Open Font License 1.1
+        meaning: SPDX:OFL-1.1
+      OGTSL:
+        description: Open Group Test Suite License
+        meaning: SPDX:OGTSL
+      OLDAP-1.1:
+        description: Open LDAP Public License v1.1
+        meaning: SPDX:OLDAP-1.1
+      OLDAP-1.2:
+        description: Open LDAP Public License v1.2
+        meaning: SPDX:OLDAP-1.2
+      OLDAP-1.3:
+        description: Open LDAP Public License v1.3
+        meaning: SPDX:OLDAP-1.3
+      OLDAP-1.4:
+        description: Open LDAP Public License v1.4
+        meaning: SPDX:OLDAP-1.4
+      OLDAP-2.0:
+        description: Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B)
+        meaning: SPDX:OLDAP-2.0
+      OLDAP-2.0.1:
+        description: Open LDAP Public License v2.0.1
+        meaning: SPDX:OLDAP-2.0.1
+      OLDAP-2.1:
+        description: Open LDAP Public License v2.1
+        meaning: SPDX:OLDAP-2.1
+      OLDAP-2.2:
+        description: Open LDAP Public License v2.2
+        meaning: SPDX:OLDAP-2.2
+      OLDAP-2.2.1:
+        description: Open LDAP Public License v2.2.1
+        meaning: SPDX:OLDAP-2.2.1
+      OLDAP-2.2.2:
+        description: Open LDAP Public License 2.2.2
+        meaning: SPDX:OLDAP-2.2.2
+      OLDAP-2.3:
+        description: Open LDAP Public License v2.3
+        meaning: SPDX:OLDAP-2.3
+      OLDAP-2.4:
+        description: Open LDAP Public License v2.4
+        meaning: SPDX:OLDAP-2.4
+      OLDAP-2.5:
+        description: Open LDAP Public License v2.5
+        meaning: SPDX:OLDAP-2.5
+      OLDAP-2.6:
+        description: Open LDAP Public License v2.6
+        meaning: SPDX:OLDAP-2.6
+      OLDAP-2.7:
+        description: Open LDAP Public License v2.7
+        meaning: SPDX:OLDAP-2.7
+      OLDAP-2.8:
+        description: Open LDAP Public License v2.8
+        meaning: SPDX:OLDAP-2.8
+      OML:
+        description: Open Market License
+        meaning: SPDX:OML
+      OPL-1.0:
+        description: Open Public License v1.0
+        meaning: SPDX:OPL-1.0
+      OSET-PL-2.1:
+        description: OSET Public License version 2.1
+        meaning: SPDX:OSET-PL-2.1
+      OSL-1.0:
+        description: Open Software License 1.0
+        meaning: SPDX:OSL-1.0
+      OSL-1.1:
+        description: Open Software License 1.1
+        meaning: SPDX:OSL-1.1
+      OSL-2.0:
+        description: Open Software License 2.0
+        meaning: SPDX:OSL-2.0
+      OSL-2.1:
+        description: Open Software License 2.1
+        meaning: SPDX:OSL-2.1
+      OSL-3.0:
+        description: Open Software License 3.0
+        meaning: SPDX:OSL-3.0
+      OpenSSL:
+        description: OpenSSL License
+        meaning: SPDX:OpenSSL
+      Other:
+        description: A license not covered by any of the other listed values.
+        meaning: SPDX:Other
+      PDDL-1.0:
+        description: Open Data Commons Public Domain Dedication & License 1.0
+        meaning: SPDX:PDDL-1.0
+      PHP-3.0:
+        description: PHP License v3.0
+        meaning: SPDX:PHP-3.0
+      PHP-3.01:
+        description: PHP License v3.01
+        meaning: SPDX:PHP-3.01
+      Plexus:
+        description: Plexus Classworlds License
+        meaning: SPDX:Plexus
+      PostgreSQL:
+        description: PostgreSQL License
+        meaning: SPDX:PostgreSQL
+      Proprietary:
+        description: A license under which the software's source code is not made publicly available and
+          usage, modification, and redistribution are restricted by the copyright holder.
+        meaning: SPDX:Proprietary
+      Python-2.0:
+        description: Python License 2.0
+        meaning: SPDX:Python-2.0
+      QPL-1.0:
+        description: Q Public License 1.0
+        meaning: SPDX:QPL-1.0
+      Qhull:
+        description: Qhull License
+        meaning: SPDX:Qhull
+      RHeCos-1.1:
+        description: Red Hat eCos Public License v1.1
+        meaning: SPDX:RHeCos-1.1
+      RPL-1.1:
+        description: Reciprocal Public License 1.1
+        meaning: SPDX:RPL-1.1
+      RPL-1.5:
+        description: Reciprocal Public License 1.5
+        meaning: SPDX:RPL-1.5
+      RPSL-1.0:
+        description: RealNetworks Public Source License v1.0
+        meaning: SPDX:RPSL-1.0
+      RSA-MD:
+        description: RSA Message-Digest License
+        meaning: SPDX:RSA-MD
+      RSCPL:
+        description: Ricoh Source Code Public License
+        meaning: SPDX:RSCPL
+      Rdisc:
+        description: Rdisc License
+        meaning: SPDX:Rdisc
+      Ruby:
+        description: Ruby License
+        meaning: SPDX:Ruby
+      SAX-PD:
+        description: Sax Public Domain Notice
+        meaning: SPDX:SAX-PD
+      SCEA:
+        description: SCEA Shared Source License
+        meaning: SPDX:SCEA
+      SGI-B-1.0:
+        description: SGI Free Software License B v1.0
+        meaning: SPDX:SGI-B-1.0
+      SGI-B-1.1:
+        description: SGI Free Software License B v1.1
+        meaning: SPDX:SGI-B-1.1
+      SGI-B-2.0:
+        description: SGI Free Software License B v2.0
+        meaning: SPDX:SGI-B-2.0
+      SISSL:
+        description: Sun Industry Standards Source License v1.1
+        meaning: SPDX:SISSL
+      SISSL-1.2:
+        description: Sun Industry Standards Source License v1.2
+        meaning: SPDX:SISSL-1.2
+      SMLNJ:
+        description: Standard ML of New Jersey License
+        meaning: SPDX:SMLNJ
+      SMPPL:
+        description: Secure Messaging Protocol Public License
+        meaning: SPDX:SMPPL
+      SNIA:
+        description: SNIA Public License 1.1
+        meaning: SPDX:SNIA
+      SPL-1.0:
+        description: Sun Public License v1.0
+        meaning: SPDX:SPL-1.0
+      SWL:
+        description: Scheme Widget Library (SWL) Software License Agreement
+        meaning: SPDX:SWL
+      Saxpath:
+        description: Saxpath License
+        meaning: SPDX:Saxpath
+      Sendmail:
+        description: Sendmail License
+        meaning: SPDX:Sendmail
+      SimPL-2.0:
+        description: Simple Public License 2.0
+        meaning: SPDX:SimPL-2.0
+      Sleepycat:
+        description: Sleepycat License
+        meaning: SPDX:Sleepycat
+      Spencer-86:
+        description: Spencer License 86
+        meaning: SPDX:Spencer-86
+      Spencer-94:
+        description: Spencer License 94
+        meaning: SPDX:Spencer-94
+      Spencer-99:
+        description: Spencer License 99
+        meaning: SPDX:Spencer-99
+      SugarCRM-1.1.3:
+        description: SugarCRM Public License v1.1.3
+        meaning: SPDX:SugarCRM-1.1.3
+      TCL:
+        description: TCL/TK License
+        meaning: SPDX:TCL
+      TMate:
+        description: TMate Open Source License
+        meaning: SPDX:TMate
+      TORQUE-1.1:
+        description: TORQUE v2.5+ Software License v1.1
+        meaning: SPDX:TORQUE-1.1
+      TOSL:
+        description: Trusster Open Source License
+        meaning: SPDX:TOSL
+      UPL-1.0:
+        description: Universal Permissive License v1.0
+        meaning: SPDX:UPL-1.0
+      Unicode-TOU:
+        description: Unicode Terms of Use
+        meaning: SPDX:Unicode-TOU
+      Unlicense:
+        description: The Unlicense
+        meaning: SPDX:Unlicense
+      VOSTROM:
+        description: VOSTROM Public License for Open Source
+        meaning: SPDX:VOSTROM
+      VSL-1.0:
+        description: Vovida Software License v1.0
+        meaning: SPDX:VSL-1.0
+      Vim:
+        description: Vim License
+        meaning: SPDX:Vim
+      W3C:
+        description: W3C Software Notice and License (2002-12-31)
+        meaning: SPDX:W3C
+      W3C-19980720:
+        description: W3C Software Notice and License (1998-07-20)
+        meaning: SPDX:W3C-19980720
+      WTFPL:
+        description: Do What The F*ck You Want To Public License
+        meaning: SPDX:WTFPL
+      Watcom-1.0:
+        description: Sybase Open Watcom Public License 1.0
+        meaning: SPDX:Watcom-1.0
+      Wsuipa:
+        description: Wsuipa License
+        meaning: SPDX:Wsuipa
+      X11:
+        description: X11 License
+        meaning: SPDX:X11
+      XFree86-1.1:
+        description: XFree86 License 1.1
+        meaning: SPDX:XFree86-1.1
+      XSkat:
+        description: XSkat License
+        meaning: SPDX:XSkat
+      Xerox:
+        description: Xerox License
+        meaning: SPDX:Xerox
+      Xnet:
+        description: X.Net License
+        meaning: SPDX:Xnet
+      YPL-1.0:
+        description: Yahoo! Public License v1.0
+        meaning: SPDX:YPL-1.0
+      YPL-1.1:
+        description: Yahoo! Public License v1.1
+        meaning: SPDX:YPL-1.1
+      ZPL-1.1:
+        description: Zope Public License 1.1
+        meaning: SPDX:ZPL-1.1
+      ZPL-2.0:
+        description: Zope Public License 2.0
+        meaning: SPDX:ZPL-2.0
+      ZPL-2.1:
+        description: Zope Public License 2.1
+        meaning: SPDX:ZPL-2.1
+      Zed:
+        description: Zed License
+        meaning: SPDX:Zed
+      Zend-2.0:
+        description: Zend License v2.0
+        meaning: SPDX:Zend-2.0
+      Zimbra-1.3:
+        description: Zimbra Public License v1.3
+        meaning: SPDX:Zimbra-1.3
+      Zimbra-1.4:
+        description: Zimbra Public License v1.4
+        meaning: SPDX:Zimbra-1.4
+      Zlib:
+        description: zlib License
+        meaning: SPDX:Zlib
+      bzip2-1.0.5:
+        description: bzip2 and libbzip2 License v1.0.5
+        meaning: SPDX:bzip2-1.0.5
+      bzip2-1.0.6:
+        description: bzip2 and libbzip2 License v1.0.6
+        meaning: SPDX:bzip2-1.0.6
+      curl:
+        description: curl License
+        meaning: SPDX:curl
+      diffmark:
+        description: diffmark license
+        meaning: SPDX:diffmark
+      dvipdfm:
+        description: dvipdfm License
+        meaning: SPDX:dvipdfm
+      eGenix:
+        description: eGenix.com Public License 1.1.0
+        meaning: SPDX:eGenix
+      gSOAP-1.3b:
+        description: gSOAP Public License v1.3b
+        meaning: SPDX:gSOAP-1.3b
+      gnuplot:
+        description: gnuplot License
+        meaning: SPDX:gnuplot
+      iMatix:
+        description: iMatix Standard Function Library Agreement
+        meaning: SPDX:iMatix
+      libtiff:
+        description: libtiff License
+        meaning: SPDX:libtiff
+      mpich2:
+        description: mpich2 License
+        meaning: SPDX:mpich2
+      psfrag:
+        description: psfrag License
+        meaning: SPDX:psfrag
+      psutils:
+        description: psutils License
+        meaning: SPDX:psutils
+      xinetd:
+        description: xinetd License
+        meaning: SPDX:xinetd
+      xpp:
+        description: XPP License
+        meaning: SPDX:xpp
+      zlib-acknowledgement:
+        description: zlib/libpng License with Acknowledgement
+        meaning: SPDX:zlib-acknowledgement
   measurementTechnique Enum:
     permissible_values:
       10-cell RNA Sequencing:
@@ -8703,129 +9640,6 @@ enums:
         description: Data consisting of raw or processed DNA/RNA sequence records.
       image:
         description: Data consisting of image files, such as microscopy or radiology images.
-  species Enum:
-    permissible_values:
-      African Bush Elephant:
-        description: The African bush elephant (Loxodonta africana), the largest living terrestrial animal,
-          native to sub-Saharan Africa; used as a source organism in comparative and veterinary research.
-        meaning: NCBITaxon:9785
-      Armadillo:
-        description: Any of several small, burrowing, chiefly nocturnal mammals with a body covered with
-          strong horny plates.
-        meaning: NCIT:C14185
-      Asian Elephant:
-        description: The Asian elephant (Elephas maximus), native to South and Southeast Asia; used as
-          a source organism in comparative and veterinary research.
-        meaning: NCBITaxon:9783
-      Boar:
-        description: The wild boar (Sus scrofa), the wild ancestor of the domestic pig; used as a source
-          organism in comparative and veterinary research.
-        meaning: FOODON:00004286
-      Cat:
-        description: The domesticated feline mammal, Felis catus, which is kept as a house pet.
-        meaning: NCIT:C14191
-      Chicken:
-        description: The common domestic fowl, Gallus gallus.
-        meaning: NCIT:C14193
-      Candida albicans:
-        description: An opportunistic pathogenic yeast, Candida albicans, commonly used as a model organism
-          in fungal biology and infection research.
-        meaning: NCBITaxon:5476
-      Cow:
-        description: Domesticated ungulates that are raised for beef, dairy products, and leather, and
-          used for labor.
-        meaning: NCIT:C14192
-      Dog:
-        description: The domestic dog, Canis familiaris.
-        meaning: NCIT:C14201
-      Escherichia coli:
-        description: A common, gram negative gut bacterium that has been studied intensively by geneticists
-          because of its small genome size, normal lack of pathogenicity, and ease of growth in the laboratory.
-        meaning: NCIT:C14206
-      Guinea Pig:
-        description: The domesticated guinea pig, Cavia porcellus.
-        meaning: NCIT:C14211
-      Horse:
-        description: The domestic horse, Equus caballus.
-        meaning: NCIT:C14222
-      Human:
-        description: The bipedal primate mammal, Homo sapiens; belonging to man or mankind; pertaining
-          to man or to the race of man; use of man as experimental subject or unit of analysis in research.
-        meaning: NCIT:C14225
-      Human Patient:
-        description: A human patient enrolled in a clinical study who receives medical attention, care,
-          or treatment.
-        meaning: NCIT:C16960
-      Human Cell Line:
-        description: A cell line established from human-derived cells that is maintained and propagated
-          in vitro for research purposes.
-        meaning: NCIT:C20218
-      Macaca nemestrina:
-        description: The pig-tailed macaque (Macaca nemestrina), an Old World monkey native to Southeast
-          Asia, used as a model organism in biomedical research. Distinct from Rhesus monkey (Macaca mulatta).
-        meaning: NCBITaxon:9545
-      Mouse:
-        description: Any of numerous species of small rodents belonging to the genus Mus and various related
-          genera of the family Muridae.
-        meaning: NCIT:C14238
-      Multispecies:
-        description: A dataset or sample that is derived from or associated with more than one species.
-        meaning: FBcv:0003142
-      Not Applicable:
-        description: Determination of a value is not relevant in the current context.
-        meaning: NCIT:C48660
-      Opossum:
-        description: New World marsupials of the family Didelphidae. Opossums are omnivorous, largely
-          nocturnal and arboreal mammals, and have an abdominal pouch in which the young are carried at
-          birth.
-        meaning: MeSH:D009893
-      Rabbit:
-        description: Various members of the family Leporidae, especially those of the genus Sylvilagus.
-        meaning: NCIT:C14264
-      Rat:
-        description: Any of various rodent species of the genus Rattus, particularly Rattus norvegicus,
-          that are widely used as model organisms in biomedical research.
-        meaning: NCIT:C160998
-      Rhesus monkey:
-        description: A pale brown macaque (Macaca mulatta) native to India, China, and other parts of
-          Asia, often used in medical research owing to its relative ease of upkeep and physiological
-          similarity to humans.
-        meaning: NCIT:C14233
-      Schizosaccharomyces pombe:
-        description: The fission yeast, Schizosaccharomyces pombe, a unicellular fungus widely used as
-          a model organism in cell biology, distinct from the budding yeast Saccharomyces cerevisiae.
-        meaning: NCBITaxon:4896
-      Sheep:
-        description: Any one of several species of ruminants of the genus Ovis, native of the higher mountains
-          of both hemispheres but most numerous in Asia; the domestic sheep, Ovis aries.
-        meaning: NCIT:C14273
-      Trichoplax adhaerens:
-        description: Trichoplax adhaerens, a simple multicellular marine organism belonging to the phylum
-          Placozoa; used as a model organism in evolutionary and developmental biology.
-        meaning: NCBITaxon:10228
-      Unknown:
-        description: Not known, observed, recorded; or reported as unknown by the data contributor.
-        meaning: NCIT:C17998
-      Unspecified:
-        description: Not stated explicitly or in detail.
-        meaning: NCIT:C38046
-      Worm:
-        description: A roundworm, most commonly Caenorhabditis elegans, that is used as a model organism
-          in biological research.
-        meaning: NCIT:C14303
-      Yeast:
-        description: Various single-celled members of the fungal families, ascomycetes, basidiomycetes
-          and imperfect fungi that tend to be unicellular for the greater part of their life cycle.
-        meaning: NCIT:C14286
-      Fruit Fly:
-        description: Drosophila melanogaster, commonly known as the fruit fly, a small dipteran insect
-          that has been extensively used in genetic and developmental biology studies.
-        meaning: NCIT:C14202
-      Zebrafish:
-        description: Brachydanio rerio, a species of small freshwater aquarium fish with a transparent
-          embryo, making it possible to follow progeny of single cells until late stages of development;
-          an important model for studies of vertebrate cell lineage and developmental biology.
-        meaning: NCIT:C14287
   manifestation Enum:
     permissible_values:
       Cutaneous Melanoma:
@@ -13596,38 +14410,124 @@ enums:
         meaning: NCIT:C201930
   Data Use Codes Enum:
     permissible_values:
-      Pending Annotation: null
-      DUO:0000042: null
-      DUO:0000027: null
-      DUO:0000016: null
-      DUO:0000029: null
-      DUO:0000043: null
-      DUO:0000015: null
-      DUO:0000004: null
-      DUO:0000045: null
-      DUO:0000017: null
-      DUO:0000011: null
-      DUO:0000046: null
-      DUO:0000018: null
-      DUO:0000044: null
-      DUO:0000021: null
-      DUO:0000006: null
-      DUO:0000019: null
-      DUO:0000026: null
-      DUO:0000020: null
-      DUO:0000012: null
-      DUO:0000025: null
-      DUO:0000024: null
-      DUO:0000028: null
-      DUO:0000022: null
-      DUO:0000007: null
-      DUOPlus1: null
-      DUOPlus2: null
-      DUOPlus3: null
-      DUOPlus4: null
-      DUOPlus5: null
-      DUOPlus6: null
-      DUOPlus7: null
+      Pending Annotation:
+        description: Data Use Codes have not yet been provided or documented for this resource.
+      DUO:0000042:
+        description: This data use permission indicates that use is allowed for general research use for
+          any research purpose.
+        meaning: DUO:0000042
+      DUO:0000027:
+        description: This data use modifier indicates that use is limited to use within an approved project.
+        meaning: DUO:0000027
+      DUO:0000016:
+        description: This data use modifier indicates that use is limited to genetic studies only (i.e.,
+          studies that include genotype research alone or both genotype and phenotype research, but not
+          phenotype research exclusively)
+        meaning: DUO:0000016
+      DUO:0000029:
+        description: This data use modifier indicates that the requestor must return derived/enriched
+          data to the database/resource.
+        meaning: DUO:0000029
+      DUO:0000043:
+        description: This data use modifier indicates that use is allowed for clinical use and care.
+        meaning: DUO:0000043
+      DUO:0000015:
+        description: This data use modifier indicates that use does not allow methods development research
+          (e.g., development of software or algorithms).
+        meaning: DUO:0000015
+      DUO:0000004:
+        description: This data use permission indicates there is no restriction on use.
+        meaning: DUO:0000004
+      DUO:0000045:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations.
+        meaning: DUO:0000045
+      DUO:0000017:
+        description: Data use modifiers indicate additional conditions for use.
+        meaning: DUO:0000017
+      DUO:0000011:
+        description: This data use permission indicates that use of the data is limited to the study of
+          population origins or ancestry.
+        meaning: DUO:0000011
+      DUO:0000046:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          use.
+        meaning: DUO:0000046
+      DUO:0000018:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations and not-for-profit use, non-commercial use.
+        meaning: DUO:0000018
+      DUO:0000044:
+        description: This data use modifier indicates use for purposes of population, origin, or ancestry
+          research is prohibited.
+        meaning: DUO:0000044
+      DUO:0000021:
+        description: This data use modifier indicates that the requestor must provide documentation of
+          local IRB/ERB approval.
+        meaning: DUO:0000021
+      DUO:0000006:
+        description: This data use permission indicates that use is allowed for health/medical/biomedical
+          purposes; does not include the study of population origins or ancestry.
+        meaning: DUO:0000006
+      DUO:0000019:
+        description: This data use modifier indicates that requestor agrees to make results of studies
+          using the data available to the larger scientific community.
+        meaning: DUO:0000019
+      DUO:0000026:
+        description: This data use modifier indicates that use is limited to use by approved users. If
+          providing this term, please describe the restrictions in column userSpecificRestriction.
+        meaning: DUO:0000026
+      DUO:0000020:
+        description: This data use modifier indicates that the requestor must agree to collaboration with
+          the primary study investigator(s). If providing this term, please note the contact email in
+          column collaborationRequired.
+        meaning: DUO:0000020
+      DUO:0000012:
+        description: This data use modifier indicates that use is limited to studies of a certain research
+          type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.
+        meaning: DUO:0000012
+      DUO:0000025:
+        description: This data use modifier indicates that use is approved for a specific number of months.
+          If providing this term, please provide the number of months in column timeLimitOnUse.
+        meaning: DUO:0000025
+      DUO:0000024:
+        description: This data use modifier indicates that requestor agrees not to publish results of
+          studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.
+        meaning: DUO:0000024
+      DUO:0000028:
+        description: This data use modifier indicates that use is limited to use within an approved institution.
+          If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.
+        meaning: DUO:0000028
+      DUO:0000022:
+        description: This data use modifier indicates that use is limited to within a specific geographic
+          region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.
+        meaning: DUO:0000022
+      DUO:0000007:
+        description: This data use permission indicates that use is allowed provided it is related to
+          the specified disease. If providing this term, please provide the disease MONDO ID(s) in column
+          diseaseSpecificResearch.
+        meaning: DUO:0000007
+      DUOPlus1:
+        description: Source geography is relevant to governance decisions. If providing this term, please
+          provide the applicable country code(s) in column sourceGeography
+      DUOPlus2:
+        description: Study population is relevant to governance decisions. If providing this term, please
+          provide the applicable population type(s) in column populationType.
+      DUOPlus3:
+        description: Data deidentification is relevant to governance decisions. If providing this term,
+          please provide the applicable deidentification type(s) in column deidentificationType.
+      DUOPlus4:
+        description: A data permission designation is associated with the Study. If providing this term,
+          please provide the applicable permission type(s) in column dataPermission.
+      DUOPlus5:
+        description: A data tier designation is associated with the Study. If providing this term, please
+          provide the applicable data tier designation(s) in column dataTier.
+      DUOPlus6:
+        description: A license is associated with the Study. If providing this term, please provide the
+          applicable license in column license.
+      DUOPlus7:
+        description: Attribution conditions are associated with this Study. If providing this term, please
+          provide the attribution statement in column attribution.
   dataUseModifiers Enum:
     permissible_values:
       Pending Annotation:
@@ -14788,39 +15688,6 @@ enums:
         description: Users must have a Synapse account and satisfy access conditions to download data.
       Private:
         description: Users must be provided access to data in Synapse by a project administrator.
-  license Enum:
-    permissible_values:
-      CC0:
-        description: Creative Commons Zero license, allowing for the free use of the data.
-      CC_BY:
-        description: Creative Commons Attribution license, requiring attribution to the original source.
-        meaning: SPDX:CC-BY-4.0
-      CC_BY_NC:
-        description: Creative Commons Attribution-NonCommercial license, allowing for non-commercial use
-          with attribution.
-        meaning: SPDX:CC-BY-NC-3.0
-      CC_BY_ND:
-        description: Creative Commons Attribution-NoDerivatives license, allowing for redistribution with
-          attribution but no modifications.
-      CC_BY_SA:
-        description: Creative Commons Attribution-ShareAlike license, allowing for modifications with
-          attribution and sharing under the same license.
-      CC_BY_NC_ND:
-        description: Creative Commons Attribution-NonCommercial-NoDerivatives license, allowing for non-commercial
-          use with attribution but no modifications.
-      CC_BY_NC_SA:
-        description: Creative Commons Attribution-NonCommercial-ShareAlike license, allowing for non-commercial
-          modifications with attribution and sharing under the same license.
-      Apache_2:
-        description: Apache License 2.0, a permissive license allowing for use, modification, and distribution.
-      MIT:
-        description: MIT License, a permissive license allowing for use, modification, and distribution.
-      GPL_3:
-        description: GNU General Public License v3.0, a copyleft license requiring derivative works to
-          be licensed under the same terms.
-      BSD_3_Clause:
-        description: BSD 3-Clause License, a permissive license allowing for use, modification, and distribution
-          with attribution.
   Sex Enum:
     permissible_values:
       Female:
@@ -23342,38 +24209,124 @@ enums:
         meaning: NCIT:C3797
   DSP Data Use Codes Enum:
     permissible_values:
-      Pending Annotation: null
-      DUO:0000042: null
-      DUO:0000027: null
-      DUO:0000016: null
-      DUO:0000029: null
-      DUO:0000043: null
-      DUO:0000015: null
-      DUO:0000004: null
-      DUO:0000045: null
-      DUO:0000017: null
-      DUO:0000011: null
-      DUO:0000046: null
-      DUO:0000018: null
-      DUO:0000044: null
-      DUO:0000021: null
-      DUO:0000006: null
-      DUO:0000019: null
-      DUO:0000026: null
-      DUO:0000020: null
-      DUO:0000012: null
-      DUO:0000025: null
-      DUO:0000024: null
-      DUO:0000028: null
-      DUO:0000022: null
-      DUO:0000007: null
-      DUOPlus1: null
-      DUOPlus2: null
-      DUOPlus3: null
-      DUOPlus4: null
-      DUOPlus5: null
-      DUOPlus6: null
-      DUOPlus7: null
+      Pending Annotation:
+        description: Data Use Codes have not yet been provided or documented for this resource.
+      DUO:0000042:
+        description: This data use permission indicates that use is allowed for general research use for
+          any research purpose.
+        meaning: DUO:0000042
+      DUO:0000027:
+        description: This data use modifier indicates that use is limited to use within an approved project.
+        meaning: DUO:0000027
+      DUO:0000016:
+        description: This data use modifier indicates that use is limited to genetic studies only (i.e.,
+          studies that include genotype research alone or both genotype and phenotype research, but not
+          phenotype research exclusively)
+        meaning: DUO:0000016
+      DUO:0000029:
+        description: This data use modifier indicates that the requestor must return derived/enriched
+          data to the database/resource.
+        meaning: DUO:0000029
+      DUO:0000043:
+        description: This data use modifier indicates that use is allowed for clinical use and care.
+        meaning: DUO:0000043
+      DUO:0000015:
+        description: This data use modifier indicates that use does not allow methods development research
+          (e.g., development of software or algorithms).
+        meaning: DUO:0000015
+      DUO:0000004:
+        description: This data use permission indicates there is no restriction on use.
+        meaning: DUO:0000004
+      DUO:0000045:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations.
+        meaning: DUO:0000045
+      DUO:0000017:
+        description: Data use modifiers indicate additional conditions for use.
+        meaning: DUO:0000017
+      DUO:0000011:
+        description: This data use permission indicates that use of the data is limited to the study of
+          population origins or ancestry.
+        meaning: DUO:0000011
+      DUO:0000046:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          use.
+        meaning: DUO:0000046
+      DUO:0000018:
+        description: This data use modifier indicates that use of the data is limited to not-for-profit
+          organizations and not-for-profit use, non-commercial use.
+        meaning: DUO:0000018
+      DUO:0000044:
+        description: This data use modifier indicates use for purposes of population, origin, or ancestry
+          research is prohibited.
+        meaning: DUO:0000044
+      DUO:0000021:
+        description: This data use modifier indicates that the requestor must provide documentation of
+          local IRB/ERB approval.
+        meaning: DUO:0000021
+      DUO:0000006:
+        description: This data use permission indicates that use is allowed for health/medical/biomedical
+          purposes; does not include the study of population origins or ancestry.
+        meaning: DUO:0000006
+      DUO:0000019:
+        description: This data use modifier indicates that requestor agrees to make results of studies
+          using the data available to the larger scientific community.
+        meaning: DUO:0000019
+      DUO:0000026:
+        description: This data use modifier indicates that use is limited to use by approved users. If
+          providing this term, please describe the restrictions in column userSpecificRestriction.
+        meaning: DUO:0000026
+      DUO:0000020:
+        description: This data use modifier indicates that the requestor must agree to collaboration with
+          the primary study investigator(s). If providing this term, please note the contact email in
+          column collaborationRequired.
+        meaning: DUO:0000020
+      DUO:0000012:
+        description: This data use modifier indicates that use is limited to studies of a certain research
+          type. If providing this term, please note the research type(s) in column researchSpecificRestrictions.
+        meaning: DUO:0000012
+      DUO:0000025:
+        description: This data use modifier indicates that use is approved for a specific number of months.
+          If providing this term, please provide the number of months in column timeLimitOnUse.
+        meaning: DUO:0000025
+      DUO:0000024:
+        description: This data use modifier indicates that requestor agrees not to publish results of
+          studies until a specific date. If providing this term, please provide the date in column publicationMoratorium.
+        meaning: DUO:0000024
+      DUO:0000028:
+        description: This data use modifier indicates that use is limited to use within an approved institution.
+          If providing this term, please provide the institution ROR ID(s) in column institutionSpecificRestriction.
+        meaning: DUO:0000028
+      DUO:0000022:
+        description: This data use modifier indicates that use is limited to within a specific geographic
+          region. If providing this term, please provide the applicable country code(s) in column geographicalRestriction.
+        meaning: DUO:0000022
+      DUO:0000007:
+        description: This data use permission indicates that use is allowed provided it is related to
+          the specified disease. If providing this term, please provide the disease MONDO ID(s) in column
+          diseaseSpecificResearch.
+        meaning: DUO:0000007
+      DUOPlus1:
+        description: Source geography is relevant to governance decisions. If providing this term, please
+          provide the applicable country code(s) in column sourceGeography
+      DUOPlus2:
+        description: Study population is relevant to governance decisions. If providing this term, please
+          provide the applicable population type(s) in column populationType.
+      DUOPlus3:
+        description: Data deidentification is relevant to governance decisions. If providing this term,
+          please provide the applicable deidentification type(s) in column deidentificationType.
+      DUOPlus4:
+        description: A data permission designation is associated with the Study. If providing this term,
+          please provide the applicable permission type(s) in column dataPermission.
+      DUOPlus5:
+        description: A data tier designation is associated with the Study. If providing this term, please
+          provide the applicable data tier designation(s) in column dataTier.
+      DUOPlus6:
+        description: A license is associated with the Study. If providing this term, please provide the
+          applicable license in column license.
+      DUOPlus7:
+        description: Attribution conditions are associated with this Study. If providing this term, please
+          provide the attribution statement in column attribution.
   Study Deidentification Method Type Enum:
     permissible_values:
       Manual:

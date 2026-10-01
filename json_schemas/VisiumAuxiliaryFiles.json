@@ -1,5 +1,5 @@
 {
-  "$id": "http://example.com/DatasetView",
+  "$id": "http://example.com/VisiumAuxiliaryFiles",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "allOf": [
     {
@@ -393,7 +393,7 @@
       }
     }
   ],
-  "description": "The denormalized manifest for dataset submission.",
+  "description": "Auxiliary data associated with spot/slide analysis (aligned Images, quality control files, etc)  from Spatial Transcriptomics.",
   "properties": {
     "Assay": {
       "description": "The assay the dataset, file, or publication is representative of. Multiple values permitted, comma separated.",
@@ -801,6 +801,12 @@
       "title": "attribution",
       "type": "string"
     },
+    "BiospecimenKey": {
+      "description": "Unique Biospecimen_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
+      "pattern": "-B\\d{1,9}",
+      "title": "Biospecimen Key",
+      "type": "string"
+    },
     "CollaborationRequired": {
       "description": "If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",
       "title": "collaborationRequired",
@@ -876,132 +882,9 @@
       "title": "Data Use Codes",
       "type": "array"
     },
-    "DatasetAlias": {
-      "description": "Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters.",
-      "title": "Dataset Alias",
-      "type": "string"
-    },
-    "DatasetDescription": {
-      "description": "Description of the dataset.",
-      "title": "Dataset Description",
-      "type": "string"
-    },
-    "DatasetDesign": {
-      "description": "The overall design of the dataset.",
-      "title": "Dataset Design",
-      "type": "string"
-    },
-    "DatasetDoi": {
-      "description": "The Digital Object Identifier (DOI) associated with the dataset.",
-      "format": "uri",
-      "title": "Dataset Doi",
-      "type": "string"
-    },
-    "DatasetFileFormats": {
-      "description": "A list of file formats associated with the dataset. Multiple values permitted, comma separated.",
-      "items": {
-        "enum": [
-          "AVI",
-          "BAI",
-          "BAM",
-          "BED",
-          "BIGWIG",
-          "BPM",
-          "bed12",
-          "bedgraph",
-          "CDS",
-          "CHP",
-          "CLS",
-          "COOL",
-          "CSV",
-          "cel",
-          "cloupe",
-          "DAE",
-          "DB",
-          "DCC",
-          "DS_Store",
-          "docx",
-          "FASTA",
-          "FASTQ",
-          "FCS",
-          "FIG",
-          "FREQ",
-          "GCG",
-          "GCT",
-          "GCTx",
-          "GFF3",
-          "GTF",
-          "GZIP Format",
-          "H5",
-          "H5AD",
-          "HDF",
-          "HDF5",
-          "HTML",
-          "IDAT",
-          "JPG",
-          "JSON",
-          "LIF",
-          "MAP",
-          "MAT",
-          "MATLAB script",
-          "MGF",
-          "MSF",
-          "MTX",
-          "maf",
-          "mzIdentML",
-          "mzXML",
-          "PDF",
-          "PKL",
-          "PNG",
-          "PZFX",
-          "Pending Annotation",
-          "pptx",
-          "Python Script",
-          "RAW",
-          "RDS",
-          "R File Format",
-          "ROUT",
-          "RPROJ",
-          "RTF",
-          "rcc",
-          "SCN",
-          "SF",
-          "SGI",
-          "SRA",
-          "STAT",
-          "SVS",
-          "TAR Format",
-          "TDF",
-          "TIFF",
-          "TSV",
-          "TXT",
-          "Unspecified",
-          "VCF",
-          "WIG",
-          "XML",
-          "xls",
-          "xlsx",
-          "ZIP"
-        ],
-        "type": "string"
-      },
-      "title": "Dataset File Formats",
-      "type": "array"
-    },
-    "DatasetName": {
-      "description": "Name of the dataset",
-      "title": "Dataset Name",
-      "type": "string"
-    },
-    "DatasetUrl": {
-      "description": "The url of where the dataset is stored.",
-      "format": "uri",
-      "title": "Dataset Url",
-      "type": "string"
-    },
-    "DatasetViewId": {
-      "description": "Unique ID associated with this Dataset View entry, used as a key for record linking and updates. Unless otherwise directed, this value should be equivalent to Dataset Alias. For externally hosted datasets with a corresponding Synapse Dataset containing indexed data, this should be the Synapse Id of the Dataset.",
-      "title": "DatasetView_id",
+    "DatasetViewKey": {
+      "description": "Unique DatasetView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
+      "title": "DatasetView Key",
       "type": "string"
     },
     "DeidentificationType": {
@@ -1022,6 +905,193 @@
       "description": "The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list. MONDO terms can be found here: https://ols.monarchinitiative.org/ontologies/mondo",
       "pattern": "MONDO:\\d{7}",
       "title": "diseaseSpecificResearch",
+      "type": "string"
+    },
+    "FileAlias": {
+      "description": "A string identifier associated with the file. Must be unique. Can be the repository accesssion number (e.g., Synapse ID, GEO identifier such as GSE12345). No Greek Letters or DOIs.",
+      "title": "File Alias",
+      "type": "string"
+    },
+    "FileAssayCategory": {
+      "description": "The broad category of experimental method used to generate the file, per NCI caDSR CDE 12373576 (Research Activity Experimental Method Type).",
+      "enum": [
+        "DNA Sequencing",
+        "Immunofluorescence",
+        "LC-MS/MS",
+        "Methylation Analysis",
+        "Multigene Expression Assay",
+        "Pathology",
+        "Quantitative Immunofluorescence",
+        "RNA Sequencing",
+        "Radiology"
+      ],
+      "title": "File Assay Category"
+    },
+    "FileBatchIdentifier": {
+      "description": "An identifier for the batch or group of files processed together (e.g. an extract batch, library prep batch, or sequencing run), used to support downstream analysis of batch effects. Free text, not a fixed list.",
+      "title": "File Batch Identifier",
+      "type": "string"
+    },
+    "FileDescription": {
+      "description": "Description of the file.",
+      "title": "File Description",
+      "type": "string"
+    },
+    "FileDesign": {
+      "description": "The overall design of the file.",
+      "title": "File Design",
+      "type": "string"
+    },
+    "FileFormat": {
+      "description": "The format of the file described by this entry.",
+      "enum": [
+        "ADF",
+        "AVI",
+        "BAI",
+        "BAM",
+        "BAS",
+        "BCR Biotab",
+        "BED",
+        "BEDPE Format",
+        "BIOM",
+        "bedgraph",
+        "bigBed",
+        "bigWig",
+        "Binary Format",
+        "CEL",
+        "CNS",
+        "CRAI",
+        "CRAM",
+        "CSV",
+        "cdf",
+        "DICOM",
+        "DICT",
+        "DOC",
+        "DOCX",
+        "DSV",
+        "EMF",
+        "FASTA",
+        "FASTQ",
+        "GCT/Res Format",
+        "GFF3",
+        "GIF",
+        "GPR",
+        "GTF",
+        "gVCF",
+        "GZIP Format",
+        "GenBank Format",
+        "HDF5",
+        "HIC",
+        "HTML",
+        "HTSeq Count",
+        "IDAT",
+        "IDF",
+        "idpDB",
+        "im3",
+        "JPEG",
+        "JPEG 2000",
+        "JSON",
+        "MAF",
+        "MAGE-TAB",
+        "MAT",
+        "MATLAB Script",
+        "MCD",
+        "MEX",
+        "MPEG-4",
+        "mtx",
+        "mzIdentML",
+        "mzML",
+        "mzXML",
+        "NIFTI Format",
+        "ODS",
+        "ODT",
+        "OME-TIFF",
+        "PDF",
+        "PDT",
+        "PED",
+        "PNG",
+        "PRISM",
+        "PZFX",
+        "Parquet",
+        "Plain Text Data Format",
+        "Python Script Format",
+        "QPTIFF",
+        "R File Format",
+        "R Markdown",
+        "RTF",
+        "rdata",
+        "rds",
+        "SAS",
+        "SAS binary",
+        "SDRF",
+        "SEG",
+        "SPSS",
+        "STATA",
+        "SVG",
+        "SVS",
+        "Sequence Record Format",
+        "TAR",
+        "TBI",
+        "TIFF",
+        "TSV",
+        "TXT",
+        "Thermo RAW",
+        "VCF",
+        "XLS",
+        "XLSX",
+        "XML",
+        "YAML",
+        "ZIP"
+      ],
+      "title": "File Format"
+    },
+    "FileLevel": {
+      "description": "The processing level the file can be mapped to.",
+      "enum": [
+        "Auxiliary",
+        "Level 1",
+        "Level 2",
+        "Level 3",
+        "Level 4",
+        "Metadata",
+        "Not Applicable"
+      ],
+      "title": "File Level"
+    },
+    "FileLongitudinalEventType": {
+      "description": "The type of event to which File Longitudinal Total Time Elapsed is related (e.g. Enrollment, Baseline). Free text, not a fixed list.",
+      "title": "File Longitudinal Event Type",
+      "type": "string"
+    },
+    "FileLongitudinalGroup": {
+      "description": "A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment",
+      "title": "File Longitudinal Group",
+      "type": "string"
+    },
+    "FileLongitudinalSequenceIdentifier": {
+      "description": "The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.).",
+      "title": "File Longitudinal Sequence Identifier",
+      "type": "string"
+    },
+    "FileLongitudinalTimeElapsedUnit": {
+      "description": "The unit of time associated with Sequential and Total Time Elapsed attributes.",
+      "title": "File Longitudinal Time Elapsed Unit",
+      "type": "string"
+    },
+    "FileLongitudinalTotalTimeElapsed": {
+      "description": "The total time elapsed between the first and current files contained this longitudinal group.",
+      "title": "File Longitudinal Total Time Elapsed",
+      "type": "number"
+    },
+    "FileUrl": {
+      "description": "The url of where the file is stored.",
+      "format": "uri",
+      "title": "File Url",
+      "type": "string"
+    },
+    "Filename": {
+      "description": "The path of a file in Synapse, relative to the project. The file associated with the path will be annotated with attributes contained in this sheet.",
+      "title": "Filename",
       "type": "string"
     },
     "GeographicalRestriction": {
@@ -1282,12 +1352,6 @@
       },
       "title": "geographicalRestriction",
       "type": "array"
-    },
-    "GrantViewKey": {
-      "description": "Unique GrantView_id foreign key(s) that group the resource with other components, as part of the same grant-associated collection. Please provide multiple values as a comma-separated list.",
-      "pattern": "(CA\\d{6}|Affiliated/Non-Grant Associated)",
-      "title": "GrantView Key",
-      "type": "string"
     },
     "InstitutionSpecificRestriction": {
       "description": "Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list. ROR IDs can be found here: https://ror.org/search",
@@ -1640,11 +1704,6 @@
       "description": "End date of the publication moratorium associated with the access requirement.",
       "format": "date",
       "title": "publicationMoratorium",
-      "type": "string"
-    },
-    "PublicationViewKey": {
-      "description": "Unique PublicationView_id foreign key(s) that link metadata entries as part of the same collection. Please provide multiple values as a comma-separated list.",
-      "title": "PublicationView Key",
       "type": "string"
     },
     "ResearchSpecificRestrictions": {
@@ -2287,17 +2346,103 @@
       "description": "The user-specific restrictions associated with the access requirement.",
       "title": "userSpecificRestriction",
       "type": "string"
+    },
+    "VisiumAuxiliaryFilesId": {
+      "description": "Unique row identifier, used as a primary key for record updates. This should be equivalent to the file Synapse Id unless otherwise indicated.",
+      "pattern": "^syn\\d{7,8}$",
+      "title": "VisiumAuxiliaryFiles_id",
+      "type": "string"
+    },
+    "VisiumCaptureArea": {
+      "description": "Area (or Capture Area) - One of the either four or two active regions where tissue can be placed on a Visium slide. Each area is intended to contain only one tissue sample. Slide areas are named consecutively from top to bottom: A1, B1, C1, D1 for Visium slides with 6.5 mm Capture Area and A, B for CytAssist slides with 11 mm Capture Area. Both CytAssist slides with 6.5 mm Capture Area and Gateway Slides contain only two slide areas, A1 and D1.",
+      "enum": [
+        "A",
+        "A1",
+        "B",
+        "B1",
+        "C",
+        "C1",
+        "D",
+        "D1"
+      ],
+      "title": "Visium Capture Area"
+    },
+    "VisiumFileType": {
+      "description": "The file type generated for the visium experiment.",
+      "enum": [
+        "barcodes",
+        "detected image png",
+        "detected jpg",
+        "features",
+        "fiducial image jpg",
+        "fiducial image png",
+        "filtered mex",
+        "high res image",
+        "json scale factors",
+        "low res image",
+        "probe dataset csv",
+        "qc result html",
+        "reference jpg",
+        "reference png",
+        "tissue_positions",
+        "unfiltered mex"
+      ],
+      "title": "Visium File Type"
+    },
+    "VisiumRNALevel1Key": {
+      "description": "Unique VisiumRNALevel1_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "VisiumRNALevel1 Key",
+      "type": "string"
+    },
+    "VisiumRNALevel2Key": {
+      "description": "Unique VisiumRNALevel2_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "VisiumRNALevel2 Key",
+      "type": "string"
+    },
+    "VisiumRNALevel3Key": {
+      "description": "Unique VisiumRNALevel3_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "VisiumRNALevel3 Key",
+      "type": "string"
+    },
+    "VisiumRNALevel4Key": {
+      "description": "Unique VisiumRNALevel4_id foreign key(s) that link metadata entries as part of the same Dataset. Please provide multiple values as a comma-separate list.",
+      "title": "VisiumRNALevel4 Key",
+      "type": "string"
+    },
+    "VisiumRunID": {
+      "description": "A unique identifier for this individual run (typically associated with a single slide) of the spatial transcriptomic processing workflow.",
+      "title": "Visium Run ID",
+      "type": "string"
+    },
+    "VisiumSlideID": {
+      "description": "For Visium, it is the unique identifier printed on the label of each Visium slide. The serial number starts with V followed by a number which can range between one through five and ends with a dash and a three digit number, such as 123. For CosMx, this refers to the loaded Flow Cell ID. For Xenium, this ID indicates the slide orientation, as it matches the relative location of the ID on the physical Xenium slide.",
+      "title": "Visium Slide ID",
+      "type": "string"
+    },
+    "WorkflowLink": {
+      "description": "Link to documentation or webpage associated with the computational workflow used to generate the file.",
+      "format": "uri",
+      "title": "Workflow Link",
+      "type": "string"
+    },
+    "WorkflowVersion": {
+      "description": "Major version of the workflow (e.g. Cell Ranger v3.1)",
+      "title": "Workflow Version",
+      "type": "string"
     }
   },
   "required": [
     "Assay",
-    "DatasetAlias",
-    "DatasetDoi",
-    "DatasetName",
-    "DatasetUrl",
-    "DatasetViewId",
-    "Species"
+    "FileAlias",
+    "FileFormat",
+    "FileLevel",
+    "FileUrl",
+    "Species",
+    "VisiumAuxiliaryFilesId",
+    "VisiumFileType",
+    "VisiumRunID",
+    "VisiumSlideID"
   ],
-  "title": "DatasetView",
+  "title": "VisiumAuxiliaryFiles",
   "type": "object"
 }
