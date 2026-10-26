@@ -51757,7 +51757,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Immunoassay",
+            "sms:displayName": "immunoassay",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
