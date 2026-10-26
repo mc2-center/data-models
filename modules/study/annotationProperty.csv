@@ -8,7 +8,7 @@ Study Deidentification Method Type,General description of the de-identification 
 Study Deidentification Method Description,Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.,,,,,,string,,,,,,
 Study Deidentification Method Software,Software that was used to de-identify the data (if used),,,,,,string,,,,,,
 Study dbGaP Accession Id,A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.,,,,"CDE:11524544, CRDC_CDE:11524544",,string,,,,,,
-Study Index Date,"The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.","Diagnosis Date , Enrollment Date, Collection Date, Birth Date",,,,,string,,,,,,
+Study Index Date,"The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.","Diagnosis Date, Enrollment Date, Collection Date, Birth Date",,,,,string,,,,,,
 Study Project Identifier,The Synapse Project identifier (synID) with which this Study is related.,,,,,,string_list,,syn[0-9]+,,,,
 Study Short Name,The acronym or abbreviated form of the title for a research data collection (e.g. GLIOMA01).,,,,CRDC_CDE:11459812,,string,,,,,,
 Study Number of Samples,The number of specimens associated with systematic investigation into a subject.,,,True,CDE:11555663,,number,,,,,,

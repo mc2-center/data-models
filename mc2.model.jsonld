@@ -32452,7 +32452,7 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string_list",
             "sms:displayName": "dataCatalogDataUseModifiers",
-            "sms:pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+            "sms:pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -35532,9 +35532,6 @@
                 },
                 {
                     "@id": "bts:VascularNeoplasm"
-                },
-                {
-                    "@id": "bts:Not-Applicable"
                 },
                 {
                     "@id": "bts:PlexiformNeurofibroma"
@@ -51760,7 +51757,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:IsTemplate": "sms:false",
-            "sms:displayName": "immunoassay",
+            "sms:displayName": "Immunoassay",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -62460,30 +62457,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Not-Applicable",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Not-Applicable",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Manifestation"
-                },
-                {
-                    "@id": "bts:TumorType"
-                },
-                {
-                    "@id": "bts:DSPDatasetTumorType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Not-Applicable",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:PlexiformNeurofibroma",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -62620,7 +62593,7 @@
             "sms:columnType": "string",
             "sms:displayName": "Dataset Doi",
             "sms:format": "uri",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -66409,9 +66382,6 @@
                     "@id": "bts:VascularNeoplasm"
                 },
                 {
-                    "@id": "bts:Not-Applicable"
-                },
-                {
                     "@id": "bts:PlexiformNeurofibroma"
                 }
             ],
@@ -66437,7 +66407,7 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string_list",
             "sms:displayName": "Dataset Data Use Codes",
-            "sms:pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+            "sms:pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -97628,7 +97598,7 @@
         {
             "@id": "bts:PublicationDoi",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.",
+            "rdfs:comment": "The digital object identifier associated with the publication in the form of https://doi.org/{doi} to comply with CrossRef DOI display guidelines.",
             "rdfs:label": "PublicationDoi",
             "rdfs:subClassOf": [
                 {
@@ -111835,9 +111805,6 @@
                 },
                 {
                     "@id": "bts:VascularNeoplasm"
-                },
-                {
-                    "@id": "bts:Not-Applicable"
                 },
                 {
                     "@id": "bts:PlexiformNeurofibroma"

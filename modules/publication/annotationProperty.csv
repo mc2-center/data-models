@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Required,Properties,Validation Rules,columnType,Format,Pattern,Minimum,Maximum,IsTemplate,Source
-Publication Doi,The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.,,,,,,string,uri,,,,,
+Publication Doi,The digital object identifier associated with the publication in the form of https://doi.org/{doi} to comply with CrossRef DOI display guidelines.,,,,,,string,uri,,,,,
 Publication Journal,The name of the periodical publication in which the publication was published.,,,True,,,string,,,,,,
 Pubmed Id,The PubMed identifier associated with the publication.,,,True,CDE:3443453,,string,,,,,,
 Pubmed Url,Pubmed URL for the publication,,,True,,,string,uri,,,,,

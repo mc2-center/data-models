@@ -328,10 +328,10 @@
     "DataCatalogDataUseModifiers": {
       "description": "List of data use ontology (DUO) terms that are true for dataset, which describes the allowable scope and terms for data use. Omit property if not applicable/unknown.",
       "items": {
-        "pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+        "pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
         "type": "string"
       },
-      "pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+      "pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
       "title": "dataCatalogDataUseModifiers",
       "type": "array"
     },
@@ -687,7 +687,7 @@
           "gene expression",
           "genomic variants",
           "image",
-          "immunoassay",
+          "Immunoassay",
           "network",
           "nucleic acid sequence record"
         ],
@@ -929,7 +929,6 @@
         "Neurofibroma",
         "Non-Functioning Pituitary Gland Adenoma",
         "Non-Hodgkin Lymphoma",
-        "Not-Applicable",
         "Not Applicable",
         "Oral Cavity Neoplasm",
         "Oral Cavity Squamous Cell Carcinoma",

@@ -440,7 +440,7 @@
       "type": "array"
     },
     "PublicationDoi": {
-      "description": "The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.",
+      "description": "The digital object identifier associated with the publication in the form of https://doi.org/{doi} to comply with CrossRef DOI display guidelines.",
       "format": "uri",
       "title": "Publication Doi",
       "type": "string"
@@ -744,7 +744,6 @@
           "Neurofibroma",
           "Non-Functioning Pituitary Gland Adenoma",
           "Non-Hodgkin Lymphoma",
-          "Not-Applicable",
           "Not Applicable",
           "Oral Cavity Neoplasm",
           "Oral Cavity Squamous Cell Carcinoma",
