@@ -1,6 +1,13 @@
-# CCKP Data Model 14.0.1
+# CCKP Data Model 14.1.0
 
-This is a **patch release** on top of 14.0.0. It fixes value-set and validation defects found after the 14.0.0 cutover; no attributes were added, removed or renamed. See `release_14.0.0_notes.md` for the full 14.0.0 changes.
+This is a **minor release** on top of 14.0.0. It fixes value-set and validation defects found after the 14.0.0 cutover and adds one attribute (`File Data Use Codes`), replacing `Data Use Codes` in the file-based templates. Originally planned as 14.0.1; bumped to 14.1.0 because of the new attribute and the changed file-template column. See `release_14.0.0_notes.md` for the full 14.0.0 changes.
+
+## File Data Use Codes
+
+- **New attribute `File Data Use Codes`** (`modules/file/annotationProperty.csv`): a `string_list` validated by pattern `^(DUO:\d{7,8}|DUOPlus\d+|Pending Annotation)$`, with no controlled list and therefore none of the conditional companion columns that `Data Use Codes` adds in Curator (same design as `Dataset Data Use Codes`).
+- File View and all file-level assay templates (Imaging L1-L4, Sequencing L1-L3, Sequencing RNA L1, NanoString GeoMx L1-L3/Imaging, Visium RNA L1-L4/Auxiliary) now use `File Data Use Codes` instead of `Data Use Codes`. **Breaking for file manifests:** the column header changes from `Data Use Codes` to `File Data Use Codes`.
+- `Data Use Codes` is kept, with its controlled list and conditional companion fields, for Study. `DSP Data Use Codes` is unchanged for DataDSP.
+- `docs/model/study.md` DUO attribute table updated accordingly.
 
 ## DM-14
 
