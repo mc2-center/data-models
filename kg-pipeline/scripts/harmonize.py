@@ -135,7 +135,7 @@ SURNAME_PARTICLES = {
 }
 
 
-def split_person_names(raw_value):
+def split_person_names(raw_value, reorder=True):
     """Split a free-text scalar like Grant.investigator into individual
     person names.
 
@@ -153,6 +153,10 @@ def split_person_names(raw_value):
     not infallible: a multi-word surname using some other, rarer particle
     not in that list still gets treated as a list instead - a known,
     accepted false positive, not silently hidden.
+
+    With reorder=False a "Last, First MI" person is returned as the source
+    text, as written ("PEROU, CHARLES M"), instead of being put back in
+    First MI Last order.
     """
     raw_value = (raw_value or "").strip()
     if not raw_value:
@@ -164,6 +168,8 @@ def split_person_names(raw_value):
     starts_with_particle = bool(first_words) and first_words[0].casefold() in SURNAME_PARTICLES
     if len(first_words) < 2 or starts_with_particle:
         # LAST, FIRST MI - one person, not a comma-joined list of names.
+        if not reorder:
+            return [raw_value]
         last = parts[0]
         first_mi = " ".join(p for p in parts[1:] if p)
         name = f"{first_mi} {last}".strip()
@@ -194,7 +200,10 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
     "Jane Doe, John Roe") additionally splits a cell that holds no "|": on ","
     for mode "true", or with split_person_names() for mode "person_names"
     (Grant.investigator: "Krogan, Nevan" is one person, "Amy Brock, Thomas E.
-    Yankeelov" two). A cell containing "|" is a real list and is split on "|" only.
+    Yankeelov" two). A cell containing "|" is a real list and is split on "|" only,
+    except in "person_names" mode, where each "|" item (or the whole cell when
+    there is none) also goes through split_person_names(reorder=False), so the
+    two forms give the same items with the source text kept as written.
     Multivalued slots without the annotation never split on commas (e.g.
     Dataset.accessInformation is free text containing commas).
 
@@ -208,8 +217,14 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
     fields.
     """
     if multivalued:
-        if legacy_comma_separated == "person_names" and LIST_DELIMITER not in raw_value:
-            values = split_person_names(raw_value)
+        if legacy_comma_separated == "person_names":
+            # Each person stays one item with the source text as written, in
+            # both the "|" and the comma form.
+            values = [
+                name
+                for item in raw_value.split(LIST_DELIMITER)
+                for name in split_person_names(item, reorder=False)
+            ]
         elif legacy_comma_separated and LIST_DELIMITER not in raw_value:
             values = raw_value.split(",")
         else:

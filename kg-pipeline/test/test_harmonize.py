@@ -118,8 +118,11 @@ def test_schema_marks_the_three_cutover_slots_multivalued_and_legacy_comma():
 def test_legacy_person_names_mode_keeps_last_first_as_one_person():
     from harmonize import split_field_values
 
-    assert split_field_values("Krogan, Nevan", True, "person_names") == ["Nevan Krogan"]
+    # Each person is one item, source text kept as written (not reordered).
+    assert split_field_values("Krogan, Nevan", True, "person_names") == ["Krogan, Nevan"]
     assert split_field_values("Amy Brock, Thomas E. Yankeelov", True, "person_names") == [
         "Amy Brock", "Thomas E. Yankeelov"]
     assert split_field_values("Krogan, Nevan|Amy Brock", True, "person_names") == [
         "Krogan, Nevan", "Amy Brock"]
+    assert split_field_values("Krogan, Nevan|Van't Veer, Laura", True, "person_names") == [
+        "Krogan, Nevan", "Van't Veer, Laura"]

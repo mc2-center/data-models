@@ -53,3 +53,24 @@ def rdf_graphs(harmonized_dir):
             confirmed_unmappable=confirmed_unmappable,
         )
     return graphs
+
+
+def build_graph_from_rows(cls_name, rows, tmp_path):
+    """Harmonize + build the triples of `rows` (a list of dicts sharing one
+    set of columns) for one class, in an isolated tmp_path - for tests that
+    need cell values the shared fixtures don't carry."""
+    import csv
+
+    raw_path = tmp_path / f"{cls_name}.csv"
+    with open(raw_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    field_lookups = harmonize.build_field_lookups(SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, [])
+    harmonize.harmonize_table(
+        cls_name, str(raw_path), str(tmp_path / f"{cls_name}_harmonized.csv"), field_lookups, [], defaultdict(set)
+    )
+    schema_meta = build_triples.get_schema_metadata(SCHEMA_PATH)
+    return build_triples.build_class_graph(
+        cls_name, schema_meta, str(tmp_path), {}, build_triples.load_prefixes(MC2_SCHEMA_PATH),
+    )

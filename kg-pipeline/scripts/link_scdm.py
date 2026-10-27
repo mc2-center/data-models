@@ -76,7 +76,7 @@ from rdflib.namespace import RDF
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_triples import IDENTIFIER_FIELD, LIST_DELIMITER, mint_id, mint_iri, normalize, read_harmonized  # noqa: E402
-from harmonize import SURNAME_PARTICLES, split_person_names  # noqa: E402,F401  (re-exported for callers)
+from harmonize import SURNAME_PARTICLES, split_field_values, split_person_names  # noqa: E402,F401  (re-exported for callers)
 
 
 def _has_identifier(cls_name, row):
@@ -139,17 +139,12 @@ def split_values(raw_value, multivalued):
 
 
 def split_investigators(raw_value):
-    """Grant.investigator in either form: a `|`-joined STRING_LIST (post-14.x
-    cutover) splits on `|` only - each item is already one person, so a
-    "Last, First" item is kept as-is by splitting on "|" alone; the legacy
-    plain-text form (no `|`) goes through split_person_names()'s comma
-    heuristic, which can tell "Last, First" from a comma-joined name list
-    (a blanket comma split, as harmonize.split_field_values does for other
-    legacy_comma_separated slots, would cut "Krogan, Nevan" in two)."""
-    raw_value = raw_value or ""
-    if LIST_DELIMITER in raw_value:
-        return split_values(raw_value, True)
-    return split_person_names(raw_value)
+    """Grant.investigator in either form (`|`-joined STRING_LIST or the legacy
+    comma text), split by harmonize.split_field_values() in "person_names" mode
+    and then normalised to "First MI Last" for the Person stub, so the comma
+    and `|` forms of one person give the same Person IRI."""
+    items = split_field_values(raw_value or "", True, "person_names")
+    return [name for item in items for name in split_person_names(item, reorder=True)]
 
 
 def add_organizations(g, organization_crosswalk):

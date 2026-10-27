@@ -278,9 +278,36 @@ def test_link_investigators_pipe_joined_grant_investigator_list(tmp_path):
     with open(tmp_path / "Grant_harmonized.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["grantId", "investigator"])
-        writer.writerow(["syn1", "Jane Doe|Krogan, Nevan"])  # list form: "Last, First" item kept whole
+        writer.writerow(["syn1", "Jane Doe|Krogan, Nevan"])  # list form: "Last, First" item is one person
     g = rdflib.Graph()
     n_persons, n_edges = link_scdm.link_investigators(g, str(tmp_path))
     assert (n_persons, n_edges) == (2, 2)
     names = {str(o) for o in g.objects(None, SAGECDM.display_name)}
-    assert names == {"Jane Doe", "Krogan, Nevan"}  # list items kept as written
+    assert names == {"Jane Doe", "Nevan Krogan"}  # Person stubs use "First MI Last" in both forms
+
+
+def test_link_investigators_comma_and_pipe_forms_give_the_same_person_iri(tmp_path):
+    import build_triples
+    from conftest import build_graph_from_rows
+
+    with open(tmp_path / "Grant_harmonized.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["grantId", "investigator"])
+        writer.writerow(["syn1", "PEROU, CHARLES M"])
+        writer.writerow(["syn2", "PEROU, CHARLES M|Jane Doe"])
+    g = rdflib.Graph()
+    n_persons, n_edges = link_scdm.link_investigators(g, str(tmp_path))
+    assert (n_persons, n_edges) == (2, 3)
+    perou = {
+        str(g.value(rdflib.URIRef(f"https://www.synapse.org/Synapse:{grant}"), CCKP.investigatorRef))
+        for grant in ("syn1", "syn2")
+    }
+    assert len(perou) == 1
+    assert perou.pop().endswith("investigator-charles-m-perou")
+
+    # ...and the cckp:investigator literal keeps the source text as written.
+    triples_dir = tmp_path / "triples"
+    triples_dir.mkdir()
+    kg = build_graph_from_rows("Grant", [{"grantId": "syn1", "investigator": "PEROU, CHARLES M"}], triples_dir)
+    subject = rdflib.URIRef(build_triples.mint_iri("Grant", "syn1"))
+    assert list(kg.objects(subject, CCKP.investigator)) == [rdflib.Literal("PEROU, CHARLES M")]
