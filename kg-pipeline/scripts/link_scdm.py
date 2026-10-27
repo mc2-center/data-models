@@ -14,7 +14,7 @@ Reads the same harmonized CSVs build_triples.py builds cckp_kg.ttl from
     human-curated description/status SCDM's Program class requires) are
     skipped, not asserted. Dataset/Publication/Tool/Grant.consortium
     values that resolve to a reviewed row get a cckp:consortiumRef edge.
-  - Provisional sagecdm:Person stubs from Grant.investigator (list; legacy comma text) and
+  - Provisional sagecdm:Person stubs from Grant.investigator (comma-joined text, or a `|` list) and
     EducationalResource.contributors (free text, no controlled
     vocabulary) - one stub per distinct person, flagged cckp:provisional
     (same tier-3 discipline build_triples.py already uses for
@@ -50,9 +50,8 @@ access-controlled MC2 assay-metadata domain scripts/link_sagebrain.py
 operates in.
 
 Known data-quality caveat, surfaced not hidden (confirmed against live
-data, not assumed): Grant.investigator is a STRING_LIST column after the
-data model 14.x cutover, but until the live table changes it is a scalar
-STRING (per cckp_portal.linkml.yaml's own header comment) whose raw
+data, not assumed): Grant.investigator is a scalar
+STRING column (per cckp_portal.linkml.yaml's own header comment) whose raw
 values are sometimes several PI names crammed into one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
 Grant row). split_person_names() below splits these into one Person stub
 per real person, disambiguated from a single "Last, First MI" name (which
@@ -97,7 +96,7 @@ INSTITUTION_FIELDS = {"Grant": ("grantInstitution", "institutionAlias")}
 # cckp_portal.linkml.yaml) - the other four all do.
 CONSORTIUM_CLASSES = ("Dataset", "Publication", "Tool", "Grant")
 # field -> multivalued? (contributors is a free-text `|` list; Grant.investigator
-# is STRING_LIST after the 14.x cutover but still comma-joined text before it -
+# is comma-joined text in a STRING column -
 # it is handled separately in split_investigators(); both per
 # cckp_portal.linkml.yaml).
 INVESTIGATOR_FIELDS = {"Grant": ("investigator", True), "EducationalResource": ("contributors", True)}
@@ -139,8 +138,8 @@ def split_values(raw_value, multivalued):
 
 
 def split_investigators(raw_value):
-    """Grant.investigator in either form (`|`-joined STRING_LIST or the legacy
-    comma text), split by harmonize.split_field_values() in "person_names" mode
+    """Grant.investigator in either form (comma text, or a `|`-joined list should the
+    column ever become STRING_LIST), split by harmonize.split_field_values() in "person_names" mode
     and then normalised to "First MI Last" for the Person stub, so the comma
     and `|` forms of one person give the same Person IRI."""
     items = split_field_values(raw_value or "", True, "person_names")
@@ -311,7 +310,7 @@ def link_investigators(g, harmonized_dir):
     _find_or_mint_person()'s docstring for how "distinct person" is
     decided), linking each source row to it via
     cckp:investigatorRef/contributorRef. Grant.investigator is split via
-    split_investigators() (`|` list, or the legacy comma heuristic of
+    split_investigators() (`|` list, or the comma heuristic of
     split_person_names()); EducationalResource.contributors (already a real
     `|`-delimited list) still uses the plain pipe split - see this
     module's docstring for both fields' caveats."""

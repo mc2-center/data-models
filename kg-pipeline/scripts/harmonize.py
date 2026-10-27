@@ -86,7 +86,7 @@ DEFAULT_CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalRe
 
 
 def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, class_order=None):
-    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued, legacy_comma_separated)}}.
+    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued, comma_separated)}}.
 
     class_order defaults to the 5 CCKP portal classes - the MC2 assay-metadata
     pipeline (scripts/extract_mc2_assay_metadata.py + `make harmonize-mc2-assay`)
@@ -123,12 +123,12 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
             if src not in src_cache:
                 src_cache[src] = load_cv_lookup(modules_dir, src, malformed_rows)
             field_lookups[cls_name][field] = (enum_name, src, src_cache[src], bool(slot.multivalued),
-                                                  slot_legacy_comma_separated(slot))
+                                                  slot_comma_separated(slot))
     return field_lookups
 
 
-LEGACY_COMMA_ANNOTATION = "legacy_comma_separated"
-LEGACY_COMMA_MODES = ("true", "person_names")
+COMMA_ANNOTATION = "comma_separated"
+COMMA_MODES = ("true", "person_names")
 
 
 # Lowercase surname particles that can make a single last name span 2+
@@ -187,26 +187,25 @@ def split_person_names(raw_value, reorder=True):
     return [p for p in parts if p]
 
 
-def slot_legacy_comma_separated(slot):
-    """The `legacy_comma_separated` mode of a LinkML slot (see
+def slot_comma_separated(slot):
+    """The `comma_separated` mode of a LinkML slot (see
     cckp_portal.linkml.yaml's header): "true" (plain comma split),
     "person_names" (split_person_names() heuristic), or None."""
     ann = slot.annotations
-    if LEGACY_COMMA_ANNOTATION not in ann:
+    if COMMA_ANNOTATION not in ann:
         return None
-    mode = str(ann[LEGACY_COMMA_ANNOTATION].value).strip().lower()
-    return mode if mode in LEGACY_COMMA_MODES else None
+    mode = str(ann[COMMA_ANNOTATION].value).strip().lower()
+    return mode if mode in COMMA_MODES else None
 
 
-def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
+def split_field_values(raw_value, multivalued, comma_separated=False):
     """Split a raw CCKP cell into its individual value(s) (stripped, empties
     dropped). The single splitting rule shared by harmonize.py and
     build_triples.py.
 
     Multivalued fields use LIST_DELIMITER ("|") per this pipeline's own
-    convention. A multivalued slot annotated `legacy_comma_separated` (the
-    live column is still, or was until the data model 14.x cutover, plain
-    STRING holding comma-joined text such as "MIT, BSD-2-Clause" or
+    convention. A multivalued slot annotated `comma_separated` (the
+    live column is plain STRING holding comma-joined text such as "MIT, BSD-2-Clause" or
     "Jane Doe, John Roe") additionally splits a cell that holds no "|": on ","
     for mode "true", or with split_person_names() for mode "person_names"
     (Grant.investigator: "Krogan, Nevan" is one person, "Amy Brock, Thomas E.
@@ -227,7 +226,7 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
     fields.
     """
     if multivalued:
-        if legacy_comma_separated == "person_names":
+        if comma_separated == "person_names":
             # Each person stays one item with the source text as written, in
             # both the "|" and the comma form.
             values = [
@@ -235,7 +234,7 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
                 for item in raw_value.split(LIST_DELIMITER)
                 for name in split_person_names(item, reorder=False)
             ]
-        elif legacy_comma_separated and LIST_DELIMITER not in raw_value:
+        elif comma_separated and LIST_DELIMITER not in raw_value:
             values = raw_value.split(",")
         else:
             values = raw_value.split(LIST_DELIMITER)
