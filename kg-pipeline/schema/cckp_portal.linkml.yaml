@@ -17,7 +17,9 @@
 #     and carry `legacy_comma_separated` (below) until the live tables change.
 #   - `legacy_comma_separated: "true"` annotation: the live column is still
 #     (or was until the 14.x cutover) plain STRING holding comma-joined text
-#     (e.g. "MIT, BSD-2-Clause"), so a cell with no `|` is split on commas;
+#     (e.g. "MIT, BSD-2-Clause"), so a cell with no `|` is split on commas
+#     ("true") or by the "Last, First"-aware person-name heuristic
+#     ("person_names", Grant.investigator);
 #     a cell containing `|` (STRING_LIST joined by extract_cckp_tables.py)
 #     splits on `|` only. Slots WITHOUT the annotation never split on commas
 #     (e.g. Dataset.accessInformation is free text). Implemented once in
@@ -484,7 +486,7 @@ classes:
       investigator:
         multivalued: true
         annotations:
-          legacy_comma_separated: "true"
+          legacy_comma_separated: "person_names"
         description: Principal investigator name(s) (no controlled vocabulary - personal names). STRING_LIST after the data model 14.x cutover.
       consortium:
         multivalued: true

@@ -116,13 +116,14 @@ installation required.
 model 14.x cutover turns `Tool.license`, `EducationalResource.license` and
 `Grant.investigator` from STRING into STRING_LIST, so those slots are
 `multivalued` in `cckp_portal.linkml.yaml` and carry
-`legacy_comma_separated: "true"`: a cell containing `|` splits on `|`;
-otherwise (the pre-cutover comma-joined text, e.g. `MIT, BSD-2-Clause`) it
-splits on `,`. Multivalued slots without the annotation (e.g.
+a `legacy_comma_separated` annotation: a cell containing `|` splits on `|`;
+otherwise (the pre-cutover comma-joined text) it splits on `,` for `"true"`
+(the licenses, e.g. `MIT, BSD-2-Clause`), or with the "Last, First"-aware
+`split_person_names()` heuristic for `"person_names"` (`Grant.investigator`:
+`PEROU, CHARLES M` is one person, `Amy Brock, Thomas E. Yankeelov` two). Multivalued slots without the annotation (e.g.
 `Dataset.accessInformation`, free text) never split on commas. The rule lives
 once, in `scripts/harmonize.py` `split_field_values()`, and is used by
-harmonize and build_triples; `link_scdm.py` handles `Grant.investigator` with
-its own name-aware heuristic for the legacy form. Remove the annotation once
+harmonize, build_triples and `link_scdm.py`. Remove the annotation once
 the live tables hold real lists.
 
 **`make suggest-mappings` picks its external registry per-CV automatically**

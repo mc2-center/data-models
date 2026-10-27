@@ -110,5 +110,16 @@ def test_schema_marks_the_three_cutover_slots_multivalued_and_legacy_comma():
     meta = get_schema_metadata(SCHEMA_PATH)
     for cls, field in (("Tool", "license"), ("EducationalResource", "license"), ("Grant", "investigator")):
         assert meta[cls][field]["multivalued"] and meta[cls][field]["legacy_comma_separated"]
+    assert meta["Grant"]["investigator"]["legacy_comma_separated"] == "person_names"
     assert meta["Dataset"]["accessInformation"]["multivalued"]
     assert not meta["Dataset"]["accessInformation"]["legacy_comma_separated"]
+
+
+def test_legacy_person_names_mode_keeps_last_first_as_one_person():
+    from harmonize import split_field_values
+
+    assert split_field_values("Krogan, Nevan", True, "person_names") == ["Nevan Krogan"]
+    assert split_field_values("Amy Brock, Thomas E. Yankeelov", True, "person_names") == [
+        "Amy Brock", "Thomas E. Yankeelov"]
+    assert split_field_values("Krogan, Nevan|Amy Brock", True, "person_names") == [
+        "Krogan, Nevan", "Amy Brock"]

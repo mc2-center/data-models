@@ -713,7 +713,7 @@ cckp:investigator a owl:DatatypeProperty ;
     rdfs:label "investigator" ;
     skos:definition "Principal investigator name(s) (no controlled vocabulary - personal names). STRING_LIST after the data model 14.x cutover." ;
     skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
-    cckp:legacy_comma_separated "true" .
+    cckp:legacy_comma_separated "person_names" .
 
 cckp:keywords a owl:DatatypeProperty ;
     rdfs:label "keywords" ;

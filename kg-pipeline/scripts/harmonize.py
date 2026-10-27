@@ -118,13 +118,68 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
 
 
 LEGACY_COMMA_ANNOTATION = "legacy_comma_separated"
+LEGACY_COMMA_MODES = ("true", "person_names")
+
+
+# Lowercase surname particles that can make a single last name span 2+
+# words (e.g. "Van't Veer, Laura", "De La Cruz, Maria") - checked by exact
+# match on the first word before the first comma, not by prefix, so a
+# genuine first name that merely starts with the same letters (e.g.
+# "Vanessa") isn't caught by mistake. Not exhaustive - a multi-word surname
+# using some other, rarer particle still falls through to the word-count
+# heuristic in split_person_names().
+SURNAME_PARTICLES = {
+    "van", "van't", "vander", "vanden", "von", "der", "den", "de", "des",
+    "du", "da", "di", "del", "della", "dos", "das", "la", "le", "mac", "mc",
+    "st", "st.", "o'",
+}
+
+
+def split_person_names(raw_value):
+    """Split a free-text scalar like Grant.investigator into individual
+    person names.
+
+    Two real formats show up in the live data, indistinguishable without a
+    heuristic: multiple people already in "First [MI] Last" order, joined
+    by commas (e.g. "Amy Brock, Thomas E. Yankeelov" - two people); or a
+    single person in "Last, First MI" order (e.g. "Krogan, Nevan"). Told
+    apart by the text before the first comma: a single word there reads as
+    a last name (LAST, FIRST MI - one person, put back in First MI Last
+    order below) rather than the first person's full name in a comma-joined
+    list (two-plus words - FIRST MI LAST, FIRST MI LAST, ...) - unless that
+    first word is a known surname particle (SURNAME_PARTICLES above), in
+    which case the whole multi-word segment is still read as one last name
+    (e.g. "Van't Veer, Laura" - one person, not two). Still a heuristic,
+    not infallible: a multi-word surname using some other, rarer particle
+    not in that list still gets treated as a list instead - a known,
+    accepted false positive, not silently hidden.
+    """
+    raw_value = (raw_value or "").strip()
+    if not raw_value:
+        return []
+    parts = [p.strip() for p in raw_value.split(",")]
+    if len(parts) == 1:
+        return [parts[0]] if parts[0] else []
+    first_words = parts[0].split()
+    starts_with_particle = bool(first_words) and first_words[0].casefold() in SURNAME_PARTICLES
+    if len(first_words) < 2 or starts_with_particle:
+        # LAST, FIRST MI - one person, not a comma-joined list of names.
+        last = parts[0]
+        first_mi = " ".join(p for p in parts[1:] if p)
+        name = f"{first_mi} {last}".strip()
+        return [name] if name else []
+    return [p for p in parts if p]
 
 
 def slot_legacy_comma_separated(slot):
-    """True if a LinkML slot carries the `legacy_comma_separated` annotation
-    (see cckp_portal.linkml.yaml's header)."""
+    """The `legacy_comma_separated` mode of a LinkML slot (see
+    cckp_portal.linkml.yaml's header): "true" (plain comma split),
+    "person_names" (split_person_names() heuristic), or None."""
     ann = slot.annotations
-    return LEGACY_COMMA_ANNOTATION in ann and str(ann[LEGACY_COMMA_ANNOTATION].value).strip().lower() == "true"
+    if LEGACY_COMMA_ANNOTATION not in ann:
+        return None
+    mode = str(ann[LEGACY_COMMA_ANNOTATION].value).strip().lower()
+    return mode if mode in LEGACY_COMMA_MODES else None
 
 
 def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
@@ -136,8 +191,10 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
     convention. A multivalued slot annotated `legacy_comma_separated` (the
     live column is still, or was until the data model 14.x cutover, plain
     STRING holding comma-joined text such as "MIT, BSD-2-Clause" or
-    "Jane Doe, John Roe") additionally splits on "," when the cell holds no
-    "|" - a cell containing "|" is a real list and is split on "|" only.
+    "Jane Doe, John Roe") additionally splits a cell that holds no "|": on ","
+    for mode "true", or with split_person_names() for mode "person_names"
+    (Grant.investigator: "Krogan, Nevan" is one person, "Amy Brock, Thomas E.
+    Yankeelov" two). A cell containing "|" is a real list and is split on "|" only.
     Multivalued slots without the annotation never split on commas (e.g.
     Dataset.accessInformation is free text containing commas).
 
@@ -151,7 +208,9 @@ def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
     fields.
     """
     if multivalued:
-        if legacy_comma_separated and LIST_DELIMITER not in raw_value:
+        if legacy_comma_separated == "person_names" and LIST_DELIMITER not in raw_value:
+            values = split_person_names(raw_value)
+        elif legacy_comma_separated and LIST_DELIMITER not in raw_value:
             values = raw_value.split(",")
         else:
             values = raw_value.split(LIST_DELIMITER)
