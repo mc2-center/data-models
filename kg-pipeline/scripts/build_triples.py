@@ -63,7 +63,7 @@ import yaml
 from linkml_runtime import SchemaView
 from rdflib.namespace import RDF, XSD
 
-from harmonize import slot_legacy_comma_separated, split_field_values
+from harmonize import SLOT_ENUM_OVERRIDES, slot_legacy_comma_separated, split_field_values
 
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
@@ -275,6 +275,8 @@ def get_schema_metadata(schema_path, class_order=None):
                 # annotation anywhere in that file) - see harmonize.py's
                 # matching fallback in build_field_lookups.
                 mc2_enum = str(slot.range)
+            elif field in SLOT_ENUM_OVERRIDES:
+                mc2_enum = SLOT_ENUM_OVERRIDES[field]
             else:
                 mc2_enum = None
             meta[cls_name][field] = {

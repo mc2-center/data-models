@@ -74,6 +74,14 @@ def load_cv_lookup(modules_dir, src, malformed_rows):
     return lookup
 
 
+# mc2_model.linkml.yaml slots that carry a pattern but no enum range, yet whose
+# values are drawn from an existing controlled vocabulary: {slot: enum name}.
+# Since the 14.1.0 model the file-level classes use `File Data Use Codes` (DUO
+# pattern) where they used to use `Data Use Codes` (range: Data Use Codes
+# Enum); the values are the same DUO codes, so resolve them against that CV.
+# build_triples.get_schema_metadata() reads this too.
+SLOT_ENUM_OVERRIDES = {"File Data Use Codes": "Data Use Codes Enum"}
+
 DEFAULT_CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]
 
 
@@ -102,6 +110,8 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
                 # annotation anywhere in that file - confirmed, not assumed):
                 # the slot's LinkML `range` IS the enum name directly.
                 enum_name = str(slot.range)
+            elif field in SLOT_ENUM_OVERRIDES:
+                enum_name = SLOT_ENUM_OVERRIDES[field]
             else:
                 continue
             attr_name = enum_name[: -len(" Enum")] if enum_name.endswith(" Enum") else enum_name
