@@ -14,7 +14,7 @@ Reads the same harmonized CSVs build_triples.py builds cckp_kg.ttl from
     human-curated description/status SCDM's Program class requires) are
     skipped, not asserted. Dataset/Publication/Tool/Grant.consortium
     values that resolve to a reviewed row get a cckp:consortiumRef edge.
-  - Provisional sagecdm:Person stubs from Grant.investigator (scalar) and
+  - Provisional sagecdm:Person stubs from Grant.investigator (list; legacy comma text) and
     EducationalResource.contributors (free text, no controlled
     vocabulary) - one stub per distinct person, flagged cckp:provisional
     (same tier-3 discipline build_triples.py already uses for
@@ -50,10 +50,10 @@ access-controlled MC2 assay-metadata domain scripts/link_sagebrain.py
 operates in.
 
 Known data-quality caveat, surfaced not hidden (confirmed against live
-data, not assumed): Grant.investigator is genuinely a scalar STRING column
-in the live Synapse table (per cckp_portal.linkml.yaml's own header
-comment), but its raw values are sometimes several PI names crammed into
-one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
+data, not assumed): Grant.investigator is a STRING_LIST column after the
+data model 14.x cutover, but until the live table changes it is a scalar
+STRING (per cckp_portal.linkml.yaml's own header comment) whose raw
+values are sometimes several PI names crammed into one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
 Grant row). split_person_names() below splits these into one Person stub
 per real person, disambiguated from a single "Last, First MI" name (which
 also contains a comma) by word count - see its own docstring for the
@@ -95,9 +95,11 @@ INSTITUTION_FIELDS = {"Grant": ("grantInstitution", "institutionAlias")}
 # EducationalResource has no `consortium` field (confirmed absent from
 # cckp_portal.linkml.yaml) - the other four all do.
 CONSORTIUM_CLASSES = ("Dataset", "Publication", "Tool", "Grant")
-# field -> multivalued? (Grant.investigator is scalar; contributors is a
-# free-text list - both per cckp_portal.linkml.yaml).
-INVESTIGATOR_FIELDS = {"Grant": ("investigator", False), "EducationalResource": ("contributors", True)}
+# field -> multivalued? (contributors is a free-text `|` list; Grant.investigator
+# is STRING_LIST after the 14.x cutover but still comma-joined text before it -
+# it is handled separately in split_investigators(); both per
+# cckp_portal.linkml.yaml).
+INVESTIGATOR_FIELDS = {"Grant": ("investigator", True), "EducationalResource": ("contributors", True)}
 
 
 def load_tsv(path):
@@ -147,6 +149,20 @@ SURNAME_PARTICLES = {
     "du", "da", "di", "del", "della", "dos", "das", "la", "le", "mac", "mc",
     "st", "st.", "o'",
 }
+
+
+def split_investigators(raw_value):
+    """Grant.investigator in either form: a `|`-joined STRING_LIST (post-14.x
+    cutover) splits on `|` only - each item is already one person, so a
+    "Last, First" item is kept as-is by splitting on "|" alone; the legacy
+    plain-text form (no `|`) goes through split_person_names()'s comma
+    heuristic, which can tell "Last, First" from a comma-joined name list
+    (a blanket comma split, as harmonize.split_field_values does for other
+    legacy_comma_separated slots, would cut "Krogan, Nevan" in two)."""
+    raw_value = raw_value or ""
+    if LIST_DELIMITER in raw_value:
+        return split_values(raw_value, True)
+    return split_person_names(raw_value)
 
 
 def split_person_names(raw_value):
@@ -348,9 +364,9 @@ def link_investigators(g, harmonized_dir):
     across Grant.investigator/EducationalResource.contributors (see
     _find_or_mint_person()'s docstring for how "distinct person" is
     decided), linking each source row to it via
-    cckp:investigatorRef/contributorRef. Grant.investigator (scalar) is
-    split into individual names via split_person_names()'s comma
-    heuristic; EducationalResource.contributors (already a real
+    cckp:investigatorRef/contributorRef. Grant.investigator is split via
+    split_investigators() (`|` list, or the legacy comma heuristic of
+    split_person_names()); EducationalResource.contributors (already a real
     `|`-delimited list) still uses the plain pipe split - see this
     module's docstring for both fields' caveats."""
     groups = {}
@@ -364,7 +380,7 @@ def link_investigators(g, harmonized_dir):
                 continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
             raw = row.get(field) or ""
-            candidates = split_values(raw, multivalued) if multivalued else split_person_names(raw)
+            candidates = split_investigators(raw) if cls_name == "Grant" else split_values(raw, multivalued)
             for display_name in candidates:
                 person_iri = _find_or_mint_person(g, groups, ungrouped, display_name)
                 g.add((subject, predicate, person_iri))

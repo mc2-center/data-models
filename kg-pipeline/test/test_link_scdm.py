@@ -272,3 +272,15 @@ def test_build_scdm_links_end_to_end(tmp_path):
             rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Organization/org.sage-bionetworks")) in g
     assert (grant, CCKP.consortiumRef,
             rdflib.URIRef("https://w3id.org/mc2-center/cckp-portal/data/Program/program.htan")) in g
+
+
+def test_link_investigators_pipe_joined_grant_investigator_list(tmp_path):
+    with open(tmp_path / "Grant_harmonized.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["grantId", "investigator"])
+        writer.writerow(["syn1", "Jane Doe|Krogan, Nevan"])  # list form: "Last, First" item kept whole
+    g = rdflib.Graph()
+    n_persons, n_edges = link_scdm.link_investigators(g, str(tmp_path))
+    assert (n_persons, n_edges) == (2, 2)
+    names = {str(o) for o in g.objects(None, SAGECDM.display_name)}
+    assert names == {"Jane Doe", "Krogan, Nevan"}  # list items kept as written

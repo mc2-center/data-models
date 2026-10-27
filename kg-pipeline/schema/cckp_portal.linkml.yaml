@@ -8,9 +8,21 @@
 #     grantNumber/grantName/pubMedId/publicationTitle/consortium/dataType
 #     are all STRING_LIST (multivalued) despite having no MC2-model array
 #     analog, while Publication's authors/keywords/dataset and Tool's
-#     license/linkType/toolEntityName/toolEntityType/toolEntityRole are
+#     linkType/toolEntityName/toolEntityType/toolEntityRole are
 #     scalar STRING despite superficially looking list-like. Don't
 #     "correct" these against intuition without re-checking the live table.
+#     Exception, ahead of the live table: Tool.license,
+#     EducationalResource.license and Grant.investigator are declared
+#     multivalued for the data model 14.x cutover (STRING -> STRING_LIST),
+#     and carry `legacy_comma_separated` (below) until the live tables change.
+#   - `legacy_comma_separated: "true"` annotation: the live column is still
+#     (or was until the 14.x cutover) plain STRING holding comma-joined text
+#     (e.g. "MIT, BSD-2-Clause"), so a cell with no `|` is split on commas;
+#     a cell containing `|` (STRING_LIST joined by extract_cckp_tables.py)
+#     splits on `|` only. Slots WITHOUT the annotation never split on commas
+#     (e.g. Dataset.accessInformation is free text). Implemented once in
+#     scripts/harmonize.py split_field_values(). Drop the annotation once
+#     the live tables hold real lists.
 #   - column descriptions: ~/.claude/skills/cckp-search/references/field_reference.md
 #   - controlled-vocabulary reuse: slots with an `mc2_enum` annotation reuse
 #     the enum of the same name generated into mc2_model.linkml.yaml (which
@@ -323,9 +335,13 @@ classes:
           mc2_enum: "Tool Language Enum"
         description: Programming language(s) the tool is written in. Best filter column.
       license:
+        multivalued: true
         annotations:
           mc2_enum: "License Enum"
-        description: Software license the tool is released under (scalar - one license per tool row).
+          legacy_comma_separated: "true"
+        description: >-
+          License(s) the tool is released under (SPDX identifiers after the
+          data model 14.x cutover; STRING_LIST on the live table).
       cost:
         annotations:
           mc2_enum: "Tool Cost Enum"
@@ -466,7 +482,10 @@ classes:
           mc2_enum: "Grant Institution Name Enum"
         description: Full name(s) of the awardee institution.
       investigator:
-        description: Principal investigator name(s), as a single free-text field (no controlled vocabulary - personal names).
+        multivalued: true
+        annotations:
+          legacy_comma_separated: "true"
+        description: Principal investigator name(s) (no controlled vocabulary - personal names). STRING_LIST after the data model 14.x cutover.
       consortium:
         multivalued: true
         # mc2_enum intentionally omitted (2026-09-03, re-verified 2026-09-04): the
@@ -581,9 +600,13 @@ classes:
         multivalued: true
         description: Secondary topic label(s) (no controlled vocabulary in the current MC2 model).
       license:
+        multivalued: true
         annotations:
           mc2_enum: "License Enum"
-        description: License the resource is released under (scalar).
+          legacy_comma_separated: "true"
+        description: >-
+          License(s) the resource is released under (SPDX identifiers after
+          the data model 14.x cutover; STRING_LIST on the live table).
       useRequirements:
         description: Free-text use requirements/restrictions.
       alias:

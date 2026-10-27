@@ -78,7 +78,7 @@ DEFAULT_CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalRe
 
 
 def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, class_order=None):
-    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued)}}.
+    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued, legacy_comma_separated)}}.
 
     class_order defaults to the 5 CCKP portal classes - the MC2 assay-metadata
     pipeline (scripts/extract_mc2_assay_metadata.py + `make harmonize-mc2-assay`)
@@ -112,32 +112,54 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
                 continue
             if src not in src_cache:
                 src_cache[src] = load_cv_lookup(modules_dir, src, malformed_rows)
-            field_lookups[cls_name][field] = (enum_name, src, src_cache[src], bool(slot.multivalued))
+            field_lookups[cls_name][field] = (enum_name, src, src_cache[src], bool(slot.multivalued),
+                                                  slot_legacy_comma_separated(slot))
     return field_lookups
 
 
-def split_field_values(raw_value, multivalued):
-    """Split a raw CCKP cell into the individual CV term(s) it holds.
+LEGACY_COMMA_ANNOTATION = "legacy_comma_separated"
+
+
+def slot_legacy_comma_separated(slot):
+    """True if a LinkML slot carries the `legacy_comma_separated` annotation
+    (see cckp_portal.linkml.yaml's header)."""
+    ann = slot.annotations
+    return LEGACY_COMMA_ANNOTATION in ann and str(ann[LEGACY_COMMA_ANNOTATION].value).strip().lower() == "true"
+
+
+def split_field_values(raw_value, multivalued, legacy_comma_separated=False):
+    """Split a raw CCKP cell into its individual value(s) (stripped, empties
+    dropped). The single splitting rule shared by harmonize.py and
+    build_triples.py.
 
     Multivalued fields use LIST_DELIMITER ("|") per this pipeline's own
-    convention. Scalar (non-multivalued) fields are declared single-valued
-    in cckp_portal.linkml.yaml, but real submitted data sometimes crams
-    several comma-separated terms into one cell anyway (e.g. Tool.license:
-    "MIT, BSD-2-Clause, Not licensed"; also seen on Tool.toolEntityRole and
+    convention. A multivalued slot annotated `legacy_comma_separated` (the
+    live column is still, or was until the data model 14.x cutover, plain
+    STRING holding comma-joined text such as "MIT, BSD-2-Clause" or
+    "Jane Doe, John Roe") additionally splits on "," when the cell holds no
+    "|" - a cell containing "|" is a real list and is split on "|" only.
+    Multivalued slots without the annotation never split on commas (e.g.
+    Dataset.accessInformation is free text containing commas).
+
+    Scalar (non-multivalued) fields are declared single-valued in
+    cckp_portal.linkml.yaml, but real submitted data sometimes crams several
+    comma-separated terms into one cell anyway (e.g. Tool.toolEntityRole and
     Tool.linkType) - splitting scalar values on comma is safe specifically
-    for this function's callers (both restrict it to `mc2_enum`-tagged
-    fields only): confirmed no real CV term registered anywhere in
-    modules/mapping.yaml contains a literal comma. This is deliberately
-    NOT applied to free-text scalar fields (e.g. Grant.investigator, which
-    can genuinely cram multiple names into one comma-separated string with
-    no safe way to un-guess the split - see scripts/link_scdm.py's own
-    docstring) - callers must only invoke this for enum-backed fields.
+    for callers that restrict it to `mc2_enum`-tagged fields only: confirmed
+    no real CV term registered anywhere in modules/mapping.yaml contains a
+    literal comma. Callers must not invoke the scalar branch for free-text
+    fields.
     """
     if multivalued:
-        return raw_value.split(LIST_DELIMITER)
-    if "," in raw_value:
-        return raw_value.split(",")
-    return [raw_value]
+        if legacy_comma_separated and LIST_DELIMITER not in raw_value:
+            values = raw_value.split(",")
+        else:
+            values = raw_value.split(LIST_DELIMITER)
+    elif "," in raw_value:
+        values = raw_value.split(",")
+    else:
+        values = [raw_value]
+    return [v.strip() for v in values if v.strip()]
 
 
 def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, sssom_rows):
@@ -157,9 +179,9 @@ def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, 
     out_fieldnames = fieldnames + [c for c in iri_columns if c not in fieldnames]
 
     for row_idx, row in enumerate(rows):
-        for field, (enum_name, src, lookup, multivalued) in lookups.items():
+        for field, (enum_name, src, lookup, multivalued, legacy_comma) in lookups.items():
             raw_value = row.get(field, "") or ""
-            values = split_field_values(raw_value, multivalued)
+            values = split_field_values(raw_value, multivalued, legacy_comma)
             resolved_iris = []
             for v in values:
                 v = v.strip()

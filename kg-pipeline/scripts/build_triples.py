@@ -63,7 +63,7 @@ import yaml
 from linkml_runtime import SchemaView
 from rdflib.namespace import RDF, XSD
 
-from harmonize import split_field_values
+from harmonize import slot_legacy_comma_separated, split_field_values
 
 LIST_DELIMITER = "|"
 DATA_NS = "https://w3id.org/mc2-center/cckp-portal/data/"
@@ -282,6 +282,7 @@ def get_schema_metadata(schema_path, class_order=None):
                 "range": slot.range,
                 "mc2_enum": mc2_enum,
                 "cckp_join": ann["cckp_join"].value if "cckp_join" in ann else None,
+                "legacy_comma_separated": slot_legacy_comma_separated(slot),
             }
     return meta
 
@@ -389,17 +390,15 @@ def build_class_graph(cls_name, schema_meta, harmonized_dir, join_indices, mc2_p
             # Level") is used for every row.get(...) lookup below; only the
             # RDF predicate local name is ever slugified via field_slug().
             raw_value = (row.get(field) or "").strip()
-            # split_field_values() also splits a comma-crammed scalar value
-            # (e.g. Tool.license: "MIT, BSD-2-Clause, Not licensed") into its
-            # individual terms - restricted to mc2_enum fields, since that's
-            # the only case it's confirmed safe for (see its docstring).
-            # Non-enum scalar fields (e.g. Grant.investigator) never reach
-            # the comma-splitting branch here, matching harmonize.py's own
-            # field scoping.
+            # split_field_values() is the one splitting rule (see its
+            # docstring): "|" for multivalued cells, plus a comma split for
+            # slots annotated legacy_comma_separated (no "|" in the cell),
+            # plus the scalar-enum comma split restricted to mc2_enum fields.
+            # Other scalar free-text fields stay one value.
             if meta["multivalued"]:
-                values = [v.strip() for v in raw_value.split(LIST_DELIMITER)]
+                values = split_field_values(raw_value, True, meta.get("legacy_comma_separated", False))
             elif meta["mc2_enum"]:
-                values = [v.strip() for v in split_field_values(raw_value, multivalued=False)]
+                values = split_field_values(raw_value, False)
             else:
                 values = [raw_value]
             values = [v for v in values if v]
