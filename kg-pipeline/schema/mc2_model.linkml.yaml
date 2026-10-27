@@ -265,7 +265,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -311,7 +311,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -379,7 +379,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -427,7 +427,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -476,7 +476,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -600,7 +600,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -637,7 +637,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -702,7 +702,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -767,7 +767,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -803,7 +803,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -974,7 +974,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1019,7 +1019,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1065,7 +1065,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1099,7 +1099,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1256,7 +1256,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1289,7 +1289,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1335,7 +1335,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1376,7 +1376,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1416,7 +1416,7 @@ classes:
     - File Url
     - File Format
     - File Assay Category
-    - Data Use Codes
+    - File Data Use Codes
     - File Longitudinal Group
     - File Longitudinal Event Type
     - File Longitudinal Sequence Identifier
@@ -1757,7 +1757,7 @@ slots:
     description: List of data use ontology (DUO) terms that are true for dataset, which describes the
       allowable scope and terms for data use. Omit property if not applicable/unknown.
     multivalued: true
-    pattern: ^(DUO:\d{7}|DUOPlus\d+|Pending Annotation)$
+    pattern: ^(DUO:\d{7,8}|DUOPlus\d+|Pending Annotation)$
   datePublished:
     description: Date data were published/available on Synapse.
     range: float
@@ -1831,7 +1831,6 @@ slots:
     - 'schematic Format: uri'
   Dataset Doi:
     description: The Digital Object Identifier (DOI) associated with the dataset.
-    required: true
     comments:
     - 'schematic Format: uri'
   Dataset File Formats:
@@ -1844,7 +1843,7 @@ slots:
       which its data may be used. Provide multiple values as a comma-separated list. Code definitions:
       https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes'
     multivalued: true
-    pattern: ^(DUO:\d{7}|DUOPlus\d+|Pending Annotation)$
+    pattern: ^(DUO:\d{7,8}|DUOPlus\d+|Pending Annotation)$
   DatasetView_id:
     description: Unique ID associated with this Dataset View entry, used as a key for record linking and
       updates. Unless otherwise directed, this value should be equivalent to Dataset Alias. For externally
@@ -2056,6 +2055,11 @@ slots:
     range: float
     exact_mappings:
     - CRDC_CDE:11479876
+  File Data Use Codes:
+    description: 'DUO code(s) describing the consent permissions for the file, i.e. the purposes for which
+      its data may be used. Provide multiple values as a comma-separated list. Code definitions: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes'
+    multivalued: true
+    pattern: ^(DUO:\d{7,8}|DUOPlus\d+|Pending Annotation)$
   NanoStringGeoMxAuxiliaryFiles_id:
     description: Unique row identifier, used as a primary key for record updates. This should be equivalent
       to the file Synapse Id unless otherwise indicated.
@@ -2810,7 +2814,7 @@ slots:
     exact_mappings:
     - CRDC_CDE:11459806
   Publication Doi:
-    description: The digital object identifier associated with the publication in the form of https://www.doi.org/{doi}
+    description: The digital object identifier associated with the publication in the form of https://doi.org/{doi}
       to comply with CrossRef DOI display guidelines.
     comments:
     - 'schematic Format: uri'
@@ -10462,9 +10466,6 @@ enums:
           in essentially any body location and is characterized by the presence of vascular channel formation
           and endothelial cells.
         meaning: NCIT:C7388
-      Not-Applicable:
-        description: Determination of a value is not relevant in the current context. (NCI)
-        meaning: NCIT:C48660
       Plexiform Neurofibroma:
         description: An elongated and multinodular neurofibroma that forms when the tumor involves either
           multiple trunks of a nerve plexus or multiple fascicles of a large nerve. Some plexiform neurofibromas
@@ -19501,9 +19502,6 @@ enums:
           in essentially any body location and is characterized by the presence of vascular channel formation
           and endothelial cells.
         meaning: NCIT:C7388
-      Not-Applicable:
-        description: Determination of a value is not relevant in the current context. (NCI)
-        meaning: NCIT:C48660
       Plexiform Neurofibroma:
         description: An elongated and multinodular neurofibroma that forms when the tumor involves either
           multiple trunks of a nerve plexus or multiple fascicles of a large nerve. Some plexiform neurofibromas
@@ -24084,9 +24082,6 @@ enums:
           in essentially any body location and is characterized by the presence of vascular channel formation
           and endothelial cells.
         meaning: NCIT:C7388
-      Not-Applicable:
-        description: Determination of a value is not relevant in the current context. (NCI)
-        meaning: NCIT:C48660
       Plexiform Neurofibroma:
         description: An elongated and multinodular neurofibroma that forms when the tumor involves either
           multiple trunks of a nerve plexus or multiple fascicles of a large nerve. Some plexiform neurofibromas
