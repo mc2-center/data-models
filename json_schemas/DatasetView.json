@@ -412,10 +412,10 @@
     "DatasetDataUseCodes": {
       "description": "DUO code(s) describing the consent permissions for the dataset, i.e. the purposes for which its data may be used. Provide multiple values as a comma-separated list. Code definitions: https://mc2-center.github.io/data-models/valid_values/shared/#attribute-data-use-codes",
       "items": {
-        "pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+        "pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
         "type": "string"
       },
-      "pattern": "^(DUO:\\d{7}|DUOPlus\\d+|Pending Annotation)$",
+      "pattern": "^(DUO:\\d{7,8}|DUOPlus\\d+|Pending Annotation)$",
       "title": "Dataset Data Use Codes",
       "type": "array"
     },
@@ -855,7 +855,6 @@
           "Neurofibroma",
           "Non-Functioning Pituitary Gland Adenoma",
           "Non-Hodgkin Lymphoma",
-          "Not-Applicable",
           "Not Applicable",
           "Oral Cavity Neoplasm",
           "Oral Cavity Squamous Cell Carcinoma",
@@ -924,7 +923,6 @@
   "required": [
     "Assay",
     "DatasetAlias",
-    "DatasetDoi",
     "DatasetName",
     "DatasetUrl",
     "DatasetViewId",

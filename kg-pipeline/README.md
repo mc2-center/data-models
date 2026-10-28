@@ -111,6 +111,21 @@ This uses `scripts/vendor/csv_to_linkml.py`, a vendored copy of the
 dependencies) - reproducible from a clean clone, no Claude Code skill
 installation required.
 
+**Multivalued cells and the `comma_separated` annotation.**
+`extract_cckp_tables.py` writes STRING_LIST cells joined with `|`.
+`Tool.license`, `EducationalResource.license` and `Grant.investigator` hold
+several values but stay plain STRING columns with comma-joined text (CCKP
+cutover decision D-Q51; license may become STRING_LIST later), so those slots
+are `multivalued` in `cckp_portal.linkml.yaml` and carry
+a `comma_separated` annotation: a cell containing `|` splits on `|`;
+otherwise (comma-joined text) it splits on `,` for `"true"`
+(the licenses, e.g. `MIT, BSD-2-Clause`), or with the "Last, First"-aware
+`split_person_names()` heuristic for `"person_names"` (`Grant.investigator`:
+`PEROU, CHARLES M` is one person, `Amy Brock, Thomas E. Yankeelov` two). Multivalued slots without the annotation (e.g.
+`Dataset.accessInformation`, free text) never split on commas. The rule lives
+once, in `scripts/harmonize.py` `split_field_values()`, and is used by
+harmonize, build_triples and `link_scdm.py`.
+
 **`make suggest-mappings` picks its external registry per-CV automatically**
 (`scripts/suggest_mappings.py`'s `choose_registry()`), driven by whatever
 CURIE prefix a CV's own existing `Ontology Identifier` values already use

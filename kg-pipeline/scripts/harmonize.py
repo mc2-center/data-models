@@ -74,11 +74,19 @@ def load_cv_lookup(modules_dir, src, malformed_rows):
     return lookup
 
 
+# mc2_model.linkml.yaml slots that carry a pattern but no enum range, yet whose
+# values are drawn from an existing controlled vocabulary: {slot: enum name}.
+# Since the 14.1.0 model the file-level classes use `File Data Use Codes` (DUO
+# pattern) where they used to use `Data Use Codes` (range: Data Use Codes
+# Enum); the values are the same DUO codes, so resolve them against that CV.
+# build_triples.get_schema_metadata() reads this too.
+SLOT_ENUM_OVERRIDES = {"File Data Use Codes": "Data Use Codes Enum"}
+
 DEFAULT_CLASS_ORDER = ["Dataset", "Publication", "Tool", "Grant", "EducationalResource"]
 
 
 def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, class_order=None):
-    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued)}}.
+    """Return {ClassName: {field: (enum_name, cv_src, lookup_dict, multivalued, comma_separated)}}.
 
     class_order defaults to the 5 CCKP portal classes - the MC2 assay-metadata
     pipeline (scripts/extract_mc2_assay_metadata.py + `make harmonize-mc2-assay`)
@@ -102,6 +110,8 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
                 # annotation anywhere in that file - confirmed, not assumed):
                 # the slot's LinkML `range` IS the enum name directly.
                 enum_name = str(slot.range)
+            elif field in SLOT_ENUM_OVERRIDES:
+                enum_name = SLOT_ENUM_OVERRIDES[field]
             else:
                 continue
             attr_name = enum_name[: -len(" Enum")] if enum_name.endswith(" Enum") else enum_name
@@ -112,32 +122,127 @@ def build_field_lookups(schema_path, mapping_path, modules_dir, malformed_rows, 
                 continue
             if src not in src_cache:
                 src_cache[src] = load_cv_lookup(modules_dir, src, malformed_rows)
-            field_lookups[cls_name][field] = (enum_name, src, src_cache[src], bool(slot.multivalued))
+            field_lookups[cls_name][field] = (enum_name, src, src_cache[src], bool(slot.multivalued),
+                                                  slot_comma_separated(slot))
     return field_lookups
 
 
-def split_field_values(raw_value, multivalued):
-    """Split a raw CCKP cell into the individual CV term(s) it holds.
+COMMA_ANNOTATION = "comma_separated"
+COMMA_MODES = ("true", "person_names")
+
+
+# Lowercase surname particles that can make a single last name span 2+
+# words (e.g. "Van't Veer, Laura", "De La Cruz, Maria") - checked by exact
+# match on the first word before the first comma, not by prefix, so a
+# genuine first name that merely starts with the same letters (e.g.
+# "Vanessa") isn't caught by mistake. Not exhaustive - a multi-word surname
+# using some other, rarer particle still falls through to the word-count
+# heuristic in split_person_names().
+SURNAME_PARTICLES = {
+    "van", "van't", "vander", "vanden", "von", "der", "den", "de", "des",
+    "du", "da", "di", "del", "della", "dos", "das", "la", "le", "mac", "mc",
+    "st", "st.", "o'",
+}
+
+
+def split_person_names(raw_value, reorder=True):
+    """Split a free-text scalar like Grant.investigator into individual
+    person names.
+
+    Two real formats show up in the live data, indistinguishable without a
+    heuristic: multiple people already in "First [MI] Last" order, joined
+    by commas (e.g. "Amy Brock, Thomas E. Yankeelov" - two people); or a
+    single person in "Last, First MI" order (e.g. "Krogan, Nevan"). Told
+    apart by the text before the first comma: a single word there reads as
+    a last name (LAST, FIRST MI - one person, put back in First MI Last
+    order below) rather than the first person's full name in a comma-joined
+    list (two-plus words - FIRST MI LAST, FIRST MI LAST, ...) - unless that
+    first word is a known surname particle (SURNAME_PARTICLES above), in
+    which case the whole multi-word segment is still read as one last name
+    (e.g. "Van't Veer, Laura" - one person, not two). Still a heuristic,
+    not infallible: a multi-word surname using some other, rarer particle
+    not in that list still gets treated as a list instead - a known,
+    accepted false positive, not silently hidden.
+
+    With reorder=False a "Last, First MI" person is returned as the source
+    text, as written ("PEROU, CHARLES M"), instead of being put back in
+    First MI Last order.
+    """
+    raw_value = (raw_value or "").strip()
+    if not raw_value:
+        return []
+    parts = [p.strip() for p in raw_value.split(",")]
+    if len(parts) == 1:
+        return [parts[0]] if parts[0] else []
+    first_words = parts[0].split()
+    starts_with_particle = bool(first_words) and first_words[0].casefold() in SURNAME_PARTICLES
+    if len(first_words) < 2 or starts_with_particle:
+        # LAST, FIRST MI - one person, not a comma-joined list of names.
+        if not reorder:
+            return [raw_value]
+        last = parts[0]
+        first_mi = " ".join(p for p in parts[1:] if p)
+        name = f"{first_mi} {last}".strip()
+        return [name] if name else []
+    return [p for p in parts if p]
+
+
+def slot_comma_separated(slot):
+    """The `comma_separated` mode of a LinkML slot (see
+    cckp_portal.linkml.yaml's header): "true" (plain comma split),
+    "person_names" (split_person_names() heuristic), or None."""
+    ann = slot.annotations
+    if COMMA_ANNOTATION not in ann:
+        return None
+    mode = str(ann[COMMA_ANNOTATION].value).strip().lower()
+    return mode if mode in COMMA_MODES else None
+
+
+def split_field_values(raw_value, multivalued, comma_separated=False):
+    """Split a raw CCKP cell into its individual value(s) (stripped, empties
+    dropped). The single splitting rule shared by harmonize.py and
+    build_triples.py.
 
     Multivalued fields use LIST_DELIMITER ("|") per this pipeline's own
-    convention. Scalar (non-multivalued) fields are declared single-valued
-    in cckp_portal.linkml.yaml, but real submitted data sometimes crams
-    several comma-separated terms into one cell anyway (e.g. Tool.license:
-    "MIT, BSD-2-Clause, Not licensed"; also seen on Tool.toolEntityRole and
+    convention. A multivalued slot annotated `comma_separated` (the
+    live column is plain STRING holding comma-joined text such as "MIT, BSD-2-Clause" or
+    "Jane Doe, John Roe") additionally splits a cell that holds no "|": on ","
+    for mode "true", or with split_person_names() for mode "person_names"
+    (Grant.investigator: "Krogan, Nevan" is one person, "Amy Brock, Thomas E.
+    Yankeelov" two). A cell containing "|" is a real list and is split on "|" only,
+    except in "person_names" mode, where each "|" item (or the whole cell when
+    there is none) also goes through split_person_names(reorder=False), so the
+    two forms give the same items with the source text kept as written.
+    Multivalued slots without the annotation never split on commas (e.g.
+    Dataset.accessInformation is free text containing commas).
+
+    Scalar (non-multivalued) fields are declared single-valued in
+    cckp_portal.linkml.yaml, but real submitted data sometimes crams several
+    comma-separated terms into one cell anyway (e.g. Tool.toolEntityRole and
     Tool.linkType) - splitting scalar values on comma is safe specifically
-    for this function's callers (both restrict it to `mc2_enum`-tagged
-    fields only): confirmed no real CV term registered anywhere in
-    modules/mapping.yaml contains a literal comma. This is deliberately
-    NOT applied to free-text scalar fields (e.g. Grant.investigator, which
-    can genuinely cram multiple names into one comma-separated string with
-    no safe way to un-guess the split - see scripts/link_scdm.py's own
-    docstring) - callers must only invoke this for enum-backed fields.
+    for callers that restrict it to `mc2_enum`-tagged fields only: confirmed
+    no real CV term registered anywhere in modules/mapping.yaml contains a
+    literal comma. Callers must not invoke the scalar branch for free-text
+    fields.
     """
     if multivalued:
-        return raw_value.split(LIST_DELIMITER)
-    if "," in raw_value:
-        return raw_value.split(",")
-    return [raw_value]
+        if comma_separated == "person_names":
+            # Each person stays one item with the source text as written, in
+            # both the "|" and the comma form.
+            values = [
+                name
+                for item in raw_value.split(LIST_DELIMITER)
+                for name in split_person_names(item, reorder=False)
+            ]
+        elif comma_separated and LIST_DELIMITER not in raw_value:
+            values = raw_value.split(",")
+        else:
+            values = raw_value.split(LIST_DELIMITER)
+    elif "," in raw_value:
+        values = raw_value.split(",")
+    else:
+        values = [raw_value]
+    return [v.strip() for v in values if v.strip()]
 
 
 def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, sssom_rows):
@@ -157,9 +262,9 @@ def harmonize_table(cls_name, raw_path, out_path, field_lookups, unmapped_rows, 
     out_fieldnames = fieldnames + [c for c in iri_columns if c not in fieldnames]
 
     for row_idx, row in enumerate(rows):
-        for field, (enum_name, src, lookup, multivalued) in lookups.items():
+        for field, (enum_name, src, lookup, multivalued, legacy_comma) in lookups.items():
             raw_value = row.get(field, "") or ""
-            values = split_field_values(raw_value, multivalued)
+            values = split_field_values(raw_value, multivalued, legacy_comma)
             resolved_iris = []
             for v in values:
                 v = v.strip()

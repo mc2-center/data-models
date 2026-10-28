@@ -55,8 +55,9 @@ Which attribute records DUO codes depends on the template:
 
 | Template | Attribute | Controlled list and companion fields? |
 |---|---|---|
-| Study, File View, and the file-level assay templates (Imaging, Sequencing, NanoString GeoMx, Visium) | `Data Use Codes` | Yes |
+| Study | `Data Use Codes` | Yes |
 | DataDSP | `DSP Data Use Codes` | Yes |
+| File View and the file-level assay templates (Imaging, Sequencing, NanoString GeoMx, Visium) | `File Data Use Codes` | No |
 | Dataset View | `Dataset Data Use Codes` | No |
 | DataCatalog | `dataCatalogDataUseModifiers` | No |
 

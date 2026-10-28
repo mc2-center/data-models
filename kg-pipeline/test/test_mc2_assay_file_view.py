@@ -117,3 +117,29 @@ def test_file_view_harmonizes_and_builds_triples_with_real_cv_resolution(tmp_pat
             __import__("rdflib").URIRef("http://purl.obolibrary.org/obo/NCIT_C14225")) in g
     assert (subject, CCKP["fileFormatTerm"],
             __import__("rdflib").URIRef("http://purl.obolibrary.org/obo/NCIT_C85873")) in g
+
+
+def test_data_use_codes_annotation_maps_to_file_data_use_codes_attribute():
+    assert extract_mod.ANNOTATION_KEY_TO_ATTRIBUTE["DataUseCodes"] == "File Data Use Codes"
+
+
+def test_file_data_use_codes_keeps_literal_and_resolves_duo_term_iri(tmp_path):
+    import rdflib
+
+    field_lookups = harmonize.build_field_lookups(
+        SCHEMA_PATH, MAPPING_PATH, MODULES_DIR, [], class_order=["File View"]
+    )
+    out_path = tmp_path / "File View_harmonized.csv"
+    harmonize.harmonize_table(
+        "File View", str(FIXTURES_DIR / "FileView.csv"), str(out_path), field_lookups, [], defaultdict(set),
+    )
+    schema_meta = build_triples.get_schema_metadata(SCHEMA_PATH, class_order=["File View"])
+    g = build_triples.build_class_graph(
+        "File View", schema_meta, str(tmp_path), {}, build_triples.load_prefixes(SCHEMA_PATH)
+    )
+
+    CCKP = rdflib.Namespace("https://w3id.org/mc2-center/cckp-portal/")
+    subject = build_triples.mint_iri("File View", "syn_file_1")
+    assert (subject, CCKP["fileDataUseCodes"], rdflib.Literal("DUO:0000042")) in g
+    assert (subject, CCKP["fileDataUseCodesTerm"],
+            rdflib.URIRef("http://purl.obolibrary.org/obo/DUO_0000042")) in g

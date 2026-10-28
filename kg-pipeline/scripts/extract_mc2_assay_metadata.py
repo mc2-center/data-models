@@ -107,7 +107,10 @@ ANNOTATION_KEY_TO_ATTRIBUTE = {
     "FileSpecies": "Species",
     "FileUrl": "File Url",
     "FileFormat": "File Format",
-    "DataUseCodes": "Data Use Codes",
+    # File View (and the other file-level classes) carry `File Data Use Codes`
+    # since the 14.1.0 model; `Data Use Codes` remains only on classes that
+    # still have that slot (e.g. Study), which this extract doesn't read.
+    "DataUseCodes": "File Data Use Codes",
     "FileTissue": "Tissue",
     "FileTumorType": "Tumor Type",
 }

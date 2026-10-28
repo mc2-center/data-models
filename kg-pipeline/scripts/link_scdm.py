@@ -14,7 +14,7 @@ Reads the same harmonized CSVs build_triples.py builds cckp_kg.ttl from
     human-curated description/status SCDM's Program class requires) are
     skipped, not asserted. Dataset/Publication/Tool/Grant.consortium
     values that resolve to a reviewed row get a cckp:consortiumRef edge.
-  - Provisional sagecdm:Person stubs from Grant.investigator (scalar) and
+  - Provisional sagecdm:Person stubs from Grant.investigator (comma-joined text, or a `|` list) and
     EducationalResource.contributors (free text, no controlled
     vocabulary) - one stub per distinct person, flagged cckp:provisional
     (same tier-3 discipline build_triples.py already uses for
@@ -50,10 +50,9 @@ access-controlled MC2 assay-metadata domain scripts/link_sagebrain.py
 operates in.
 
 Known data-quality caveat, surfaced not hidden (confirmed against live
-data, not assumed): Grant.investigator is genuinely a scalar STRING column
-in the live Synapse table (per cckp_portal.linkml.yaml's own header
-comment), but its raw values are sometimes several PI names crammed into
-one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
+data, not assumed): Grant.investigator is a scalar
+STRING column (per cckp_portal.linkml.yaml's own header comment) whose raw
+values are sometimes several PI names crammed into one comma-separated string (e.g. "Nevan Krogan, Trey Ideker, ..." for one
 Grant row). split_person_names() below splits these into one Person stub
 per real person, disambiguated from a single "Last, First MI" name (which
 also contains a comma) by word count - see its own docstring for the
@@ -76,6 +75,7 @@ from rdflib.namespace import RDF
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_triples import IDENTIFIER_FIELD, LIST_DELIMITER, mint_id, mint_iri, normalize, read_harmonized  # noqa: E402
+from harmonize import SURNAME_PARTICLES, split_field_values, split_person_names  # noqa: E402,F401  (re-exported for callers)
 
 
 def _has_identifier(cls_name, row):
@@ -95,9 +95,11 @@ INSTITUTION_FIELDS = {"Grant": ("grantInstitution", "institutionAlias")}
 # EducationalResource has no `consortium` field (confirmed absent from
 # cckp_portal.linkml.yaml) - the other four all do.
 CONSORTIUM_CLASSES = ("Dataset", "Publication", "Tool", "Grant")
-# field -> multivalued? (Grant.investigator is scalar; contributors is a
-# free-text list - both per cckp_portal.linkml.yaml).
-INVESTIGATOR_FIELDS = {"Grant": ("investigator", False), "EducationalResource": ("contributors", True)}
+# field -> multivalued? (contributors is a free-text `|` list; Grant.investigator
+# is comma-joined text in a STRING column -
+# it is handled separately in split_investigators(); both per
+# cckp_portal.linkml.yaml).
+INVESTIGATOR_FIELDS = {"Grant": ("investigator", True), "EducationalResource": ("contributors", True)}
 
 
 def load_tsv(path):
@@ -135,54 +137,13 @@ def split_values(raw_value, multivalued):
     return [v.strip() for v in values if v.strip()]
 
 
-# Lowercase surname particles that can make a single last name span 2+
-# words (e.g. "Van't Veer, Laura", "De La Cruz, Maria") - checked by exact
-# match on the first word before the first comma, not by prefix, so a
-# genuine first name that merely starts with the same letters (e.g.
-# "Vanessa") isn't caught by mistake. Not exhaustive - a multi-word surname
-# using some other, rarer particle still falls through to the word-count
-# heuristic below.
-SURNAME_PARTICLES = {
-    "van", "van't", "vander", "vanden", "von", "der", "den", "de", "des",
-    "du", "da", "di", "del", "della", "dos", "das", "la", "le", "mac", "mc",
-    "st", "st.", "o'",
-}
-
-
-def split_person_names(raw_value):
-    """Split a free-text scalar like Grant.investigator into individual
-    person names.
-
-    Two real formats show up in the live data, indistinguishable without a
-    heuristic: multiple people already in "First [MI] Last" order, joined
-    by commas (e.g. "Amy Brock, Thomas E. Yankeelov" - two people); or a
-    single person in "Last, First MI" order (e.g. "Krogan, Nevan"). Told
-    apart by the text before the first comma: a single word there reads as
-    a last name (LAST, FIRST MI - one person, put back in First MI Last
-    order below) rather than the first person's full name in a comma-joined
-    list (two-plus words - FIRST MI LAST, FIRST MI LAST, ...) - unless that
-    first word is a known surname particle (SURNAME_PARTICLES above), in
-    which case the whole multi-word segment is still read as one last name
-    (e.g. "Van't Veer, Laura" - one person, not two). Still a heuristic,
-    not infallible: a multi-word surname using some other, rarer particle
-    not in that list still gets treated as a list instead - a known,
-    accepted false positive, not silently hidden.
-    """
-    raw_value = (raw_value or "").strip()
-    if not raw_value:
-        return []
-    parts = [p.strip() for p in raw_value.split(",")]
-    if len(parts) == 1:
-        return [parts[0]] if parts[0] else []
-    first_words = parts[0].split()
-    starts_with_particle = bool(first_words) and first_words[0].casefold() in SURNAME_PARTICLES
-    if len(first_words) < 2 or starts_with_particle:
-        # LAST, FIRST MI - one person, not a comma-joined list of names.
-        last = parts[0]
-        first_mi = " ".join(p for p in parts[1:] if p)
-        name = f"{first_mi} {last}".strip()
-        return [name] if name else []
-    return [p for p in parts if p]
+def split_investigators(raw_value):
+    """Grant.investigator in either form (comma text, or a `|`-joined list should the
+    column ever become STRING_LIST), split by harmonize.split_field_values() in "person_names" mode
+    and then normalised to "First MI Last" for the Person stub, so the comma
+    and `|` forms of one person give the same Person IRI."""
+    items = split_field_values(raw_value or "", True, "person_names")
+    return [name for item in items for name in split_person_names(item, reorder=True)]
 
 
 def add_organizations(g, organization_crosswalk):
@@ -348,9 +309,9 @@ def link_investigators(g, harmonized_dir):
     across Grant.investigator/EducationalResource.contributors (see
     _find_or_mint_person()'s docstring for how "distinct person" is
     decided), linking each source row to it via
-    cckp:investigatorRef/contributorRef. Grant.investigator (scalar) is
-    split into individual names via split_person_names()'s comma
-    heuristic; EducationalResource.contributors (already a real
+    cckp:investigatorRef/contributorRef. Grant.investigator is split via
+    split_investigators() (`|` list, or the comma heuristic of
+    split_person_names()); EducationalResource.contributors (already a real
     `|`-delimited list) still uses the plain pipe split - see this
     module's docstring for both fields' caveats."""
     groups = {}
@@ -364,7 +325,7 @@ def link_investigators(g, harmonized_dir):
                 continue
             subject = mint_iri(cls_name, mint_id(cls_name, row))
             raw = row.get(field) or ""
-            candidates = split_values(raw, multivalued) if multivalued else split_person_names(raw)
+            candidates = split_investigators(raw) if cls_name == "Grant" else split_values(raw, multivalued)
             for display_name in candidates:
                 person_iri = _find_or_mint_person(g, groups, ungrouped, display_name)
                 g.add((subject, predicate, person_iri))

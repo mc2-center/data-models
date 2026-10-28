@@ -177,5 +177,4 @@ NCIT:C6336	Uterine Adenosarcoma	skos:exactMatch	MONDO:0002878	uterine corpus ade
 NCIT:C7712	Uveal Melanoma	skos:exactMatch	MONDO:0006486	uveal melanoma	semapv:LexicalMatching	high	false
 NCIT:C3436	Uveal Neoplasm	skos:exactMatch	MONDO:0021225	uvea neoplasm	semapv:LexicalMatching	low	false
 NCIT:C7388	Vascular Neoplasm	skos:exactMatch	MONDO:0024296	vascular neoplasm	semapv:LexicalMatching	high	false
-NCIT:C48660	Not-Applicable	skos:exactMatch	MONDO:0019529	radiation myelitis	semapv:LexicalMatching	low	false
 NCIT:C3797	Plexiform Neurofibroma	skos:exactMatch	MONDO:0003304	plexiform neurofibroma	semapv:LexicalMatching	high	false

@@ -34,7 +34,7 @@ DatasetView,Tissue,first,,strict
 DatasetView,Dataset Url,first,,all
 DatasetView,Dataset Doi,first,,
 DatasetView,Dataset File Formats,first,,strict
-DatasetView,Data Use Codes,""","".join",,
+DatasetView,Dataset Data Use Codes,""","".join",,
 DatasetView,entityId,""","".join",,
 ToolView,Tool Name,first,aliasColumn,all
 ToolView,Component,first,componentColumn,
