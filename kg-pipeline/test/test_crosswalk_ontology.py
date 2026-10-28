@@ -73,3 +73,18 @@ def _rewrite_data_rows(path, rows):
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()), delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def test_tumor_type_crosswalk_subjects_are_all_current_cv_terms():
+    # A term removed from the tumorType CV (e.g. 14.1.0 dropped "Not-Applicable")
+    # must not linger as a crosswalk row.
+    import csv
+    from pathlib import Path
+
+    kg_dir = Path(__file__).resolve().parent.parent
+    with open(kg_dir.parent / "modules" / "shared" / "tumorType.csv", encoding="utf-8-sig", newline="") as f:
+        cv_terms = {(row.get("Attribute") or "").strip() for row in csv.DictReader(f)}
+    with open(kg_dir / "mappings" / "crosswalks" / "tumorType_ncit_to_mondo.sssom.tsv", newline="") as f:
+        lines = [line for line in f if not line.startswith("#")]
+    stale = [r["subject_label"] for r in csv.DictReader(lines, delimiter="\t") if r["subject_label"] not in cv_terms]
+    assert stale == []

@@ -74,3 +74,55 @@ def test_write_sssom_namespaces_mapping_set_id_per_pass(tmp_path):
     ids = [next(l for l in open(p) if l.startswith("# mapping_set_id:")).split(": ", 1)[1].strip() for p in (portal, catalog)]
     assert ids == ["https://w3id.org/mc2-center/cckp-portal/mappings/species.sssom.tsv",
                    "https://w3id.org/mc2-center/cckp-portal/mappings/datacatalog/species.sssom.tsv"]
+
+
+def test_split_field_values_legacy_comma_and_pipe_forms_agree():
+    from harmonize import split_field_values
+
+    for cell in ("MIT, BSD-2-Clause", "MIT|BSD-2-Clause"):
+        assert split_field_values(cell, True, True) == ["MIT", "BSD-2-Clause"]
+    for cell in ("Jane Doe, John Roe", "Jane Doe|John Roe"):
+        assert split_field_values(cell, True, True) == ["Jane Doe", "John Roe"]
+    # a "|" cell splits on "|" only, even for a legacy slot
+    assert split_field_values("Roe, Jane|John Doe", True, True) == ["Roe, Jane", "John Doe"]
+
+
+def test_split_field_values_unannotated_multivalued_never_splits_on_comma():
+    from harmonize import split_field_values
+
+    text = "Request access via the portal, then contact the data manager."
+    assert split_field_values(text, True) == [text]
+    assert split_field_values(text, True, False) == [text]
+    assert split_field_values("a|b, c", True) == ["a", "b, c"]
+
+
+def test_split_field_values_scalar_enum_comma_split_unchanged():
+    from harmonize import split_field_values
+
+    assert split_field_values("A, B", False) == ["A", "B"]
+    assert split_field_values("A", False) == ["A"]
+
+
+def test_schema_marks_the_three_cutover_slots_multivalued_and_legacy_comma():
+    from build_triples import get_schema_metadata
+    from conftest import SCHEMA_PATH
+
+    meta = get_schema_metadata(SCHEMA_PATH)
+    for cls, field in (("Tool", "license"), ("EducationalResource", "license"), ("Grant", "investigator")):
+        assert meta[cls][field]["multivalued"] and meta[cls][field]["comma_separated"]
+    assert meta["Grant"]["investigator"]["comma_separated"] == "person_names"
+    assert meta["Dataset"]["accessInformation"]["multivalued"]
+    assert not meta["Dataset"]["accessInformation"]["comma_separated"]
+
+
+def test_legacy_person_names_mode_keeps_last_first_as_one_person():
+    from harmonize import split_field_values
+
+    # Each person is one item, source text kept as written (not reordered).
+    assert split_field_values("Krogan, Nevan", True, "person_names") == ["Krogan, Nevan"]
+    assert split_field_values("Amy Brock, Thomas E. Yankeelov", True, "person_names") == [
+        "Amy Brock", "Thomas E. Yankeelov"]
+    assert split_field_values("Krogan, Nevan|Amy Brock", True, "person_names") == [
+        "Krogan, Nevan", "Amy Brock"]
+    assert split_field_values("Krogan, Nevan|Van't Veer, Laura", True, "person_names") == [
+        "Krogan, Nevan", "Van't Veer, Laura"]
