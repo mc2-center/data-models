@@ -1,0 +1,263 @@
+target_table	target_field	target_required	target_value_constraint	mc2_class	mc2_attribute	match	value_crosswalk	notes
+file	id_namespace	required	FK to id_namespace			none	none	Not an MC2 attribute: exporter config. Use registered namespace (e.g. https://www.synapse.org/Synapse:); rows lacking a syn id need a second namespace
+file	local_id	required	string	File View	FileView_id	close	none	syn id of the file entity where present (mint_iri convention)
+file	project_id_namespace	required	FK to project			none	none	Config namespace; project is the Study (File View.Study Key)
+file	project_local_id	required	FK to project	File View	Study Key	close	none	Study Key resolves to the project row for the Study; required FK
+file	persistent_id	optional	string	File View	File Url	close	none	File Url is where the file is stored (Synapse URL); acceptable resolvable URI is an open question. Must be unique across all persistent_id values and must not be drs://
+file	creation_time	optional	datetime			none	none	No MC2 creation-time attribute (Synapse createdOn could supply, not in model)
+file	size_in_bytes	optional	integer	File View	File Data Size	exact	none	
+file	uncompressed_size_in_bytes	optional	integer			none	none	No MC2 attribute
+file	sha256	conditional	string	File View	File Data Checksum Value	close	none	Condition: sha256 or md5 must be non-null (validator also needs a checksum when access_url set). Populate only when File Data Checksum Type = sha256. Either sha256 or md5 must be non-null (sha1 cannot be used)
+file	md5	conditional	string	File View	File Data Checksum Value	close	none	Condition: sha256 or md5 must be non-null (validator also needs a checksum when access_url set). Populate only when File Data Checksum Type = md5sum
+file	filename	required	string pattern ^[^/\:]+$	File View	Filename	close	none	Filename is a Synapse path relative to the project; C2M2 needs basename only (no / \ :)
+file	file_format	optional	FK to CV table file_format (EDAM format)	File View	File Format	close	fileFormat.csv NCIT->EDAM format_ (new)	97 terms; 19 already EDAM. Use uncompressed format. Value must be EDAM:format_NNNN CURIE
+file	compression_format	optional	FK to CV table file_format (EDAM format)	File View	File Data Compression Status	narrow	fileFormat.csv NCIT->EDAM format_ (new; same crosswalk)	MC2 holds only Compressed/Uncompressed/Unknown; the format (gzip, bzip2) must be derived from File Format or Filename extension. fileFormat.csv has GZIP Format (NCIT:C80220), ZIP, TAR
+file	data_type	optional	FK to CV table data_type (EDAM data)	File View	File Data Category	broad	dataType: no MC2 CV (new, manual)	File Data Category is coarse (Clinical, Genomic ...) vs EDAM data_ terms; NULL is allowed so can be left empty. mapping.yaml has a dataType entry that reuses tumorType.csv (looks wrong; reported, not fixed)
+file	assay_type	optional	FK to CV table assay_type (OBI)	File View	Assay	close	assay.csv ->OBI (new)	Assay is multi-valued comma separated; C2M2 allows one OBI term. 391 terms, only 20 carry OBI IDs. Needs row-per-term policy or choose first
+file	analysis_type	optional	FK to CV table analysis_type (OBI)			none	none	No MC2 attribute
+file	mime_type	optional	string			none	none	No MC2 attribute
+file	bundle_collection_id_namespace	optional	FK to collection			none	none	No MC2 bundle concept
+file	bundle_collection_local_id	optional	FK to collection			none	none	No MC2 attribute
+file	dbgap_study_id	optional	string	Study	Study dbGaP Accession Id	close	none	Reached via File View.Study Key -> Study
+file	access_url	optional	string			none	none	MC2 has no DRS endpoint. If set, checksum becomes mandatory (validator rule)
+biosample	id_namespace	required	FK to id_namespace			none	none	Not an MC2 attribute: exporter config. Use registered namespace (e.g. https://www.synapse.org/Synapse:); rows lacking a syn id need a second namespace
+biosample	local_id	required	string	Biospecimen	Biospecimen_id	close	none	
+biosample	project_id_namespace	required	FK to project			none	none	Config namespace
+biosample	project_local_id	required	FK to project	Biospecimen	Study Key	close	none	Study Key resolves to the project row for the Study; required FK
+biosample	persistent_id	optional	string	Biospecimen	Biospecimen BioSample Identifier	close	none	SAMN accession, as compact ID; unique across tables
+biosample	creation_time	optional	datetime			none	none	No MC2 creation-time attribute (Synapse createdOn could supply, not in model)
+biosample	sample_prep_method	optional	FK to CV table sample_prep_method (OBI)	Biospecimen	Biospecimen Preservation Method|Biospecimen Preservation Medium|Biospecimen Embedding Medium|Biospecimen Stain	narrow	preservation.csv, fixative.csv, embeddingMedium.csv, stainType.csv NCIT->OBI (new)	C2M2 allows one OBI planned-process term; four MC2 attributes collapse to one (lossy). 14+17+10+6 = 47 terms, 0 carry OBI IDs
+biosample	anatomy	optional	FK to CV table anatomy (UBERON/CL/CLO)	Biospecimen	Biospecimen Anatomic Site	exact	none	Attribute already holds a UBERON identifier (free text, not a CV); validate form UBERON:NNNNNNN. Alternate source Biospecimen Site of Resection or Biopsy. No tissue.csv crosswalk is needed here
+biosample	biofluid	optional	FK to CV table biofluid (UBERON/InterLex)	Biospecimen	Biospecimen Type Category	narrow	biospecimenCategory.csv NCIT->UBERON biofluid (new)	Only for fluid categories (Blood, Ascites, Bone Marrow ...); leave null otherwise. 18 of 19 terms NCIT
+subject	id_namespace	required	FK to id_namespace			none	none	Not an MC2 attribute: exporter config. Use registered namespace (e.g. https://www.synapse.org/Synapse:); rows lacking a syn id need a second namespace
+subject	local_id	required	string	Individual	Individual_id	close	none	Model rows (Model_id) would also become subjects if Model is exported
+subject	project_id_namespace	required	FK to project			none	none	Config namespace
+subject	project_local_id	required	FK to project	Individual	Study Key	close	none	Study Key resolves to the project row for the Study; required FK
+subject	persistent_id	optional	string			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+subject	creation_time	optional	datetime			none	none	No MC2 creation-time attribute (Synapse createdOn could supply, not in model)
+subject	granularity	required	enum: cfde_subject_granularity:0-5	Individual		none	constant	Required; no MC2 attribute. Constant per class (Individual = single organism; Model = cell line / non-human). Enum labels (cfde_subject_granularity:0-5) are in the CFDE CV, not in the schema: label-to-code mapping unverified
+subject	sex	optional	enum: cfde_subject_sex:0-2	Individual	Sex	close	biologicalSex.csv -> cfde_subject_sex:0-2 (new, 3 terms)	MC2 Female/Male/Unknown; code labels not in schema, verify against CFDE CV. Also available on Biospecimen and Model
+subject	ethnicity	optional	enum: cfde_subject_ethnicity:0-1			none	none	MC2 has no ethnicity attribute
+subject	age_at_enrollment	optional	number			none	none	Individual Age at Diagnosis is a different quantity; not mapped
+dcc	id	required	string			none	none	Issued by CFDE-CC; config
+dcc	dcc_name	required	string	Consortium	Consortium Full Name	close	none	Or Consortium Display Name; config may override
+dcc	dcc_abbreviation	required	string pattern ^[a-zA-Z0-9_]+$	Consortium	Consortium Name	close	none	Pattern ^[a-zA-Z0-9_]+$; Consortium Name is machine-readable (e.g. csbc_pson)
+dcc	dcc_description	optional	string	Consortium	Consortium Description	exact	none	
+dcc	contact_email	required	string	Person View	Email	none	none	Needs a designated technical contact; Person View holds people but no contact role. Config
+dcc	contact_name	required	string	Person View	Name	none	none	As above; config
+dcc	dcc_url	required	string	Consortium	Website	exact	none	
+dcc	project_id_namespace	required	FK to project			none	none	Config; points at the root project
+dcc	project_local_id	required	FK to project			none	none	Root project row generated by exporter (MC2 Center); no MC2 record
+project	id_namespace	required	FK to id_namespace			none	none	Not an MC2 attribute: exporter config. Use registered namespace (e.g. https://www.synapse.org/Synapse:); rows lacking a syn id need a second namespace
+project	local_id	required	string	Project View|Study	ProjectView_id|Study_id	close	none	Project View and Study both become project rows (Project View parent, Study child); need a root project for the DCC
+project	persistent_id	optional	string			none	none	
+project	creation_time	optional	datetime			none	none	No MC2 creation-time attribute (Synapse createdOn could supply, not in model)
+project	abbreviation	optional	string pattern ^[a-zA-Z0-9_]+$	Project View|Study	Project Short Name|Study Short Name	close	none	Pattern ^[a-zA-Z0-9_]+$
+project	name	required	string	Project View|Study	Project Name|Study Name	exact	none	
+project	description	optional	string	Project View|Study	Project Description|Study Description	exact	none	
+project_in_project	parent_project_id_namespace	required	FK to project			none	none	Config namespace
+project_in_project	parent_project_local_id	required	FK to project	Study	ProjectView Key	close	none	Project View is parent of Study; root DCC project parent of Project Views (generated)
+project_in_project	child_project_id_namespace	required	FK to project			none	none	Config namespace
+project_in_project	child_project_local_id	required	FK to project	Study	Study_id	close	none	
+collection	id_namespace	required	FK to id_namespace			none	none	Not an MC2 attribute: exporter config. Use registered namespace (e.g. https://www.synapse.org/Synapse:); rows lacking a syn id need a second namespace
+collection	local_id	required	string	Dataset View	DatasetView_id	close	none	
+collection	persistent_id	optional	string	Dataset View	Dataset Doi	close	none	DOI as compact ID (doi:...) or resolver URL; unique across tables
+collection	creation_time	optional	datetime			none	none	No MC2 creation-time attribute (Synapse createdOn could supply, not in model)
+collection	abbreviation	optional	string pattern ^[a-zA-Z0-9_]+$	Dataset View	Dataset Alias	close	none	Alias may contain characters outside ^[a-zA-Z0-9_]+$ (GSE ids fine, DOIs not)
+collection	name	required	string	Dataset View	Dataset Name	exact	none	
+collection	description	optional	string	Dataset View	Dataset Description	exact	none	
+collection	has_time_series_data	optional	boolean	File View	File Longitudinal Group	narrow	none	Derivable: true if any member file has longitudinal attributes; no direct dataset attribute
+collection_in_collection	superset_collection_id_namespace	required	FK to collection			none	none	No MC2 collection nesting (Collection class is a metadata table registry, not a C2M2 collection)
+collection_in_collection	superset_collection_local_id	required	FK to collection			none	none	No MC2 collection nesting (Collection class is a metadata table registry, not a C2M2 collection)
+collection_in_collection	subset_collection_id_namespace	required	FK to collection			none	none	No MC2 collection nesting (Collection class is a metadata table registry, not a C2M2 collection)
+collection_in_collection	subset_collection_local_id	required	FK to collection			none	none	No MC2 collection nesting (Collection class is a metadata table registry, not a C2M2 collection)
+file_describes_collection	file_id_namespace	required	FK to file			none	none	Config namespace (derived from the entity row)
+file_describes_collection	file_local_id	required	FK to file	File View	FileView_id	close	none	Entity local id; association row generated from MC2 key relations
+file_describes_collection	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+file_describes_collection	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_defined_by_project	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_defined_by_project	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	
+collection_defined_by_project	project_id_namespace	required	FK to project			none	none	Config namespace (derived from the entity row)
+collection_defined_by_project	project_local_id	required	FK to project	Dataset View	Study Key	close	none	Study is the defining project
+file_in_collection	file_id_namespace	required	FK to file			none	none	Config namespace (derived from the entity row)
+file_in_collection	file_local_id	required	FK to file	File View	FileView_id	close	none	
+file_in_collection	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+file_in_collection	collection_local_id	required	FK to collection	File View	DatasetView Key	close	none	File View.DatasetView Key gives the membership
+biosample_in_collection	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_in_collection	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	broad	none	No direct MC2 link; derive via File View (file in collection, file describes biosample)
+biosample_in_collection	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+biosample_in_collection	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+subject_in_collection	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_in_collection	subject_local_id	required	FK to subject	Individual	Individual_id	broad	none	No direct MC2 link; derive via Biospecimen/File View
+subject_in_collection	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+subject_in_collection	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+file_describes_biosample	file_id_namespace	required	FK to file			none	none	Config namespace (derived from the entity row)
+file_describes_biosample	file_local_id	required	FK to file	File View	FileView_id	close	none	
+file_describes_biosample	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+file_describes_biosample	biosample_local_id	required	FK to biosample	File View	Biospecimen Key	close	none	File View.Biospecimen Key
+file_describes_subject	file_id_namespace	required	FK to file			none	none	Config namespace (derived from the entity row)
+file_describes_subject	file_local_id	required	FK to file	File View	FileView_id	broad	none	Optional; derive via Biospecimen.Individual Key
+file_describes_subject	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+file_describes_subject	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	Entity local id; association row generated from MC2 key relations
+biosample_from_subject	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_from_subject	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	
+biosample_from_subject	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+biosample_from_subject	subject_local_id	required	FK to subject	Biospecimen	Individual Key|Model Key	close	none	Individual Key; Model Key when Model is exported as subject. Rows with neither cannot be exported (FK required)
+biosample_from_subject	age_at_sampling	optional	number			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+biosample_disease	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_disease	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	
+biosample_disease	association_type	required	enum: cfde_disease_association_type:0-1			none	constant	As subject_disease
+biosample_disease	disease	required	FK to CV table disease (Disease Ontology (DOID))	Biospecimen	Disease Type|Primary Diagnosis	close	diseaseType.csv NCIT->DOID (new; chain existing kg-pipeline/mappings/crosswalks/diseaseType_ncit_to_mondo.sssom.tsv + MONDO DOID xrefs). Primary Diagnosis is free NCIT text (no CV CSV)	Biospecimen Disease Type / Primary Diagnosis
+subject_disease	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_disease	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	
+subject_disease	association_type	required	enum: cfde_disease_association_type:0-1			none	constant	Required enum cfde_disease_association_type:0-1; MC2 only records observed diagnoses; constant
+subject_disease	disease	required	FK to CV table disease (Disease Ontology (DOID))	Individual	Disease Type|Primary Diagnosis	close	diseaseType.csv NCIT->DOID (new; chain existing kg-pipeline/mappings/crosswalks/diseaseType_ncit_to_mondo.sssom.tsv + MONDO DOID xrefs). Primary Diagnosis is free NCIT text (no CV CSV)	Individual Disease Type / Primary Diagnosis
+collection_disease	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_disease	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	
+collection_disease	disease	required	FK to CV table disease (Disease Ontology (DOID))	Dataset View	Tumor Type	close	tumorType.csv NCIT->DOID (new; chain existing kg-pipeline/mappings/crosswalks/tumorType_ncit_to_mondo.sssom.tsv + MONDO DOID xrefs)	Multi-valued comma separated
+collection_phenotype	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_phenotype	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_phenotype	phenotype	required	FK to CV table phenotype (HPO)			none	none	Out of MC2 scope (no source data); leave table empty
+collection_gene	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_gene	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_gene	gene	required	FK to CV table gene (Ensembl)			none	none	Out of MC2 scope (no source data); leave table empty
+collection_compound	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_compound	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_compound	compound	required	FK to CV table compound (PubChem CID/GlyTouCan)			none	none	Out of MC2 scope (no source data); leave table empty
+collection_substance	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_substance	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_substance	substance	required	FK to CV table substance (PubChem SID)			none	none	Out of MC2 scope (no source data); leave table empty
+collection_taxonomy	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_taxonomy	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	
+collection_taxonomy	taxon	required	FK to CV table ncbi_taxonomy (NCBI Taxonomy)	Dataset View	Species	close	dataset_species.csv NCIT->NCBITaxon (new, 32 terms; 6 already NCBITaxon) then reformat NCBITaxon:N -> NCBI:txidN	Multi-valued; MC2 term -> NCBI:txidN
+collection_anatomy	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_anatomy	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	
+collection_anatomy	anatomy	required	FK to CV table anatomy (UBERON/CL/CLO)	Dataset View	Tissue	close	modules/shared/tissue.csv NCIT->UBERON (exists: kg-pipeline/mappings/crosswalks/tissue_ncit_to_uberon.sssom.tsv, 106 rows, all reviewed=false)	Multi-valued comma separated
+collection_biofluid	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_biofluid	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_biofluid	biofluid	required	FK to CV table biofluid (UBERON/InterLex)			none	none	Out of MC2 scope (no source data); leave table empty
+collection_protein	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_protein	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_protein	protein	required	FK to CV table protein (UniProtKB)			none	none	Out of MC2 scope (no source data); leave table empty
+subject_phenotype	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_phenotype	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	Entity local id; association row generated from MC2 key relations
+subject_phenotype	association_type	required	enum: cfde_phenotype_association_type:0-1			none	none	Not used; MC2 has no phenotype data
+subject_phenotype	phenotype	required	FK to CV table phenotype (HPO)			none	none	Out of MC2 scope (no source data); leave table empty
+biosample_substance	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_substance	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	Entity local id; association row generated from MC2 key relations
+biosample_substance	substance	required	FK to CV table substance (PubChem SID)			none	none	Out of MC2 scope (no source data); leave table empty
+subject_substance	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_substance	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	Entity local id; association row generated from MC2 key relations
+subject_substance	substance	required	FK to CV table substance (PubChem SID)			none	none	Out of MC2 scope (no source data); leave table empty
+biosample_gene	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_gene	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	Entity local id; association row generated from MC2 key relations
+biosample_gene	gene	required	FK to CV table gene (Ensembl)			none	none	Out of MC2 scope (no source data); leave table empty
+biosample_protein	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_protein	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	Entity local id; association row generated from MC2 key relations
+biosample_protein	protein	required	FK to CV table protein (UniProtKB)			none	none	Out of MC2 scope (no source data); leave table empty
+phenotype_gene	phenotype	required	FK to CV table phenotype (HPO)			none	none	Out of MC2 scope (no source data); leave table empty
+phenotype_gene	gene	required	FK to CV table gene (Ensembl)			none	none	Out of MC2 scope (no source data); leave table empty
+phenotype_disease	phenotype	required	FK to CV table phenotype (HPO)			none	none	Out of MC2 scope (no source data); leave table empty
+phenotype_disease	disease	required	FK to CV table disease (Disease Ontology (DOID))			none	none	Out of MC2 scope (no source data); leave table empty
+subject_race	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_race	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	Entity local id; association row generated from MC2 key relations
+subject_race	race	required	enum: cfde_subject_race:0-6			none	none	Out of MC2 scope (no source data); leave table empty
+subject_role_taxonomy	subject_id_namespace	required	FK to subject			none	none	Config namespace (derived from the entity row)
+subject_role_taxonomy	subject_local_id	required	FK to subject	Individual	Individual_id	close	none	
+subject_role_taxonomy	role_id	required	enum: cfde_subject_role:0-7			none	constant	Required enum cfde_subject_role:0-7; no MC2 attribute; constant (single organism)
+subject_role_taxonomy	taxonomy_id	required	FK to CV table ncbi_taxonomy (NCBI Taxonomy)	Model	Species	close	dataset_species.csv NCIT->NCBITaxon (new, 32 terms; 6 already NCBITaxon) then reformat NCBITaxon:N -> NCBI:txidN	Individual has no Species (human implied: NCBI:txid9606); Model and Biospecimen carry Species
+assay_type	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+assay_type	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+assay_type	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+assay_type	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+analysis_type	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+analysis_type	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+analysis_type	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+analysis_type	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ncbi_taxonomy	id	required	string pattern ^NCBI:txid[0-9]+$			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+ncbi_taxonomy	clade	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ncbi_taxonomy	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ncbi_taxonomy	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ncbi_taxonomy	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+anatomy	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+anatomy	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+anatomy	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+anatomy	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+biofluid	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+biofluid	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+biofluid	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+biofluid	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+file_format	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+file_format	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+file_format	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+file_format	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+data_type	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+data_type	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+data_type	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+data_type	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+disease	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+disease	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+disease	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+disease	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+phenotype	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+phenotype	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+phenotype	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+phenotype	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+compound	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+compound	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+compound	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+compound	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+substance	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+substance	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+substance	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+substance	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+substance	compound	required	FK to CV table compound (PubChem CID/GlyTouCan)			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+gene	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+gene	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+gene	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+gene	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+gene	organism	required	FK to CV table ncbi_taxonomy (NCBI Taxonomy)			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+protein	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+protein	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+protein	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+protein	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+protein	organism	optional	FK to CV table ncbi_taxonomy (NCBI Taxonomy)			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+protein_gene	protein	required	FK to CV table protein (UniProtKB)			none	none	Out of MC2 scope (no source data); leave table empty
+protein_gene	gene	required	FK to CV table gene (Ensembl)			none	none	Out of MC2 scope (no source data); leave table empty
+sample_prep_method	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+sample_prep_method	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+sample_prep_method	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+sample_prep_method	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+id_namespace	id	required	string			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+id_namespace	abbreviation	optional	string pattern ^[a-zA-Z0-9_]+$			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+id_namespace	name	required	string			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+id_namespace	description	optional	string			none	none	Local id of the entity on the other side of the association (same source as the entity table local_id)
+collection_ptm	collection_id_namespace	required	FK to collection			none	none	Config namespace (derived from the entity row)
+collection_ptm	collection_local_id	required	FK to collection	Dataset View	DatasetView_id	close	none	Entity local id; association row generated from MC2 key relations
+collection_ptm	ptm	required	FK to ptm			none	none	Out of MC2 scope (no source data); leave table empty
+biosample_ptm	biosample_id_namespace	required	FK to biosample			none	none	Config namespace (derived from the entity row)
+biosample_ptm	biosample_local_id	required	FK to biosample	Biospecimen	Biospecimen_id	close	none	Entity local id; association row generated from MC2 key relations
+biosample_ptm	ptm	required	FK to ptm			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	id	required	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	protein	required	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	site_one	required	integer			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	aa_site_one	required	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	site_two	optional	integer			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	aa_site_two	optional	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	site_type	optional	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	ptm_type	optional	FK to CV table ptm_type (GO)			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	ptm_subtype	optional	FK to CV table ptm_subtype (GO)			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	domain_location	optional	FK to CV table domain_location (GO)			none	none	Out of MC2 scope (no source data); leave table empty
+ptm	domain_type	optional	string			none	none	Out of MC2 scope (no source data); leave table empty
+ptm_type	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+ptm_type	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ptm_type	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ptm_type	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ptm_subtype	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+ptm_subtype	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ptm_subtype	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+ptm_subtype	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+domain_location	id	required	string			none	none	CV table: filled by `cfde-c2m2 prepare` from the ids used in FK columns (OLS lookup); exporter supplies only the id column values
+domain_location	name	required	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+domain_location	description	optional	string			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
+domain_location	synonyms	optional	array			none	none	Filled by cfde-c2m2 prepare from OLS (not MC2 data)
