@@ -1,0 +1,31 @@
+target_table	target_field	target_required	target_value_constraint	mc2_class	mc2_attribute	match	value_crosswalk	notes
+SERIES	title	required	free text	Study	Study Name	close	none	"Template GA_single_ch.xls (GEO non-Affymetrix single-channel array). ""Most fields must be completed."""
+SERIES	summary	required	free text (repeatable)	Study	Study Description	close	none	
+SERIES	overall design	required	free text	Dataset View	Dataset Design	broad	none	"MC2 Dataset Design is free text with no definition beyond ""overall design of the dataset""."
+SERIES	contributor	required	"""First,Middle,Last"" (repeatable)"	Study	Investigator|PersonView Key	close	none	Name reformatting needed; same issue as seq template.
+SAMPLES	Sample name	required	unique; must equal a Matrix column header	NanoString GeoMX ROI Segment Annotation	NanoStringGeoMXROISegmentAnnotation_id|GeoMx AOI Name	close	none	One GEO Sample per AOI/segment (the unit that carries a count vector in the Level 3 matrix). Assumption to confirm with GEO.
+SAMPLES	title	required	free text, unique	NanoString GeoMX ROI Segment Annotation	GeoMx Slide name|GeoMx ROI Name|GeoMx AOI Name	close	none	Synthesized from slide/ROI/AOI names.
+SAMPLES	raw data file	required	file name	NanoString GeoMx DSP Level 1	Filename	narrow	none	Array template expects one raw file per sample (e.g. nCounter RCC or GeoMx DCC). MC2 Level 1 is FASTQ (NGS readout) - fits only if DCC files are supplied; MC2 has no DCC/RCC file attribute.
+SAMPLES	source name	required	free text	Biospecimen	Biospecimen Type|Tissue	close	none	Short description of the biological source.
+SAMPLES	organism	required	NCBI scientific name	Biospecimen	Species|Biospecimen Taxonomy ID	close	Species common name -> NCBI scientific name (shared with seq template)	
+SAMPLES	characteristics: tissue	required	free text	Biospecimen	Tissue|Biospecimen Anatomic Site	close	UBERON id -> label	At least one characteristics column expected.
+SAMPLES	characteristics: ROI	optional	free text	NanoString GeoMX ROI Segment Annotation	GeoMx ROI Name	exact	none	
+SAMPLES	characteristics: segment	optional	free text	NanoString GeoMX ROI Segment Annotation	GeoMx Tags	close	none	Segment/compartment tags (e.g. PanCK+).
+SAMPLES	characteristics: slide	optional	free text	NanoString GeoMX ROI Segment Annotation	GeoMx Slide name	exact	none	
+SAMPLES	characteristics: area / nuclei	optional	numeric	NanoString GeoMX ROI Segment Annotation	GeoMx Surface area|GeoMx Nuclei count	exact	none	
+SAMPLES	characteristics: ROI coordinates	optional	numeric	NanoString GeoMX ROI Segment Annotation	GeoMx ROI X Coordinate|GeoMx ROI Y Coordinate	exact	none	
+SAMPLES	characteristics: disease / stage / sex / age	optional	free text	Individual	Disease Type|Primary Diagnosis|Sex|Individual Age at Diagnosis	close	none	Same free-form characteristics model as seq template; exclude dates/days-from fields.
+SAMPLES	molecule	required	GEO molecule list (total RNA, polyA RNA, genomic DNA, protein, ...)	NanoString GeoMx DSP Level 1	GeoMx DSP Assay Type|NGS Library Source Molecule	close	GeoMx DSP Assay Type -> molecule (RNA assays -> total RNA; protein assays -> protein)	Value list taken from template examples; data-validation list not readable in the .xls.
+SAMPLES	label	required	free text			none	none	Array concept (label compound). For GeoMx, conventionally the oligo-tagged probes; no MC2 source - constant per assay.
+SAMPLES	description	optional	free text	NanoString GeoMx DSP Level 1	File Description	close	none	
+SAMPLES	platform	required	GEO GPL accession			none	none	No MC2 attribute holds a GEO platform (GPL) accession. Needs a GeoMx panel (e.g. CTA/WTA/protein module) -> GPL lookup, or a new panel attribute; MC2 has PKC file (Auxiliary Files) which identifies the panel.
+PROTOCOLS	growth protocol	optional	free text			none	none	
+PROTOCOLS	treatment protocol	optional	free text	Individual	Treatment Type|Therapeutic Agent	broad	none	
+PROTOCOLS	extract protocol	required	free text			none	none	No MC2 protocol attribute for GeoMx (see standards review: Protocol Link gap).
+PROTOCOLS	label protocol	required	free text	NanoString GeoMX ROI Segment Annotation	GeoMx Tissue Stain	narrow	none	Morphology stains only; probe hybridization protocol not captured.
+PROTOCOLS	hyb protocol	required	free text			none	none	No MC2 source.
+PROTOCOLS	scan protocol	required	free text	NanoString GeoMx DSP Imaging	Image Platform Model|Image Objective|Image Nominal Magnification	narrow	none	Composed from imaging attributes.
+PROTOCOLS	data processing	required	free text	NanoString GeoMx DSP Level 3	Software and Version|Workflow Type|Workflow Parameter Description|Workflow Link	close	none	
+PROTOCOLS	value definition	required	free text	NanoString GeoMx DSP Level 3	NGS Matrix Type	close	none	e.g. Q3-normalized counts.
+MATRIX	ID_REF	required	must match ID column of the referenced GPL	NanoString GeoMx DSP Level 3	Filename	narrow	none	Probe/target IDs from the Level 3 count matrix; must match the GPL. File-content transform, not an attribute.
+MATRIX	<sample columns>	required	normalized signal; header = Sample name	NanoString GeoMx DSP Level 3	Filename	narrow	none	Level 3 matrix columns must be renamed to the GEO Sample names (AOI ids). NGS Matrix Type must indicate normalized values.
