@@ -8,8 +8,7 @@ SSSOM files described in `plans/metadata_export_pipeline.md` (Part A).
 | File | Target | Source read (2026-11-12) | Rows |
 |---|---|---|---|
 | `c2m2.tsv` | CFDE C2M2 | `C2M2_datapackage.json` (nih-cfde/published-documentation, `stable`) | 262 |
-| `geo.tsv` | NCBI GEO, high-throughput sequencing | `seq_template.xlsx` (GEO update of 2026-10-28) and the GEO seq and validation pages | 42 |
-| `geo_geomx.tsv` | NCBI GEO, NanoString GeoMx via the array template | `GA_single_ch.xls` (GEO non-Affymetrix single-channel array template) | 30 |
+| `geo.tsv` | NCBI GEO, high-throughput sequencing. Covers the Sequencing, Visium and GeoMx families. | `seq_template.xlsx` (GEO update of 2026-10-28) and the GEO seq and validation pages | 43 |
 | `dbgap.tsv` | dbGaP | Submission guide and the 2026-04-07 template package | 39 |
 | `crdc.tsv` | CRDC General Commons (CDS) 13.0.1 | CBIIT/cds-model `13.0.1-GC_Release`, checked against the portal's `GC_Dictionary_All_v13.0.1.json` and controlled-vocabulary export | 291 |
 

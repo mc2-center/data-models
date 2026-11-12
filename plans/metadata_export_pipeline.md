@@ -45,26 +45,17 @@ README there for the column definitions) and become the Part A seeds:
 | Target | Spec read | Fields | exact / close / broad / narrow / none | Submission and validation |
 |---|---|---|---|---|
 | **C2M2** | `C2M2_datapackage.json` (published-documentation `stable`, the schema `cfde-c2m2` itself loads) | 262 in 59 tables | 8 / 63 / 4 / 4 / 183 | Zipped Frictionless TSV package. `cfde-c2m2 prepare` fills the CV tables from ontology IDs; `cfde-c2m2 validate` runs **locally**. |
-| **GEO, sequencing** | `seq_template.xlsx` (GEO update of 2026-10-28) and the GEO seq and validation pages | 42 | 4 / 25 / 0 / 8 / 5 | One xlsx per sequencing type, with an MD5 sheet, plus FTP upload. A server-side validator runs on upload; there is no offline validator and no API. |
-| **GEO, GeoMx** | `GA_single_ch.xls` (non-Affymetrix single-channel array template) | 30 | 4 / 14 / 2 / 5 / 5 | Same submission route as sequencing, but the data is a normalized matrix tab that references a GEO platform accession (GPL). |
+| **GEO** | `seq_template.xlsx` (GEO update of 2026-10-28) and the GEO seq and validation pages | 43 | 4 / 26 / 0 / 8 / 5 | One xlsx per sequencing type, with an MD5 sheet, plus FTP upload. A server-side validator runs on upload; there is no offline validator and no API. |
 
-**GEO and GeoMx.** MC2's GeoMx model describes the **NGS readout**: library
-fields, read counts and FASTQ files at Level 1. The array template has one
-Sample per AOI and a normalized matrix built from the MC2 Level 3 count
-matrix. Required array fields with no MC2 source:
-- `platform`: no MC2 attribute holds a GEO platform (GPL) accession. The PKC
-  file in Auxiliary Files identifies the panel, but no panel→GPL lookup
-  exists.
-- `label`: an array concept, filled with a per-assay constant.
-- `hyb protocol` and `extract protocol`: no source attribute.
-- `raw data file`: this expects a DCC or RCC file per sample, and MC2 has no
-  attribute for either.
+**GEO uses the HTS template for Sequencing, Visium and GeoMx.** For GeoMx:
+- each AOI library is a GEO sample row;
+- Level 1 FASTQs are the raw files;
+- Level 2 DCC files are the processed files (Level 3 count matrices can be
+  added);
+- AOI annotations from ROI Segment Annotation go in submitter-added sample
+  columns.
 
-GeoMx NGS-readout FASTQs could go through the sequencing template instead,
-with library strategy "Spatial Transcriptomics". Decision 6 picks which
-route.
-
-In the sequencing template, the MC2 sequencing-platform CV (77 terms) has
+In the template, the MC2 sequencing-platform CV (77 terms) has
 43 exact matches against GEO's 109 instruments, 6 that differ only by the
 "Illumina " prefix, and 28 unmatched. The library-strategy CV (43 terms) has
 19 exact matches, 1 that differs only in case, and 23 unmatched against
@@ -134,8 +125,7 @@ Three kinds are needed:
 | No race / ethnicity on Individual | C2M2 `subject_race` (only if that table is populated). dbGaP and CRDC (optional). | Also raised in the standards review. |
 | `NGS Library Layout`: the description says "one of Paired-end or Single", but the values are `Paired-end, Single-indexed` | GEO, SRA | "Single-indexed" is **inherited from CRDC**. GC 13.0.1 `library_layout` has it too and has no single-end value. So CRDC is an identity map. GEO and SRA need single/paired, which should come from `Read Indicator`. The MC2 description is what's inaccurate. |
 | No `study_external_url` / `study_access` | CRDC (required) | Both can be filled from config or derived per study. |
-| No extract or library protocol | GEO (required: seq extract protocol; array extract and hyb protocols) | Same gap as "Protocol Link" in the standards review. |
-| No GEO platform (GPL) / GeoMx panel attribute | GEO array route for GeoMx (required) | It could be derived from the PKC file, or recorded as a new panel attribute. |
+| No extract protocol | GEO (required) | Same gap as "Protocol Link" in the standards review. |
 | Checksum coverage | C2M2 (md5/sha256 required), CRDC/dbGaP upload manifests (MD5) | Real-data coverage of `File Data Checksum Value` is unknown. |
 
 ## Approach
@@ -218,16 +208,6 @@ Three kinds are needed:
    to `kg-pipeline/mappings/standards/source/crdc/v13.0.1/` so the crosswalks
    and the exporter are reproducible. This would be a new folder of
    third-party files.
-6. **The GEO route for GeoMx.** Options:
-   - **Array template** (`geo_geomx.tsv`): AOIs become Samples, and the
-     normalized Level 3 matrix becomes the data. It needs a panel→GPL
-     lookup, plus DCC files or a GEO-agreed substitute as raw files.
-   - **Sequencing template**: Level 1 FASTQs with library strategy
-     "Spatial Transcriptomics".
-
-   It may also depend on whether any MC2 groups used the nCounter readout,
-   which the MC2 model doesn't describe today. Confirm with GEO which route
-   it expects.
 
 ## Verification
 
