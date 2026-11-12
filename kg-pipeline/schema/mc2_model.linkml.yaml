@@ -2769,7 +2769,7 @@ slots:
   Portal Display:
     description: Display content in CCKP
     required: true
-    range: Portal Display Enum
+    range: boolean
   Person Publications:
     description: A list of the pubmed Ids associated with the person. Multiple values permitted, comma
       separated.
@@ -13538,10 +13538,6 @@ enums:
     permissible_values:
       'No': null
       'Yes': null
-  Portal Display Enum:
-    permissible_values:
-      'FALSE': null
-      'TRUE': null
   Project Type Enum:
     permissible_values:
       Core:

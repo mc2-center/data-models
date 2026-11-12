@@ -109,11 +109,8 @@
     },
     "PortalDisplay": {
       "description": "Display content in CCKP",
-      "enum": [
-        "FALSE",
-        "TRUE"
-      ],
-      "title": "Portal Display"
+      "title": "Portal Display",
+      "type": "boolean"
     },
     "SynapseProfileId": {
       "description": "Unique identifier (Synapse Profile ID) of the individual. See identifer in the url of the synapse profile page.",

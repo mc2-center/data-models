@@ -150,8 +150,6 @@ person:
   src: person/chair_roles.csv
 - name: Consent For Portal Display
   src: person/consent_for_portal_display.csv
-- name: Portal Display
-  src: person/portal_display.csv
 - name: Working Group Participation
   src: person/working_group_participation.csv
 project:

@@ -97087,54 +97087,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:FALSE"
-                },
-                {
-                    "@id": "bts:TRUE"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Portal Display",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:FALSE",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "FALSE",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:PortalDisplay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "FALSE",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:TRUE",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "TRUE",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:PortalDisplay"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "TRUE",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
