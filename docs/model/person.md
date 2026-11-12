@@ -38,7 +38,7 @@ The table below includes sample values to demonstrate proper attribute usage.
 | Working Group Participation | Cancer Metabolism, Genomic Data Integration |
 | Chair Roles | Steering Committee, Ethics Review Panel |
 | Consent For Portal Display | Yes |
-| Portal Display | TRUE |
+| Portal Display | true |
 | Person View | Public Profile View |
 | GrantView Key | CA202177, CA304599 |
 | Consortium Key | program.htan, program.pdmc |
