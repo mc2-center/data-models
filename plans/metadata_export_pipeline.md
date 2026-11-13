@@ -179,6 +179,87 @@ Three kinds are needed:
    the exporter checks required fields and enum membership itself, against
    the scoped field inventory.
 
+### Part E: Provenance step layer (PROV-O), derived in the KG
+
+MC2 records experiment **outputs** as template rows linked by keys. The
+**steps** between them are implicit: their details sit on whichever row they
+produced. Examples are `NGS Library Preparation Kit Name` on Level 1 and
+`Software and Version` on Level 2. Part E makes those steps explicit in the
+graph, using W3C PROV-O. PROV is already used in `manifest.ttl`. Templates
+and submitters are unaffected.
+
+7. **Declare the step edges in `kg-pipeline/mappings/provenance_steps.yaml`.**
+   Each edge names an input class, an output class, the joining key, a step
+   type, and the MC2 attributes that describe that step. Proposed edges,
+   using keys that exist today:
+
+   | Step | Input → output (key) | Step attributes (examples) |
+   |---|---|---|
+   | Specimen collection | Individual / Model → Biospecimen (`Individual Key`, `Model Key`) | Acquisition Method, Collection Site, Timepoint Type/Offset, Preservation Method/Medium/Temperature |
+   | Specimen derivation | Biospecimen → Biospecimen (`Parent Biospecimen Key`) | Embedding Medium, Stain. The step type comes from the new attribute in Decision 7. |
+   | AOI selection (GeoMx) | Biospecimen → ROI Segment Annotation (`Biospecimen Key`) | GeoMx Scan name, Tags, Tissue Stain |
+   | Library prep + sequencing | Biospecimen / AOI → Sequencing, Visium or GeoMx Level 1 (`Biospecimen Key`, `NanoStringGeoMXROISegmentAnnotation Key`) | NGS Library Preparation Kit *, Library Strategy/Selection/Layout, Sequencing Platform |
+   | Imaging acquisition | Biospecimen → Imaging Level 1 | Image Platform Model, Objective, Protocol Link |
+   | Computational processing | Level N → Level N+1 (`…LevelN Key`) | Software and Version, Workflow Type/Version/Link/Parameters, Genomic Reference |
+
+8. **New `scripts/build_provenance.py`** writes `data/rdf/provenance.ttl`,
+   following the pattern of `link_scdm.py`. For each joined pair of rows it
+   creates one step node:
+   - It is typed `prov:Activity`, plus an OBI planned-process class per step
+     type (the class IRIs still need an OLS check).
+   - It links `prov:used` to the input and `prov:wasGeneratedBy` from the
+     output.
+   - The step attributes go on the step node. They are also left on the row
+     that produced them, so existing queries keep working.
+   - The step IRI is deterministic: `{output IRI}/activity/{step type}`.
+   - Only PROV and OBI types are asserted, never governanceDUO-owned types
+     (the D9 principle).
+
+   Steps that pool or split are handled naturally. A Level 3 file with
+   several Level 2 keys gets one step with several `prov:used` links.
+   A new `provenance` Make target runs the script, inside the
+   access-controlled assay KG chain.
+9. **Missing intermediate steps degrade gracefully.** No material nodes are
+   invented. If nothing records a section between a biopsy and a Level 1
+   file, the graph has one step from the biopsy to Level 1, typed with the
+   generic planned-process class.
+
+**Depends on Part D (Decision 2).** File View, the only assay class loaded
+today, has a `Biospecimen Key` and nothing else to chain to, so without
+Individual, Biospecimen and Level 1-3 instance data there are no edges to
+derive.
+
+**How Part E helps exports.** GEO's PROTOCOLS section (extract, library
+construction, data processing steps, genome build) and SRA's experiment
+record both describe steps. With step nodes, each of these comes from one
+query instead of being assembled from attributes on different rows.
+
+#### Handling sample-preparation and AOI-selection steps
+
+A **"derived from" link already exists**: `Parent Biospecimen Key`.
+Combined with the existing `Biospecimen Type` values for intermediate stages
+("Slides", "FFPE Scrolls", "Analyte", "Total RNA" and others), it can already
+represent block → section → extract chains as Biospecimen rows. What's
+missing is **how** each child was derived. Part E would type that step as
+generic. Three pieces would fix it, and only the second is a model change:
+
+- **Guidance, not schema.** Document in the Biospecimen docs that each
+  physically distinct stage used downstream (block, section or slide,
+  dissociated cells, extract) gets its own Biospecimen row, chained by
+  `Parent Biospecimen Key`.
+- **One optional attribute on the child, `Biospecimen Derivation Method`.**
+  It records how the row was produced from its parent: sectioning,
+  macro- or microdissection, dissociation, nucleic acid extraction,
+  aliquoting, cell sorting. It would use a small CV bound to OBI
+  planned-process terms. This becomes the step type in Part E. A matching
+  `Biospecimen Derivation Protocol Link` would close the same protocol gap
+  as GEO's required extract protocol. Process parameters such as section
+  thickness are added only when a consumer needs them.
+- **AOI selection needs nothing new.** The ROI Segment Annotation row is the
+  AOI, its `Biospecimen Key` points to the slide, the template implies the
+  step type, and its parameters (Tags, Tissue Stain, Scan name) already
+  exist.
+
 ## Decisions needed before implementing
 
 1. **The first reference exporter.**
@@ -208,6 +289,14 @@ Three kinds are needed:
    to `kg-pipeline/mappings/standards/source/crdc/v13.0.1/` so the crosswalks
    and the exporter are reproducible. This would be a new folder of
    third-party files.
+6. **Part E scope.** Should the provenance layer be in this plan or a
+   separate one? It serves exports, but it is also its own initiative, and
+   the `plans/` convention is one file per initiative. Whichever you choose,
+   it is sequenced after Part D.
+7. **`Biospecimen Derivation Method` (and the protocol link).** Do you want
+   these new optional Biospecimen attributes? This is a model change, so it
+   would go through the model-change plan that comes out of
+   `standards_alignment_review.md`, not this plan.
 
 ## Verification
 
@@ -217,6 +306,15 @@ Three kinds are needed:
   - `export_<target>.py`: run against a fixture graph in `test/fixtures/`
     with no live Synapse, checking output headers and tables, required-field
     checks, and the unmapped report.
+- Part E:
+  - Tests on a fixture chain (Individual → Biospecimen → child Biospecimen →
+    Level 1 → 2 → 3) check that each edge produces exactly one
+    `prov:Activity` with the right `prov:used` and `prov:wasGeneratedBy`
+    links.
+  - A pooled Level 3 file produces one step with several inputs.
+  - Step IRIs are stable across reruns.
+  - A new example query, `queries/examples/provenance.rq` ("all data derived
+    from biospecimen X"), returns the full chain.
 - A test checks that every `subject_id` in the `mappings/standards/` files
   resolves to a slot in `mc2_model.ttl`.
 - `make full-kg && make validate` still pass, and
