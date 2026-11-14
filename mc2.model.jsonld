@@ -78013,14 +78013,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:False"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Image Pyramidal",
@@ -78344,14 +78336,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:False"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Image Pixels BigEndian",
@@ -89535,66 +89519,6 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Glycerol",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:True",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "True",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ImagePyramidal"
-                },
-                {
-                    "@id": "bts:ImagePixelsBigEndian"
-                },
-                {
-                    "@id": "bts:ToolPackageDependenciesPresent"
-                },
-                {
-                    "@id": "bts:VisiumImageRe-orientation"
-                },
-                {
-                    "@id": "bts:VisiumAppliedHardTrimming"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "True",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:False",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "False",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ImagePyramidal"
-                },
-                {
-                    "@id": "bts:ImagePixelsBigEndian"
-                },
-                {
-                    "@id": "bts:ToolPackageDependenciesPresent"
-                },
-                {
-                    "@id": "bts:VisiumImageRe-orientation"
-                },
-                {
-                    "@id": "bts:VisiumAppliedHardTrimming"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "False",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -128034,14 +127958,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:False"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Tool Package Dependencies Present",
@@ -131322,14 +131238,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:False"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Visium Image Re-orientation",
@@ -131969,14 +131877,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:False"
-                }
-            ],
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "boolean",
             "sms:displayName": "Visium Applied Hard Trimming",

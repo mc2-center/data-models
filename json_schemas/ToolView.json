@@ -1380,11 +1380,8 @@
     },
     "ToolPackageDependenciesPresent": {
       "description": "Indicates whether the required package dependencies for tool are present.",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Tool Package Dependencies Present"
+      "title": "Tool Package Dependencies Present",
+      "type": "boolean"
     },
     "ToolReleaseDate": {
       "description": "The release date of a product or product model. This can be used to distinguish the exact variant of a product.",
