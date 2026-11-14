@@ -4,4 +4,4 @@ VisiumRNALevel2_id,"Unique row identifier, used as a primary key for record upda
 Visium UMI Tag,"SAM tag for the UMI field; please provide a valid tag-type pair, consisting of a tag (e.g. UB or UR) and type (e.g. Z) separated by a colon.",,,True,,,string,,,,,,HTAN
 Visium Whitelist Spatial Barcode File Link,Link to file listing all possible spatial barcodes. URL,,,True,,,string,,,,,,HTAN
 Visium Spatial Barcode Tag,"SAM tag for spot barcode field; please provide a valid tag-type pair, consisting of a tag (e.g. CB or CR) and type (e.g. Z) separated by a colon.",,,True,,,string,,,,,,HTAN
-Visium Applied Hard Trimming,Was Hard Trimming applied,"True, False",,True,,,boolean,,,,,,HTAN
+Visium Applied Hard Trimming,Was Hard Trimming applied,,,True,,,boolean,,,,,,HTAN

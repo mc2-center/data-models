@@ -107,10 +107,6 @@ imagingLevel2:
   src: imagingLevel2/immersion.csv
 - name: Image Working Distance Unit
   src: imagingLevel2/unit.csv
-- name: Image Pyramidal
-  src: shared/boolean.csv
-- name: Image Pixels BigEndian
-  src: shared/boolean.csv
 imagingLevel3Segments:
 - name: Image Segmentation Data Type
   src: imagingLevel3Segments/segmentType.csv
@@ -254,8 +250,6 @@ tool:
   src: tool/tool_topic.csv
 - name: Tool Type
   src: tool/tool_type.csv
-- name: Tool Package Dependencies Present
-  src: shared/boolean.csv
 - name: Tool Entity Role
   src: tool/entity_role.csv
 - name: Tool Entity Type
@@ -265,17 +259,12 @@ visiumRNALevel1:
   src: visiumRNALevel1/captureArea.csv
 - name: Visium Slide Version
   src: visiumRNALevel1/slideVersion.csv
-- name: Visium Image Re-orientation
-  src: shared/boolean.csv
 - name: Visium Spatial Read1
   src: visiumRNALevel1/spatialReads.csv
 - name: Visium Spatial Read2
   src: visiumRNALevel1/spatialReads.csv
 - name: Visium Spatial Library Construction Method
   src: visiumRNALevel1/spatialLibrary.csv
-visiumRNALevel2:
-- name: Visium Applied Hard Trimming
-  src: shared/boolean.csv
 visiumRNALevel3:
 - name: Visium File Type
   src: visiumRNALevel3/visiumFileType.csv

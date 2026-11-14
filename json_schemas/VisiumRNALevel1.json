@@ -1135,11 +1135,8 @@
     },
     "VisiumImageRe-orientation": {
       "description": "To ensure good fiducial alignment and tissue spots detection, it is important to correct for this shift in orientation.",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Visium Image Re-orientation"
+      "title": "Visium Image Re-orientation",
+      "type": "boolean"
     },
     "VisiumPermeabilizationTime": {
       "description": "Fixed and stained tissue sections are permeabilized for different times. Each Capture Area captures polyadenylated mRNA from the attached tissue section. Measure is provided in minutes.",

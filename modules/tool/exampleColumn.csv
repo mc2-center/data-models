@@ -31,7 +31,7 @@ Tool Operation,DNA Barcoding
 Tool Output Data,"Accession, Alignment,Biological Model ID"
 Tool Output Format,FASTQ
 Tool Package Dependencies,"Python 3.7 or above, Django 2.2 or above, Postgresql 12.0 or above."
-Tool Package Dependencies Present,True
+Tool Package Dependencies Present,true
 Tool Grant Number,CA209975
 Tool Pubmed Id,26760201
 Tool Release Date,"January 5, 2022"

@@ -2425,7 +2425,7 @@ slots:
       cde_id: '8058286'
   Image Pyramidal:
     description: Does data file contain pyramid of images
-    range: Image Pyramidal Enum
+    range: boolean
     annotations:
       cde_id: '7788945'
   Image Z stack:
@@ -2479,7 +2479,7 @@ slots:
       the UnitsLength attribute -- default: microns (um)'
   Image Pixels BigEndian:
     description: Boolean (True/False)
-    range: Image Pixels BigEndian Enum
+    range: boolean
   Image Plane Count:
     description: Number of Z-planes (not to be confused with downsampled "pyramid"). Integer >=1
     range: float
@@ -3891,7 +3891,7 @@ slots:
   Tool Package Dependencies Present:
     description: Indicates whether the required package dependencies for tool are present.
     required: true
-    range: Tool Package Dependencies Present Enum
+    range: boolean
     comments:
     - 'Source: CWL'
   Tool Release Date:
@@ -3993,7 +3993,7 @@ slots:
   Visium Image Re-orientation:
     description: To ensure good fiducial alignment and tissue spots detection, it is important to correct
       for this shift in orientation.
-    range: Visium Image Re-orientation Enum
+    range: boolean
     comments:
     - 'Source: HTAN'
   Visium Permeabilization Time:
@@ -4028,7 +4028,7 @@ slots:
   Visium Applied Hard Trimming:
     description: Was Hard Trimming applied
     required: true
-    range: Visium Applied Hard Trimming Enum
+    range: boolean
     comments:
     - 'Source: HTAN'
   VisiumRNALevel3_id:
@@ -12802,22 +12802,6 @@ enums:
           intermediate between water and oil, is applied between the objective lens and the specimen;
           glycerol-immersion objectives are often used for tissue-clearing or deep-imaging applications.
         meaning: CHEBI:17754
-  Image Pyramidal Enum:
-    permissible_values:
-      'True':
-        description: Conforming to facts, reality, or definitive criteria.
-        meaning: NCIT:C68850
-      'False':
-        description: Not in accordance with facts, reality, or definitive criteria.
-        meaning: NCIT:C68851
-  Image Pixels BigEndian Enum:
-    permissible_values:
-      'True':
-        description: Conforming to facts, reality, or definitive criteria.
-        meaning: NCIT:C68850
-      'False':
-        description: Not in accordance with facts, reality, or definitive criteria.
-        meaning: NCIT:C68851
   Image Segmentation Data Type Enum:
     permissible_values:
       Mask:
@@ -27129,14 +27113,6 @@ enums:
       Unspecified:
         description: Placeholder value used when the specific input/output format for a tool was not specified
           or is not known.
-  Tool Package Dependencies Present Enum:
-    permissible_values:
-      'True':
-        description: Conforming to facts, reality, or definitive criteria.
-        meaning: NCIT:C68850
-      'False':
-        description: Not in accordance with facts, reality, or definitive criteria.
-        meaning: NCIT:C68851
   Tool Topic Enum:
     permissible_values:
       Allergy Clinical Immunology and Immunotherapeutics:
@@ -27770,22 +27746,6 @@ enums:
         description: Illumina library preparation kit that uses tagmentation (simultaneous enzymatic fragmentation
           and adapter tagging) to construct sequencing-ready libraries from very low quantities of input
           DNA/cDNA; commonly used as a downstream library-prep step following methods such as Smart-seq2.
-  Visium Image Re-orientation Enum:
-    permissible_values:
-      'True':
-        description: Conforming to facts, reality, or definitive criteria.
-        meaning: NCIT:C68850
-      'False':
-        description: Not in accordance with facts, reality, or definitive criteria.
-        meaning: NCIT:C68851
-  Visium Applied Hard Trimming Enum:
-    permissible_values:
-      'True':
-        description: Conforming to facts, reality, or definitive criteria.
-        meaning: NCIT:C68850
-      'False':
-        description: Not in accordance with facts, reality, or definitive criteria.
-        meaning: NCIT:C68851
   Visium File Type Enum:
     permissible_values:
       reference png:

@@ -771,11 +771,8 @@
     },
     "ImagePixelsBigEndian": {
       "description": "Boolean (True/False)",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Image Pixels BigEndian"
+      "title": "Image Pixels BigEndian",
+      "type": "boolean"
     },
     "ImagePlaneCount": {
       "description": "Number of Z-planes (not to be confused with downsampled \"pyramid\"). Integer >=1",
@@ -800,11 +797,8 @@
     },
     "ImagePyramidal": {
       "description": "Does data file contain pyramid of images",
-      "enum": [
-        "False",
-        "True"
-      ],
-      "title": "Image Pyramidal"
+      "title": "Image Pyramidal",
+      "type": "boolean"
     },
     "ImageSoftware": {
       "description": "The name of the software package that was used to capture, generate, and process the image.",
