@@ -5,7 +5,7 @@
 - attributes read: 606
 - classes: 39
 - slots: 567
-- enums: 138
+- enums: 133
 - warnings: 0
 
 ## Warnings (0)
