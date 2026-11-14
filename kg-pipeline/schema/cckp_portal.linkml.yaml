@@ -397,8 +397,6 @@ classes:
         description: Free-text package dependencies (no controlled vocabulary, scalar).
       toolPackageDependenciesPresent:
         range: boolean
-        annotations:
-          mc2_enum: "Tool Package Dependencies Present Enum"
         description: Whether package dependency information is present.
       toolComputeRequirements:
         description: Free-text compute requirements (no controlled vocabulary, scalar).

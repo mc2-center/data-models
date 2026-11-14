@@ -1052,8 +1052,7 @@ cckp:toolPackageDependencies a owl:DatatypeProperty ;
 cckp:toolPackageDependenciesPresent a owl:DatatypeProperty ;
     rdfs:label "toolPackageDependenciesPresent" ;
     skos:definition "Whether package dependency information is present." ;
-    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> ;
-    cckp:mc2_enum "Tool Package Dependencies Present Enum" .
+    skos:inScheme <https://w3id.org/mc2-center/cckp-portal> .
 
 cckp:toolReleaseDate a owl:DatatypeProperty ;
     rdfs:label "toolReleaseDate" ;
