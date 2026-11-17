@@ -13508,6 +13508,8 @@ enums:
       Resource and Data Sharing:
         description: MC2 Center working group focused on promoting and standardizing the sharing of research
           resources and data.
+      Spatial Profiling:
+        description: MC2 Center working group focused on spatial profiling of tumors and their microenvironment.
   Chair Roles Enum:
     permissible_values:
       Annual Meeting:
