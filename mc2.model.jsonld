@@ -97215,6 +97215,9 @@
                 },
                 {
                     "@id": "bts:ResourceandDataSharing"
+                },
+                {
+                    "@id": "bts:SpatialProfiling"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -97367,6 +97370,24 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Resource and Data Sharing",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SpatialProfiling",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SpatialProfiling",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WorkingGroupParticipation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Spatial Profiling",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
