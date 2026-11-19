@@ -7,7 +7,7 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | Prefix | Base IRI | Rows matched |
 |---|---|---|
 | APOLLO_SV | `http://purl.obolibrary.org/obo/APOLLO_SV_` | 1/1 |
-| BAO | `http://www.bioassayontology.org/bao#BAO_` | 23/23 |
+| BAO | `http://www.bioassayontology.org/bao#BAO_` | 24/24 |
 | BTO | `http://purl.obolibrary.org/obo/BTO_` | 2/2 |
 | CHEBI | `http://purl.obolibrary.org/obo/CHEBI_` | 1/1 |
 | CHMO | `http://purl.obolibrary.org/obo/CHMO_` | 32/32 |
@@ -15,8 +15,8 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | DCTERMS | `http://purl.org/dc/terms/` | 1/1 |
 | DOID | `http://purl.obolibrary.org/obo/DOID_` | 1/1 |
 | ECO | `http://purl.obolibrary.org/obo/ECO_` | 6/6 |
-| EDAM | `http://edamontology.org/` | 535/538 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
-| EFO | `http://www.ebi.ac.uk/efo/EFO_` | 88/88 |
+| EDAM | `http://edamontology.org/` | 539/542 ⚠️ 3 row(s) had an unrelated Ontology Url, excluded from the vote |
+| EFO | `http://www.ebi.ac.uk/efo/EFO_` | 89/89 |
 | EMAPA | `http://purl.obolibrary.org/obo/EMAPA_` | 1/1 |
 | ENVO | `http://purl.obolibrary.org/obo/ENVO_` | 1/1 |
 | ERO | `http://purl.obolibrary.org/obo/ERO_` | 8/8 |
@@ -35,9 +35,9 @@ Patched `schema/mc2_model.linkml.yaml` — added 50 prefixes derived from real `
 | MSIO | `http://purl.obolibrary.org/obo/MSIO_` | 1/1 |
 | MeSH | `http://id.nlm.nih.gov/mesh/` | 1/1 |
 | NCBITaxon | `http://purl.obolibrary.org/obo/NCBITaxon_` | 6/6 |
-| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1193/1193 |
+| NCIT | `http://purl.obolibrary.org/obo/NCIT_` | 1196/1196 |
 | OBCS | `http://purl.obolibrary.org/obo/OBCS_` | 1/1 |
-| OBI | `http://purl.obolibrary.org/obo/OBI_` | 29/29 |
+| OBI | `http://purl.obolibrary.org/obo/OBI_` | 30/30 |
 | OCCO | `http://purl.obolibrary.org/obo/OCCO_` | 1/1 |
 | OMIT | `http://purl.obolibrary.org/obo/OMIT_` | 1/1 |
 | PMID | `https://pubmed.ncbi.nlm.nih.gov/` | 33/34 ⚠️ 1 row(s) had an unrelated Ontology Url, excluded from the vote |

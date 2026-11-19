@@ -34763,6 +34763,54 @@
                 },
                 {
                     "@id": "bts:Metabolicscreening"
+                },
+                {
+                    "@id": "bts:SingleNucleusATAC-Seq"
+                },
+                {
+                    "@id": "bts:InSituZymography"
+                },
+                {
+                    "@id": "bts:MolecularDocking"
+                },
+                {
+                    "@id": "bts:MolecularDynamicsSimulation"
+                },
+                {
+                    "@id": "bts:MM/PBSA"
+                },
+                {
+                    "@id": "bts:Cell-CellCommunicationAnalysis"
+                },
+                {
+                    "@id": "bts:DifferentialAbundanceAnalysis"
+                },
+                {
+                    "@id": "bts:GeneRegulatoryNetworkAnalysis"
+                },
+                {
+                    "@id": "bts:RNAVelocityAnalysis"
+                },
+                {
+                    "@id": "bts:CopyNumberVariationAnalysis"
+                },
+                {
+                    "@id": "bts:PathwayAnalysis"
+                },
+                {
+                    "@id": "bts:TissueDissociation"
+                },
+                {
+                    "@id": "bts:BloodCellCountAnalysis"
+                },
+                {
+                    "@id": "bts:Single-CellReducedRepresentationBisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:Live-CellImaging"
+                },
+                {
+                    "@id": "bts:MorphologyAnalysis"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -57975,6 +58023,396 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:SingleNucleusATAC-Seq",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SingleNucleusATAC-Seq",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Single Nucleus ATAC-Seq",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:InSituZymography",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "InSituZymography",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "In Situ Zymography",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MolecularDocking",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MolecularDocking",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Molecular Docking",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MolecularDynamicsSimulation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MolecularDynamicsSimulation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Molecular Dynamics Simulation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MM/PBSA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MM/PBSA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "MM/PBSA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cell-CellCommunicationAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cell-CellCommunicationAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Cell-Cell Communication Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DifferentialAbundanceAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DifferentialAbundanceAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Differential Abundance Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeneRegulatoryNetworkAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeneRegulatoryNetworkAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Gene Regulatory Network Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RNAVelocityAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "RNAVelocityAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "RNA Velocity Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CopyNumberVariationAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CopyNumberVariationAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Copy Number Variation Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PathwayAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PathwayAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Pathway Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TissueDissociation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TissueDissociation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Tissue Dissociation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BloodCellCountAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "BloodCellCountAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Blood Cell Count Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Single-CellReducedRepresentationBisulfiteSequencing",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Single-CellReducedRepresentationBisulfiteSequencing",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Single-Cell Reduced Representation Bisulfite Sequencing",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Live-CellImaging",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Live-CellImaging",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Live-Cell Imaging",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MorphologyAnalysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MorphologyAnalysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:DSPDatasetAssay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Morphology Analysis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Geneexpression",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -65807,6 +66245,54 @@
                 },
                 {
                     "@id": "bts:Metabolicscreening"
+                },
+                {
+                    "@id": "bts:SingleNucleusATAC-Seq"
+                },
+                {
+                    "@id": "bts:InSituZymography"
+                },
+                {
+                    "@id": "bts:MolecularDocking"
+                },
+                {
+                    "@id": "bts:MolecularDynamicsSimulation"
+                },
+                {
+                    "@id": "bts:MM/PBSA"
+                },
+                {
+                    "@id": "bts:Cell-CellCommunicationAnalysis"
+                },
+                {
+                    "@id": "bts:DifferentialAbundanceAnalysis"
+                },
+                {
+                    "@id": "bts:GeneRegulatoryNetworkAnalysis"
+                },
+                {
+                    "@id": "bts:RNAVelocityAnalysis"
+                },
+                {
+                    "@id": "bts:CopyNumberVariationAnalysis"
+                },
+                {
+                    "@id": "bts:PathwayAnalysis"
+                },
+                {
+                    "@id": "bts:TissueDissociation"
+                },
+                {
+                    "@id": "bts:BloodCellCountAnalysis"
+                },
+                {
+                    "@id": "bts:Single-CellReducedRepresentationBisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:Live-CellImaging"
+                },
+                {
+                    "@id": "bts:MorphologyAnalysis"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -66590,7 +67076,7 @@
             "sms:columnType": "string",
             "sms:displayName": "Resource Doi",
             "sms:format": "uri",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -96729,6 +97215,9 @@
                 },
                 {
                     "@id": "bts:ResourceandDataSharing"
+                },
+                {
+                    "@id": "bts:SpatialProfiling"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -96881,6 +97370,24 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Resource and Data Sharing",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SpatialProfiling",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SpatialProfiling",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WorkingGroupParticipation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:IsTemplate": "sms:false",
+            "sms:displayName": "Spatial Profiling",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -110973,6 +111480,54 @@
                 },
                 {
                     "@id": "bts:Metabolicscreening"
+                },
+                {
+                    "@id": "bts:SingleNucleusATAC-Seq"
+                },
+                {
+                    "@id": "bts:InSituZymography"
+                },
+                {
+                    "@id": "bts:MolecularDocking"
+                },
+                {
+                    "@id": "bts:MolecularDynamicsSimulation"
+                },
+                {
+                    "@id": "bts:MM/PBSA"
+                },
+                {
+                    "@id": "bts:Cell-CellCommunicationAnalysis"
+                },
+                {
+                    "@id": "bts:DifferentialAbundanceAnalysis"
+                },
+                {
+                    "@id": "bts:GeneRegulatoryNetworkAnalysis"
+                },
+                {
+                    "@id": "bts:RNAVelocityAnalysis"
+                },
+                {
+                    "@id": "bts:CopyNumberVariationAnalysis"
+                },
+                {
+                    "@id": "bts:PathwayAnalysis"
+                },
+                {
+                    "@id": "bts:TissueDissociation"
+                },
+                {
+                    "@id": "bts:BloodCellCountAnalysis"
+                },
+                {
+                    "@id": "bts:Single-CellReducedRepresentationBisulfiteSequencing"
+                },
+                {
+                    "@id": "bts:Live-CellImaging"
+                },
+                {
+                    "@id": "bts:MorphologyAnalysis"
                 }
             ],
             "sms:IsTemplate": "sms:false",
@@ -125686,24 +126241,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:GeneRegulatoryNetworkAnalysis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "GeneRegulatoryNetworkAnalysis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ToolOperation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Gene Regulatory Network Analysis",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:GeneRegulatoryNetworkPrediction",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -126135,24 +126672,6 @@
             },
             "sms:IsTemplate": "sms:false",
             "sms:displayName": "Ontology Visualisation",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PathwayAnalysis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PathwayAnalysis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ToolOperation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:IsTemplate": "sms:false",
-            "sms:displayName": "Pathway Analysis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -127967,7 +128486,7 @@
         {
             "@id": "bts:ToolReleaseDate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The release date of a product or product model. This can be used to distinguish the exact variant of a product.",
+            "rdfs:comment": "The release date of a product or product model, in YYYY-MM-DD format. Use No Release Available if the tool has no release. This can be used to distinguish the exact variant of a product.",
             "rdfs:label": "ToolReleaseDate",
             "rdfs:subClassOf": [
                 {
@@ -127980,7 +128499,7 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string",
             "sms:displayName": "Tool Release Date",
-            "sms:format": "date",
+            "sms:pattern": "^(\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])|No Release Available)$",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },

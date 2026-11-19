@@ -2017,6 +2017,22 @@ assay,histology,
 assay,proximity extension assay,
 assay,compound screen,
 assay,metabolic screening,
+assay,Single Nucleus ATAC-Seq,"snATAC-seq, single-nucleus ATAC-seq, Single-Nucleus ATAC-Seq"
+assay,In Situ Zymography,
+assay,Molecular Docking,"Docking simulation, Macromolecular docking"
+assay,Molecular Dynamics Simulation,MD simulation
+assay,MM/PBSA,"MMPBSA, Molecular Mechanics Poisson-Boltzmann Surface Area"
+assay,Cell-Cell Communication Analysis,
+assay,Differential Abundance Analysis,
+assay,Gene Regulatory Network Analysis,"Gene regulatory network modelling, GRN analysis"
+assay,RNA Velocity Analysis,
+assay,Copy Number Variation Analysis,"CNV detection, Copy number variation detection"
+assay,Pathway Analysis,"Biological pathway analysis, Functional pathway analysis"
+assay,Tissue Dissociation,Tissue Dissociation Method
+assay,Blood Cell Count Analysis,"Blood Cell Count, Complete Blood Count, CBC"
+assay,Single-Cell Reduced Representation Bisulfite Sequencing,scRRBS
+assay,Live-Cell Imaging,
+assay,Morphology Analysis,Morphology Analysis Method
 tissue,Gonad,"Gonadal, Gonads"
 tissue,Abdominal Esophagus,"ESOPHAGUS, ABDOMINAL"
 tissue,Adipose Tissue,"Adipose, Body Fat, Fat Tissue, Human Adipose Tissue"
@@ -3959,6 +3975,7 @@ working_group_participation,None,
 working_group_participation,Patient Advocacy Working Group,
 working_group_participation,Protein-Protein Interactions,
 working_group_participation,Resource and Data Sharing,
+working_group_participation,Spatial Profiling,
 project_type,Core,
 project_type,Project,
 seqPlatform,454 GS,
