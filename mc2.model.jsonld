@@ -127967,7 +127967,7 @@
         {
             "@id": "bts:ToolReleaseDate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The release date of a product or product model. This can be used to distinguish the exact variant of a product.",
+            "rdfs:comment": "The release date of a product or product model, in YYYY-MM-DD format. Use No Release Available if the tool has no release. This can be used to distinguish the exact variant of a product.",
             "rdfs:label": "ToolReleaseDate",
             "rdfs:subClassOf": [
                 {
@@ -127980,7 +127980,7 @@
             "sms:IsTemplate": "sms:false",
             "sms:columnType": "string",
             "sms:displayName": "Tool Release Date",
-            "sms:format": "date",
+            "sms:pattern": "^(\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])|No Release Available)$",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
