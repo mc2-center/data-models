@@ -1861,7 +1861,6 @@ slots:
     - 'schematic Format: uri'
   Resource Doi:
     description: The Digital Object Identifier (DOI) associated with the educational resource.
-    required: true
     comments:
     - 'schematic Format: uri'
   Resource Topic:

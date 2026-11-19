@@ -66590,7 +66590,7 @@
             "sms:columnType": "string",
             "sms:displayName": "Resource Doi",
             "sms:format": "uri",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
