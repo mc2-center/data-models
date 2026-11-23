@@ -135,7 +135,8 @@
           "None",
           "Patient Advocacy Working Group",
           "Protein-Protein Interactions",
-          "Resource and Data Sharing"
+          "Resource and Data Sharing",
+          "Spatial Profiling"
         ],
         "type": "string"
       },

@@ -1861,7 +1861,6 @@ slots:
     - 'schematic Format: uri'
   Resource Doi:
     description: The Digital Object Identifier (DOI) associated with the educational resource.
-    required: true
     comments:
     - 'schematic Format: uri'
   Resource Topic:
@@ -3895,11 +3894,11 @@ slots:
     comments:
     - 'Source: CWL'
   Tool Release Date:
-    description: The release date of a product or product model. This can be used to distinguish the exact
-      variant of a product.
+    description: The release date of a product or product model, in YYYY-MM-DD format. Use No Release
+      Available if the tool has no release. This can be used to distinguish the exact variant of a product.
     required: true
+    pattern: ^(\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])|No Release Available)$
     comments:
-    - 'schematic Format: date'
     - 'Source: schema.org'
   Tool Topic:
     description: General scientific domain the software serves, or other general category. Multiple values
@@ -7726,12 +7725,7 @@ enums:
           within a molecule.
         meaning: NCIT:C16314
       Barcode-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Characterize phenotypes of hundreds of different AAV strains
         meaning: EFO:0008655
       Bicinchoninic Acid Assay:
         description: A copper-based colorimetric assay for total protein quantification. This assay relies
@@ -7774,12 +7768,8 @@ enums:
           cells without denaturation.
         meaning: PMID:26324940
       CITE-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: CITE-seq is a method in which oligonucleotide-labeled antibodies are used to integrate
+          cellular protein and transcriptome measurements into an efficient, single-cell readout.
         meaning: EFO:0009294
       CLIP-qPCR:
         description: A technique combining crosslinking immunoprecipitation (CLIP) of an RNA-binding protein
@@ -7833,12 +7823,8 @@ enums:
           sites occupied by DNA-associated proteins in a sample.
         meaning: NCIT:C172845
       ChIP-PCR:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses chromatin immunoprecipitation and PCR to test if a protein binds
+          to a specific DNA sequence.
         meaning: ECO:0000227
       ChIP-Seq:
         description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
@@ -7849,12 +7835,8 @@ enums:
           DNA sequences that are obtained can be mapped to their genomic locations.
         meaning: NCIT:C106048
       ChIP-qPCR assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A ChIP assay that uses quantitative PCR to determine levels of specific DNA in immunoprecipitated
+          samples.
         meaning: OBI:0002169
       Chemiluminescent Assay:
         description: An assay that detects or quantifies an analyte by measuring light emitted from a
@@ -7949,12 +7931,12 @@ enums:
           typically assessed via cell viability, membrane integrity, or metabolic activity.
         meaning: BAO:0002993
       DBiT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A spatial molecular profiling assay that simultaneously maps mRNA transcripts and
+          protein expression within intact tissue sections using microfluidic co-delivery of DNA barcodes.
+          Spatially indexed barcodes are deposited in a deterministic grid pattern onto the tissue, capturing
+          both RNA and antibody-DNA conjugates, which are subsequently sequenced to yield co-registered
+          transcriptomic and proteomic profiles. This approach provides paired spatial gene expression
+          and protein abundance data at near-cellular, pixel resolution.
         meaning: PMID:33188776
       DNA Gene-Expression Microarray:
         description: A process that allows thousands of pieces of DNA that are fixed to a glass slide
@@ -7975,12 +7957,8 @@ enums:
           that are super sensitive to cleavage by DNase I to identify putative DNA regulatory sequences.
         meaning: NCIT:C106052
       DRIP-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses an antibody against DNA-RNA hybrids to isolate R-loops, and then
+          sequences the DNA to map the R-loops in the genome.
       Dark Field Microscopy:
         description: A microscopic technique in which the light that does not come into contact with the
           structure or details of interest is subtracted from the ocular image. This yields an image in
@@ -8026,12 +8004,7 @@ enums:
           without prior conversion to cDNA.
         meaning: OBI:0002629
       Drop-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Analyze mRNA transcripts from individual cells in droplets (Drop-seq).
         meaning: EFO:0008722
       Droplet Digital PCR:
         description: A type of digital polymerase chain reaction technique in which the sample is fractionated
@@ -8228,12 +8201,8 @@ enums:
           with atomic-level resolution.
         meaning: CHMO:0000239
       HL-Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microwell chip that loads cells in a hierarchical pattern to measure cytokine secretion
+          of single cells and the interactions between cells.
         meaning: pmid:32348757
       HPLC-MSMS:
         description: An analytical technique wherein high performance liquid chromatography is coupled
@@ -8413,20 +8382,14 @@ enums:
           change in the proportion of cells that are dividing.
         meaning: BAO:0010060
       MNase-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay in which DNA is the input molecule derived from a micrococcal nuclease digestion
+          followed by high throughput sequencing, A method that distinguishes nucleosome positioning based
+          on the ability of nucleosomes to protect associated DNA from digestion by micrococcal nuclease.
+          Sequenced fragments reveal nucleosome location information about the input DNA.
         meaning: EFO:0003751
       MULTI-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A cell hashing method that labels cells from different samples with lipid-modified
+          oligonucleotides, so that the samples can be pooled for single-cell sequencing.
         meaning: EFO:0030077
       Macrophage Polarization Assay:
         description: An assay that measures the differentiation of macrophages into functional phenotypes
@@ -8473,12 +8436,7 @@ enums:
           an antibody against 5-methylcytosine to enrich for methylated DNA fragments prior to sequencing.
         meaning: OBI:0000693
       MeRIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: m6A-specific methylated RNA immunoprecipitation with nextgeneration sequencing (MeRIP-Seq)
         meaning: EFO:0008803
       Methyl Binding Domain Sequencing:
         description: An assay in which DNA is enriched using a methyl-binding domain protein to isolate
@@ -8528,12 +8486,7 @@ enums:
           to move into an acellular area of a culture material.
         meaning: NCIT:C19425
       Mint-ChIP:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Multiplexed, indexed T7 ChIP-seq
         meaning: EFO:0008813
       Modeling:
         description: The use of statistical analysis, computer analysis, or model organisms to predict
@@ -8620,12 +8573,7 @@ enums:
           large numbers of strands or segments of DNA or RNA.
         meaning: NCIT:C101293
       Nm-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Map 2′-O-methylation sites in human mRNA
         meaning: EFO:0008828
       Not Applicable:
         description: Determination of a value is not relevant in the current context. (NCI)
@@ -8788,12 +8736,10 @@ enums:
           in the cell by immunoprecipitating an RNA-binding protein along with its bound RNAs.
         meaning: EFO:0005033
       RIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A method used for finding which RNA species interact with a particular RNA-binding
+          protein. It involves immunoprecipitation with antibodies for the protein and then isolation
+          of the RNAs associated with the protein. Unlike CLIP-seq, no cross-linking of RNAs and proteins
+          is carried out prior to immunoprecipitation.
         meaning: EFO:0005310
       RNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -8842,12 +8788,9 @@ enums:
           in response to applied stress.
         meaning: CHMO:0000915
       Ribo-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Ribosome profiling (also named ribosome footprinting) that uses specialized messenger
+          RNA (mRNA) sequencing to determine which mRNAs are being actively translated. It produces a
+          “global snapshot” of all the ribosomes active in a cell at a particular moment, known as a translatome.
         meaning: EFO:0008891
       Ribosomal P Protein Antibody Measurement:
         description: The determination of the ribosomal P protein antibody present in a sample.
@@ -8879,12 +8822,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: NCIT:C179458
       Single Cell Cytokine Detection Chip Assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses a microfluidic chip to measure the cytokines that single cells
+          secrete.
         meaning: BAO:0010005
       Single Cell DNA Sequencing:
         description: The determination of the sequence of purines and pyrimidines in deoxyribonucleic
@@ -8920,12 +8859,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: PMID:31428692
       Single-Cell Barcode Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microfluidic chip assay that uses DNA-barcoded antibodies to measure several proteins
+          from single cells.
       Single-Cell TCR Sequencing:
         description: A molecular genetic technique where DNA is isolated from single cell (sc) samples
           and amplified to create a genomic library. Then the library is subjected to ATAC-seq, which
@@ -9008,12 +8943,10 @@ enums:
           a specific grid arrangement to a solid support for nucleic acid hybridization assays in gene
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
       TAB-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A bisulfite sequencing assay that identifies genomic methylation patterns by using
+          a bisulfite based protocol with the Tet enzyme to differentiate 5-hydroxylmethylcytosine (5hmC)
+          from 5-methylcytosine (5mC) through a step-wise oxidative demethylation of 5mC, converting it
+          to 5-carboxylcytosine (5caC) while keeping 5hmC protected.
         meaning: PMID:23196972
       TCR Sequencing:
         description: A DNA sequencing technique that can differentiate cytosine from 5-methylcytosine
@@ -9194,12 +9127,8 @@ enums:
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
         meaning: NCIT:C19819
       eCLIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: eCLIP maps the binding sites of RBPs on their target RNAs using a modified individual
+          nucleotide resolution CLIP (iCLIP) protocol, improving efficiency and decreasing execution complexity
         meaning: EFO:0009998
       mRNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -9211,27 +9140,15 @@ enums:
           reaction.
         meaning: NCIT:C51962
       scCGI-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell method that measures the methylation of CpG islands without bisulfite
+          conversion and uses the result to separate single cells into groups.
       scNT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling of new RNA and chemical
+          conversion to separate new RNA from old RNA.
         meaning: PMID:32868927
       scSLAM-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling and thiol-linked
+          alkylation to separate new RNA from old RNA and measure transcription dynamics.
         meaning: PMID:31292545
       seqFISH:
         description: seqFISH is an in situ multiplexed imaging method that uses sequential rounds of fluorescence
@@ -9250,20 +9167,14 @@ enums:
           within cells using short, fluorescently labeled oligonucleotide probes.
         meaning: EFO:0009918
       smRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An RNA-seq assay which is targeting small RNA (< 200 bp) sequences such as, but not
+          exclusive to, miRNAs using, for example, small RNA library preparation kits.
         meaning: OBI:0002112
       snRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Single nucleus RNA sequencing examines the sequence information from individual nuclei
+          with optimized next generation sequencing (NGS) technologies. This allows the RNA-seq profiling
+          of cell types that are more vulnerable to the tissue dissociation process, and that are therefore
+          underrepresented in the final data set in single cell sequencing.
         meaning: EFO:0009809
       Isothermal Titration Calorimetry:
         description: The measurement of thermodynamic parameters (e.g. enthalpy) at constant temperature
@@ -9509,6 +9420,70 @@ enums:
         description: A screening assay testing multiple chemical compounds for a biological effect.
       metabolic screening:
         description: A screening assay assessing metabolic activity or metabolite profiles.
+      Single Nucleus ATAC-Seq:
+        description: An ATAC-seq assay in which single nuclei are isolated from frozen tissue samples,
+          through a protocol designed to maximally preserve nucleus integrity during sample processing
+          and optimize transposase-mediated fragmentation of chromatin in individual nuclei.
+        meaning: OBI:0002762
+      In Situ Zymography:
+        description: A technique that detects enzyme activity, such as matrix metalloproteinase activity,
+          directly in tissue sections or cells by applying a labeled substrate and imaging the signal
+          where the substrate is cleaved.
+      Molecular Docking:
+        description: Method which models the structure of a protein in complex with a small molecule or
+          another macromolecule, to predict the preferred orientation of one molecule when bound to a
+          second.
+        meaning: EDAM:operation_0478
+      Molecular Dynamics Simulation:
+        description: A simulation procedure consisting of the computation of the motion of atoms in a
+          molecule or of individual atoms or molecules in solids, liquids and gases, according to Newton's
+          laws of motion. The forces acting on the atoms, required to simulate their motions, are generally
+          calculated using molecular mechanics force fields.
+        meaning: BAO:0002301
+      MM/PBSA:
+        description: Molecular Mechanics Poisson-Boltzmann Surface Area (MM/PBSA), a computational method
+          that estimates the binding free energy of a molecular complex from molecular dynamics snapshots,
+          by combining molecular mechanics energies with Poisson-Boltzmann and surface area solvation
+          terms.
+      Cell-Cell Communication Analysis:
+        description: A computational analysis that infers signaling between cell populations, typically
+          from single-cell or spatial expression data, by scoring ligand-receptor pairs.
+      Differential Abundance Analysis:
+        description: A computational analysis that tests whether the abundance of cell types, cell states
+          or other features differs between conditions or groups of samples.
+      Gene Regulatory Network Analysis:
+        description: Analyse a known network of gene regulation.
+        meaning: EDAM:operation_1781
+      RNA Velocity Analysis:
+        description: A computational analysis that estimates the rate and direction of change in gene
+          expression of single cells, from the ratio of unspliced to spliced RNA, to infer cell state
+          transitions.
+      Copy Number Variation Analysis:
+        description: Identify where sections of the genome are repeated and the number of repeats in the
+          genome varies between individuals.
+        meaning: EDAM:operation_3961
+      Pathway Analysis:
+        description: Generate, process or analyse a biological pathway.
+        meaning: EDAM:operation_3928
+      Tissue Dissociation:
+        description: Any method used to create single cells from tissue samples. These are typically either
+          mechanical or enzymatic disruption.
+        meaning: NCIT:C201927
+      Blood Cell Count Analysis:
+        description: The determination of the number of red blood cells, white blood cells, and platelets
+          in a biospecimen.
+        meaning: NCIT:C28133
+      Single-Cell Reduced Representation Bisulfite Sequencing:
+        description: A reduced representation bisulfite sequencing assay applied to single cells, to measure
+          DNA methylation at CpG-rich regions in individual cells.
+        meaning: EFO:0008914
+      Live-Cell Imaging:
+        description: An imaging technique in which living cells are observed and recorded over time under
+          physiological conditions, to follow cell behavior and dynamics.
+      Morphology Analysis:
+        description: A means, manner of procedure, or systematic course of actions that are performed
+          in order to examine and interpret a morphology assessment.
+        meaning: NCIT:C117625
   dataType Enum:
     permissible_values:
       gene expression:
@@ -13508,6 +13483,8 @@ enums:
       Resource and Data Sharing:
         description: MC2 Center working group focused on promoting and standardizing the sharing of research
           resources and data.
+      Spatial Profiling:
+        description: MC2 Center working group focused on spatial profiling of tumors and their microenvironment.
   Chair Roles Enum:
     permissible_values:
       Annual Meeting:
@@ -16262,12 +16239,7 @@ enums:
           within a molecule.
         meaning: NCIT:C16314
       Barcode-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Characterize phenotypes of hundreds of different AAV strains
         meaning: EFO:0008655
       Bicinchoninic Acid Assay:
         description: A copper-based colorimetric assay for total protein quantification. This assay relies
@@ -16310,12 +16282,8 @@ enums:
           cells without denaturation.
         meaning: PMID:26324940
       CITE-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: CITE-seq is a method in which oligonucleotide-labeled antibodies are used to integrate
+          cellular protein and transcriptome measurements into an efficient, single-cell readout.
         meaning: EFO:0009294
       CLIP-qPCR:
         description: A technique combining crosslinking immunoprecipitation (CLIP) of an RNA-binding protein
@@ -16369,12 +16337,8 @@ enums:
           sites occupied by DNA-associated proteins in a sample.
         meaning: NCIT:C172845
       ChIP-PCR:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses chromatin immunoprecipitation and PCR to test if a protein binds
+          to a specific DNA sequence.
         meaning: ECO:0000227
       ChIP-Seq:
         description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
@@ -16385,12 +16349,8 @@ enums:
           DNA sequences that are obtained can be mapped to their genomic locations.
         meaning: NCIT:C106048
       ChIP-qPCR assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A ChIP assay that uses quantitative PCR to determine levels of specific DNA in immunoprecipitated
+          samples.
         meaning: OBI:0002169
       Chemiluminescent Assay:
         description: An assay that detects or quantifies an analyte by measuring light emitted from a
@@ -16485,12 +16445,12 @@ enums:
           typically assessed via cell viability, membrane integrity, or metabolic activity.
         meaning: BAO:0002993
       DBiT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A spatial molecular profiling assay that simultaneously maps mRNA transcripts and
+          protein expression within intact tissue sections using microfluidic co-delivery of DNA barcodes.
+          Spatially indexed barcodes are deposited in a deterministic grid pattern onto the tissue, capturing
+          both RNA and antibody-DNA conjugates, which are subsequently sequenced to yield co-registered
+          transcriptomic and proteomic profiles. This approach provides paired spatial gene expression
+          and protein abundance data at near-cellular, pixel resolution.
         meaning: PMID:33188776
       DNA Gene-Expression Microarray:
         description: A process that allows thousands of pieces of DNA that are fixed to a glass slide
@@ -16511,12 +16471,8 @@ enums:
           that are super sensitive to cleavage by DNase I to identify putative DNA regulatory sequences.
         meaning: NCIT:C106052
       DRIP-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses an antibody against DNA-RNA hybrids to isolate R-loops, and then
+          sequences the DNA to map the R-loops in the genome.
       Dark Field Microscopy:
         description: A microscopic technique in which the light that does not come into contact with the
           structure or details of interest is subtracted from the ocular image. This yields an image in
@@ -16562,12 +16518,7 @@ enums:
           without prior conversion to cDNA.
         meaning: OBI:0002629
       Drop-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Analyze mRNA transcripts from individual cells in droplets (Drop-seq).
         meaning: EFO:0008722
       Droplet Digital PCR:
         description: A type of digital polymerase chain reaction technique in which the sample is fractionated
@@ -16764,12 +16715,8 @@ enums:
           with atomic-level resolution.
         meaning: CHMO:0000239
       HL-Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microwell chip that loads cells in a hierarchical pattern to measure cytokine secretion
+          of single cells and the interactions between cells.
         meaning: pmid:32348757
       HPLC-MSMS:
         description: An analytical technique wherein high performance liquid chromatography is coupled
@@ -16949,20 +16896,14 @@ enums:
           change in the proportion of cells that are dividing.
         meaning: BAO:0010060
       MNase-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay in which DNA is the input molecule derived from a micrococcal nuclease digestion
+          followed by high throughput sequencing, A method that distinguishes nucleosome positioning based
+          on the ability of nucleosomes to protect associated DNA from digestion by micrococcal nuclease.
+          Sequenced fragments reveal nucleosome location information about the input DNA.
         meaning: EFO:0003751
       MULTI-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A cell hashing method that labels cells from different samples with lipid-modified
+          oligonucleotides, so that the samples can be pooled for single-cell sequencing.
         meaning: EFO:0030077
       Macrophage Polarization Assay:
         description: An assay that measures the differentiation of macrophages into functional phenotypes
@@ -17009,12 +16950,7 @@ enums:
           an antibody against 5-methylcytosine to enrich for methylated DNA fragments prior to sequencing.
         meaning: OBI:0000693
       MeRIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: m6A-specific methylated RNA immunoprecipitation with nextgeneration sequencing (MeRIP-Seq)
         meaning: EFO:0008803
       Methyl Binding Domain Sequencing:
         description: An assay in which DNA is enriched using a methyl-binding domain protein to isolate
@@ -17064,12 +17000,7 @@ enums:
           to move into an acellular area of a culture material.
         meaning: NCIT:C19425
       Mint-ChIP:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Multiplexed, indexed T7 ChIP-seq
         meaning: EFO:0008813
       Modeling:
         description: The use of statistical analysis, computer analysis, or model organisms to predict
@@ -17156,12 +17087,7 @@ enums:
           large numbers of strands or segments of DNA or RNA.
         meaning: NCIT:C101293
       Nm-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Map 2′-O-methylation sites in human mRNA
         meaning: EFO:0008828
       Not Applicable:
         description: Determination of a value is not relevant in the current context. (NCI)
@@ -17324,12 +17250,10 @@ enums:
           in the cell by immunoprecipitating an RNA-binding protein along with its bound RNAs.
         meaning: EFO:0005033
       RIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A method used for finding which RNA species interact with a particular RNA-binding
+          protein. It involves immunoprecipitation with antibodies for the protein and then isolation
+          of the RNAs associated with the protein. Unlike CLIP-seq, no cross-linking of RNAs and proteins
+          is carried out prior to immunoprecipitation.
         meaning: EFO:0005310
       RNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -17378,12 +17302,9 @@ enums:
           in response to applied stress.
         meaning: CHMO:0000915
       Ribo-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Ribosome profiling (also named ribosome footprinting) that uses specialized messenger
+          RNA (mRNA) sequencing to determine which mRNAs are being actively translated. It produces a
+          “global snapshot” of all the ribosomes active in a cell at a particular moment, known as a translatome.
         meaning: EFO:0008891
       Ribosomal P Protein Antibody Measurement:
         description: The determination of the ribosomal P protein antibody present in a sample.
@@ -17415,12 +17336,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: NCIT:C179458
       Single Cell Cytokine Detection Chip Assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses a microfluidic chip to measure the cytokines that single cells
+          secrete.
         meaning: BAO:0010005
       Single Cell DNA Sequencing:
         description: The determination of the sequence of purines and pyrimidines in deoxyribonucleic
@@ -17456,12 +17373,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: PMID:31428692
       Single-Cell Barcode Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microfluidic chip assay that uses DNA-barcoded antibodies to measure several proteins
+          from single cells.
       Single-Cell TCR Sequencing:
         description: A molecular genetic technique where DNA is isolated from single cell (sc) samples
           and amplified to create a genomic library. Then the library is subjected to ATAC-seq, which
@@ -17544,12 +17457,10 @@ enums:
           a specific grid arrangement to a solid support for nucleic acid hybridization assays in gene
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
       TAB-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A bisulfite sequencing assay that identifies genomic methylation patterns by using
+          a bisulfite based protocol with the Tet enzyme to differentiate 5-hydroxylmethylcytosine (5hmC)
+          from 5-methylcytosine (5mC) through a step-wise oxidative demethylation of 5mC, converting it
+          to 5-carboxylcytosine (5caC) while keeping 5hmC protected.
         meaning: PMID:23196972
       TCR Sequencing:
         description: A DNA sequencing technique that can differentiate cytosine from 5-methylcytosine
@@ -17730,12 +17641,8 @@ enums:
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
         meaning: NCIT:C19819
       eCLIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: eCLIP maps the binding sites of RBPs on their target RNAs using a modified individual
+          nucleotide resolution CLIP (iCLIP) protocol, improving efficiency and decreasing execution complexity
         meaning: EFO:0009998
       mRNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -17747,27 +17654,15 @@ enums:
           reaction.
         meaning: NCIT:C51962
       scCGI-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell method that measures the methylation of CpG islands without bisulfite
+          conversion and uses the result to separate single cells into groups.
       scNT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling of new RNA and chemical
+          conversion to separate new RNA from old RNA.
         meaning: PMID:32868927
       scSLAM-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling and thiol-linked
+          alkylation to separate new RNA from old RNA and measure transcription dynamics.
         meaning: PMID:31292545
       seqFISH:
         description: seqFISH is an in situ multiplexed imaging method that uses sequential rounds of fluorescence
@@ -17786,20 +17681,14 @@ enums:
           within cells using short, fluorescently labeled oligonucleotide probes.
         meaning: EFO:0009918
       smRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An RNA-seq assay which is targeting small RNA (< 200 bp) sequences such as, but not
+          exclusive to, miRNAs using, for example, small RNA library preparation kits.
         meaning: OBI:0002112
       snRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Single nucleus RNA sequencing examines the sequence information from individual nuclei
+          with optimized next generation sequencing (NGS) technologies. This allows the RNA-seq profiling
+          of cell types that are more vulnerable to the tissue dissociation process, and that are therefore
+          underrepresented in the final data set in single cell sequencing.
         meaning: EFO:0009809
       Isothermal Titration Calorimetry:
         description: The measurement of thermodynamic parameters (e.g. enthalpy) at constant temperature
@@ -18045,6 +17934,70 @@ enums:
         description: A screening assay testing multiple chemical compounds for a biological effect.
       metabolic screening:
         description: A screening assay assessing metabolic activity or metabolite profiles.
+      Single Nucleus ATAC-Seq:
+        description: An ATAC-seq assay in which single nuclei are isolated from frozen tissue samples,
+          through a protocol designed to maximally preserve nucleus integrity during sample processing
+          and optimize transposase-mediated fragmentation of chromatin in individual nuclei.
+        meaning: OBI:0002762
+      In Situ Zymography:
+        description: A technique that detects enzyme activity, such as matrix metalloproteinase activity,
+          directly in tissue sections or cells by applying a labeled substrate and imaging the signal
+          where the substrate is cleaved.
+      Molecular Docking:
+        description: Method which models the structure of a protein in complex with a small molecule or
+          another macromolecule, to predict the preferred orientation of one molecule when bound to a
+          second.
+        meaning: EDAM:operation_0478
+      Molecular Dynamics Simulation:
+        description: A simulation procedure consisting of the computation of the motion of atoms in a
+          molecule or of individual atoms or molecules in solids, liquids and gases, according to Newton's
+          laws of motion. The forces acting on the atoms, required to simulate their motions, are generally
+          calculated using molecular mechanics force fields.
+        meaning: BAO:0002301
+      MM/PBSA:
+        description: Molecular Mechanics Poisson-Boltzmann Surface Area (MM/PBSA), a computational method
+          that estimates the binding free energy of a molecular complex from molecular dynamics snapshots,
+          by combining molecular mechanics energies with Poisson-Boltzmann and surface area solvation
+          terms.
+      Cell-Cell Communication Analysis:
+        description: A computational analysis that infers signaling between cell populations, typically
+          from single-cell or spatial expression data, by scoring ligand-receptor pairs.
+      Differential Abundance Analysis:
+        description: A computational analysis that tests whether the abundance of cell types, cell states
+          or other features differs between conditions or groups of samples.
+      Gene Regulatory Network Analysis:
+        description: Analyse a known network of gene regulation.
+        meaning: EDAM:operation_1781
+      RNA Velocity Analysis:
+        description: A computational analysis that estimates the rate and direction of change in gene
+          expression of single cells, from the ratio of unspliced to spliced RNA, to infer cell state
+          transitions.
+      Copy Number Variation Analysis:
+        description: Identify where sections of the genome are repeated and the number of repeats in the
+          genome varies between individuals.
+        meaning: EDAM:operation_3961
+      Pathway Analysis:
+        description: Generate, process or analyse a biological pathway.
+        meaning: EDAM:operation_3928
+      Tissue Dissociation:
+        description: Any method used to create single cells from tissue samples. These are typically either
+          mechanical or enzymatic disruption.
+        meaning: NCIT:C201927
+      Blood Cell Count Analysis:
+        description: The determination of the number of red blood cells, white blood cells, and platelets
+          in a biospecimen.
+        meaning: NCIT:C28133
+      Single-Cell Reduced Representation Bisulfite Sequencing:
+        description: A reduced representation bisulfite sequencing assay applied to single cells, to measure
+          DNA methylation at CpG-rich regions in individual cells.
+        meaning: EFO:0008914
+      Live-Cell Imaging:
+        description: An imaging technique in which living cells are observed and recorded over time under
+          physiological conditions, to follow cell behavior and dynamics.
+      Morphology Analysis:
+        description: A means, manner of procedure, or systematic course of actions that are performed
+          in order to examine and interpret a morphology assessment.
+        meaning: NCIT:C117625
   File Assay Category Enum:
     permissible_values:
       DNA Sequencing:
@@ -20879,12 +20832,7 @@ enums:
           within a molecule.
         meaning: NCIT:C16314
       Barcode-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Characterize phenotypes of hundreds of different AAV strains
         meaning: EFO:0008655
       Bicinchoninic Acid Assay:
         description: A copper-based colorimetric assay for total protein quantification. This assay relies
@@ -20927,12 +20875,8 @@ enums:
           cells without denaturation.
         meaning: PMID:26324940
       CITE-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: CITE-seq is a method in which oligonucleotide-labeled antibodies are used to integrate
+          cellular protein and transcriptome measurements into an efficient, single-cell readout.
         meaning: EFO:0009294
       CLIP-qPCR:
         description: A technique combining crosslinking immunoprecipitation (CLIP) of an RNA-binding protein
@@ -20986,12 +20930,8 @@ enums:
           sites occupied by DNA-associated proteins in a sample.
         meaning: NCIT:C172845
       ChIP-PCR:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses chromatin immunoprecipitation and PCR to test if a protein binds
+          to a specific DNA sequence.
         meaning: ECO:0000227
       ChIP-Seq:
         description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
@@ -21002,12 +20942,8 @@ enums:
           DNA sequences that are obtained can be mapped to their genomic locations.
         meaning: NCIT:C106048
       ChIP-qPCR assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A ChIP assay that uses quantitative PCR to determine levels of specific DNA in immunoprecipitated
+          samples.
         meaning: OBI:0002169
       Chemiluminescent Assay:
         description: An assay that detects or quantifies an analyte by measuring light emitted from a
@@ -21102,12 +21038,12 @@ enums:
           typically assessed via cell viability, membrane integrity, or metabolic activity.
         meaning: BAO:0002993
       DBiT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A spatial molecular profiling assay that simultaneously maps mRNA transcripts and
+          protein expression within intact tissue sections using microfluidic co-delivery of DNA barcodes.
+          Spatially indexed barcodes are deposited in a deterministic grid pattern onto the tissue, capturing
+          both RNA and antibody-DNA conjugates, which are subsequently sequenced to yield co-registered
+          transcriptomic and proteomic profiles. This approach provides paired spatial gene expression
+          and protein abundance data at near-cellular, pixel resolution.
         meaning: PMID:33188776
       DNA Gene-Expression Microarray:
         description: A process that allows thousands of pieces of DNA that are fixed to a glass slide
@@ -21128,12 +21064,8 @@ enums:
           that are super sensitive to cleavage by DNase I to identify putative DNA regulatory sequences.
         meaning: NCIT:C106052
       DRIP-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses an antibody against DNA-RNA hybrids to isolate R-loops, and then
+          sequences the DNA to map the R-loops in the genome.
       Dark Field Microscopy:
         description: A microscopic technique in which the light that does not come into contact with the
           structure or details of interest is subtracted from the ocular image. This yields an image in
@@ -21179,12 +21111,7 @@ enums:
           without prior conversion to cDNA.
         meaning: OBI:0002629
       Drop-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Analyze mRNA transcripts from individual cells in droplets (Drop-seq).
         meaning: EFO:0008722
       Droplet Digital PCR:
         description: A type of digital polymerase chain reaction technique in which the sample is fractionated
@@ -21381,12 +21308,8 @@ enums:
           with atomic-level resolution.
         meaning: CHMO:0000239
       HL-Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microwell chip that loads cells in a hierarchical pattern to measure cytokine secretion
+          of single cells and the interactions between cells.
         meaning: pmid:32348757
       HPLC-MSMS:
         description: An analytical technique wherein high performance liquid chromatography is coupled
@@ -21566,20 +21489,14 @@ enums:
           change in the proportion of cells that are dividing.
         meaning: BAO:0010060
       MNase-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay in which DNA is the input molecule derived from a micrococcal nuclease digestion
+          followed by high throughput sequencing, A method that distinguishes nucleosome positioning based
+          on the ability of nucleosomes to protect associated DNA from digestion by micrococcal nuclease.
+          Sequenced fragments reveal nucleosome location information about the input DNA.
         meaning: EFO:0003751
       MULTI-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A cell hashing method that labels cells from different samples with lipid-modified
+          oligonucleotides, so that the samples can be pooled for single-cell sequencing.
         meaning: EFO:0030077
       Macrophage Polarization Assay:
         description: An assay that measures the differentiation of macrophages into functional phenotypes
@@ -21626,12 +21543,7 @@ enums:
           an antibody against 5-methylcytosine to enrich for methylated DNA fragments prior to sequencing.
         meaning: OBI:0000693
       MeRIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: m6A-specific methylated RNA immunoprecipitation with nextgeneration sequencing (MeRIP-Seq)
         meaning: EFO:0008803
       Methyl Binding Domain Sequencing:
         description: An assay in which DNA is enriched using a methyl-binding domain protein to isolate
@@ -21681,12 +21593,7 @@ enums:
           to move into an acellular area of a culture material.
         meaning: NCIT:C19425
       Mint-ChIP:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Multiplexed, indexed T7 ChIP-seq
         meaning: EFO:0008813
       Modeling:
         description: The use of statistical analysis, computer analysis, or model organisms to predict
@@ -21773,12 +21680,7 @@ enums:
           large numbers of strands or segments of DNA or RNA.
         meaning: NCIT:C101293
       Nm-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Map 2′-O-methylation sites in human mRNA
         meaning: EFO:0008828
       Not Applicable:
         description: Determination of a value is not relevant in the current context. (NCI)
@@ -21941,12 +21843,10 @@ enums:
           in the cell by immunoprecipitating an RNA-binding protein along with its bound RNAs.
         meaning: EFO:0005033
       RIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A method used for finding which RNA species interact with a particular RNA-binding
+          protein. It involves immunoprecipitation with antibodies for the protein and then isolation
+          of the RNAs associated with the protein. Unlike CLIP-seq, no cross-linking of RNAs and proteins
+          is carried out prior to immunoprecipitation.
         meaning: EFO:0005310
       RNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -21995,12 +21895,9 @@ enums:
           in response to applied stress.
         meaning: CHMO:0000915
       Ribo-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Ribosome profiling (also named ribosome footprinting) that uses specialized messenger
+          RNA (mRNA) sequencing to determine which mRNAs are being actively translated. It produces a
+          “global snapshot” of all the ribosomes active in a cell at a particular moment, known as a translatome.
         meaning: EFO:0008891
       Ribosomal P Protein Antibody Measurement:
         description: The determination of the ribosomal P protein antibody present in a sample.
@@ -22032,12 +21929,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: NCIT:C179458
       Single Cell Cytokine Detection Chip Assay:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An assay that uses a microfluidic chip to measure the cytokines that single cells
+          secrete.
         meaning: BAO:0010005
       Single Cell DNA Sequencing:
         description: The determination of the sequence of purines and pyrimidines in deoxyribonucleic
@@ -22073,12 +21966,8 @@ enums:
           isolates and sequences regions rich in open chromatin.
         meaning: PMID:31428692
       Single-Cell Barcode Chip:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A microfluidic chip assay that uses DNA-barcoded antibodies to measure several proteins
+          from single cells.
       Single-Cell TCR Sequencing:
         description: A molecular genetic technique where DNA is isolated from single cell (sc) samples
           and amplified to create a genomic library. Then the library is subjected to ATAC-seq, which
@@ -22161,12 +22050,10 @@ enums:
           a specific grid arrangement to a solid support for nucleic acid hybridization assays in gene
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
       TAB-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A bisulfite sequencing assay that identifies genomic methylation patterns by using
+          a bisulfite based protocol with the Tet enzyme to differentiate 5-hydroxylmethylcytosine (5hmC)
+          from 5-methylcytosine (5mC) through a step-wise oxidative demethylation of 5mC, converting it
+          to 5-carboxylcytosine (5caC) while keeping 5hmC protected.
         meaning: PMID:23196972
       TCR Sequencing:
         description: A DNA sequencing technique that can differentiate cytosine from 5-methylcytosine
@@ -22347,12 +22234,8 @@ enums:
           mapping studies or in determining gene sequences, sequence variations, or gene expression patterns.
         meaning: NCIT:C19819
       eCLIP-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: eCLIP maps the binding sites of RBPs on their target RNAs using a modified individual
+          nucleotide resolution CLIP (iCLIP) protocol, improving efficiency and decreasing execution complexity
         meaning: EFO:0009998
       mRNA Sequencing:
         description: A procedure that can determine the RNA sequences for all or part of the poly-A tail-containing
@@ -22364,27 +22247,15 @@ enums:
           reaction.
         meaning: NCIT:C51962
       scCGI-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell method that measures the methylation of CpG islands without bisulfite
+          conversion and uses the result to separate single cells into groups.
       scNT-Seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling of new RNA and chemical
+          conversion to separate new RNA from old RNA.
         meaning: PMID:32868927
       scSLAM-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: A single-cell RNA sequencing method that uses metabolic labeling and thiol-linked
+          alkylation to separate new RNA from old RNA and measure transcription dynamics.
         meaning: PMID:31292545
       seqFISH:
         description: seqFISH is an in situ multiplexed imaging method that uses sequential rounds of fluorescence
@@ -22403,20 +22274,14 @@ enums:
           within cells using short, fluorescently labeled oligonucleotide probes.
         meaning: EFO:0009918
       smRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: An RNA-seq assay which is targeting small RNA (< 200 bp) sequences such as, but not
+          exclusive to, miRNAs using, for example, small RNA library preparation kits.
         meaning: OBI:0002112
       snRNA-seq:
-        description: A molecular genetic technique that combines chromatin immunoprecipitation (ChIP)
-          with massively parallel DNA sequencing to map the binding sites of DNA-associated proteins in
-          a sample of cells. First, crosslinked protein-DNA complexes are isolated using ChIP. Next, the
-          crosslinks are broken, the proteins are removed and the purified DNA is modified with adaptor
-          oligonucleotides to facilitate massively parallel DNA sequencing. Following sequencing, the
-          DNA sequences that are obtained can be mapped to their genomic locations.
+        description: Single nucleus RNA sequencing examines the sequence information from individual nuclei
+          with optimized next generation sequencing (NGS) technologies. This allows the RNA-seq profiling
+          of cell types that are more vulnerable to the tissue dissociation process, and that are therefore
+          underrepresented in the final data set in single cell sequencing.
         meaning: EFO:0009809
       Isothermal Titration Calorimetry:
         description: The measurement of thermodynamic parameters (e.g. enthalpy) at constant temperature
@@ -22662,6 +22527,70 @@ enums:
         description: A screening assay testing multiple chemical compounds for a biological effect.
       metabolic screening:
         description: A screening assay assessing metabolic activity or metabolite profiles.
+      Single Nucleus ATAC-Seq:
+        description: An ATAC-seq assay in which single nuclei are isolated from frozen tissue samples,
+          through a protocol designed to maximally preserve nucleus integrity during sample processing
+          and optimize transposase-mediated fragmentation of chromatin in individual nuclei.
+        meaning: OBI:0002762
+      In Situ Zymography:
+        description: A technique that detects enzyme activity, such as matrix metalloproteinase activity,
+          directly in tissue sections or cells by applying a labeled substrate and imaging the signal
+          where the substrate is cleaved.
+      Molecular Docking:
+        description: Method which models the structure of a protein in complex with a small molecule or
+          another macromolecule, to predict the preferred orientation of one molecule when bound to a
+          second.
+        meaning: EDAM:operation_0478
+      Molecular Dynamics Simulation:
+        description: A simulation procedure consisting of the computation of the motion of atoms in a
+          molecule or of individual atoms or molecules in solids, liquids and gases, according to Newton's
+          laws of motion. The forces acting on the atoms, required to simulate their motions, are generally
+          calculated using molecular mechanics force fields.
+        meaning: BAO:0002301
+      MM/PBSA:
+        description: Molecular Mechanics Poisson-Boltzmann Surface Area (MM/PBSA), a computational method
+          that estimates the binding free energy of a molecular complex from molecular dynamics snapshots,
+          by combining molecular mechanics energies with Poisson-Boltzmann and surface area solvation
+          terms.
+      Cell-Cell Communication Analysis:
+        description: A computational analysis that infers signaling between cell populations, typically
+          from single-cell or spatial expression data, by scoring ligand-receptor pairs.
+      Differential Abundance Analysis:
+        description: A computational analysis that tests whether the abundance of cell types, cell states
+          or other features differs between conditions or groups of samples.
+      Gene Regulatory Network Analysis:
+        description: Analyse a known network of gene regulation.
+        meaning: EDAM:operation_1781
+      RNA Velocity Analysis:
+        description: A computational analysis that estimates the rate and direction of change in gene
+          expression of single cells, from the ratio of unspliced to spliced RNA, to infer cell state
+          transitions.
+      Copy Number Variation Analysis:
+        description: Identify where sections of the genome are repeated and the number of repeats in the
+          genome varies between individuals.
+        meaning: EDAM:operation_3961
+      Pathway Analysis:
+        description: Generate, process or analyse a biological pathway.
+        meaning: EDAM:operation_3928
+      Tissue Dissociation:
+        description: Any method used to create single cells from tissue samples. These are typically either
+          mechanical or enzymatic disruption.
+        meaning: NCIT:C201927
+      Blood Cell Count Analysis:
+        description: The determination of the number of red blood cells, white blood cells, and platelets
+          in a biospecimen.
+        meaning: NCIT:C28133
+      Single-Cell Reduced Representation Bisulfite Sequencing:
+        description: A reduced representation bisulfite sequencing assay applied to single cells, to measure
+          DNA methylation at CpG-rich regions in individual cells.
+        meaning: EFO:0008914
+      Live-Cell Imaging:
+        description: An imaging technique in which living cells are observed and recorded over time under
+          physiological conditions, to follow cell behavior and dynamics.
+      Morphology Analysis:
+        description: A means, manner of procedure, or systematic course of actions that are performed
+          in order to examine and interpret a morphology assessment.
+        meaning: NCIT:C117625
   DSP Dataset Tissue Enum:
     permissible_values:
       Gonad:
